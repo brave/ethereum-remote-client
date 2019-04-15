@@ -1,13 +1,8 @@
-# MetaMask Browser Extension
-[![Build Status](https://circleci.com/gh/MetaMask/metamask-extension.svg?style=shield&circle-token=a1ddcf3cd38e29267f254c9c59d556d513e3a1fd)](https://circleci.com/gh/MetaMask/metamask-extension) [![Coverage Status](https://coveralls.io/repos/github/MetaMask/metamask-extension/badge.svg?branch=master)](https://coveralls.io/github/MetaMask/metamask-extension?branch=master) [![Stories in Ready](https://badge.waffle.io/MetaMask/metamask-extension.png?label=in%20progress&title=waffle.io)](https://waffle.io/MetaMask/metamask-extension)
+# Brave Ethereum Remote Client Extension
 
-You can find the latest version of MetaMask on [our official website](https://metamask.io/). For help using MetaMask, visit our [User Support Site](https://metamask.zendesk.com/hc/en-us).
-
-For up to the minute news, follow our [Twitter](https://twitter.com/metamask_io) or [Medium](https://medium.com/metamask) pages.
-
-To learn how to develop MetaMask-compatible applications, visit our [Developer Docs](https://metamask.github.io/metamask-docs/).
-
-To learn how to contribute to the MetaMask project itself, visit our [Internal Docs](https://github.com/MetaMask/metamask-extension/tree/develop/docs).
+Brave's Ethereum Remote Client is a Chromium extension for interacting with the Ethereum blockchain. It supports transfering ether, working with assets (ERC20 & ERC223, ERC721, ERC1155), and running Dapps.  This extension is only meant to be used within Brave.
+  
+This extension is based off of [MetaMask](https://github.com/MetaMask/metamask-extension). Brave plans to keep up to date with this upstream source.
 
 ## Building locally
 
@@ -26,7 +21,7 @@ To learn how to contribute to the MetaMask project itself, visit our [Internal D
 
 ## Contributing
 
-You can read [our internal docs here](https://metamask.github.io/metamask-extension/).
+You can read [our internal docs from MetaMask here](https://metamask.github.io/metamask-extension/).
 
 You can re-generate the docs locally by running `npm run doc`, and contributors can update the hosted docs by running `npm run publish-docs`.
 
@@ -63,8 +58,6 @@ To write tests that will be run in the browser using QUnit, add your test files 
 
 ## Other Docs
 
-- [How to add custom build to Chrome](./docs/add-to-chrome.md)
-- [How to add custom build to Firefox](./docs/add-to-firefox.md)
 - [How to add a new translation to MetaMask](./docs/translating-guide.md)
 - [Publishing Guide](./docs/publishing.md)
 - [The MetaMask Team](./docs/team.md)

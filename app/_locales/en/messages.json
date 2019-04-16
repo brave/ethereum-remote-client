@@ -254,6 +254,9 @@
   "chromeRequiredForHardwareWallets": {
     "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
   },
+  "coinbase": {
+    "message": "Coinbase"
+  },
   "company": {
     "message": "Company"
   },
@@ -283,6 +286,9 @@
   },
   "connectHardwareWallet": {
     "message": "Connect Hardware Wallet"
+  },
+  "connectToCoinbase": {
+    "message": "Connect To Coinbase"
   },
   "connect": {
     "message": "Connect"

@@ -14,6 +14,7 @@ import {
   NEW_ACCOUNT_ROUTE,
   IMPORT_ACCOUNT_ROUTE,
   CONNECT_HARDWARE_ROUTE,
+  CONNECT_COINBASE_ROUTE,
   DEFAULT_ROUTE,
 } from '../../../helpers/constants/routes'
 
@@ -302,6 +303,31 @@ export default class AccountMenu extends PureComponent {
             />
           }
           text={t('connectHardwareWallet')}
+        />
+        <Divider />
+        <Item
+          onClick={() => {
+            toggleAccountMenu()
+            metricsEvent({
+              eventOpts: {
+                category: 'Navigation',
+                action: 'Main Menu',
+                name: 'Clicked Connect To Coinbase',
+              },
+            })
+            if (getEnvironmentType(window.location.href) === ENVIRONMENT_TYPE_POPUP) {
+              global.platform.openExtensionInBrowser(CONNECT_COINBASE_ROUTE)
+            } else {
+              history.push(CONNECT_COINBASE_ROUTE)
+            }
+          }}
+          icon={
+            <img
+              className="account-menu__item-icon"
+              src="images/connect-icon.svg"
+            />
+          }
+          text={t('connectToCoinbase')}
         />
         <Divider />
         <Item

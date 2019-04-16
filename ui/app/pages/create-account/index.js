@@ -9,10 +9,12 @@ const classnames = require('classnames')
 const NewAccountCreateForm = require('./new-account')
 const NewAccountImportForm = require('./import-account')
 const ConnectHardwareForm = require('./connect-hardware')
+const ConnectCoinbaseForm = require('./connect-coinbase')
 const {
   NEW_ACCOUNT_ROUTE,
   IMPORT_ACCOUNT_ROUTE,
   CONNECT_HARDWARE_ROUTE,
+  CONNECT_COINBASE_ROUTE
 } = require('../../helpers/constants/routes')
 
 class CreateAccountPage extends Component {
@@ -54,6 +56,19 @@ class CreateAccountPage extends Component {
         },
         this.context.t('connect')
       ),
+      h(
+        'div.new-account__tabs__tab',
+        {
+          className: classnames('new-account__tabs__tab', {
+            'new-account__tabs__selected': matchPath(location.pathname, {
+              path: CONNECT_COINBASE_ROUTE,
+              exact: true,
+            }),
+          }),
+          onClick: () => history.push(CONNECT_COINBASE_ROUTE),
+        },
+        this.context.t('coinbase')
+      ),
     ])
   }
 
@@ -79,6 +94,11 @@ class CreateAccountPage extends Component {
             exact: true,
             path: CONNECT_HARDWARE_ROUTE,
             component: ConnectHardwareForm,
+          }),
+          h(Route, {
+            exact: true,
+            path: CONNECT_COINBASE_ROUTE,
+            component: ConnectCoinbaseForm,
           }),
         ]),
       ]),

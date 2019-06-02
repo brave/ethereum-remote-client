@@ -74,8 +74,11 @@
     "notifications"
   ],
   "web_accessible_resources": [
+    "home.html",
     "inpage.js",
-    "phishing.html"
+    "libs.js",
+    "phishing.html",
+    "ui.js"
   ],
   "externally_connectable": {
     "matches": [

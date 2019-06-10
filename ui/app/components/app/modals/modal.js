@@ -26,7 +26,6 @@ import ConfirmResetAccount from './confirm-reset-account'
 import TransactionConfirmed from './transaction-confirmed'
 import CancelTransaction from './cancel-transaction'
 
-import MetaMetricsOptInModal from './metametrics-opt-in-modal'
 import RejectTransactions from './reject-transactions'
 import ClearApprovedOrigins from './clear-approved-origins'
 import ConfirmCustomizeGasModal from '../gas-customization/gas-modal-page-container'
@@ -209,23 +208,6 @@ const MODALS = {
     },
     laptopModalStyle: {
       ...modalContainerLaptopStyle,
-    },
-    contentStyle: {
-      borderRadius: '8px',
-    },
-  },
-
-  METAMETRICS_OPT_IN_MODAL: {
-    contents: h(MetaMetricsOptInModal),
-    mobileModalStyle: {
-      ...modalContainerMobileStyle,
-      width: '100%',
-      height: '100%',
-      top: '0px',
-    },
-    laptopModalStyle: {
-      ...modalContainerLaptopStyle,
-      top: '10%',
     },
     contentStyle: {
       borderRadius: '8px',

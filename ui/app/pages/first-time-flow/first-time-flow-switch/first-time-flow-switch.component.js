@@ -25,7 +25,6 @@ export default class FirstTimeFlowSwitch extends PureComponent {
       isInitialized,
       isUnlocked,
       seedPhrase,
-      optInMetaMetrics,
     } = this.props
 
     if (completedOnboarding) {
@@ -48,10 +47,6 @@ export default class FirstTimeFlowSwitch extends PureComponent {
       return <Redirect to={{ pathname: INITIALIZE_SEED_PHRASE_ROUTE }} />
     }
 
-    if (optInMetaMetrics === null) {
-      return <Redirect to={{ pathname: INITIALIZE_WELCOME_ROUTE }} />
-    }
-
-    return <Redirect to={{ pathname: INITIALIZE_METAMETRICS_OPT_IN_ROUTE }} />
+    return <Redirect to={{ pathname: INITIALIZE_CREATE_PASSWORD_ROUTE }} />
   }
 }

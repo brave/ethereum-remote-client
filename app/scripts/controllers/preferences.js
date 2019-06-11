@@ -58,6 +58,9 @@ class PreferencesController {
       completedUiMigration: true,
       metaMetricsId: null,
       metaMetricsSendCount: 0,
+
+      // Brave
+      batTokenAdded: false
     }, opts.initState)
 
     this.diagnostics = opts.diagnostics
@@ -610,6 +613,18 @@ class PreferencesController {
    */
   completeUiMigration () {
     this.store.updateState({ completedUiMigration: true })
+    return Promise.resolve(true)
+  }
+
+  //
+  // Brave
+  //
+
+  /**
+   * Sets the {@code batTokenAdded} state to {@code true}, indicating that the default addition of the BAT token has completed
+   */
+  setBatTokenAdded () {
+    this.store.updateState({ batTokenAdded: true })
     return Promise.resolve(true)
   }
 

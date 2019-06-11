@@ -53,6 +53,7 @@ TokenMenuDropdown.prototype.render = function () {
         showHideTokenConfirmationModal(this.props.token)
         this.props.onClose()
       },
+      isShowing: (this.props.token.symbol !== 'BAT'),
       text: this.context.t('hideToken'),
     }),
     h(Item, {

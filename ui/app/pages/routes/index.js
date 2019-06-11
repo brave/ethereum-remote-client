@@ -344,6 +344,7 @@ Routes.propTypes = {
   t: PropTypes.func,
   providerId: PropTypes.string,
   providerRequests: PropTypes.array,
+  batTokenAdded: PropTypes.bool
 }
 
 function mapStateToProps (state) {
@@ -371,6 +372,7 @@ function mapStateToProps (state) {
     unapprovedPersonalMsgCount,
     unapprovedTypedMessagesCount,
     providerRequests,
+    batTokenAdded
   } = metamask
   const selected = address || Object.keys(accounts)[0]
 
@@ -415,6 +417,7 @@ function mapStateToProps (state) {
     selected,
     keyrings,
     providerRequests,
+    batTokenAdded
   }
 }
 

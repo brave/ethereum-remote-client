@@ -22,7 +22,13 @@ Item.prototype.render = function () {
     text,
     className = '',
     onClick,
+    isShowing
   } = this.props
+
+  if (isShowing === false) {
+    return h('noscript')
+  }
+
   const itemClassName = `menu__item ${className} ${onClick ? 'menu__item--clickable' : ''}`
   const iconComponent = icon ? h('div.menu__item__icon', [icon]) : null
   const textComponent = text ? h('div.menu__item__text', text) : null

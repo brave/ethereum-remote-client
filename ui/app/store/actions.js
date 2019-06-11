@@ -349,6 +349,10 @@ var actions = {
 
   setFirstTimeFlowType,
   SET_FIRST_TIME_FLOW_TYPE: 'SET_FIRST_TIME_FLOW_TYPE',
+
+  // Brave
+  setBatTokenAdded,
+  SET_BAT_TOKEN_ADDED: 'SET_BAT_TOKEN_ADDED'
 }
 
 module.exports = actions
@@ -1758,6 +1762,8 @@ function addToken (address, symbol, decimals, image) {
         if (err) {
           dispatch(actions.displayWarning(err.message))
           reject(err)
+        } else if (symbol === 'BAT') {
+          dispatch(actions.setBatTokenAdded())
         }
         dispatch(actions.updateTokens(tokens))
         resolve(tokens)
@@ -2709,6 +2715,21 @@ function setFirstTimeFlowType (type) {
     dispatch({
       type: actions.SET_FIRST_TIME_FLOW_TYPE,
       value: type,
+    })
+  }
+}
+
+// Brave
+function setBatTokenAdded () {
+  return (dispatch) => {
+    background.setBatTokenAdded((err) => {
+      if (err) {
+        return dispatch(actions.displayWarning(err.message))
+      }
+    })
+    dispatch({
+      type: actions.SET_BAT_TOKEN_ADDED,
+      value: true
     })
   }
 }

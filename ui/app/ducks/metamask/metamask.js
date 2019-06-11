@@ -56,6 +56,9 @@ function reduceMetamask (state, action) {
     knownMethodData: {},
     participateInMetaMetrics: null,
     metaMetricsSendCount: 0,
+
+    // Brave
+    batTokenAdded: false
   }, state.metamask)
 
   switch (action.type) {
@@ -412,6 +415,13 @@ function reduceMetamask (state, action) {
     case actions.SET_FIRST_TIME_FLOW_TYPE: {
       return extend(metamaskState, {
         firstTimeFlowType: action.value,
+      })
+    }
+
+    // Brave
+    case actions.SET_BAT_TOKEN_ADDED: {
+      return extend(metamaskState, {
+        batTokenAdded: action.value
       })
     }
 

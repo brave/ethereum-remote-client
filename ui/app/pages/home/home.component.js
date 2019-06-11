@@ -5,6 +5,8 @@ import { Redirect } from 'react-router-dom'
 import WalletView from '../../components/app/wallet-view'
 import TransactionView from '../../components/app/transaction-view'
 import ProviderApproval from '../provider-approval'
+import actions from '../../store/actions'
+import batToken from '../../store/brave/bat-token'
 
 import {
   INITIALIZE_SEED_PHRASE_ROUTE,
@@ -21,11 +23,13 @@ export default class Home extends PureComponent {
     suggestedTokens: PropTypes.object,
     unconfirmedTransactionsCount: PropTypes.number,
     providerRequests: PropTypes.array,
+    batTokenAdded: PropTypes.bool
   }
 
   componentDidMount () {
     const {
       history,
+      batTokenAdded,
       suggestedTokens = {},
       unconfirmedTransactionsCount = 0,
     } = this.props
@@ -37,6 +41,10 @@ export default class Home extends PureComponent {
 
     if (unconfirmedTransactionsCount > 0) {
       history.push(CONFIRM_TRANSACTION_ROUTE)
+    }
+
+    if (!batTokenAdded) {
+      this.props.dispatch(actions.addTokens(batToken))
     }
   }
 

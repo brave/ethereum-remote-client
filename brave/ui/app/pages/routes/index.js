@@ -1,5 +1,6 @@
 const Routes = require('../../../../../ui/app/pages/routes')
 
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { compose } from 'recompose'
@@ -10,6 +11,7 @@ import {
   getNetworkIdentifier,
   preferencesSelector
 } from '../../../../../ui/app/selectors/selectors'
+import BraveHeader from '../../components/app/header'
 import {
   submittedPendingTransactionsSelector
 } from '../../../../../ui/app/selectors/transactions'
@@ -104,9 +106,24 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-Routes.propTypes['batTokenAdded'] = PropTypes.bool
+Routes.propTypes.batTokenAdded = PropTypes.bool
+
+class BraveRoutes extends Component {
+  constructor (props) {
+    super(props)
+  }
+
+  render () {
+    return (
+      <div>
+        <BraveHeader />
+        <Routes />
+      </div>
+    )
+  }
+}
 
 module.exports = compose(
   withRouter,
   connect(mapStateToProps, mapDispatchToProps)
-)(Routes)
+)(BraveRoutes)

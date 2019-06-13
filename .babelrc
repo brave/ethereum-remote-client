@@ -18,6 +18,13 @@
   "plugins": [
     "transform-runtime",
     "transform-async-to-generator",
-    "transform-class-properties"
+    "transform-class-properties",
+    [
+    "babel-plugin-root-import",
+      {
+        "braveSuffix": "./",
+        "bravePrefix": "~"
+      }
+    ]
   ]
 }

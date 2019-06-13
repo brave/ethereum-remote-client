@@ -249,6 +249,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/unlock-page/unlock-page.container'`
         )
       )
+      .pipe(
+        replace(
+          /\'(.*)\/app-header\'/gm,
+          `'${bravePrefix}ui/app/components/app/app-header'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

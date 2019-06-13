@@ -12,6 +12,9 @@ const overrideDirs = [
 
 const bravePrefix = '~/brave/'
 
+//ToDo(ryamml) - Add root import support for .scss files
+const braveStyleRelative = '../../../../brave/'
+
 /*
  * ToDo(ryanml) - Write a method to convert simple paths to a Regex obj
  * then a simple mapping can be created for these replacements.
@@ -77,6 +80,12 @@ module.exports = function () {
       replace(
         /\'(.*)\/token-menu-dropdown\.js\'/gm,
         `'${bravePrefix}ui/app/components/app/dropdowns/token-menu-dropdown'`
+      )
+    )
+    .pipe(
+      replace(
+        /\@import \'ui-migration-annoucement\/index\'\;/gm,
+        `@import 'ui-migration-annoucement/index'; @import '${braveStyleRelative}ui/app/components/app/header/index';`
       )
     )
     .pipe(gulp.dest(file => file.base))

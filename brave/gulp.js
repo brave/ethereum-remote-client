@@ -88,5 +88,17 @@ module.exports = function () {
         `@import 'ui-migration-annoucement/index'; @import '${braveStyleRelative}ui/app/components/app/header/index';`
       )
     )
+    .pipe(
+      replace(
+        /\'(.*)\/select-action\.component\'/gm,
+        `'${bravePrefix}ui/app/pages/first-time-flow/select-action/select-action.component'`
+      )
+    )
+    .pipe(
+      replace(
+        /\'(.*)\/lib\/backend-metametrics\'/gm,
+        `'${bravePrefix}app/scripts/lib/backend-metametrics'`
+      )
+    )
     .pipe(gulp.dest(file => file.base))
 }

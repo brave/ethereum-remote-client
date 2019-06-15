@@ -4,6 +4,8 @@ MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
 
+MetaMaskActions.showModal = showModal
+
 function setBatTokenAdded () {
   return (dispatch) => {
     background.setBatTokenAdded((err) => {
@@ -34,6 +36,20 @@ function addToken (address, symbol, decimals, image) {
         resolve(tokens)
       })
     })
+  }
+}
+
+function showModal (payload) {
+  if (payload.name === 'METAMETRICS_OPT_IN_MODAL') {
+    return {
+      type: '',
+      payload: {}
+    }
+  }
+
+  return {
+    type: actions.MODAL_OPEN,
+    payload,
   }
 }
 

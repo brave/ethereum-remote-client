@@ -33,8 +33,6 @@ const materialUIDependencies = ['@material-ui/core']
 const reactDepenendencies = dependencies.filter(dep => dep.match(/react/))
 const d3Dependencies = ['c3', 'd3']
 
-const braveGulp = require('./brave/gulp')
-
 const uiDependenciesToBundle = [
   ...materialUIDependencies,
   ...reactDepenendencies,
@@ -450,7 +448,6 @@ gulp.task('zip', gulp.parallel('zip:chrome', 'zip:firefox', 'zip:opera'))
 
 gulp.task('dev',
   gulp.series(
-    braveGulp,
     'clean',
     'dev:scss',
     gulp.parallel(

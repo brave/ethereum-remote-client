@@ -41,14 +41,15 @@ You can run the linter by itself with `yarn lint`.
 ## Development
 
 ```bash
-yarn
-yarn start
+yarn install
+yarn dev:brave
 ```
 
 ## Build for Publishing
 
 ```bash
-yarn dist
+yarn install
+yarn run dist:brave
 ```
 
 #### Writing Browser Tests

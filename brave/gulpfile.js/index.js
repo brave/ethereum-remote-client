@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const {copyTask, gulpParallel} = require('./common-gulp')
+const createBraveManifestTask = require('./brave-manifest')
 const createBraveReplacePathsTask = require('./brave-replace-paths')
 require('../../gulpfile.js')
 
@@ -17,24 +18,28 @@ copyTask('dev:copy:images:brave', {
   destinations: ['./dist/brave/images'],
 })
 
+createBraveManifestTask()
 createBraveReplacePathsTask()
 
 gulp.task('copy',
   gulp.series(
     gulp.parallel(...copyTaskNames, 'copy:images:brave'),
     'manifest:production',
+    gulp.parallel('manifest:brave')
   )
 )
 
 gulp.task('dev:copy',
   gulp.series(
     gulp.parallel(...copyDevTaskNames, 'dev:copy:images:brave'),
+    gulp.parallel('manifest:brave')
   )
 )
 
 gulp.task('test:copy',
   gulp.series(
     gulp.parallel(...copyDevTaskNames),
+    gulp.parallel('manifest:brave'),
     'manifest:testing'
   )
 )

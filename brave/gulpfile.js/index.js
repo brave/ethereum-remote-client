@@ -3,21 +3,32 @@ const {copyTask, gulpParallel} = require('./common-gulp')
 const createBraveReplacePathsTask = require('./brave-replace-paths')
 require('../../gulpfile.js')
 
-const copyTaskNames = Object.keys(gulp._registry._tasks).filter((x) => x.startsWith('copy:'))
-const copyDevTaskNames = Object.keys(gulp._registry._tasks).filter((x) => x.startsWith('dev:copy:'))
+const copyTaskNames = Object.keys(gulp._registry._tasks).filter((x) => x.startsWith('copy:') && !x.startsWith('copy:images'))
+const copyDevTaskNames = Object.keys(gulp._registry._tasks).filter((x) => x.startsWith('dev:copy:') && !x.startsWith('dev:copy:images'))
+
+copyTask('copy:images:brave', {
+  source: './brave/app/images/',
+  destinations: ['./dist/brave/images'],
+})
+
+copyTask('dev:copy:images:brave', {
+  devMode: true,
+  source: './brave/app/images/',
+  destinations: ['./dist/brave/images'],
+})
 
 createBraveReplacePathsTask()
 
 gulp.task('copy',
   gulp.series(
-    gulp.parallel(...copyTaskNames),
+    gulp.parallel(...copyTaskNames, 'copy:images:brave'),
     'manifest:production',
   )
 )
 
 gulp.task('dev:copy',
   gulp.series(
-    gulp.parallel(...copyDevTaskNames),
+    gulp.parallel(...copyDevTaskNames, 'dev:copy:images:brave'),
   )
 )
 

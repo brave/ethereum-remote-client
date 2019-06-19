@@ -5,6 +5,8 @@
   "scripts": {
     "start": "gulp dev:extension",
     "dist": "gulp dist",
+    "dist:brave": "gulp --cwd=\"./\" --gulpfile ./brave/gulpfile.js dist",
+    "dev:brave": "gulp --cwd=\"./\" --gulpfile ./brave/gulpfile.js dev:extension",
     "doc": "jsdoc -c development/tools/.jsdoc.json",
     "publish-docs": "gh-pages -d docs/jsdocs",
     "start:test": "gulp dev:test",

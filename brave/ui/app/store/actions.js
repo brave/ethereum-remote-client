@@ -48,7 +48,7 @@ function showModal (payload) {
   }
 
   return {
-    type: actions.MODAL_OPEN,
+    type: MetaMaskActions.MODAL_OPEN,
     payload,
   }
 }

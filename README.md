@@ -43,13 +43,14 @@ You can run the linter by itself with `gulp lint`.
 
 ```bash
 npm install
-npm start
+npm run dev:brave
 ```
 
 ## Build for Publishing
 
 ```bash
-npm run dist
+npm install
+npm run dist:brave
 ```
 
 #### Writing Browser Tests

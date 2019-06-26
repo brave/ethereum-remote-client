@@ -97,6 +97,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/lib/backend-metametrics'`
         )
       )
+      .pipe(
+        replace(
+          /\'(.*)\/security-tab\.component\'/gm,
+          `'${bravePrefix}ui/app/pages/settings/security-tab/security-tab.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

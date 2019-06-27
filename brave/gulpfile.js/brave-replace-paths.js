@@ -4,12 +4,12 @@ const replace = require('gulp-replace')
 const createBraveReplacePathsTask = () => {
   const overrideDirs = [
     'ui/app/**/*',
-    'app/scripts/**/*'
+    'app/scripts/**/*',
   ]
 
   const bravePrefix = '~/brave/'
 
-  //ToDo(ryamml) - Add root import support for .scss files
+  // ToDo(ryamml) - Add root import support for .scss files
   const braveStyleRelative = '../../../../brave/'
 
   /*
@@ -29,77 +29,77 @@ const createBraveReplacePathsTask = () => {
    *   )
    * })
    */
-  gulp.task('replace-brave-paths', function() {
+  gulp.task('replace-brave-paths', function () {
     return gulp.src(overrideDirs)
       .pipe(
         replace(
-          /\'(.*)\/home\'/gm,
+          /'(.*)\/home'/gm,
           `'${bravePrefix}ui/app/pages/home'`
         )
       )
       .pipe(
         replace(
-          /\'\.\/routes\'/gm,
+          /'\.\/routes'/gm,
           `'${bravePrefix}ui/app/pages/routes'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/actions\'/gm,
+          /'(.*)\/actions'/gm,
           `'${bravePrefix}ui/app/store/actions'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/preferences\'/gm,
+          /'(.*)\/preferences'/gm,
           `'${bravePrefix}app/scripts/controllers/preferences'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/metamask-controller\'/gm,
+          /'(.*)\/metamask-controller'/gm,
           `'${bravePrefix}app/scripts/metamask-controller'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/metamask\/metamask\'/gm,
+          /'(.*)\/metamask\/metamask'/gm,
           `'${bravePrefix}ui/app/ducks/metamask/metamask'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/components\/menu\'/gm,
+          /'(.*)\/components\/menu'/gm,
           `'${bravePrefix}ui/app/components/app/dropdowns/components/menu'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/token-menu-dropdown\.js\'/gm,
+          /'(.*)\/token-menu-dropdown\.js'/gm,
           `'${bravePrefix}ui/app/components/app/dropdowns/token-menu-dropdown'`
         )
       )
       .pipe(
         replace(
-          /\@import \'ui-migration-annoucement\/index\'\;/gm,
+          /@import 'ui-migration-annoucement\/index';/gm,
           `@import 'ui-migration-annoucement/index'; @import '${braveStyleRelative}ui/app/components/app/header/index';`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/select-action\.component\'/gm,
+          /'(.*)\/select-action\.component'/gm,
           `'${bravePrefix}ui/app/pages/first-time-flow/select-action/select-action.component'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/lib\/backend-metametrics\'/gm,
+          /'(.*)\/lib\/backend-metametrics'/gm,
           `'${bravePrefix}app/scripts/lib/backend-metametrics'`
         )
       )
       .pipe(
         replace(
-          /\'(.*)\/security-tab\.component\'/gm,
+          /'(.*)\/security-tab\.component'/gm,
           `'${bravePrefix}ui/app/pages/settings/security-tab/security-tab.component'`
         )
       )

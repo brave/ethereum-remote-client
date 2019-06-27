@@ -8,7 +8,7 @@ export default class BraveHeader extends PureComponent {
     }
 
     chrome.tabs.update({
-      url: `chrome://${route}`
+      url: `chrome://${route}`,
     })
   }
 
@@ -81,7 +81,7 @@ export default class BraveHeader extends PureComponent {
           <slot></slot>
         </div>
       </div>
-    )    
+    )
   }
 }
 

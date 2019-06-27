@@ -52,5 +52,5 @@ function gulpParallel (...args) {
 module.exports = {
   createCopyTasks,
   copyTask,
-  gulpParallel
+  gulpParallel,
 }

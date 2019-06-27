@@ -9,16 +9,16 @@ import { withRouter } from 'react-router-dom'
 import {
   getMetaMaskAccounts,
   getNetworkIdentifier,
-  preferencesSelector
+  preferencesSelector,
 } from '../../../../../ui/app/selectors/selectors'
 import BraveHeader from '../../components/app/header'
 import {
-  submittedPendingTransactionsSelector
+  submittedPendingTransactionsSelector,
 } from '../../../../../ui/app/selectors/transactions'
 
 import actions from '../../store/actions'
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   const { appState, metamask } = state
   const {
     networkDropdownOpen,
@@ -44,7 +44,7 @@ function mapStateToProps(state) {
     unapprovedPersonalMsgCount,
     unapprovedTypedMessagesCount,
     providerRequests,
-    batTokenAdded
+    batTokenAdded,
   } = metamask
   const selected = address || Object.keys(accounts)[0]
 
@@ -89,11 +89,11 @@ function mapStateToProps(state) {
     selected,
     keyrings,
     providerRequests,
-    batTokenAdded
+    batTokenAdded,
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     dispatch,
     hideSidebar: () => dispatch(actions.hideSidebar()),
@@ -109,9 +109,6 @@ function mapDispatchToProps(dispatch) {
 Routes.propTypes.batTokenAdded = PropTypes.bool
 
 class BraveRoutes extends Component {
-  constructor (props) {
-    super(props)
-  }
 
   render () {
     return (

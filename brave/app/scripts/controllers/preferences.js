@@ -11,6 +11,6 @@ module.exports = class BravePreferencesController extends PreferencesController 
 
   setBatTokenAdded () {
     this.store.updateState({ batTokenAdded: true })
-    return Promise.resolve(true)    
+    return Promise.resolve(true)
   }
 }

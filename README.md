@@ -45,11 +45,18 @@ yarn install
 yarn dev:brave
 ```
 
-## Build for Publishing
+## Build for for production
 
 ```bash
 yarn install
 yarn run dist:brave
+```
+
+## Publish to npm
+
+```bash
+npm install
+npm run publish:brave
 ```
 
 #### Writing Browser Tests

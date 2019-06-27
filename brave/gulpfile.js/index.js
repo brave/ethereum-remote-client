@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const {copyTask, gulpParallel} = require('./common-gulp')
 const createBraveManifestTask = require('./brave-manifest')
+const createBravePublishTask = require('./brave-publish')
 const createBraveLocalesTask = require('./brave-locales')
 const createBraveReplacePathsTask = require('./brave-replace-paths')
 require('../../gulpfile.js')
@@ -22,6 +23,7 @@ copyTask('dev:copy:images:brave', {
 createBraveManifestTask()
 createBraveReplacePathsTask()
 createBraveLocalesTask()
+createBravePublishTask()
 
 gulp.task('copy',
   gulp.series(
@@ -77,3 +79,5 @@ gulp.task('dev:extension',
     )
   )
 )
+
+gulp.task('publish:brave', gulp.series('dist', 'publish:package.json'))

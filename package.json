@@ -1,6 +1,6 @@
 {
   "name": "ethereum-remote-client",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "start": "gulp dev:extension",
@@ -8,6 +8,8 @@
     "doc": "jsdoc -c development/.jsdoc.json",
     "dist:brave": "gulp --cwd=\"./\" --gulpfile ./brave/gulpfile.js dist",
     "dev:brave": "gulp --cwd=\"./\" --gulpfile ./brave/gulpfile.js dev:extension",
+    "publish:brave": "gulp --cwd=\"./\" --gulpfile ./brave/gulpfile.js publish:brave && npm publish ./dist/brave",
+    "pack:brave": "npm run dist && cp package.json ./dist/brave && npm --prefix ./dist/brave pack",
     "publish-docs": "gh-pages -d docs/jsdocs",
     "start:test": "gulp dev:test",
     "build:test": "gulp build:test",

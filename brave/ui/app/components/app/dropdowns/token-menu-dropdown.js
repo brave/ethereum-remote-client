@@ -8,18 +8,18 @@ const { Menu, Item, CloseArea } = require('./components/menu')
 
 import actions from '../../../store/actions'
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     network: state.metamask.network,
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     showHideTokenConfirmationModal: (token) => {
       dispatch(actions.showModal({
         name: 'HIDE_TOKEN_CONFIRMATION',
-        token
+        token,
       }))
     },
   }
@@ -41,7 +41,7 @@ BraveTokenMenuDropdown.prototype.onClose = function (e) {
   this.props.onClose()
 }
 
-BraveTokenMenuDropdown.prototype.render = function() {
+BraveTokenMenuDropdown.prototype.render = function () {
   const { showHideTokenConfirmationModal } = this.props
 
   return h(Menu, { className: 'token-menu-dropdown', isShowing: true }, [
@@ -62,7 +62,7 @@ BraveTokenMenuDropdown.prototype.render = function() {
         e.stopPropagation()
         const url = genAccountLink(this.props.token.address, this.props.network)
         global.platform.openWindow({
-          url
+          url,
         })
         this.props.onClose()
       },

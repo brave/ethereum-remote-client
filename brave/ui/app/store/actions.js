@@ -10,29 +10,29 @@ function setBatTokenAdded () {
   return (dispatch) => {
     background.setBatTokenAdded((err) => {
       if (err) {
-        return dispatch(actions.displayWarning(err.message))
+        return dispatch(MetaMaskActions.displayWarning(err.message))
       }
     })
     dispatch({
-      type: actions.SET_BAT_TOKEN_ADDED,
-      value: true
+      type: MetaMaskActions.SET_BAT_TOKEN_ADDED,
+      value: true,
     })
   }
 }
 
 function addToken (address, symbol, decimals, image) {
   return (dispatch) => {
-    dispatch(actions.showLoadingIndication())
+    dispatch(MetaMaskActions.showLoadingIndication())
     return new Promise((resolve, reject) => {
       background.addToken(address, symbol, decimals, image, (err, tokens) => {
-        dispatch(actions.hideLoadingIndication())
+        dispatch(MetaMaskActions.hideLoadingIndication())
         if (err) {
-          dispatch(actions.displayWarning(err.message))
+          dispatch(MetaMaskActions.displayWarning(err.message))
           reject(err)
         } else if (symbol === 'BAT') {
-          dispatch(actions.setBatTokenAdded())
+          dispatch(MetaMaskActions.setBatTokenAdded())
         }
-        dispatch(actions.updateTokens(tokens))
+        dispatch(MetaMaskActions.updateTokens(tokens))
         resolve(tokens)
       })
     })
@@ -43,7 +43,7 @@ function showModal (payload) {
   if (payload.name === 'METAMETRICS_OPT_IN_MODAL') {
     return {
       type: '',
-      payload: {}
+      payload: {},
     }
   }
 

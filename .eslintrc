@@ -40,7 +40,9 @@
     "web3": true,
     "window": false,
     "$": false,
-    "QUnit": false
+    "QUnit": false,
+    "chrome": false,
+    "background": false
   },
 
   "rules": {

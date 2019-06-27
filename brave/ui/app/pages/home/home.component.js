@@ -4,9 +4,6 @@ import actions from '../../store/actions'
 import batToken from '../../store/bat-token'
 
 const BraveHome = class BraveHome extends Home {
-  constructor (props) {
-    super(props)
-  }
 
   componentDidMount () {
     super.componentDidMount()
@@ -15,7 +12,7 @@ const BraveHome = class BraveHome extends Home {
 
     if (!batTokenAdded) {
       this.props.dispatch(actions.addTokens(batToken))
-    }    
+    }
   }
 }
 

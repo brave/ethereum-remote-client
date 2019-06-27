@@ -46,11 +46,18 @@ npm install
 npm run dev:brave
 ```
 
-## Build for Publishing
+## Build for for production
 
 ```bash
 npm install
 npm run dist:brave
+```
+
+## Publish to npm
+
+```bash
+npm install
+npm run publish:brave
 ```
 
 #### Writing Browser Tests

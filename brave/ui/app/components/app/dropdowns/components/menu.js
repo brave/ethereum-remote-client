@@ -9,7 +9,7 @@ Item.prototype.render = function () {
     text,
     className = '',
     onClick,
-    isShowing
+    isShowing,
   } = this.props
 
   if (isShowing === false) {
@@ -24,7 +24,7 @@ Item.prototype.render = function () {
     ? h('div', { className: itemClassName, onClick }, children)
     : h('div.menu__item', { className: itemClassName, onClick }, [ iconComponent, textComponent ]
         .filter(d => Boolean(d))
-    )    
+    )
 }
 
 module.exports = { Menu, Item, Divider, CloseArea }

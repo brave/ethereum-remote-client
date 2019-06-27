@@ -1,1 +1,1 @@
-module.exports = (metaMaskState, eventData) => { /* no-op */ }
+module.exports = (_metaMaskState, _eventData) => { /* no-op */ }

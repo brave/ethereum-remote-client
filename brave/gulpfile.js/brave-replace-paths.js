@@ -109,6 +109,18 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/first-time-flow/welcome/welcome.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/select-action\.component'/gm,
+          `'${bravePrefix}ui/app/pages/first-time-flow/welcome/welcome.component'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/constants\/routes'/gm,
+          `'${bravePrefix}ui/app/helpers/constants/routes'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

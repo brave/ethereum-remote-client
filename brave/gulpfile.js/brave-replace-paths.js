@@ -103,6 +103,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/settings/security-tab/security-tab.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/platforms\/extension'/gm,
+          `'${bravePrefix}app/scripts/platforms/extension'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

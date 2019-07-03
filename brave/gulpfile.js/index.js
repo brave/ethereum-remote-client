@@ -4,6 +4,7 @@ const createBraveManifestTask = require('./brave-manifest')
 const createBravePublishTask = require('./brave-publish')
 const createBraveLocalesTask = require('./brave-locales')
 const createBraveReplacePathsTask = require('./brave-replace-paths')
+const createBraveLoadStylesTask = require('./brave-load-styles')
 require('../../gulpfile.js')
 
 const copyTaskNames = Object.keys(gulp._registry._tasks).filter((x) => x.startsWith('copy:') && !x.startsWith('copy:images'))
@@ -35,6 +36,7 @@ createBraveManifestTask()
 createBraveReplacePathsTask()
 createBraveLocalesTask()
 createBravePublishTask()
+createBraveLoadStylesTask()
 
 gulp.task('copy',
   gulp.series(
@@ -80,6 +82,7 @@ gulp.task('dist',
 
 gulp.task('dev:extension',
   gulp.series(
+    'load-brave-styles',
     'replace-brave-paths',
     'clean',
     'dev:scss',

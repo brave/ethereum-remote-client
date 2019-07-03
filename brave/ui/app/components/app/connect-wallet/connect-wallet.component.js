@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import styles from './assets/styles'
 
 module.exports = class ConnectWallet extends PureComponent {
   static propTypes = {
@@ -25,7 +24,7 @@ module.exports = class ConnectWallet extends PureComponent {
       case 'ledger':
         walletText = {
           title: (<div>
-                    <img style={styles.hardwareImg} src={'images/ledger-logo.svg'} />
+                    <img className={'hardware-img'} src={'images/ledger-logo.svg'} />
                   </div>),
           subText: hardwareString('Ledger'),
         }
@@ -33,7 +32,7 @@ module.exports = class ConnectWallet extends PureComponent {
       case 'trezor':
         walletText = {
           title: (<div>
-                    <img style={styles.hardwareImg} src={'images/trezor-logo.svg'} />
+                    <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
                   </div>),
           subText: hardwareString('Trezor'),
         }
@@ -45,10 +44,10 @@ module.exports = class ConnectWallet extends PureComponent {
 
     return (
       <div>
-        <div style={styles.title}>
+        <div className={'title'}>
           <span>{walletText.title}</span>
         </div>
-        <div style={styles.subText}>
+        <div className={'sub-text'}>
           <span>{walletText.subText}</span>
         </div>
       </div>
@@ -65,18 +64,14 @@ module.exports = class ConnectWallet extends PureComponent {
     const hwButtonStyle = type !== 'browser' ? { marginRight: '-15px' } : {}
 
     return (
-      <div style={styles.container}>
-        <div style={styles.controls}>
+      <div className={'connect-wallet-container'}>
+        <div className={'controls'}>
           {
             onCreate
             ? <button
-                style={
-                  {
-                    ...styles.create,
-                    ...hwButtonStyle,
-                  }
-                }
+                style={hwButtonStyle}
                 onClick={onCreate}
+                className={'create'}
               >
                 {innerText}
               </button>
@@ -85,8 +80,8 @@ module.exports = class ConnectWallet extends PureComponent {
           {
             onRestore
             ? <span
-                style={styles.restore}
                 onClick={onRestore}
+                className={'restore'}
               >
                 {'Restore'}
               </span>

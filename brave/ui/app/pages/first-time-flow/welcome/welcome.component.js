@@ -1,5 +1,4 @@
 import React from 'react'
-import style from '../assets/styles'
 import Welcome from '../../../../../../ui/app/pages/first-time-flow/welcome/welcome.component'
 import ConnectWallet from '../../../components/app/connect-wallet'
 
@@ -20,13 +19,13 @@ module.exports = class BraveWelcome extends Welcome {
 
   render () {
     return (
-      <div style={style.container}>
-        <div style={style.content}>
+      <div className={'welcome-container'}>
+        <div className={'content'}>
           <div>
-            <div style={style.title}>
+            <div className={'title'}>
               <span>{'Crypto Wallets'}</span>
             </div>
-            <div style={style.subText}>
+            <div className={'sub-text'}>
               <span>{'Choose a type to set up:'}</span>
             </div>
           </div>

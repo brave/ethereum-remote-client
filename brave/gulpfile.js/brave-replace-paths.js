@@ -118,6 +118,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/lib/setupMetamaskMeshMetrics'`
         )
       )
+      .pipe(
+        replace(
+          /'extensionizer'/gm,
+          `'${bravePrefix}lib/extensionizer'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

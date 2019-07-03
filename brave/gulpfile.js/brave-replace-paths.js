@@ -112,6 +112,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/helpers/constants/routes'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/lib\/setupMetamaskMeshMetrics'/gm,
+          `'${bravePrefix}app/scripts/lib/setupMetamaskMeshMetrics'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

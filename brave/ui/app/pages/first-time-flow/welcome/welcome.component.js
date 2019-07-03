@@ -22,10 +22,10 @@ module.exports = class BraveWelcome extends Welcome {
       <div className={'welcome-container'}>
         <div className={'content'}>
           <div>
-            <div className={'title'}>
+            <div className={'welcome-title'}>
               <span>{'Crypto Wallets'}</span>
             </div>
-            <div className={'sub-text'}>
+            <div className={'welcome-sub-text'}>
               <span>{'Choose a type to set up:'}</span>
             </div>
           </div>

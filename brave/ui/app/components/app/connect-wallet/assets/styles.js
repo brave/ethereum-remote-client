@@ -12,6 +12,7 @@ module.exports = {
     fontSize: '18px',
     fontWeight: '500',
     color: 'rgb(59, 62, 79)',
+    fontFamily: 'Poppins-Medium',
   },
   subText: {
     display: 'block',
@@ -19,6 +20,7 @@ module.exports = {
     fontWeight: '300',
     marginTop: '5px',
     maxWidth: '515px',
+    fontFamily: 'Muli-Regular',
   },
   controls: {
     display: 'inline-block',
@@ -35,11 +37,13 @@ module.exports = {
     fontWeight: 'bold',
     color: 'rgb(59, 62, 79)',
     cursor: 'pointer',
+    fontFamily: 'Muli-Bold',
   },
   restore: {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: 'bold',
+    fontFamily: 'Muli-Bold',
   },
   hardwareImg: {
     width: '100px',

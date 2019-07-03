@@ -17,6 +17,7 @@ module.exports = {
     fontWeight: 'bold',
     lineHeight: '44px',
     letterSpacing: '-0.13px',
+    fontFamily: 'Poppins-SemiBold',
   },
   subText: {
     marginTop: '5px',
@@ -24,5 +25,6 @@ module.exports = {
     fontWeight: '300',
     lineHeight: '30px',
     letterSpacing: '0.5px',
+    fontFamily: 'Muli-Regular',
   },
 }

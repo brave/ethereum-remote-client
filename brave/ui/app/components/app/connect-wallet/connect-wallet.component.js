@@ -44,10 +44,10 @@ module.exports = class ConnectWallet extends PureComponent {
 
     return (
       <div>
-        <div className={'title'}>
+        <div className={'wallet-title'}>
           <span>{walletText.title}</span>
         </div>
-        <div className={'sub-text'}>
+        <div className={'wallet-sub-text'}>
           <span>{walletText.subText}</span>
         </div>
       </div>

@@ -1,4 +1,4 @@
-const glob = require('glob');
+const glob = require('glob')
 const gulp = require('gulp')
 const replace = require('gulp-replace')
 

@@ -20,6 +20,17 @@ copyTask('dev:copy:images:brave', {
   destinations: ['./dist/brave/images'],
 })
 
+copyTask('copy:fonts:brave', {
+  source: './brave/app/fonts/',
+  destinations: ['./dist/brave/fonts'],
+})
+
+copyTask('dev:copy:fonts:brave', {
+  devMode: true,
+  source: './brave/app/fonts/',
+  destinations: ['./dist/brave/fonts'],
+})
+
 createBraveManifestTask()
 createBraveReplacePathsTask()
 createBraveLocalesTask()
@@ -27,7 +38,7 @@ createBravePublishTask()
 
 gulp.task('copy',
   gulp.series(
-    gulp.parallel(...copyTaskNames, 'copy:images:brave'),
+    gulp.parallel(...copyTaskNames, 'copy:images:brave', 'copy:fonts:brave'),
     'manifest:production',
     gulp.parallel('manifest:brave', 'locales:brave')
   )
@@ -35,7 +46,7 @@ gulp.task('copy',
 
 gulp.task('dev:copy',
   gulp.series(
-    gulp.parallel(...copyDevTaskNames, 'dev:copy:images:brave'),
+    gulp.parallel(...copyDevTaskNames, 'dev:copy:images:brave', 'dev:copy:fonts:brave'),
     gulp.parallel('manifest:brave', 'locales:brave')
   )
 )

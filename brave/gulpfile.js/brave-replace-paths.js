@@ -124,6 +124,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}lib/extensionizer'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/metafox-logo\.component'/gm,
+          `'${bravePrefix}ui/app/components/ui/metafox-logo/metafox-logo.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

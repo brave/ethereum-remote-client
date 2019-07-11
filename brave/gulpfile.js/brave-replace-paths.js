@@ -130,6 +130,18 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/components/ui/metafox-logo/metafox-logo.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/new-account\.component'/gm,
+          `'${bravePrefix}ui/app/pages/first-time-flow/create-password/new-account/new-account.component'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/import-with-seed-phrase\.component'/gm,
+          `'${bravePrefix}ui/app/pages/first-time-flow/create-password/import-with-seed-phrase/import-with-seed-phrase.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

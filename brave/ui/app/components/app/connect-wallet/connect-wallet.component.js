@@ -17,8 +17,8 @@ module.exports = class ConnectWallet extends PureComponent {
     switch (type) {
       case 'browser':
         walletText = {
-          title: 'New Browser Wallet',
-          subText: 'Create a new Brave browser wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees.',
+          title: 'New Local Wallet',
+          subText: 'Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees.',
         }
         break
       case 'ledger':

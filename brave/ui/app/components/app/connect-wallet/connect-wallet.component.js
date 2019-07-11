@@ -2,6 +2,10 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 module.exports = class ConnectWallet extends PureComponent {
+  static contextTypes = {
+    t: PropTypes.func,
+  }
+
   static propTypes = {
     type: PropTypes.string,
     onCreate: PropTypes.func,
@@ -10,15 +14,14 @@ module.exports = class ConnectWallet extends PureComponent {
 
   renderWalletText = () => {
     let walletText = {}
-
+    const { t } = this.context
     const { type } = this.props
-    const hardwareString = (type) => `Connect your ${type} hardware wallet to interact with dApps and make transfers to other connected wallets.`
 
     switch (type) {
       case 'browser':
         walletText = {
-          title: 'New Local Wallet',
-          subText: 'Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees.',
+          title: t('newLocalWallet'),
+          subText: t('newLocalWalletSubText'),
         }
         break
       case 'ledger':
@@ -26,7 +29,7 @@ module.exports = class ConnectWallet extends PureComponent {
           title: (<div>
                     <img className={'hardware-img'} src={'images/ledger-logo.svg'} />
                   </div>),
-          subText: hardwareString('Ledger'),
+          subText: t('ledgerCreateSubText'),
         }
         break
       case 'trezor':
@@ -34,7 +37,7 @@ module.exports = class ConnectWallet extends PureComponent {
           title: (<div>
                     <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
                   </div>),
-          subText: hardwareString('Trezor'),
+          subText: t('trezorCreateSubText'),
         }
         break
       default:
@@ -60,7 +63,8 @@ module.exports = class ConnectWallet extends PureComponent {
       onCreate,
       onRestore,
     } = this.props
-    const innerText = type === 'browser' ? 'Create' : 'Connect'
+    const { t } = this.context
+    const innerText = type === 'browser' ? t('create') : t('connect')
     const hwButtonStyle = type !== 'browser' ? { marginRight: '-15px' } : {}
 
     return (

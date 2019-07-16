@@ -66,6 +66,7 @@ gulp.task('test:copy',
 gulp.task('build',
   gulp.series(
     'clean',
+    'load-brave-styles',
     'replace-brave-paths',
     'build:scss',
     gulpParallel(

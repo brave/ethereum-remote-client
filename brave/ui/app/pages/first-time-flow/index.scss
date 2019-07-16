@@ -1,0 +1,28 @@
+#app-content {
+  background: #d5d9dc;
+}
+
+.first-time-flow {
+  background-color: #d5d9dc;
+}
+
+.first-time-flow__wrapper, .end-of-flow {
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.first-time-flow__wrapper {
+  max-width: 930px;
+  max-height: 750px;
+  padding: 40px 30px;
+}
+
+.end-of-flow {
+  width: 930px;
+  padding: 0px 30px;
+}
+
+.end-of-flow__emoji {
+  margin-top: 50px;
+}

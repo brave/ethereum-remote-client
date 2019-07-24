@@ -2,6 +2,14 @@ const gulp = require('gulp')
 const jsoneditor = require('gulp-json-editor')
 const braveEnLocales = require('../app/_locales/en/messages.json')
 
+const replace12With24 = (str) => {
+  // regex to match the world 'twelve' in languages supported by Metamask
+  const twelveRegex = /twelve|12|doce|बारह|douz|dodici|dwunastu|dvanajst|สิบสอง|பன்னிரண்டு/gi
+  let result = str.replace(twelveRegex, '24').replace('twaalfwoordfrase', 'vierentwintigwoordfrase')
+  // handle cases like 'doce (12)' which become '24 (24)'
+  return result.replace(' (24)', '')
+}
+
 const createBraveLocalesTask = () => {
   const writeArgs = { overwrite: true }
 
@@ -11,6 +19,9 @@ const createBraveLocalesTask = () => {
       Object.keys(json).forEach((stringName) => {
         if (typeof json[stringName].message === 'string') {
           json[stringName].message = json[stringName].message.replace(/MetaMask/gi, 'Brave')
+          if (stringName !== 'symbolBetweenZeroTwelve') {
+            json[stringName].message = replace12With24(json[stringName].message)
+          }
         }
         if (typeof json[stringName].description === 'string') {
           json[stringName].description = json[stringName].description.replace(/MetaMask/gi, 'Brave')

@@ -98,6 +98,8 @@
     "eth-contract-metadata": "^1.11.0",
     "eth-ens-namehash": "^2.0.8",
     "eth-hd-keyring": "github:brave-experiments/eth-hd-keyring#staging",
+    "eth-json-rpc-filters": "^3.0.4",
+    "eth-json-rpc-infura": "^3.2.0",
     "eth-keyring-controller": "github:brave-experiments/KeyringController",
     "eth-ledger-bridge-keyring": "^0.2.0",
     "eth-method-registry": "^1.2.0",

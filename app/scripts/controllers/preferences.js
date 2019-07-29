@@ -49,13 +49,11 @@ class PreferencesController {
       currentLocale: opts.initLangCode,
       identities: {},
       lostIdentities: {},
-      seedWords: null,
       forgottenPassword: false,
       preferences: {
         useNativeCurrencyAsPrimaryCurrency: true,
       },
       completedOnboarding: false,
-      completedUiMigration: true,
       metaMetricsId: null,
       metaMetricsSendCount: 0,
     }, opts.initState)
@@ -78,14 +76,6 @@ class PreferencesController {
    */
   setPasswordForgotten (forgottenPassword) {
     this.store.updateState({ forgottenPassword })
-  }
-
-  /**
-   * Sets the {@code seedWords} seed words
-   * @param {string|null} seedWords the seed words
-   */
-  setSeedWords (seedWords) {
-    this.store.updateState({ seedWords })
   }
 
   /**
@@ -610,14 +600,6 @@ class PreferencesController {
    */
   completeOnboarding () {
     this.store.updateState({ completedOnboarding: true })
-    return Promise.resolve(true)
-  }
-
-  /**
-   * Sets the {@code completedUiMigration} state to {@code true}, indicating that the user has completed the UI switch.
-   */
-  completeUiMigration () {
-    this.store.updateState({ completedUiMigration: true })
     return Promise.resolve(true)
   }
 

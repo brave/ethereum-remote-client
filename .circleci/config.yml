@@ -2,22 +2,32 @@ version: 2
 
 workflows:
   version: 2
-  full_test:
+  test_and_release:
     jobs:
+      - create_release_pull_request:
+          filters:
+            branches:
+              only:
+                - /^Version-v(\d+)[.](\d+)[.](\d+)/
       - prep-deps-npm
+      - test-deps
       - prep-build:
           requires:
             - prep-deps-npm
-      - prep-docs:
+      - create_github_release:
           requires:
-            - prep-deps-npm
+            - prep-build
+          filters:
+            branches:
+              only:
+                - develop
+      # - prep-docs:
+      #    requires:
+      #      - prep-deps-npm
       - prep-scss:
           requires:
             - prep-deps-npm
       - test-lint:
-          requires:
-            - prep-deps-npm
-      - test-deps:
           requires:
             - prep-deps-npm
       - test-e2e-chrome:
@@ -26,10 +36,6 @@ workflows:
       - test-e2e-firefox:
           requires:
             - prep-deps-npm
-      # - test-e2e-beta-drizzle:
-      #     requires:
-      #       - prep-deps-npm
-      #       - prep-build
       - test-unit:
           requires:
             - prep-deps-npm
@@ -52,19 +58,12 @@ workflows:
             - test-mozilla-lint
             - test-e2e-chrome
             - test-e2e-firefox
-            # - test-e2e-beta-drizzle
             - test-integration-flat-chrome
             - test-integration-flat-firefox
-      - job-screens:
-          requires:
-            - prep-deps-npm
-            - prep-build
-            - all-tests-pass
       - job-publish-prerelease:
           requires:
             - prep-deps-npm
             - prep-build
-            - job-screens
             - all-tests-pass
       - job-publish-release:
           filters:
@@ -73,16 +72,30 @@ workflows:
           requires:
             - prep-deps-npm
             - prep-build
-            - prep-docs
-            - job-screens
+      #       - prep-docs
             - all-tests-pass
 
 jobs:
-  prep-deps-npm:
+  create_release_pull_request:
     docker:
       - image: circleci/node:8.15.1-browsers
     steps:
       - checkout
+      - run:
+          name: Create GitHub Pull Request for version
+          command: |
+            .circleci/scripts/release-bump-changelog-version
+            .circleci/scripts/release-bump-manifest-version
+            .circleci/scripts/release-create-release-pr
+
+  prep-deps-npm:
+    docker:
+      - image: circleci/node:10.16-browsers
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: sudo npm install -g npm@6.10.2
       - run:
           name: Install deps via npm
           command: |
@@ -94,7 +107,7 @@ jobs:
 
   prep-build:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -113,7 +126,7 @@ jobs:
 
   prep-docs:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -128,7 +141,7 @@ jobs:
 
   prep-scss:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -147,7 +160,7 @@ jobs:
 
   test-lint:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -158,31 +171,21 @@ jobs:
 
   test-deps:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
+          name: Update npm
+          command: sudo npm install -g npm@6.10.2
+      - run:
           name: npm audit
           command: .circleci/scripts/npm-audit
 
-  # test-e2e-beta-drizzle:
-  #   docker:
-  #     - image: circleci/node:8.11.3-browsers
-  #   steps:
-  #     - checkout
-  #     - attach_workspace:
-  #         at: .
-  #     - run:
-  #         name: test:e2e:drizzle:beta
-  #         command: npm run test:e2e:drizzle:beta
-  #     - store_artifacts:
-  #         path: test-artifacts
-  #         destination: test-artifacts
   test-e2e-chrome:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -197,7 +200,7 @@ jobs:
 
   test-e2e-firefox:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - run:
@@ -213,24 +216,9 @@ jobs:
           path: test-artifacts
           destination: test-artifacts
 
-  job-screens:
-    docker:
-      - image: circleci/node:8.15.1-browsers
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          name: Test
-          command: npm run test:screens
-      - persist_to_workspace:
-          root: .
-          paths:
-            - test-artifacts
-
   job-publish-prerelease:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -250,7 +238,7 @@ jobs:
 
   job-publish-release:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -258,16 +246,16 @@ jobs:
       - run:
           name: sentry sourcemaps upload
           command: npm run sentry:publish
-      - run:
-          name: github gh-pages docs publish
-          command: >
-            git config --global user.name "metamaskbot" &&
-            git config --global user.email "admin@metamask.io" &&
-            npm run publish-docs
+      # - run:
+      #    name: github gh-pages docs publish
+      #    command: >
+      #      git config --global user.name "metamaskbot" &&
+      #      git config --global user.email "admin@metamask.io" &&
+      #      npm run publish-docs
 
   test-unit:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -277,18 +265,18 @@ jobs:
           command: npm run test:coverage
   test-mozilla-lint:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
           name: test:mozilla-lint
-          command: npm run mozilla-lint
+          command: NODE_OPTIONS=--max_old_space_size=3072 npm run mozilla-lint
 
   test-integration-flat-firefox:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -304,7 +292,7 @@ jobs:
     environment:
       browsers: '["Chrome"]'
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -315,8 +303,20 @@ jobs:
 
   all-tests-pass:
     docker:
-      - image: circleci/node:8.15.1-browsers
+      - image: circleci/node:10.16-browsers
     steps:
       - run:
           name: All Tests Passed
           command: echo 'weew - everything passed!'
+
+  create_github_release:
+    docker:
+      - image: circleci/node:8.15.1-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Create GitHub release
+          command: |
+            .circleci/scripts/release-create-gh-release

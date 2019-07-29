@@ -71,6 +71,7 @@ export default class AppHeader extends PureComponent {
         <Identicon
           address={selectedAddress}
           diameter={32}
+          addBorder={true}
         />
       </div>
     )

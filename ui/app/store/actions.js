@@ -9,6 +9,7 @@ const {
 const ethUtil = require('ethereumjs-util')
 const { fetchLocale } = require('../helpers/utils/i18n-helper')
 const { getMethodDataAsync } = require('../helpers/utils/transactions.util')
+const { fetchSymbolAndDecimals } = require('../helpers/utils/token-util')
 const log = require('loglevel')
 const { ENVIRONMENT_TYPE_NOTIFICATION } = require('../../../app/scripts/lib/enums')
 const { hasUnconfirmedTransactions } = require('../helpers/utils/confirm-tx.util')
@@ -25,6 +26,9 @@ var actions = {
   MODAL_CLOSE: 'UI_MODAL_CLOSE',
   showModal: showModal,
   hideModal: hideModal,
+  // notification state
+  CLOSE_NOTIFICATION_WINDOW: 'CLOSE_NOTIFICATION_WINDOW',
+  closeNotifacationWindow: closeNotifacationWindow,
   // sidebar state
   SIDEBAR_OPEN: 'UI_SIDEBAR_OPEN',
   SIDEBAR_CLOSE: 'UI_SIDEBAR_CLOSE',
@@ -63,7 +67,6 @@ var actions = {
   markPasswordForgotten,
   unMarkPasswordForgotten,
   SHOW_INIT_MENU: 'SHOW_INIT_MENU',
-  SHOW_NEW_VAULT_SEED: 'SHOW_NEW_VAULT_SEED',
   SHOW_INFO_PAGE: 'SHOW_INFO_PAGE',
   SHOW_IMPORT_PAGE: 'SHOW_IMPORT_PAGE',
   SHOW_NEW_ACCOUNT_PAGE: 'SHOW_NEW_ACCOUNT_PAGE',
@@ -77,7 +80,6 @@ var actions = {
   showImportPage,
   showNewAccountPage,
   setNewAccountForm,
-  createNewVaultAndKeychain: createNewVaultAndKeychain,
   createNewVaultAndRestore: createNewVaultAndRestore,
   createNewVaultInProgress: createNewVaultInProgress,
   createNewVaultAndGetSeedPhrase,
@@ -93,14 +95,12 @@ var actions = {
   navigateToNewAccountScreen,
   resetAccount,
   removeAccount,
-  showNewVaultSeed: showNewVaultSeed,
   showInfoPage: showInfoPage,
   CLOSE_WELCOME_SCREEN: 'CLOSE_WELCOME_SCREEN',
   closeWelcomeScreen,
   // seed recovery actions
   REVEAL_SEED_CONFIRMATION: 'REVEAL_SEED_CONFIRMATION',
   revealSeedConfirmation: revealSeedConfirmation,
-  requestRevealSeed: requestRevealSeed,
   requestRevealSeedWords,
   // unlock screen
   UNLOCK_IN_PROGRESS: 'UNLOCK_IN_PROGRESS',
@@ -213,7 +213,6 @@ var actions = {
   gasLoadingStarted,
   gasLoadingFinished,
   // app messages
-  confirmSeedWords: confirmSeedWords,
   showAccountDetail: showAccountDetail,
   BACK_TO_ACCOUNT_DETAIL: 'BACK_TO_ACCOUNT_DETAIL',
   backToAccountDetail: backToAccountDetail,
@@ -320,11 +319,6 @@ var actions = {
   setShowFiatConversionOnTestnetsPreference,
   setAutoLogoutTimeLimit,
 
-  // Migration of users to new UI
-  setCompletedUiMigration,
-  completeUiMigration,
-  COMPLETE_UI_MIGRATION: 'COMPLETE_UI_MIGRATION',
-
   // Onboarding
   setCompletedOnboarding,
   completeOnboarding,
@@ -367,6 +361,12 @@ var actions = {
   loadingMethoDataFinished,
   LOADING_METHOD_DATA_STARTED: 'LOADING_METHOD_DATA_STARTED',
   LOADING_METHOD_DATA_FINISHED: 'LOADING_METHOD_DATA_FINISHED',
+
+  getTokenParams,
+  loadingTokenParamsStarted,
+  LOADING_TOKEN_PARAMS_STARTED: 'LOADING_TOKEN_PARAMS_STARTED',
+  loadingTokenParamsFinished,
+  LOADING_TOKEN_PARAMS_FINISHED: 'LOADING_TOKEN_PARAMS_FINISHED',
 }
 
 module.exports = actions
@@ -439,44 +439,18 @@ function transitionBackward () {
   }
 }
 
-function confirmSeedWords () {
-  return dispatch => {
-    dispatch(actions.showLoadingIndication())
-    log.debug(`background.clearSeedWordCache`)
-    return new Promise((resolve, reject) => {
-      background.clearSeedWordCache((err, account) => {
-        dispatch(actions.hideLoadingIndication())
-        if (err) {
-          dispatch(actions.displayWarning(err.message))
-          return reject(err)
-        }
-
-        log.info('Seed word cache cleared. ' + account)
-        dispatch(actions.showAccountsPage())
-        resolve(account)
-      })
-    })
-  }
-}
-
 function createNewVaultAndRestore (password, seed) {
   return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     log.debug(`background.createNewVaultAndRestore`)
 
     return new Promise((resolve, reject) => {
-      background.clearSeedWordCache((err) => {
+      background.createNewVaultAndRestore(password, seed, (err) => {
         if (err) {
           return reject(err)
         }
 
-        background.createNewVaultAndRestore(password, seed, (err) => {
-          if (err) {
-            return reject(err)
-          }
-
-          resolve()
-        })
+        resolve()
       })
     })
       .then(() => dispatch(actions.unMarkPasswordForgotten()))
@@ -489,36 +463,6 @@ function createNewVaultAndRestore (password, seed) {
         dispatch(actions.hideLoadingIndication())
         return Promise.reject(err)
       })
-  }
-}
-
-function createNewVaultAndKeychain (password) {
-  return dispatch => {
-    dispatch(actions.showLoadingIndication())
-    log.debug(`background.createNewVaultAndKeychain`)
-
-    return new Promise((resolve, reject) => {
-      background.createNewVaultAndKeychain(password, err => {
-        if (err) {
-          dispatch(actions.displayWarning(err.message))
-          return reject(err)
-        }
-
-        log.debug(`background.placeSeedWords`)
-
-        background.placeSeedWords((err) => {
-          if (err) {
-            dispatch(actions.displayWarning(err.message))
-            return reject(err)
-          }
-
-          resolve()
-        })
-      })
-    })
-      .then(() => forceUpdateMetamaskState(dispatch))
-      .then(() => dispatch(actions.hideLoadingIndication()))
-      .catch(() => dispatch(actions.hideLoadingIndication()))
   }
 }
 
@@ -609,33 +553,6 @@ function verifySeedPhrase () {
       resolve(seedWords)
     })
   })
-}
-
-function requestRevealSeed (password) {
-  return dispatch => {
-    dispatch(actions.showLoadingIndication())
-    log.debug(`background.submitPassword`)
-    return new Promise((resolve, reject) => {
-      background.submitPassword(password, err => {
-        if (err) {
-          dispatch(actions.displayWarning(err.message))
-          return reject(err)
-        }
-
-        log.debug(`background.placeSeedWords`)
-        background.placeSeedWords((err, result) => {
-          if (err) {
-            dispatch(actions.displayWarning(err.message))
-            return reject(err)
-          }
-
-          dispatch(actions.showNewVaultSeed(result))
-          dispatch(actions.hideLoadingIndication())
-          resolve()
-        })
-      })
-    })
-  }
 }
 
 function requestRevealSeedWords (password) {
@@ -911,7 +828,7 @@ function setCurrentCurrency (currencyCode) {
 
 function signMsg (msgData) {
   log.debug('action - signMsg')
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
 
@@ -929,11 +846,7 @@ function signMsg (msgData) {
         }
 
         dispatch(actions.completedTx(msgData.metamaskId))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -943,7 +856,7 @@ function signMsg (msgData) {
 
 function signPersonalMsg (msgData) {
   log.debug('action - signPersonalMsg')
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
     return new Promise((resolve, reject) => {
@@ -960,11 +873,7 @@ function signPersonalMsg (msgData) {
         }
 
         dispatch(actions.completedTx(msgData.metamaskId))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -974,7 +883,7 @@ function signPersonalMsg (msgData) {
 
 function signTypedMsg (msgData) {
   log.debug('action - signTypedMsg')
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
     return new Promise((resolve, reject) => {
@@ -991,11 +900,7 @@ function signTypedMsg (msgData) {
         }
 
         dispatch(actions.completedTx(msgData.metamaskId))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -1208,6 +1113,20 @@ function signTokenTx (tokenAddress, toAddress, amount, txData) {
   }
 }
 
+const updateMetamaskStateFromBackground = () => {
+  log.debug(`background.getState`)
+
+  return new Promise((resolve, reject) => {
+    background.getState((error, newState) => {
+      if (error) {
+        return reject(error)
+      }
+
+      resolve(newState)
+    })
+  })
+}
+
 function updateTransaction (txData) {
   log.info('actions: updateTx: ' + JSON.stringify(txData))
   return dispatch => {
@@ -1239,7 +1158,7 @@ function updateTransaction (txData) {
 
 function updateAndApproveTx (txData) {
   log.info('actions: updateAndApproveTx: ' + JSON.stringify(txData))
-  return (dispatch, getState) => {
+  return (dispatch) => {
     log.debug(`actions calling background.updateAndApproveTx`)
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
@@ -1264,11 +1183,7 @@ function updateAndApproveTx (txData) {
         dispatch(actions.clearSend())
         dispatch(actions.completedTx(txData.id))
         dispatch(actions.hideLoadingIndication())
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return txData
       })
@@ -1302,7 +1217,7 @@ function txError (err) {
 }
 
 function cancelMsg (msgData) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
     return new Promise((resolve, reject) => {
@@ -1316,11 +1231,7 @@ function cancelMsg (msgData) {
         }
 
         dispatch(actions.completedTx(msgData.id))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -1329,7 +1240,7 @@ function cancelMsg (msgData) {
 }
 
 function cancelPersonalMsg (msgData) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
     return new Promise((resolve, reject) => {
@@ -1343,11 +1254,7 @@ function cancelPersonalMsg (msgData) {
         }
 
         dispatch(actions.completedTx(id))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -1356,7 +1263,7 @@ function cancelPersonalMsg (msgData) {
 }
 
 function cancelTypedMsg (msgData) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
     return new Promise((resolve, reject) => {
@@ -1370,11 +1277,7 @@ function cancelTypedMsg (msgData) {
         }
 
         dispatch(actions.completedTx(id))
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return resolve(msgData)
       })
@@ -1383,7 +1286,7 @@ function cancelTypedMsg (msgData) {
 }
 
 function cancelTx (txData) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     log.debug(`background.cancelTransaction`)
     dispatch(actions.showLoadingIndication())
     window.onbeforeunload = null
@@ -1402,11 +1305,7 @@ function cancelTx (txData) {
         dispatch(actions.clearSend())
         dispatch(actions.completedTx(txData.id))
         dispatch(actions.hideLoadingIndication())
-
-        if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
-          !hasUnconfirmedTransactions(getState())) {
-          return global.platform.closeCurrentWindow()
-        }
+        dispatch(closeCurrentNotificationWindow())
 
         return txData
       })
@@ -1460,7 +1359,9 @@ function cancelAllTx (txsData) {
     txsData.forEach((txData, i) => {
       background.cancelTransaction(txData.id, () => {
         dispatch(actions.completedTx(txData.id))
-        i === txsData.length - 1 ? dispatch(actions.goHome()) : null
+        if (i === txsData.length - 1) {
+          dispatch(actions.goHome())
+        }
       })
     })
   }
@@ -1542,13 +1443,6 @@ function createNewVaultInProgress () {
   }
 }
 
-function showNewVaultSeed (seed) {
-  return {
-    type: actions.SHOW_NEW_VAULT_SEED,
-    value: seed,
-  }
-}
-
 function closeWelcomeScreen () {
   return {
     type: actions.CLOSE_WELCOME_SCREEN,
@@ -1612,20 +1506,6 @@ const backgroundSetLocked = () => {
         return reject(error)
       }
       resolve()
-    })
-  })
-}
-
-const updateMetamaskStateFromBackground = () => {
-  log.debug(`background.getState`)
-
-  return new Promise((resolve, reject) => {
-    background.getState((error, newState) => {
-      if (error) {
-        return reject(error)
-      }
-
-      resolve(newState)
     })
   })
 }
@@ -2030,12 +1910,16 @@ function setRpcTarget (newRpc, chainId, ticker = 'ETH', nickname) {
 function delRpcTarget (oldRpc) {
   return (dispatch) => {
     log.debug(`background.delRpcTarget: ${oldRpc}`)
-    background.delCustomRpc(oldRpc, (err) => {
-      if (err) {
-        log.error(err)
-        return dispatch(self.displayWarning('Had a problem removing network!'))
-      }
-      dispatch(actions.setSelectedToken())
+    return new Promise((resolve, reject) => {
+      background.delCustomRpc(oldRpc, (err) => {
+        if (err) {
+          log.error(err)
+          dispatch(self.displayWarning('Had a problem removing network!'))
+          return reject(err)
+        }
+        dispatch(actions.setSelectedToken())
+        resolve()
+      })
     })
   }
 }
@@ -2086,6 +1970,23 @@ function hideModal (payload) {
   return {
     type: actions.MODAL_CLOSE,
     payload,
+  }
+}
+
+function closeCurrentNotificationWindow () {
+  return (dispatch, getState) => {
+    if (global.METAMASK_UI_TYPE === ENVIRONMENT_TYPE_NOTIFICATION &&
+      !hasUnconfirmedTransactions(getState())) {
+      global.platform.closeCurrentWindow()
+
+      dispatch(closeNotifacationWindow())
+    }
+  }
+}
+
+function closeNotifacationWindow () {
+  return {
+    type: actions.CLOSE_NOTIFICATION_WINDOW,
   }
 }
 
@@ -2384,26 +2285,25 @@ function reshowQrCode (data, coin) {
 
       dispatch(actions.hideLoadingIndication())
       return dispatch(actions.showQrView(data, message))
-      // return dispatch(actions.showModal({
-      //   name: 'SHAPESHIFT_DEPOSIT_TX',
-      //   Qr: { data, message },
-      // }))
     })
   }
 }
 
-function shapeShiftRequest (query, options, cb) {
+function shapeShiftRequest (query, options = {}, cb) {
   var queryResponse, method
-  !options ? options = {} : null
   options.method ? method = options.method : method = 'GET'
 
   var requestListner = function () {
     try {
       queryResponse = JSON.parse(this.responseText)
-      cb ? cb(queryResponse) : null
+      if (cb) {
+        cb(queryResponse)
+      }
       return queryResponse
     } catch (e) {
-      cb ? cb({error: e}) : null
+      if (cb) {
+        cb({error: e})
+      }
       return e
     }
   }
@@ -2503,31 +2403,6 @@ function setCompletedOnboarding () {
 function completeOnboarding () {
   return {
     type: actions.COMPLETE_ONBOARDING,
-  }
-}
-
-function setCompletedUiMigration () {
-  return dispatch => {
-    dispatch(actions.showLoadingIndication())
-    return new Promise((resolve, reject) => {
-      background.completeUiMigration(err => {
-        dispatch(actions.hideLoadingIndication())
-
-        if (err) {
-          dispatch(actions.displayWarning(err.message))
-          return reject(err)
-        }
-
-        dispatch(actions.completeUiMigration())
-        resolve()
-      })
-    })
-  }
-}
-
-function completeUiMigration () {
-  return {
-    type: actions.COMPLETE_UI_MIGRATION,
   }
 }
 
@@ -2813,6 +2688,42 @@ function getContractMethodData (data = '') {
         background.addKnownMethodData(fourBytePrefix, { name, params })
 
         return { name, params }
+      })
+  }
+}
+
+function loadingTokenParamsStarted () {
+  return {
+    type: actions.LOADING_TOKEN_PARAMS_STARTED,
+  }
+}
+
+function loadingTokenParamsFinished () {
+  return {
+    type: actions.LOADING_TOKEN_PARAMS_FINISHED,
+  }
+}
+
+function getTokenParams (tokenAddress) {
+  return (dispatch, getState) => {
+    const existingTokens = getState().metamask.tokens
+    const existingToken = existingTokens.find(({ address }) => tokenAddress === address)
+
+    if (existingToken) {
+      return Promise.resolve({
+        symbol: existingToken.symbol,
+        decimals: existingToken.decimals,
+      })
+    }
+
+    dispatch(actions.loadingTokenParamsStarted())
+    log.debug(`loadingTokenParams`)
+
+
+    return fetchSymbolAndDecimals(tokenAddress, existingTokens)
+      .then(({ symbol, decimals }) => {
+        dispatch(actions.addToken(tokenAddress, symbol, decimals))
+        dispatch(actions.loadingTokenParamsFinished())
       })
   }
 }

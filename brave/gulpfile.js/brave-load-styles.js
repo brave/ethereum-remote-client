@@ -20,8 +20,8 @@ const createBraveLoadStylesTask = () => {
     return gulp.src(appRootScss)
       .pipe(
         replace(
-          /@import 'ui-migration-annoucement\/index';/gm,
-          `@import 'ui-migration-annoucement/index'; ${braveImports.join('')}`
+          /(?:\/\*BRAVE\*\/.*)?$/,
+          `/*BRAVE*/${braveImports.join('')}`
         )
       )
       .pipe(gulp.dest(file => file.base))

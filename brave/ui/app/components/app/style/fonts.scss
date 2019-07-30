@@ -2,14 +2,20 @@
  * Brave Generic Font Rules
  */
 
+@import url('./fonts/muli.css');
+@import url('./fonts/poppins.css');
+
 button {
-  font-family: Muli-Bold;
+  font-family: Muli;
+  font-weight: bold;
 }
 
 p, span, label, div, a, input {
-  font-family: Muli-Regular;
+  font-family: Muli;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: Poppins-Medium;
+  font-family: Poppins;
+  font-weight: normal;
 }

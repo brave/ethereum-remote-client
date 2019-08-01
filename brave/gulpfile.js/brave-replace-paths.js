@@ -60,6 +60,12 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
+          /'(.*)\/app\/app'/gm,
+          `'${bravePrefix}ui/app/ducks/app/app'`
+        )
+      )
+      .pipe(
+        replace(
           /'(.*)\/metamask\/metamask'/gm,
           `'${bravePrefix}ui/app/ducks/metamask/metamask'`
         )

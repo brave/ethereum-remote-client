@@ -48,6 +48,13 @@ function showModal (payload) {
     }
   }
 
+  // XXX for testing
+  if (payload.name === 'ACCOUNT_DETAILS') {
+    return {
+      type: MetaMaskActions.TOGGLE_COINBASE,
+    }
+  }
+
   return {
     type: MetaMaskActions.MODAL_OPEN,
     payload,

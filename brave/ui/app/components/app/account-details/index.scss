@@ -1,0 +1,51 @@
+.cb-account-details {
+  background-color: #0f6dd4;
+  padding: 30px;
+
+  div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__name {
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__balance-label {
+    opacity: 0.4902809;
+    color: #ffffff;
+    font-family: Muli;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  &__balance {
+    color: #ffffff;
+    font-family: Muli;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &__button {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border: solid 1px rgba(255, 255, 255, 0.3045945);
+    color: #ffffff;
+    font-family: Muli;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 13px;
+    padding: 4px 12px;
+    margin: 30px auto 0;
+  }
+}

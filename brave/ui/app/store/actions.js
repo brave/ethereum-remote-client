@@ -3,6 +3,7 @@ const MetaMaskActions = require('../../../../ui/app/store/actions')
 MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
+MetaMaskActions.TOGGLE_COINBASE = 'TOGGLE_COINBASE'
 
 MetaMaskActions.showModal = showModal
 

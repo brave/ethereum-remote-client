@@ -72,6 +72,12 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
+          /'(.*)\/account-details'/gm,
+          `'${bravePrefix}ui/app/components/app/account-details'`
+        )
+      )
+      .pipe(
+        replace(
           /'(.*)\/components\/menu'/gm,
           `'${bravePrefix}ui/app/components/app/dropdowns/components/menu'`
         )

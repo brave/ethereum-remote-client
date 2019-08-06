@@ -78,6 +78,12 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
+          /'(.*)\/add-token-button'/gm,
+          `'${bravePrefix}ui/app/components/app/add-token-button'`
+        )
+      )
+      .pipe(
+        replace(
           /'(.*)\/components\/menu'/gm,
           `'${bravePrefix}ui/app/components/app/dropdowns/components/menu'`
         )
@@ -86,6 +92,15 @@ const createBraveReplacePathsTask = () => {
         replace(
           /'(.*)\/token-menu-dropdown\.js'/gm,
           `'${bravePrefix}ui/app/components/app/dropdowns/token-menu-dropdown'`
+        )
+      )
+      .pipe(
+        replace(
+          // Note: do NOT make this more general.
+          // In ui/app/pages/add-token/add-token.component.js, a _different_ component
+          // that's named token-list is `import`ed. We DON'T want to override that one.
+          `require('./token-list')`,
+          `require('${bravePrefix}ui/app/components/app/token-list')`
         )
       )
       .pipe(
@@ -134,6 +149,12 @@ const createBraveReplacePathsTask = () => {
         replace(
           /'extensionizer'/gm,
           `'${bravePrefix}lib/extensionizer'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/balance'/gm,
+          `'${bravePrefix}ui/app/components/ui/balance'`
         )
       )
       .pipe(

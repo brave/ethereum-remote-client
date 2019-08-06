@@ -142,6 +142,18 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/first-time-flow/create-password/import-with-seed-phrase/import-with-seed-phrase.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/confirm-seed-phrase\.component'/gm,
+          `'${bravePrefix}ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/confirm-seed-phrase.component'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/restore-vault'/gm,
+          `'${bravePrefix}ui/app/pages/keychains/restore-vault'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

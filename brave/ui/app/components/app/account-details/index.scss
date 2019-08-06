@@ -2,6 +2,10 @@
   background-color: #0f6dd4;
   padding: 30px;
 
+  // nasty hack to cover up the extra line from the removed BalanceComponent
+  margin-bottom: -1px;
+  z-index: 1;
+
   div {
     margin-left: auto;
     margin-right: auto;

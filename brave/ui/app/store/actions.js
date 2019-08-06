@@ -4,6 +4,8 @@ MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
 MetaMaskActions.TOGGLE_COINBASE = 'TOGGLE_COINBASE'
+MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT = 'COINBASE_SET_SELECTED_ACCOUNT'
+MetaMaskActions.coinbaseSetSelectedAccount = coinbaseSetSelectedAccount
 
 MetaMaskActions.showModal = showModal
 
@@ -18,6 +20,13 @@ function setBatTokenAdded () {
       type: MetaMaskActions.SET_BAT_TOKEN_ADDED,
       value: true,
     })
+  }
+}
+
+function coinbaseSetSelectedAccount (accountId) {
+  return {
+    type: MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT,
+    value: accountId,
   }
 }
 

@@ -1,6 +1,7 @@
 const glob = require('glob')
 const gulp = require('gulp')
 const replace = require('gulp-replace')
+const watch = require('gulp-watch')
 
 const getImportedPath = (path) => {
   const mmPath = path.split('brave/')[1]
@@ -9,14 +10,14 @@ const getImportedPath = (path) => {
   return `@import '${braveStyleRelative}${mmPath}';`
 }
 
-const createBraveLoadStylesTask = () => {
+const createBraveLoadStylesTasks = () => {
   const braveScss = 'brave/ui/app/**/*.scss'
   const appRootScss = 'ui/app/components/app/index.scss'
 
-  const braveImports = glob.sync(braveScss)
-    .map(path => getImportedPath(path))
+  function writeStyles () {
+    const braveImports = glob.sync(braveScss)
+      .map(getImportedPath)
 
-  gulp.task('load-brave-styles', function () {
     return gulp.src(appRootScss)
       .pipe(
         replace(
@@ -28,7 +29,19 @@ const createBraveLoadStylesTask = () => {
         )
       )
       .pipe(gulp.dest(file => file.base))
+  }
+
+  gulp.task('load-brave-styles', function () {
+    return writeStyles()
+  })
+
+  gulp.task('dev:load-brave-styles', function () {
+    watch(braveScss, () => {
+      writeStyles()
+    })
+
+    return writeStyles()
   })
 }
 
-module.exports = createBraveLoadStylesTask
+module.exports = createBraveLoadStylesTasks

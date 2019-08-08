@@ -89,6 +89,7 @@
     "inpage.js",
     "phishing.html"
   ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "externally_connectable": {
     "matches": [
       "https://metamask.io/*"

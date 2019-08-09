@@ -13,6 +13,12 @@ export default class BraveHeader extends PureComponent {
   }
 
   render () {
+    const pathName = window.location.pathname
+
+    if (pathName === '/notification.html' || pathName === '/popup.html') {
+      return null
+    }
+
     return (
       <div className="br-toolbar fonts-loaded">
         <ul className="nav-items" role="navigation" aria-label="Category navigation">

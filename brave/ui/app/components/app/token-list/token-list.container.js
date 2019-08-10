@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { coinbaseSetSelectedAccount } from '../../../store/actions'
+import { coinbaseSetSelectedAccount, coinbaseSetView } from '../../../store/actions'
 import BraveTokenList from './token-list.component'
 
 function mapStateToProps (state) {
@@ -12,7 +12,10 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    setSelectedAccount: id => dispatch(coinbaseSetSelectedAccount(id))
+    setSelectedAccount: id => {
+      dispatch(coinbaseSetSelectedAccount(id))
+      dispatch(coinbaseSetView(null))
+    },
   }
 }
 

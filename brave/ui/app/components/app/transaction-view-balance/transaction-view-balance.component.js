@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import CurrencyDisplayComponent from '../../../../../../ui/app/components/ui/currency-display/currency-display.component'
+import Button from '../../../../../../ui/app/components/ui/button'
 import Identicon from '../../../../../../ui/app/components/ui/identicon'
 import TransactionViewBalance from '../../../../../../ui/app/components/app/transaction-view-balance'
 
 export default class BraveTransactionViewBalance extends PureComponent {
   static propTypes = {
     viewingCoinbase: PropTypes.bool.isRequired,
+    showBuySell: PropTypes.func.isRequired,
   }
 
   renderBalance () {
@@ -37,7 +39,19 @@ export default class BraveTransactionViewBalance extends PureComponent {
   }
 
   renderButtons () {
-    return null
+    const { showBuySell } = this.props
+
+    return (
+      <div className="transaction-view-balance__buttons">
+        <Button
+          type="secondary"
+          className="transaction-view-balance__button"
+          onClick={showBuySell}
+        >
+          Buy/Sell
+        </Button>
+      </div>
+    )
   }
 
   render () {

@@ -111,6 +111,12 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
+          /'(.*)\/transaction-view'/gm,
+          `'${bravePrefix}ui/app/components/app/transaction-view'`
+        )
+      )
+      .pipe(
+        replace(
           /'(.*)\/transaction-view-balance'/gm,
           `'${bravePrefix}ui/app/components/app/transaction-view-balance'`
         )

@@ -6,6 +6,8 @@ MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
 MetaMaskActions.TOGGLE_COINBASE = 'TOGGLE_COINBASE'
 MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT = 'COINBASE_SET_SELECTED_ACCOUNT'
 MetaMaskActions.coinbaseSetSelectedAccount = coinbaseSetSelectedAccount
+MetaMaskActions.COINBASE_SET_VIEW = 'COINBASE_SET_VIEW'
+MetaMaskActions.coinbaseSetView = coinbaseSetView
 
 MetaMaskActions.setHardwareConnect = setHardwareConnect
 MetaMaskActions.setRewardsDisclosureAccepted = setRewardsDisclosureAccepted
@@ -68,6 +70,13 @@ function coinbaseSetSelectedAccount (accountId) {
   return {
     type: MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT,
     value: accountId,
+  }
+}
+
+function coinbaseSetView (view) {
+  return {
+    type: MetaMaskActions.COINBASE_SET_VIEW,
+    value: view,
   }
 }
 

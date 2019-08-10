@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { coinbaseSetView } from '../../../store/actions'
 import BraveTransactionViewBalance from './transaction-view-balance.component'
 
 function mapStateToProps (state) {
@@ -11,4 +12,10 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(BraveTransactionViewBalance)
+function mapDispatchToProps (dispatch) {
+  return {
+    showBuySell: () => dispatch(coinbaseSetView('buy')),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BraveTransactionViewBalance)

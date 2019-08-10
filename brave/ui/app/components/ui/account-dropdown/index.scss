@@ -1,0 +1,94 @@
+.account-dropdown {
+  margin: 30px 2px 40px;
+  position: relative;
+
+  &__label {
+    color: #3b3e4f;
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__box {
+    width: 100%;
+    height: 58px;
+    border-radius: 8px;
+    border: solid 1px #ced0db;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__box-open {
+    z-index: 200;
+  }
+
+  &__account-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-left: 4px;
+    margin-right: 8px;
+  }
+
+  &__info {
+    margin: 0;
+  }
+
+  &__name {
+    color: #1e2029;
+    font-family: Muli;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__details {
+    color: #84889c;
+    font-family: Muli;
+    font-size: 14px;
+  }
+
+  &__rates {
+    margin-left: auto;
+    color: #84889c;
+    font-family: Muli;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__rates-no-carat {
+    margin-right: 34px;
+  }
+
+  &__carat {
+    margin: 12px;
+  }
+
+  &__list {
+    border-radius: 8px;
+    border: solid 1px #ced0db;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 200;
+
+    & > div.account-dropdown__account-container {
+      cursor: pointer;
+      position: relative;
+      height: 58px;
+      border-bottom: solid 1px #ced0db;
+      padding: 8px;
+    }
+
+    & > div:last-child {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.coinbase-buy-sell {
+  margin: 25px 19px;
+  position: relative;
+
+  &__tab {
+    padding: 0 4px;
+    margin-right: 19px;
+    font-family: Poppins;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #5e6175;
+    cursor: pointer;
+  }
+
+  &__tab-active {
+    color: #0076ff;
+  }
+
+  &__close::after {
+    content: '\00D7';
+    font-size: 40px;
+    color: #5e6175;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

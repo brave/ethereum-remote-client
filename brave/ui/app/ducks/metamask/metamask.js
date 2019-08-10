@@ -12,6 +12,7 @@ module.exports = function (state, action) {
     accounts: {
       '0c14e346-9e7f-4d6f-8eb7-d07a02e6ccdd': {
         currency: 'BAT',
+        currencyName: 'Basic Attention Token',
         balance: '0.2323',
         exchangeRate: {
           amount: 0.30,
@@ -54,6 +55,7 @@ module.exports = function (state, action) {
       },
       'a1e2b76f-9dfc-469c-83f3-b3c191fd2333': {
         currency: 'ETH',
+        currencyName: 'Ether',
         balance: '0.2323',
         exchangeRate: {
           amount: 400,
@@ -63,6 +65,7 @@ module.exports = function (state, action) {
       },
       '113137dc-0f16-4358-be7a-7fc5ee9eb159': {
         currency: 'IDK',
+        currencyName: 'i dunno',
         balance: '34.00',
         exchangeRate: {
           amount: 11.3,

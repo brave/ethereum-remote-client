@@ -154,6 +154,18 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/keychains/restore-vault'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/networks-tab\.constants'/gm,
+          `'${bravePrefix}ui/app/pages/settings/networks-tab/networks-tab.constants'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/controllers\/infura'/gm,
+          `'${bravePrefix}app/scripts/controllers/infura'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

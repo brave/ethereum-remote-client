@@ -145,7 +145,7 @@ export default class BraveTransactionList extends PureComponent {
     const {
       viewingCoinbase,
       account,
-      ...metamaskProps,
+      ...metamaskProps
     } = this.props
 
     if (!viewingCoinbase) {

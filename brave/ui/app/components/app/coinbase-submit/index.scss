@@ -1,0 +1,15 @@
+.coinbase-submit {
+  width: fit-content;
+  margin: 40px auto 0;
+
+  &__button {
+    min-width: 288px;
+    min-height: 53px;
+    border-radius: 26.5px;
+    padding: 16px;
+    background: #0076ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

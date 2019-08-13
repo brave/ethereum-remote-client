@@ -166,6 +166,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/controllers/infura'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/setupSentry'/gm,
+          `'${bravePrefix}app/scripts/lib/setupSentry'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

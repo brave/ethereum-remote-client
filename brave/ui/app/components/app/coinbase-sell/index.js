@@ -1,1 +1,1 @@
-export { default } from './coinbase-sell.component'
+export { default } from './coinbase-sell.container'

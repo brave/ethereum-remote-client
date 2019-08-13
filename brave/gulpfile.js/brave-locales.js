@@ -10,6 +10,12 @@ const replace12With24 = (str) => {
   return result.replace(' (24)', '')
 }
 
+const replaceMetaMask = (str) => {
+  return str
+    .replace(/metamask\.io/gi, 'brave.com')
+    .replace(/MetaMask/gi, 'Brave')
+}
+
 const createBraveLocalesTask = () => {
   const writeArgs = { overwrite: true }
 
@@ -18,13 +24,13 @@ const createBraveLocalesTask = () => {
     .pipe(jsoneditor(function (json) {
       Object.keys(json).forEach((stringName) => {
         if (typeof json[stringName].message === 'string') {
-          json[stringName].message = json[stringName].message.replace(/MetaMask/gi, 'Brave')
+          json[stringName].message = replaceMetaMask(json[stringName].message)
           if (stringName !== 'symbolBetweenZeroTwelve') {
             json[stringName].message = replace12With24(json[stringName].message)
           }
         }
         if (typeof json[stringName].description === 'string') {
-          json[stringName].description = json[stringName].description.replace(/MetaMask/gi, 'Brave')
+          json[stringName].description = replaceMetaMask(json[stringName].description)
         }
       })
       return json

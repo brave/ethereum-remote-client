@@ -3340,6 +3340,11 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
+argon2-wasm@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/argon2-wasm/-/argon2-wasm-0.9.0.tgz#acb2af67fe258aec5336277ca5fd0ae3ebcbc57a"
+  integrity sha512-bt5xqrDt5FnA1gdLLouOwi2NN1h9BeML8DmKth7CCYhygoXUEDeIxEMB++q+CUPQ8U5gju065Z0MjI+hVSXX7A==
+
 argparse@^1.0.7:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
@@ -4217,6 +4222,13 @@ babel-plugin-react-docgen@^3.0.0:
     react-docgen "^4.1.0"
     recast "^0.14.7"
 
+babel-plugin-root-import@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-root-import/-/babel-plugin-root-import-6.4.1.tgz#5c0dfe7588778b1933764c913fa3ed1c78150bf6"
+  integrity sha512-xwEwOwilsg4ZJr5I8bySvpwxCfF4lhYtqySktyTyAG8gcyDYTIDjjvds8P+IHb5gTbM/jiE9hU8e5ZQPQv8TrA==
+  dependencies:
+    slash "^3.0.0"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -4918,6 +4930,11 @@ binary-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
   integrity sha1-RqoXUftqL5PuXmibsQh9SxTGwgU=
 
+binary-search@^1.3.3:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/binary-search/-/binary-search-1.3.6.tgz#e32426016a0c5092f0f3598836a1c7da3560565c"
+  integrity sha512-nbE1WxOTTrUWIfsfZ4aHGYu5DOuNkbxGokjV6Z2kxfJK3uaAb8zNK1muzOeipoLHZjInT4Br88BHpzevc681xA==
+
 binaryextensions@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-1.0.1.tgz#1e637488b35b58bda5f4774bf96a5212a8c90755"
@@ -4943,6 +4960,17 @@ bip39@^2.2.0, bip39@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/bip39/-/bip39-2.4.0.tgz#a0b8adbf163f53495f00f05d9ede7c25369ccf13"
   integrity sha512-1++HywqIyPtWDo7gm4v0ylYbwkLvHkuwVSKbBlZBbTCP/mnkyrlARBny906VLAwxJbC5xw9EvuJasHFIZaIFMQ==
+  dependencies:
+    create-hash "^1.1.0"
+    pbkdf2 "^3.0.9"
+    randombytes "^2.0.1"
+    safe-buffer "^5.0.1"
+    unorm "^1.3.3"
+
+bip39@^2.5.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/bip39/-/bip39-2.6.0.tgz#9e3a720b42ec8b3fbe4038f1e445317b6a99321c"
+  integrity sha512-RrnQRG2EgEoqO24ea+Q/fftuPUZLmrEM3qNhhGsA3PbaXaCW791LTzPuVyx/VprXQcTbPJ3K3UeTna8ZnVl2sg==
   dependencies:
     create-hash "^1.1.0"
     pbkdf2 "^3.0.9"
@@ -5154,6 +5182,15 @@ braces@^2.3.1, braces@^2.3.2:
     snapdragon-node "^2.0.1"
     split-string "^3.0.2"
     to-regex "^3.0.1"
+
+brave-crypto@^0.2.1, brave-crypto@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/brave-crypto/-/brave-crypto-0.2.2.tgz#ab03e0fa9a41ac1e10acfbe5c26c1a952aa99323"
+  integrity sha512-sDXAFa2L9vfdP2JsehuCgksxAwY/qPzWjvZpGUqXgEoBpMtze0F582Getd6zhM2hc8stKU3KJzCxh3VsxDn2kg==
+  dependencies:
+    bip39 "^2.5.0"
+    niceware "^1.0.5"
+    tweetnacl "^1.0.0"
 
 brcast@^3.0.0, brcast@^3.0.1:
   version "3.0.1"
@@ -9337,17 +9374,15 @@ eth-ens-namehash@^2.0.8:
     idna-uts46-hx "^2.3.1"
     js-sha3 "^0.5.7"
 
-eth-hd-keyring@^2.0.0:
+eth-hd-keyring@^2.0.0, eth-hd-keyring@brave/eth-hd-keyring, "eth-hd-keyring@github:brave/eth-hd-keyring":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/eth-hd-keyring/-/eth-hd-keyring-2.0.0.tgz#487ca4f065088ee840739cbad9b853003e79bd06"
-  integrity sha512-lTeANNPNj/j08sWU7LUQZTsx9NUJaUsiOdVxeP0UI5kke7L+Sd7zJWBmCShudEVG8PkqKLE1KJo08o430sl6rw==
+  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/bff92be9c3129bf45734d751b1c3abc73aa7a0f9"
   dependencies:
-    bip39 "^2.2.0"
-    eth-sig-util "^2.0.1"
-    ethereumjs-abi "^0.6.5"
-    ethereumjs-util "^5.1.1"
-    ethereumjs-wallet "^0.6.0"
-    events "^1.1.1"
+    brave-crypto "^0.2.1"
+    eth-sig-util "^2.2.0"
+    ethereumjs-util "^6.1.0"
+    ethereumjs-wallet "^0.6.3"
+    tweetnacl "^1.0.1"
     xtend "^4.0.1"
 
 eth-json-rpc-errors@^1.0.1:
@@ -9376,7 +9411,7 @@ eth-json-rpc-filters@^4.1.1:
     lodash.flatmap "^4.5.0"
     safe-event-emitter "^1.0.1"
 
-eth-json-rpc-infura@^3.1.0, eth-json-rpc-infura@^3.1.2, eth-json-rpc-infura@^3.2.0:
+eth-json-rpc-infura@^3.1.0, eth-json-rpc-infura@^3.1.2:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/eth-json-rpc-infura/-/eth-json-rpc-infura-3.2.0.tgz#62c3f516b51351038c32a548704467cec113ca8f"
   integrity sha512-FLcpdxPRVBCUc7yoE+wHGvyYg2lATedP+/q7PsKvaSzQpJbgTG4ZjLnyrLanxDr6M1k/dSNa6V5QnILwjUKJcw==
@@ -9384,6 +9419,16 @@ eth-json-rpc-infura@^3.1.0, eth-json-rpc-infura@^3.1.2, eth-json-rpc-infura@^3.2
     cross-fetch "^2.1.1"
     eth-json-rpc-middleware "^1.5.0"
     json-rpc-engine "^3.4.0"
+    json-rpc-error "^2.0.0"
+    tape "^4.8.0"
+
+"eth-json-rpc-infura@github:brave/eth-json-rpc-infura":
+  version "4.0.0"
+  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/acf1ee2475a2af134e5b744994d7faa8edb8c36d"
+  dependencies:
+    cross-fetch "^2.1.1"
+    eth-json-rpc-middleware "^4.0.0"
+    json-rpc-engine "^5.0.0"
     json-rpc-error "^2.0.0"
     tape "^4.8.0"
 
@@ -9430,7 +9475,7 @@ eth-json-rpc-middleware@^2.6.1:
     safe-event-emitter "^1.0.1"
     tape "^4.6.3"
 
-eth-json-rpc-middleware@^4.1.3:
+eth-json-rpc-middleware@^4.0.0, eth-json-rpc-middleware@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/eth-json-rpc-middleware/-/eth-json-rpc-middleware-4.1.3.tgz#cc8b43440f2e983a0bc1388406c9bd623ee91e89"
   integrity sha512-g663u/zK11huhkmP7jeFihUcwA2acYglIw2wO50G7zIXYoZ6L+NHJjEwW7gwVMEUy7rgB3Qx76ql/+UYJfIb9w==
@@ -9450,7 +9495,7 @@ eth-json-rpc-middleware@^4.1.3:
     pify "^3.0.0"
     safe-event-emitter "^1.0.1"
 
-eth-keyring-controller@^4.0.0, eth-keyring-controller@^4.0.1:
+eth-keyring-controller@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/eth-keyring-controller/-/eth-keyring-controller-4.0.1.tgz#69cb5f6d0ad2ae3b4f1cb59f6651c1f5a111d708"
   integrity sha512-i+aff88wsDdgf99iPNE1/RwNos1EtMk0vmc1nsiaCBxrMJSMyNrqEB0njrv2TYWiJj5TnUaZ63vSUYoUYp2eHg==
@@ -9464,6 +9509,23 @@ eth-keyring-controller@^4.0.0, eth-keyring-controller@^4.0.1:
     ethereumjs-util "^5.1.2"
     loglevel "^1.5.0"
     obs-store "^4.0.3"
+
+"eth-keyring-controller@github:brave/KeyringController":
+  version "5.0.0"
+  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/3219a250980d4fa574901a5d0b2aba7e494ddae9"
+  dependencies:
+    argon2-wasm "^0.9.0"
+    bip39 "^2.4.0"
+    bluebird "^3.5.0"
+    brave-crypto "^0.2.2"
+    browser-passworder "^2.0.3"
+    eth-hd-keyring brave/eth-hd-keyring
+    eth-sig-util "^1.4.0"
+    eth-simple-keyring "^2.0.0"
+    ethereumjs-util "^5.1.2"
+    loglevel "^1.5.0"
+    obs-store "^4.0.2"
+    promise-filter "^1.1.0"
 
 eth-ledger-bridge-keyring@^0.2.0:
   version "0.2.0"
@@ -9554,7 +9616,7 @@ eth-sig-util@^1.4.0, eth-sig-util@^1.4.2:
     ethereumjs-abi "git+https://github.com/ethereumjs/ethereumjs-abi.git"
     ethereumjs-util "^5.1.1"
 
-eth-sig-util@^2.0.1, eth-sig-util@^2.3.0:
+eth-sig-util@^2.0.1, eth-sig-util@^2.2.0, eth-sig-util@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/eth-sig-util/-/eth-sig-util-2.3.0.tgz#c54a6ac8e8796f7e25f59cf436982a930e645231"
   integrity sha512-ugD1AvaggvKaZDgnS19W5qOfepjGc7qHrt7TrAaL54gJw9SHvgIXJ3r2xOMW30RWJZNP+1GlTOy5oye7yXA4xA==
@@ -9753,7 +9815,7 @@ ethereumjs-util@^4.0.1, ethereumjs-util@^4.3.0, ethereumjs-util@^4.4.0:
     rlp "^2.0.0"
     secp256k1 "^3.0.1"
 
-ethereumjs-util@^6.0.0:
+ethereumjs-util@^6.0.0, ethereumjs-util@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-6.1.0.tgz#e9c51e5549e8ebd757a339cc00f5380507e799c8"
   integrity sha512-URESKMFbDeJxnAxPppnk2fN6Y3BIatn9fwn76Lm8bQlt+s52TpG8dN9M66MLPuRAiAOIqL3dfwqWJf0sd0fL0Q==
@@ -9809,7 +9871,7 @@ ethereumjs-wallet@0.6.0, ethereumjs-wallet@^0.6.0:
     utf8 "^2.1.1"
     uuid "^2.0.1"
 
-ethereumjs-wallet@0.6.3:
+ethereumjs-wallet@0.6.3, ethereumjs-wallet@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/ethereumjs-wallet/-/ethereumjs-wallet-0.6.3.tgz#b0eae6f327637c2aeb9ccb9047b982ac542e6ab1"
   integrity sha512-qiXPiZOsStem+Dj/CQHbn5qex+FVkuPmGH7SvSnA9F3tdRDt8dLMyvIj3+U05QzVZNPYh4HXEdnzoYI4dZkr9w==
@@ -17437,6 +17499,14 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+niceware@^1.0.5:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/niceware/-/niceware-1.0.7.tgz#958257a1e4bdebb1a50b434522b7ac3572548d9b"
+  integrity sha512-tAHyqgolPIo3UO7bv8kPjY3hwPM5Lzj7OT6KJ/d/ErxWun8Vkqi0bgG+oTymf+JyWTi4TRP84o1p1Me5rA650Q==
+  dependencies:
+    binary-search "^1.3.3"
+    randombytes "^2.0.6"
+
 nise@^1.2.0:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/nise/-/nise-1.4.8.tgz#ce91c31e86cf9b2c4cac49d7fcd7f56779bfd6b0"
@@ -18119,7 +18189,7 @@ observable-webworkers@^1.0.0:
   resolved "https://registry.yarnpkg.com/observable-webworkers/-/observable-webworkers-1.0.0.tgz#dcbd484a9644d512accc351962c6e710313fbb68"
   integrity sha512-+cECwCR8IEh8UY5nefQVLO9Cydqpk1izO+o7BABmKjXfJZyEOzBWY3ss5jbOPM6KmEa9aQExvAtTW6tVTOsNAQ==
 
-obs-store@^4.0.1:
+obs-store@^4.0.1, obs-store@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/obs-store/-/obs-store-4.0.2.tgz#918377cf76fbe9a5d1451c0cc4895d5c236211e9"
   integrity sha512-58/7oWFxBkQ9sx+E1R/RSzmCaywxItSZLeMt39U2UTOek2AFqFmtAbL1tU1T4vx2NS+qsoafnRIF++IVkp+QDQ==
@@ -22767,6 +22837,11 @@ slash@^1.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
 
+slash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
+
 slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
@@ -23521,9 +23596,9 @@ stealthy-require@^1.1.0:
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
 stifle@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/stifle/-/stifle-1.0.4.tgz#8b3bcdf52419b0a9c79e35adadce50123c1d8e99"
-  integrity sha1-izvN9SQZsKnHnjWtrc5QEjwdjpk=
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stifle/-/stifle-1.1.1.tgz#4e4c565f19dcf9a6efa3a7379a70c42179edb8d6"
+  integrity sha512-INvON4DXLAWxpor+f0ZHnYQYXBqDXQRW1znLpf5/C/AWzJ0eQQAThfdqHQ5BDkiyywD67rQGvbE4LC+Aig6K/Q==
 
 store2@^2.7.1:
   version "2.7.1"
@@ -24941,7 +25016,7 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-tweetnacl@^1.0.0:
+tweetnacl@^1.0.0, tweetnacl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.1.tgz#2594d42da73cd036bd0d2a54683dd35a6b55ca17"
   integrity sha512-kcoMoKTPYnoeS50tzoqjPY3Uv9axeuuFAZY9M/9zFnhoVvRfxz9K29IMPD7jGmt2c8SW7i3gT9WqDl2+nV7p4A==

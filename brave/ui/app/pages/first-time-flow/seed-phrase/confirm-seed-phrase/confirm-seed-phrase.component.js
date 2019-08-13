@@ -1,5 +1,4 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import ConfirmSeedPhrase from '../../../../../../../ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/confirm-seed-phrase.component'
 import DraggableSeed from '../../../../../../../ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/draggable-seed.component'
 import classnames from 'classnames'
@@ -32,7 +31,7 @@ module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
       return (
         <DraggableSeed
           key={`selected-${seedIndex}-${index}`}
-          className='confirm-seed-phrase__selected-seed-words__selected-seed'
+          className={'confirm-seed-phrase__selected-seed-words__selected-seed'}
           index={index}
           seedIndex={seedIndex}
           word={word}
@@ -51,7 +50,7 @@ module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
       pendingSeedIndices,
       shuffledSeedWords,
       draggingSeedIndex,
-      hoveringIndex
+      hoveringIndex,
     } = this.state
 
     const indices = insert(pendingSeedIndices, draggingSeedIndex, hoveringIndex)
@@ -65,7 +64,7 @@ module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
           key={`pending-${seedIndex}-${index}`}
           index={index}
           className={classnames('confirm-seed-phrase__selected-seed-words__pending-seed', {
-            'confirm-seed-phrase__seed-word--hidden': draggingSeedIndex === seedIndex && index !== hoveringIndex
+            'confirm-seed-phrase__seed-word--hidden': draggingSeedIndex === seedIndex && index !== hoveringIndex,
           })}
           seedIndex={seedIndex}
           word={word}

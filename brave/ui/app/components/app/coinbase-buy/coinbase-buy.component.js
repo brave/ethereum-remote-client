@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import AccountDropdown from '../../ui/account-dropdown'
+import CoinbaseAmount from '../coinbase-amount'
+import CoinbaseSubmit from '../coinbase-submit'
 
 export default class CoinbaseBuy extends PureComponent {
   static propTypes = {
@@ -19,7 +21,7 @@ export default class CoinbaseBuy extends PureComponent {
       const fiat = new Intl.NumberFormat(window.navigator.language, {
         style: 'currency',
         currency: account.exchangeRate.currency,
-      }).format(account.exchangeRate.amount * Number(account.balance))
+      }).format(account.exchangeRate.amount)
 
       ret[accountId] = {
         name: account.currencyName,
@@ -32,7 +34,17 @@ export default class CoinbaseBuy extends PureComponent {
   }
 
   render () {
-    const { selectedAccount, selectAccount } = this.props
+    const {
+      accounts,
+      selectedAccount,
+      selectAccount,
+    } = this.props
+
+    const {
+      currency,
+      currencyName,
+      exchangeRate,
+    } = accounts[selectedAccount]
 
     const cryptoAccounts = this.cryptoAccounts()
 
@@ -58,6 +70,15 @@ export default class CoinbaseBuy extends PureComponent {
           }}
           selected={'chase'}
           select={(id) => null}
+        />
+        <CoinbaseAmount
+          type={'buy'}
+          currency={currency}
+          exchangeRate={exchangeRate.amount}
+        />
+        <CoinbaseSubmit
+          text={'Buy  ' + currencyName}
+          onClick={() => null}
         />
       </div>
     )

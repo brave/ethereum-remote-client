@@ -59,7 +59,7 @@ export default class BraveTransactionViewBalance extends PureComponent {
       viewingCoinbase,
       accountId,
       account,
-      ...metamaskProps,
+      ...metamaskProps
     } = this.props
 
     if (!viewingCoinbase) {

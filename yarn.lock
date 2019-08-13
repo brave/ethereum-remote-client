@@ -10089,9 +10089,20 @@ eth-ens-namehash@^2.0.8:
     idna-uts46-hx "^2.3.1"
     js-sha3 "^0.5.7"
 
-eth-hd-keyring@^2.0.0, eth-hd-keyring@brave-experiments/eth-hd-keyring#staging, "eth-hd-keyring@github:brave-experiments/eth-hd-keyring#staging":
+eth-hd-keyring@^2.0.0, "eth-hd-keyring@github:brave-experiments/eth-hd-keyring":
   version "2.0.0"
-  resolved "https://codeload.github.com/brave-experiments/eth-hd-keyring/tar.gz/d6aff0218a1c2208b49213e827dc2085d44fed0f"
+  resolved "https://codeload.github.com/brave-experiments/eth-hd-keyring/tar.gz/bff92be9c3129bf45734d751b1c3abc73aa7a0f9"
+  dependencies:
+    brave-crypto "^0.2.1"
+    eth-sig-util "^2.2.0"
+    ethereumjs-util "^6.1.0"
+    ethereumjs-wallet "^0.6.3"
+    tweetnacl "^1.0.1"
+    xtend "^4.0.1"
+
+eth-hd-keyring@brave/eth-hd-keyring:
+  version "2.0.0"
+  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/bff92be9c3129bf45734d751b1c3abc73aa7a0f9"
   dependencies:
     brave-crypto "^0.2.1"
     eth-sig-util "^2.2.0"
@@ -10227,14 +10238,14 @@ eth-keyring-controller@^4.0.0:
 
 "eth-keyring-controller@github:brave-experiments/KeyringController":
   version "5.0.0"
-  resolved "https://codeload.github.com/brave-experiments/KeyringController/tar.gz/a24449a202050e98eabb42a2987b65a119f34df3"
+  resolved "https://codeload.github.com/brave-experiments/KeyringController/tar.gz/ee52a79237f2e056ebc018b0f02f44c668a3aa99"
   dependencies:
     argon2-wasm "^0.9.0"
     bip39 "^2.4.0"
     bluebird "^3.5.0"
     brave-crypto "^0.2.2"
     browser-passworder "^2.0.3"
-    eth-hd-keyring brave-experiments/eth-hd-keyring#staging
+    eth-hd-keyring brave/eth-hd-keyring
     eth-sig-util "^1.4.0"
     eth-simple-keyring "^2.0.0"
     ethereumjs-util "^5.1.2"

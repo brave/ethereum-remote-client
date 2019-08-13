@@ -8646,9 +8646,9 @@ eth-json-rpc-infura@^3.1.0, eth-json-rpc-infura@^3.1.2:
     json-rpc-error "^2.0.0"
     tape "^4.8.0"
 
-"eth-json-rpc-infura@github:brave-experiments/eth-json-rpc-infura":
+"eth-json-rpc-infura@github:brave/eth-json-rpc-infura":
   version "4.0.0"
-  resolved "https://codeload.github.com/brave-experiments/eth-json-rpc-infura/tar.gz/acf1ee2475a2af134e5b744994d7faa8edb8c36d"
+  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/acf1ee2475a2af134e5b744994d7faa8edb8c36d"
   dependencies:
     cross-fetch "^2.1.1"
     eth-json-rpc-middleware "^4.0.0"

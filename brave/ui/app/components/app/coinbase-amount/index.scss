@@ -7,4 +7,30 @@
     margin-bottom: 13px;
     border-bottom: solid 1px #dadce8;
   }
+
+  &__remaining {
+    display: flex;
+    justify-content: space-between;
+    color: #3b3e4f;
+    font-size: 14px;
+    margin: 10px 0;
+
+    a {
+      color: #0076ff;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    height: 6px;
+    margin-bottom: 13px;
+    border-radius: 3px;
+    background: rgba(34, 201, 118, 0.2993164);
+
+    &__used {
+      height: 100%;
+      border-radius: inherit;
+      background: rgba(34, 201, 118, 1);
+    }
+  }
 }

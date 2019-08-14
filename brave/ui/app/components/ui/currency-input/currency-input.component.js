@@ -6,7 +6,7 @@ import TextField from '../../../../../../ui/app/components/ui/text-field'
 
 export default class CurrencyInput extends PureComponent {
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired, // returns object indicating left/right validity
     exchangeRate: PropTypes.number.isRequired, // left = exchange rate * right
     leftExtra: PropTypes.shape({
       button: PropTypes.bool.isRequired,
@@ -33,37 +33,52 @@ export default class CurrencyInput extends PureComponent {
 
   preventAlpha (event) {
     const key = String.fromCharCode(event.which)
-    console.log(event.which, key)
     if (!key.match(/[0-9.]/)) {
       event.preventDefault()
     }
   }
 
   onChange (which, event) {
-    console.log(this.state)
-    console.log(event.target.value, event.target.validity.valid)
+    const valid = event.target.validity.valid
     const newState = {
       [which]: {
         value: event.target.value,
-        valid: event.target.validity.valid,
+        valid,
       },
     }
     const value = Number.parseFloat(event.target.value)
-    if (!Number.isNaN(value)) {
+    if (valid && !Number.isNaN(value)) {
       const { exchangeRate } = this.props
+      let validity = {}
       switch (which) {
         case 'left':
+          const right = value / exchangeRate
           newState['right'] = {
-            value: (value / exchangeRate).toString(),
+            value: right.toString(),
             valid: true,
           }
+          validity = this.props.onChange({
+            left: value,
+            right,
+          })
           break
+
         case 'right':
+          const left = value * exchangeRate
           newState['left'] = {
-            value: (value * exchangeRate).toString(),
+            value: left.toString(),
             valid: true,
           }
+          validity = this.props.onChange({
+            left,
+            right: value,
+          })
           break
+      }
+      for (const key in newState) {
+        if (key in validity) {
+          newState[key].valid = validity[key]
+        }
       }
     }
     this.setState(newState)

@@ -72,7 +72,7 @@ export default class CoinbaseSell extends PureComponent {
         <CoinbaseAmount
           type={'sell'}
           currency={currency}
-          exchangeRate={exchangeRate.amount}
+          exchangeRate={exchangeRate}
         />
         <CoinbaseSubmit
           text={`Sell ${currencyName} Instantly`}

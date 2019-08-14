@@ -74,7 +74,12 @@ export default class CoinbaseBuy extends PureComponent {
         <CoinbaseAmount
           type={'buy'}
           currency={currency}
-          exchangeRate={exchangeRate.amount}
+          exchangeRate={exchangeRate}
+          limit={{
+            label: 'Daily Bank Limit',
+            amount: 25000,
+            used: 10000,
+          }}
         />
         <CoinbaseSubmit
           text={'Buy  ' + currencyName}

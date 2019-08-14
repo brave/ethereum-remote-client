@@ -10,7 +10,7 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    coinbaseSetView: view => dispatch(coinbaseSetView(view))
+    coinbaseSetView: view => dispatch(coinbaseSetView(view)),
   }
 }
 

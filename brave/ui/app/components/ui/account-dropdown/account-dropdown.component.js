@@ -40,7 +40,7 @@ export default class AccountDropdown extends PureComponent {
       image,
       name,
       details,
-      rates
+      rates,
     } = this.props.accounts[id]
 
     return (
@@ -69,8 +69,8 @@ export default class AccountDropdown extends PureComponent {
         </div>
         <div
           className={classnames({
-              'account-dropdown__rates': true,
-              'account-dropdown__rates-no-carat': inDropdown,
+            'account-dropdown__rates': true,
+            'account-dropdown__rates-no-carat': inDropdown,
           })}
         >
           { rates && rates.map((rate, index) => <div key={index}>{ rate }</div>) }

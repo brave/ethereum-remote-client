@@ -17,6 +17,7 @@ export default class BraveTokenList extends PureComponent {
       }).isRequired,
     })).isRequired,
     selectedAccount: PropTypes.string.isRequired,
+    setSelectedAccount: PropTypes.func.isRequired,
   }
 
   renderAccount (accountId) {
@@ -34,8 +35,8 @@ export default class BraveTokenList extends PureComponent {
       <div
         key={accountId}
         className={classnames({
-            'wallet-balance-wrapper': true,
-            'wallet-balance-wrapper--active': accountId === selectedAccount,
+          'wallet-balance-wrapper': true,
+          'wallet-balance-wrapper--active': accountId === selectedAccount,
         })}
       >
         <div
@@ -67,7 +68,6 @@ export default class BraveTokenList extends PureComponent {
     const {
       viewingCoinbase,
       accounts,
-      selectedAccount,
       ...metamaskProps
     } = this.props
 

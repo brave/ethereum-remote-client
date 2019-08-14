@@ -28,7 +28,7 @@ export default class CoinbaseSell extends PureComponent {
         rates: [
           `${account.balance} ${account.currency}`,
           `= ${fiat}`,
-        ]
+        ],
       }
     }
 
@@ -67,7 +67,7 @@ export default class CoinbaseSell extends PureComponent {
             },
           }}
           selected={'usd'}
-          select={(id) => null}
+          select={_ => null}
         />
         <CoinbaseAmount
           type={'sell'}

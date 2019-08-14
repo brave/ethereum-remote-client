@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import {
-  UNAPPROVED_STATUS,
-  REJECTED_STATUS,
-  APPROVED_STATUS,
-  SIGNED_STATUS,
   SUBMITTED_STATUS,
   CONFIRMED_STATUS,
   FAILED_STATUS,
   DROPPED_STATUS,
   CANCELLED_STATUS,
+// unused:
+  // UNAPPROVED_STATUS,
+  // REJECTED_STATUS,
+  // APPROVED_STATUS,
+  // SIGNED_STATUS,
 } from '../../../../../../ui/app/helpers/constants/transactions'
 import Identicon from '../../../../../../ui/app/components/ui/identicon'
 import TransactionStatus from '../../../../../../ui/app/components/app/transaction-status'
@@ -22,6 +23,7 @@ export default class BraveTransactionList extends PureComponent {
 
   static propTypes = {
     viewingCoinbase: PropTypes.bool.isRequired,
+    account: PropTypes.object.isRequired,
   }
 
   renderTransactions () {
@@ -53,33 +55,33 @@ export default class BraveTransactionList extends PureComponent {
           {
             completedTransactions.length > 0
               ? completedTransactions.map((transaction) => (
-                  this.renderTransaction(transaction)
-                ))
+                this.renderTransaction(transaction)
+              ))
               : <div className="transaction-list__empty">
-                  <div className="transaction-list__empty-text">
-                    { t('noTransactions') }
-                  </div>
+                <div className="transaction-list__empty-text">
+                  { t('noTransactions') }
                 </div>
+              </div>
           }
         </div>
       </div>
     )
   }
 
-  renderTransaction (transaction, isPendingTx = false) {
+  renderTransaction (transaction, _isPendingTx = false) {
     const {
       id,
       to,
-      created_at,
+      created_at: createdAt,
       status,
       details: { title },
       amount,
-      native_amount,
+      native_amount: nativeAmount,
     } = transaction
     // TODO(cg505)
     // - some transaction types do have have to/from.
     //   fix identicons for these.
-    // - we should determine whether to use created_at, updated_at,
+    // - we should determine whether to use createdAt, updated_at,
     //   or some other time for each type.
     // - we should make the time human-readable
 
@@ -111,9 +113,9 @@ export default class BraveTransactionList extends PureComponent {
           </div>
           <div
             className="transaction-list-item__nonce"
-            title={created_at}
+            title={createdAt}
           >
-            { created_at }
+            { createdAt }
           </div>
           <TransactionStatus
             className="transaction-list-item__status"
@@ -130,10 +132,10 @@ export default class BraveTransactionList extends PureComponent {
           </div>
           <div className="currency-display-component transaction-list-item__amount transaction-list-item__amount--secondary">
             <span className="currency-display-component__text">
-              {native_amount.amount}
+              {nativeAmount.amount}
             </span>
             <span className="currency-display-component__suffix">
-              {native_amount.currency}
+              {nativeAmount.currency}
             </span>
           </div>
         </div>
@@ -144,7 +146,6 @@ export default class BraveTransactionList extends PureComponent {
   render () {
     const {
       viewingCoinbase,
-      account,
       ...metamaskProps
     } = this.props
 

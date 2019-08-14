@@ -1,5 +1,4 @@
 const reduceMetamaskApp = require('../../../../../ui/app/ducks/app/app')
-const extend = require('xtend')
 const actions = require('../../store/actions')
 
 module.exports = function (state, action) {

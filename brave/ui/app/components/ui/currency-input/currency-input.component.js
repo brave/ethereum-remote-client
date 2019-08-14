@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import ExchangeArrows from './exchange-arrows'
-import TextField from '../../../../../../ui/app/components/ui/text-field'
 
 export default class CurrencyInput extends PureComponent {
   static propTypes = {
@@ -28,7 +27,7 @@ export default class CurrencyInput extends PureComponent {
     right: {
       value: '',
       valid: true,
-    }
+    },
   }
 
   preventAlpha (event) {

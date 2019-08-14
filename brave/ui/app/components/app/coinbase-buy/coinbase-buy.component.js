@@ -26,7 +26,7 @@ export default class CoinbaseBuy extends PureComponent {
       ret[accountId] = {
         name: account.currencyName,
         details: account.currency,
-        rates: [`@ ${fiat}`]
+        rates: [`@ ${fiat}`],
       }
     }
 
@@ -69,7 +69,7 @@ export default class CoinbaseBuy extends PureComponent {
             },
           }}
           selected={'chase'}
-          select={(id) => null}
+          select={_ => null}
         />
         <CoinbaseAmount
           type={'buy'}

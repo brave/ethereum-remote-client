@@ -27,16 +27,16 @@ module.exports = class ConnectWallet extends PureComponent {
       case 'ledger':
         walletText = {
           title: (<div>
-                    <img className={'hardware-img'} src={'images/ledger-logo.svg'} />
-                  </div>),
+            <img className={'hardware-img'} src={'images/ledger-logo.svg'} />
+          </div>),
           subText: t('ledgerCreateSubText'),
         }
         break
       case 'trezor':
         walletText = {
           title: (<div>
-                    <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
-                  </div>),
+            <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
+          </div>),
           subText: t('trezorCreateSubText'),
         }
         break
@@ -72,24 +72,24 @@ module.exports = class ConnectWallet extends PureComponent {
         <div className={'controls'}>
           {
             onCreate
-            ? <button
+              ? <button
                 style={hwButtonStyle}
                 onClick={onCreate}
                 className={'create'}
               >
                 {innerText}
               </button>
-            : null
+              : null
           }
           {
             onRestore
-            ? <span
+              ? <span
                 onClick={onRestore}
                 className={'restore'}
               >
                 {'Restore'}
               </span>
-            : null
+              : null
           }
         </div>
         {this.renderWalletText()}

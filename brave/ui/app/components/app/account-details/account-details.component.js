@@ -5,8 +5,9 @@ import AccountDetails from '../../../../../../ui/app/components/app/account-deta
 export default class BraveAccountDetails extends PureComponent {
   static propTypes = {
     viewingCoinbase: PropTypes.bool.isRequired,
-    coinbaseName: PropTypes.string,
-    coinbaseBalance: PropTypes.number,
+    coinbaseName: PropTypes.string.isRequired,
+    coinbaseBalance: PropTypes.number.isRequired,
+    toggleCoinbase: PropTypes.func,
   }
 
   render () {

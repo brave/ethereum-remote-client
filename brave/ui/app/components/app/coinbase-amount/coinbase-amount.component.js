@@ -35,7 +35,7 @@ export default class CoinbaseAmount extends PureComponent {
       return {}
     }
     return {
-      left: (limit.amount - limit.used - values.left) >= 0
+      left: (limit.amount - limit.used - values.left) >= 0,
     }
   }
 
@@ -65,32 +65,36 @@ export default class CoinbaseAmount extends PureComponent {
         <div className="coinbase-amount__label">Amount</div>
         {
           limit
-          ? <div className="coinbase-amount__remaining">
-            <div>
-              { limit.label }
+            ? <div className="coinbase-amount__remaining">
+              <div>
+                { limit.label }
+              </div>
+              <div>
+                { `${remainingString} remaining. `}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://coinbase.com.something"
+                >
+                  View Limits
+                </a>
+              </div>
             </div>
-            <div>
-              { `${remainingString} remaining. `}
-              <a target="_blank" href="https://coinbase.com.something">
-                View Limits
-              </a>
-            </div>
-          </div>
-          : null
+            : null
         }
         {
           limit
-          ? <div className="coinbase-amount__bar">
-            {
-              fractionUsed !== 0
-              ? <div
-                  className="coinbase-amount__bar__used"
-                  style={{width: fractionWidthCss}}
-                ></div>
-              : null
-            }
-          </div>
-          : null
+            ? <div className="coinbase-amount__bar">
+              {
+                fractionUsed !== 0
+                  ? <div
+                    className="coinbase-amount__bar__used"
+                    style={{width: fractionWidthCss}}
+                  ></div>
+                  : null
+              }
+            </div>
+            : null
         }
         <CurrencyInput
           onChange={values => this.onChange(values)}

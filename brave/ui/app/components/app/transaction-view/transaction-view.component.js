@@ -38,8 +38,8 @@ export default class BraveTransactionViewBalance extends PureComponent {
         <div className="coinbase-buy-sell">
           <span
             className={classnames({
-                'coinbase-buy-sell__tab': true,
-                'coinbase-buy-sell__tab-active': coinbaseView === 'buy',
+              'coinbase-buy-sell__tab': true,
+              'coinbase-buy-sell__tab-active': coinbaseView === 'buy',
             })}
             onClick={() => coinbaseSetView('buy')}
           >
@@ -47,8 +47,8 @@ export default class BraveTransactionViewBalance extends PureComponent {
           </span>
           <span
             className={classnames({
-                'coinbase-buy-sell__tab': true,
-                'coinbase-buy-sell__tab-active': coinbaseView === 'sell',
+              'coinbase-buy-sell__tab': true,
+              'coinbase-buy-sell__tab-active': coinbaseView === 'sell',
             })}
             onClick={() => coinbaseSetView('sell')}
           >

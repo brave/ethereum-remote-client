@@ -156,7 +156,7 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
-          /'(.*)\/restore-vault'/gm,
+          /'(.*)\/keychains\/restore-vault'/gm,
           `'${bravePrefix}ui/app/pages/keychains/restore-vault'`
         )
       )

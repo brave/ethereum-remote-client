@@ -1,21 +1,20 @@
 import Home from '../../../../../ui/app/pages/home/home.component'
 import PropTypes from 'prop-types'
-import actions from '../../store/actions'
-import batToken from '../../store/bat-token'
 
 const BraveHome = class BraveHome extends Home {
 
   componentDidMount () {
     super.componentDidMount()
 
-    const { batTokenAdded } = this.props
+    const { batTokenAdded, addBatToken } = this.props
 
     if (!batTokenAdded) {
-      this.props.dispatch(actions.addTokens(batToken))
+      addBatToken()
     }
   }
 }
 
 BraveHome.propTypes.batTokenAdded = PropTypes.bool
+BraveHome.propTypes.addBatToken = PropTypes.func
 
 module.exports = BraveHome

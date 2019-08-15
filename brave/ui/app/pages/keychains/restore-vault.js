@@ -1,6 +1,12 @@
-import RestoreVaultPage from '../../../../../ui/app/pages/keychains/restore-vault'
+const RestoreVaultPage = require('../../../../../ui/app/pages/keychains/restore-vault').default.WrappedComponent
 
-module.exports = class BraveRestoreVaultPage extends RestoreVaultPage {
+import { connect } from 'react-redux'
+import {
+  createNewVaultAndRestore,
+  unMarkPasswordForgotten,
+} from '../../store/actions'
+
+class BraveRestoreVaultPage extends RestoreVaultPage {
   handleSeedPhraseChange (seedPhrase) {
     let seedPhraseError = null
 
@@ -11,3 +17,13 @@ module.exports = class BraveRestoreVaultPage extends RestoreVaultPage {
     this.setState({ seedPhrase, seedPhraseError })
   }
 }
+
+export default connect(
+  ({ appState: { warning, isLoading } }) => ({ warning, isLoading }),
+  dispatch => ({
+    leaveImportSeedScreenState: () => {
+      dispatch(unMarkPasswordForgotten())
+    },
+    createNewVaultAndRestore: (pw, seed) => dispatch(createNewVaultAndRestore(pw, seed)),
+  })
+)(BraveRestoreVaultPage)

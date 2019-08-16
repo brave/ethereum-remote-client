@@ -3,11 +3,11 @@ const MetaMaskActions = require('../../../../ui/app/store/actions')
 MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
-MetaMaskActions.TOGGLE_COINBASE = 'TOGGLE_COINBASE'
-MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT = 'COINBASE_SET_SELECTED_ACCOUNT'
-MetaMaskActions.coinbaseSetSelectedAccount = coinbaseSetSelectedAccount
-MetaMaskActions.COINBASE_SET_VIEW = 'COINBASE_SET_VIEW'
-MetaMaskActions.coinbaseSetView = coinbaseSetView
+MetaMaskActions.TOGGLE_PROVIDER = 'TOGGLE_PROVIDER'
+MetaMaskActions.PROVIDER_SET_SELECTED_ACCOUNT = 'PROVIDER_SET_SELECTED_ACCOUNT'
+MetaMaskActions.providerSetSelectedAccount = providerSetSelectedAccount
+MetaMaskActions.PROVIDER_SET_VIEW = 'PROVIDER_SET_VIEW'
+MetaMaskActions.providerSetView = providerSetView
 
 MetaMaskActions.showModal = showModal
 
@@ -25,16 +25,16 @@ function setBatTokenAdded () {
   }
 }
 
-function coinbaseSetSelectedAccount (accountId) {
+function providerSetSelectedAccount (accountId) {
   return {
-    type: MetaMaskActions.COINBASE_SET_SELECTED_ACCOUNT,
+    type: MetaMaskActions.PROVIDER_SET_SELECTED_ACCOUNT,
     value: accountId,
   }
 }
 
-function coinbaseSetView (view) {
+function providerSetView (view) {
   return {
-    type: MetaMaskActions.COINBASE_SET_VIEW,
+    type: MetaMaskActions.PROVIDER_SET_VIEW,
     value: view,
   }
 }
@@ -69,7 +69,7 @@ function showModal (payload) {
   // XXX for testing
   if (payload.name === 'ACCOUNT_DETAILS') {
     return {
-      type: MetaMaskActions.TOGGLE_COINBASE,
+      type: MetaMaskActions.TOGGLE_PROVIDER,
     }
   }
 

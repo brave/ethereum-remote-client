@@ -4,7 +4,7 @@ module.exports = function (state, action) {
   const newState = reduceMetamask(state, action)
   newState.batTokenAdded = newState.batTokenAdded || false
 
-  newState.coinbase = newState.coinbase || {
+  newState.externalProvider = newState.externalProvider || {
     accounts: {
       '0c14e346-9e7f-4d6f-8eb7-d07a02e6ccdd': {
         currency: 'BAT',
@@ -78,8 +78,8 @@ module.exports = function (state, action) {
       newState.batTokenAdded = action.value
       return newState
 
-    case 'COINBASE_SET_SELECTED_ACCOUNT':
-      newState.coinbase.selectedAccount = action.value
+    case 'PROVIDER_SET_SELECTED_ACCOUNT':
+      newState.externalProvider.selectedAccount = action.value
       return newState
 
     default:

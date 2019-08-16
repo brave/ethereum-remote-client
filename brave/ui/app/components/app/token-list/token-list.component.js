@@ -7,7 +7,7 @@ import TokenList from '../../../../../../ui/app/components/app/token-list'
 
 export default class BraveTokenList extends PureComponent {
   static propTypes = {
-    viewingCoinbase: PropTypes.bool.isRequired,
+    viewingProvider: PropTypes.bool.isRequired,
     accounts: PropTypes.objectOf(PropTypes.shape({
       currency: PropTypes.string.isRequired,
       balance: PropTypes.string.isRequired,
@@ -40,7 +40,7 @@ export default class BraveTokenList extends PureComponent {
         })}
       >
         <div
-          className="wallet-balance cb-wallet-balance"
+          className="wallet-balance provider-wallet-balance"
           onClick={() => setSelectedAccount(accountId)}
         >
           <div className="balance-container">
@@ -66,12 +66,12 @@ export default class BraveTokenList extends PureComponent {
 
   render () {
     const {
-      viewingCoinbase,
+      viewingProvider,
       accounts,
       ...metamaskProps
     } = this.props
 
-    if (!viewingCoinbase) {
+    if (!viewingProvider) {
       return (
         <TokenList {...metamaskProps} />
       )

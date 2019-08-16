@@ -3,16 +3,16 @@ const actions = require('../../store/actions')
 
 module.exports = function (state, action) {
   const newState = reduceMetamaskApp(state, action)
-  newState.coinbaseShown = newState.coinbaseShown || false
-  newState.coinbaseView = newState.coinbaseView || null
+  newState.providerShown = newState.providerShown || false
+  newState.providerView = newState.providerView || null
 
   switch (action.type) {
-    case actions.TOGGLE_COINBASE:
-      newState.coinbaseShown = !newState.coinbaseShown
+    case actions.TOGGLE_PROVIDER:
+      newState.providerShown = !newState.providerShown
       return newState
 
-    case actions.COINBASE_SET_VIEW:
-      newState.coinbaseView = action.value
+    case actions.PROVIDER_SET_VIEW:
+      newState.providerView = action.value
       return newState
 
     default:

@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import AccountDropdown from '../../ui/account-dropdown'
-import CoinbaseAmount from '../coinbase-amount'
-import CoinbaseSubmit from '../coinbase-submit'
+import ProviderAmount from '../provider-amount'
+import ProviderSubmit from '../provider-submit'
 
-export default class CoinbaseSell extends PureComponent {
+export default class ProviderSell extends PureComponent {
   static propTypes = {
     accounts: PropTypes.object.isRequired,
     selectedAccount: PropTypes.string.isRequired,
@@ -69,12 +69,12 @@ export default class CoinbaseSell extends PureComponent {
           selected={'usd'}
           select={_ => null}
         />
-        <CoinbaseAmount
+        <ProviderAmount
           type={'sell'}
           currency={currency}
           exchangeRate={exchangeRate}
         />
-        <CoinbaseSubmit
+        <ProviderSubmit
           text={`Sell ${currencyName} Instantly`}
           onClick={() => null}
         />

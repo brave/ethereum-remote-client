@@ -1,16 +1,16 @@
 import { connect } from 'react-redux'
-import { coinbaseSetView } from '../../../store/actions'
+import { providerSetView } from '../../../store/actions'
 import BraveTransactionView from './transaction-view.component'
 
 function mapStateToProps (state) {
   return {
-    coinbaseView: state.appState.coinbaseShown ? state.appState.coinbaseView : null,
+    providerView: state.appState.providerShown ? state.appState.providerView : null,
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    coinbaseSetView: view => dispatch(coinbaseSetView(view)),
+    providerSetView: view => dispatch(providerSetView(view)),
   }
 }
 

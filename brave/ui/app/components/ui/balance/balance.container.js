@@ -3,7 +3,7 @@ import BraveBalance from './balance.component'
 
 function mapStateToProps (state) {
   return {
-    viewingCoinbase: state.appState.coinbaseShown,
+    viewingProvider: state.appState.providerShown,
   }
 }
 

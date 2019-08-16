@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import CurrencyInput from '../../ui/currency-input'
 
-export default class CoinbaseAmount extends PureComponent {
+export default class ProviderAmount extends PureComponent {
   static propTypes = {
     type: PropTypes.oneOf(['buy', 'sell']).isRequired,
     currency: PropTypes.string.isRequired,
@@ -62,10 +62,10 @@ export default class CoinbaseAmount extends PureComponent {
 
     return (
       <div>
-        <div className="coinbase-amount__label">Amount</div>
+        <div className="provider-amount__label">Amount</div>
         {
           limit
-            ? <div className="coinbase-amount__remaining">
+            ? <div className="provider-amount__remaining">
               <div>
                 { limit.label }
               </div>
@@ -74,7 +74,7 @@ export default class CoinbaseAmount extends PureComponent {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://coinbase.com.something"
+                  href="https://provider.com.something"
                 >
                   View Limits
                 </a>
@@ -84,11 +84,11 @@ export default class CoinbaseAmount extends PureComponent {
         }
         {
           limit
-            ? <div className="coinbase-amount__bar">
+            ? <div className="provider-amount__bar">
               {
                 fractionUsed !== 0
                   ? <div
-                    className="coinbase-amount__bar__used"
+                    className="provider-amount__bar__used"
                     style={{width: fractionWidthCss}}
                   ></div>
                   : null

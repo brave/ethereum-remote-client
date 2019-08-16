@@ -1,20 +1,20 @@
 import { connect } from 'react-redux'
-import { coinbaseSetView } from '../../../store/actions'
+import { providerSetView } from '../../../store/actions'
 import BraveTransactionViewBalance from './transaction-view-balance.component'
 
 function mapStateToProps (state) {
-  const accountId = state.metamask.coinbase.selectedAccount
+  const accountId = state.metamask.externalProvider.selectedAccount
 
   return {
-    viewingCoinbase: state.appState.coinbaseShown,
+    viewingProvider: state.appState.providerShown,
     accountId,
-    account: state.metamask.coinbase.accounts[accountId],
+    account: state.metamask.externalProvider.accounts[accountId],
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    showBuySell: () => dispatch(coinbaseSetView('buy')),
+    showBuySell: () => dispatch(providerSetView('buy')),
   }
 }
 

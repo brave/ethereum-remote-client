@@ -22,7 +22,7 @@ export default class BraveTransactionList extends PureComponent {
   }
 
   static propTypes = {
-    viewingCoinbase: PropTypes.bool.isRequired,
+    viewingProvider: PropTypes.bool.isRequired,
     account: PropTypes.object.isRequired,
   }
 
@@ -85,7 +85,7 @@ export default class BraveTransactionList extends PureComponent {
     //   or some other time for each type.
     // - we should make the time human-readable
 
-    const coinbaseToMetamaskStatusHash = {
+    const providerToMetamaskStatusHash = {
       pending: SUBMITTED_STATUS,
       completed: CONFIRMED_STATUS,
       failed: FAILED_STATUS,
@@ -119,7 +119,7 @@ export default class BraveTransactionList extends PureComponent {
           </div>
           <TransactionStatus
             className="transaction-list-item__status"
-            statusKey={coinbaseToMetamaskStatusHash[status]}
+            statusKey={providerToMetamaskStatusHash[status]}
             title={status}
           />
           <div className="currency-display-component transaction-list-item__amount transaction-list-item__amount--primary">
@@ -145,11 +145,11 @@ export default class BraveTransactionList extends PureComponent {
 
   render () {
     const {
-      viewingCoinbase,
+      viewingProvider,
       ...metamaskProps
     } = this.props
 
-    if (!viewingCoinbase) {
+    if (!viewingProvider) {
       return <TransactionList {...metamaskProps} />
     }
 

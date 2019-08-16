@@ -4,42 +4,42 @@ import AccountDetails from '../../../../../../ui/app/components/app/account-deta
 
 export default class BraveAccountDetails extends PureComponent {
   static propTypes = {
-    viewingCoinbase: PropTypes.bool.isRequired,
-    coinbaseName: PropTypes.string.isRequired,
-    coinbaseBalance: PropTypes.number.isRequired,
-    toggleCoinbase: PropTypes.func,
+    viewingProvider: PropTypes.bool.isRequired,
+    providerName: PropTypes.string.isRequired,
+    providerBalance: PropTypes.number.isRequired,
+    toggleProvider: PropTypes.func,
   }
 
   render () {
     const {
-      viewingCoinbase,
-      coinbaseName,
-      coinbaseBalance,
-      toggleCoinbase,
+      viewingProvider,
+      providerName,
+      providerBalance,
+      toggleProvider,
       ...metamaskProps
     } = this.props
 
-    if (!viewingCoinbase) {
+    if (!viewingProvider) {
       return <AccountDetails {...metamaskProps} />
     }
 
     const displayedBalance = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-    }).format(coinbaseBalance || 0)
+    }).format(providerBalance || 0)
 
     return (
-      <div className="flex-column account-details cb-account-details">
-        <div className="cb-account-details__name">
-          {coinbaseName}
+      <div className="flex-column account-details provider-account-details">
+        <div className="provider-account-details__name">
+          {providerName}
         </div>
-        <div className="cb-account-details__balance-label">
-          Coinbase Balance
+        <div className="provider-account-details__balance-label">
+          Uphold Balance
         </div>
-        <div className="cb-account-details__balance">
+        <div className="provider-account-details__balance">
           {displayedBalance}
         </div>
-        <button className="cb-account-details__button allcaps" onClick={toggleCoinbase}>
+        <button className="provider-account-details__button allcaps" onClick={toggleProvider}>
           details
         </button>
       </div>

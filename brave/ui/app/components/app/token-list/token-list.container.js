@@ -1,20 +1,20 @@
 import { connect } from 'react-redux'
-import { coinbaseSetSelectedAccount, coinbaseSetView } from '../../../store/actions'
+import { providerSetSelectedAccount, providerSetView } from '../../../store/actions'
 import BraveTokenList from './token-list.component'
 
 function mapStateToProps (state) {
   return {
-    viewingCoinbase: state.appState.coinbaseShown,
-    accounts: state.metamask.coinbase.accounts,
-    selectedAccount: state.metamask.coinbase.selectedAccount,
+    viewingProvider: state.appState.providerShown,
+    accounts: state.metamask.externalProvider.accounts,
+    selectedAccount: state.metamask.externalProvider.selectedAccount,
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
     setSelectedAccount: id => {
-      dispatch(coinbaseSetSelectedAccount(id))
-      dispatch(coinbaseSetView(null))
+      dispatch(providerSetSelectedAccount(id))
+      dispatch(providerSetView(null))
     },
   }
 }

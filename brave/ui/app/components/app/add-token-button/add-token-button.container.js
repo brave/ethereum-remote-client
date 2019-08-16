@@ -3,7 +3,7 @@ import BraveAddTokenButton from './add-token-button.component'
 
 function mapStateToProps (state) {
   return {
-    viewingCoinbase: state.appState.coinbaseShown,
+    viewingProvider: state.appState.providerShown,
   }
 }
 

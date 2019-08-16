@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-export default class CoinbaseSubmit extends PureComponent {
+export default class ProviderSubmit extends PureComponent {
   static propTypes = {
     text: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
@@ -11,9 +11,9 @@ export default class CoinbaseSubmit extends PureComponent {
     const { text, onClick } = this.props
 
     return (
-      <div className="coinbase-submit">
+      <div className="provider-submit">
         <button
-          className="coinbase-submit__button"
+          className="provider-submit__button"
           onClick={onClick}
         >
           {text}

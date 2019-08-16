@@ -4,16 +4,16 @@ import Balance from '../../../../../../ui/app/components/ui/balance'
 
 export default class BraveBalance extends PureComponent {
   static propTypes = {
-    viewingCoinbase: PropTypes.bool.isRequired,
+    viewingProvider: PropTypes.bool.isRequired,
   }
 
   render () {
     const {
-      viewingCoinbase,
+      viewingProvider,
       ...metamaskProps
     } = this.props
 
-    if (!viewingCoinbase) {
+    if (!viewingProvider) {
       return (
         <Balance {...metamaskProps} />
       )

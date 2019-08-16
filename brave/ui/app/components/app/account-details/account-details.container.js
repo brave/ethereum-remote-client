@@ -1,19 +1,19 @@
 import { connect } from 'react-redux'
-import { TOGGLE_COINBASE } from '../../../store/actions'
+import { TOGGLE_PROVIDER } from '../../../store/actions'
 import BraveAccountDetails from './account-details.component'
 
 function mapStateToProps (state) {
   return {
-    viewingCoinbase: state.appState.coinbaseShown,
+    viewingProvider: state.appState.providerShown,
     // TODO extract from state
-    coinbaseName: 'Christopher Cooper',
-    coinbaseBalance: 100,
+    providerName: 'Christopher Cooper',
+    providerBalance: 100,
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    toggleCoinbase: () => dispatch({ type: TOGGLE_COINBASE }),
+    toggleProvider: () => dispatch({ type: TOGGLE_PROVIDER }),
   }
 }
 

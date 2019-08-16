@@ -7,7 +7,7 @@ import TransactionViewBalance from '../../../../../../ui/app/components/app/tran
 
 export default class BraveTransactionViewBalance extends PureComponent {
   static propTypes = {
-    viewingCoinbase: PropTypes.bool.isRequired,
+    viewingProvider: PropTypes.bool.isRequired,
     showBuySell: PropTypes.func.isRequired,
     account: PropTypes.object.isRequired,
     accountId: PropTypes.string.isRequired,
@@ -58,12 +58,12 @@ export default class BraveTransactionViewBalance extends PureComponent {
 
   render () {
     const {
-      viewingCoinbase,
+      viewingProvider,
       accountId,
       ...metamaskProps
     } = this.props
 
-    if (!viewingCoinbase) {
+    if (!viewingProvider) {
       return <TransactionViewBalance {...metamaskProps} />
     }
 

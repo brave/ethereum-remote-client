@@ -178,6 +178,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/lib/setupSentry'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/reveal-seed-phrase\.component'/gm,
+          `'${bravePrefix}ui/app/pages/first-time-flow/seed-phrase/reveal-seed-phrase/reveal-seed-phrase.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

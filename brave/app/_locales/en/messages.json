@@ -1,4 +1,7 @@
 {
+  "backupPhraseFileName": {
+    "message": "Crypto Wallets Secret Backup Phrase"
+  },
   "ledgerCreateSubText": {
     "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
   },

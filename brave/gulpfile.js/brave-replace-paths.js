@@ -184,6 +184,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/first-time-flow/seed-phrase/reveal-seed-phrase/reveal-seed-phrase.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/advanced-tab\.component'/gm,
+          `'${bravePrefix}ui/app/pages/settings/advanced-tab/advanced-tab.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

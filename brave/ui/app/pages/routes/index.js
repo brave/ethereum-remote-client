@@ -111,7 +111,7 @@ Routes.propTypes.batTokenAdded = PropTypes.bool
 class BraveRoutes extends Component {
 
   componentDidMount () {
-    const container = document.querySelector('.theme-wrapper')
+    const container = document.querySelector('#app-content')
 
     if (!container) {
       return
@@ -127,7 +127,7 @@ class BraveRoutes extends Component {
 
   render () {
     return (
-      <div className={'theme-wrapper'}>
+      <div>
         <BraveHeader />
         <Routes />
       </div>

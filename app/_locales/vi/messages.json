@@ -1,4 +1,16 @@
 {
+  "shareAddress": {
+    "message": "Share Address"
+  },
+  "shareAddressToConnect": {
+    "message": "Share your address to connect to $1?"
+  },
+  "shareAddressInfo": {
+    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+  },
+  "privacyModeDefault": {
+    "message": "Privacy Mode is now enabled by default"
+  },
   "privacyMode": {
     "message": "Chế độ riêng tư"
   },
@@ -11,11 +23,17 @@
   "exposeDescription": {
     "message": "Hiển thị tài khoản cho trang web hiện tại. Hữu ích cho các ứng dụng cũ."
   },
+  "chartOnlyAvailableEth": {
+    "message": "Chart only available on Ethereum networks."
+  },
   "confirmExpose": {
     "message": "Bạn có chắc chắn muốn hiển thị tài khoản của mình cho trang web hiện tại không?"
   },
   "confirmClear": {
     "message": "Bạn có chắc chắn muốn xóa các trang web được phê duyệt không?"
+  },
+  "contractInteraction": {
+    "message": "Contract Interaction"
   },
   "clearApprovalDataSuccess": {
     "message": "Đã xóa thành công dữ liệu trang web được phê duyệt."
@@ -29,23 +47,32 @@
   "clearApprovalData": {
     "message": "Xóa dữ liệu phê duyệt"
   },
-  "approve": {
-    "message": "Phê duyệt"
-  },
   "reject": {
     "message": "Từ chối"
   },
-  "providerAPIRequest": {
-    "message": "Yêu cầu API Web3"
-  },
-  "reviewProviderRequest": {
-    "message": "Vui lòng xem lại yêu cầu API Ethereum này."
+  "providerRequest": {
+    "message": "$1 would like to connect to your account"
   },
   "providerRequestInfo": {
     "message": "Miền được liệt kê bên dưới đang cố gắng yêu cầu quyền truy cập vào API Ethereum để nó có thể tương tác với chuỗi khối Ethereum. Luôn kiểm tra kỹ xem bạn có đang ở đúng trang web trước khi phê duyệt quyền truy cập Ethereum hay không."
   },
+  "about": {
+    "message": "About"
+  },
+  "aboutSettingsDescription": {
+    "message": "Version, support center, and contact info."
+  },
+  "aboutUs": {
+    "message": "About Us"
+  },
   "accept": {
     "message": "Chấp nhận"
+  },
+  "acceleratingATransaction": {
+    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+  },
+  "accessingYourCamera": {
+    "message": "Accessing your camera..."
   },
   "account": {
     "message": "Tài khoản"
@@ -56,11 +83,74 @@
   "accountName": {
     "message": "Tên tài khoản"
   },
-  "addToken": {
-    "message": "Thêm mã Token"
+  "accountOptions": {
+    "message": "Account Options"
+  },
+  "accountSelectionRequired": {
+    "message": "You need to select an account!"
+  },
+  "activityLog": {
+    "message": "activity log"
+  },
+  "add": {
+    "message": "Add"
   },
   "address": {
     "message": "Địa chỉ"
+  },
+  "addNetwork": {
+    "message": "Add Network"
+  },
+  "addRecipient": {
+    "message": "Add Recipient"
+  },
+  "addressBook": {
+    "message": "Address Book"
+  },
+  "advanced": {
+    "message": "Advanced"
+  },
+  "advancedSettingsDescription": {
+    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+  },
+  "advancedOptions": {
+    "message": "Advanced Options"
+  },
+  "addCustomToken": {
+    "message": "Add custom token"
+  },
+  "addToAddressBook": {
+    "message": "Add to address book"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "e.g. John D."
+  },
+  "addAlias": {
+    "message": "Add alias"
+  },
+  "addEthAddress": {
+    "message": "Add an Ethereum address"
+  },
+  "addToken": {
+    "message": "Thêm mã Token"
+  },
+  "addTokens": {
+    "message": "Add Tokens"
+  },
+  "addSuggestedTokens": {
+    "message": "Add Suggested Tokens"
+  },
+  "addAcquiredTokens": {
+    "message": "Add the tokens you've acquired using MetaMask"
+  },
+  "agreeTermsOfService": {
+    "message": "I agree to the Terms of Service"
+  },
+  "allDone": {
+    "message": "All Done"
+  },
+  "alreadyHaveSeedPhrase": {
+    "message": "No, I already have a seed phrase"
   },
   "amount": {
     "message": "Số lượng"
@@ -68,38 +158,105 @@
   "amountPlusGas": {
     "message": "Số lượng + Gas"
   },
+  "amountPlusTxFee": {
+    "message": "Amount + TX Fee"
+  },
   "appDescription": {
-    "description": "Mô tả phần mềm",
-    "message": "Tính năng Ethereum cho trình duyệt"
+    "message": "Tính năng Ethereum cho trình duyệt",
+    "description": "The description of the application"
   },
   "appName": {
-    "description": "Tên phần mềm",
-    "message": "MetaMask"
+    "message": "MetaMask",
+    "description": "The name of the application"
+  },
+  "approve": {
+    "message": "Phê duyệt"
+  },
+  "approved": {
+    "message": "Approved"
+  },
+  "asset": {
+    "message": "Asset"
   },
   "attemptingConnect": {
     "message": "Đang kết nối đến blockchain."
   },
+  "attemptToCancel": {
+    "message": "Attempt to Cancel?"
+  },
+  "attemptToCancelDescription": {
+    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+  },
+  "attributions": {
+    "message": "Attributions"
+  },
+  "autoLogoutTimeLimit": {
+    "message": "Auto-Logout Timer (minutes)"
+  },
+  "autoLogoutTimeLimitDescription": {
+    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+  },
   "available": {
     "message": "Có sẵn"
+  },
+  "average": {
+    "message": "Average"
   },
   "back": {
     "message": "Quay lại"
   },
+  "backToAll": {
+    "message": "Back to All"
+  },
+  "backupApprovalNotice": {
+    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+  },
+  "backupApprovalInfo": {
+    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+  },
+  "backupNow": {
+    "message": "Backup now"
+  },
   "balance": {
     "message": "Số dư:"
   },
+  "balanceOutdated": {
+    "message": "Balance may be outdated"
+  },
+  "balances": {
+    "message": "Token balance(s)"
+  },
   "balanceIsInsufficientGas": {
     "message": "Số dư không đủ để thanh toán tổng tiền gas hiện tại"
+  },
+  "basic": {
+    "message": "Basic"
   },
   "beta": {
     "message": "Bản thử nghiệm Beta"
   },
   "betweenMinAndMax": {
-    "description": "trợ giúp để nhập hex dưới dạng số thập phân",
-    "message": "phải nhiều hơn hoặc bằng $1 và ít hơn hoặc bằng $2."
+    "message": "phải nhiều hơn hoặc bằng $1 và ít hơn hoặc bằng $2.",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "blockExplorerUrl": {
+    "message": "Block Explorer"
+  },
+  "blockExplorerView": {
+    "message": "View account at $1",
+    "description": "$1 replaced by URL for custom block explorer"
+  },
+  "blockiesIdenticon": {
+    "message": "Use Blockies Identicon"
   },
   "borrowDharma": {
     "message": "Vay Dharma (thử nghiệm)"
+  },
+  "browserNotSupported": {
+    "message": "Your Browser is not supported..."
+  },
+  "builtInCalifornia": {
+    "message": "MetaMask is designed and built in California."
   },
   "buy": {
     "message": "Mua"
@@ -110,20 +267,80 @@
   "buyCoinbaseExplainer": {
     "message": "Coinbase là dịch vụ ví điện tử thông dụng nhất thế giới để mua bán Bitcoin, Ethereum, và Litecoin"
   },
+  "buyWithWyre": {
+    "message": "Buy ETH with Wyre"
+  },
+  "buyWithWyreDescription": {
+    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+  },
   "buyCoinSwitch": {
     "message": "Mua trên CoinSwitch"
   },
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitch là điểm đến duy nhất để trao đổi hơn 300 tiền điện tử với tốc độ tốt nhất."
   },
+  "bytes": {
+    "message": "Bytes"
+  },
+  "off": {
+    "message": "Off"
+  },
+  "ok": {
+    "message": "Ok"
+  },
+  "on": {
+    "message": "On"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "Block Explorer URL (optional)"
+  },
   "cancel": {
     "message": "Hủy"
+  },
+  "cancelAttempt": {
+    "message": "Cancel Attempt"
+  },
+  "cancellationGasFee": {
+    "message": "Cancellation Gas Fee"
+  },
+  "cancelled": {
+    "message": "Cancelled"
+  },
+  "cancelN": {
+    "message": "Cancel all $1 transactions"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "classicInterface": {
+    "message": "Use classic interface"
   },
   "clickCopy": {
     "message": "Nhấp vào để sao chép"
   },
+  "clickToAdd": {
+    "message": "Click on $1 to add them to your account"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "You need to use MetaMask on Brave Software Brave in order to connect to your Hardware Wallet."
+  },
+  "company": {
+    "message": "Company"
+  },
   "confirm": {
     "message": "Xác nhận"
+  },
+  "confirmationTime": {
+    "message": "Confirmation time (sec)"
+  },
+  "confirmed": {
+    "message": "Confirmed"
   },
   "confirmContract": {
     "message": "Xác nhận hợp đồng"
@@ -131,11 +348,71 @@
   "confirmPassword": {
     "message": "Xác nhận mật khẩu"
   },
+  "confirmSecretBackupPhrase": {
+    "message": "Confirm your Secret Backup Phrase"
+  },
   "confirmTransaction": {
     "message": "Xác nhận giao dịch"
   },
+  "congratulations": {
+    "message": "Congratulations"
+  },
+  "connectHardwareWallet": {
+    "message": "Connect Hardware Wallet"
+  },
+  "connect": {
+    "message": "Connect"
+  },
+  "connectRequest": {
+    "message": "Connect Request"
+  },
+  "connecting": {
+    "message": "Connecting..."
+  },
+  "connectingTo": {
+    "message": "Connecting to $1"
+  },
+  "connectingToKovan": {
+    "message": "Connecting to Kovan Test Network"
+  },
+  "connectingToMainnet": {
+    "message": "Connecting to Main Ethereum Network"
+  },
+  "connectingToRopsten": {
+    "message": "Connecting to Ropsten Test Network"
+  },
+  "connectingToRinkeby": {
+    "message": "Connecting to Rinkeby Test Network"
+  },
+  "connectingToLocalhost": {
+    "message": "Connecting to Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Connecting to Goerli Test Network"
+  },
+  "connectingToUnknown": {
+    "message": "Connecting to Unknown Network"
+  },
+  "connectToLedger": {
+    "message": "Connect to Ledger"
+  },
+  "connectToTrezor": {
+    "message": "Connect to Trezor"
+  },
+  "contactList": {
+    "message": "Contact List"
+  },
+  "contactListDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "continue": {
+    "message": "Continue"
+  },
   "continueToCoinbase": {
     "message": "Tiếp tục đến Coinbase"
+  },
+  "continueToWyre": {
+    "message": "Continue to Wyre"
   },
   "continueToCoinSwitch": {
     "message": "Tiếp tục đến CoinSwitch"
@@ -155,8 +432,23 @@
   "copiedExclamation": {
     "message": "Đã sao chép!"
   },
+  "copiedSafe": {
+    "message": "I've copied it somewhere safe"
+  },
   "copy": {
     "message": "Sao chép"
+  },
+  "copyAddress": {
+    "message": "Copy address to clipboard"
+  },
+  "copyTransactionId": {
+    "message": "Copy Transaction ID"
+  },
+  "copiedTransactionId": {
+    "message": "Copied Transaction ID"
+  },
+  "copyToClipboard": {
+    "message": "Đã sao chép vào clipboard"
   },
   "copyButton": {
     "message": "Sao chép"
@@ -164,33 +456,66 @@
   "copyPrivateKey": {
     "message": "Đây là Khoá Bí Mật của bạn (nhấp vào để sao chép)"
   },
-  "copyToClipboard": {
-    "message": "Đã sao chép vào clipboard"
-  },
   "create": {
     "message": "Tạo"
   },
   "createAccount": {
     "message": "Tạo tài khoản"
   },
+  "createAWallet": {
+    "message": "Create a Wallet"
+  },
   "createDen": {
     "message": "Tạo"
   },
+  "createPassword": {
+    "message": "Create Password"
+  },
   "crypto": {
-    "description": "Hình thức giao dịch (tiền điện tử)",
-    "message": "Tiền điện tử"
+    "message": "Tiền điện tử",
+    "description": "Exchange type (cryptocurrencies)"
+  },
+  "currencyConversion": {
+    "message": "Currency Conversion"
+  },
+  "currentLanguage": {
+    "message": "Current Language"
+  },
+  "currentNetwork": {
+    "message": "Current Network"
+  },
+  "currentRpc": {
+    "message": "Current RPC"
   },
   "customGas": {
     "message": "Tùy chỉnh gas"
   },
-  "customRPC": {
-    "message": "Tùy chỉnh RPC"
+  "customGasSubTitle": {
+    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+  },
+  "customToken": {
+    "message": "Custom Token"
   },
   "customize": {
     "message": "Tùy chỉnh"
   },
+  "customRPC": {
+    "message": "Tùy chỉnh RPC"
+  },
+  "decimalsMustZerotoTen": {
+    "message": "Decimals must be at least 0, and not over 36."
+  },
+  "decimal": {
+    "message": "Decimals of Precision"
+  },
   "defaultNetwork": {
     "message": "Mạng lưới mặc định dùng cho các giao dịch Ether là Main Net (tiền ETH thật)."
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
   },
   "denExplainer": {
     "message": "Số DEN của bạn là mật khẩu đã được mã hóa và lưu trữ trong MetaMask"
@@ -231,26 +556,116 @@
   "directDepositEtherExplainer": {
     "message": "Nếu bạn đã có sẵn vài Ether, cách nhanh nhất để thêm Ether vào ví tiền mới của bạn là bằng ký gửi trực tiếp."
   },
+  "dismiss": {
+    "message": "Dismiss"
+  },
   "done": {
     "message": "Hoàn tất"
+  },
+  "downloadGoogleChrome": {
+    "message": "Download Brave Software Brave"
+  },
+  "downloadSecretBackup": {
+    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+  },
+  "downloadStateLogs": {
+    "message": "Download State Logs"
+  },
+  "dontHaveAHardwareWallet": {
+    "message": "Don’t have a hardware wallet?"
+  },
+  "dropped": {
+    "message": "Dropped"
   },
   "edit": {
     "message": "Chỉnh sửa"
   },
+  "editNetwork": {
+    "message": "Edit Network"
+  },
   "editAccountName": {
     "message": "Chỉnh sửa tên tài khoản"
+  },
+  "editContact":{
+    "message": "Edit Contact"
+  },
+  "editingTransaction": {
+    "message": "Make changes to your transaction"
+  },
+  "emailUs": {
+    "message": "Email us!"
   },
   "encryptNewDen": {
     "message": "Mã hóa số DEN mới của bạn"
   },
+  "endOfFlowMessage1": {
+    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+  },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Save a backup in multiple places."
+  },
+  "endOfFlowMessage4": {
+    "message": "Never share the phrase with anyone."
+  },
+  "endOfFlowMessage5": {
+    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+  },
+  "endOfFlowMessage6": {
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+  },
+  "endOfFlowMessage7": {
+    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+  },
+  "endOfFlowMessage8": {
+    "message": "MetaMask cannot recover your seedphrase. Learn more."
+  },
+  "endOfFlowMessage9": {
+    "message": "Learn more."
+  },
+  "endOfFlowMessage10": {
+    "message": "All Done"
+  },
+  "ensNameNotFound": {
+    "message": "ENS name not found"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
+  },
   "enterPassword": {
     "message": "Nhập mật khẩu"
+  },
+  "enterPasswordConfirm": {
+    "message": "Enter your password to confirm"
+  },
+  "enterPasswordContinue": {
+    "message": "Enter password to continue"
+  },
+  "eth": {
+    "message": "ETH"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
   },
   "etherscanView": {
     "message": "Xem tài khoản trên Etherscan"
   },
+  "estimatedProcessingTimes": {
+    "message": "Estimated Processing Times"
+  },
   "exchangeRate": {
     "message": "Tỷ giá"
+  },
+  "expandView": {
+    "message": "Expand View"
   },
   "exportPrivateKey": {
     "message": "Xuất mã khóa cá nhân"
@@ -261,23 +676,47 @@
   "failed": {
     "message": "Không thành công"
   },
+  "fast": {
+    "message": "Fast"
+  },
+  "faster": {
+    "message": "Faster"
+  },
+  "fastest": {
+    "message": "Fastest"
+  },
+  "feeChartTitle": {
+    "message": "Live Transaction Fee Predictions"
+  },
   "fiat": {
-    "description": "Hình thức giao dịch",
-    "message": "FIAT"
+    "message": "FIAT",
+    "description": "Exchange type"
   },
   "fileImportFail": {
-    "description": "Giúp người dùng nhập tài khoản từ tập tin JSON",
-    "message": "Tập tin đã nhập không hoạt động? Nhấp vào đây!"
+    "message": "Tập tin đã nhập không hoạt động? Nhấp vào đây!",
+    "description": "Helps user import their account from a JSON file"
+  },
+  "followTwitter": {
+    "message": "Follow us on Twitter"
+  },
+  "forgetDevice": {
+    "message": "Forget this device"
   },
   "from": {
     "message": "Từ"
   },
+  "fromToSame": {
+    "message": "From and To address cannot be the same"
+  },
   "fromShapeShift": {
     "message": "Từ ShapeShift"
   },
+  "functionType": {
+    "message": "Function Type"
+  },
   "gas": {
-    "description": "Viết tắt của giá ga",
-    "message": "Ga"
+    "message": "Ga",
+    "description": "Short indication of gas cost"
   },
   "gasFee": {
     "message": "Tiền ga"
@@ -288,14 +727,32 @@
   "gasLimitCalculation": {
     "message": "Chúng tôi tính toán và gợi ý một hạn mức ga cụ thể dựa trên tỷ lệ thành công của hệ thống."
   },
+  "gasLimitInfoModalContent": {
+    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+  },
   "gasLimitRequired": {
     "message": "Hạn mức ga được yêu cầu"
   },
   "gasLimitTooLow": {
     "message": "Hạn mức ga phải đạt tối thiểu 21000"
   },
+  "gasUsed": {
+    "message": "Gas Used"
+  },
+  "generatingSeed": {
+    "message": "Generating Seed..."
+  },
   "gasPrice": {
     "message": "Giá ga (GWEI)"
+  },
+  "gasPriceExtremelyLow": {
+    "message": "Gas Price Extremely Low"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+  },
+  "gasPriceNoDenom": {
+    "message": "Gas Price"
   },
   "gasPriceCalculation": {
     "message": "Chúng tôi tính toán và gợi ý một giá ga cụ thể dựa trên tỷ lệ thành công của hệ thống."
@@ -303,20 +760,59 @@
   "gasPriceRequired": {
     "message": "Giá ga được yêu cầu"
   },
+  "general": {
+    "message": "General"
+  },
+  "generalSettingsDescription": {
+    "message": "Currency conversion, primary currency, language, blockies identicon"
+  },
+  "generatingTransaction": {
+    "message": "Generating transaction"
+  },
   "getEther": {
     "message": "Lấy Ether"
   },
   "getEtherFromFaucet": {
-    "description": "Hiển thị tên mạng cho vòi Ether",
-    "message": "Lấy Ether từ vòi với giá $1"
+    "message": "Lấy Ether từ vòi với giá $1",
+    "description": "Displays network name for Ether faucet"
+  },
+  "getHelp": {
+    "message": "Get Help."
+  },
+  "getStarted": {
+    "message": "Get Started"
   },
   "greaterThanMin": {
-    "description": "trợ giúp để nhập hex dưới dạng số thập phân",
-    "message": "phải nhiều hơn hoặc bằng $1"
+    "message": "phải nhiều hơn hoặc bằng $1",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "hardware"
+  },
+  "hardwareWalletConnected": {
+    "message": "Hardware wallet connected"
+  },
+  "hardwareWallets": {
+    "message": "Connect a hardware wallet"
+  },
+  "hardwareWalletsMsg": {
+    "message": "Select a hardware wallet you'd like to use with MetaMask"
+  },
+  "havingTroubleConnecting": {
+    "message": "Having trouble connecting?"
   },
   "here": {
-    "description": "như trong -Nhấp vào đây để xem thêm thông tin- (dùng với các số dư token có vấn đề)",
-    "message": "tại đây"
+    "message": "tại đây",
+    "description": "as in -click here- for more information (goes with troubleTokenBalances)"
+  },
+  "hereList": {
+    "message": "Here's a list!!!!"
+  },
+  "hexData": {
+    "message": "Hex Data"
   },
   "hide": {
     "message": "Ẩn"
@@ -327,15 +823,27 @@
   "hideTokenPrompt": {
     "message": "Ẩn mã token?"
   },
+  "history": {
+    "message": "History"
+  },
   "howToDeposit": {
     "message": "Bạn muốn ký gửi Ether bằng cách nào?"
   },
+  "holdEther": {
+    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+  },
   "import": {
-    "description": "Nút để nhập tài khoản từ một tập tin đã chọn",
-    "message": "Nhập"
+    "message": "Nhập",
+    "description": "Button to import an account from a selected file"
   },
   "importAccount": {
     "message": "Nhập tài khoản"
+  },
+  "importAccountMsg": {
+    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+  },
+  "importAccountSeedPhrase": {
+    "message": "Import an Account with Seed Phrase"
   },
   "importAnAccount": {
     "message": "Nhập một tài khoản"
@@ -343,15 +851,51 @@
   "importDen": {
     "message": "Nhập mã DEN hiện hành"
   },
+  "importWallet": {
+    "message": "Import Wallet"
+  },
+  "importYourExisting": {
+    "message": "Import your existing wallet using a 12 word seed phrase"
+  },
   "imported": {
-    "description": "Trạng thái hiển thị cho một tài khoản đã được tải toàn bộ vào chùm chìa khóa",
-    "message": "Đã nhập"
+    "message": "Đã nhập",
+    "description": "status showing that an account has been fully loaded into the keyring"
+  },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
+  "importWithSeedPhrase": {
+    "message": "Import with seed phrase"
+  },
+  "info": {
+    "message": "Info"
   },
   "infoHelp": {
     "message": "Thông tin & Trợ giúp"
   },
+  "initialTransactionConfirmed": {
+    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+  },
+  "insufficientBalance": {
+    "message": "Insufficient balance."
+  },
+  "insufficientFunds": {
+    "message": "Insufficient funds."
+  },
+  "insufficientTokens": {
+    "message": "Insufficient tokens."
+  },
   "invalidAddress": {
     "message": "Địa chỉ không hợp lệ"
+  },
+  "invalidAddressRecipient": {
+    "message": "Recipient address is invalid"
+  },
+  "knownAddressRecipient": {
+    "message": "Known contract address."
+  },
+  "invalidAddressRecipientNotEthNetwork": {
+    "message": "Not ETH network, set to lowercase"
   },
   "invalidGasParams": {
     "message": "Thông số ga không hợp lệ"
@@ -362,19 +906,58 @@
   "invalidRequest": {
     "message": "Yêu cầu không hợp lệ"
   },
+  "invalidRPC": {
+    "message": "Invalid RPC URL"
+  },
+  "invalidSeedPhrase": {
+    "message": "Invalid seed phrase"
+  },
+  "jsonFail": {
+    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+  },
   "jsonFile": {
-    "description": "định dạng để nhập tài khoản",
-    "message": "Tập tin JSON"
+    "message": "Tập tin JSON",
+    "description": "format for importing an account"
+  },
+  "keepTrackTokens": {
+    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
   },
   "kovan": {
     "message": "Mạng thử nghiệm Kovan"
   },
+  "knowledgeDataBase": {
+    "message": "Visit our Knowledge Base"
+  },
+  "max": {
+    "message": "Max"
+  },
+  "learnMore": {
+    "message": "Learn more"
+  },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "legal": {
+    "message": "Legal"
+  },
   "lessThanMax": {
-    "description": "trợ giúp để nhập hex dưới dạng số thập phân",
-    "message": "phải ít hơn hoặc bằng $1."
+    "message": "phải ít hơn hoặc bằng $1.",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "letsGoSetUp": {
+    "message": "Yes, let’s get set up!"
+  },
+  "likeToAddTokens": {
+    "message": "Would you like to add these tokens?"
+  },
+  "links": {
+    "message": "Links"
   },
   "limit": {
     "message": "Giới hạn"
+  },
+  "liveGasPricePredictions": {
+    "message": "Live Gas Price Predictions"
   },
   "loading": {
     "message": "Đang tải..."
@@ -382,8 +965,14 @@
   "loadingTokens": {
     "message": "Đang tải mã token..."
   },
+  "loadMore": {
+    "message": "Load More"
+  },
   "localhost": {
     "message": "Localhost 8545"
+  },
+  "login": {
+    "message": "Log In"
   },
   "logout": {
     "message": "Thoát"
@@ -391,38 +980,98 @@
   "loose": {
     "message": "Nới lỏng"
   },
+  "loweCaseWords": {
+    "message": "seed words only have lowercase characters"
+  },
   "mainnet": {
     "message": "Mạng Ethereum MainNet (tiền ETH thật)"
+  },
+  "memorizePhrase": {
+    "message": "Memorize this phrase."
+  },
+  "memo": {
+    "message": "memo"
+  },
+  "menu": {
+    "message": "Menu"
   },
   "message": {
     "message": "Tin nhắn"
   },
+  "metamaskDescription": {
+    "message": "Connecting you to Ethereum and the Decentralized Web."
+  },
+  "metamaskSeedWords": {
+    "message": "MetaMask Seed Words"
+  },
+  "metamaskVersion": {
+    "message": "MetaMask Version"
+  },
   "min": {
     "message": "Tối thiểu"
   },
+  "missingYourTokens": {
+    "message": "Don't see your tokens?"
+  },
+  "minutesShorthand": {
+    "message": "Min"
+  },
+  "mobileSyncTitle": {
+    "message": "Sync accounts with mobile"
+  },
+  "mobileSyncText": {
+    "message": "Please enter your password to confirm it's you!"
+  },
   "myAccounts": {
     "message": "Tài khoản của tôi"
+  },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "All of your MetaMask created accounts will automatically be added to this section."
+  },
+  "mustSelectOne": {
+    "message": "Must select at least 1 token."
   },
   "needEtherInWallet": {
     "message": "Để tương tác với các ứng dụng phân tán bằng MetaMask, bạn sẽ phải cần có Ether trong ví của bạn."
   },
   "needImportFile": {
-    "description": "Người dùng đang nhập một tài khoản và cần thêm tập tin để tiếp tục",
-    "message": "Bạn phải chọn một tập tin để nhập."
+    "message": "Bạn phải chọn một tập tin để nhập.",
+    "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "description": "Mật khẩu và tập tin cần thiết để nhập một tài khoản",
-    "message": "Bạn phải điền mật khẩu cho tập tin đã chọn."
+    "message": "Bạn phải điền mật khẩu cho tập tin đã chọn.",
+    "description": "Password and file needed to import an account"
+  },
+  "negativeETH": {
+    "message": "Can not send negative amounts of ETH."
+  },
+  "networkName": {
+    "message": "Network Name"
   },
   "networks": {
     "message": "Các mạng lưới"
   },
+  "networkSettingsDescription": {
+    "message": "Add and edit custom RPC networks"
+  },
+  "nevermind": {
+    "message": "Nevermind"
+  },
   "newAccount": {
     "message": "Tài khoản mới"
   },
+  "newAccountDetectedDialogMessage": {
+    "message": "New address detected! Click here to add to your address book."
+  },
   "newAccountNumberName": {
-    "description": "Tên mặc định của tài khoản tiếp theo để tạo trên màn hình tài khoản",
-    "message": "Tài khoản $1"
+    "message": "Tài khoản $1",
+    "description": "Default name of next account to be created on create account screen"
+  },
+  "newContact": {
+    "message": "New Contact"
   },
   "newContract": {
     "message": "Hợp đồng mới"
@@ -430,8 +1079,53 @@
   "newPassword": {
     "message": "Mật khẩu mới (tối thiểu 8 ký tự)"
   },
+  "newPassword8Chars": {
+    "message": "Mật khẩu mới (tối thiểu 8 ký tự)"
+  },
   "newRecipient": {
     "message": "Người nhận mới"
+  },
+  "newNetwork": {
+    "message": "New Network"
+  },
+  "newToMetaMask": {
+    "message": "New to MetaMask?"
+  },
+  "noAlreadyHaveSeed": {
+    "message": "No, I already have a seed phrase"
+  },
+  "protectYourKeys": {
+    "message": "Protect Your Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+  },
+  "protectYourKeysMessage2": {
+    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+  },
+  "rpcUrl": {
+    "message": "New RPC URL"
+  },
+  "showAdvancedOptions": {
+    "message": "Show Advanced Options"
+  },
+  "hideAdvancedOptions": {
+    "message": "Hide Advanced Options"
+  },
+  "optionalChainId": {
+    "message": "ChainID (optional)"
+  },
+  "optionalSymbol": {
+    "message": "Symbol (optional)"
+  },
+  "optionalNickname": {
+    "message": "Nickname (optional)"
+  },
+  "newTotal": {
+    "message": "New Total"
+  },
+  "newTransactionFee": {
+    "message": "New Transaction Fee"
   },
   "next": {
     "message": "Kế tiếp"
@@ -442,14 +1136,32 @@
   "noDeposits": {
     "message": "Không có tiền ký gửi nào được nhận"
   },
+  "noConversionRateAvailable": {
+    "message": "No Conversion Rate Available"
+  },
   "noTransactionHistory": {
     "message": "Không có lịch sử giao dịch"
   },
   "noTransactions": {
     "message": "Không có giao dịch"
   },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "notFound": {
+    "message": "Not Found"
+  },
   "notStarted": {
     "message": "Chưa bắt đầu"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam not found"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
   },
   "oldUI": {
     "message": "Giao diện cũ"
@@ -457,31 +1169,95 @@
   "oldUIMessage": {
     "message": "Bạn vừa quay về giao diện cũ. Bạn có thể chuyển đổi sang giao diện mới bằng tùy chọn trong menu ở góc phải trên cùng."
   },
+  "onlySendToEtherAddress": {
+    "message": "Only send ETH to an Ethereum address."
+  },
+  "onlySendTokensToAccountAddress": {
+    "message": "Only send $1 to an Ethereum account address.",
+    "description": "displays token symbol"
+  },
+  "openInTab": {
+    "message": "Open in tab"
+  },
   "or": {
-    "description": "lựa chọn giữa tạo hay nhập một tài khoản mới",
-    "message": "hoặc"
+    "message": "hoặc",
+    "description": "choice between creating or importing a new account"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Origin"
+  },
+  "outgoing": {
+    "message": "Outgoing"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "originalTotal": {
+    "message": "Original Total"
+  },
+  "participateInMetaMetrics": {
+    "message": "Participate in MetaMetrics"
+  },
+  "participateInMetaMetricsDescription": {
+    "message": "Participate in MetaMetrics to help us make MetaMask better"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "passwordCorrect": {
+    "message": "Please make sure your password is correct."
+  },
+  "passwordsDontMatch": {
+    "message": "Passwords Don't Match"
   },
   "passwordMismatch": {
-    "description": "trong quá trình tạo mật khẩu, hai trường mật khẩu mới không khớp",
-    "message": "mật khẩu không khớp"
+    "message": "mật khẩu không khớp",
+    "description": "in password creation process, the two new password fields did not match"
+  },
+  "passwordNotLongEnough": {
+    "message": "Password not long enough"
   },
   "passwordShort": {
-    "description": "trong quá trình tạo mật khẩu, mật khẩu không đủ dài để đảm bảo an toàn",
-    "message": "mật khẩu không đủ dài"
+    "message": "mật khẩu không đủ dài",
+    "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "description": "Dùng cho việc nhập tài khoản từ một khóa cá nhân",
-    "message": "Dán dãy khóa cá nhân của bạn tại đây:"
+    "message": "Dán dãy khóa cá nhân của bạn tại đây:",
+    "description": "For importing an account from a private key"
   },
   "pasteSeed": {
     "message": "Dán Mật Khẩu Sinh Khoá (seed phrase) của bạn tại đây!"
   },
+  "pending": {
+    "message": "pending"
+  },
+  "personalAddressDetected": {
+    "message": "Personal address detected. Input the token contract address."
+  },
   "pleaseReviewTransaction": {
     "message": "Vui lòng xem lại giao dịch của bạn."
   },
+  "popularTokens": {
+    "message": "Popular Tokens"
+  },
+  "prev": {
+    "message": "Prev"
+  },
+  "primaryCurrencySetting": {
+    "message": "Primary Currency"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+  },
+  "privacyMsg": {
+    "message": "Privacy Policy"
+  },
   "privateKey": {
-    "description": "chọn định dạng tập tin này để nhập một tài khoản",
-    "message": "Khóa Bí Mật"
+    "message": "Khóa Bí Mật",
+    "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
     "message": "Cảnh báo: Không bao giờ được tiết lộ khóa này. Bất kỳ ai có Khóa Bí Mật của bạn đều có thể đánh cắp tài sản được giữ trong tài khoản của bạn."
@@ -492,23 +1268,74 @@
   "qrCode": {
     "message": "Hiển thị mã QR"
   },
-  "readMore": {
-    "message": "Đọc thêm tại đây."
+  "queue": {
+    "message": "Queue"
   },
   "readdToken": {
     "message": "Bạn có thể thêm trở lại mã token này bằng cách nhấn \"Thêm mã token\" trong menu tùy chọn trong tài khoản của bạn."
   },
+  "readMore": {
+    "message": "Đọc thêm tại đây."
+  },
+  "readMore2": {
+    "message": "Read more."
+  },
   "receive": {
     "message": "Nhận"
+  },
+  "recents": {
+    "message": "Recents"
   },
   "recipientAddress": {
     "message": "Địa chỉ người nhận"
   },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
+  },
   "refundAddress": {
     "message": "Địa chỉ hoàn trả lại của bạn"
   },
+  "rejectAll": {
+    "message": "Reject All"
+  },
+  "rejectTxsN": {
+    "message": "Reject $1 transactions"
+  },
+  "rejectTxsDescription": {
+    "message": "You are about to batch reject $1 transactions."
+  },
   "rejected": {
     "message": "Không chấp thuận/Bị từ chối"
+  },
+  "reset": {
+    "message": "Reset"
+  },
+  "resetAccount": {
+    "message": "Reset Account"
+  },
+  "resetAccountDescription": {
+    "message": "Resetting your account will clear your transaction history."
+  },
+  "deleteNetwork": {
+    "message": "Delete Network?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
+  "remindMeLater": {
+    "message": "Remind me later"
+  },
+  "restoreFromSeed": {
+    "message": "Restore account?"
+  },
+  "restoreVault": {
+    "message": "Restore Vault"
+  },
+  "restoreAccountWithSeed": {
+    "message": "Restore your Account with Seed Phrase"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "requests waiting to be acknowledged"
   },
   "required": {
     "message": "Yêu cầu"
@@ -516,8 +1343,38 @@
   "retryWithMoreGas": {
     "message": "Thử lại với một giá ga cao hơn tại đây"
   },
+  "restore": {
+    "message": "Restore"
+  },
+  "revealSeedWords": {
+    "message": "Reveal Seed Words"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
+  },
+  "revealSeedWordsDescription": {
+    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "DO NOT share this phrase with anyone!"
+  },
+  "revealSeedWordsWarning": {
+    "message": "These words can be used to steal all your accounts."
+  },
   "revert": {
     "message": "Chuyển lại"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeAccount": {
+    "message": "Remove account"
+  },
+  "removeAccountDescription": {
+    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+  },
+  "readyToConnect": {
+    "message": "Ready to Connect?"
   },
   "rinkeby": {
     "message": "Mạng thử nghiệm Rinkeby"
@@ -525,25 +1382,136 @@
   "ropsten": {
     "message": "Mạng thử nghiệm Ropsten"
   },
+  "goerli": {
+    "message": "Goerli Test Network"
+  },
+  "rpc": {
+    "message": "Tùy chỉnh RPC"
+  },
   "sampleAccountName": {
-    "description": "Giúp người dùng hiểu khái niệm thêm một cái tên có thể đọc được vào tài khoản của họ",
-    "message": "Ví dụ, Tài khoản mới của tôi"
+    "message": "Ví dụ, Tài khoản mới của tôi",
+    "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
     "message": "Lưu"
   },
+  "slow": {
+    "message": "Slow"
+  },
+  "slower": {
+    "message": "Slower"
+  },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
   "saveAsFile": {
-    "description": "Quá trình xuất tài khoản",
-    "message": "Lưu lại dưới dạng tập tin"
+    "message": "Lưu lại dưới dạng tập tin",
+    "description": "Account export process"
+  },
+  "saveSeedAsFile": {
+    "message": "Save Seed Words As File"
+  },
+  "scanInstructions": {
+    "message": "Place the QR code in front of your camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
+  },
+  "search": {
+    "message": "Search"
+  },
+  "searchResults": {
+    "message": "Search Results"
+  },
+  "secretBackupPhrase": {
+    "message": "Secret Backup Phrase"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+  },
+  "secretBackupPhraseWarning": {
+    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+  },
+  "secretPhrase": {
+    "message": "Enter your secret twelve word phrase here to restore your vault."
+  },
+  "securityAndPrivacy": {
+    "message": "Security & Privacy"
+  },
+  "securitySettingsDescription": {
+    "message": "Privacy settings and wallet seed phrase"
+  },
+  "secondsShorthand": {
+    "message": "Sec"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "Separate each word with a single space"
+  },
+  "seedPhraseReq": {
+    "message": "Seed phrases are 12 words long"
+  },
+  "select": {
+    "message": "Select"
+  },
+  "selectCurrency": {
+    "message": "Select Currency"
+  },
+  "selectEachPhrase": {
+    "message": "Please select each phrase in order to make sure it is correct."
+  },
+  "selectLocale": {
+    "message": "Select Locale"
   },
   "selectService": {
     "message": "Chọn dịch vụ"
   },
+  "selectType": {
+    "message": "Select Type"
+  },
   "send": {
     "message": "Gửi"
   },
+  "sendAmount": {
+    "message": "Send Amount"
+  },
+  "sendETH": {
+    "message": "Send ETH"
+  },
   "sendTokens": {
     "message": "Gửi mã token"
+  },
+  "sentEther": {
+    "message": "sent ether"
+  },
+  "sentTokens": {
+    "message": "sent tokens"
+  },
+  "separateEachWord": {
+    "message": "Separate each word with a single space"
+  },
+  "searchTokens": {
+    "message": "Search Tokens"
+  },
+  "selectAnAddress": {
+    "message": "Select an Address"
+  },
+  "selectAnAccount": {
+    "message": "Select an Account"
+  },
+  "selectAnAccountHelp": {
+    "message": "Select the account to view in MetaMask"
+  },
+  "selectAnAsset": {
+    "message": "Select an Asset"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
+  "selectHdPath": {
+    "message": "Select HD Path"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
   },
   "sendTokensAnywhere": {
     "message": "Gửi mã token đến bất kỳ ai có tài khoản Ethereum"
@@ -554,20 +1522,38 @@
   "shapeshiftBuy": {
     "message": "Mua với ShapeShift"
   },
+  "showAdvancedGasInline": {
+    "message": "Advanced gas controls"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Show Conversion on Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Select this to show fiat conversion on Testnets"
+  },
   "showPrivateKeys": {
     "message": "Hiển thị khóa cá nhân"
   },
   "showQRCode": {
     "message": "Hiển thị mã QR"
   },
-  "sigRequest": {
-    "message": "Yêu cầu chữ ký"
+  "showHexData": {
+    "message": "Show Hex Data"
   },
-  "sigRequested": {
-    "message": "Đã yêu cầu chữ ký"
+  "showHexDataDescription": {
+    "message": "Select this to show the hex data field on the send screen"
   },
   "sign": {
     "message": "Ký nhận"
+  },
+  "signatureRequest": {
+    "message": "Yêu cầu chữ ký"
+  },
+  "signed": {
+    "message": "Signed"
   },
   "signMessage": {
     "message": "Ký nhận tin nhắn"
@@ -575,30 +1561,201 @@
   "signNotice": {
     "message": "Ký nhận vào tin nhắn này có thể gây nguy hiểm. Chỉ nên ký nhận tin nhắn từ những nguồn bạn hoàn toàn tin tưởng có thể dùng với tài khoản của bạn. Cách thức nguy hiểm này sẽ bị xóa trong phiên bản sắp tới."
   },
+  "sigRequest": {
+    "message": "Yêu cầu chữ ký"
+  },
+  "sigRequested": {
+    "message": "Đã yêu cầu chữ ký"
+  },
+  "somethingWentWrong": {
+    "message": "Oops! Something went wrong."
+  },
+  "spaceBetween": {
+    "message": "there can only be a space between words"
+  },
+  "speedUp": {
+    "message": "Speed Up"
+  },
+  "speedUpTitle": {
+    "message": "Speed Up Transaction"
+  },
+  "speedUpSubtitle": {
+    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+  },
+  "speedUpCancellation": {
+    "message": "Speed up this cancellation"
+  },
+  "speedUpTransaction": {
+    "message": "Speed up this transaction"
+  },
+  "switchNetworks": {
+    "message": "Switch Networks"
+  },
   "status": {
     "message": "Trạng thái"
+  },
+  "stateLogs": {
+    "message": "State Logs"
+  },
+  "stateLogsDescription": {
+    "message": "State logs contain your public account addresses and sent transactions."
+  },
+  "stateLogError": {
+    "message": "Error in retrieving state logs."
+  },
+  "step1HardwareWallet": {
+    "message": "1. Connect Hardware Wallet"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
+  },
+  "step2HardwareWallet": {
+    "message": "2. Select an Account"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. Start using dApps and more!"
+  },
+  "step3HardwareWalletMsg": {
+    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+  },
+  "storePhrase": {
+    "message": "Store this phrase in a password manager like 1Password."
   },
   "submit": {
     "message": "Gửi đi"
   },
+  "submitted": {
+    "message": "Submitted"
+  },
+  "supportCenter": {
+    "message": "Visit our Support Center"
+  },
+  "symbol": {
+    "message": "Symbol"
+  },
+  "symbolBetweenZeroTwelve": {
+    "message": "Symbol must be between 0 and 12 characters."
+  },
+  "syncWithMobile": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileTitle": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileDesc": {
+    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "Scan this code with your MetaMask mobile app"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "Make sure nobody else is looking at your screen when you scan this code"
+  },
+  "syncWithMobileComplete": {
+    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+  },
   "takesTooLong": {
     "message": "Chờ quá lâu?"
   },
+  "terms": {
+    "message": "Terms of Use"
+  },
   "testFaucet": {
     "message": "Vòi nhận tiền ETH ảo để thử nghiệm"
+  },
+  "thisWillCreate": {
+    "message": "This will create a new wallet and seed phrase"
+  },
+  "tips": {
+    "message": "Tips"
   },
   "to": {
     "message": "Đến"
   },
   "toETHviaShapeShift": {
-    "description": "hệ thống sẽ điền vào loại tiền gửi khi bắt đầu tin nhắn",
-    "message": "$1 thành ETH qua ShapeShift"
+    "message": "$1 thành ETH qua ShapeShift",
+    "description": "system will fill in deposit type in start of message"
+  },
+  "token": {
+    "message": "Token"
+  },
+  "tokenAddress": {
+    "message": "Token Address"
+  },
+  "tokenAlreadyAdded": {
+    "message": "Token has already been added."
   },
   "tokenBalance": {
     "message": "Số dư token của bạn là:"
   },
+  "tokenContractAddress": {
+    "message": "Token Contract Address"
+  },
+  "tokenSelection": {
+    "message": "Search for tokens or select from our list of popular tokens."
+  },
+  "tokenSymbol": {
+    "message": "Token Symbol"
+  },
+  "tokenWarning1": {
+    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+  },
   "total": {
     "message": "Tổng cộng"
+  },
+  "transaction": {
+    "message": "transaction"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmed at $2."
+  },
+  "transactionCreated": {
+    "message": "Transaction created with a value of $1 at $2."
+  },
+  "transactionWithNonce": {
+    "message": "Transaction $1"
+  },
+  "transactionDropped": {
+    "message": "Transaction dropped at $2."
+  },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+  },
+  "transactionUpdated": {
+    "message": "Transaction updated at $2."
+  },
+  "transactionUpdatedGas": {
+    "message": "Transaction updated with a gas fee of $1 at $2."
+  },
+  "transactionErrored": {
+    "message": "Transaction encountered an error."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+  },
+  "transactionCancelSuccess": {
+    "message": "Transaction successfully cancelled at $2"
+  },
+  "transactions": {
+    "message": "transactions"
+  },
+  "transactionError": {
+    "message": "Transaction Error. Exception thrown in contract code."
+  },
+  "transactionErrorNoContract": {
+    "message": "Trying to call a function on a non-contract address."
+  },
+  "transactionFee": {
+    "message": "Transaction Fee"
   },
   "transactionMemo": {
     "message": "Ghi nhớ giao dịch (tùy chọn)"
@@ -606,15 +1763,39 @@
   "transactionNumber": {
     "message": "Số thứ tự giao dịch"
   },
+  "transactionTime": {
+    "message": "Transaction Time"
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
+  "transferBetweenAccounts": {
+    "message": "Transfer between my accounts"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
+  },
   "transfers": {
     "message": "Các giao dịch"
   },
+  "trezorHardwareWallet": {
+    "message": "TREZOR Hardware Wallet"
+  },
   "troubleTokenBalances": {
-    "description": "Kèm theo một đường link (tại đây) để xem số dư token.",
-    "message": "Chúng tôi gặp sự cố khi tải số dư token của bạn. Xin vui lòng xem lại"
+    "message": "Chúng tôi gặp sự cố khi tải số dư token của bạn. Xin vui lòng xem lại",
+    "description": "Followed by a link (here) to view token balances"
+  },
+  "tryAgain": {
+    "message": "Try again"
+  },
+  "twelveWords": {
+    "message": "These 12 words are the only way to restore your MetaMask accounts. Save them somewhere safe and secret."
   },
   "typePassword": {
     "message": "Điền mật khẩu của bạn"
+  },
+  "uiMigrationAnnouncement": {
+    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
   },
   "uiWelcome": {
     "message": "Chào mừng bạn đến với giao diện mới (Beta)"
@@ -622,8 +1803,14 @@
   "uiWelcomeMessage": {
     "message": "Bạn đang sử dụng giao diện mới của MetaMask. Chúng tôi khuyến khích bạn thử nghiệm và khám phá các tính năng mới như gửi token, và nếu bạn có gặp phải vấn đề gì khó khăn, xin hãy liên hệ ngay để chúng tôi có thể giúp đỡ bạn."
   },
+  "unapproved": {
+    "message": "Unapproved"
+  },
   "unavailable": {
     "message": "Không có sẵn"
+  },
+  "units": {
+    "message": "units"
   },
   "unknown": {
     "message": "Không xác định"
@@ -634,26 +1821,113 @@
   "unknownNetworkId": {
     "message": "ID không xác định"
   },
+  "unknownQrCode": {
+    "message": "Error: We couldn't identify that QR code"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "Ooops! Something went wrong...."
+  },
+  "unknownCameraError": {
+    "message": "There was an error while trying to access your camera. Please try again..."
+  },
+  "unlock": {
+    "message": "Unlock"
+  },
+  "unlockMessage": {
+    "message": "The decentralized web awaits"
+  },
+  "updatedWithDate": {
+    "message": "Updated $1"
+  },
+  "uriErrorMsg": {
+    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+  },
   "usaOnly": {
-    "description": "Việc sử dụng hệ thống giao dịch này chỉ giới hạn cho người dùng ở Mỹ",
-    "message": "Chỉ áp dụng cho người dùng ở Mỹ"
+    "message": "Chỉ áp dụng cho người dùng ở Mỹ",
+    "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
     "message": "Được sử dụng bởi nhiều khách hàng khác nhau"
   },
+  "useOldUI": {
+    "message": "Use old UI"
+  },
+  "userName":{
+    "message": "Username"
+  },
+  "validFileImport": {
+    "message": "You must select a valid file to import."
+  },
+  "vaultCreated": {
+    "message": "Vault Created"
+  },
   "viewAccount": {
     "message": "Xem tài khoản"
+  },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "View at $1"
+  },
+  "viewOnEtherscan": {
+    "message": "View on Etherscan"
+  },
+  "viewNetworkInfo": {
+    "message": "View Network Info"
+  },
+  "visitWebSite": {
+    "message": "Visit our web site"
+  },
+  "walletSeed": {
+    "message": "Wallet Seed"
   },
   "warning": {
     "message": "Cảnh báo"
   },
+  "welcomeBack": {
+    "message": "Welcome Back!"
+  },
+  "welcome": {
+    "message": "Welcome to MetaMask"
+  },
   "whatsThis": {
     "message": "Đây là gì?"
+  },
+  "writePhrase": {
+    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "You need to allow camera access to use this feature."
+  },
+  "yourSigRequested": {
+    "message": "Chữ ký của bạn đang được yêu cầu"
   },
   "youSign": {
     "message": "Bạn đang ký nhận"
   },
-  "yourSigRequested": {
-    "message": "Chữ ký của bạn đang được yêu cầu"
+  "yourPrivateSeedPhrase": {
+    "message": "Your private seed phrase"
+  },
+  "yourUniqueAccountImage": {
+    "message": "Your unique account image"
+  },
+  "yourUniqueAccountImageDescription1": {
+    "message": "This image was programmatically generated for you by your new account number."
+  },
+  "yourUniqueAccountImageDescription2": {
+    "message": "You’ll see this image everytime you need to confirm a transaction."
+  },
+  "yourUniqueAccountImageDescription3": {
+    "message": "MetaMask will never ask for your seed phrase!"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Zero gas price on speed up"
   }
 }

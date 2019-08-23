@@ -44,21 +44,21 @@ gulp.task('copy',
   gulp.series(
     gulp.parallel(...copyTaskNames, 'copy:images:brave', 'copy:fonts:brave'),
     'manifest:production',
-    gulp.parallel('manifest:brave', 'locales:brave', 'load-en:brave', 'html:brave')
+    gulp.parallel('manifest:brave', 'locales:brave', 'html:brave')
   )
 )
 
 gulp.task('dev:copy',
   gulp.series(
     gulp.parallel(...copyDevTaskNames, 'dev:copy:images:brave', 'dev:copy:fonts:brave'),
-    gulp.parallel('manifest:brave', 'locales:brave', 'load-en:brave', 'html:brave')
+    gulp.parallel('manifest:brave', 'locales:brave', 'html:brave')
   )
 )
 
 gulp.task('test:copy',
   gulp.series(
     gulp.parallel(...copyDevTaskNames),
-    gulp.parallel('manifest:brave', 'locales:brave', 'load-en:brave', 'html:brave'),
+    gulp.parallel('manifest:brave', 'locales:brave', 'html:brave'),
     'manifest:testing'
   )
 )

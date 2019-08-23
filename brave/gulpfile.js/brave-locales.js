@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const jsoneditor = require('gulp-json-editor')
-const braveEnLocales = require('../app/_locales/en/messages.json')
+const through = require('through2')
 
 const replace12With24 = (str) => {
   // regex to match the world 'twelve' in languages supported by Metamask
@@ -19,7 +19,7 @@ const replaceMetaMask = (str) => {
 const createBraveLocalesTask = () => {
   const writeArgs = { overwrite: true }
 
-  gulp.task('locales:brave', function () {
+  gulp.task('replace-brave-strings', function () {
     return gulp.src('./dist/brave/_locales/**/*')
       .pipe(jsoneditor(function (json) {
         Object.keys(json).forEach((stringName) => {
@@ -38,16 +38,25 @@ const createBraveLocalesTask = () => {
       .pipe(gulp.dest('./dist/brave/_locales', writeArgs))
   })
 
-  gulp.task('load-en:brave', function () {
-    return gulp.src('./dist/brave/_locales/en/messages.json')
+  gulp.task('combine-with-brave-strings', function () {
+    const currentTask = {}
+    return gulp.src('./dist/brave/_locales/**/messages.json')
+      .pipe(through.obj(function (file, enc, cb) {
+        // This is such as fr/messages.json
+        currentTask.relativeFilePath = file.relative
+        cb(null, file)
+      }))
       .pipe(jsoneditor(function (json) {
+        const braveLocale = require(`../app/_locales/${currentTask.relativeFilePath}`)
         return {
           ...json,
-          ...braveEnLocales,
+          ...braveLocale,
         }
       }))
-      .pipe(gulp.dest('./dist/brave/_locales/en', writeArgs))
+      .pipe(gulp.dest('./dist/brave/_locales', writeArgs))
   })
+
+  gulp.task('locales:brave', gulp.series('replace-brave-strings', 'combine-with-brave-strings'))
 }
 
 module.exports = createBraveLocalesTask

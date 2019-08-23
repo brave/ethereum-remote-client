@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Podłącz portfel Ledger, aby korzystać z dApps i dokonać transakcje do innych podłączonych portfeli."
+  },
+  "newLocalWallet": {
+    "message": "Nowy portfel lokalny"
+  },
+  "newLocalWalletSubText": {
+    "message": "Utwórz nowy, lokalny portfel Brave, aby korzystać z dApps i bezpiecznie przechowywać kryptowaluty. Handluj tokenami anonimowo, bez opłat handlowych."
+  },
+  "trezorCreateSubText": {
+    "message": "Podłącz portfel Trezor, aby korzystać z dApps i dokonać transakcje do innych podłączonych portfeli."
+  }
+}

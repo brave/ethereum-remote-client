@@ -1,4 +1,16 @@
 {
+  "shareAddress": {
+    "message": "Share Address"
+  },
+  "shareAddressToConnect": {
+    "message": "Share your address to connect to $1?"
+  },
+  "shareAddressInfo": {
+    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+  },
+  "privacyModeDefault": {
+    "message": "Privacy Mode is now enabled by default"
+  },
   "privacyMode": {
     "message": "Modalità privacy"
   },
@@ -80,11 +92,20 @@
   "activityLog": {
     "message": "log attività"
   },
+  "add": {
+    "message": "Aggiungi"
+  },
   "address": {
     "message": "Indirizzo"
   },
   "addNetwork": {
     "message": "Aggiungi Rete"
+  },
+  "addRecipient": {
+    "message": "Add Recipient"
+  },
+  "addressBook": {
+    "message": "Address Book"
   },
   "advanced": {
     "message": "Avanzate"
@@ -97,6 +118,18 @@
   },
   "addCustomToken": {
     "message": "Aggiungi un token personalizzato"
+  },
+  "addToAddressBook": {
+    "message": "Add to address book"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "e.g. John D."
+  },
+  "addAlias": {
+    "message": "Add alias"
+  },
+  "addEthAddress": {
+    "message": "Add an Ethereum address"
   },
   "addToken": {
     "message": "Aggiungi Token"
@@ -130,11 +163,11 @@
   },
   "appDescription": {
     "message": "Ethereum Browser Extension",
-    "description": "La descrizione dell'applicazione"
+    "description": "The description of the application"
   },
   "appName": {
     "message": "MetaMask",
-    "description": "Il nome dell'applicazione"
+    "description": "The name of the application"
   },
   "approve": {
     "message": "Approva"
@@ -172,6 +205,18 @@
   "back": {
     "message": "Indietro"
   },
+  "backToAll": {
+    "message": "Back to All"
+  },
+  "backupApprovalNotice": {
+    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+  },
+  "backupApprovalInfo": {
+    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+  },
+  "backupNow": {
+    "message": "Backup now"
+  },
   "balance": {
     "message": "Bilancio:"
   },
@@ -192,7 +237,7 @@
   },
   "betweenMinAndMax": {
     "message": "deve essere maggiore o uguale a $1 e minore o uguale a $2.",
-    "description": "aiuto per inserire un input esadecimale come decimale"
+    "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
     "message": "Block Explorer"
@@ -237,8 +282,14 @@
   "bytes": {
     "message": "Bytes"
   },
+  "off": {
+    "message": "Spento"
+  },
   "ok": {
     "message": "Ok"
+  },
+  "on": {
+    "message": "On"
   },
   "optionalBlockExplorerUrl": {
     "message": "URL del Block Explorer (opzionale)"
@@ -277,7 +328,7 @@
     "message": "Chiudi"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Devi usare MetaMask con Google Chrome per connettere il tuo Portafoglio Hardware"
+    "message": "Devi usare MetaMask con Brave Software Brave per connettere il tuo Portafoglio Hardware"
   },
   "company": {
     "message": "Azienda"
@@ -348,6 +399,12 @@
   "connectToTrezor": {
     "message": "Connettersi al Trezor"
   },
+  "contactList": {
+    "message": "Contact List"
+  },
+  "contactListDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
   "continue": {
     "message": "Continua"
   },
@@ -416,7 +473,7 @@
   },
   "crypto": {
     "message": "Crypto",
-    "description": "Tipo di exchange (cryptomonete)"
+    "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
     "message": "Conversione Moneta"
@@ -453,6 +510,12 @@
   },
   "defaultNetwork": {
     "message": "La rete predefinita per transazioni in Ether è la Rete Ethereum Principale."
+  },
+  "delete": {
+    "message": "Elimina"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
   },
   "denExplainer": {
     "message": "Il DEN è il tuo archivio crittato con password dentro MetaMask."
@@ -493,11 +556,14 @@
   "directDepositEtherExplainer": {
     "message": "Se possiedi già degli Ether, questa è la via più veloce per aggiungere Ether al tuo portafoglio con un deposito diretto."
   },
+  "dismiss": {
+    "message": "Ignora"
+  },
   "done": {
     "message": "Finito"
   },
   "downloadGoogleChrome": {
-    "message": "Scarica Google Chrome"
+    "message": "Scarica Brave Software Brave"
   },
   "downloadSecretBackup": {
     "message": "Scarica questa Frase di Backup Segreta e tienila al sicuro in un hard disk o supporto di memorizzazione esterno criptato."
@@ -519,6 +585,9 @@
   },
   "editAccountName": {
     "message": "Modifica Nome Account"
+  },
+  "editContact":{
+    "message": "Edit Contact"
   },
   "editingTransaction": {
     "message": "Modifica la transazione"
@@ -553,8 +622,23 @@
   "endOfFlowMessage8": {
     "message": "MetaMask non può recuperare la tua frase seed. Impara di più."
   },
+  "endOfFlowMessage9": {
+    "message": "Scopri di più."
+  },
+  "endOfFlowMessage10": {
+    "message": "Tutto Fatto"
+  },
   "ensNameNotFound": {
     "message": "Nome ENS non trovato"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
   },
   "enterPassword": {
     "message": "Inserisci password"
@@ -567,6 +651,9 @@
   },
   "eth": {
     "message": "ETH"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
   },
   "etherscanView": {
     "message": "Vedi account su Etherscan"
@@ -603,11 +690,11 @@
   },
   "fiat": {
     "message": "FIAT",
-    "description": "Tipo di scambio"
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "Importazione file non funziona? Clicca qui!",
-    "description": "Aiuta gli utenti a importare il loro account da un file JSON"
+    "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
     "message": "Seguici su Twitter"
@@ -629,7 +716,7 @@
   },
   "gas": {
     "message": "Gas",
-    "description": "Piccola indicazione del costo del gas"
+    "description": "Short indication of gas cost"
   },
   "gasFee": {
     "message": "Costo Gas"
@@ -687,7 +774,7 @@
   },
   "getEtherFromFaucet": {
     "message": "Ottieni Get Ether da un faucet per $1",
-    "description": "Visualizza il nome della rete per il faucet Ether"
+    "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
     "message": "Aiuto."
@@ -697,7 +784,7 @@
   },
   "greaterThanMin": {
     "message": "deve essere maggiore o uguale a $1.",
-    "description": "aiuto per inserire un input esadecimale come decimale"
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Siamo contenti di vederti."
@@ -719,7 +806,7 @@
   },
   "here": {
     "message": "qui",
-    "description": "per intendere -clicca qui- per maggiori informazioni (va con troubleTokenBalances)"
+    "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
     "message": "Questa è una lista!!!!"
@@ -747,7 +834,7 @@
   },
   "import": {
     "message": "Importa",
-    "description": "Tasto per importare un account da un file selezionato"
+    "description": "Button to import an account from a selected file"
   },
   "importAccount": {
     "message": "Importa Account"
@@ -772,7 +859,7 @@
   },
   "imported": {
     "message": "Importato",
-    "description": "stato che conferma che un account è stato totalmente caricato nel portachiavi"
+    "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
     "message": "Importa account con frase seed"
@@ -830,7 +917,7 @@
   },
   "jsonFile": {
     "message": "File JSON",
-    "description": "formato per importare un account"
+    "description": "format for importing an account"
   },
   "keepTrackTokens": {
     "message": "Tieni traccia dei tokens che hai acquistato con il tuo account MetaMask."
@@ -855,7 +942,7 @@
   },
   "lessThanMax": {
     "message": "deve essere minore o uguale a $1.",
-    "description": "aiuto per inserire un input esadecimale come decimale"
+    "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
     "message": "Si, iniziamo!"
@@ -878,6 +965,9 @@
   "loadingTokens": {
     "message": "Caricamento Tokens..."
   },
+  "loadMore": {
+    "message": "Load More"
+  },
   "localhost": {
     "message": "Localhost 8545"
   },
@@ -898,6 +988,9 @@
   },
   "memorizePhrase": {
     "message": "Memorizza questa frase."
+  },
+  "memo": {
+    "message": "memo"
   },
   "menu": {
     "message": "Menu"
@@ -932,6 +1025,12 @@
   "myAccounts": {
     "message": "Miei Account"
   },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "All of your MetaMask created accounts will automatically be added to this section."
+  },
   "mustSelectOne": {
     "message": "Devi selezionare almeno un token."
   },
@@ -940,11 +1039,11 @@
   },
   "needImportFile": {
     "message": "Devi selezionare un file da importare.",
-    "description": "L'utente sta importando un account e deve aggiungere un file per continuare"
+    "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
     "message": "Dei inserire una password per il file selezionato.",
-    "description": "Password e file necessari per importare un account"
+    "description": "Password and file needed to import an account"
   },
   "negativeETH": {
     "message": "Non puoi inviare una quantità di ETH negativa."
@@ -964,9 +1063,15 @@
   "newAccount": {
     "message": "Nuovo Account"
   },
+  "newAccountDetectedDialogMessage": {
+    "message": "New address detected! Click here to add to your address book."
+  },
   "newAccountNumberName": {
     "message": "Account $1",
-    "description": "Nome predefinito per il prossimo account da creare nella schermata di creazione account"
+    "description": "Default name of next account to be created on create account screen"
+  },
+  "newContact": {
+    "message": "New Contact"
   },
   "newContract": {
     "message": "Nuovo Contratto"
@@ -1069,14 +1174,14 @@
   },
   "onlySendTokensToAccountAddress": {
     "message": "Invia solamente $1 ad un account Ethereum.",
-    "description": "mostra il simbolo del token"
+    "description": "displays token symbol"
   },
   "openInTab": {
     "message": "Apri in una scheda"
   },
   "or": {
     "message": "o",
-    "description": "scelta tra creare o importare un nuovo account"
+    "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
     "message": "Compra un Trezor o un Ledger e tieni i tuoi soldi al sicuro"
@@ -1110,18 +1215,18 @@
   },
   "passwordMismatch": {
     "message": "le password non corrispondono",
-    "description": "nella creazione della password, le due password all'interno dei campi non corrispondono"
+    "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
     "message": "Password non abbastanza lunga"
   },
   "passwordShort": {
     "message": "password non sufficientemente lunga",
-    "description": "nella creazione della password, la password non è lunga abbastanza"
+    "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
     "message": "Incolla la tua chiave privata qui:",
-    "description": "Per importare un account da una chiave privata"
+    "description": "For importing an account from a private key"
   },
   "pasteSeed": {
     "message": "Incolla la tua frase seed qui!"
@@ -1152,7 +1257,7 @@
   },
   "privateKey": {
     "message": "Chiave Privata",
-    "description": "seleziona questo tipo di file per importare un account"
+    "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
     "message": "Attenzione: non dire a nessuno questa chiave! Chiunque con la tua chiave privata può rubare qualsiasi moneta contenuta nel tuo account."
@@ -1178,8 +1283,14 @@
   "receive": {
     "message": "Ricevi"
   },
+  "recents": {
+    "message": "Recents"
+  },
   "recipientAddress": {
     "message": "Indirizzo Destinatario"
+  },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
   },
   "refundAddress": {
     "message": "Indirizzo di Rimborso"
@@ -1204,6 +1315,15 @@
   },
   "resetAccountDescription": {
     "message": "Ripristinare il tuo account cancellerà lo storico delle transazioni."
+  },
+  "deleteNetwork": {
+    "message": "Delete Network?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
+  "remindMeLater": {
+    "message": "Remind me later"
   },
   "restoreFromSeed": {
     "message": "Ripristina da una frase seed"
@@ -1270,7 +1390,7 @@
   },
   "sampleAccountName": {
     "message": "Es: Il mio nuovo account",
-    "description": "Aiuta l'utente a capire il concetto di aggiungere un nome leggibile al loro account"
+    "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
     "message": "Salva"
@@ -1286,7 +1406,7 @@
   },
   "saveAsFile": {
     "message": "Salva come File",
-    "description": "Processo per esportare un account"
+    "description": "Account export process"
   },
   "saveSeedAsFile": {
     "message": "Salva la Frase Seed come File"
@@ -1560,7 +1680,7 @@
   },
   "toETHviaShapeShift": {
     "message": "$1 a ETH via ShapeShift",
-    "description": "il sistema riempirà il tipo di deposito all'inizio del messaggio"
+    "description": "system will fill in deposit type in start of message"
   },
   "token": {
     "message": "Token"
@@ -1649,6 +1769,9 @@
   "transfer": {
     "message": "Trasferisci"
   },
+  "transferBetweenAccounts": {
+    "message": "Transfer between my accounts"
+  },
   "transferFrom": {
     "message": "Trasferisci Da"
   },
@@ -1660,7 +1783,7 @@
   },
   "troubleTokenBalances": {
     "message": "Abbiamo avuto un problema a caricare il bilancio dei tuoi token. Puoi vederlo ",
-    "description": "Seguito da un link (qui) per vedere il bilancio dei token"
+    "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "Prova di nuovo"
@@ -1721,13 +1844,16 @@
   },
   "usaOnly": {
     "message": "Solo USA",
-    "description": "Usare questo sito di scambio è possibile solo per persone residenti in USA."
+    "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
     "message": "Usato da una varietà di clients diversi"
   },
   "useOldUI": {
     "message": "Use la vecchia UI"
+  },
+  "userName":{
+    "message": "Nome utente"
   },
   "validFileImport": {
     "message": "Devi selezionare un file valido da importare."
@@ -1737,6 +1863,12 @@
   },
   "viewAccount": {
     "message": "Vedi Account"
+  },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
   },
   "viewOnCustomBlockExplorer": {
     "message": "Vedi su $1"

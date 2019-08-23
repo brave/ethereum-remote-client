@@ -1,3 +1,5 @@
+import React from 'react'
+import PasswordWarning from '../password-warning'
 import ImportWithSeedPhrase from '../../../../../../../ui/app/pages/first-time-flow/create-password/import-with-seed-phrase/import-with-seed-phrase.component'
 import { validateMnemonic } from 'bip39'
 
@@ -19,5 +21,14 @@ module.exports = class BraveImportWithSeedPhrase extends ImportWithSeedPhrase {
     }
 
     this.setState({ seedPhrase, seedPhraseError })
+  }
+
+  render () {
+    return (
+      <div>
+        {super.render()}
+        <PasswordWarning />
+      </div>
+    )
   }
 }

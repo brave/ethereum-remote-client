@@ -13,7 +13,7 @@
     "publish-docs": "gh-pages -d docs/jsdocs",
     "start:test": "gulp dev:test",
     "build:test": "gulp build:test",
-    "test": "yarn audit && yarn test:unit && yarn lint",
+    "test": "yarn audit && && yarn install-test-deps && yarn test:unit && yarn lint",
     "dapp": "static-server test/e2e/contract-test --port 8080",
     "dapp-chain": "GANACHE_ARGS='-b 2' concurrently -k -n ganache,dapp -p '[{time}][{name}]' 'yarn ganache:start' 'sleep 5 && static-server test/e2e/contract-test --port 8080'",
     "watch:test:unit": "nodemon --exec \"yarn test:unit\" ./test ./app ./ui",
@@ -47,7 +47,8 @@
     "version:bump": "node development/run-version-bump.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "update-changelog": "./development/auto-changelog.sh",
-    "rollback": "./development/rollback.sh"
+    "rollback": "./development/rollback.sh",
+    "install-test-deps": "yarn add eth-hd-keyring && yarn add eth-json-rpc-infura && yarn add eth-keyring-controller"
   },
   "resolutions": {
     "3box/ipfs/ipld-zcash/zcash-bitcore-lib/lodash": "^4.17.12",

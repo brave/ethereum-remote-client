@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 module.exports = class BraveImportWithSeedPhrase extends ImportWithSeedPhrase {
   static contextTypes = {
     t: PropTypes.func,
+    metricsEvent: PropTypes.func,
   }
 
   componentDidMount () {

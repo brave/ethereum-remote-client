@@ -41,7 +41,7 @@ const createBraveLocalesTask = () => {
   gulp.task('combine-with-brave-strings', function () {
     const currentTask = {}
     return gulp.src('./dist/brave/_locales/**/messages.json')
-      .pipe(through.obj(function (file, enc, cb) {
+      .pipe(through.obj(function (file, _enc, cb) {
         // This is such as fr/messages.json
         currentTask.relativeFilePath = file.relative
         cb(null, file)

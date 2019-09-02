@@ -13,7 +13,9 @@
     "publish-docs": "gh-pages -d docs/jsdocs",
     "start:test": "gulp dev:test",
     "build:test": "gulp build:test",
-    "test": "yarn audit && yarn install-test-deps && yarn test:unit && yarn lint",
+    "test:base": "yarn install-test-deps && yarn test:unit && yarn lint",
+    "test:ci": "yarn test:base && node scripts/audit.js",
+    "test": "yarn test:base && yarn audit",
     "dapp": "static-server test/e2e/contract-test --port 8080",
     "dapp-chain": "GANACHE_ARGS='-b 2' concurrently -k -n ganache,dapp -p '[{time}][{name}]' 'yarn ganache:start' 'sleep 5 && static-server test/e2e/contract-test --port 8080'",
     "watch:test:unit": "nodemon --exec \"yarn test:unit\" ./test ./app ./ui",
@@ -304,5 +306,8 @@
   "engines": {
     "node": "^10.16.0",
     "yarn": "^1.16.0"
+  },
+  "resolutions": {
+    "braces": "^2.3.2"
   }
 }

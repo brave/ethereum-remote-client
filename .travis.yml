@@ -17,6 +17,6 @@ branches:
   only:
     - master
 env:
-  - TEST_SUITE=test
+  - TEST_SUITE=test:ci
 script:
   - yarn $TEST_SUITE

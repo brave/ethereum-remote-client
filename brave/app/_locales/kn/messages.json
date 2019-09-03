@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "DApps ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ನಿಮ್ಮ ಲೆಡ್ಜರ್ ಹಾರ್ಡ್‌ವೇರ್ ವ್ಯಾಲೆಟ್ ಅನ್ನು ಸಂಪರ್ಕಪಡಿಸಿ ಮತ್ತು ಇತರ ಸಂಪರ್ಕಿತ ವ್ಯಾಲೆಟ್‌ಗಳಿಗೆ ವರ್ಗಾವಣೆ ಮಾಡಿ."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "ಹೊಸದಾದ ಸ್ಥಳೀಯ ವ್ಯಾಲೆಟ್"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "DApps ನೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಲು ನಿಮ್ಮ ಟ್ರೆಜರ್ ಹಾರ್ಡ್‌ವೇರ್ ವ್ಯಾಲೆಟ್ ಅನ್ನು ಸಂಪರ್ಕಪಡಿಸಿ ಮತ್ತು ಇತರ ಸಂಪರ್ಕಗೊಳಿಸಿದ ವ್ಯಾಲೆಟ್‌ಗಳಿಗೆ ವರ್ಗಾವಣೆ ಮಾಡಿ."
   }
 }

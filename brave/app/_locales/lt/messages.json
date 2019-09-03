@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Prijunkite savo sąskaitų knygos techninės įrangos piniginę, kad ji palaikytų ryšį su „dApps“, ir atlikite pervedimus į kitas prijungtas pinigines."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Nauja vietinė slaptažodinė"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
+    "message": "Susikurkite naują „Brave“ vietinę piniginę, kad galėtumėte pasiekti „dApps“ ir saugiai laikyti kriptovaliutą bei savo kolekciją. Anonimiškai keiskite žetonus, nemokėdami mokesčių už sandorius."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Prijunkite savo „Trezor“ techninės įrangos slaptažodinę, kad ji palaikytų ryšį su decentralizuotomis programomis, ir atlikite pervedimus į kitas prijungtas slaptažodines."
   }
 }

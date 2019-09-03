@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "Поділитись адресою"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "Поділитись вашою адресою, щоб під'єднатись до $1?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "Якщо поділитися своєю адресою з $1, можна взаємодіяти з цією децентралізованою програмою. Цей дозвіл за замовчуванням має захистити вашу конфіденційність."
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "Режим конфіденційності тепер увімкнено за замовчуванням"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "Режим конфіденційності"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "Сайти мають запитувати доступ, щоб переглядати інформацію щодо вашого облікового запису."
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "Відкрити облікові записи"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "Надати облікові записи поточному сайту. Корисно для попередніх версій dapps."
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "Таблиця доступна тільки в мережах Ethereum."
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "Дійсно показати ці облікові записи на поточному веб-сайті?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "Ви впевнені, що хочете очистити затверджені веб-сайти?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "Контрактна взаємодія"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "Схвалені дані сайту успішно скинуто."
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "Дані приватності"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "Очистіть приватні дані, щоб всі сайти запитували доступ на перегляд інформації щодо облікового запису знову."
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "Очистити приватні дані"
   },
   "reject": {
     "message": "Відхилити"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 бажає підключитися до вашого облікового запису"
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "Цей сайт запитує доступ на перегляд вашої поточної адреси облікового запису. Завжди взаємодійте лише з веб-сайтами, яким довіряєте."
   },
   "about": {
     "message": "Про Brave Software Brave"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "Версія, центр підтримки та контактна інформація."
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "Про нас"
   },
   "accept": {
     "message": "Прийняти"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* Прискорення транзакції за допомогою вищих цін на газ підвищує її шанси бути обробленою мережею швидше, але це не завжди гарантовано."
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "Отримуємо доступ до вашої камери..."
   },
   "account": {
     "message": "Обліковий запис"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "Деталі облікового запису"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "Назва облікового запису"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "Опції облікового запису"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "Вам потрібно обрати обліковий запис!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "журнал активності"
   },
   "add": {
     "message": "Додати"
@@ -99,70 +99,70 @@
     "message": "Адреса"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "Додати мережу"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "Додати отримувача"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "Адресна книга"
   },
   "advanced": {
     "message": "Розширені"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "Отримайте доступ до функцій розробника, завантажте Логи станів, перезапустіть обліковий запис, налаштуйте тестові сітки та персоніфіковані RPC."
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "Додаткові параметри"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "Додати користувацький токен"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "Додати до адресної книги"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "Напр.: Джон Д."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "Додати псевдо"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "Додати адресу Ethereum"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "Додати токен"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "Додати токени"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "Додати рекомендовані токени"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "Додайте токени, отримані за допомогою MetaMask"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "Я погоджуюсь з Умовами надання послуг"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "Готово"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "Ні, я вже маю мнемонічну фразу"
   },
   "amount": {
     "message": "Кількість"
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "Сума + газ"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "Сума + TX плата"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "Гаманець Ethereum у вашому браузері",
     "description": "The description of the application"
   },
   "appName": {
@@ -170,117 +170,117 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "Затвердити"
   },
   "approved": {
-    "message": "Approved"
+    "message": "Затверджено"
   },
   "asset": {
-    "message": "Asset"
+    "message": "Актив"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "Спроба підключення до розподіленої бази даних."
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "Спробувати скасувати?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "Виконання цієї спроби не гарантує скасування початкової транзакції. Якщо спроба скасування вдасться, з вас буде стягнуто зазначену вище комісію."
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "Авторство"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "Таймер автоматичного виходу (хвилин)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "Встановіть час відсутності активності у хвилинах після якого MetaMask буде здійснювати автоматичний вихід"
   },
   "available": {
     "message": "Доступно"
   },
   "average": {
-    "message": "Average"
+    "message": "У середньому"
   },
   "back": {
     "message": "Назад"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "Повернутися до всіх"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Створіть резервну копію вашого Секретного кода відновлення, щоб ваш гаманець та ваші кошти залишались у безпеці."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "Цей секретний код буде потрібен, щоб відновити ваш гаманець у разі втрати вашого пристрою, забуття паролю, потреби у перевстановленні MetaMask або виникнення бажання отримати доступ до вашого гаманця з іншого пристрою."
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "Створити резервну копію зараз"
   },
   "balance": {
-    "message": "Balance"
+    "message": "Баланс"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "Залишок можливо вже змінився"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "Залишок токенів"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "Недостатній баланс для поточної загальної кількості газу"
   },
   "basic": {
     "message": "Основні параметри"
   },
   "beta": {
-    "message": "BETA"
+    "message": "БЕТА"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "має бути більшим або дорівнювати $1 і меншим або дорівнювати $2.",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "Блокувати Explorer"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "Переглянути обліковий запис на $1",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "Викоритовувати Blockies Identicon"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "Позичити через Dharma (бета-версія)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "Ваш браузер не підтримується..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "MetaMask розроблено й створено в Каліфорнії."
   },
   "buy": {
-    "message": "Buy"
+    "message": "Купити"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "Купити на Coinbase"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Coinbase це найпопулярніший у світі спосіб купувати та продавати Bitcoin, Ethereum та Litecoin."
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Купити ETH через Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre дає змогу використовувати кредитну картку для внесення валюти ETH безпосередньо у свій гаманець MetaMask."
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "Купувати на CoinSwitch"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "CoinSwitch це точка призначення з однією зупинкою для обміну більш ніж 300 криптовалют за найкращими курсами. "
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "Байти"
   },
   "off": {
     "message": "Вимкнено"
@@ -292,269 +292,269 @@
     "message": "Увімкнути"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "Блокувати Explorer URL (не обов'язково)"
   },
   "cancel": {
     "message": "Скасувати"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "Відмінити спробу"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "Вартість пального за скасування"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "Скасовано"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "Відмінити всі $1 транзакції"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "ID мережі"
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "Використовувати класичний інтерфейс"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "Натисніть для копіювання"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "Клацніть на $1, щоб додати їх до вашого облікового запису"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "Клацніть тут, щоб відкрити секретні слова"
   },
   "close": {
     "message": "Близько"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "Щоб підключитися до апаратного гаманця, розширення MetaMask потрібно використовувати в Google Chrome."
   },
   "company": {
-    "message": "Company"
+    "message": "Компанія"
   },
   "confirm": {
     "message": "Підтвердити"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "Час підтвердження (сек)"
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "Підтверджено"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "Підтвердити контракт"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "Підтвердити пароль"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "Підтвердьте вашу секретну резервну фразу"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "Підтвердити транзакцію"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "Вітаємо!"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "Приєднайте апаратний гаманець"
   },
   "connect": {
     "message": "Під’єднатися"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "Запит на з'єднання"
   },
   "connecting": {
     "message": "Підключення…"
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "Під'єднуємось до $1"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "Підключення до тестової мережі Kovan"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "З'єднуємось з Головною мережею Ethereum"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "Під'єднуємось до Тестової мережі Ropsten"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "Під'єднуємось до тестової мережі Rinkeby"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "Під'єднуємось до локального хосту 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "Підключення до тестової мережі Goerli"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "Підключення до невідомої мережі"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "Під'єднатись до Ledger"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "Підключитися до Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "Список контактів"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "Додавайте, редагуйте, видаляйте й контролюйте свої контакти"
   },
   "continue": {
     "message": "Продовжити"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "Продовжити у Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Продовжити у Wyre"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "Продовжити в CoinSwitch"
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "Розгортання контракту"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "Конверсія триває"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "Скопійовано"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "Скопійовано до буферу обміну"
   },
   "copiedExclamation": {
     "message": "Скопійовано!"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "Я скопіював їх до якогось безпечного місця"
   },
   "copy": {
     "message": "Копіювати"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "Копіювати адресу в буфер обміну"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "Копіювати ID транзакції"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "ID Скопійованої транзакції"
   },
   "copyToClipboard": {
     "message": "Копіювати в буфер"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "Копіювати"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "Це ваш закритий ключ (натисніть, щоб скопіювати)"
   },
   "create": {
     "message": "Створити"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "Створити обліковий запис"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "Створити гаманець"
   },
   "createDen": {
     "message": "Створити"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "Створити пароль"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "Крипто",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "Обмін валют"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "Поточна мова"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "Поточна мережа"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "Поточний RPC"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "Налаштувати пальне"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "Збільшення комісії може призвести до зменшення часу обробки, але це не гарантується."
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "Користувацький токен"
   },
   "customize": {
     "message": "Налаштувати"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "Налаштувати RPC"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "Кількість розрядів після коми: від 0 до 36."
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "Знаків після коми"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "Мережа для транзакцій з Ether за замовчуванням - Main Net."
   },
   "delete": {
     "message": "Видалити"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "Видалити обліковий запис"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "DEN – ваше захищене паролем сховище в MetaMask."
   },
   "deposit": {
     "message": "Депозит"
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "Депонуйте ваші BTC на адресу нижче:"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "Депонувати Eth"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Депонувати Ether"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "Внести кошти за допомогою Вказівки"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "Внести з іншого облікового запису"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "Депонувати з ShapeShift"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "Якщо ви володієте іншими криптовалютами, ви можете торгувати та зберігати Ether безпосередньо у вашому гаманці MetaMask. Обліковий запис не потрібен."
   },
   "details": {
     "message": "Деталі"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "Прямий депозит"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Внести безпосередньо Ефір"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "Якщо ви вже маєте ефір, пряме переведення – найшвидший спосіб передати ефір у свій гаманець."
   },
   "dismiss": {
     "message": "Відхилити"
@@ -563,707 +563,707 @@
     "message": "Готово"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "Завантажити Гугл Хром"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "Завантажте цю Секретну резервну фразу та зберігайте її у безпеці на зовнішньому зашифрованому жорсткому диску або носії інформації."
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "Завантажити журнали стану"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "Не маєте апаратного гаманця?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "Скинуто"
   },
   "edit": {
     "message": "Редагувати"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "Редагувати мережу"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "Редагувати назву облікового запису"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "Редагувати контракт"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "Внесіть зміни в транзакцію"
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "Напишіть нам!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "Зашифрувати ваш новий DEN"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "Ви пройшли тест, зберігайте вашу початкову фразу в безпеці - це ваша відповідальність!"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "Поради для безпечного зберігання"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "Збережіть резервну копію в декількох місцях."
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "Ніколи не передавайте цю фразу нікому."
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "Остерігайтесь фішингу! MetaMask ніколи не запитуватиме вашої початкової фрази."
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "Якщо вам потрібно знову зробити резервну копію вашої початкової фрази, ви можете знайти її у Налаштування -> Безпека."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "Якщо у вас коли-небудь виникатимуть питання або ви побачите щось фішингове, пишіть на support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask не вдалося відновити вашу мнемонічну фразу. Докладніше."
   },
   "endOfFlowMessage9": {
     "message": "Дізнатись більше."
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "Усе готово"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "Ім’я ENS не знайдено"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "Помилка у реєстрації ENS ім'я"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "Ім'я ENS не знайдено у даній мережі. Спробуйте перейти у Main Ethereum Network."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "Введіть псевдонім"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "Введіть пароль"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "Введіть пароль, щоб підтвердити"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "Введіть пароль, щоб продовжити"
   },
   "eth": {
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Публічна адреса Ethereum"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "Переглянути обліковий запис на Etherscan"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "Приблизні часи обробки"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "Обмінний курс"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "Розгорнути подання"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "Експортувати приватний ключ"
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "Експортуйте приватні ключі на свій власний ризик."
   },
   "failed": {
-    "message": "Failed"
+    "message": "Помилка"
   },
   "fast": {
     "message": "Швидка"
   },
   "faster": {
-    "message": "Faster"
+    "message": "Швидше"
   },
   "fastest": {
     "message": "найшвидше"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "Прогнозування комісії за транзакції в режимі реального часу"
   },
   "fiat": {
-    "message": "Fiat",
+    "message": "Вказівка",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "Не працює імпорт файлу? Натисніть тут!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "Стежте за нами в Твіттері"
   },
   "forgetDevice": {
     "message": "Забути цей пристрій"
   },
   "from": {
-    "message": "From"
+    "message": "Від"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "Адреси відправлення та отримання не можуть бути однаковими"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "Від Ethereum"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "Тип функції"
   },
   "gas": {
-    "message": "Gas",
+    "message": "Пальне",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "Комісія за газ"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "Ліміт газу"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "Ми підраховуємо пропонований ліміт пального на основі рейтингів успішності мережі."
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "Ліміт газу – максимальна кількість одиниць газу, яку ви бажаєте витратити."
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "Ліміт пального обов'язковий"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "Ліміт газу має бути не менше 21000"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "Пального використано"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "Створення фрази…"
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "Ціна на пальне (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "Ціна газу дуже низька"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Ціна на пальне визначає кількість Ether, яку ви готові заплатити за кожну одиницю пального."
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "Ціна Газу"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "Ми розрахуємо рекомендовані ціни газу на основі відсотка успішних транзакцій у мережі."
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "Необхідна ціна на газ"
   },
   "general": {
-    "message": "General"
+    "message": "Загальні"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "Конверсія валют, первісна валюта, мова, ідентикон блокіз"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "Генерація транзакції"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Отримати Ефір"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "Отримайте Ether з крану за $1",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "Отримати допомогу."
   },
   "getStarted": {
     "message": "Почати"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "має бути більшим або рівним $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "Раді вас бачити."
   },
   "hardware": {
-    "message": "hardware"
+    "message": "апаратний"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "Апаратний гаманець під'єднано"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "Під'єднати апаратний гаманець"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "Оберіть апаратний гаманець, який ви хочете використовувати з MetaMask"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "Проблеми при підключенні?"
   },
   "here": {
     "message": "тут",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "Ось список!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "Шістнадцятирикові дані"
   },
   "hide": {
     "message": "Сховати"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "Приховати токен"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "Приховати токен?"
   },
   "history": {
     "message": "Історія"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "Як ви хочете депонувати Ether?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "Це дозволить вам тримати етер та токени і слугуватиме вашим мостом до децентралізованих застосунків."
   },
   "import": {
     "message": "Імпортувати",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "Імпортувати обліковий запис"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "Імпортовані облікові записи не будуть пов'язані з вашою первісно створеною початковою фразою облікового запису MetaMask. Дізнайтесь більше про імпортовані облікові записи"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "Імпортувати обліковий запис з початковою фразою"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "Імпортувати обліковий запис"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "Імпортувати DEN, що існує"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "Імпортувати гаманець"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "Імпортуйте ваш гаманець, що існує, використовуючи початкову фразу з 12 слів"
   },
   "imported": {
     "message": "Імпортовано",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "Імпортувати, використовуючи початкову фразу облікового запису"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "Імпортувати за допомогою мнемонічної фрази"
   },
   "info": {
-    "message": "Info"
+    "message": "Інформація"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "Інформація та допомога"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "Ваша початкова транзакція підтверджена мережею. Натисніть ОК для повернення."
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "Недостатньо коштів"
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "Недостатньо коштів."
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "Недостатньо токенів"
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "Недійсна адреса"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "Недійсна адреса отримувача"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "Відома контрактна адреса."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "Не є мережею ETH, налаштуйте нижній регістр"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "Недійсні параметри пального"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "Неприпустимий ввід."
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "Неприпустимий запит"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "Недійсний RPC URL"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "Недійсна seed-фраза"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "Щось пішло не так. Будь ласка, переконайтесь, що ваш JSON файл форматовано належним чином."
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "Файл JSON",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "Відстежуйте токени, які ви придбали через ваш обліковий запис MetaMask."
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "Тестова мережа Kovan"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "Відвідайте нашу базу знань"
   },
   "max": {
-    "message": "Max"
+    "message": "Максимум"
   },
   "learnMore": {
     "message": "Дізнатись більше"
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "Потрібно скористатися своїм останнім обліковим записом, перш ніж додавати новий."
   },
   "legal": {
-    "message": "Legal"
+    "message": "Легальний"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "має бути більшим або дорівнювати $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "Так, давайте налаштуємо!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "Ви б хотіли додати ці токени?"
   },
   "links": {
-    "message": "Links"
+    "message": "Посилання"
   },
   "limit": {
-    "message": "Limit"
+    "message": "Ліміт"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "Прогнози ціни на пальне наживо"
   },
   "loading": {
     "message": "Завантаження..."
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "Завантаження токенів…"
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "Завантажити більше"
   },
   "localhost": {
-    "message": "Localhost 8545"
+    "message": "Локальний хост 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "Увійти"
   },
   "logout": {
-    "message": "Log out"
+    "message": "Вийти"
   },
   "loose": {
-    "message": "Loose"
+    "message": "Відпустити"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "початкові слова мають тільки маленькі букви"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "Головна Мережа Ethereum"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "Запам'ятайте цю фразу."
   },
   "memo": {
-    "message": "memo"
+    "message": "нотатка"
   },
   "menu": {
-    "message": "Menu"
+    "message": "Меню"
   },
   "message": {
-    "message": "Message"
+    "message": "Повідомлення"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "Під'єднуємо вас до Ethereum та децентралізованої мережі."
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "Початкові слова MetaMask"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "Версія MetaMask"
   },
   "min": {
     "message": "Мінімальні"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "Не бачите ваших токенів?"
   },
   "minutesShorthand": {
-    "message": "Min"
+    "message": "Мінімально"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "Синхронізувати облікові записи з мобільним"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "Введіть пароль, щоб підтвердити свою особу!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "Мої облікові записи"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "Облікові записи мого гаманця"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "Усі ваші створені облікові записи MetaMask буде автоматично додано в цей розділ."
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "Слід вибрати хоча б 1 токен."
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "Щоб взаємодіяти з децентралізованими застосунками використовуючи MetaMask, вам буде потрібен Ether у вашому гаманці."
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "Потрібно вибрати файл для імпорту.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "Ви маєте ввести пароль для обраного файлу.",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "Не можливо наділсати від'ємну кількість ETH."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "Ім’я мережі"
   },
   "networks": {
-    "message": "Networks"
+    "message": "Мережі"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "Додавайте та редагуйте мережі RPC, що можна налаштовувати"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "Не зважати"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "Новий обліковий запис"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "Виявлено нову адресу! Клацніть тут, щоб додати її до вашої адресної книги."
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "Обліковий запис $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "Новий контакт"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "Новий контракт"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "Новий пароль (мінімум 8 символів)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "Новий пароль (мін. 8 символів)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "Новий отримувач"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "Нова мережа"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "Вперше в MetaMask?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "Ні, я вже маю початкову фразу"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "Захистіть свої ключі!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "Будьте обережними з вашою початковою фразою - надходила інформація про сайти, які намагались імітувати MetaMask. MetaMask ніколи не запитує вашої початкової фрази!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "Тримайте свою фразу у безпеці. Якщо ви бачите щось фішингове або ви не впевнені щодо сайту, напишіть нам на support@metamask.io"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "Новий RPC URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "Показати розширені опції"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "Сховати розширені параметри"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "ChainID (необов’язково)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "Символ (не обов'язково)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "Псевдо (не обов'язково)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "Новий підсумок"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "Нова комісія за транзакцію"
   },
   "next": {
     "message": "Далі"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "На це ім'я не встановлено адреси."
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "Немає отриманих внесків"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "Немає доступного обмінного курсу"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "Немає історії транзакцій."
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "У вас немає транзакцій"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "Недостатньо газу"
   },
   "notFound": {
     "message": "Не знайдено"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "Не розпочато"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "Вебкамеру не знайдено"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "Веб-камеру комп’ютера не знайдено. Повторіть спробу."
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "з"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "Старий UI"
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "Ви повернулись до старого UI. Ви можете перемкнути на новий UI через опцію у меню, що випадає праворуч згори."
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "Надсилайте ETH тільки на адресу Ethereum."
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "Надіслати лише $1 на адресу облікового запису Ethereum.",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "Відкрити у вкладці"
   },
   "or": {
-    "message": "or",
+    "message": "або",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Замовте Trezor або Ledger та зберігайте ваші кошти у холодному сховищі"
   },
   "origin": {
     "message": "Походження"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "Вихідні"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "Параметри"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "Початковий підсумок"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "Взяти участь у MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "Беріть участь у програмі MetaMetrics, щоб допомогти нам покращити MetaMask"
   },
   "password": {
     "message": "Пароль"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "Будь ласка, переконайтесь в тому, що ваш пароль правильний"
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "Паролі не збігаються"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "паролі не збігаються",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "Пароль закороткий"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "пароль не достатньо довгий",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "Вставте ваш рядок з особистим ключем сюди:",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "Вставте сюди свою мнемонічну фразу!"
   },
   "pending": {
-    "message": "pending"
+    "message": "очікує"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "Виявлено особисту адресу. Введіть контрактну адресу токена."
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "Будь ласка, перегляньте вашу транзакцію."
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "Популярні токени"
   },
   "prev": {
-    "message": "Prev"
+    "message": "Попередній"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "Первісна валюта"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "Оберіть \"рідна\", щоб пріоритезувати показ сум у рідних валютах мережі (напр.ETH). \nОберіть \"фіатна\", щоб пріоритезувати показ сум у ваших обраних фіатних валютах."
   },
   "privacyMsg": {
     "message": "Політика конфіденційності"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "Закритий ключ",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "Увага: Ніколи не розкривайте цей ключ. Будь-хто з вашим секретним ключем може викрасти всі статки з вашого облікового запису."
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "Приватна мережа"
   },
   "qrCode": {
     "message": "Показати QR код"
@@ -1272,97 +1272,97 @@
     "message": "Черга"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "Ви можете знову додати цей токен у меню облікового запису у розділі “Додати токен”. "
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "Читайте більше тут."
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "Читати більше."
   },
   "receive": {
-    "message": "Receive"
+    "message": "Отримати"
   },
   "recents": {
-    "message": "Recents"
+    "message": "Останні"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "Адреса отримувача"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Пошук, публічна адреса (0x), або ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "Ваша адреса для відшкодування"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "Відхилити все"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "Відхилити транзакції ($1)"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "Ви збираєтеся пакетно відхилити транзакції ($1)."
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "Відмовлено"
   },
   "reset": {
     "message": "Скинути"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "Перезапустити обліковий запис"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "Перезапуск вашого облікового запису очистить історію ваших транзакцій."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "Видалити мережу?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "Ви впевнені, що хочете видалити цю мережу?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "Нагадайте мені пізніше"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "Відновити обліковий запис?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "Відновити сховище"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "Відновіть ваш обліковий запис за допомогою seed-фрази"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "запити, що очікують на визнання"
   },
   "required": {
-    "message": "Required"
+    "message": "Обов'язкове"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "Спробуйте ще раз з вищою ціною на пальне тут"
   },
   "restore": {
     "message": "Відновити"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "Показати мнемонічні слова"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "Мнемонічна фраза"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "При зміні браузера або комп'ютера, вам знадобиться seed-фраза для отримання доступу до ваших облікових записів. Збережіть її у надійному місці."
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "НЕ передавайте цю фразу нікому!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "Ці слова можуть бути використані, щоб вкрасти всі ваші облікові записи."
   },
   "revert": {
-    "message": "Revert"
+    "message": "Повернути"
   },
   "remove": {
     "message": "Видалити"
@@ -1371,25 +1371,25 @@
     "message": "Видалення облікового запису"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "Цей обліковий запис буде видалено з вашого гаманця. Будь ласка, переконайтесь, що у вас є оригінальна seed-фраза чи секретний ключ для цього облікового запису. Ви можете імпортувати або створювати облікові записи у випадаючому меню вашого облікового запису."
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "Готові підключитися?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "Тестова мережа Rinkeby"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "Тестова мережа Ropsten"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Тестова мережа Goerli "
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "Власна мережа RPC"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "Напр.: Мій новий обліковий запис",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,491 +1399,491 @@
     "message": "Повільна"
   },
   "slower": {
-    "message": "Slower"
+    "message": "Повільніше"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": "Зберегти як файл CSV"
   },
   "saveAsFile": {
     "message": "Зберегти як файл",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "Зберегти мнемонічні слова у файл"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "Розташуйте QR-код перед вашою камерою"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "Сканувати QR-код"
   },
   "search": {
     "message": "Пошук"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "Результати пошуку"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "Секретна резервна фраза"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "Ваша секретна резервна фраза дозволяє легко створити резервну копію та відновити обліковий запис."
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "ЗАСТЕРЕЖЕННЯ: Ніколи не розголошуйте вашу резервну фразу. Будь-хто з цією фразою зможе забрати ваш Ether назавжди."
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "Введіть секретну фразу з дванадцяти слів, щоб відновити своє сховище."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "Безпека й конфіденційність"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "Налаштування приватності та початкова фраза гаманця"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "Сек"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "Відділіть кожне слово одним пробілом"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "Початкові фрази мають 12 слів"
   },
   "select": {
     "message": "Вибрати"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "Виберіть валюту"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "Виберіть кожну фразу, щоб переконатися, що вона правильна."
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "Оберіть локаль"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "Обрати сервіс"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "Обрати тип"
   },
   "send": {
     "message": "Надіслати"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "Надіслати суму"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Надіслати ETH"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "Надіслати токени"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "надісланий ефір"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "надіслані токени"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "Відділіть кожне слово одним пробілом"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "Шукати токени"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "Оберіть адресу"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "Виберіть обліковий запис"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "Оберіть обліковий запис для перегляду в MetaMask"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "Оберіть Ресурс"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "Оберіть вищу вартість пального, щоб пришвидшити обробку вашої транзакції.*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "Виберіть шлях до HD-гаманця"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "Якщо ви не бачите ваш обліковий запис Ledger, який існує, спробуйте переключити шляхи на \"Legacy (MEW / MyCrypto)\""
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "Надсилайте токени будь-кому, хто має обліковий запис Ethereum"
   },
   "settings": {
     "message": "Налаштування"
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "Купити за допомогою Shapeshift"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "Розширене керування газом"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "Виберіть цей параметр, щоб відображати регулятори ціни й ліміту газу на екранах надсилання й підтвердження."
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "Показати бесіду у Testnet"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "Оберіть це, щоб показати конверсію фіатних валют на Testnets"
   },
   "showPrivateKeys": {
-    "message": "Show Private Keys"
+    "message": "Показати приватні ключі"
   },
   "showQRCode": {
     "message": "Показати QR код"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "Показати шістнадцятирикові дані"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "Оберіть це, щоб показати поле для шістнадцятирикових даних на екрані надсилання"
   },
   "sign": {
-    "message": "Sign"
+    "message": "Підписати"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "Запит підпису"
   },
   "signed": {
-    "message": "Signed"
+    "message": "Підписано"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "Підписати повідомлення"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "Підписування цього повідомлення може мати небезпечний побічний ефект. Підписуйте тільки повідомлення від сайтів, яким ви повністю довіряєте весь ваш обліковий запис. Цей небезпечний метод буде усунуто у майбутній версії."
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "Запит підпису"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "Надійшов запит на підпис"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "Ой! Щось пішло не так."
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "між словами може бути лише пробіл"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "Пришвидшити"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "Прискорити транзакцію"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "Збільшіть ціну вашого пального, щоб спробувати перезаписати та пришвидшити вашу транзакцію"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "Пришвидшити це скасування"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "Прискорити цю транзакцію"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "Переключити мережі"
   },
   "status": {
     "message": "Статус"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "Логи стану"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "Логи стану містять ваші публічні адреси облікового запису та надіслані транзакції."
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "При отриманні логів стану сталася помилка."
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. Приєднайте апаратний гаманець"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "Під'єднайте ваш апаратний гаманець безпосередньо до вашого комп'ютера."
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. Оберіть обліковий запис"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "Оберіть обліковий запис, який бажаєте переглянути. Ви можете вибрати лише один."
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. Почніть користуватись dApps та більше!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "Використовуйте ваш апаратний обліковий запис, як би ви використовували будь-який обліковий запис Ethereum. Увійдіть в dApps, надсилайте Eth, купуйте та зберігайте токени ERC20 та токени, які не є взаємозамінними, такі як CryptoKitties."
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "Зберігайте цю фразу у менеджері паролів, як 1Password."
   },
   "submit": {
     "message": "Надіслати"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "Надіслано"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "Відвідайте наш центр підтримки"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "Символ"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "Символ має містити від 0 до 12 знаків."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "Синхронізувати з мобільним пристроєм"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "Синхронізувати з мобільним"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "Ви можете синхронізувати ваші облікові записи та інформацію з вашим мобільним пристроєм. Відкрийте мобільний застосунок MetaMask, перейдіть до \"Налаштування\" та клацніть на \"Синхронізувати з розширення браузера\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "Якщо ви відкрили мобільний застосунок MetaMask вперше, просто слідуйте крокам у вашому телефоні."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "Відскануйте цей код за допомогою мобільної програми MetaMask"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "Переконайтесь, що ніхто не дивиться на ваш екран, коли скануєте цей код"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "Ваші дані були успішно синхронізовані. Насолоджуйтесь мобільним застосунком MetaMask!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "Надто довго?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "Умови використання"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "Тестовий кран"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "У результаті цієї дії буде створено новий гаманець і мнемонічна фраза"
   },
   "tips": {
     "message": "Чайові"
   },
   "to": {
-    "message": "To"
+    "message": "Кому"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "$1 в ETH через ShapeShift",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "Токен"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "Адреса токена"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "Токен вже був доданий."
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "Ваш залишок токенів:"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "Контрактна адреса токену"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "Шукати токени або обрати з нашого переліку популярних токенів."
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "Символ токена"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "Відстежуйте токени, які ви придбали у вашому обліковому записі MetaMask. Якщо ви купували токени, використовуючи інший обліковий запис, такі токени тут не з'являться."
   },
   "total": {
     "message": "Усього"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "транзакція"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "Транзакцію підтверджено о $2."
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "Транзакція створена з вартістю $1 о $2."
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "Транзакція $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "Транзакція впала о $2."
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "Транзакція надіслана з оплатою за газ $1 о $2."
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "Транзакція повторно подана з підвищеною платою за газ до $1 о $2"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "Час оновлення транзакції: $2."
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "$2 транзакцію оновлено комісією за газ у розмірі $1."
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "Під час виконання транзакції сталася помилка."
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "Сталась спроба скасувати транзакцію з ціною пального $1 за $2"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "Транзакцію успішно скасовано на $2"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "транзакції"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "Помилка транзакції. В контрактному коді виданий виняток"
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "Ви намагаєтесь викликати функцію за неконтрактною адресою."
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "Комісія за транзакцію"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "Мемо транзакції (не обов'язково)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "Номер транзакції"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "Час транзакції"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "Передати"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "Передати між моїми обліковими записами"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "Передати від"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "Передавання"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "Апаратний гаманець TREZOR"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "В нас виникли складнощі при завантаженні ваших залишків токенів. Ви можете переглянути їх",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "Повторити"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "Ці 12 слів — єдиний спосіб відновити ваші облікові записи MetaMask.\nЗбережіть їх в надійному місці."
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "Введіть ваш пароль MetaMask"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "Вітаємо в новому інтерфейсі користувача MetaMask. З відгуками або пропозиціями щодо інтерфейсу користувача звертайтеся до нашої команди підтримки або на GitHub."
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "Ласкаво просимо до нового UI (Бета)"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "Зараз ви застосовуєте новий інтерфейс користувача MetaMask."
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "Не затверджено"
   },
   "unavailable": {
     "message": "Недоступний"
   },
   "units": {
-    "message": "units"
+    "message": "одиниці"
   },
   "unknown": {
     "message": "невідомо"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "Незнайома приватна мережа"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "Невідомий ідентифікатор мережі"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "Помилка: ми не змогли ідентифікувати цей QR-код "
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "Отакої! Щось пішло не так..."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "Виникла помилка при спробі отримати доступ до вашої камери. Будь ласка, спробуйте знову..."
   },
   "unlock": {
     "message": "Розблокувати"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "Децентралізована мережа очікує"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "Оновлено $1"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "URIs вимагають відповідного префікса HTTP/HTTPS."
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "Тільки США",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "Використовується низкою різних клієнтів"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "Використовувати старий UI"
   },
   "userName":{
     "message": "Ім’я користувача"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "Потрібно вибрати дійсний файл для імпорту."
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "Сховище створено"
   },
   "viewAccount": {
     "message": "Переглянути обліковий запис"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "Дивитись в Explorer"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "Переглянути контакт"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "Дивитись на $1"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "Дивитись на Etherscan"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "Переглянути інформацію про мережу"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "Відвідайте наш веб-сайт"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "Seed гаманця"
   },
   "warning": {
     "message": "Застереження"
@@ -1892,42 +1892,42 @@
     "message": "З поверненням!"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "Ласкаво просимо до MetaMask"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "Що це?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "Запишіть цю фразу на аркуші паперу й покладіть у надійне місце. Для більшої надійності запишіть її на кількох аркушах паперу й зберігайте кожен в 2–3 різних місцях."
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "Так, давайте спробуємо"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "Вам потрібно дозволити доступ до камери, щоб користуватись цією функцією."
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "Надійшов запит вашого підпису"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "Ви підписуєте"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "Ваша секретна seed-фраза"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "Ваше унікальне зображення облікового запису"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "Це зображення було згенеровано для вас на програмному рівні вашим новим номером облікового запису. "
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "Ви бачитимете це зображення кожен раз, як вам буде потрібно підтвердити транзакцію."
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask ніколи не запитуватиме вашої початкової фрази!"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "Ціна пального на прискорення - нуль"
   }
 }

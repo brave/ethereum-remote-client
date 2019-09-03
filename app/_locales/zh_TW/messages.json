@@ -1,15 +1,15 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "分享位址"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "分享你的位址來連接到 $1？"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "和 $1 分享位址能讓你與此 dapp 互動。此許可是預設來保護你的隱私。"
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "隱私模式現已根據預設開啟"
   },
   "privacyMode": {
     "message": "隱私模式"
@@ -24,7 +24,7 @@
     "message": "將帳戶公開給當前網站。對傳統去中心化應用服務很有用。"
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "圖表僅適用於以太坊網路。"
   },
   "confirmExpose": {
     "message": "您確定要將帳戶公開到當前網站嗎？"
@@ -60,10 +60,10 @@
     "message": "關於"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "版本，支援中心，以及聯絡資訊。"
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "關於我們"
   },
   "accept": {
     "message": "接受"
@@ -99,19 +99,19 @@
     "message": "帳戶位址"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "新增網路"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "新增接收人"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "位址簿"
   },
   "advanced": {
     "message": "進階"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "存取開發者功能，下載狀態日誌，重設帳號，設定測試網及自訂 PRC。"
   },
   "advancedOptions": {
     "message": "進階選項"
@@ -120,16 +120,16 @@
     "message": "加入自訂代幣"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "新增至位址簿中"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "如 John D。"
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "新增化名"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "新增一個以太坊位址"
   },
   "addToken": {
     "message": "加入代幣"
@@ -144,13 +144,13 @@
     "message": "將您已經擁有的代幣顯示於 MetaMask"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "我同意服務條款"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "都完成了"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "不，我已經有助記詞"
   },
   "amount": {
     "message": "數量"
@@ -176,7 +176,7 @@
     "message": "已批准"
   },
   "asset": {
-    "message": "Asset"
+    "message": "資產"
   },
   "attemptingConnect": {
     "message": "正在嘗試連接區塊鏈。"
@@ -191,10 +191,10 @@
     "message": "來源"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "自動登出計時器（分）"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "設定閒置分鐘上限，時間到時 MetaMask 將自動登出"
   },
   "available": {
     "message": "可使用"
@@ -206,16 +206,16 @@
     "message": "上一頁"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "回到所有"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "備份你的秘密還原代碼，安全防護錢包與資金。"
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "在裝置遺失、忘記密碼、需要重新安裝 MetaMask、或是想在另一裝置開啟錢包的情形下，你需要此秘密代碼來復原錢包。"
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "現在備份"
   },
   "balance": {
     "message": "餘額："
@@ -240,10 +240,10 @@
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "封鎖 Explorer"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "在 $1 觀看帳號 ",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
@@ -268,10 +268,10 @@
     "message": "Coinbase 是世界上最受歡迎的比特幣、以太幣和萊特幣的買賣交易所。"
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "用 Wyre 購買 ETH"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre 讓你使用信用卡在 MetaMask 帳號中直接存入 ETH。"
   },
   "buyCoinSwitch": {
     "message": "在CoinSwitch上购买"
@@ -292,7 +292,7 @@
     "message": "開啟"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "封鎖 Explorer URL（非必要）"
   },
   "cancel": {
     "message": "取消"
@@ -310,7 +310,7 @@
     "message": "取消全部 $1 筆交易"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "鏈 ID"
   },
   "classicInterface": {
     "message": "使用舊版界面"
@@ -331,7 +331,7 @@
     "message": "您需要在 Brave Software Brave 瀏覽器使用 MetaMask 連結您的硬體錢包"
   },
   "company": {
-    "message": "Company"
+    "message": "公司"
   },
   "confirm": {
     "message": "確認"
@@ -355,7 +355,7 @@
     "message": "確認交易"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "恭喜"
   },
   "connectHardwareWallet": {
     "message": "連線硬體錢包"
@@ -385,10 +385,10 @@
     "message": "連線到 Rinkeby 測試網路"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "連接至本地主機 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "連接至 Goerli 測試網路"
   },
   "connectingToUnknown": {
     "message": "連線到未知網路"
@@ -400,10 +400,10 @@
     "message": "連線到 Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "聯絡清單"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "新增、編輯、移除、並管理你的聯絡資訊"
   },
   "continue": {
     "message": "繼續"
@@ -412,7 +412,7 @@
     "message": "繼續前往 Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "繼續至 Wyre"
   },
   "continueToCoinSwitch": {
     "message": "繼續前往 CoinSwitch"
@@ -442,10 +442,10 @@
     "message": "複製到剪貼簿"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "複製交易 ID"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "已複製的交易 ID"
   },
   "copyToClipboard": {
     "message": "複製到剪貼簿"
@@ -463,7 +463,7 @@
     "message": "建立帳戶"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "創建錢包"
   },
   "createDen": {
     "message": "建立"
@@ -515,7 +515,7 @@
     "message": "刪除"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "刪除帳號"
   },
   "denExplainer": {
     "message": "您的 DEN 是 MetaMask 中您的的密碼加密儲存庫。"
@@ -581,13 +581,13 @@
     "message": "編輯"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "編輯網路"
   },
   "editAccountName": {
     "message": "編輯帳戶名稱"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "編輯聯絡資訊"
   },
   "editingTransaction": {
     "message": "修改交易"
@@ -599,46 +599,46 @@
     "message": "加密您的新 DEN"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "你通過測試了—安全存放助記詞，這是你的責任！"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "安全儲存的小秘訣"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "在多處儲存備份。"
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "不要分享此助記祠給任何人"
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "小心網路釣魚！MetaMask 永遠不會主動詢問你的助記詞。"
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "如你需要再次備份助記詞，可至設定 -> 安全。"
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "如你有任何問題或察覺有異，請寄信給 support@metamask.io"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask 無法還原你的助記詞。暸解更多"
   },
   "endOfFlowMessage9": {
     "message": "深入瞭解。"
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "都完成了"
   },
   "ensNameNotFound": {
     "message": "ENS 名稱不存在"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "ENS 名稱註冊錯誤"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "現有網路中找不到 ENS 名稱。嘗試轉換到主要以太坊網路。"
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "輸入化名"
   },
   "enterPassword": {
     "message": "請輸入密碼"
@@ -653,7 +653,7 @@
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "以太坊公開位址"
   },
   "etherscanView": {
     "message": "在 Etherscan 上查看帳戶"
@@ -761,10 +761,10 @@
     "message": "必需填寫 Gas 價格"
   },
   "general": {
-    "message": "General"
+    "message": "一般"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "貨幣轉換，主要貨幣，語言，區塊鏈哈希頭像"
   },
   "generatingTransaction": {
     "message": "產生交易"
@@ -787,7 +787,7 @@
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "我們很高興看到你。"
   },
   "hardware": {
     "message": "硬體"
@@ -852,10 +852,10 @@
     "message": "匯入現有的 DEN"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "匯入錢包"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "使用 12 字的助記詞來匯入你現有的錢包"
   },
   "imported": {
     "message": "已匯入私鑰",
@@ -895,7 +895,7 @@
     "message": "已知合約位址"
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "非 ETH 網路，設定至小寫"
   },
   "invalidGasParams": {
     "message": "Gas 參數錯誤"
@@ -938,14 +938,14 @@
     "message": "您必須使用最後的帳戶才能產生新帳戶"
   },
   "legal": {
-    "message": "Legal"
+    "message": "法律條款"
   },
   "lessThanMax": {
     "message": "必須小於等於 $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "好，我們開始吧！"
   },
   "likeToAddTokens": {
     "message": "確定要加入代幣？"
@@ -966,7 +966,7 @@
     "message": "載入代幣..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "載入更多"
   },
   "localhost": {
     "message": "Localhost 8545"
@@ -990,7 +990,7 @@
     "message": "絕對不要忘記您的助憶詞。"
   },
   "memo": {
-    "message": "memo"
+    "message": "備註"
   },
   "menu": {
     "message": "選單"
@@ -1017,19 +1017,19 @@
     "message": "Min"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "用移動裝置同步帳號"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "請輸入密碼確認身份！"
   },
   "myAccounts": {
     "message": "我的帳戶"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "我的錢包帳號"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "所有你在 MetaMask 創建的帳號將自動新增到此區塊。"
   },
   "mustSelectOne": {
     "message": "必須選擇至少 1 代幣"
@@ -1049,13 +1049,13 @@
     "message": "不能送出負值的乙太幣"
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "網路名稱"
   },
   "networks": {
     "message": "網路"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "新增並編輯自訂 RPC 網路"
   },
   "nevermind": {
     "message": "算了"
@@ -1064,14 +1064,14 @@
     "message": "新帳戶"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "偵測到新位址！點擊此處將其新增到你的位址簿。"
   },
   "newAccountNumberName": {
     "message": "帳戶 $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "新聯絡資訊"
   },
   "newContract": {
     "message": "建立新合約"
@@ -1089,22 +1089,22 @@
     "message": "新增網路"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "新來到 MetaMask？"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "不，我已經有助記詞"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "保護你的鑰匙！"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "小心保管你的註記詞—我們接到報告有網站嘗試模仿 MetaMask。MetaMask 永遠不會詢問你的助記詞！"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "安全存放你的助記詞。如你察覺有異，或你對某網站起疑，請寄信給 support@metamask.io"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "新的 RPC URL\n"
   },
   "showAdvancedOptions": {
     "message": "顯示進階選項"
@@ -1146,7 +1146,7 @@
     "message": "尚未有交易"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "Gas 不夠"
   },
   "notFound": {
     "message": "找不到"
@@ -1199,10 +1199,10 @@
     "message": "原始總量"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "參與 MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "參與 MetaMetrics 來協助我們打造更好的 MetaMask"
   },
   "password": {
     "message": "密碼"
@@ -1284,13 +1284,13 @@
     "message": "接收"
   },
   "recents": {
-    "message": "Recents"
+    "message": "最近"
   },
   "recipientAddress": {
     "message": "接收位址"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "搜尋，公開地址 (0x)，或 ENS"
   },
   "refundAddress": {
     "message": "您的退款位址"
@@ -1317,13 +1317,13 @@
     "message": "重置帳戶將清除您的交易紀錄"
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "刪除網路？"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "你確定要刪除網路嗎？"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "稍後提醒我"
   },
   "restoreFromSeed": {
     "message": "還原帳戶？"
@@ -1383,7 +1383,7 @@
     "message": "Ropsten 測試網路"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Goerli 測試網路"
   },
   "rpc": {
     "message": "自訂 RPC"
@@ -1436,10 +1436,10 @@
     "message": "輸入您的12個助憶詞以回復金庫"
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "安全＆隱私"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "隱私設定及錢包助記詞"
   },
   "secondsShorthand": {
     "message": "秒"
@@ -1502,7 +1502,7 @@
     "message": "Select the account to view in MetaMask"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "選擇一項資產"
   },
   "selectAHigherGasFee": {
     "message": "選擇更高的交易費可加速您的交易處理時間 *"
@@ -1529,10 +1529,10 @@
     "message": "在交易時顯示可微調 Gas 價格以及 Gas 上限的功能"
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "在測試網上顯示匯率"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "選擇此來在測試網上顯示法定貨幣匯率"
   },
   "showPrivateKeys": {
     "message": "顯示私鑰"
@@ -1634,31 +1634,31 @@
     "message": "造訪我們的協助中心"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "符號"
   },
   "symbolBetweenZeroTwelve": {
     "message": "代號必須介於 0 到 12 字元間."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "和移動裝置同步"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "和移動裝置同步"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "你可以用移動裝置同步帳號與資訊。開啟 MetaMask 移動 app，至「設定」並點擊「自瀏覽器擴充功能同步」"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "如你是第一次開啟 MetaMask 移動 app，只要跟著手機上的指示操作即可。"
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "用你的 MetaMask 移動 app 掃描此代碼"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "掃描代碼時確保沒有其他人在看你的螢幕"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "你的資料已成功同步。開始活用 MetaMask 移動 app！"
   },
   "takesTooLong": {
     "message": "花費太長時間？"
@@ -1670,7 +1670,7 @@
     "message": "測試水管"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "這將創建新的錢包與助記詞"
   },
   "tips": {
     "message": "提示"
@@ -1695,7 +1695,7 @@
     "message": "代幣餘額："
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "代幣合同位址"
   },
   "tokenSelection": {
     "message": "搜尋代幣或是從常見代幣列表中選擇。"
@@ -1770,7 +1770,7 @@
     "message": "交易"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "在我的帳號間轉帳"
   },
   "transferFrom": {
     "message": "交易來源"
@@ -1865,19 +1865,19 @@
     "message": "查看帳戶"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "在 Explorer 上瀏覽"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "觀看聯絡資訊"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "在 $1 瀏覽"
   },
   "viewOnEtherscan": {
     "message": "在 Etherscan 上瀏覽"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "瀏覽網路資訊"
   },
   "visitWebSite": {
     "message": "造訪我們的網站"
@@ -1925,7 +1925,7 @@
     "message": "您每一次在交易時，都會看到這個圖案。"
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask 永遠不會詢問你的助記詞！"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "加速的 Gas 價格為 0"

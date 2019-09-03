@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "አድራሻን አጋራ"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "ከ $1ጋር ለመገናኘት አድራሻዎን ያጋራሉ?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "አድራሻዎትን ለ $1ማጋራት ከዚህ dapp ጋር እንዲገናኙ ያስችልዎታል። ይህ ፈቃድ ግላዊ መብትዎን በንቡር የሚጠብቅ ነው።"
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "የግላዊነት ኩነት አሁን በንቡር ነቅቷል"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "የግል ኩነት"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "ድረ ገጾች የመለያ መረጃዎትን ለማየት የመድረሻ ፈቃድ መጠየቅ አለባቸው።"
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "መለያዎችን አጋልጥ"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "መለያዎችን ከአሁኑ ድረ ገጽ ጋር ያስተዋውቁ። ለሌጋሲ dapps ጠቃሚ ነው።"
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "ቻርት የሚገኘው በ Ethereum አውታረ መረቦች ላይ ብቻ ነው።"
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "መለያዎችዎን ለአሁኑ ድረ ገጽ ለማጋለጥ እንደሚፈልጉ እርግጠኛ ነዎት?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "የተፈቀዱ ድረ ገጾችን ለማጥራት እንደሚፈልጉ እርግጠኛ ነዎት?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "የግንኙነት ተግባቦት"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "የተፈቀደ የድረ ገጽ ውሂብን ማጥራት ተሳክቷል።"
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "የግላዊነት መረጃ"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "ሁሉም ድረ ገጾች የመለያ መረጃን በድጋሚ ለማየት የመድረሻ ፈቃድ አንዲጠይቁ ለማድረግ የግላዊነት ውሂብን አጥራ።"
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "የግላዊነት ውሂብን አጥራ"
   },
   "reject": {
     "message": "አይቀበሉ"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1ከመለያዎ ጋር ለመገናኘት ይፈልጋል"
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "ይህ ድረ ገጽ የእርስዎን መለያ ወቅታዊ አድራሻ ለማየት እየጠየቀ ነው። ምንጊዜም ግንኙነት የሚያደርጉባቸውን ድረ ገጾች የሚያምኗቸው መሆኑን ያረጋግጡ።"
   },
   "about": {
     "message": "ስለ"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "ስሪት፣ የድጋፍ መስጫ ማዕከልና የግንኙነት መረጃ "
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "ስለእኛ "
   },
   "accept": {
     "message": "ይቀበሉ"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* ከፍተኛ የነዳጅ ዋጋን በመጠቀም ግብይትን ማፋጠን በአውታረ መረቡ በፍጥነት እንዲከወን የማድረግ ዕድልን ይጨምራል፤ ነገር ግን ሁልጊዜም የተረጋገጠ አይደለም።"
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "ወደ ካሜራዎ መድረስ..."
   },
   "account": {
     "message": "መለያ"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "የመለያ ዝርዝሮች"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "የመለያ ስም"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "የመለያ አማራጮች"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "መለያ መምረጥ ይኖርብዎታል!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "የእንቅስቃሴ ምዝግብ ማስታወሻ"
   },
   "add": {
     "message": "አክል"
@@ -99,70 +99,70 @@
     "message": "አድራሻ"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "አውታረ መረብ አክል"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "ተቀባይ አክል"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "የአድራሻ መዝገብ"
   },
   "advanced": {
     "message": "የላቀ"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "አዘጋጅ ባህርያትን መድረስ፣ የስቴት መዛግብትን ማውረድ፣ መለያን ዳግም መሙላት፣ testnets እና ብጁ RPC አዋቅር።"
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "የላቁ አማራጮች"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "ብጁ ተለዋጭ ስም አክል"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "በአድራሻ መዝገብ ላይ አክል"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "ለምሳሌ፡ ጆን ዲ."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "ተለዋጭ ስም አክል"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "የ Ethereum አድራሻ አክል"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "ተለዋጭ ስም አክል"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "ተለዋጭ ስሞችን አክል"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "የተጠቆሙ ተለዋጭ ስሞችን አክል"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "MetaMask በመጠቀም የገዟቸውን ተለዋጭ ስሞች ያክሉ"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "በአገልግሎት ውሉ ተስማምቻለሁ"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "ሁሉም ተጠናቅቋል"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "የለም፣ ቀደም ሲል ጀምሮ የዘር ሐረግ አለኝ"
   },
   "amount": {
     "message": "ሰርዝ "
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "የገንዘብ መጠን + ነዳጅ"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "መጠን + TX ክፍያ"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "በማሰሺያዎ ውስጥ የ Ethereum ቋት",
     "description": "The description of the application"
   },
   "appName": {
@@ -170,64 +170,64 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "ፍቀድ"
   },
   "approved": {
-    "message": "Approved"
+    "message": "የተፈቀደ"
   },
   "asset": {
-    "message": "Asset"
+    "message": "ሐብት"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "ከ blockchain ጋር ለመገናኘት መሞከር።"
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "ለመሰረዝ ይሞክራሉ?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "ይህን ሙከራ ማቅረብ የመጀመሪያው ግብይትዎ እንደሚሰረዝ ዋስትና አይሰጥም። የመሰረዝ ሙከራው ከተሳካ፣ ከላይ የተጠቀሰውን የግብይት ክፍያ እንዲከፍሉ ይደረጋሉ።"
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "አይነታ"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "በራስ ሰር ዘግቶ መውጫ ሰዓት ቆጣሪ (ደቂቃ)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "MetaMask በራስ ሰር መንገድ ዘግቶ ከመውጣቱ በፊት የቦዘነ ጊዜን በደቂቃዎች ሙላ"
   },
   "available": {
     "message": "ይገኛል"
   },
   "average": {
-    "message": "Average"
+    "message": "አማካይ"
   },
   "back": {
     "message": "ተመለስ"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "ወደ ሁሉም ተመለስ"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "የቋትዎንና የገነዘብዎን ደህንነት ለማስጠበቅ ሚስጥራዊ የማስመለሻ ኮድዎን መጠባበቂያ ይያዙ።"
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "መሳሪያዎ ቢጠፋ፣ የይለፍ ቃልዎን ቢረሱ፣ MetaMask እንደገና መጫን ቢያስፈልግዎ ወይም በሌላ መሳሪያ ወደ ቋትዎ ለመድረስ ቢፈልጉ ይህ ሚስጥራዊ ኮድ ቋትዎን መልሶ ለማግኘት ያስፈልጋል።"
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "አሁን መጠባበቂያ ያዝ"
   },
   "balance": {
-    "message": "Balance"
+    "message": "ቀሪ ሂሳብ"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "ቀሪ ሂሳብ ጊዜው ያለፈበት ሊሆን ይችላል"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "የተለዋጭ ስም ቀሪ ሂሳብ(ቦች)"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "አሁን ላለው አጠቃላይ ነዳጅ የማይበቃ ቀሪ ሂሳብ"
   },
   "basic": {
     "message": "መሠረታዊ"
@@ -236,51 +236,51 @@
     "message": "BETA"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "ከ$1መብለጥ ወይም እኩል እና ከ$2በታች ወይም እኩል መሆን አለበት።",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "ኤክስፕሎረር አግድ"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "መለያን በ$1እይ",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "Blockies Identicon ተጠቀም"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "በ Dharma (Beta) ይበደሩ"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "ማሰሺያዎት አልተደገፈም..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "MetaMask ካሊፎርኒያ ውስጥ ተዘጋጅቶ የተገነባ ነው።"
   },
   "buy": {
-    "message": "Buy"
+    "message": "ይግዙ"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "በ Coinbase ይግዙ"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Coinbase በዓለም ላይ በጣም ታዋቂ የሆነ Bitcoin፣ Ethereum፣ እና Litecoin ለመግዛትና ለመሸጥ የሚያገልግል ዘዴ ነው።"
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "ETH በ Wyre ይግዙ"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre ክሬዲት ካርድ ተጠቅመው ETH በቀጥታ በ MetaMask መለያዎ ላይ እንዲያስቀምጡ ያስችልዎታል።"
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "በ CoinSwitch ላይ ይግዙ"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "CoinSwitch ከ300 በላይ ክሪፕቶ ከረንሲዎችን በጥሩ ዋጋ ለመመንዘር ባለ አንድ ማቆሚያ መዳረሻ ነው።"
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "ባይት"
   },
   "off": {
     "message": "አጥፋ"
@@ -292,269 +292,269 @@
     "message": "በርቷል"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "ኤክስፕሎረር URL አግድ (አማራጭ)"
   },
   "cancel": {
     "message": "ሰርዝ"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "ሙከራን ሰርዝ"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "የስረዛ ነዳጅ ወጪ"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "ተሰርዟል"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "ሁሉንም የ $1ግብይቶች ይሰርዙ"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "የሰንሰለት መታወቂያ"
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "ዓይነቱ የሚታወቅ በይነ ገጽ ተጠቀም"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "ለመቅዳት ጠቅ አድርግ"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "ወደ መለያዎት ለማከል $1ላይ ጠቅ ያድርጉ"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "ሚስጥራዊ ቃላትን ለመግለጽ እዚህ ጠቅ ያድርጉ"
   },
   "close": {
     "message": "ዝጋ"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "ከሃርድዌርዎ ቋት ጋር ለመገናኘት MetaMask በ Google Chrome ላይ መጠቀም አለብዎት።"
   },
   "company": {
-    "message": "Company"
+    "message": "ኩባንያ"
   },
   "confirm": {
     "message": "አረጋግጥ"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "የማረጋገጫ ሰዓት (ሰከንድ) "
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "ተረጋግጧል"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "ኮንትራት አረጋግጥ"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "የይለፍ ቃል ያረጋግጡ"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "ሚስጥራዊ የመጠባበቂያ ምዕራፍዎን ያረጋግጡ"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "ግብይትን ያረጋግጡ"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "እንኳን ደስ አለዎት"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "ከሃርድዌር ቋት ጋር ይገናኙ"
   },
   "connect": {
     "message": "ይገናኙ"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "የግንኙነት ጥያቄ"
   },
   "connecting": {
     "message": "በመገናኘት ላይ..."
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "ከ $1ጋር መገናኘት"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "ከ Kovan የሙከራ አውታረ መረብ መገናኘት"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "ከዋናው የ Ethereum አውታረ መረብ ጋር መገናኘት"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "ከ Ropsten የሙከራ አውታረ መረብ ጋር በመገናኘት ላይ"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "ከ Rinkeby የሙከራ አውታረ መረብ ጋር በመገናኘት ላይ"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "ከ Localhost 8545 ጋር መገናኘት"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "ከ Goerli የሙከራ አውታረ መረብ ጋር መገናኘት"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "ካልታወቀ አውታረ መረብ ጋር በመገናኘት ላይ"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "ከሌጀር ጋር ተገናኝ"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "ከ Trezor ጋር ይገናኙ"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "የዕውቂያ ዝርዝር"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "ዕውቂያዎችዎን ያክሉ፣ ያርትዑ፣ ያስወግዱና ያስተዳድሩ"
   },
   "continue": {
     "message": "ቀጥል"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "ወደ Coinbase ይቀጥሉ"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "ወደ Wyre ይቀጥሉ"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "ወደ CoinSwitch ይቀጥሉ"
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "የኮንትራት ስምሪት"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "ልወጣ በመካሄድ ላይ ነው"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "የተቀዳ"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "ወደ ቅንጥብ ሰሌዳ ተገልብጧል"
   },
   "copiedExclamation": {
     "message": "ተቀድቷል"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "ደህንነቱ ወደተጠበቀ ሌላ ቦታ ቀድቼዋለሁ"
   },
   "copy": {
     "message": "ቅዳ"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "አድራሻን ወደ ቅንጥብ ሰሌዳ ቅዳ"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "የግብይት መለያ ቁጥርን ቅዳ"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "የተቀዳ የግብይት መለያ ቁጥር"
   },
   "copyToClipboard": {
     "message": "ወደ ቅንጥብ ሰሌዳ ገልብጥ"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "ቅዳ"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "የግል ቁልፍዎ ይህ ነው (ለመቅዳት ጠቅ ያድርጉ)"
   },
   "create": {
     "message": "ፍጠር"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "መለያ ፍጠር"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "ቋት ፍጠር"
   },
   "createDen": {
     "message": "ፍጠር"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "የይለፍ ቃል ፍጠር"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "ስወራ",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "የገንዘብ ልወጣ"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "ወቅታዊ ቋንቋ"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "ወቅታዊ አውታረ መረብ"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "ወቅታዊ RPC"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "ነዳጅን አብጅ"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "ክፍያ መጨመር የመከወኛ ጊዜን ሊቀንስ ቢችልም ይህ ግን ዋስትና የለውም።"
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "ብጁ ተለዋጭ ስም"
   },
   "customize": {
     "message": "አብጅ"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "ብጁ RPC"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "አስርዮሽ ቢያንስ 0 ቢበዛ ደግሞ 36 መሆን አለባቸው።"
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "የትክክለኛነት አስርዮሽ"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "የ Ether ግብይቶች ንቡር አውታረ መረብ Main Net ነው።"
   },
   "delete": {
     "message": "ሰርዝ"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "መለያን ሰርዝ"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "የእርስዎ DEN በ MetaMask ውስጥ በይለፍ ቃል የተመሰጠረ ማከማቻዎ ነው።"
   },
   "deposit": {
     "message": "ማጠራቀም"
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "የእርስዎን BTC ከታች ባለው አድራሻ ያሰቀምጡ፡"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "Eth ያጠራቅሙ"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Ether አስቀምጥ"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "በፊያት ያስቀምጡ"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "ከሌላ መለያ አጠራቅም"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "በ ShapeShift አጠራቅም"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "ሌሎች ክሪፕቶ ገንዘቦች ካሉዎት፣  Ether በቀጥታ በ MetaMask ቋትዎ ላይ መለዋወጥና ማስቀመጥ ይችላሉ። መለያ አያስፈልግዎትም።"
   },
   "details": {
     "message": "ዝርዝሮች"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "ቀጥተኛ ተቀማጭ"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Ether በቀጥታ ያስቀምጡ"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "ቀደም ሲል የተወሰነ Ether ካለዎት፣ በአዲሱ ቋትዎ Ether ለማግኘት ፈጣኑ መንገድ ቀጥተኛ ተቀማጭ ነው።"
   },
   "dismiss": {
     "message": "አሰናብት"
@@ -563,707 +563,707 @@
     "message": "ተጠናቅቋል"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "Google Chrome አውርድ"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "ይህን ሚስጥራዊ መጠባበቂያ ሐረግ በማውረድ በተመሰጠረ ውጫዊ ሃርድ ድራይቭ ወይም የማከማቻ መሳሪያ ላይ ያስቀምጡት።"
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "የስቴት መዛግብትን አውርድ"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "የሃርድዌር ቋት የለዎትም?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "የተጣለ"
   },
   "edit": {
     "message": "አርትዕ"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "አውታረ መረብ አርም"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "የመለያ ስምን አርትዕ"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "ዕውቂያን አርትዕ"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "በግብይትዎ ላይ ለውጦችን ያድርጉ"
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "ኢሜይል ያድርጉልን!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "አዲሱን DEN ያመስጥሩ"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "ፈተናውን አልፈዋል - የዘር ሐረግዎን ደህንነቱ በተጠበቀ መንገድ ያስቀምጡ፣ የእርስዎ ሃላፊነት ነው! "
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "ደህንነቱ በተጠበቀ መንገድ የማከማቻ ፍንጮች"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "በብዙ ቦታዎች ላይ መጠባበቂያ ያስቀምጡ።"
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "ሐረጉን በጭራሽ ከሌላ ሰው ጋር አይጋሩ።"
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "አጭበርባሪ ነገሮችን ይጠንቀቁ! MetaMask በድንገት የዘር ሐረግዎን በጭራሽ አይጠይቅዎትም።"
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "የዘር ሐረግዎን በድጋሚ መጠባበቂያ ለመያዝ ከፈለጉ፣ በቅንብሮች -> ግላዊነት ውስጥ ሊያገኙት ይችላሉ።"
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "ጥያቄዎች ካሉዎት ወይም የሆነ አጠራጣሪ ነገር ካዩ፣ እባክዎ ለ support@metamask.io ኢሜይል ይላኩ።"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask የዘር ሐረግዎን መልሶ ማግኘት አልቻለም። ተጨማሪ መረጃ ያግኙ።"
   },
   "endOfFlowMessage9": {
     "message": "ተጨማሪ ይማሩ"
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "ሁሉም ተጠናቅቋል"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "የ ENS ስም አልተገኘም"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "በ ENS የስም ምዝገባ ላይ የተፈጠረ ስህተት"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "የ ENS ስም በአሁኑ ኔትወርክ ላይ አልተገኘም። ወደ ዋናው የ Ethereum አውታረ መረብ ለመቀየር ይሞክሩ።"
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "ተለዋጭ ስም ያስገቡ"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "የይለፍ ቃል ያስገቡ"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "ለማረጋገጥ የይለፍ ቃልዎን ያስገቡ"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "ለመቀጠል የይለፍ ቃል ያስገቡ"
   },
   "eth": {
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Ethereum ሕዝባዊ አድራሻ"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "መለያውን በ Etherscan ላይ ይመልከቱ"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "የሚገመት የክወና ጊዜያት"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "የምንዛሬ ተመን"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "እይታን ዘርጋ"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "የግል ቁልፍን ላክ"
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "የግል ቁልፎችን በራስዎ ሃላፊነት ይላኩ።"
   },
   "failed": {
-    "message": "Failed"
+    "message": "አልተሳካም"
   },
   "fast": {
     "message": "ፈጣን"
   },
   "faster": {
-    "message": "Faster"
+    "message": "በፍጥነት"
   },
   "fastest": {
     "message": "እጅግ በጣም ፈጣን"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "ቀጥታ የግብይት ክፍያ ትንበያዎች"
   },
   "fiat": {
-    "message": "Fiat",
+    "message": "ፊያት",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "ፋይል ማስመጣት እየሰራ አይደለም? እዚህ ላይ ጠቅ ያድርጉ!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "በ Twitter ላይ ይከተሉን"
   },
   "forgetDevice": {
     "message": "ይህን መሣሪያ እርሳ"
   },
   "from": {
-    "message": "From"
+    "message": "ከ"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "ከአድራሻ እና ወደ አድራሻ ተመሳሳይ ሊሆን አይችልም"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "ከ ShapeShift "
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "የተግባር ዓይነት"
   },
   "gas": {
-    "message": "Gas",
+    "message": "ነዳጅ",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "የነዳጅ ክፍያ"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "የነዳጅ ገደብ"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "የተጠቆመውን የነዳጅ ገደብ በአውታረ መረብ የስኬት መጠን ላይ ተመስርተን እናሰላለን።"
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "የነዳጅ ገደብ እርስዎ ወጪ ለማድረግ ዝግጁ የሆኑት ከፍተኛው የነዳጅ መጠን ማለት ነው።"
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "የነዳጅ ገደብ ያስፈልጋል"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "የነዳጅ ገደብ ቢያንስ 21000 መሆን አለበት"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "ጥቅም ላይ የዋለ ነዳጅ"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "ዘር በመዘርገፍ ላይ..."
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "የነዳጅ ዋጋ (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "የነዳጅ ዋጋ እጅግ በጣም ዝቅ ያለ ነው"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "የነዳጅ ዋጋ እርስዎ ለእያንዳንዱ የነዳጅ መጠን መክፈል የሚፈልጉትን የ Ether መጠን ይገልጻል።"
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "የነዳጅ ዋጋ"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "የተጠቆመውን የነዳጅ ዋጋ በአውታረ መረብ የስኬት መጠን ላይ ተመስርተን እናሰላለን።"
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "የነዳጅ ዋጋ ያስፈልጋል"
   },
   "general": {
-    "message": "General"
+    "message": "አጠቃላይ"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "የገንዘብ ልወጣ፣ ተቀዳሚ የገንዘብ ዓይነት፣ ቋንቋ፣ blockies identicon"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "ግብይትን መዘርገፍ"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Ether ያግኙ"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "Ether ከቧንቧ በ$1ያግኙ",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "እገዛ ያግኙ።"
   },
   "getStarted": {
     "message": "አስጀማሪ መመሪያ"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "ከ $1ጋር እኩል መሆን ወይም መብለጥ አለበት።",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "እርስዎን በማየታችን ደስተኛ ነን።"
   },
   "hardware": {
-    "message": "hardware"
+    "message": "ሃርድዌር"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "የሃርድዌር ቋት ተገናኝቷል"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "ከሃርድዌር ቋት ጋር ይገናኙ"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "ከ MetaMask ጋር ሊጠቀሙበት የሚፈልጉትን የሃርድዌር ቋት ይምረጡ"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "ግንኙነት መፍጠር ላይ ተቸግረዋል?"
   },
   "here": {
     "message": "እዚህ",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "ዝርዝሩ ይኸው!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "Hex ውሂብ"
   },
   "hide": {
     "message": "ደብቅ"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "ተለዋጭ ስም ደብቅ"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "ተለዋጭ ስም ይደበቅ?"
   },
   "history": {
     "message": "ታሪክ"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "Ether ለማስቀመጥ የሚፈልጉት እንዴት ነው?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "ether እና ተለዋጭ ስሞችን እንዲይዙ የሚያስችልዎት ሲሆን ወዳልተማከሉ መተግበሪያዎች ለመድረስ እንደ ድልድይ ሆኖ ያገለግልዎታል።"
   },
   "import": {
     "message": "ከውጭ አስመጣ",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "መለያ አስመጣ"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "የመጡ መለያዎች በመጀመሪያ ከተፈጠረው የእርስዎ MetaMask መለያ የዘር ሐረግ ጋር አይዛመዱም። ስለሚመጡ መለያዎቸ ተጨማሪ መረጃ ያግኙ"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "መለያን በዘር ሐረግ አስመጣ"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "መለያ አስመጣ"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "ነባሩን  DEN አስመጣ"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "ቋት አስመጣ"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "ባለ 12 ቃል የዘር ሐረግን በመጠቀም ነባር ቋትዎን ያስመጡ"
   },
   "imported": {
     "message": "ከውጭ የመጣ",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "የመለያ የዘር ሐረግ በመጠቀም ያስመጡ"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "በዘር ሐረግ አስመጣ"
   },
   "info": {
-    "message": "Info"
+    "message": "መረጃ"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "መረጃ እና እገዛ "
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "የመጀመሪያ ግብይትዎ በአውታረ መረቡ ተረጋግጧል። ወደ ኋላ ለመመለስ እሺ የሚለውን ጠቅ ያድርጉ።"
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "በቂ ያልሆነ ቀሪ ሂሳብ"
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "በቂ ያልሆነ ተቀማጭ"
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "በቂ ያልሆኑ ተለዋጭ ስሞች።"
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "ልክ ያልሆነ አድራሻ"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "የተቀባይ አድራሻ ትክክል አይደለም"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "የሚታወቅ የግንኙነት አድራሻ።"
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "ETH አውታረ መረብ አይደለም፣ ወደ ትናንሽ ፊደላት ቀይር"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "የተሳሳቱ የነዳጅ መለኪያዎች"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "ልክ ያልሆነ ግቤት።"
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "ልክ ያልሆነ ጥያቄ"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "ልክ ያልሆነ RPC ዩአርኤል"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "የተሳሳተ የዘር ሐረግ"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "የሆነ ስህተት ተፈጥሯል። እባክዎ የ JSON ፋይልዎ በአግባቡ ቅርጸት መያዙን ያረጋግጡ።"
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "JSON ፋይል",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "በ MetaMask መለያዎ የገዟቸውን ተለዋጭ ስሞች ይከታተሉ።"
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "Kovan የሙከራ አውታረ መረብ"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "የእውቀት መሰረታችንን ይጎብኙ"
   },
   "max": {
-    "message": "Max"
+    "message": "ከፍተኛ"
   },
   "learnMore": {
     "message": "የበለጠ ይወቁ"
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "አዲስ መለያ ከማከልዎ በፊት የመጨረሻውን መለያዎን መጠቀም አለብዎት።"
   },
   "legal": {
-    "message": "Legal"
+    "message": "ሕጋዊ"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "ከ $1ያነሰ ወይም እኩል መሆን አለበት።",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "አዎ፣ እናደራጅ!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "እነዚህን ተለዋጭ ስሞች ለማከል ይፈልጋሉ?"
   },
   "links": {
-    "message": "Links"
+    "message": "ማስፈንጠሪያዎች"
   },
   "limit": {
-    "message": "Limit"
+    "message": "ገደብ"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "ቀጥታ የነዳጅ ዋጋ ትንበያዎች"
   },
   "loading": {
     "message": "በመጫን ላይ…"
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "ተለዋጭ ስሞችን በመጫን ላይ..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "ተጨማሪ ጫን"
   },
   "localhost": {
     "message": "Localhost 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "በመለያ ግባ"
   },
   "logout": {
-    "message": "Log out"
+    "message": "ዘግተህ ውጣ"
   },
   "loose": {
-    "message": "Loose"
+    "message": "የላላ"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "የዘር ቃላት የትንሽ ፊደል ቁምፊዎች ብቻ ነው ያላቸው"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "ዋነኛ የ Ethereum አውታረ መረብ "
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "ይህን ሐረግ ያስታውሱ።"
   },
   "memo": {
-    "message": "memo"
+    "message": "አጭር ማስታወሻ"
   },
   "menu": {
-    "message": "Menu"
+    "message": "ምናሌ"
   },
   "message": {
-    "message": "Message"
+    "message": "መልዕክት"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "ከ Ethereum እና ያልተማከለ መረብ ጋር እርስዎን ማገናኘት።"
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "MetaMask የዘር ቃላት"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "የ MetaMask ስሪት"
   },
   "min": {
     "message": "አነስተኛ"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "ተለዋጭ ስሞችዎን አላዩም?"
   },
   "minutesShorthand": {
-    "message": "Min"
+    "message": "ደቂቃ"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "መለያዎችን ከሞባይል ጋር አሳምር"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "እርስዎ መሆንዎትን ለማረጋገጥ እባከዎ የይለፍ ቃልዎን ያስገቡ!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "የእኔ መለያዎች"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "የቋት መለያዎቼ"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "በ MetaMask የተፈጠሩ መለያዎችዎ በሙሉ በራስ ሰር መንገድ ወደዚህ ክፍል ይታከላሉ።"
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "ቢያንስ 1 ተለዋጭ ስም መምረጥ አለብዎ።"
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "MetaMask በመጠቀም ያልተማከሉ መተግበሪያዎች ጋር ግንኙነት ለማድረግ፣ በቋትዎ ውስጥ Ether ያስፈልግዎታል።"
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "የሚያስመጡትን ፋይል መምረጥ አለብዎት።",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "ለተመረጠው ፋይል የይለፍ ቃል ማስገባት አለብዎት።",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "አሉታዊ የ ETH መጠኖችን መላክ አይቻልም።"
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "የአውታረ መረብ ስም"
   },
   "networks": {
-    "message": "Networks"
+    "message": "አውታረ መረቦች"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "ብጁ የ RPC አውታረ መረቦችን አክልና አርትዕ"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "ምንም አይደል"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "አዲስ መለያ"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "አዲስ አድራሻ ተገኝቷል! ወደ አድራሻ ደብተርዎ ለማከለ እዚህ ላይ ጠቅ ያድርጉ።"
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "መለያ$1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "አዲስ ዕውቂያ"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "አዲስ ኮንትራት"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "አዲስ የይለፍ ቃል (ቢያንስ 8 ቁምፊዎች)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "አዲስ የይለፍ ቃል (ቢያንስ 8 ቁምፊዎች)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "አዲስ ተቀባይ"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "አዲስ አውታረ መረብ"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "ለ MetaMask አዲስ ነዎት?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "የለም፣ ቀደም ሲል ጀምሮ የዘር ሐረግ አለኝ"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "ቁልፎችዎን ይጠብቁ!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "ስለ ዘር ሐረግዎ ይጠንቀቁ - ራሳቸውን ከ MetaMask ጋር ለማመሳሰል የሚሞከሩ ድረ ገጾች እናሉ ሰምተናል። MetaMask በጭራሽ የዘር ሐረግዎን አይጠይቅዎትም!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "የሐረግዎን ደህንነት ይጠብቁ። ይም የሆነ አጠራጣሪ ነገር ካዩ ወይም ስለ አንድ ድረ ገጽ እርግጠኛ ካልሆኑ፣ እባክዎ ለ support@metamask.io ኢሜይል ይላኩ"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "አዲስ የ RPC URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "የላቁ አማራጮችን አሳይ"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "የላቁ አማራጮችን ደብቅ"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "የሰንሰለት መለያ ቁጥር (አማራጭ)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "ምልክት (አማራጭ)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "ቅጽል ስም (አማራጭ)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "አዲስ ድምር"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "አዲስ የግብይት ክፍያ"
   },
   "next": {
     "message": "ቀጣይ"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "በዚህ ስም የተሞላ አድራሻ የለም።"
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "ገቢ የሆነ ተቀማጭ የለም"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "ምንም የልወጣ ተመን አይገኝም"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "ምንም የግብይት ታሪክ የለም።"
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "ግብይቶች የሉዎትም"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "በቂ ነዳጅ የለም"
   },
   "notFound": {
     "message": "አልተገኘም"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "አልተጀመረም"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "Webcam አልተገኘም"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "የኮምፒዩተርዎ ካሜራ አልተገኘም። እባክዎ እንደገና ይሞክሩ።"
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "ከ"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "የቀድሞው UI "
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "ወደ ቀድሞው UI ተመልሰዋል። ከላይ በስተቀኝ በኩል ካለው ተቆልቋይ ምናሌ ባለው አማራጭ አማካይነት ወደ አዲሱ UI  መመለስ ይችላሉ።"
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "ETH ወደ Ethereum አድራሻዎች ብቻ ላክ።"
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "ወደ Ethereum መለያ አድራሻ $1ብቻ ይላኩ።",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "በትር ውስጥ ክፈት"
   },
   "or": {
-    "message": "or",
+    "message": "ወይም",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "ትሬዞር ወይም ሌጀር በማዘዝ ገንዘብዎን በቀዝቃዛ ማስቀመጫ ውስጥ ያቆዩ"
   },
   "origin": {
     "message": "መነሻ"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "የሚላክ"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "መለኪያዎች"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "የመጀመሪያው ድምር"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "በ MetaMetrics ውስጥ ይሳተፉ"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "MetaMetrics የተሻለ እንድናደርገው በ MetaMetrics ውስጥ በመሳተፍ ያግዙን"
   },
   "password": {
     "message": "የይለፍ ቃል፦"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "እባክዎ የይለፍ ቃልዎ ትክክለኛ መሆኑን ያረጋግጡ።"
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "የይለፍ ቃላት ተመሳሳይ አይደሉም"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "የይለፍ ቃላት ተመሳሳይ አይደሉም",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "የይለፍ ቃሉ ርዝመት በቂ አይደለም"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "የይለፍ ቃሉ ርዝመት በቂ አይደለም",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "የግል ቁልፍዎን ሕብረ ቁምፊ እዚህ ለጥፍ፡",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "የዘር ሐረግዎን እዚህ ይለጥፉ!"
   },
   "pending": {
-    "message": "pending"
+    "message": "በእንጥልጥል ላይ ያለ"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "የግል አድራሻ ተገኝቷል። የተለዋጭ ስም የመገኛ አድራሻን ያስገቡ።"
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "እባክዎ ግብይትዎን ደግመው ይመልከቱ።"
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "ተዋቂ ተለዋጭ ስሞች"
   },
   "prev": {
-    "message": "Prev"
+    "message": "የቀደመ"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "ተቀዳሚ የገንዘብ ዓይነት"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "ዋጋዎች በራሳቸው የሰንሰለት ገንዘብ ዓይነት (ለምሳሌ ETH) በቅድሚያ እንዲታዪ ይምረጡ። ዋጋዎች በተመረጠ የፊያት ገንዘብ ዓይነት እንዲታዩ ደግሞ ፊያትን ይምረጡ።"
   },
   "privacyMsg": {
     "message": "የግለኝነት መጠበቂያ ህግ"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "የግል ቁልፍ",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "ማስጠንቀቂያ፡ ይህን ቁልፍ በጭራሽ ለሌላ ሰው አይግለጹ። የግል ቁልፍዎን የያዘ ማንኛውም ሰው በመለያዎ ውስጥ የሚገኙ ማናቸውንም ሐብቶች ሊሰርቅ ይችላል።"
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "የግል አውታረ መረብ"
   },
   "qrCode": {
     "message": "QR ኮድ ያሳዩ"
@@ -1272,97 +1272,97 @@
     "message": "ወረፋ"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "በመለያ አማራጮችዎ ምናሌ ውስጥ ወደ “ተለዋጭ ስም አክል” በመግባት ለወደፊቱ ይህን ተለዋጭ ስም መልሰው ማከል ይችላሉ።"
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "እዚህ ተጨማሪ ያንበቡ።"
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "ተጨማሪ ያንብቡ።"
   },
   "receive": {
-    "message": "Receive"
+    "message": "ተቀበል"
   },
   "recents": {
-    "message": "Recents"
+    "message": "የቅርብ ጊዜያት"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "የተቀባይ አድራሻ"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "ፍለጋ፣ ለሕዝብ ክፍት የሆነ አድራሻ (0x), ወይም ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "የተመላሽ አድራሻዎ"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "ሁሉንም አትቀበል"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "$1ግብይቶችን አትቀበል"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "$1ግብይቶችን በጅምላ ውድቅ ሊያደርጉ ነው።"
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "ውድቅ የተደረገ"
   },
   "reset": {
     "message": "ዳግም አስጀምር"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "መለያን እንደገና ይሙሉ"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "መለያዎን እንደገና መሙላት የግብይት ታሪዎን ያጠራል።"
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "አውታረ መረብ ይሰረዝ?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "ይህን አውታረ መረብ ለመሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "ኋላ ላይ አስታውሰኝ"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "መለያው ወደነበረበት ይመለስ?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "ካዝናን ወደነበረበት መልስ"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "መለያዎን በዘር ሐረግ ወደነበረበት ይመልሱ"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "ማረጋገጫ የሚጠባበቁ ጥያቄዎች"
   },
   "required": {
-    "message": "Required"
+    "message": "የሚያስፈልግ"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "እዚህ ላይ ከፍ ባለ የነዳጅ ዋጋ ደግመው ይሞክሩ"
   },
   "restore": {
     "message": "እነበረበት መልስ"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "የዘር ቃላትን ይግለጹ"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "የዘር ሐረግ"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "ማሰሺያዎችን ከቀየሩ ወይም ኮምፒዩተሮቸን ከአንድ ቦታ ወደ ሌላ ቦታ ካንቀሳቀሱ፣ ወደ መለያዎችዎ ለመድረስ ይህ የዘር ሐረግ ያስፈልግዎታል። ደህንነቱና ሚስጥራዊነቱ በተጠበቀ ቦታ ያስቀምጧቸው።"
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "ይህን ሐረግ ለየትኛውም ሰው አያጋሩ!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "እነዚህ ቃላት ሁሉንም መለያዎችዎን ለመስረቅ ሊውሉ ይችላሉ።"
   },
   "revert": {
-    "message": "Revert"
+    "message": "አድህር"
   },
   "remove": {
     "message": "አስወግድ"
@@ -1371,25 +1371,25 @@
     "message": "መለያ ያስወግዱ"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "ይህ መለያ ከቋትዎ ይወገዳል። እባክዎ ከመቀጠልዎ በፊት የዚህ የመጣ መለያ የመጀመሪያው የዘር ሐረግ ወይም የግል ቁልፍ እንዳለዎት ያረጋግጡ። መለያዎችን ከመለያ ተቆልቋይ ማስመጣት ወይም መፍጠር ይችላሉ።"
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "ለመገናኘት ዝግጁ ነዎት?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "Rinkeby የሙከራ አውታረ መረብ"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "Ropsten የሙከራ አውታረ መረብ "
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "የ Goerli የሙከራ አውታረ መረብ"
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "ብጁ RPC"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "ለምሳሌ፡ አዲሱ መለያዬ",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,491 +1399,491 @@
     "message": "ቀስ"
   },
   "slower": {
-    "message": "Slower"
+    "message": "ዘገምተኛ"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": "እንደ CSV ፋይል አስቀምጥ"
   },
   "saveAsFile": {
     "message": "እንደ ፋይል ያስቀምጡ",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "የዘር ቃላትን እንደ ፋይል ያስቀምጡ"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "የ QR ኮዱን ከካሜራዎ ፊት ለፊት ያስቀምጡ"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "የ QR ኮድ ስካን ያድርጉ"
   },
   "search": {
     "message": "ፍለጋ"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "ውጤቶችን ፈልግ"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "ሚስጥራዊ የመጠባበቂያ ምዕራፍ"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "ሚስጥራዊ የመጠባበቂያ ሐረግዎ መለያዎን መጠባበቂያ ለመያዝና ወደነበረበት ለመመለስ ቀላል ያደርገዋል።"
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "ማስጠንቀቂያ፡ የመጠባበቂያ ምዕራፍዎን በጭራሽ አይግለጹ። ይህን ሐረገ የያዘ ማንኛውም ሰው የእርስዎን Ether እስከወዲያኛው ሊወስደው ይችላል።"
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "ካዝናዎን ወደነበረበት ለመመለስ ሚስጥራዊ ባለ አስራ ሁለት ቃል ሐረግዎን ያስገቡ።"
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "ደህንነት እና ግላዊነት"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "የግላዊነት ቅንብሮች እና የቋት ዘር ሐረግ"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "ሰከንድ"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "እያንዳንዱን ቃል በነጠላ ክፍት ቦታ ይለያዩ"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "የዘር ሐረጋት የ 12 ቃላት ርዝመት አላቸው"
   },
   "select": {
     "message": "ይምረጡ"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "የገንዘብ ዓይነት ይምረጡ"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "እባክዎ እያንዳንዱን ሐረግ በመምረጥ ትክክለኛነቱን ያረጋግጡ።"
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "አካባቢ ይምረጡ"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "አገልግሎት ምረጥ"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "ዓይነት ይምረጡ"
   },
   "send": {
     "message": "ላክ"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "መጠኑን ላክ"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "ETH ላክ"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "ተለዋጭ ስሞችን ላክ"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "የተላከ ether"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "የተላኩ ተለዋጭ ስሞች"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "እያንዳንዱን ቃል በነጠላ ክፍት ቦታ ይለያዩ"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "ተለዋጭ ስሞችን ፈልግ"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "አድራሻ ይምረጡ"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "መለያ ይምረጡ"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "መለያውን በ MetaMask ለማየት ይምረጡ"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "ሐብት ይምረጡ"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "የግብይትዎን ክዋኔ ለማቀላጠፍ የበለጠ የነዳጅ ዋጋ ይምረጡ።*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "የ HD ዱካ ይምረጡ"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "ነባር የሌጄር መለያዎችን ከታች ካላዩ፣ ዱካዎችን ወደ \"Legacy (MEW / MyCrypto)\" ለመቀየር ይሞክሩ"
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "በ Ethereum መለያ በኩል ለማንኛውም ሰው ተለዋጭ ስሞችን ላክ"
   },
   "settings": {
     "message": "ቅንብሮች"
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "በ Shapeshift ይግዙ"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "የላቁ የነዳጅ ቁጥጥሮች"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "በላክ እና አረጋግጥ ማያዎች ላይ የነዳጅ ዋጋን ለማሳየትና ቁጥጥሮችን ለመገደብ ይህን ይምረጡ።"
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "ልወጣን በ Testnets ላይ አሳይ"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "በ Testnets ላይ ወጥ የሆነ ልወጣን ለማሳየት ይህን ይምረጡ"
   },
   "showPrivateKeys": {
-    "message": "Show Private Keys"
+    "message": "የግል ቁልፎችን አሳይ"
   },
   "showQRCode": {
     "message": "QR ኮድ ያሳዩ"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "Hex ውሂብ አሳይ"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "በመላኪያ ማያ ላይ የ hex ውሂብ መስክን ለማሳየት ይህን ይምረጡ"
   },
   "sign": {
-    "message": "Sign"
+    "message": "ፈርም"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "የፊርማ ጥያቄ"
   },
   "signed": {
-    "message": "Signed"
+    "message": "ተፈርሟል"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "መልዕክት ፈርም"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "ይህን መልዕክት መፈረም አደገኛ ውጤቶች \nሊኖሩት ይችላሉ። በሙሉ መለያዎ ሙሉ በሙሉ ከሚያምኗቸው\nድረ ገጾች የሚመጡ መልዕክቶችን ብቻ ይፈርሙ።\nይህ አደገኛ ዘዴ ከወደፊት ስሪት ይወገዳል።"
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "የፊርማ ጥያቄ"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "የተጠየቀ ፊርማ"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "ኤጭ! የሆነ ችግር ተፈጥሯል።"
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "በቃላት መካከል ሊኖር የሚገባው ክፍት ቦታ ብቻ ነው"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "አፋጥን"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "ግብይትን አፋጥን"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "የነዳጅ ዋጋዎን በመጨመር ግብይትዎን ለመተካትና ለማፋጠን ይሞክሩ።"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "ይህን ስረዛ ያፋጥኑ"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "ይህን ግብይት አፋጥን"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "አውታረ መረቦችን ቀያይር"
   },
   "status": {
     "message": "ሁኔታ"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "የስቴት መዛግብት"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "ስቴት መዛግብት ይፋዊ የመለያ አድራሻዎትንና የተላኩ ግብይቶችን ይይዛሉ።"
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "የስቴት መዛግብትን መልሶ በማግኘት ሒደት የተፈጠረ ስህተት።"
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. ከሃርድዌር ቋት ጋር ይገናኙ"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "የሃርድዌር ቋትዎን በቀጥታ ከኮምፒዩተርዎ ጋር ያገናኙ።"
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. መለያ ምረጥ"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "ለማየት የሚፈልጉትን መለያ ይምረጡ። በአንድ ጊዜ መምረጥ የሚችሉት አንድ ብቻ ነው።"
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. dApps እና ሌሎችን መጠቀም ይጀምሩ!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "የሐርድዌር መለያዎን ከየትኛውም የ Ethereum መለያ ጋር በሚጠቀሙት መንገድ ይጠቀሙ። ወደ dApps በመለያ ይግቡ፣ Eth ይላኩ፣ የ ERC20 ተለዋጭ ስሞችና እንደ CryptoKitties ያሉ የማይለወጡ ተለዋጭ ስሞችን ይግዙና ያከማቹ።"
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "ይህን ሐረግ እንደ 1Password ባለ የይለፍ ቃል አስተዳዳሪ ውስጥ ያስቀምጡ።"
   },
   "submit": {
     "message": "አስገባ"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "የቀረበ"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "የድጋፍ መስጫ ማዕከላችንን ይጎብኙ"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "ምልክት"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "ምልክቱ ከ0 እስከ 12 ቁምፊዎች መያዝ አለበት።"
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "ከሞባይል ጋር አሳምር"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "ከሞባይል ጋር አሳምር"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "መለያዎችዎንና መረጃዎችዎን ከሞባይል መሳሪያዎ ጋር ያሳምሩ። የ MetaMask የሞባይል መተግበሪያን ይክፈቱ፣ ወደ \"ቅንብሮች\" ይሂዱና \"ከማሰሺያ ቅጥያ አሳምር\" የሚለውን ይንኩ"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "የ MetaMask የሞባይል መተግበሪያን ለመጀመሪያ ጊዜ ገና እየከፈቱ ከሆነ፣ በስልክዎ ላይ ያሉትን ቅደም ተከተሎች ብቻ ይከተሉ።"
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "ይህን ኮድ በ MetaMask የሞባይል መተግበሪያዎ ስካን ያድርጉ"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "ይህን ኮድ ስካን ሲያደርጉ ሌላ ሰው የእርስዎን ማያ እየተመለከተ አለመሆኑን ያረጋግጡ"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "ውሂብዎ በሚገባ ተሳምሯል። በ MetaMask የሞባይል መተግበሪያ ይደሰቱ!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "በጣም ረጅም ጊዜ ወሰደ?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "የአጠቃቀም ደንቦች"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "የሙከራ ቧንቧ"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "ይህ አዲስ ቋትና የዘረ ሐረግ ይፈጥራል"
   },
   "tips": {
     "message": "መረጃዎች"
   },
   "to": {
-    "message": "To"
+    "message": "ለ"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "$1ወደ ETH በ ShapeShift በኩል",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "ተለዋጭ ስም"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "የተለዋጭ ስም አድራሻ"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "ተለዋጭ ስም ቀደም ሲል ታክሏል።"
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "የተለዋጭ ስምዎ ቀሪ ሂሳብ፡"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "የተለዋጭ ስም የግንኙነት አድራሻ"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "ተለዋጭ ስሞችን ይፈልጉ ወይም ከታዋቂ ተለዋጭ ስሞቻችን ዝርዝር ውስጥ ይምረጡ።"
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "የተለዋጭ ስም ምልክት"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "በ MetaMask መለያዎ የገዟቸውን ተለዋጭ ስሞች ይከታተሉ። ተለዋጭ ስሞችን የገዙት ሌላ መለያን ተጠቅመው ከሆነ፣ እነዚያ ተለዋጭ ስሞች እዚህ አይታዩም።"
   },
   "total": {
     "message": "ድምር"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "ግብይት"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "ግብይት በ$2ተረጋግጧል።"
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "ግብይቱ በ$1ዋጋ በ$2የተፈጠረ ነው።"
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "ግብይት $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "ግብይት ወደ $2ዝቅ ብሏል።"
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "ግብይቱ የቀረበው በነዳጅ ዋጋ $1በ$2ነው።"
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "ግብይቱ በድጋሚ ሲቀርብ የነዳጅ ክፍያ ወደ $1በ$2ጨምሯል"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "ግብይት የዘመነው በ $2ነው።"
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "ግብይቱ በነዳጅ ዋጋ $1በ$2ዘምኗል።"
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "ግብይቱ እንከን አጋጥሞታል።"
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "ግብይት የመሰረዝ ሙከራ በነዳጅ ዋጋ $1በ $2ተደርጓል"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "ግብይቱ በ$2ላይ በሚገባ ተሰርዟል"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "ግብይቶች"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "የግብይት ስህተት። በኮንትራት ኮድ የሚላኩ ልዩ ሁኔታዎች አሉ።"
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "ከኮንትራት ውጭ ያለ አድራሻ ተግባር ለመደወል መሞከር።"
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": " የግብይት ክፍያ"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "የግብይት ማስታወሻ (አማራጭ)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "የግብይት ቁጥር"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "የግብይት ጊዜ"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "ያስተላልፉ"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "በመለያዎች መካከል አስተላልፍ"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "የማዛወሪያ ቅጽ"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "ዝውውሮች"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "TREZOR የሐርድዌር ቋት"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "የተለዋጭ ስም ቀሪ ሂሳብዎን ስንጭን ችግር አጋጥሞናል። ማየት ይችላሉ",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "እንደገና ሞክር"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "የ MetaMask መለያዎችዎን ወደነበሩበት ለመመለስ ብቸኛ መንገዶች እነዚህ 12 ቃላት ናቸው። \nደህንነቱና ሚስጥራዊነቱ በተጠበቀ ቦታ ያስቀምጧቸው።"
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "የ MetaMask የይለፍ ቃልዎን ይጻፉ"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "ወደ አዲሱ MetaMask UI እንኳን ደሕና መጡ። ስለ UI ወይም የባህርይ ጥያቄዎች ግብረ መልስ ካለዎት፣ እባክዎ የድጋፍ ሰጪ ቡድናችንን ያነጋግሩ ወይም ወደ  GitHub ይግቡ።"
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "ወደ አዲሱ UI (Beta) እንኳን ደሕና መጡ"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "አሁን አዲሱን MetaMask UI እየተጠቀሙ ነው።"
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "ያልተፈቀደ"
   },
   "unavailable": {
     "message": "አይገኝም"
   },
   "units": {
-    "message": "units"
+    "message": "መለኪያዎች"
   },
   "unknown": {
     "message": "ያልታወቀ"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "የማይታወቅ የግል አውታረ መረብ"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "ያልታወቀ የአውታረ መረብ መለያ ቁጥር"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "ስህተት፡ ያን የ QR ኮድ መለየት አልቻልንም"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "ኤጭ! የሆነ ችግር ተፈጥሯል..."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "ወደ ስልክዎ ለመድረስ ሲሞከር የተፈጠረ ስህተት አለ። እባክዎ እንደገና ይሞክሩ..."
   },
   "unlock": {
     "message": "ክፈት"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "ያልተማከለ ድር ይጠባበቃል"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "የዘመነ $1"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "URIs አግባብነት ያለው የ HTTP/HTTPS ቅድመ ቅጥያ ይፈልጋል።"
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "ዩኤስኤ ብቻ",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "በተለያዩ ደንበኞች ጥቅም ላይ የዋለ ነው"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "የቀድሞውን UI ይጠቀሙ"
   },
   "userName":{
     "message": "የተጣቃሚ ስም"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "የሚያስመጡትን ትክክለኛ ፋይል መምረጥ አለብዎ፡"
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "ካዝና ተፈጥሯል"
   },
   "viewAccount": {
     "message": "መለያን ይመልከቱ"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "በኤክስፕሎረር ተመልከት"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "ዕውቂያን ይመልከቱ"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "በ $1ይመልከቱ"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "በ Etherscan ላይ ይመልከቱ"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "የአውታረ መረበ መረጃን እይ"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "ድረ ገጻችንን ይጎብኙ"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "የቋት ዘር"
   },
   "warning": {
     "message": "ማስጠንቀቂያ"
@@ -1892,42 +1892,42 @@
     "message": "እንኳን በደህና ተመለሱ"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "ወደ MetaMask እንኳን ደህና መጡ"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "ይህ ምንድን ነው?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "ይህን ሐረግ በቁራጭ ወረቀት ላይ ይጻፉና ደህንነቱ በተጠበቀ ቦታ ያስቀምጡት። የበለጠ ደህንነት ካስፈለገዎ፣ በተለያዩ ቁርጥራጭ ወረቀቶች ላይ ይጻፉትና እያንዳንዳንቸውን በ2-3 የተለያዩ ቦታዎች ያስቀምጡት።"
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "አዎ፣ እንሞክር"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "ይህን ባህርይ ለመጠቀም የካሜራን መድረስ መፍቀድ አለብዎት።"
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "ፊርማዎ እየተጠየቀ ነው"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "እየፈረሙ ነው"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "የግል ዘር ሐረግዎ"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "ልዩ የመለያዎ ገጽታ "
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "ይህ ምስል በአዲሱ የመለያ ቁጥርዎ ለእርስዎ በፕሮግራማዊ አሰራር የተዘረገፈ ነው።"
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "ግብይትን ማረጋገጥ ባስፈለገዎ ቁጥር ይህን ምስል ያያሉ።"
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask የዘር ሐረግዎን በጭራሽ አይጠይቅዎትም! "
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "በስፒድ አፕ ላይ ዜሮ የነዳጅ ዋጋ"
   }
 }

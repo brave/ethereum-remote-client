@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "Del adresse"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "Del din adresse for at forbinde til $1?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "Deling af din adresse med $1 giver dig mulighed for at interagere med denne dapp. Denne tilladelse er som standard for at beskytte dit privatliv."
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "Privatlivstilstand er nu som udgangspunkt aktiveret"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "Privatlivstilstand"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "Hjemmesider skal anmode om adgang til at se dine kontooplysninger."
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "Afslør Konti"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "Vis konti til den nuværende webside. Nyttigt for gamle dapps."
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "Skema kun tilgængeligt på Ethereum-netværk."
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "Er du sikker på, at du vil eksponere dine konti til det aktuelle websted?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "Er du sikker på, at du vil rydde godkendte hjemmesider?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "Kontraktinteraktion"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "Godkendte websidedata ryddet korrekt."
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "Fortrolighedsdata"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "Ryd privatlivsdata, så alle hjemmesider skal bede om adgang for at se dine kontoinformationer igen."
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "Ryd fortrolighedsdata"
   },
   "reject": {
     "message": "Afvis"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 ønsker at forbinde til din konto"
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "Denne side anmoder om at se din nuværende kontoadresse. Sørg altid for, at du stoler på de sider du interagerer med."
   },
   "about": {
     "message": "Om"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "Version, supportcenter og kontaktinformation."
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "Om Os"
   },
   "accept": {
     "message": "Accepter"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* At gøre din transaktion hurtigere ved at bruge en højere Gas-priser, øger dennes chancer for at blive behandlet af netværket hurtigere, men det er ikke altid garanteret."
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "Tilgår din kamera..."
   },
   "account": {
     "message": "Konto"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "Kontooplysninger"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "Kontonavn"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "Kontoindstillinger"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "Du skal vælge en konto!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "aktivitetslog"
   },
   "add": {
     "message": "Tilføj"
@@ -99,135 +99,135 @@
     "message": "Adresse"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "Tilføj netværk"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "Tilføj modtager"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "Adressebog"
   },
   "advanced": {
     "message": "Avanceret"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "Få adgang til udviklerfunktioner, hent tilstandslogs, nulstil konto, opsæt testnetværk og brugerdefineret RPC."
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "Avancerede Valgmuligheder"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "Tilføj brugerdefineret token"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "Føj til adressebogen"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "f.eks. John D."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "Tilføj alias"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "Tilføj en Ethereum-adresse"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "Tilføj Polet"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "Tilføj tokens"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "Tilføj foreslåede tokens"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "Tilføj de tokens du har erhvervet ved hjælp af MetaMask"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "Jeg accepterer Servicevilkårene"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "Helt klar"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "Nej, jeg har allerede en seed-sætning"
   },
   "amount": {
     "message": "Beløb"
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "Beløb + Brændstof"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "Mængde + TX-gebyr"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "En Ethereum-pung i din browser",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "MetaMask\n",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "Godkend"
   },
   "approved": {
-    "message": "Approved"
+    "message": "Godkendt"
   },
   "asset": {
-    "message": "Asset"
+    "message": "Aktiv"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "Forsøger at oprette forbindelse til blokkæden."
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "Forsøg på Annullering?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "Indsendelse af dette forsøg garanterer ikke, at din originale transaktion annulleres. Hvis annulleringsforsøget lykkes, vil du blive opkrævet ovenstående transaktionsgebyr."
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "Tilskrivninger"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "Timer for automatisk udlogning (minutter)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "Indstil den passive tid i minutter, før MetaMask automatisk logger dig ud"
   },
   "available": {
     "message": "Tilgængelig"
   },
   "average": {
-    "message": "Average"
+    "message": "Gennemsnit"
   },
   "back": {
     "message": "Tilbage"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "Tilbage til Alle"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Sikkerhedskopiér din Hemmelige Gendannelseskode for at holde din tegnebog og dine penge sikre."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "Den hemmelige kode er påkrævet for at gendanne din pung, hvis du mister din enhed, glemmer dit kodeord, er nødt til at geninstallere MetaMask eller ønsker adgang til din pung fra en anden enhed."
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "Backup nu\n"
   },
   "balance": {
-    "message": "Balance"
+    "message": "Saldo"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "Saldoen kan være forældet"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "Poletbalance(r)"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "Utilstrækkelig saldo for nuværende brændstoftotalbeløb"
   },
   "basic": {
     "message": "Grundlæggende oplysninger"
@@ -236,51 +236,51 @@
     "message": "BETA"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "skal være større end eller lig med $1 og mindre end eller lig med $2.",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "Block-udforsker"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "Se konto på $1",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "Brug Blockies Identicon"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "Lån med Dharma (Beta)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "Din browser er ikke understøttet..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "MetaMask er designet og bygget i Californien."
   },
   "buy": {
-    "message": "Buy"
+    "message": "Køb"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "Køb en Coinbase"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Coinbase er verdens mest populære måde at købe og sælge Bitcoin, Ethereum og Litecoin."
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Køb ETH med Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre lader dig bruge et kreditkort til at indbetale ETH på din MetaMask-konto."
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "Køb på CoinSwitch"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "CoinSwitch er den direkte destination for veksling af mere end 300 kryptovalutaer til den bedste sats."
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "Byte"
   },
   "off": {
     "message": "Fra "
@@ -292,269 +292,269 @@
     "message": "Til"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "Blok-stifinder-URL (valgfrit)"
   },
   "cancel": {
     "message": "Afbryd"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "Annullér forsøg"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "Gebyr for brændstofannullering"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "Annulleret"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "Annullér alle $1-transaktioner"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "Kæde-ID"
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "Brug klassisk interface"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "Klik for at kopiere"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "Klik på $1 for at tilføje dem til din konto"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "Klik her for at se hemmelige ord"
   },
   "close": {
     "message": "Luk"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "Du skal bruge MetaMask i Google Chrome for at forbinde med din Hardware Wallet."
   },
   "company": {
-    "message": "Company"
+    "message": "Virksomhed"
   },
   "confirm": {
     "message": "Bekræft"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "Bekræftelsestid (sek)"
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "Bekræftet"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "Bekræft Kontrakt"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "Bekræft adgangskode"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "Bekræft din hemmelige backup-sætning"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "Bekræft transaktion\n"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "Tillykke"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "Forbind Hardwarepung"
   },
   "connect": {
     "message": "Få forbindelse"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "Tilslutningsanmodning"
   },
   "connecting": {
     "message": "Opretter forbindelse..."
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "Forbinder til $1"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "Forbinder til Kovan Testnetværk"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "Forbinder til dit Primære Ethereum Netværk"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "Forbinder til Ropsten-testnetværk"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "Forbinder til Rinkeby-testnetværk"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "Opretter forbindelse til Localhost 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "Opretter forbindelse til Goerli Testnetværk"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "Opretter forbindelse til ukendt netværk"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "Forbind til Ledger"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "Opret forbindelse til Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "Kontaktliste"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "Tilføj, rediger, fjern og administrer dine kontakter"
   },
   "continue": {
     "message": "Fortsæt"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "Fortsæt til Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Fortsæt til Wyre"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "Fortsæt til CoinSwitch"
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "Kontraktanvendelse"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "Konvertering pågår"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "Kopieret"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "Kopieret til udklipsholder"
   },
   "copiedExclamation": {
     "message": "Kopieret!"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "Jeg har kopieret det til et sikkert sted"
   },
   "copy": {
     "message": "Kopiér"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "Kopier adresse til udklipsholder"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "Kopier transaktions-id"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "Kopieret transaktions-id"
   },
   "copyToClipboard": {
     "message": "Kopiér til udklipsholderen"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "Kopiér"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "Dette er din private nøgle (klik for at kopiere)"
   },
   "create": {
     "message": "Opret"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "Opret konto"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "Opret en tegnebog"
   },
   "createDen": {
     "message": "Opret"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "Opret adgangskode"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "Krypto",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "Valutakonvertering"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "Nuværende sprog"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "Nuværende netværk"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "Nuværende RPC"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "Tilpas brændstof"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "Forøgelse af gebyr kan mindske bearbejdningstiden, men det er ikke en garanti."
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "Brugerdefineret Token"
   },
   "customize": {
     "message": "Tilpas"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "Tilpasset RPC"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "Decimaler skal være mindst 0 og højst 36."
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "Decimalpræcision"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "Standardnetværket for Ether-transaktioner er Main Net."
   },
   "delete": {
     "message": "Slet"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "Slet konto"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "Din DEN er dit adgangskodekrypterede opbevaringssted i MetaMask."
   },
   "deposit": {
     "message": "Indbetal"
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "Indbetal dine BTC til adressen nedenfor:"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "Indbetal Eth"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Indbetal Ether"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "Indbetal med Fiat"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "Indbetal fra en anden konto"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "Indsæt med ShapeShift"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "Hvis du ejer andre cryptovalutaer, kan du handle og indbetale Ether direkte ind på din MetaMask-pung. Du behøver ingen konto."
   },
   "details": {
     "message": "Detaljer"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "Direkte indbetaling"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Indskyd Ether direkte"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "Hvis du allerede har Ether, er den hurtigste måde at få Ether i din nye tegnebog ved direkte indbetaling."
   },
   "dismiss": {
     "message": "Luk"
@@ -563,446 +563,446 @@
     "message": "Færdig"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "Hent Google Chrome"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "Download denne Hemmelige Backupfrase og opbevar den sikkert på et ekstern, krypteret harddisk eller lagringsenhed."
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "Download tilstandslogs"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "Har du ikke en hardware-pung?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "Droppet"
   },
   "edit": {
     "message": "Rediger"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "Rediger netværk"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "Redigér Kontonavn"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "Redigér Kontakt"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "Foretag ændringer i din transaktion"
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "Send os en email!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "Krypter din nye DEN"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "Du bestod testen - pas godt på din seed-sætning, det er dit ansvar!"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "Tip til sikker opbevaring "
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "Gem en sikkerhedskopi flere steder."
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "Del aldrig frasen med nogen."
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "Vær varsom med phishing! MetaMask vil aldrig spontant bede om din seedfrase."
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "Hvis du får brug for at lave en backup af din seedfrase igen, kan du finde det under Indstillinger -> Sikkerhed."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "Hvis du har spørgsmål eller bemærker noget mistænkeligt, send en mail til support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask kan ikke gendanne din seed-sætning. Få mere at vide."
   },
   "endOfFlowMessage9": {
     "message": "Lær mere. "
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "Helt klar"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "ENS-navn blev ikke fundet"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "Fejl i ENS-navneregistrering"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "ENS-navn ikke fundet for det nuværende netværk. Prøv at skifte til Ethereums hovednetværk."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "Indtast et alias"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "Indtast kodeord"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "Indtast dit kodeord for at bekræfte"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "Indtast adgangskode for at fortsætte"
   },
   "eth": {
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Offentlig Ethereum-adresse"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "Se konto på Etherscan"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "Estimerede behandlingstider"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "Valutakurs"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "Udvis Visning"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "Eksporter privat nøgle"
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "Eksportér private nøgler for eget ansvar."
   },
   "failed": {
-    "message": "Failed"
+    "message": "Mislykkedes"
   },
   "fast": {
     "message": "Hurtig"
   },
   "faster": {
-    "message": "Faster"
+    "message": "Hurtigere"
   },
   "fastest": {
     "message": "Hurtigst"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "Live Forudsigelser af Transaktionsgebyr"
   },
   "fiat": {
     "message": "Fiat",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "Virker filimportering ikke? Klik her!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "Følg os på Twitter"
   },
   "forgetDevice": {
     "message": "Glem denne enhed"
   },
   "from": {
-    "message": "From"
+    "message": "Fra"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "Fra- og til-adresserne kan ikke være ens"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "Fra ShapeShift"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "Funktionstype"
   },
   "gas": {
-    "message": "Gas",
+    "message": "Brændstof",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "Brændstofgebyr"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "Gas-grænse"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "Vi beregner den foreslåede gasgrænse baseret på netværkssuccesrater."
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "Gasgrænse er den maksimale mængde gasenheder, du er villig til at bruge."
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "Brændstofgrænse påkrævet"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "Brændstofgrænsen skal være mindst 21000"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "Gas brugt"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "Genererer Seed..."
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "Brændstofpris (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "Ekstremt Lav Brændstofspris"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Brændstofpris specificerer den mængde Ether, du er villig til at betale for hver brændstofenhed."
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "Brændstofpris"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "Vi beregner de anbefalede brændstofpriser baseret på netværkernes succesrater."
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "Brændstofpris påkrævet"
   },
   "general": {
-    "message": "General"
+    "message": "Generelt"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "Valutakonvertering, primær valuta, sprog, blockies-identicon"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "Genererer transaktion"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Hent Ether"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "Hent Ether fra en hane til $1",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "Få hjælp"
   },
   "getStarted": {
     "message": "Kom godt i gang"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "skal være større end eller lig med $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "Vi er glade for at se dig."
   },
   "hardware": {
     "message": "hardware"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "Hardware-tegnebog tilsluttet"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "Tilslut en hardware-tegnebog"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "Vælg en hardware-pung du vil bruge med MetaMask"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "Har du problemer med at oprette forbindelse?"
   },
   "here": {
     "message": "her",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "Her er en liste!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "Hex-data"
   },
   "hide": {
     "message": "Skjul"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "Skjul token"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "Skjul Token?"
   },
   "history": {
     "message": "Historik"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "Hvordan ønsker du at indbetale Ether?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "Det giver dig mulighed for at holde ether og tokens og fungerer som din bro til decentrale applikationer."
   },
   "import": {
     "message": "Importer",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "Importer konto"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "Importerede konti vil ikke blive forbundet med din oprindeligt oprettede seed-sætning for din MetaMask-konto. Få mere at vide om importerede konti"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "Importér en Konto med Seedfrase"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "Importér en konto"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "Importér eksisterende DEN"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "Importér pung"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "Importér din eksisterende pung med en 12-ords seedfrase"
   },
   "imported": {
     "message": "Importeret",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "Importér ved brug af kontoens seed-sætning"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "Importer med backupsætning"
   },
   "info": {
     "message": "Info"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "Info & hjælp"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "Din indledende transaktion blev bekræftet af netværket. Klik OK for at gå tilbage."
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "Utilstrækkelig balance."
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "Ikke tilstrækkelige midler."
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "Utilstrækkelige tokens."
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "Ugyldig adresse"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "Modtageradressen er ugyldig"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "Kendte kontaktadresser."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "Ikke ETH-netværk, sat til små bogstaver"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "Ugyldige brændstofparametre"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "Ugyldigt input."
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "Ugyldig Forespørgsel"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "Ugyldig RPC-webadresse"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "Ugyldig backupsætning"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "Noget gik galt. Sørg venligst for, at din JSON-fil er formatteret korrekt."
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "JSON-fil",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "Hold styr på de tokens du har købt med din MetaMask-konto."
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "Kovan Test-Netværk"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "Besøg vores vidensbase"
   },
   "max": {
-    "message": "Max"
+    "message": "Maks"
   },
   "learnMore": {
     "message": "Lær mere"
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "Du skal benytte din tidligere konto, før du kan tilføje en ny."
   },
   "legal": {
-    "message": "Legal"
+    "message": "Juridisk"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "skal være mindre end eller lig med $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "Ja, lad os komme i gang!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "Ønsker du at tilføje disse tokens?"
   },
   "links": {
     "message": "Links"
   },
   "limit": {
-    "message": "Limit"
+    "message": "Grænse"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "Live forudsigelser af brændstofpriser"
   },
   "loading": {
     "message": "Indlæser..."
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "Indlæser tokens..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "Indlæs Mere"
   },
   "localhost": {
     "message": "Localhost 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "Log Ind"
   },
   "logout": {
-    "message": "Log out"
+    "message": "Log ud"
   },
   "loose": {
-    "message": "Loose"
+    "message": "Løs"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "seed-ord har kun små bogstaver"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "Hovednetværk for Ethereum"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "Husk denne sætning."
   },
   "memo": {
-    "message": "memo"
+    "message": "notat"
   },
   "menu": {
     "message": "Menu"
   },
   "message": {
-    "message": "Message"
+    "message": "Besked"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "Som forbinder dig til Ethereum og de decentraliserede internet."
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "MetaMask Seedord"
   },
   "metamaskVersion": {
     "message": "MetaMask Version"
@@ -1011,259 +1011,259 @@
     "message": "Minimum"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "Kan du ikke se dine tokens?"
   },
   "minutesShorthand": {
     "message": "Min"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "Synkroniser konti med mobil"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "Indtast din adgangskode for at bekræfte, at det er dig!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "Mine Konti"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "Mine Pungkonti"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "Alle dine MetaMask-oprettede konti føjes automatisk til dette afsnit."
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "Skal vælge mindst 1 token."
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "Du skal have Ether i din tegnebog for at interagere med decentraliserede applikationer, der bruger MetaMask."
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "Du skal vælge en fil, der skal importeres.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "Du skal indtaste en adgangskode til den valgte fil.",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "Kan ikke sende en negativ mængde ETH."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "Netværksnavn"
   },
   "networks": {
-    "message": "Networks"
+    "message": "Netværk"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "Tilføj og redigér brugerdefinerede RPC-netværk"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "Lige meget"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "Ny konto"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "Ny adresse fundet! Klik her for at tilføje til din adressebog."
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "Konto $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "Ny kontakt"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "Ny Kontrakt"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "Ny adgangskode (min. 8 tegn)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "Ny adgangskode (min 8 tegn)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "Ny Modtager"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "Nyt Netværk"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "Ny på MetaMask?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "Nej, jeg har allerede en seedfrase"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "Beskyt dine nøgler!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "Vær forsigtig med din backupsætning - der har været rapporter om websteder, der forsøger at efterligne MetaMask. MetaMask vil aldrig bede om din backupsætning!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "Opbevar din frase et sikkert sted. Hvis du ser noget mistænkeligt, eller du er usikker på hjemmesiden, skriv en email til support@metamask.io"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "Ny RPC-URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "Vis Avancerede Valgmuligheder"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "Skjul avancerede indstillinger"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "KædeID (valgfrit)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "Symbol (valgfrit)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "Kaldenavn (valgfrit)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "Ny Sum"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "Nyt Transaktionsgebyr"
   },
   "next": {
     "message": "Næste"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "Ingen adresse indstillet for dette navn."
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "Ingen modtagne indskud"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "Ingen tilgængelig omregningskurs"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "Ingen transaktionshistorie."
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "Du har ingen transaktioner"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "Ikke nok gas"
   },
   "notFound": {
     "message": "Ikke fundet"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "Ikke startet"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "Webcam ikke fundet"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "Din computers webkamera blev ikke fundet. Prøv venligst igen."
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "af"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "Gammelt UI"
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "Du er vendt tilbage til den gamle grænseflade. Du kan skifte tilbage til den nye grænseflade via valgmuligheden i rullemenuen øverst til højre."
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "Send kun ETH til en Ethereum-adresse."
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "Send kun $1 til en Ethereum-kontoadresse.",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "Åbn i fane"
   },
   "or": {
-    "message": "or",
+    "message": "eller",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Bestil en Trezor eller Ledger og frys dine midler ned"
   },
   "origin": {
     "message": "Origin"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "Udgående"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "Parametre"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "Oprindeligt totalbeløb"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "Deltag i MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "Deltag i MetaMetrics for at hjælpe os med at gøre MetaMask bedre"
   },
   "password": {
     "message": "Adgangskode"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "Sørg for at din adgangskode er korrekt."
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "Adgangskoder stemmer ikke ovenens"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "kodeordene stemmer ikke overens",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "Adgangskode ikke lang nok"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "adgangskoden er ikke lang nok",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "Indsæt din private nøglestreng her:",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "Indsæt din seed-sætning her!"
   },
   "pending": {
-    "message": "pending"
+    "message": "afventer"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "Personlig adresse opdaget. Indtast polet kontrakt adressen."
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "Gennemgå din transaktion."
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "Populære tokens"
   },
   "prev": {
-    "message": "Prev"
+    "message": "Forrige"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "Primær Valuta"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "Vælg lokal for fortrinsvis at vise værdier i kædens (f.eks. ETH) lokale valuta. Vælg Fiat for fortrinsvis at vise værdier i din valgte fiat valuta."
   },
   "privacyMsg": {
     "message": "Privatlivspolitik"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "Privat nøgle",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "Advarsel: afslør aldrig denne nøgle. Enhver med dine private nøgler kan stjæle alle aktiver i din konto."
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "Privat netværk"
   },
   "qrCode": {
     "message": "Vis QR Kode"
@@ -1272,97 +1272,97 @@
     "message": "Kø"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "Du kan tilføje denne token i fremtiden, ved at gå til \"Tilføj token\" under dine valgmenuen for dine konti."
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "Læs mere her."
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "Læs mere."
   },
   "receive": {
-    "message": "Receive"
+    "message": "Modtag"
   },
   "recents": {
-    "message": "Recents"
+    "message": "Seneste"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "Modtagerens adresse"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Søg, offentlig adresse (0x) eller ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "Din refusionsadresse"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "Afvis Alle"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "Afvis $1 transaktioner"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "Du er ved at batchafvise $1-transaktioner."
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "Afvist"
   },
   "reset": {
     "message": "Nulstil"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "Nulstil Konto"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "Nulstilling af din konto vil rydde din transaktionshistorik."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "Slet Netværk?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "Er du sikker på, at du vil slette dette netværk?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "Påminde mig senere"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "Genopret konto?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "Gendan Boks"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "Gendan din konto med Seed-sætning"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "forespørgsler der afventer anerkendelse"
   },
   "required": {
-    "message": "Required"
+    "message": "Nødvendig"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "Prøv igen med en højere brændstofpris her"
   },
   "restore": {
     "message": "Gendan"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "Vis Seedord"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "Backupsætning"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "Hvis du nogensinde skifter browsere eller flytter computere, har du brug for denne backupsætning for at få adgang til dine konti. Gem den et sted sikkert og hemmeligt."
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "DEL IKKE denne sætning med nogen!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "Disse ord kan bruges til at stjæle alle dine konti."
   },
   "revert": {
-    "message": "Revert"
+    "message": "Vend tilbage"
   },
   "remove": {
     "message": "Fjern"
@@ -1371,25 +1371,25 @@
     "message": "Fjern konto"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "Denne konto fjernes fra din pung. Sikr dig venligst, at du har den originale seedfrase eller private nøgle til denne importerede konto, inden du fortsætter. Du kan importere eller skabe konti igen via kontomenuen."
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "Klar til at oprette forbindelse?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "Rinkeby-testnetværk"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "Ropsten Test-netværk"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Goerli-testnetværk"
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "Brugerdefineret RPC"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "F.eks. Min nye konto",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,491 +1399,491 @@
     "message": "Langsom"
   },
   "slower": {
-    "message": "Slower"
+    "message": "Langsommere"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": "Gem som CSV-fil"
   },
   "saveAsFile": {
     "message": "Gem som fil",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "Gem seed-ord som en fil"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "Placer QR-koden foran dit kamera"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "Scan QR-kode"
   },
   "search": {
     "message": "Søg"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "Søg Resultater"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "Hemmelig backup-sætning"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "Din hemmelige backup-sætning gør det nemt at lave backup og gendanne din konto."
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "ADVARSEL: Afslør aldrig din backup-frase. Enhver med denne frase kan tage din Ether for altid."
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "Indtast din hemmelige tolv ord lange sætning for at gendanne din vault."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "Sikkerhed & Privatliv"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "Indstillinger for beskyttelse af personlige oplysninger og backupsætning til tegnebog"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "Sek"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "Adskil hvert ord med et enkelt mellemrum"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "Backupsætninger er 12 ord lange"
   },
   "select": {
     "message": "Vælg"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "Vælg valuta"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "Vælg venligst hver sætning, for at sikre at de er korrekte."
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "Vælg Lokalitet\n"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "Vælg tjeneste"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "Vælg type"
   },
   "send": {
     "message": "Send"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "Send Beløb"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Vælg ETH"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "Send tokens"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "sendte ether"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "afsendte tokens"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "Separer hvert ord med et enkelt mellemrum"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "Søg efter tokens"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "Vælg en adresse"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "Vælg en Konto"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "Vælg kontoen der skal vises i MetaMask"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "Vælg et aktiv"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "Vælg et højere Gas-gebyr, for at gøre behandlingen af din transaktion hurtigere.*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "Vælg HD-Sti"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "Hvis du ikke ser dine eksisterende Ledger-konti nedenfor, kan du prøve at skifte til \"Legacy (MEW / MyCrypto)\""
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "Send Poletter til enhver med en Ethereum-konto"
   },
   "settings": {
     "message": "Indstillinger "
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "Køb med Shapeshift"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "Avanceret Gas-styring"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "Vælg dette for at vise brændstofprisen og begræns styringen direkte på afsendelses- og bekræftelseskærmene."
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "Vis konvertering på testnet"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "Vælg dette for at vise fiat-konvertering på Testnets"
   },
   "showPrivateKeys": {
-    "message": "Show Private Keys"
+    "message": "Vis private nøgler"
   },
   "showQRCode": {
     "message": "Vis QR Kode"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "Vis hex-data"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "Vælg dette for at vise hex-datafeltet på send-skærmen"
   },
   "sign": {
-    "message": "Sign"
+    "message": "Underskriv"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "Signaturforespørgsel"
   },
   "signed": {
-    "message": "Signed"
+    "message": "Underskrevet"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "Underskriftmeddelelse"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "Underskrivning af denne besked kan have farlige sideeffekter. Skriv kun under på beskeder fra sider, du har fuld tillid til med hele din konto.\nDenne farlige metode bliver fjernet i en fremtidig version."
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "Signaturforespørgsel"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "Anmodning om underskrift"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "Ups! Noget gik galt."
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "der kan kun være et mellemrum mellem ordene"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "Fremskynd"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "Fremskynd transaktion"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "Øg din brændstofpris for at forsøge at overskrive og gøre din transaktion hurtigere"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "Gør denne annullering hurtigere"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "Gør denne transaktion hurtigere"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "Skift Netværk"
   },
   "status": {
     "message": "Status"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "Tilstandslogs"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "Status-logføringer indeholder dine offentlige kontoadresser og afsendte transaktioner."
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "Fejl ved hentning af tilstandslogfiler."
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. Tilslut hardware-tegnebog"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "Forbind din hardware-tegnebog direkte med din computer."
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. Vælg en konto"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "Vælg den konto du ønsker at se. Du kan kun vælge én ad gangen."
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. Begynd at bruge dApps og mere!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "Brug din hardwarekonto som du ville gøre med enhver Ethereum-konto. Log ind på dApps, send Eth, køb og opbevar ERC20-tokens og ikke-ombyttelige tokens som CryptoKitties."
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "Gem denne sætning i en adgangskodeadministrator som 1Password."
   },
   "submit": {
     "message": "Indsend"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "Indsendt"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "Besøg vores supportcenter"
   },
   "symbol": {
     "message": "Symbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "Symbol skal være mellem 0 og 12 tegn."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "Synkronisér med mobil"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "Synkroniser med mobil"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "Du kan synkronisere dine konti og informationer med din mobilenhed. Åbn MetaMask-mobilappen, gå til \"Indstillinger\" og tryk på \"Synkroniser fra browserudvidelse\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "Hvis du netop har åbnet MetaMask-mobilappen for første gang, skal du blot følge trinnene på din telefon."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "Scan denne kode med din MetaMask-mobilapp"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "Sørg for at der ikke er nogen der kigger på din skærm, når du scanner denne kode"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "Dine data er blevet synkroniseret korrekt. Nyd MetaMask-mobilappen!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "Tager det for lang tid?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "Brugsbetingelser"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "Testhane"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "Dette vil skabe en ny pung og seedfrase"
   },
   "tips": {
     "message": "Donationer"
   },
   "to": {
-    "message": "To"
+    "message": "Til"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "$1 til ETH via ShapeShift",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
     "message": "Token"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "Token-adresse"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "Token er allerede blevet tilføjet."
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "Din Poletbalance er:"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "Polet Kontrakt Adresse"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "Søg efter tokens eller vælg fra vores liste af populære tokens."
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "Token-symbol"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "Hold styr på de poletter, du har købt med din MetaMask-konto. Hvis du har købt poletter med en anden konto, vil de ikke vises her."
   },
   "total": {
     "message": "Total"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "transaktion"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "Transaktion på $2 bekræftet."
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "Transaktion oprettet med en værdi på $1 til $2."
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "Transaktion $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "Transaktionen droppet til $2."
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "Transaktion indsendt med brændstofgebyr på $1 til $2."
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "Transaktion genindsendt med brændstofgebyr forøget til $1 på $2"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "Transaktion opdateret til $2."
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "Transaktion opdateret med et gasgebyr på $1 ved $2."
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "Transaktionen stødte på en fejl."
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "Forsøgt annullering af transaktion med brændstofgebyr $1 på $2"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "Transaktionen blev annulleret ved $2"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "transaktioner"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "Transaktionsfejl. Undtagelse smidt i kontraktskode."
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "Forsøger at hidkalde en funktion på en ikke-kontrakt adresse."
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "Transaktionsgebyr"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "Transaktionsnotat (valgfrit)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "Transaktionsnummer"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "Transaktionstid"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "Overfør"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "Overfør mellem konti"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "Overfør fra"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "Overførsler"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "TREZOR hardware-tegnebog"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "Vi havde problemer med at indlæse dine tokenbalancer. Du kan se dem",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "Prøv igen"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "Kun med disse 12 ord kan du gendanne dine MetaMask-konti.\nGem dem et sikkert og hemmeligt sted."
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "Skriv din MetaMask-adgangskode"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "Velkommen til den nye MetaMask UI. Hvis du har feedback til brugergrænsefladen eller anmodninger om funktioner, skal du kontakte vores supportteam eller gennem GitHub."
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "Velkommen til det nye UI (beta)"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "Du bruger nu den nye MetaMask-grænseflade."
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "Ikke godkendt"
   },
   "unavailable": {
     "message": "Ikke tilgængelig"
   },
   "units": {
-    "message": "units"
+    "message": "enheder"
   },
   "unknown": {
     "message": "ukendt"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "Ukendt privat netværk"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "Ukendt netværks-ID"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "Fejl: Vi kunne ikke identificere QR-koden"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "Hovsa! Noget gik galt..."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "Der opstod en fejl da vi prøvede at tilgå dit kamera. Prøv venligst igen..."
   },
   "unlock": {
     "message": "Lås op"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "Det decentraliserede internet venter"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "Opdaterede $1"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "Links kræver det rette HTTP/HTTPS-præfix."
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "Kun USA",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "Brugt af forskellige kunder"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "Brug gammel UI"
   },
   "userName":{
     "message": "Brugernavn"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "Du skal vælge en gyldig fil at importere."
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "Bankboks Oprettet"
   },
   "viewAccount": {
     "message": "Vis konto"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "Vis i stifinder"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "Vis kontakt"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "Se på $1"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "Se på Etherscan"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "Se netværksinfo"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "Besøg vores webside"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "Tegnebogs-seed"
   },
   "warning": {
     "message": "Advarsel"
@@ -1892,42 +1892,42 @@
     "message": "Velkommen tilbage!"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "Velkommen til MetaMask"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "Hvad er det?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "Skriv denne sætning på et stykke papir, og opbevar den et sikkert sted. Hvis du vil have endnu mere sikkerhed, skal du skrive den ned på flere papirstykker og opbevare hver på 2 - 3 forskellige placeringer."
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "Ja, lad os prøve"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "Du skal tillade kameraadgang for at bruge denne funktion."
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "Din signatur er ønsket"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "Du skriver under"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "Din private seed-sætning"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "Dit unikke kontobillede"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "Dette billede blev programmeringsmæssigt genereret til dig af dit nye kontonummer."
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "Du vil se dette billede, hver gang du skal bekræfte en transaktion."
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask vil aldrig bede om din seedfrase!"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "Nul brændstofpris på fremskynding"
   }
 }

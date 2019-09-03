@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "חבר/י את ארנק החומרה Ledger שלך כדי לתקשר עם dApps ולבצע העברות לארנקים מחוברים אחרים."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "ארנק מקומי חדש"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "חבר/י את ארנק החומרה Trezor שלך כדי לתקשר עם dApps ולבצע העברות לארנקים מחוברים אחרים."
   }
 }

@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "请连接您的 Ledger 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "新增本地钱包"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "请连接您的 Trezor 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"
   }
 }

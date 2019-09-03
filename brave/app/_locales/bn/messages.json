@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "dApps এর সাথে যোগাযোগ করতে এবং অন্যান্য সংযুক্ত ওয়ালেটগুলিতে ট্রান্সফার করতে আপনার লেজর হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন।"
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "নতুন স্থানীয় ওয়ালেট"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "dApps এর সাথে যোগাযোগ করতে এবং অন্যান্য সংযুক্ত ওয়ালেটগুলিতে ট্রান্সফার করতে আপনার Trezor হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন।"
   }
 }

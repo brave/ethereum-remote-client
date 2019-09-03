@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Ledgerハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "新しいローカルウォレット"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Trezorハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"
   }
 }

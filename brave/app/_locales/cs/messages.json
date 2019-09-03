@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Připojte svou hardwarovou peněženku Ledger pro interakci s dApps a provádění převodů na ostatní připojené peněženky."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Nová lokální peněženka"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Připojte svou hardwarovou peněženku Trezor pro interakci s dApps a provádění převodů na ostatní připojené peněženky."
   }
 }

@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "पता साझा करें"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "$1 से जोड़ने के लिए अपना पता साझा करें?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "$1 के साथ अपना पता साझा करने से आप इस ऐप के साथ संवादकर पाएंगे। यह अनुमति डिफ़ॉल्ट रूप से आपकी गोपनीयता की रक्षा करने के लिए है।"
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "गोपनीय मोड अब डिफ़ॉल्ट रूप से सक्षम है"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "गोपनीय मोड"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "वेबसाइटों को आपकी खाता जानकारी देखने के लिए पहुँच हेतु अनुरोध करना चाहिए।"
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "खातों को दिखाएँ"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "वर्तमान वेबसाइट पर खातों को प्रकटकरें। लीगेसी डीएप्सके लिए उपयोगी।"
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "केवल ईथरअम नेटवर्क पर उपलब्ध चार्ट।"
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "क्या आप वाकई अपने खाते को वर्तमान वेबसाइट पर दिखाना चाहते हैं?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "क्या आप वाकई स्वीकृत वेबसाइटों को क्लियर करना चाहते हैं?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "कॉन्ट्रैक्ट की बातचीत"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "स्वीकृत वेबसाइट डेटा सफलतापूर्वक रिक्त हो गया।"
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "गोपनीय डेटा"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "गोपनीयता डेटा क्लियर कर दें ताकि सभी वेबसाइटों को खाते की जानकारी देखने के लिए फ़िर से एक्सेस का अनुरोध करना ज़रूरी हो।"
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "गोपनीयता डेटा रिक्त करें"
   },
   "reject": {
     "message": "अस्‍वीकार करें"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 आपके खाते से कनेक्ट होता चाहता हैं"
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "यह साइट आपके वर्तमान खाते का पता देखने के लिए एक्सेस का अनुरोध कर रही है। हमेशा सुनिश्चित करें कि आप जिन साइटों पर जाते हैं वे विश्वसनीय हैं।"
   },
   "about": {
     "message": "इसके बारे में"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "संस्करण, सहायता केंद्र और संपर्क जानकारी।"
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "हमारे बारे में"
   },
   "accept": {
     "message": "स्वीकार करें"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* एक उच्च गैस की कीमत का उपयोग करके अंतरण में तेजी लाने से नेटवर्क द्वारा प्रोसेस होने की संभावना तेजी से बढ़ जाती है, लेकिन इसकी हमेशा गारंटी नहीं होती है।"
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "आपके कैमरे तक पहुँच रहा है ..."
   },
   "account": {
     "message": "खाता"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "खाते की जानकारी"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "खाते का नाम"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "खाते के विकल्प"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "आपको एक खाता चुनना होगा!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "गतिविधि लॉग"
   },
   "add": {
     "message": "जोड़ें"
@@ -99,70 +99,70 @@
     "message": "पता"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "नेटवर्क जोड़ें"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "प्राप्तकर्ता को जोड़ें"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "पता पुस्तिका"
   },
   "advanced": {
     "message": "उन्नत"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "डेवलपर की सुविधाओं को एक्सेस करें, स्टेट लॉग डाउनलोड करें,अकाउंट रीसेट करें,टेस्टनेट सेटअप करें और कस्टम RPC।"
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "उन्नत विकल्प"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "कस्टम टोकन जोड़ें"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "एड्रेस बुक में जोड़ें"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "जैसे जॉन डी।"
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "उपनाम जोड़ें"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "एक Ethereum पता जोड़ें"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "टोकन जोड़ें"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "टोकन जोड़ें"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "सुझाए गए टोकन जोड़ें"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "MetaMask का उपयोग करके आपके द्वारा अर्जित किए गए टोकन जोड़ें"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "मैं सेवा की शर्तों से सहमत हूँ"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "सब हो गया"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "जी नहीं, मेरे पास पहले से ही एक बीज वाक्यांश है"
   },
   "amount": {
     "message": "राशि "
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "मात्रा + गैस"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "धनराशि + TX शुल्क"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "आपके ब्राउज़र में एक Ethereum वॉलेट",
     "description": "The description of the application"
   },
   "appName": {
@@ -170,117 +170,117 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "स्वीकृत "
   },
   "approved": {
-    "message": "Approved"
+    "message": "स्वीकृत"
   },
   "asset": {
-    "message": "Asset"
+    "message": "परिसंपत्ति"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "blockchain से कनेक्ट करने का प्रयास कर रहे हैं।"
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "रद्द करने का प्रयास?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "इस प्रयास को सबमिट करना, आपके मूल अंतरण को रद्द किए जाने की गारंटी नहीं होगी।यदि रद्दकरण का प्रयास सफल होता है, तो आपसे उपर्युक्त अंतरण शुल्क लिया जाएगा।"
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "विशेषताएं"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "ऑटो-लॉगआउट टाइमर (मिनट)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "मेटामास्क से स्वचालित रूप से लॉग आउट होने से पहले निष्क्रिय समय को मिनटों में सेट करें"
   },
   "available": {
     "message": "उपलब्ध"
   },
   "average": {
-    "message": "Average"
+    "message": "औसत"
   },
   "back": {
     "message": "वापस"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "सभी पर वापस जाएँ"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "अपने वॉलेट और धनराशि को सुरक्षित रखने के लिए अपने सीक्रेट रिकवरी कोड का बैकअप लें।"
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "यदि आप अपना उपकरण खो देते हैं, अपना पासवर्ड भूल जाते हैं, तो मेटामास्क को फिर से स्थापित करना होगा, या किसी अन्य डिवाइस पर अपने वॉलेट को एक्सेस करना चाहते हैं, इस  आपके वॉलेट को पुनर्प्राप्त करने के लिए गुप्त कोड को आवश्यकता है।"
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "अभी बैकअप करें"
   },
   "balance": {
-    "message": "Balance"
+    "message": "शेष"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "शेष पुराना हो सकता है"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "टोकन बैलेंस"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "र्तमान गैस की कुल योग के लिए अपर्याप्त बैलेंस"
   },
   "basic": {
     "message": "मूलभूत"
   },
   "beta": {
-    "message": "BETA"
+    "message": "बीटा"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "$1 से अधिक या बराबर होना चाहिए और $2 के बराबर या उससे कम होना चाहिए।",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "एक्सप्लोरर को ब्लॉक करें"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "$1 पर खाता देखें",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "ब्लॉकिज़ आईडिन्टीकॉन का प्रयोग करें।"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "धर्म से उधार (बीटा)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "आपका ब्राउज़र समर्थित नहीं है..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "मेटामास्क का डिजाइन और निर्माण कैलिफोर्निया में किया गया है।"
   },
   "buy": {
-    "message": "Buy"
+    "message": "खरीदें"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "कॉइनबेस पर खरीदें"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Bitcoin, Ethereum और Litecoin को खरीदने और बेचने के लिए Coinbase दुनिया का सबसे लोकप्रिय तरीका है।"
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Wyre से ETH खरीदें"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre आपको क्रेडिट कार्ड का उपयोग करके ETH को सीधे आपके MetaMask खाते में जमा करने देता है।"
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "CoinSwitch पर खरीदें"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "300 से अधिक क्रिप्टोकरेंसी को सबसे अच्छी दर पर एक्सचेंज करने के लिए CoinSwitch सर्वोत्तम स्थल है।"
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "बाइट"
   },
   "off": {
     "message": "बंद"
@@ -292,269 +292,269 @@
     "message": "चालू"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "एक्सप्लोरर यूआरएल ब्लॉक (वैकल्पिक)"
   },
   "cancel": {
     "message": "रद्द करें"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "प्रयास रद्द करें"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "रद्दीकरण गैस शुल्क"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "रद्द"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "$1 के सभी ट्रांज़ैक्शन को रद्द करें"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "चेन आई.डी."
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "क्लासिक इंटरफ़ेस का उपयोग करें"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "कॉपी करने के लिए क्लिक करें"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "उन्हें अपने खाते में जोड़ने के लिए $1 पर क्लिक करें"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "सीक्रेट शब्दों को जानने के लिए यहाँ क्लिक करें"
   },
   "close": {
     "message": "बंद करें"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "अपने हार्डवेयर वॉलेट से कनेक्ट करने के लिए आपको Google Chrome में MetaMask का उपयोग करना ज़रूरी है।"
   },
   "company": {
-    "message": "Company"
+    "message": "कंपनी"
   },
   "confirm": {
     "message": "दुबारा पूछें"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "पुष्टिकरण समय (सेकंड)"
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "पुष्टि की गई"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "अनुबंध की पुष्टि करें"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "पासवर्ड की पुष्टि करें"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "अपने सीक्रेट बैकअप फ़्रेज़ की पुष्टि करें"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "अंतरण की पुष्टि करें"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "बधाई हो"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "हार्डवेयर वॉलेट कनेक्ट करें"
   },
   "connect": {
     "message": "कनेक्ट करें"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "संपर्क अनुरोध"
   },
   "connecting": {
     "message": "कनेक्ट हो रहा है..."
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "$1 से कनेक्ट हो रहा है"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "कोवन टेस्ट नेटवर्क से जोड़ रहा है\n\n"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "मुख्य Ethereum नेटवर्क से कनेक्ट हो रहा है"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "रोपस्टेन टेस्ट नेटवर्क से कनेक्ट करना"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "Rinkeby टेस्ट नेटवर्क से कनेक्ट हो रहा है"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "लोकलहोस्ट 8545 से जुड़ना "
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "गोर्ली टेस्ट नेटवर्क से  जोड़ रहा है"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "अज्ञात नेटवर्क से जोड़ना"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "लेजर से कनेक्ट करें"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "Trezor से कनेक्ट करें"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "संपर्क सूची"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "अपने संपर्कों को जोड़ें, संपादित करें, हटाएँ और प्रबंधित करें"
   },
   "continue": {
     "message": "जारी रखें"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "Coinbase पर जारी रखें"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Wyre को जारी रखें"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "कॉइनस्विच पर जारी रखें "
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "कॉन्ट्रैक्ट का परिनियोजन"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "रुपांतरण प्रगति पर है"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "कॉपी किया गया"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "क्लिपबोर्ड में कॉपी किया गया"
   },
   "copiedExclamation": {
     "message": "कॉपी की गई!"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "मैंने इसे किसी सुरक्षित स्थान पर कॉपी कर लिया है"
   },
   "copy": {
     "message": "कॉपी बनाएं"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "क्लिपबोर्ड पर पता कॉपी करें"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "अंतरण आईडी को कॉपी करें"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "अंतरण आईडी कॉपी की गई"
   },
   "copyToClipboard": {
     "message": "क्लिपबोर्ड में कॉपी करें"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "कॉपी"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "यह आपकी निजी कुंजी है (कॉपी करने के लिए क्लिक करें)"
   },
   "create": {
     "message": "बनाएं"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "खाता बनाएं\n"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "एक वॉलेट बनाएं"
   },
   "createDen": {
     "message": "बनाएं"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "पासवर्ड बनाएँ"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "क्रिप्टो",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "मुद्रा रूपांतरण"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "वर्तमान भाषा"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "वर्तमान नेटवर्क"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "वर्तमान RPC"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "कस्टमाइज़ गैस"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "बढ़ती फीस प्रासेसिंग समय में कमी कर सकती है, परंतु इसकी गारंटी नहीं है।"
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "कस्टम टोकन"
   },
   "customize": {
     "message": "कस्टमाइज़ करें"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "कस्टम RPC"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "दशमलव कम से कम 0 और  36 से अधिक नहीं होना चाहिए।"
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "डेसीमल ऑफ़ प्रिसिशन"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "Ether ट्रांज़ैक्शन के लिए डिफ़ॉल्ट नेटवर्क Main Net है।"
   },
   "delete": {
     "message": "हटाएं"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "खाता हटाएँ\n\n"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "आपका डीईएन मेटामास्क के भीतर आपका पासवर्ड-एन्क्रिप्टेड स्टोरेज है।"
   },
   "deposit": {
     "message": "जमा "
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "अपने BTC को नीचे दिए गए पते पर जमा करें:"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "ईटीएच को जमा करें"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Ether जमा करें"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "Fiat से जमा करें"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "अन्य खाते से जमा करें"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "शेपशिफ्ट के साथ जमा करें"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "यदि आप अन्य क्रिप्टोकरेंसी के मालिक हैं, तो आप ईथर को सीधे अपने मेटामास्क वॉयलेट में जमा कर सकते हैं। कोई खाता नहीं चाहिए।"
   },
   "details": {
     "message": "विवरण"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "सीधे जमा करें"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Ether को सीधे जमा करें"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "यदि आपके पास पहले से ही कुछ Ether हैं, तो अपने नए वॉलेट में Ether पाने का सबसे तेज़ तरीका सीधे जमा करना है।"
   },
   "dismiss": {
     "message": "खारिज करें"
@@ -563,707 +563,707 @@
     "message": "पूर्ण"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "गूगल क्रोम डाउनलोड करें"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "इस गुप्त बैकअप वाक्यांश को डाउनलोड करें और इसे बाहरी एन्क्रिप्टेड हार्ड ड्राइव या स्टोरेज माध्यम पर सुरक्षित रूप से संग्रहीत रखें।"
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "स्टेट लॉग को डाउनलोड करें"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "हार्डवेयर वॉलेट नहीं है?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "गिर गया"
   },
   "edit": {
     "message": "संपादित करें"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "नेटवर्क सम्पादित करें"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "खाते का नाम सम्पादित करें"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "संपर्क संपादित करें"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "अपने ट्रांज़ैक्शन में बदलाव करें"
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "हमें ईमेल करें!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "अपने नए DEN को एन्क्रिप्ट करें"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "आपने परीक्षा उत्तीर्ण कर ली - अपने बीज वाक्यांश को सुरक्षित रखें, यह आपकी जिम्मेदारी है!"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "इसे सुरक्षित रूप से संग्रहीत करने के सुझाव"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "कई स्थानों पर बैकअप सहेजें।"
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "वाक्यांश को कभी भी किसी के साथ साझा न करें।"
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "फ़िशिंग से सावधान रहें! मेटामास्क कभी भी अनायास आपके बीज वाक्यांश के लिए नहीं पूछेगा।"
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "यदि आपको अपने सीड फ़्रेज़ का बैक अप लेने की आवश्यकता है तो आप इसे सेटिंग्स -> सुरक्षा में पा सकते हैं।"
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "यदि आपका कोई भी प्रश्न है या कोई गड़बड़ पाते हैं तो support@metamask.io पर ईमेल करें।"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "मेटामास्क आपके बीज वाक्यांश को पुनर्प्राप्त नहीं कर सकता है। और अधिक जानें।"
   },
   "endOfFlowMessage9": {
     "message": "और जानें।"
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "सब हो गया"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "ईएनएस नाम नहीं मिला"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "ईएनएस नाम पंजीकरण में त्रुटि"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "वर्तमान नेटवर्क पर ENS नाम नहीं मिला। मुख्य Ethereum नेटवर्क पर स्विच करने का प्रयास करें।"
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "एक उपनाम दर्ज करें"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "पासवर्ड दर्ज करें"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "पुष्टिकरण के लिए अपना पासवर्ड दर्ज करें"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "जारी रखने के लिए पासवर्ड दर्ज करें"
   },
   "eth": {
-    "message": "ETH"
+    "message": "ईटीएच"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "ईथरअम पब्लिक एड्रेस"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "Etherscan पर खाता दिखाएँ"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "प्रोसेस करने के अनुमानित समय"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "विनिमय दर"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "विस्तार से देखें"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "निजी कुंजी निर्यात करें "
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "अपने स्वयं के जोखिम पर व्यक्तिगत कुंजी निर्यात करें।"
   },
   "failed": {
-    "message": "Failed"
+    "message": "असफल हुआ"
   },
   "fast": {
     "message": "तेज़"
   },
   "faster": {
-    "message": "Faster"
+    "message": "तीव्र"
   },
   "fastest": {
     "message": "सबसे तेज़"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "लाइव ट्रांज़ैक्शन के शुल्क की भविष्यवाणी"
   },
   "fiat": {
-    "message": "Fiat",
+    "message": "फ़्लैट",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "फ़ाइल आयात काम नहीं कर रहा है? यहां क्लिक करे!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "हमें Twitter पर फॉलो करें"
   },
   "forgetDevice": {
     "message": "इस डिवाइस को भूल जाएं"
   },
   "from": {
-    "message": "From"
+    "message": "से\n\n"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "से और को पते समान नहीं हो सकते"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "शेपशिफ्ट से"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "कार्यप्रणाली प्रकार"
   },
   "gas": {
-    "message": "Gas",
+    "message": "गैस",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "गैस शुल्क"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "गैस की सीमा\n"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "हम नेटवर्क की सफलता दर के आधार पर सुझाई गई गैस सीमा की गणना करते हैं।"
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "गैस की सीमा गैस के यूनिट की अधिकतम राशि है जिसे आप खर्च करना चाहते हैं।"
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "गैस सीमा की आवश्यकता है"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "गैस की सीमा कम से कम 21000 होनी चाहिए"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "उपयोग किए गए गैस"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "बीज उत्पन्न कर रहा है ..."
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "गैस की कीमत (जीडब्ल्यूईआई)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "गैस मूल्य बहुत कम है"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "गैस की कीमत, उस ईथर की मात्रा को निर्दिष्ट करती है जिसे आप गैस की प्रत्येक इकाई के लिए भुगतान करने के इच्छुक हैं।"
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "गैस का मूल्य"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "हम नेटवर्क की सफलता के दर के आधार पर सुझाए गए गैस की कीमतों की गणना करते हैं।"
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "गैस की कीमत की आवश्यकता है"
   },
   "general": {
-    "message": "General"
+    "message": "सामान्य"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "मुद्रा रूपांतरण, प्राथमिक मुद्रा, भाषा, ब्लॉकीज़ पहचान"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "अंतरण का सृजन करना"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Ether पाएँ"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "$1 में फॉसेट से Ether प्राप्त करें",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "सहायता प्राप्त करें।"
   },
   "getStarted": {
     "message": "आरंभ करें"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "$1 से बड़ा या उसके बराबर होना चाहिए।",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "आपको देखकर हमें बहुत ख़ुशी हुई।"
   },
   "hardware": {
-    "message": "hardware"
+    "message": "हार्डवेयर"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "हार्डवेयर वॉलेट कनेक्ट हो गया"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "हार्डवेयर वॉलेट जोड़े"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "एक हार्डवेयर वॉलेट चुनें जिसका उपयोग आप MetaMask के साथ करना चाहते हैं"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "कनेक्ट करने में परेशानी हो रही है?"
   },
   "here": {
     "message": "यहाँ ",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "यहाँ एक सूची है !!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "हेक्स डेटा"
   },
   "hide": {
     "message": "छुपाएं"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "टोकन छिपाएँ?"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "टोकन छिपाएँ?"
   },
   "history": {
     "message": "इतिहास"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "आप Ether को कैसे जमा करना चाहेंगे?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "यह आपको ईथर और टोकन रखने की अनुमति देता है, और विकेंद्रीकृत एप्लीकेशन के साथ आपके ब्रिज के रूप में कार्य करता है।   "
   },
   "import": {
     "message": "आयात करें",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "खाता आयात करें"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "आयात किए गए खाते आपके मुख्य रूप से बनाए गए MetaMask खाते के सीडफ़्रेज़ से संबंधित नहीं होंगे। आयात किए गए खातों के बारे में अधिक जानें"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "बीज वाक्यांश के साथ एक खाता आयात करें"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "एक खाता आयात करें"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "वर्तमान DEN को आयात करें"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "वॉलेट आयात करें"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "12 शब्द बीज वाक्यांश का उपयोग करके अपने मौजूदा वॉयलेट को आयात करें"
   },
   "imported": {
     "message": "आयातित",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "खाता बीज वाक्यांश का उपयोग कर आयात करें"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "बीज वाक्यांश के साथ आयात करें"
   },
   "info": {
-    "message": "Info"
+    "message": "जानकारी"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "जानकारी और सहायता"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "आपके प्रारंभिक ट्रांज़ैक्शन की पुष्टि नेटवर्क द्वारा की गई थी। वापस जाने के लिए OK पर क्लिक करें।"
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "अपर्याप्त शेष।"
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "अपर्याप्त धनराशि"
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "अपर्याप्त टोकन"
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "अमान्य पता"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "प्राप्तकर्ता का पता अमान्य है"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "ज्ञात अनुबंध पता।"
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "ईटीएच नेटवर्क नहीं, लोअरकेस में सेट करें"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "अमान्य गैस पैरामीटर"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "अमान्य इनपुट।"
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "अमान्य अनुरोध"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "अमान्य RPC URL"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "अमान्य बीज वाक्यांश"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "कुछ गलत हो गया। कृपया सुनिश्चित करें कि आपकी जेएसओएन फाइल ठीक से फ़ॉर्मेट की गई हैहै।"
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "JSON फ़ाइल",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "अपने मेटाकास्क खाते से खरीदे गए टोकन का ध्यान रखें।"
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "कोवन टेस्ट नेटवर्क"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "हमारे जानकारी पृष्ठ पर जाएँ"
   },
   "max": {
-    "message": "Max"
+    "message": "अधिकतम"
   },
   "learnMore": {
     "message": "अधिक जानें "
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "नया खाता जोड़ने से पहले आपको अपने पिछले खाते का उपयोग करना होगा।"
   },
   "legal": {
-    "message": "Legal"
+    "message": "वैध"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "$1 से कम या उसके बराबर होना चाहिए।",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "जी हां, सेट होने दें!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "क्या आप इन टोकन को जोड़ना चाहेंगे?"
   },
   "links": {
     "message": "Links"
   },
   "limit": {
-    "message": "Limit"
+    "message": "सीमा"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "लाइव गैस की कीमत की भविष्यवाणी"
   },
   "loading": {
     "message": "लोड हो रही हैं..."
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "टोकन लोड हो रहे हैं..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "और लोड करें"
   },
   "localhost": {
-    "message": "Localhost 8545"
+    "message": "लोकलहोस्ट 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "लॉग इन करें"
   },
   "logout": {
-    "message": "Log out"
+    "message": "लॉग आउट"
   },
   "loose": {
-    "message": "Loose"
+    "message": "अनिश्चित"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "बीज शब्दों में केवल लोअरकेस वर्ण होते हैं"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "मुख्य Ethereum नेटवर्क"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "इस फ़्रेज़ को याद कर लें।"
   },
   "memo": {
-    "message": "memo"
+    "message": "ज्ञापन"
   },
   "menu": {
-    "message": "Menu"
+    "message": "मेनू"
   },
   "message": {
-    "message": "Message"
+    "message": "संदेश"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "आपको Ethereum और विकेंद्रीकृत वेब से कनेक्ट कर रहे हैं।"
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "मेटामास्क बीज शब्द"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "MetaMask का संस्करण"
   },
   "min": {
     "message": "न्यूनतम"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "अपने टोकन को देख नहीं पा रहें हैं?"
   },
   "minutesShorthand": {
-    "message": "Min"
+    "message": "न्यूनतम "
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "मोबाइल के साथ सिंक करें"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "यह आप ही हैं इसकी पुष्टि करने के लिए कृपया अपना पासवर्ड दर्ज करें!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "मेरा खाता"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "माई वॉलेट खाते"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "आपके सभी मेटामास्क निर्मित खाते स्वतः ही इस खंड में जुड़ जाएंगे।"
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "कम से कम 1 टोकन का चयन करना होगा।"
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "मेटामास्क का उपयोग करके विकेंद्रीकृत अनुप्रयोगों के साथ संवाद करने के लिए, आपको अपने वॉयलेट में ईथर की आवश्यकता होगी।"
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "आयात करने के लिए आपको एक फ़ाइल का चयन करना होगा।",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "चुनी हुई फ़ाइल के लिए आपको पासवर्ड दर्ज करना ज़रूरी है।",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "ETH की नकारात्मक धनराशि को नहीं भेज सकते।"
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "नेटवर्क का नाम"
   },
   "networks": {
-    "message": "Networks"
+    "message": "नेटवर्क"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "कस्टम RPC नेटवर्क को जोड़ें और सम्पादित करें"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "कोई बात नहीं"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "नया खाता"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "नए पते का पता लगा! अपनी पता पुस्तिका में जोड़ने के लिए यहां क्लिक करें।"
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "खाता $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "नया संपर्क"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "नया कॉन्ट्रैक्ट"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "नया पासवर्ड (कम से कम 8 अक्षर)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "नया पासवर्ड (कम से कम 8 अक्षर)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "नया प्राप्तकर्ता"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "नया नेटवर्क"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "MetaMask में नए है?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "जी नहीं, मेरे पास पहले से ही एक बीज वाक्यांश है"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "अपनी कुंजी को सुरक्षित रखें!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "अपने सीड फ़्रेज़ के बारे में सावधान रहें — ऐसी वेबसाइटों की रिपोर्टें आई हैं जो MetaMask की नकल करने का प्रयास करती हैं। MetaMask आपके सीड फ़्रेज़ के बारे में कभी नहीं पूछेगा!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "अपने वाक्यांश को सुरक्षित रखें। यदि आपको कुछ गड़बड़ दिखती है, या आप किसी वेबसाइट के बारे में अनिश्चित हैं तो support@metamask.io को ई मेल करें\n\n"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "नया RPC URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "उन्नत विकल्प दिखाएं"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "उन्नत विकल्प छिपाएँ"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "चैनआईडी (वैकल्पिक)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "सिम्बल (वैकल्पिक)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "उपनाम (वैकल्पिक)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "नया कुल"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "नया अंतरण शुल्क"
   },
   "next": {
     "message": "अगला"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "इस नाम के लिए कोई पता सेट नहीं किया गया है"
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "कोई धनराशि प्राप्त नहीं हुई है"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "कोई रूपांतरण दर उपलब्ध नहीं है"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "कोई ट्रांज़ैक्शन विवरण नहीं है।"
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "आपका कोई अंतरण  नहीं है"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "पर्याप्त गैस नहीं है"
   },
   "notFound": {
     "message": "नहीं मिला"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "शुरू नहीं हुआ है"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "वेब कैमरा नहीं मिला"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "आपके कंप्यूटर का वेबकैम नहीं मिला। कृपया फ़िर से प्रयास करें।"
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "का"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "पुराना UI"
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "आप पुराने यूआई पर लौट आए हैं। आप शीर्ष दाईं ओर ड्रॉपडाउन मेनू में विकल्प के माध्यम से नए यूआई पर वापस जा सकते हैं।"
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "Ethereum पते पर केवल ETH भेजें।"
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "एक Ethereum खाते के पते पर केवल $1भेजें।",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "टैब में खोलें"
   },
   "or": {
-    "message": "or",
+    "message": "या",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Trezor या Ledger ऑर्डर करें और अपने फंड को स्थगित करें"
   },
   "origin": {
     "message": "मूल"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "बाहर जाने वाला"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "पैरामीटर"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "प्रारंभिक योग"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "मेटामेट्रिक्स में भाग लें"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "MetaMask को बेहतर बनाने में हमारी मदद के लिए MetaMetrics में भाग लें"
   },
   "password": {
     "message": "पासवर्ड"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "कृपया सुनिश्चित करें कि आपका पासवर्ड सही है।"
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "पासवर्ड समान नहीं हैं"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "पासवर्ड मेल नहीं खाते",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "पासवर्ड पर्याप्त रूप से लम्बा नहीं हैं"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "पासवर्ड बहुत लंबा नहीं है",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "अपनी निजी कुंजी स्ट्रिंग यहां पेस्ट करें:",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "अपना बीज वाक्यांश यहाँ पेस्ट करें!"
   },
   "pending": {
-    "message": "pending"
+    "message": "विलंबित"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "व्यक्तिगत पते का पता लगाया गया। टोकन अनुबंध पता डालें।"
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "कृपया अपने अंतरण की समीक्षा करें।"
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "लोकप्रिय टोकन"
   },
   "prev": {
-    "message": "Prev"
+    "message": "पिछला"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "मुख्य मुद्रा"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "श्रृंखला की नेटिव मुद्रा (जैसे ETH) में प्रदर्शित मूल्यों को प्राथमिकता देने के लिए नेटिव का चयन करें। अपने चयनित Fiat मुद्रा में प्रदर्शित मूल्यों को प्राथमिकता देने के लिए Fiat का चयन करें।"
   },
   "privacyMsg": {
     "message": "गोपनीयता नीति"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "निजी कुंजी",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "चेतावनी: इस कुंजी का खुलासा न करें। आपकी निजी कुंजियों वाला कोई भी व्यक्ति आपके खाते में रखी कोई भी परिसंपत्ति की चोरी कर सकता है।"
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "निजी नेटवर्क"
   },
   "qrCode": {
     "message": "QR Code दिखाएं "
@@ -1272,97 +1272,97 @@
     "message": "सूची"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "आप अपने खातों के विकल्प मेनू में \"टोकन जोड़ें\" पर जाकर भविष्य में इस टोकन को वापस जोड़ सकते हैं।"
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "यहाँ और पढ़ें"
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "अधिक पढ़ें।"
   },
   "receive": {
-    "message": "Receive"
+    "message": "प्राप्त करें"
   },
   "recents": {
-    "message": "Recents"
+    "message": "हाल ही का\n\n"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "प्राप्तकर्ता का पता"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "ढूँढें, सार्वजनिक पता (0x), या ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "आपका धन वापसी का पता"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "सभी को अस्वीकार करें"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "$1 के ट्रांज़ैक्शन को रिजेक्ट करें"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "आप $1 के अंतरण को अस्वीकार करने वाले हैं।"
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "रिजेक्ट किया हुआ"
   },
   "reset": {
     "message": "रीसेट करें"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "खाता रीसेट करें"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "आपका खाता रीसेट करने से आपका अंतरण इतिहास रिक्त\n\nहो जाएगा।"
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "नेटवर्क हटाएं?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "क्या आप वाकई इस नेटवर्क को हटाना चाहते हैं?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "मुझे बाद में याद दिलाएँ\n\n"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "खाता पुनर्स्थापित करें?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "वॉल्ट रिस्टोर करें"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "सीड फ़्रेज़ से अपने खाते को रिस्टोर करें"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "अनुरोधों के स्वीकार किए जाने की प्रतीक्षा कर रहे हैं"
   },
   "required": {
-    "message": "Required"
+    "message": "अपेक्षित"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "यहां अधिक गैस की कीमत के साथ पुन: प्रयास करें"
   },
   "restore": {
     "message": "पुनर्स्थापित करें"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "बीज शब्द प्रकट करें"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "सीड फ़्रेज़"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "यदि आप कभी ब्राउज़रों बदलते हैं या कंप्यूटर को स्थानांतरित करते हैं, तो आपको अपने खातों तक पहुंचने के लिए इस बीज वाक्यांश की आवश्यकता होगी। उन्हें कहीं सुरक्षित और गुप्त रूप से सहेजें।\n"
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "इस वाक्यांश को किसी के साथ साझा न करें!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "इन शब्दों का उपयोग आपके सम्पूर्ण खातों को चुराने के लिए किया जा सकता है।"
   },
   "revert": {
-    "message": "Revert"
+    "message": "वापस जाएँ"
   },
   "remove": {
     "message": "निकालें"
@@ -1371,25 +1371,25 @@
     "message": "खाता हटाएं"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "यह खाता आपके वॉयलेट से हटा दिया जाएगा। कृपया सुनिश्चित करें कि जारी रखने से पहले आपके पास इस आयातित खाते के लिए मूल बीज वाक्यांश या निजी कुंजी है। आप खाता ड्रॉप-डाउन से दोबारा खाता आयात कर या बना सकते हैं ।"
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "कनेक्ट होने के लिए तैयार हैं?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "\nरिंकीबी टेस्ट नेटवर्क"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "रोपस्टेन टेस्ट नेटवर्क"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "गोएर्ली टेस्ट नेटवर्क"
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "कस्टम आरपीसी"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "उदाहरण के लिए जैसे मेरा नया खाता",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,140 +1399,140 @@
     "message": "धीमा"
   },
   "slower": {
-    "message": "Slower"
+    "message": "धीमा"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": " सीवीएस फ़ाइल के रूप में सहेजें"
   },
   "saveAsFile": {
     "message": "फाइल की तरह सुरक्षित करें",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "फ़ाइल के रूप में बीज शब्द सहेजें"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "अपने कैमरे के सामने क्यूआर कोड रखें"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "QR कोड स्कैन करें"
   },
   "search": {
     "message": "खोज"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "खोज के परिणाम"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "गुप्त बैकअप वाक्यांश"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "आपका सीक्रेट बैकअप फ़्रेज़ आपके खाते का बैकअप लेना और उसे पुनर्स्थापित करना आसान बनाता है।"
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "चेतावनी: अपने बैकअप फ़्रेज़ को कभी भी ज़ाहिर न करें। इस फ़्रेज़ से कोई भी आपका Ether हमेशा के लिए ले सकता है।"
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "अपने वॉल्ट को रिस्टोर करने के लिए अपने बारह शब्दों के सीक्रेट फ़्रेज़ को यहाँ दर्ज करें।"
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "सुरक्षा और गोपनीयता"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "गोपनीयता सेटिंग और वॉलेट सीड फ़्रेज़"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "सेकंड"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "प्रत्येक शब्द को एक ही स्पेस  से अलग करें"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "बीज वाक्यांश 12 शब्द लंबे होते हैं"
   },
   "select": {
     "message": "चुनें"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "मुद्रा का चयन करें"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "यह सुनिश्चित करने के लिए कि यह सही है प्रत्येक वाक्यांश का चयन करें।\n"
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "स्थान का चयन करें"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "सेवा चुनें"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "प्रकार का चयन करें"
   },
   "send": {
     "message": "भेजें"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "धनराशि भेजें"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "ईटीएच भेजें"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "टोकन भेजें"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "भेजे गए ether"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "भेजे गए टोकन"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "प्रत्येक शब्द को एक स्पेस से अलग करें"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "टोकन ढूँढें"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "एक पते का चयन करें"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "एक खाते का चयन करें"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "मेटामास्क में देखने के लिए खाते का चयन करें"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "एक परिसंपत्ति का चयन करें"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "अपने अंतरण के प्रोसेस में तेजी लाने के लिए एक उच्च गैस शुल्क का चयन करें। *"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "HD प्रणाली चुनें"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "यदि आप अपने मौजूदा लेजर खातों को नीचे नहीं देख पाते हैं, तो \"लीगेसी (एमईडब्ल्यू/माईक्रिप्टो)\" के लिए पाथ को बदलने का प्रयास करें।"
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "एक Ethereum खाते से किसी को भी टोकन भेजें"
   },
   "settings": {
     "message": "सेटिंग"
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "Shapeshift से खरीदें"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "उन्नत गैस नियंत्रण"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "भेजने और पुष्टि करने के स्क्रीन पर गैस की कीमत दिखाने और सीमा को सीधे नियंत्रित करने के लिए इसे चुनें।"
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "टेस्टनेट पर रूपांतरण दिखाएं"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "Testnets पर fiat परिवर्तन दिखाने के लिए इसे चुनें"
   },
   "showPrivateKeys": {
     "message": "Show Private Keys"
@@ -1541,349 +1541,349 @@
     "message": "QR Code दिखाएं "
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "हेक्स डेटा दिखाएँ"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "भेजे जानें वाले स्क्रीन पर हेक्स डेटा फ़ील्ड दिखाने के लिए इसे चुनें"
   },
   "sign": {
-    "message": "Sign"
+    "message": "साइन"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "हस्ताक्षर अनुरोध"
   },
   "signed": {
-    "message": "Signed"
+    "message": "साइन किया गया"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "साइन सन्देश"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "इस संदेश पर साइनिंग  करने से खतरनाक दुष्प्रभाव हो सकते हैं। केवल उन साइटों के संदेशों पर साइन  करें जिन पर आप अपने पूरे खाते के लिए पूरी तरह भरोसा करते हैं।\n  इस खतरनाक तरीके को भविष्य के संस्करण में हटा दिया जाएगा।"
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "हस्ताक्षर का अनुरोध"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "हस्ताक्षर का अनुरोध किया"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "ओह! कुछ गलत हो गया।"
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "शब्दों के बीच केवल एक स्पेस  हो सकता है"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "गति बढ़ाएँ"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "ट्रांज़ैक्शन की गति बढ़ाएँ"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "अपने अंतरण को अधिलेखित करने और अपने अंतरण को गति देने के लिए अपनी गैस की कीमत बढ़ाएं"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "रद्द करने की इस प्रक्रिया को गति दें"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "इस ट्रांज़ैक्शन की गति बढ़ाएँ"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "नेटवर्क स्विच करें"
   },
   "status": {
     "message": "स्थिति"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "स्टेट लॉग"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "स्टेट लॉग में आपके सार्वजनिक खाते के पते और भेजे गए ट्रांज़ैक्शन होते हैं।"
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "स्टेट लॉग को पुनर्प्राप्त करने में त्रुटि।"
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. हार्डवेयर वॉलेट कनेक्ट करें"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "अपने हार्डवेयर वॉलेट को सीधे अपने कंप्यूटर से कनेक्ट करें।"
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. एक खाता चुनें"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "वह खाता चुनें जिसे आप देखना चाहते हैं। आप एक समय में एक का ही चयन कर सकते हैं"
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. डीएप्स और अधिक का उपयोग करना आरंभ करें!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "अपने हार्डवेयर खाते का उपयोग करें जैसे आप किसी भी ईथरअम खाते के साथ करेंगे। डीएप्स में लॉग इन करें, ईटीएच भेजें, खरीदें और ईआरसी 20 टोकन और क्रिप्टोकरंसी जैसे गैर-फंगबल टोकन स्टोर करें।"
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "इस वाक्यांश को 1पासवर्ड जैसे पासवर्ड मैनेजर में संग्रहीत करें।"
   },
   "submit": {
     "message": "सबमिट करें"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "प्रस्तुत किया गया"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "हमारे सहायता केंद्र पर जाएँ"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "सिम्बल"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "सिंबल को 0 से 12 अक्षरों के मध्य का होना चाहिए।"
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "मोबाइल से सिंक करें"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "मोबाइल से सिंक करें"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "आप अपने खातों और सूचनाओं को अपने मोबाइल डिवाइस के साथ सिंक कर सकते हैं। मेटामास्क मोबाइल ऐप खोलें, \"सेटिंग\" पर जाएं और \"ब्राउज़र एक्सटेंशन से सिंक करें\" पर टैप करें"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "यदि आपने पहली बार मेटामास्क मोबाइल ऐप खोला हैं, तो केवल अपने फोन में दिए गए चरणों का पालन करें।"
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "इस कोड को अपने मेटामास्क मोबाइल ऐप से स्कैन करें"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "यह सुनिश्चित करें कि इस कोड को स्कैन करते समय कोई आपकी स्क्रीन को देख नहीं देख रहा है"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "आपका डेटा सफलतापूर्वक समन्वयित कर लिया गया है। मेटामास्क मोबाइल ऐप का आनंद लें!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "बहुत समय लग रहा है?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "उपयोग की शर्तें"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "फॉसिट का परीक्षण करें"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "यह एक नया वॉलेट और सीड फ़्रेज़ बनाएगा"
   },
   "tips": {
     "message": "टिप्स "
   },
   "to": {
-    "message": "To"
+    "message": "सेवा में"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "ShapeShift द्वारा ETH को $1",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "टोकन"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "टोकन पता"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "टोकन को पहले ही जोड़ा जा चुका है।"
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "आपका बकाया टोकन है:"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "टोकन संपर्क पता"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "टोकन की खोज करें या लोकप्रिय टोकन की हमारी सूची में से चुनें।"
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "टोकन प्रतीक"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "अपने मेटाकास्क खाते से आपके द्वारा खरीदे गए टोकन का ट्रैक रखें। यदि आपने एक अलग खाते का उपयोग करके टोकन खरीदा है, तो वे टोकन यहां दिखाई नहीं देंगे।"
   },
   "total": {
     "message": "संपूर्ण"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "अंतरण\n\n"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "$2 में अंतरण की पुष्टि की गई।"
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "$2 पर $1 के मूल्य से ट्रांज़ैक्शन किया गया।"
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "अंतरण $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "अंतरण $2 पर गिरा।"
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "$2 पर $1 के गैस शुल्क के साथ ट्रांज़ैक्शन दर्ज किया गया।"
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "$2 पर $1 के बढे हुए गैस शुल्क के साथ ट्रांज़ैक्शन फ़िर से दर्ज हुआ"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "$2 पर ट्रांज़ैक्शन अपडेट किया गया।"
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "$2 पर $1 के गैस शुल्क के साथ ट्रांज़ैक्शन अपडेट किया गया।"
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "अंतरण में त्रुटि हुई। \n\n"
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "$2 पर $1 के गैस शुल्क के साथ अंतरण रद्द करने का प्रयास किया गया"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "अंतरण सफलतापूर्वक $2 पर रद्द कर दिया गया"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "अंतरण"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "ट्रांज़ैक्शन में त्रुटि। गलतियों को कॉन्ट्रैक्ट कोड में दर्शया गया है।"
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "एक गैर-अनुबंध पते पर एक फ़ंक्शन को कॉल करने की कोशिश कर रहा है।"
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "ट्रांज़ैक्शन शुल्क"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "ट्रांज़ैक्शन मेमो (वैकल्पिक)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "अंतरण संख्या"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "ट्रांज़ैक्शन का समय"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "स्थानांतरण"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "मरे खातों के बीच ट्रांसफर करें"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "से ट्रांसफर करें"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "ट्रांसफर किए गए"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "TREZOR हार्डवेयर वॉलेट"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "हमें आपके टोकन बैलेंस लोड करने में परेशानी हुई। आप उन्हें देख सकते हैं",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "दोबारा कोशिश करें"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "आपके MetaMask खातों को रिस्टोर करने का एकमात्र तरीका ये 12 शब्द हैं।\nउन्हें कहीं सुरक्षित और सीक्रेट रखें।"
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "अपना मेटामास्क पासवर्ड टाइप करें"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "नए MetaMask UI में आपका स्वागत है। यदि आपके पास UI या सुविधा अनुरोधों के बारे में कुछ सुझाव हैं, तो कृपया हमारी सहायता टीम या GitHub से संपर्क करें।"
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "नए UI (बीटा) में स्वागत है"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "अब आप नए MetaMask UI का उपयोग कर रहे हैं।"
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "अस्वीकृत"
   },
   "unavailable": {
     "message": "अनुपलब्ध है"
   },
   "units": {
-    "message": "units"
+    "message": "इकाइयाँ"
   },
   "unknown": {
     "message": "अज्ञात"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "निजी नेटवर्क को अनलॉक करें"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "अज्ञात नेटवर्क आईडी"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "त्रुटि: हम उस क्यूआर  कोड की पहचान नहीं कर सके"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "ओह! कुछ समस्या उत्पन्न हो गई है..."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "आपके कैमरे तक पहुँचने का प्रयास करते समय कोई त्रुटि हुई। कृपया पुन: प्रयास करें..."
   },
   "unlock": {
     "message": "अनलॉक करें"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "विकेंद्रीकृत वेब का इंतजार है"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "$1 अपडेट किया गया"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "URI को उपयुक्त HTTP/HTTPS प्रीफ़िक्स की आवश्यकता होती है।"
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "केवल यूएसए",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "विभिन्न प्रकार के ग्राहकों द्वारा उपयोग किया जाता है"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "पुराने यूआई का उपयोग करें"
   },
   "userName":{
     "message": "उपयोगकर्ता नाम"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "आयात करने के लिए आपको एक मान्य फ़ाइल को चुनना होगा।"
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "वॉल्ट बनाया गया"
   },
   "viewAccount": {
     "message": "खाता देखें"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "एक्स्प्लोरर में देखें"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "संपर्क देखें"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "$1 पर देखें"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "इथरस्कैन पर देखें"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "नेटवर्क जानकारी देखें"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "हमारी वेबसाइट पर जाएँ"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "वॉलेट सीड"
   },
   "warning": {
     "message": "चेतावनी"
@@ -1892,42 +1892,42 @@
     "message": "वापस आने पर स्वागत है!"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "MetaMask में आपका स्वागत है"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "यह क्या है?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "इस वाक्यांश को कागज के टुकड़े पर लिखें और एक सुरक्षित स्थान पर संग्रहीत करें। यदि आप और भी अधिक सुरक्षा चाहते हैं, तो इसे कागज के कई टुकड़ों पर लिखें और प्रत्येक को 2 - 3 विभिन्न स्थानों में संग्रहीत करें।"
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "हाँ, चलिए कोशिश करते हैं"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "आपको इस सुविधा का उपयोग करने के लिए कैमरा एक्सेस की अनुमति देने की आवश्यकता है।"
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "आपके हस्ताक्षर का अनुरोध किया जा रहा है"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "आप प्रवेश कर रहे हैं"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "आपका निजी बीज वाक्यांश"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "आपके खाते की अद्भुत इमेज"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "यह छवि आपके नए खाता संख्या द्वारा आपके लिए प्रोग्रामेटिक रूप से बनाई गई थी।"
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "अंतरण की पुष्टि करने के लिए आप हर बार इस चित्र को देखेंगे।"
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "मेटामास्क आपके बीज वाक्यांश के लिए कभी नहीं पूछेगा!"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "शून्य गैस की कीमत में तेजी"
   }
 }

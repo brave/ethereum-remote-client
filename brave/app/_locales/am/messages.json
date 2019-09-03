@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "የ Ledger ሃርድዌር ቋትዎን ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "አዲስ ከባቢያዊ ቋት"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "የ Trezor ሃርድዌር ቋትዎ ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
   }
 }

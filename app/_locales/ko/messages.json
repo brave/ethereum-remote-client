@@ -1,15 +1,15 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "주소 공유"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "$1에 연결하기 위해 주소를 공유하시겠습니까?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "$1과 주소를 공유하면 이 dapp과 소통할 수 있게 해줍니다. 이 권한은 기본 설정으로 귀하의 개인 정보를 보호하기 위함입니다."
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "이제 프라이버시 모드가 기본 설정으로 활성화됐습니다"
   },
   "privacyMode": {
     "message": "개인 정보 보호 모드"
@@ -24,7 +24,7 @@
     "message": "계정을 현재 웹 사이트에 노출하십시오. 기존 dapps에 유용합니다."
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "이더리움 네트워크에서만 사용 가능한 차트."
   },
   "confirmExpose": {
     "message": "계정을 현재 웹 사이트에 공개 하시겠습니까?"
@@ -33,7 +33,7 @@
     "message": "승인 된 웹 사이트를 삭제 하시겠습니까?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "계약 상호 작용"
   },
   "clearApprovalDataSuccess": {
     "message": "승인 된 웹 사이트 데이터가 성공적으로 삭제되었습니다."
@@ -60,10 +60,10 @@
     "message": "정보"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "버전, 지원 센터, 그리고 연락처 정보."
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "당사 소개"
   },
   "accept": {
     "message": "수락"
@@ -99,19 +99,19 @@
     "message": "주소"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "네트워크 추가"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "수신자 추가"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "주소록"
   },
   "advanced": {
     "message": "고급"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "개발자 기능 사용, 상태 로그 다운로드, 계정 재설정, 테스트넷 및 사용자 정의 RPC 설정."
   },
   "advancedOptions": {
     "message": "고급 옵션"
@@ -120,16 +120,16 @@
     "message": "사용자 정의 토큰 추가"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "주소록에 추가"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "예. 존 D."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "가명 추가"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "이더리움 주소를 추가하세요"
   },
   "addToken": {
     "message": "토큰 추가"
@@ -144,7 +144,7 @@
     "message": "메타마스크를 통해 획득한 토큰 추가"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "서비스 약관에 동의합니다"
   },
   "allDone": {
     "message": "모두 완료"
@@ -176,7 +176,7 @@
     "message": "수락"
   },
   "asset": {
-    "message": "Asset"
+    "message": "자산"
   },
   "attemptingConnect": {
     "message": "블록체인에 접속을 시도하는 중입니다."
@@ -191,10 +191,10 @@
     "message": "속성"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "자동 로그아웃 타이머 (분)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "MetaMask가 자동으로 로그아웃되기 전 유휴 시간을 분 단위로 설정하세요"
   },
   "available": {
     "message": "사용 가능"
@@ -206,22 +206,22 @@
     "message": "돌아가기"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "전체로 돌아가기"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "비밀 복구 코드를 백업하여 월렛과 자금을 안전하게 유지하세요."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "이 비밀 코드는 기기를 분실해서 월렛을 복구해야 하거나, 비밀번호를 잊어버리거나, MetaMask를 재설치해야 하거나, 다른 기기에서 월렛에 접속하고 싶은 경우에  필요합니다."
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "지금 백업하기"
   },
   "balance": {
     "message": "잔액"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "잔액이 오래된 정보일 수 있습니다"
   },
   "balances": {
     "message": "토큰 잔액"
@@ -240,10 +240,10 @@
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "익스플로러 차단"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "$1에 계정을 보세요",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
@@ -268,10 +268,10 @@
     "message": "코인베이스는 비트코인, 이더리움, 라이트코인을 거래할 수 있는 유명한 거래소입니다."
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Wyre로 ETH 구매"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre는 신용 카드를 사용하여 ETH을 바로 MetaMask 계정에 입금할 수 있게 해줍니다."
   },
   "buyCoinSwitch": {
     "message": "코인 스위치 구입"
@@ -292,7 +292,7 @@
     "message": "사용"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "익스플로러 URL 차단 (선택 사항)"
   },
   "cancel": {
     "message": "취소"
@@ -310,7 +310,7 @@
     "message": "모든 $1 트랜잭션 취소"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "체인 ID"
   },
   "classicInterface": {
     "message": "예전 인터페이스"
@@ -331,7 +331,7 @@
     "message": "하드웨어 지갑을 연결하기 위해서는 구글 크롬에서 메타마스크를 사용하셔야 합니다."
   },
   "company": {
-    "message": "Company"
+    "message": "회사"
   },
   "confirm": {
     "message": "승인"
@@ -385,10 +385,10 @@
     "message": "Rinkeby 테스트넷 접속 중"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "로컬호스트 8545에 연결 중"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "Goerli 테스트 네트워크에 연결하는 중"
   },
   "connectingToUnknown": {
     "message": "알 수 없는 네트워크 접속 중"
@@ -400,10 +400,10 @@
     "message": "Trezor 연결"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "연락처 목록"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "계정을 추가, 수정, 제거 및 관리하세요"
   },
   "continue": {
     "message": "계속"
@@ -412,7 +412,7 @@
     "message": "코인베이스로 계속하기"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Wyre로 계속 진행"
   },
   "continueToCoinSwitch": {
     "message": "코인 스위치 계속하기"
@@ -515,7 +515,7 @@
     "message": "삭제"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "계정 삭제"
   },
   "denExplainer": {
     "message": "DEN은 비밀번호로 암호화 된 메타마스크의 저장소입니다."
@@ -581,13 +581,13 @@
     "message": "수정"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "네트워크 수정"
   },
   "editAccountName": {
     "message": "계정 이름 수정"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "연락처 수정"
   },
   "editingTransaction": {
     "message": "트랜잭션을 변경합니다"
@@ -632,13 +632,13 @@
     "message": "ENS 이름을 찾을 수 없습니다"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "ENS 이름 등록 오류"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "현재 네트워크에서 ENS 이름을 찾을 수 없습니다. 주요 이더리움 네트워크로 전환해 보세요."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "가명을 입력하세요"
   },
   "enterPassword": {
     "message": "비밀번호를 입력해주세요"
@@ -653,7 +653,7 @@
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "이더리움 공개 주소"
   },
   "etherscanView": {
     "message": "이더스캔에서 계정보기"
@@ -686,7 +686,7 @@
     "message": "가장 빠르게"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "실시간 거래 수수료 예상"
   },
   "fiat": {
     "message": "FIAT",
@@ -761,10 +761,10 @@
     "message": "가스 가격이 필요합니다."
   },
   "general": {
-    "message": "General"
+    "message": "일반"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "환전, 기본 통화, 언어, 블로키 아이덴티콘"
   },
   "generatingTransaction": {
     "message": "트랜잭션 생성 중"
@@ -892,10 +892,10 @@
     "message": "수신 주소가 올바르지 않습니다"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "알려진 계약 주소."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "ETH 네트워크 아님, 소문자로 설정"
   },
   "invalidGasParams": {
     "message": "올바르지 않은 가스 입력값"
@@ -938,7 +938,7 @@
     "message": "새 계정을 추가하려면 최소 마지막 계정을 사용해야 합니다."
   },
   "legal": {
-    "message": "Legal"
+    "message": "합법적"
   },
   "lessThanMax": {
     "message": "$1 이하여야합니다.",
@@ -966,7 +966,7 @@
     "message": "토큰 로딩 중..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "더 많이 로딩"
   },
   "localhost": {
     "message": "로컬호스트 8545"
@@ -990,7 +990,7 @@
     "message": "이 구문을 기억하세요."
   },
   "memo": {
-    "message": "memo"
+    "message": "메모"
   },
   "menu": {
     "message": "메뉴"
@@ -1014,22 +1014,22 @@
     "message": "당신의 토큰이 보이지 않나요?"
   },
   "minutesShorthand": {
-    "message": "Min"
+    "message": "최소"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "모바일로 계정을 동기화"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "본인 여부를 확인하기 위해 비밀번호를 입력해 주세요!"
   },
   "myAccounts": {
     "message": "내 계정"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "나의 월렛 계정"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "MetaMask가 생성한 모든 계정이 이 섹션에 자동으로 추가됩니다."
   },
   "mustSelectOne": {
     "message": "적어도 하나의 토큰을 선택하세요."
@@ -1049,13 +1049,13 @@
     "message": "음수값의 이더를 보낼 수 없습니다."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "네트워크 이름"
   },
   "networks": {
     "message": "네트워크"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "사용자 정의 RPC 네트워크 추가 및 수정"
   },
   "nevermind": {
     "message": "상관 안 함"
@@ -1064,14 +1064,14 @@
     "message": "새 계정"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "새로운 주소가 감지됐습니다! 여기를 클릭해 주수록에 추가하세요."
   },
   "newAccountNumberName": {
     "message": "새 계정 $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "새로운 연락처"
   },
   "newContract": {
     "message": "새 컨트랙트"
@@ -1095,16 +1095,16 @@
     "message": "아니요, 이미 시드 구문을 가지고 있습니다."
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "키를 보호하세요!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "시드 문구에 주의하세요 - MetaMask를 모방하려고 한 웹사이트들이 신고됐습니다. MetaMask는 절대로 시드 문구를 묻지 않습니다!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "시드 문구를 안전하게 유지하세요. 수상한 점을 발견하거나, 웹사이트에 확신이 들지 않으면 support@metamask.io로 이메일을 보내 주세요"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "새로운 RPC URL"
   },
   "showAdvancedOptions": {
     "message": "고급 옵션 보기"
@@ -1146,7 +1146,7 @@
     "message": "트랜잭션이 없습니다"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "가스가 충분하지 않습니다"
   },
   "notFound": {
     "message": "찾을 수 없음"
@@ -1161,7 +1161,7 @@
     "message": "컴퓨터의 웹캠을 찾을 수 없습니다. 다시 시도해보세요."
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "~의"
   },
   "oldUI": {
     "message": "구버전 UI"
@@ -1190,13 +1190,13 @@
     "message": "Origin"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "발신"
   },
   "parameters": {
     "message": "매개변수"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "원래 합계"
   },
   "participateInMetaMetrics": {
     "message": "MetaMetrics 참여"
@@ -1284,13 +1284,13 @@
     "message": "받기"
   },
   "recents": {
-    "message": "Recents"
+    "message": "최근"
   },
   "recipientAddress": {
     "message": "받는 주소"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "검색, 공개 주소 (0x), 또는 ENS"
   },
   "refundAddress": {
     "message": "환불받을 주소"
@@ -1317,13 +1317,13 @@
     "message": "계정을 초기화 하는 경우에 트랜잭션 기록이 삭제됩니다."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "네트워크를 삭제할까요?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "정말로 이 네트워크를 삭제하시겠습니까?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "나중에 알려 주세요"
   },
   "restoreFromSeed": {
     "message": "계정을 복구하시겠습니까?"
@@ -1383,7 +1383,7 @@
     "message": "Ropsten 테스트넷"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Goerli 테스트 네트워크"
   },
   "rpc": {
     "message": "사용자 정의 RPC"
@@ -1436,10 +1436,10 @@
     "message": "12개 단어로 구성된 비밀 구문을 입력하여 저장소를 복구하세요."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "보안 및 개인 정보 보호"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "개인 정보 보호 설정 및 월렛 시드 문구"
   },
   "secondsShorthand": {
     "message": "초"
@@ -1502,7 +1502,7 @@
     "message": "메타마스크에서 보기 위한 계정 선택"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "자산 선택"
   },
   "selectAHigherGasFee": {
     "message": "트랜잭션 처리를 가속하기 위해 더 높은 가스 요금을 선택하세요.*"
@@ -1634,31 +1634,31 @@
     "message": "지원 센터에 방문하기"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "기호"
   },
   "symbolBetweenZeroTwelve": {
     "message": "심볼은 0에서 12개 사이의 문자여야 합니다."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "모바일로 동기화"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "모바일과 동기화"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "모바일 기기와 계정 및 정보를 동기화할 수 있습니다. MetaMask 모바일 앱을 열고, \"설정\"으로 간 다음 \"브라우저 확장 프로그램에서 동기화\"를 누르세요"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "처음으로 MetaMask 모바일 앱을 여시는 경우, 전화에 나온 과정을 따르세요."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "MetaMask 모바일 앱으로 이 코드를 스캔하세요"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "이 코드를 스캔할 때 귀하의 화면을 보는 사람이 없는 것을 확인하세요"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "데이터가 성공적으로 동기화됐습니다. MetaMask 모바일 앱을 즐겁게 사용하세요!"
   },
   "takesTooLong": {
     "message": "너무 오래 걸리나요?"
@@ -1752,7 +1752,7 @@
     "message": "트랜잭션 오류. 컨트랙트 코드에서 예외 발생(Exception thrown)."
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "비계약 주소에서 기능을 호출하려고 합니다."
   },
   "transactionFee": {
     "message": "수수료"
@@ -1770,7 +1770,7 @@
     "message": "전송"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "나의 계정 간 이체"
   },
   "transferFrom": {
     "message": "보내는 이"
@@ -1865,19 +1865,19 @@
     "message": "계정 보기"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "익스플로러에서 보기"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "연락처 보기"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "$1에 보기"
   },
   "viewOnEtherscan": {
     "message": "이더스캔에서 보기"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "네트워크 정보 보기"
   },
   "visitWebSite": {
     "message": "웹사이트 방문"
@@ -1916,18 +1916,18 @@
     "message": "개인 시드 구문"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "귀하의 고유한 계정 이미지"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "이 이미지는 귀하의 새로운 계정 번호로 귀하를 위해 프로그램적으로 생성됐습니다. "
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "매번 거래를 확인해야 할 때 이 이미지가 표시됩니다."
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask은 절대 시드 문구를 묻지 않습니다! "
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "가속 시 가스 비용 없음"
   }
 }

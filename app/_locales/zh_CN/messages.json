@@ -1,15 +1,15 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "分享地址"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "是否分享地址，连接 $1 ？"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "向 $1 分享地址可以与 dapp 建立交互。该权限为默认设置，用于保护您的个人隐私。"
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "现已默认启用隐私模式"
   },
   "privacyMode": {
     "message": "隐私模式"
@@ -24,7 +24,7 @@
     "message": "将帐户公开给当前网站。对传统dapps很有用。"
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "聊天功能仅对以太坊网络开放。"
   },
   "confirmExpose": {
     "message": "您确定要将帐户公开到当前网站吗？"
@@ -33,7 +33,7 @@
     "message": "您确定要清除已批准的网站吗？"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "合约交互"
   },
   "clearApprovalDataSuccess": {
     "message": "已批准的网站数据已成功清除。"
@@ -51,7 +51,7 @@
     "message": "拒绝"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 希望关联您的账户"
   },
   "providerRequestInfo": {
     "message": "下面列出的域正在尝试请求访问Ethereum API，以便它可以与以太坊区块链进行交互。在批准Ethereum访问之前，请务必仔细检查您是否在正确的站点上。"
@@ -60,19 +60,19 @@
     "message": "关于"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "版本、技术支持中心和联系方式。"
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "关于我们"
   },
   "accept": {
     "message": "接受"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* 设定更高天燃气价格，加快交易完成进度，提高网络快速处理机率，但无法保证每次均能够实现提速。"
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "正在获取相机使用权限..."
   },
   "account": {
     "message": "账户"
@@ -84,13 +84,13 @@
     "message": "账户名称"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "账户选项"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "您需要选择一个账户 ！"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "活动日志"
   },
   "add": {
     "message": "添加"
@@ -99,37 +99,37 @@
     "message": "地址"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "添加网络"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "添加收件人"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "地址簿"
   },
   "advanced": {
     "message": "高级"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "访问开发者功能，下载状态日志，重置账户，安排测试网络和自定义 RPC 。"
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "高级选项"
   },
   "addCustomToken": {
     "message": "添加自定义代币"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "添加地址簿"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "如：John D."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "添加别名"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "添加以太坊地址"
   },
   "addToken": {
     "message": "添加代币"
@@ -138,19 +138,19 @@
     "message": "添加代币"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "添加推荐代币"
   },
   "addAcquiredTokens": {
     "message": "在Metamask上添加已用的代币"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "我同意该《服务条款》规定"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "全部完成"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "不，我已经有一个种子密语了。"
   },
   "amount": {
     "message": "数量"
@@ -159,7 +159,7 @@
     "message": "数量 + Gas"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "金额 + 税费"
   },
   "appDescription": {
     "message": "以太坊浏览器插件",
@@ -176,52 +176,52 @@
     "message": "批准"
   },
   "asset": {
-    "message": "Asset"
+    "message": "资产"
   },
   "attemptingConnect": {
     "message": "正在尝试连接区块链。"
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "想要取消吗？"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "确认提交该操作无法保证能够成功取消您的原始交易。如果取消成功，您将被收取上述交易费用。"
   },
   "attributions": {
     "message": "来源"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "自动注销计时器（分钟）"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "请设置 MetaMask 自动注销前的空闲时间（以分钟为单位）"
   },
   "available": {
     "message": "可用"
   },
   "average": {
-    "message": "Average"
+    "message": "平均值"
   },
   "back": {
     "message": "返回"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "恢复所有设置"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "请备份您的私密恢复代码，保证个人钱包和资金安全。"
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "如果不慎丢失个人设备，忘记密码，或者需要重新安装 MetaMask，亦或是需在另一台设备上打开钱包，请使用该保密码恢复个人钱包数据。"
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "立即备份"
   },
   "balance": {
     "message": "余额："
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "余额可能已过期"
   },
   "balances": {
     "message": "代币余额"
@@ -240,10 +240,10 @@
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "屏蔽管理器"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "通过 $1 查看账户",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
@@ -253,7 +253,7 @@
     "message": "Borrow With Dharma (Beta)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "您的浏览器不支持该功能…"
   },
   "builtInCalifornia": {
     "message": "MetaMask在加利福尼亚设计和制造。"
@@ -268,10 +268,10 @@
     "message": "Coinbase 是世界上最流行的买卖比特币，以太币和莱特币的交易所。"
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "使用 Wyre 购买 ETH"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "您可以通过 Wyre 使用信用卡将 ETH 存入您的 MetaMask 账户。"
   },
   "buyCoinSwitch": {
     "message": "在CoinSwitch上购买"
@@ -280,7 +280,7 @@
     "message": "CoinSwitch是以最优惠的价格交换超过300种加密货币的一站式目的地。"
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "字节"
   },
   "off": {
     "message": "关"
@@ -292,25 +292,25 @@
     "message": "启用"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "屏蔽管理器 URL（选填）"
   },
   "cancel": {
     "message": "取消"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "取消操作"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "取消天然气费"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "已取消"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "取消所有 $1 交易"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "链 ID"
   },
   "classicInterface": {
     "message": "使用经典接口"
@@ -319,25 +319,25 @@
     "message": "点击复制"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "点击 $1 将其加入您的个人账户"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "点击此处显示密语"
   },
   "close": {
     "message": "关闭"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "您需要通过 Google Chrome 浏览器使用 MetaMask ，连接个人硬件钱包。"
   },
   "company": {
-    "message": "Company"
+    "message": "公司"
   },
   "confirm": {
     "message": "确认"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "确认时间（秒）"
   },
   "confirmed": {
     "message": "确认"
@@ -349,13 +349,13 @@
     "message": "确认密码"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "请确认您的私密备份密语"
   },
   "confirmTransaction": {
     "message": "确认交易"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "恭喜"
   },
   "connectHardwareWallet": {
     "message": "链接硬件钱包"
@@ -364,13 +364,13 @@
     "message": "连接"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "关联请求"
   },
   "connecting": {
     "message": "正在连接…"
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "正在连接 $1"
   },
   "connectingToKovan": {
     "message": "正在连接到Kovan测试网络"
@@ -385,25 +385,25 @@
     "message": "正在连接到Rinkeby测试网络"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "正在连接 Localhost 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "正在连接 Goerli 测试网络"
   },
   "connectingToUnknown": {
     "message": "正在连接到未知网络"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "连接 Ledger"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "连接 Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "联系人列表"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "添加、编辑、删除和管理您的联系人"
   },
   "continue": {
     "message": "继续"
@@ -412,7 +412,7 @@
     "message": "继续访问 Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "继续前往 Wyre"
   },
   "continueToCoinSwitch": {
     "message": "继续访问 CoinSwitch"
@@ -439,13 +439,13 @@
     "message": "复制"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "将地址复制到剪贴板"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "复制交易 ID"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "交易 ID 复制成功"
   },
   "copyToClipboard": {
     "message": "复制到剪贴板"
@@ -463,23 +463,23 @@
     "message": "创建账户"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "创建钱包"
   },
   "createDen": {
     "message": "创建"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "创建密码"
   },
   "crypto": {
     "message": "加密",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "货币兑换"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "当前语言"
   },
   "currentNetwork": {
     "message": "当前网络"
@@ -491,7 +491,7 @@
     "message": "自定义 Gas"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "提升费用可能会缩短处理时间，但不保证绝对有效。"
   },
   "customToken": {
     "message": "自定义代币"
@@ -515,7 +515,7 @@
     "message": "删除"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "删除账户"
   },
   "denExplainer": {
     "message": "你的 DEN 是存储在 MetaMask 中的已加密密码。"
@@ -563,16 +563,16 @@
     "message": "完成"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "下载 Google Chrome 浏览器"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "下载私密备份密语，并使用外部加密硬盘或存储媒介妥善保管。"
   },
   "downloadStateLogs": {
     "message": "下载日志"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "没有硬件钱包？"
   },
   "dropped": {
     "message": "丢弃"
@@ -581,16 +581,16 @@
     "message": "编辑"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "编辑网络"
   },
   "editAccountName": {
     "message": "编辑账户名称"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "编辑联系人"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "交易变更"
   },
   "emailUs": {
     "message": "联系我们"
@@ -599,46 +599,46 @@
     "message": "加密你的新 DEN"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "您已通过测试 - 请妥善保管你的种子密语。这是您的责任！"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "安全保存小技巧"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "在多处保存备份数据。"
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "绝不向任何分享该密语。"
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "谨防网络钓鱼！MetaMask 绝不会主动要求您提供个人种子密语。"
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "如果您需要再次备份个人种子密语，请通过设置 -> 安全选项完成该操作。"
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "如果您仍存有疑问或发现任何可疑的地方，请发送电子邮件至 support@metamask.io 进行咨询。"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask 无法恢复您的种子密语。了解更多。"
   },
   "endOfFlowMessage9": {
     "message": "了解详情。"
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "全部完成"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "未找到 ENS 名称"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "ENS 名称登记错误"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "未在当前网络找到 ENS 名称。请尝试切换至主以太坊网络。"
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "输入别名"
   },
   "enterPassword": {
     "message": "请输入密码"
@@ -653,19 +653,19 @@
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "以太坊公共地址"
   },
   "etherscanView": {
     "message": "在 Etherscan 上查看账户"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "预估处理时间"
   },
   "exchangeRate": {
     "message": "兑换比率"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "展开视图"
   },
   "exportPrivateKey": {
     "message": "导出私钥"
@@ -680,13 +680,13 @@
     "message": "快"
   },
   "faster": {
-    "message": "Faster"
+    "message": "快捷操作"
   },
   "fastest": {
     "message": "最快"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "实时交易费预测"
   },
   "fiat": {
     "message": "FIAT",
@@ -712,7 +712,7 @@
     "message": "来自 ShapeShift"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "功能类型"
   },
   "gas": {
     "message": "Gas",
@@ -728,7 +728,7 @@
     "message": "我们根据网络成功率计算建议的 Gas Limit。"
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "天然气限制即您个人希望购买的最大单位数量。"
   },
   "gasLimitRequired": {
     "message": "Gas Limit 必填"
@@ -737,7 +737,7 @@
     "message": "Gas Limit 至少要 21000"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "已使用天然气量"
   },
   "generatingSeed": {
     "message": "生成密钥中..."
@@ -746,13 +746,13 @@
     "message": "Gas Price (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "天然气价格极低"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "天然气价格将详细列明每个付费天然气单位的以太币金额。"
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "天然气价格"
   },
   "gasPriceCalculation": {
     "message": "我们根据网络成功率计算建议的 Gas Price"
@@ -761,10 +761,10 @@
     "message": "Gas Price 必填"
   },
   "general": {
-    "message": "General"
+    "message": "通用"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "货币兑换、主要货币、语言和块状身份头像"
   },
   "generatingTransaction": {
     "message": "生成 交易"
@@ -777,7 +777,7 @@
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "获取帮助。"
   },
   "getStarted": {
     "message": "开始使用"
@@ -787,22 +787,22 @@
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "我们很高兴与您见面。"
   },
   "hardware": {
-    "message": "hardware"
+    "message": "硬件"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "已连接硬件钱包"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "连接硬件钱包"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "请选择希望用于 MetaMask 的硬件钱包"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "连接出现问题？"
   },
   "here": {
     "message": "这里",
@@ -812,7 +812,7 @@
     "message": "Here's a list!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "十六进制数据"
   },
   "hide": {
     "message": "隐藏"
@@ -843,7 +843,7 @@
     "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "使用种子密语导入账户"
   },
   "importAnAccount": {
     "message": "导入一个账户"
@@ -852,20 +852,20 @@
     "message": "导入存在的 DEN"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "导入钱包"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "请使用 12 字种子密语导入现有钱包"
   },
   "imported": {
     "message": "已导入",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "使用帐号种子密语导入"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "使用种子片语导入"
   },
   "info": {
     "message": "信息"
@@ -874,10 +874,10 @@
     "message": "信息 & 帮助"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "您的首次交易已通过网络完成确认。请点击“确定”返回。"
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "余额不足。"
   },
   "insufficientFunds": {
     "message": "余额不足."
@@ -892,10 +892,10 @@
     "message": "收款地址不合法"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "已知联系人地址。"
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "非 ETH 网络，设置为小写"
   },
   "invalidGasParams": {
     "message": "无效 Gas 参数"
@@ -910,7 +910,7 @@
     "message": "无效 RPC URI"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "无效种子密语"
   },
   "jsonFail": {
     "message": "Something went wrong. Please make sure your JSON file is properly formatted."
@@ -935,17 +935,17 @@
     "message": "查看更多."
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "请在新增账户前，确认添加上一个账户。"
   },
   "legal": {
-    "message": "Legal"
+    "message": "法律"
   },
   "lessThanMax": {
     "message": "必须小于或等于 $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "是的。立即开始设置！"
   },
   "likeToAddTokens": {
     "message": "你想添加这些代币吗？"
@@ -957,7 +957,7 @@
     "message": "限制"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "实时天然气价格预测"
   },
   "loading": {
     "message": "加载中..."
@@ -966,7 +966,7 @@
     "message": "加载代币中..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "加载更多"
   },
   "localhost": {
     "message": "Localhost 8545"
@@ -987,13 +987,13 @@
     "message": "以太坊主网络"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "记住该密语。"
   },
   "memo": {
-    "message": "memo"
+    "message": "备忘录"
   },
   "menu": {
-    "message": "Menu"
+    "message": "菜单"
   },
   "message": {
     "message": "消息"
@@ -1005,31 +1005,31 @@
     "message": "MetaMask 助记词"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "MetaMask 版本"
   },
   "min": {
     "message": "最小"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "无法看到您的代币？"
   },
   "minutesShorthand": {
-    "message": "Min"
+    "message": "最小"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "通过移动设备同步账户"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "请输入密码确认个人身份！"
   },
   "myAccounts": {
     "message": "My Accounts"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "我的钱包账户"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "所有已创建的 MetaMask 账户将自动添加到该部分。"
   },
   "mustSelectOne": {
     "message": "至少选择一种代币."
@@ -1049,29 +1049,29 @@
     "message": "Can not send negative amounts of ETH."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "网络名称"
   },
   "networks": {
     "message": "网络"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "添加和编辑自定义 RPC 网络"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "无所谓"
   },
   "newAccount": {
     "message": "新账户"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "检测到新地址！请点击此处添加至您的地址簿。"
   },
   "newAccountNumberName": {
     "message": "账户 $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "新增联系人"
   },
   "newContract": {
     "message": "新合约"
@@ -1086,46 +1086,46 @@
     "message": "新收款人"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "新增网络"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "新增至 MetaMask？"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "不，我已经有一个种子密语了。"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "妥善保管您的密钥！"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "请注意个人种子密语安全。报告显示有多个网站企图伪造 MetaMask。MetaMask 绝不会要求您提供个人种子密语！"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "请妥善保管您的密语。如果您发现任何可疑的地方，或无法确认网络安全性，请发送电子邮件至 support@metamask.io 进行咨询"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "新增 RPC URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "显示高级选项"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "隐藏高级选项"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "ChainID（选填）"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "符号（选填）"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "昵称（选填）"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "新增合计"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "新增交易费用"
   },
   "next": {
     "message": "下一步"
@@ -1137,7 +1137,7 @@
     "message": "没有已收的存款"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "无可用兑换率"
   },
   "noTransactionHistory": {
     "message": "没有交易历史。"
@@ -1146,7 +1146,7 @@
     "message": "没有交易"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "天然气不足"
   },
   "notFound": {
     "message": "未找到"
@@ -1155,13 +1155,13 @@
     "message": "未开始"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "未找到网络摄像头"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "找不到您的个人电脑网络摄像头。请重试。"
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "/"
   },
   "oldUI": {
     "message": "旧版界面"
@@ -1173,36 +1173,36 @@
     "message": "只发送 ETH 给一个以太坊地址"
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "仅向以太坊账户地址发送 $1。",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "在标签中打开"
   },
   "or": {
     "message": "或",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "订购 Trezor 或 Ledger ，将个人资金进行冷存储"
   },
   "origin": {
     "message": "来源"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "开支"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "参数"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "原值合计"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "加入 MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "加入 MetaMetrics ，帮助我们改善 MetaMask 服务"
   },
   "password": {
     "message": "密码"
@@ -1232,7 +1232,7 @@
     "message": "请粘贴你的助记词！"
   },
   "pending": {
-    "message": "pending"
+    "message": "待处理"
   },
   "personalAddressDetected": {
     "message": "检测到个人地址。请输入代币合约地址。"
@@ -1244,13 +1244,13 @@
     "message": "常用代币"
   },
   "prev": {
-    "message": "Prev"
+    "message": "上一个"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "主要货币"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "请选择“本地”，优先显示当地货币链价值（如 ETH ）。请选择“法定”，优先显示选定法定货币价值。"
   },
   "privacyMsg": {
     "message": "隐私政策"
@@ -1284,25 +1284,25 @@
     "message": "接收"
   },
   "recents": {
-    "message": "Recents"
+    "message": "最近记录"
   },
   "recipientAddress": {
     "message": "接收地址"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "查找、公用地址 (0x) 或 ENS"
   },
   "refundAddress": {
     "message": "你的退款地址"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "拒绝所有"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "拒绝 $1 笔交易"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "您将指拒绝 $1 笔交易。"
   },
   "rejected": {
     "message": "拒绝"
@@ -1314,16 +1314,16 @@
     "message": "重设账户"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "重置账户后，将清除您的个人交易历史记录。"
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "是否删除网络？"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "您是否确认要删除该网络？"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "稍后提醒"
   },
   "restoreFromSeed": {
     "message": "从助记词还原"
@@ -1332,10 +1332,10 @@
     "message": "还原保险柜"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "使用种子密语恢复个人账户"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "等待确认的请求"
   },
   "required": {
     "message": "必填"
@@ -1371,10 +1371,10 @@
     "message": "移除帐号"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "该账户已从您的钱包中删除。请在继续后续操作前，确认您是否已拥有该导入账户的原始种子密语或个人密钥。您可以通过账户下拉菜单再次导入或创建账户。"
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "是否准备连接？"
   },
   "rinkeby": {
     "message": "Rinkeby 测试网络"
@@ -1383,7 +1383,7 @@
     "message": "Ropsten 测试网络"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Goerli 测试网络"
   },
   "rpc": {
     "message": "自定义 RPC"
@@ -1399,7 +1399,7 @@
     "message": "慢"
   },
   "slower": {
-    "message": "Slower"
+    "message": "降速"
   },
   "saveAsCsvFile": {
     "message": "另存为CSV文件"
@@ -1412,10 +1412,10 @@
     "message": "保存助记词为文件"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "请将二维码置于镜头前"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "扫描二维码"
   },
   "search": {
     "message": "搜索"
@@ -1424,28 +1424,28 @@
     "message": "搜索结果"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "私密备份密语"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "您的个人私密备份密语可以帮助您轻松备份和恢复个人账户。"
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "警告：切勿向他人透露您的备份密语。任何人一旦持有该密语，即可取走您的以太币。"
   },
   "secretPhrase": {
     "message": "输入12位助记词以恢复金库."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "安全与隐私"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "隐私设置和钱包种子密语"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "秒"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "用空格分隔每个单词"
   },
   "seedPhraseReq": {
     "message": "助记词为12个单词"
@@ -1457,10 +1457,10 @@
     "message": "选择货币"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "请选择每一个片语，以确保片语正确性。"
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "选择语言区域"
   },
   "selectService": {
     "message": "选择服务"
@@ -1472,7 +1472,7 @@
     "message": "发送"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "发送金额"
   },
   "sendETH": {
     "message": "发送 ETH"
@@ -1481,37 +1481,37 @@
     "message": "发送 代币"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "以太币已发送"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "代币已发送"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "用空格分隔每个单词"
   },
   "searchTokens": {
     "message": "搜索代币"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "选择地址"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "选择账户"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "请通过 MetaMask 选择需要查看的账户"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "选择资产"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "请选择价格稍高的天然气费，加快交易处理速度。*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "选择 HD 路径"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "如果下列账户中没有您当前所持有的 Ledger 账户，请将路径切换至“Legacy (MEW / MyCrypto)”"
   },
   "sendTokensAnywhere": {
     "message": "将代币发送给拥有以太坊地址的任何人"
@@ -1523,16 +1523,16 @@
     "message": "使用 Shapeshift 购买"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "高级天然气控制"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "请选择该选项，直接在发送和确认页面显示天然气价格和限制管理。"
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "在 Testnets 上显示兑换率"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "请选择该选项，在 Testnets 上显示法定兑换率"
   },
   "showPrivateKeys": {
     "message": "显示私钥"
@@ -1541,10 +1541,10 @@
     "message": "显示二维码"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "显示十六进制数据"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "请选择该选项，在发送页面显示十六进制数据字域"
   },
   "sign": {
     "message": "签名"
@@ -1568,28 +1568,28 @@
     "message": "签名已请求"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "哎呀！出问题了。"
   },
   "spaceBetween": {
     "message": "单词之间只能有一个空格"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "加速"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "加速交易"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "提高您的天然气价格，覆盖个人交易，加快处理速度"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "加速该取消操作"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "加速该交易操作"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "切换网络"
   },
   "status": {
     "message": "状态"
@@ -1604,25 +1604,25 @@
     "message": "检索状态日志时出错。"
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. 连接硬件钱包"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "直接将您的硬件钱包与个人电脑相连。"
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. 选择账户"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "请选择您想查看的账户。每次仅限选择一个。"
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. 开始体验 dApps 和更多功能！"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "使用您的硬件钱包，操作与以太坊账户制作相同。登录 dApps，发送 ETH ，购买和保存 ERC20 代币和诸如 CryptoKitties 等不可替代代币。"
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "通过如 1Password 等密码管家保存该密语。"
   },
   "submit": {
     "message": "提交"
@@ -1634,31 +1634,31 @@
     "message": "访问我们的支持中心"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "符号"
   },
   "symbolBetweenZeroTwelve": {
     "message": "符号应该有0-12个字符."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "使用移动设备进行同步"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "使用移动设备进行同步"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "您可以使用个人移动设备同步个人账户与信息。打开 MetaMask 移动应用程序，进入“设置”选项，点击“通过浏览器扩展程序同步”"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "如果您是首次启用 MetaMask 移动应用程序，请通过个人手机完成如下操作。"
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "使用 MetaMask 应用程序扫描编码"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "扫描编码时，请确保身边无其他人正在查看您的显示页面"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "您的数据已同步成功。尽情体验 MetaMask 应用程序！"
   },
   "takesTooLong": {
     "message": "花费太长时间？"
@@ -1670,7 +1670,7 @@
     "message": "测试水管"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "该操作将为您创建新钱包和种子密语"
   },
   "tips": {
     "message": "赏金"
@@ -1683,7 +1683,7 @@
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "代币"
   },
   "tokenAddress": {
     "message": "代币地址"
@@ -1695,7 +1695,7 @@
     "message": "代币余额："
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "代币联系人地址"
   },
   "tokenSelection": {
     "message": "搜索代币或从我们的常用代币列表中进行选择"
@@ -1710,40 +1710,40 @@
     "message": "总量"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "交易"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "交易已通过 $2 确认。"
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "在 $2 生成的交易单，其交易额为 $1 。"
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "交易 $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "在 $2 终止的交易单。"
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "在 $2 提交的交易单，其天然气费为 $1 。"
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "在 $2 重新提交的交易单，其天然气费增加至 $1"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "交易单已于 $2 更新。"
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "在 $2 更新交易单，其天然气费为 $1 。"
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "交易报错。"
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "在 $2 尝试取消交易，其天然气费为 $1"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "成功在 $2 取消交易单"
   },
   "transactions": {
     "message": "交易"
@@ -1752,10 +1752,10 @@
     "message": "交易出错. 合约代码执行异常."
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "正在尝试调用非联系人地址功能。"
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "交易费"
   },
   "transactionMemo": {
     "message": "交易备注(可选)"
@@ -1764,22 +1764,22 @@
     "message": "交易 number"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "交易时间"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "转账"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "在个人账户间转账"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "转出"
   },
   "transfers": {
     "message": "交易"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "TREZOR 硬件钱包"
   },
   "troubleTokenBalances": {
     "message": "我们无法加载您的代币余额。你可以查看它们",
@@ -1795,7 +1795,7 @@
     "message": "输入你的密码"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "欢迎使用全新的 MetaMask 界面。如果您对界面设计或功能请求有任何建议，请与我们的技术支持团队取得联系，或通过 GitHub 联系我们。"
   },
   "uiWelcome": {
     "message": "欢迎使用新版界面 （Beta）"
@@ -1810,7 +1810,7 @@
     "message": "不可用"
   },
   "units": {
-    "message": "units"
+    "message": "单位"
   },
   "unknown": {
     "message": "未知"
@@ -1822,22 +1822,22 @@
     "message": "未知网络ID"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "错误：我们无法识别该二维码"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "哎呀！出问题了…"
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "尝试获取相机使用权限时报错。请重试…"
   },
   "unlock": {
     "message": "解锁"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "分散网络待命中"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "已更新 $1"
   },
   "uriErrorMsg": {
     "message": "URIs require the appropriate HTTP/HTTPS prefix."
@@ -1865,19 +1865,19 @@
     "message": "查看账户"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "在管理器中查看"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "查看联系人"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "在 $1 查看"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "在 Etherscan 上查看"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "查看网络信息"
   },
   "visitWebSite": {
     "message": "访问我们的网站"
@@ -1898,13 +1898,13 @@
     "message": "这是什么？"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "请将该密语记录在纸上，并保存在安全的地方。如果希望提升信息安全性，请将信息记录在多张纸上，并分别保存在 2 - 3 个不同的地方。"
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "没错。不妨一试"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "您需要开启相机访问权限，才能使用该功能。"
   },
   "yourSigRequested": {
     "message": "正在请求你的签名"
@@ -1916,18 +1916,18 @@
     "message": "你的私有助记词"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "您的特设账户图像"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "系统根据您的新账户号以编程方式为您生成该图像。"
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "每次确认交易时均将看到该图像。"
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask 绝不会要求您提供个人种子密语！"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "天然气价格加速上涨"
   }
 }

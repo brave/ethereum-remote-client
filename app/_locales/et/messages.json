@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "Jaga aadressi"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "Jagage oma aadressi, et luua ühendus $1?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "Aadressi jagamine lehega $1 võimaldab teil selle dAPPiga suhelda. See õigus kaitseb vaikimisi teie privaatsust."
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "Privaatsusrežiim on nüüd vaikimisi lubatud"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "Privaatsusrežiim"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "Veebisaidid peavad teie konto teabe nägemiseks ligipääsu taotlema."
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "Avalda kontod"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "Avaldage kontod praegustele veebilehtedele. Kasulik pärandus dAppside puhul."
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "Tabel on saadaval vaid Ethereumi võrkudes."
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "Kas soovite kindlasti oma kontod praegustele veebilehtedele avaldada?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "Kas soovite kindlasti kinnitatud veebisaidid kustutada?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "Lepingu suhtlus"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "Kinnitatud veebisaidi andmed edukalt kustutatud."
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "Privaatsusandmed"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "Tühjenda privaatsusandmed, et kõik veebisaidid peaksid jälle taotlema ligipääsu konto teabe vaatamiseks."
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "Tühjenda privaatsusandmed"
   },
   "reject": {
     "message": "Lükka tagasi"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 soovib teie kontoga ühenduse luua"
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "See sait taotleb juurdepääsu teie praeguse konto aadressi vaatamiseks. Veenduge alati, et usaldate saite, millega suhtlete."
   },
   "about": {
     "message": "Teave"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "Versioon, tugikeskus ja kontaktteave."
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "Meist"
   },
   "accept": {
     "message": "Nõustu"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* Tehingu kiirendamine kõrgemate gaasihindadega suurendab võimalust kiiremaks võrgus töötlemiseks, kuid see ei ole alati tagatud."
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "Kaamerale ligipääs..."
   },
   "account": {
     "message": "Konto"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "Konto üksikasjad"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "Konto nimi"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "Konto valikud"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "Peate valima konto!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "tegevuste logi"
   },
   "add": {
     "message": "Lisa"
@@ -99,70 +99,70 @@
     "message": "Aadress"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "Lisage võrk"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "Lisa saaja"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "Aadressiraamat"
   },
   "advanced": {
     "message": "Täpsemad"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "Juurdepääs arendaja funktsioonidele, olekulogide allalaadimine, konto lähtestamine, testvõrkude ja kohandatud RPC-de seadistamine."
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "Täpsemad suvandid"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "Lisage kohandatud luba"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "Lisage aadressiraamatusse"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "nt John D."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "Lisage alias"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "Lisage Etherumi aadress"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "Lisage luba"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "Lisa lube"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "Lisa soovitatud lube"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "Lisage load, mis olete MetaMaskiga saanud"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "Nõustun teenusetingimustega"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "Valmis"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "Ei, mul on juba seemnefraas"
   },
   "amount": {
     "message": "Summa"
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "Kogus + gaas"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "Summa + maksutasu"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "Ethereumi rahakott teie lehitsejas",
     "description": "The description of the application"
   },
   "appName": {
@@ -170,117 +170,117 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "Kinnita"
   },
   "approved": {
-    "message": "Approved"
+    "message": "Kinnitatud\n"
   },
   "asset": {
-    "message": "Asset"
+    "message": "Vara"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "Plokiahelaga ühenduse loomise katse."
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "Tühistamiskatse?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "Selle katse esitamine ei taga teie originaaltehingu tühistamist. Kui tühistamiskatse on edukas, võetakse teilt ülaltoodud tehingutasu."
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "Omistamised"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "Automaatse väljalogimise taimer (minutites)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "Seadistage jõudeolek minutites, enne kui MetaMask automaatselt välja logib"
   },
   "available": {
     "message": "Saadaval"
   },
   "average": {
-    "message": "Average"
+    "message": "Keskmine"
   },
   "back": {
     "message": "Tagasi"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "Tagasi kõigile"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Varundage oma salajane taastamisvõti, et oma rahakott ja vahendid turvalisena hoida."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "See salakood on vajalik teie rahakoti taastamiseks, kui kaotate oma seadme, unustate parooli, peate MetaMaski uuesti alla laadima, või kui soovite avada oma rahakoti mõnel teisel seadmel."
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "Varunda kohe"
   },
   "balance": {
-    "message": "Balance"
+    "message": "Saldo"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "Saldo võib olla aegunud"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "Loasaldo(d)"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "Ebapiisav kontojääk praeguse gaasi kogusumma jaoks"
   },
   "basic": {
     "message": "Põhiseaded"
   },
   "beta": {
-    "message": "BETA"
+    "message": "BEETAVERSIOON"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "peab olema suurem või võrdne $1 ja väiksem või võrdne $2.",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "Blokeeri Explorer"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "Vaata kontot $1",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "Kasuta Blockies Identiconi"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "Dharmaga laenamine (beetaversioon)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "Teie lehitsejat ei toetata..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "MetaMask on projekteeritud ja loodud Californias."
   },
   "buy": {
-    "message": "Buy"
+    "message": "Osta"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "Ostmine Coinbase'is"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Coinbase on maailma populaarseim viis Bitcoini, Ethereumi ja Litecoini ostmiseks ja müümiseks."
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Ostke ETH-d Wyre'iga"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre võimaldab kasutada krediitkaarti, et teha ETH sissemakse otse MetaMaski kontole."
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "Osta CoinSwitchil"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "CoinSwitch on ühe akna sihtpunkt enama kui 300 krüptoraha vahetamiseks parima hinnaga."
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "Baidid"
   },
   "off": {
     "message": "Väljas"
@@ -292,269 +292,269 @@
     "message": "Sees"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "Blokeeri Exploreri URL (valikuline)"
   },
   "cancel": {
     "message": "Tühista"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "Tühista katse"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "Tühistamise gaasitasu"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "Tühistatud"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "Tühistage kõik $1 tehingud"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "Ahela ID"
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "Kasutage klassikalist liidest"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "Klõpsake kopeerimiseks"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "Klõpsake valikul $1, et need oma kontole lisada"
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "Klõpsake salasõnade kuvamiseks"
   },
   "close": {
     "message": "Sule"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "Riistvararahakoti ühendamiseks peate kasutama MetaMaski Google Chrome'is."
   },
   "company": {
-    "message": "Company"
+    "message": "Ettevõte"
   },
   "confirm": {
     "message": "Kinnita"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "Kinnitamise aeg (s)"
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "Kinnitatud"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "Kinnita leping"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "Kinnitage parool"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "Kinnitage oma salajane varundamisfraas"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "Kinnitage tehing"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "Palju õnne!"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "Ühendage riistvara rahakott"
   },
   "connect": {
     "message": "Ühendamine"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "Ühenduse taotlus"
   },
   "connecting": {
     "message": "Ühendamine ..."
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "Ühenduse loomine $1"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "Ühendamine Kovani testvõrguga"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "Ühenduse loomine peamise Etherumi võrguga"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "Ühendamine Ropsteni testvõrguga"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "Ühendamine Rinkeby testvõrguga"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "Ühenduse loomine Localhost 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "Ühendamine Goerli testvõrguga"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "Ühendamine tundmatu võrguga"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "Ühenda pearaamatuga"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "Ühenda Trezoriga"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "Kontaktiloend"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "Lisage, muutke, eemaldage ja hallake oma kontakte."
   },
   "continue": {
     "message": "Jätka"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "Avage Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Ava Wyre"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "Avage ConSwitch"
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "Lepingu juurutamine"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "Teisendamine on pooleli"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "Kopeeritud"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "Kopeeritud lõikelaule"
   },
   "copiedExclamation": {
     "message": "Kopeeritud!"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "Kopeerisin selle turvalisse kohta"
   },
   "copy": {
     "message": "Kopeeri"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "Kopeeri aadress lõikelauale"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "Kopeeri tehingu ID"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "Kopeeritud tehingu ID"
   },
   "copyToClipboard": {
     "message": "Kopeeri lõikelauale"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "Kopeeri"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "See on teie privaatne võti (klõpsake kopeerimiseks)"
   },
   "create": {
     "message": "Loo"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "Loo konto"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "Loo rahakott"
   },
   "createDen": {
     "message": "Loo"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "Loo parool"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "Krüpto",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "Valuuta teisendamine"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "Praegune keel"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "Praegune võrk"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "Praegune RPC"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "Gaasi kohandamine"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "Tasu suurendamine võib töötlemisaegu vähendada, kuid see ei ole tagatud."
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "Kohandatud luba"
   },
   "customize": {
     "message": "Kohanda"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "Kohandatud RPC"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "Kümnendkohad peavad olema vähemalt 0 ja mitte üle 36."
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "Täpsuse kümnendkohad"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "Etheri tehingute vaikevõrk on peavõrk."
   },
   "delete": {
     "message": "Kustuta"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "Kustuta konto"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "Teie DEN on teie parooliga krüptitud salvestusruum MetaMaskis."
   },
   "deposit": {
     "message": "Sissemakse"
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "Hoiustage oma BTC-d järgmisel aadressil:"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "Eetri sissemakse"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Eetri sissemakse"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "Hoius Fiatiga"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "Sissemakse teistelt kontolt"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "Sissemakse ShapeShiftiga"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "Kui teil on teisi krüptorahasid, saate vahetada ja teha eetri sissemakseid otse oma MetaMaski rahakotti. Konto ei ole vajalik."
   },
   "details": {
     "message": "Üksikasjad"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "Otsene sissemakse"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Eetri otsene sissemakse"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "Kui teil on juba veidi eetrit, on kiirem viis eetri rahakotti saamiseks otsene sissemakse."
   },
   "dismiss": {
     "message": "Loobu"
@@ -563,370 +563,370 @@
     "message": "Valmis"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "Laadige alla Google Chrome"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "Laadige see salajane varundusfraas alla ja hoidke seda turvaliselt välisel krüpteeritud kõvakettal või andmekandjal."
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "Olekulogide allalaadimine"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "Teil ei ole riistvara rahakotti?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "Vabastatud"
   },
   "edit": {
     "message": "Muuda"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "Võrgu redigeerimine"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "Muuda konto nime"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "Muuda kontakti"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "Muutke oma tehingut"
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "Saatke meile e-kiri!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "Uue DEN-i krüptimine"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "Läbisite kontrolli – hoidke seemnefraasi turvaliselt, see on teie vastutusel!"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "Nõuandeid selle turvaliseks hoiustamiseks"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "Salvestage varukoopia erinevatesse kohtadesse."
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "Ärge jagage fraasi mitte kellegagi."
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "Olge ettevaatlik andmepüügi osas! MetaMask ei küsi kunagi spontaanselt teie seemnefraasi."
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "Kui peate oma seemnefraasi uuesti varundama, leiate selle valikust Settings (Seaded) -> Security (Turvalisus)."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "Kui teil on küsimusi või näete midagi kahtlast, kirjutage meile support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "Metamask ei saa teie seemnefraasi taastada. Lisateave."
   },
   "endOfFlowMessage9": {
     "message": "Lisateave."
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "Valmis"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "ENSi nime ei leitud"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "Tõrge ENS-i nime registreerimisel"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "ENS-i nime ei leitud praegusest võrgust. Proovige lülituda peamisele Ethereumi võrgule."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "Sisestage alias"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "Sisestage parool"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "Sisestage kinnitamiseks parool"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "Jätkamiseks sisestage parool"
   },
   "eth": {
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Ethereumi avalik aadress"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "Vaadake kontot Etherscanil"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "Eeldatavad töötlemisajad"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "Vahetuskurss"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "Laienda vaadet"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "Ekspordi privaatvõti"
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "Eksportige privaatvõtmeid omal vastutusel."
   },
   "failed": {
-    "message": "Failed"
+    "message": "Nurjus"
   },
   "fast": {
     "message": "Kiire"
   },
   "faster": {
-    "message": "Faster"
+    "message": "Kiiremini"
   },
   "fastest": {
     "message": "Kõige kiirem"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "Tehingutasude prognoosid reaalajas"
   },
   "fiat": {
     "message": "Fiat",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "Faili importimine ei toimi? Klõpsake siia!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "Jälgige meid Twitteris"
   },
   "forgetDevice": {
     "message": "Unusta see seade"
   },
   "from": {
-    "message": "From"
+    "message": "Saatja"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "Saatja ja saaja aadress ei tohi kattuda"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "ShapeShiftist"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "Funktsiooni tüüp"
   },
   "gas": {
-    "message": "Gas",
+    "message": "Gaas",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "Gaasi hind"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "Gaasi ülemmäär"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "Arvutame soovituslikku gaasi ülemmäära vastavalt võrgu efektiivsusele."
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "Gaasi ülemmäär on maksimaalne gaasiühikute hulk, mida olete nõus kulutama."
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "Gaasi ülemmäär on kohustuslik"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "Gaasi ülemmäär peab olema vähemalt 21 000"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "Kasutatud gaasihulk"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "Seemet genereeritakse..."
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "Gaasi hind (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "Gaasi hind on äärmiselt madal"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Gaasi hind näitab eetri hulka, mida olete nõus iga gaasiühiku eest tasuma."
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "Gaasi hind"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "Arvutame soovituslikke gaasihindu vastavalt võrgu efektiivsusele."
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "Gaasi hind on kohustuslik"
   },
   "general": {
-    "message": "General"
+    "message": "Üldine teave"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "Valuutavahetus, põhivaluuta, keel, plokkidest identicon"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "Tehingu genereerimine"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Hankige eetrit"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "Hankige kraanist eetrit $1eest",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "Küsige abi."
   },
   "getStarted": {
     "message": "Alustamine"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "peab olema $1või suurem.",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "Meil on hea meel teid näha."
   },
   "hardware": {
-    "message": "hardware"
+    "message": "riistvara"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "Riistvara rahakott on ühendatud"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "Ühendage riistvara rahakott"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "Valige riistvara rahakott, mida soovite MetaMaskis kasutada"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "Kas ühendamisel esineb probleeme?"
   },
   "here": {
     "message": "siin",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "Siin on nimekiri!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "Hex-andmed"
   },
   "hide": {
     "message": "Peida"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "Peida luba"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "Peida luba?"
   },
   "history": {
     "message": "Ajalugu"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "Kuidas soovite eetrit hoiustada?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "See võimaldab talletada eetrit ja lubasid ning toimib üleminekukohana detsentraliseeritud rakendustesse."
   },
   "import": {
     "message": "Impordi",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "Impordi konto"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "Imporditud kontosid ei seostata teie ainulaadse MetaMaski konto seemnefraasiga. Lugege imporditud kontode kohta lähemalt"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "Impordi seemnefraasiga konto"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "Impordi konto"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "Olemasoleva DENi importimine"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "Importige rahakott"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "Importige 12-sõnalise seemnefraasi abil olemasolev rahakott"
   },
   "imported": {
     "message": "Imporditud",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "Impordi konto seemnefraasi abil"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "Importige seemnefraasiga"
   },
   "info": {
-    "message": "Info"
+    "message": "Teave"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "Teave ja abi"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "Võrk kinnitas teie algse tehingu. Tagasi minemiseks klõpsake OK-nuppu."
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "Ebapiisav kontojääk."
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "Ebapiisavad vahendid."
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "Ebapiisavad load."
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "Kehtetu aadress"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "Saaja aadress on vale"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "Teadaolev lepinguaadress."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "Kehtetu ETH-võrk, kasutage väiketähti"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "Kehtetud gaasiandmed"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "Vigane sisend."
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "Vigane taotlus"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "Vale RPC URL"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "Vigane seemnefraas"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "Midagi läks valesti. Veenduge, et JSON-laiendiga fail on õigesti vormindatud."
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "JSON-laiendiga fail",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "Jälgige lubasid, mille olete MetaMaski kontoga soetanud."
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "Kovani testvõrk"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "Külastage meie teadmusbaasi"
   },
   "max": {
     "message": "Max"
@@ -935,335 +935,335 @@
     "message": "Lisateave"
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "Enne uue konto loomist peate kasutama eelmist kontot."
   },
   "legal": {
-    "message": "Legal"
+    "message": "Juriidiline teave"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "peab olema $1või väiksem.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "Jah, hakkame pihta!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "Kas soovite need load lisada?"
   },
   "links": {
-    "message": "Links"
+    "message": "Lingid"
   },
   "limit": {
-    "message": "Limit"
+    "message": "Ülemmäär"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "Gaasihinna prognoosid reaalajas"
   },
   "loading": {
     "message": "Laadimine..."
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "Lubade laadimine..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "Laadi rohkem"
   },
   "localhost": {
     "message": "Localhost 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "Logi sisse"
   },
   "logout": {
-    "message": "Log out"
+    "message": "Logi välja"
   },
   "loose": {
-    "message": "Loose"
+    "message": "Vaba"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "seemnesõnades on ainult väiketähed"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "Ethereumi põhivõrk"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "Jätke fraas meelde."
   },
   "memo": {
-    "message": "memo"
+    "message": "teatis"
   },
   "menu": {
-    "message": "Menu"
+    "message": "Menüü"
   },
   "message": {
-    "message": "Message"
+    "message": "Sõnum"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "Teid ühendatakse Ethereumi ja detsentraliseeritud võrguga."
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "MetaMaski seemnesõnad"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "MetaMaski versioon"
   },
   "min": {
     "message": "Miinimum"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "Te ei näe oma lube?"
   },
   "minutesShorthand": {
     "message": "Min"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "Sünkroonige kontod mobiiliga"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "Sisestage parool, et saaksime teid tuvastada!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "Minu kontod"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "Minu rahakotikontod"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "Sellesse jaotisesse lisatakse automaatselt kõik teie MetaMaski kontod."
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "Peate valima vähemalt 1 loa."
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "Selleks, et suhelda MetaMaski abil detsentraliseeritud rakendustega, peab teil rahakotis eetrit olema."
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "Peate importimiseks faili valima.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "Valitud faili jaoks peate parooli sisestama.",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "Negatiivset ETHi summat ei saa saata."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "Võrgu nimi"
   },
   "networks": {
-    "message": "Networks"
+    "message": "Võrgud"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "Kohandatud RPC-võrkude lisamine ja muutmine"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "Unusta"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "Uus konto"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "Leiti uus aadress! Klõpsake siia, et see oma aadressiraamatusse lisada."
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "Konto $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "Uus kontakt"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "Uus kontakt"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "Uus parool (vähemalt 8 tähemärki)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "Uus parool (vähemalt 8 tähemärki)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "Uus saaja"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "Uus võrk"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "Pole MetaMaski varem kasutanud?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "Ei, mul on juba seemnefraas"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "Kaitske oma võtmeid!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "Kaitske oma seemnefraasi. Meid on teavitatud veebilehtedest, mis püüavad MetaMaski jäljendada. MetaMask ei küsi teilt kunagi teie seemnefraasi!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "Kaitske oma seemnefraasi. Kui näete midagi kahtlast või pole veebilehe ehtsuses kindel, saatke e-kiri aadressile support@metamask.io"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "Uus RPC URL"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "Näita täpsemaid suvandeid"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "Peida täpsemad suvandid"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "ChainID (valikuline)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "Sümbol (valikuline)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "Hüüdnimi (valikuline)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "Uus kogusumma"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "Uus vahendustasu"
   },
   "next": {
     "message": "Edasi"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "Sellele nimele pole registreeritud ühtegi aadressi."
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "Sissemakseid pole laekunud"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "Ühtegi vahetuskurssi pole saadaval"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "Tehingute ajalugu puudub."
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "Teil ei ole tehinguid"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "Ei ole piisavalt gaasi"
   },
   "notFound": {
     "message": "Ei leitud"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "Käivitamata"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "Veebikaamerat ei leitud"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "Teie arvuti veebikaamerat ei leitud. Proovige uuesti."
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "/"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "Vana kasutajaliides"
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "Te olete naasnud vanasse kasutajaliidesesse. Saate lülituda tagasi uude kasutajaliidesesse, tehes vastava valiku ülemises paremas nurgas asuvast rippmenüüst."
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "Saatke ETHe ainult Ethereumi aadressile."
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "Saatke Ethereumi kontoaadressile ainult $1.",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "Ava vahekaardil"
   },
   "or": {
-    "message": "or",
+    "message": "või",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Tellige Trezor või Ledger ja hoidke oma varasid külmruumis"
   },
   "origin": {
     "message": "Päritolu"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "Väljaminev"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "Parameetrid"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "Algne summa"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "Osalege MetaMetricsis"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "Osalege MetaMetricsis, et aidata meil MetaMaski paremaks teha"
   },
   "password": {
     "message": "Parool"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "Veenduge, et parool on õige."
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "Paroolid ei ühti"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "paroolid ei ühti",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "Parool pole piisavalt pikk"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "parool pole piisavalt pikk",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "Kleepige oma privaatne võtmestring siia:",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "Kleepige oma seemnefraas siia!"
   },
   "pending": {
-    "message": "pending"
+    "message": "ootel"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "Leiti isiklik aadress. Sisestage loa kontaktaadress."
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "Kontrollige oma tehingut."
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "Populaarsed load"
   },
   "prev": {
-    "message": "Prev"
+    "message": "Eelm"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "Põhivaluuta"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "Valige omavääring, et prioriseerida vääringu kuvamist ahela omavääringus (nt ETH). Valige Fiat, et prioriseerida vääringu kuvamist valitud fiat-vääringus."
   },
   "privacyMsg": {
     "message": "privaatsuspoliitika"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "Privaatvõti",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "Hoiatus: ärge seda võtit kellelegi avaldage. Suvaline isik, kes teab teie privaatvõtmeid, võib teie kontolt varasid varastada."
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "Privaatvõrk"
   },
   "qrCode": {
     "message": "Kuva QR-kood"
@@ -1272,97 +1272,97 @@
     "message": "Järjekord"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "Saate selle loa tulevikus tagasi lisada, kui lähete oma kontovalikute menüüs vahelehele „Lisa luba“."
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "Lisateavet leiate siit."
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "Lisateave."
   },
   "receive": {
-    "message": "Receive"
+    "message": "Võta vastu"
   },
   "recents": {
-    "message": "Recents"
+    "message": "Hiljutised"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "Saaja aadress"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Otsing, avalik aadress (0x) või ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "Teie tagasimakse aadress"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "Lükka kõik tagasi"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "Lükake $1tehingud tagasi"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "Olete korraga tagasi lükkamas $1tehingut."
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "Tagasi lükatud"
   },
   "reset": {
     "message": "Lähtesta"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "Lähtesta konto"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "Konto lähtestamine tühjendab tehingute ajaloo."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "Võrk kustutada?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "Olete kindel, et soovite selle võrgu kustutada?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "Tuleta hiljem meelde"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "Taastada konto?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "Taasta hoidla"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "Taastage konto seemnefraasi abil"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "kinnitust ootavad taotlused"
   },
   "required": {
-    "message": "Required"
+    "message": "Nõutav"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "Proovige kõrgema gaasihinnaga siin"
   },
   "restore": {
     "message": "Taasta"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "Kuva seemnesõnu"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "Seemnefraas"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "Kui vahetate veebilehitsejat või arvutit, vajate oma kontodele ligipääsemiseks seemnefraasi. Hoidke seda turvalises ja salajases kohas."
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "ÄRGE jagage seda fraasi mitte kellegagi!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "Neid sõnu saab kasutada kõigi teie kontode tühjendamiseks."
   },
   "revert": {
-    "message": "Revert"
+    "message": "Ennista"
   },
   "remove": {
     "message": "Eemalda"
@@ -1371,25 +1371,25 @@
     "message": "Konto eemaldamine"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "See konto eemaldatakse teie rahakotist. Veenduge enne jätkamist, et teil on imporditud konto algne seemnefraas või privaatvõti olemas. Saate kontode rippmenüü kaudu importida või luua uued kontod."
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "Kas olete ühenduseks valmis?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "Rinkeby katsevõrk"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "Ropsteni testvõrk"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Goerli testvõrk"
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "Kohandatud RPC"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "Nt Minu konto",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,491 +1399,491 @@
     "message": "Aeglane"
   },
   "slower": {
-    "message": "Slower"
+    "message": "Aeglasem"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": "Salvesta CSV-failina"
   },
   "saveAsFile": {
     "message": "Salvesta failina",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "Salvesta seemnesõnad failina"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "Asetage QR-kood kaamera ette"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "Skannige QR-koos"
   },
   "search": {
     "message": "Otsi"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "Otsingutulemused"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "Salajane varundusfraas"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "Teie salajane varundusfraas hõlbustab konto varundamist ja taastamist."
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "HOIATUS! Ärge avaldage kunagi oma varundusfraasi. Selle fraasiga on võimalik teie eeter igaveseks ära võtta."
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "Sisestage hoidla taastamiseks oma salajane 12-sõnaline fraas."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "Turvalisus ja privaatsus"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "Privaatsusseaded ja rahakoti seemnefraas"
   },
   "secondsShorthand": {
-    "message": "Sec"
+    "message": "Sekund"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "Eraldage iga sõna ühe tühikuga"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "Seemnefraasid on 12 sõna pikad"
   },
   "select": {
     "message": "Vali"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "Valitud valuuta"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "Valige iga fraas, veendumaks, et see on õige."
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "Valige Lokaat"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "Vali teenus"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "Valige tüüp"
   },
   "send": {
     "message": "Saada"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "Saatke kogus"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Saada ETH"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "Saada lube"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "saadetud eeter"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "saadetud load"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "Eraldage iga sõna ühe tühikuga"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "Lubade otsimine"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "Valige aadress"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "Valige konto"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "Valige konto, mida MetaMaskis vaadata"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "Valige vara"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "Valige suurem gaasihind, et kiirendada tehingu töötlemist.*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "Valige HD-teekond"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "Kui te ei näe allpool oma olemasolevaid pearaamatu kontosid, vahetage tee kohta \"Legacy (MEW/MyCrypto)\""
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "Saatke luba kõigile, kellel on Ethereumi konto"
   },
   "settings": {
     "message": "Seaded"
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "Ostke Shapeshiftiga"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "Täiustatud gaasijuhikud"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "Valige see, et kuvada gaasi hinda ja piirangut otse saatmise ning kinnitamise kuval."
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "Kuva teisendus Testnetsis"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "Valige see, et kuvada Testnetsis fiati teisendus"
   },
   "showPrivateKeys": {
-    "message": "Show Private Keys"
+    "message": "Kuva privaatvõtmed"
   },
   "showQRCode": {
     "message": "Kuva QR-kood"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "Kuva Hex-andmed"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "Valige see, et kuvada saatmisekraanil hex-andmete väli"
   },
   "sign": {
-    "message": "Sign"
+    "message": "Allkirjasta"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "Allkirja taotlus"
   },
   "signed": {
-    "message": "Signed"
+    "message": "Allkirjastatud"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "Allkirjasta sõnum"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "Selle sõnumi allkirjastamisel \nvõib olla ohtlikke kõrvaltoimeid. Allkirjastage sõnumeid vaid \nsaitidelt, mida te kogu kontoga usaldate.\n See ohtlik meetod eemaldatakse uues versioonis."
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "Allkirja taotlus"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "Allkiri taotletud"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "Oih! Midagi läks valesti."
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "sõnade vahel saab olla ainult tühik"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "Kiirendamine"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "Kiirenda tehingut"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "Suurendage gaasihinda, et püüda oma tehingut üle kirjutada ja kiirendada"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "Kiirendage seda tühistamist"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "Kiirenda seda tehingut"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "Vaheta võrku"
   },
   "status": {
     "message": "Olek"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "Olekulogid"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "Olekulogid sisaldavad teie avalikke konto aadresse ja saadetud tehinguid."
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "Olekulogide saamisel ilmnes tõrge."
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. Ühendage riistvara rahakott"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "Ühendage oma riistvara rahakott otse oma arvutiga."
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. Valige konto"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "Valige konto, mida soovite vaadata. Korraga saab valida ühe."
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. Hakake kasutama dAppse ja muud!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "Kasutage oma riistvarakontot nagu mis tahes teist Ethereumi kontot. Logige dAppsi, saatke Eth-d, ostke ja hoiustage ERC20 lube ning asendamatuid lube nagu CryptoKitties."
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "Salvestage see fraas paroolihaldurisse, nagu 1Password."
   },
   "submit": {
     "message": "Esita"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "Edastatud"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "Külastage meie tugikeskust"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "Sümbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "Sümbol peab olema 0 kuni 12 tähemärki."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "Mobiiliga sünkroonimine"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "Mobiiliga sünkroonimine"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "Saate sünkroonida oma kontod ja teabe oma mobiiliseadmega. Avage MetaMaski mobiilirakendus, avage \"Settings\" (Seaded) ja puudutage valikut \"Sync from Browser Extension\" (Sünkroonimine lehitseja laiendusest)"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "Järgige Metamaski mobiilirakenduse esmakordsel avamisel telefonis esitatud samme."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "Skanneerige see kood MetaMaski mobiilirakendusega"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "Veenduge, et keegi teine ei vaata selle koodi skannimisel teie ekraani"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "Teie andmed on edukalt sünkroonitud. Nautige MetaMaski mobiilirakendust!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "Võtab liiga kaua aega?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "Teenusetingimused"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "Testkraan"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "See loob uue rahakoti ja seemnefraasi"
   },
   "tips": {
     "message": "Preemiad"
   },
   "to": {
-    "message": "To"
+    "message": "Saaja"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "$1 ETH-le ShapeShifti kaudu",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "Luba"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "Loa aadress"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "Luba on juba lisatud."
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "Teie tokeni saldo on:"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "Loa lepinguaadress"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "Otsige tokeneid või valige meie populaarsete tokenite loendist."
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "Tokeni sümbol"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "Jälgige lubasid, mille olete MetaMaski kontoga ostnud. Kui ostsite lube teise kontoga, ei ilmu need siin."
   },
   "total": {
     "message": "Kokku"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "tehing"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "Tehing kinnitatud $2."
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "Tehing loodud väärtusega $1 asukohas $2."
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "Tehing $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "Tehing vabastatud $2."
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "Tehing edastatud gaasihinnaga $1 asukohas $2."
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "Tehing uuesti edastatud, suurendatud gaasihinnaga $1 asukohas $2"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "Tehing on uuendatud $2."
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "Tehing värskendatud gaasihinnaga $1 asukohas $2."
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "Tehingul ilmnes tõrge."
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "Tehingu tühistamise katse gaasitasuga $1 asukohas $2"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "Tehing edukalt tühistatud $2"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "tehingud"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "Tehingu tõrge. Lepingukoodis ilmnes erand."
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "Mittelepingulisel aadressil asuva funktsiooni kutsumine."
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "Tehingutasu"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "Tehingu memo (valikuline)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "Tehingu number"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "Tehingu aeg"
   },
   "transfer": {
-    "message": "Transfer"
+    "message": "Ülekandmine"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "Ülekandmine minu kontode vahel"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "Ülekandmine asukohast"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "Ülekanded"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "TREZORi riistvara rahakott"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "Teie loasaldode laadimisega oli probleem. Saate neid vaadata",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "Proovi uuesti"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "Need 12 sõna on ainus võimalus Metamask kontode taastamiseks.\nSalvestage need turvalisse ja salajasse kohta."
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "Sisestage oma MetaMaski parool"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "Tere tulemast uude MetaMaski kasutajaliidesesse. Kui teil on kasutajaliidese kohta tagasisidet või funktsioonitaotluseid, võtke ühendust meie tugimeeskonnaga GitHubis."
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "Tere tulemast uude kasutajaliidesesse (beetaversioon)"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "Kasutate nüüd uut MetaMaski kasutajaliidest."
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "Kinnitamata"
   },
   "unavailable": {
     "message": "Pole saadaval"
   },
   "units": {
-    "message": "units"
+    "message": "ühikud"
   },
   "unknown": {
     "message": "Teadmata"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "Tundmatu privaatvõrk"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "Tundmatu võrgu ID"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "Tõrge: seda QR-koodi ei saanud tuvastada"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "Oih! Midagi läks valesti...."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "Kaamerale ligipääsemisel ilmnes tõrge. Proovige uuesti..."
   },
   "unlock": {
     "message": "Ava lukk"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "Detsentraliseeritud veeb ootab"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "Värskendatud $1"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "URI-d nõuavad sobivat HTTP/HTTPS-i prefiksit."
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "Ainult USA",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "Kasutavad erinevad kliendid"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "Kasuta vana kasutajaliidest"
   },
   "userName":{
     "message": "Kasutajanimi"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "Peate valima importimiseks sobiva faili."
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "Hoidla loodud"
   },
   "viewAccount": {
     "message": "Kuva konto"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "Kuva Exploreris"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "Kuva kontakt"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "Vaata $1"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "Kuva Etherscanil"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "Vaata võrguteavet"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "Külastage meie veebilehte"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "Rahakoti seeme"
   },
   "warning": {
     "message": "Hoiatus"
@@ -1892,42 +1892,42 @@
     "message": "Tere tulemast tagasi!"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "Tere tulemast MetaMaski"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "Mis see on?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "Kirjutage see fraas paberile ja hoidke seda turvalises kohas. Veel suurema turvalisuse tagamiseks kirjutage see mitmele paberile ja hoidke neid 2–3 erinevas kohas."
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "Jah, proovime"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "Selle funktsiooni kasutamiseks peate lubaga kaamera ligipääsu."
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "Taotletakse teie allkirja"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "Allkirjastate"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "Teie privaatne seemnefraas"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "Teie ainulaadne konto pilt"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "Selle pildi lõi programmiliselt uus kontoumber."
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "Näete seda pilti iga kord, kui peate tehingu kinnitama."
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask ei küsi kunagi teie seemnefraasi!"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "Null gaasihind kiirendamisel"
   }
 }

@@ -1,96 +1,96 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "Trimiteți adresa"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "Doriți să vă partajați adresa pentru a vă conecta la $1?"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "Dacă trimiteți adresa la $1, veți putea să interacționați cu această dapp. Această permisiune vă protejează confidențialitatea în mod prestabilit."
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "Modul de confidențialitate este activat acum în mod implicit"
   },
   "privacyMode": {
-    "message": "Privacy Mode"
+    "message": "Mod de confidențialitate"
   },
   "privacyModeDescription": {
-    "message": "Websites must request access to view your account information."
+    "message": "Site-urile trebuie să ceară acces pentru a vizualiza informațiile cu privire la contul dvs."
   },
   "exposeAccounts": {
-    "message": "Expose Accounts"
+    "message": "Expunere conturi"
   },
   "exposeDescription": {
-    "message": "Expose accounts to the current website. Useful for legacy dapps."
+    "message": "Conturile vor fi vizibile pe site-ul curent. Util pentru dapps vechi."
   },
   "chartOnlyAvailableEth": {
-    "message": "Chart only available on Ethereum networks."
+    "message": "Grafic disponibil numai pe rețelele Ethereum."
   },
   "confirmExpose": {
-    "message": "Are you sure you want to expose your accounts to the current website?"
+    "message": "Sunteți sigur că vreți să vă expuneți conturile pe site-ul actual?"
   },
   "confirmClear": {
-    "message": "Are you sure you want to clear approved websites?"
+    "message": "Sunteți sigur că doriți să ștergeți site-urile aprobate?"
   },
   "contractInteraction": {
-    "message": "Contract Interaction"
+    "message": "Interacțiune contract"
   },
   "clearApprovalDataSuccess": {
-    "message": "Approved website data cleared successfully."
+    "message": "Datele aprobate de pe site au fost șterse cu succes."
   },
   "approvalData": {
-    "message": "Privacy Data"
+    "message": "Date privind confidențialitatea"
   },
   "approvalDataDescription": {
-    "message": "Clear privacy data so all websites must request access to view account information again."
+    "message": "Ștergeți datele de confidențialitate astfel încât toate site-urile să trebuiască să solicite acces pentru a vizualiza din nou datele contului."
   },
   "clearApprovalData": {
-    "message": "Clear Privacy Data"
+    "message": "Ștergeți datele confidențiale"
   },
   "reject": {
     "message": "Respingeți"
   },
   "providerRequest": {
-    "message": "$1 would like to connect to your account"
+    "message": "$1 ar dori să se conecteze la contul dvs."
   },
   "providerRequestInfo": {
-    "message": "This site is requesting access to view your current account address. Always make sure you trust the sites you interact with."
+    "message": "Acest site solicită acces pentru a vedea adresa curentă a contului dvs. Asigurați-vă întotdeauna că aveți încredere în site-urile cu care interacționați."
   },
   "about": {
     "message": "Despre"
   },
   "aboutSettingsDescription": {
-    "message": "Version, support center, and contact info."
+    "message": "Versiune, centru de asistență și date de contact."
   },
   "aboutUs": {
-    "message": "About Us"
+    "message": "Despre noi"
   },
   "accept": {
     "message": "Accept"
   },
   "acceleratingATransaction": {
-    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+    "message": "* Accelerarea unei tranzacții folosind un preț în gas mai mare îi crește șansele de a fi procesată mai rapid de rețea, însă acest lucru nu este garantat întotdeauna."
   },
   "accessingYourCamera": {
-    "message": "Accessing your camera..."
+    "message": "Se accesează camera dvs..."
   },
   "account": {
     "message": "Cont"
   },
   "accountDetails": {
-    "message": "Account Details"
+    "message": "Detalii cont"
   },
   "accountName": {
-    "message": "Account Name"
+    "message": "Numele contului"
   },
   "accountOptions": {
-    "message": "Account Options"
+    "message": "Opțiuni cont"
   },
   "accountSelectionRequired": {
-    "message": "You need to select an account!"
+    "message": "Trebuie să selectați un cont!"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "jurnal activitate"
   },
   "add": {
     "message": "Adaugă"
@@ -99,70 +99,70 @@
     "message": "Adresă"
   },
   "addNetwork": {
-    "message": "Add Network"
+    "message": "Adăugați rețea"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "Adăugați destinatarul"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "Adresa"
   },
   "advanced": {
     "message": "Avansate"
   },
   "advancedSettingsDescription": {
-    "message": "Access developer features, download State Logs, Reset Account, setup testnets and custom RPC."
+    "message": "Accesați funcții pentru dezvoltatori, descărcați Jurnale de stare, resetați contul, configurați rețele de test și RPC personalizat."
   },
   "advancedOptions": {
-    "message": "Advanced Options"
+    "message": "Opțiuni avansate"
   },
   "addCustomToken": {
-    "message": "Add custom token"
+    "message": "Adăugați un indicativ personalizat"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "Adăugați în agendă"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "de ex. John D."
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "Adăugare alias"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "Adăugare adresă Ethereum"
   },
   "addToken": {
-    "message": "Add Token"
+    "message": "Adăugare simbol"
   },
   "addTokens": {
-    "message": "Add Tokens"
+    "message": "Adăugați token-uri"
   },
   "addSuggestedTokens": {
-    "message": "Add Suggested Tokens"
+    "message": "Adăugați indicativele sugerate"
   },
   "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
+    "message": "Adăugați token-urile pe care le-ați achiziționat folosind MetaMask"
   },
   "agreeTermsOfService": {
-    "message": "I agree to the Terms of Service"
+    "message": "Sunt de acord cu Termenii Serviciului"
   },
   "allDone": {
-    "message": "All Done"
+    "message": "Totul este gata"
   },
   "alreadyHaveSeedPhrase": {
-    "message": "No, I already have a seed phrase"
+    "message": "Nu, am deja o frază seed"
   },
   "amount": {
     "message": "Sumă"
   },
   "amountPlusGas": {
-    "message": "Amount + Gas"
+    "message": "Suma + Gas"
   },
   "amountPlusTxFee": {
-    "message": "Amount + TX Fee"
+    "message": "Suma + taxa TX"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "Un portofel Ethereum în browserul dvs.",
     "description": "The description of the application"
   },
   "appName": {
@@ -170,64 +170,64 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Approve"
+    "message": "Aprobați"
   },
   "approved": {
-    "message": "Approved"
+    "message": "Aprobat"
   },
   "asset": {
-    "message": "Asset"
+    "message": "Activ"
   },
   "attemptingConnect": {
-    "message": "Attempting to connect to blockchain."
+    "message": "Se încearcă conectarea la blockchain."
   },
   "attemptToCancel": {
-    "message": "Attempt to Cancel?"
+    "message": "Încercați să anulați?"
   },
   "attemptToCancelDescription": {
-    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+    "message": "Trimiterea acestei încercări nu garantează că tranzacția dvs. originală va fi anulată. Dacă încercarea de anulare va reuși, vi se va percepe taxa tranzacției de mai sus."
   },
   "attributions": {
-    "message": "Attributions"
+    "message": "Atribuții"
   },
   "autoLogoutTimeLimit": {
-    "message": "Auto-Logout Timer (minutes)"
+    "message": "Temporizator deconectare automată (minute)"
   },
   "autoLogoutTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will automatically log out"
+    "message": "Setați perioada de inactivitate în minute înainte ca MetaMask să se deconecteze automat"
   },
   "available": {
     "message": "Disponibilă"
   },
   "average": {
-    "message": "Average"
+    "message": "Mediu"
   },
   "back": {
     "message": "Înapoi"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "Înapoi la toate"
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Creați o copie de rezervă a codului de recuperare secret pentru a vă menține portofelul și fondurile în siguranță."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "Acest cod secret este necesar pentru recuperarea portofelului în cazul în care pierdeți dispozitivul, uitați parola, trebuie să reinstalați MetaMask sau vreți să accesați portofelul de pe alt dispozitiv."
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "Creați o copie de rezervă acum"
   },
   "balance": {
-    "message": "Balance"
+    "message": "Sold"
   },
   "balanceOutdated": {
-    "message": "Balance may be outdated"
+    "message": "Se poate ca soldul să nu fie actualizat"
   },
   "balances": {
-    "message": "Token balance(s)"
+    "message": "Sold(uri) token"
   },
   "balanceIsInsufficientGas": {
-    "message": "Insufficient balance for current gas total"
+    "message": "Sold insuficient pentru actuala valoare totală de gaz."
   },
   "basic": {
     "message": "De bază"
@@ -236,51 +236,51 @@
     "message": "BETA"
   },
   "betweenMinAndMax": {
-    "message": "must be greater than or equal to $1 and less than or equal to $2.",
+    "message": "trebuie să fie mai mare sau egal cu $1 și mai mic sau egal cu $2.",
     "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "Explorator blocuri"
   },
   "blockExplorerView": {
-    "message": "View account at $1",
+    "message": "Vizualizare cont la $1",
     "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
-    "message": "Use Blockies Identicon"
+    "message": "Folosește Blockies Identicon"
   },
   "borrowDharma": {
-    "message": "Borrow With Dharma (Beta)"
+    "message": "Împrumutați cu Dharma (Beta)"
   },
   "browserNotSupported": {
-    "message": "Your Browser is not supported..."
+    "message": "Browserul dvs. nu este compatibil..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+    "message": "MetaMask este concepută și creată în California."
   },
   "buy": {
-    "message": "Buy"
+    "message": "Cumpărați"
   },
   "buyCoinbase": {
-    "message": "Buy on Coinbase"
+    "message": "Cumpărați pe Coinbase"
   },
   "buyCoinbaseExplainer": {
-    "message": "Coinbase is the world’s most popular way to buy and sell Bitcoin, Ethereum, and Litecoin."
+    "message": "Coinbase este cel mai cunoscut mod de a cumpăra și vinde Bitcoin, Ethereum și Litecoin."
   },
   "buyWithWyre": {
-    "message": "Buy ETH with Wyre"
+    "message": "Cumpărați ETH cu Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a credit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre vă permite să folosiți un card de credit pentru a depune ETH direct în contul dvs. MetaMask."
   },
   "buyCoinSwitch": {
-    "message": "Buy on CoinSwitch"
+    "message": "Cumpărați pe CoinSwitch"
   },
   "buyCoinSwitchExplainer": {
-    "message": "CoinSwitch is the one-stop destination to exchange more than 300 cryptocurrencies at the best rate."
+    "message": "CoinSwitch este destinația unică pentru a schimba peste 300 de cripto monede la cele mai bune cursuri."
   },
   "bytes": {
-    "message": "Bytes"
+    "message": "Octeți"
   },
   "off": {
     "message": "Oprit"
@@ -292,269 +292,269 @@
     "message": "Activat"
   },
   "optionalBlockExplorerUrl": {
-    "message": "Block Explorer URL (optional)"
+    "message": "URL explorator bloc (opțional)"
   },
   "cancel": {
     "message": "Anulare"
   },
   "cancelAttempt": {
-    "message": "Cancel Attempt"
+    "message": "Anulare încercare"
   },
   "cancellationGasFee": {
-    "message": "Cancellation Gas Fee"
+    "message": "Taxă de anulare în gaz"
   },
   "cancelled": {
-    "message": "Cancelled"
+    "message": "Anulat"
   },
   "cancelN": {
-    "message": "Cancel all $1 transactions"
+    "message": "Anulează toate tranzacțiile $1"
   },
   "chainId": {
-    "message": "Chain ID"
+    "message": "ID lanț"
   },
   "classicInterface": {
-    "message": "Use classic interface"
+    "message": "Folosiți interfața clasică"
   },
   "clickCopy": {
-    "message": "Click to Copy"
+    "message": "Clic pentru a copia"
   },
   "clickToAdd": {
-    "message": "Click on $1 to add them to your account"
+    "message": "Faceți clic pe $1 pentru a-i adăuga contului dvs."
   },
   "clickToRevealSeed": {
-    "message": "Click here to reveal secret words"
+    "message": "Faceți clic aici pentru a arăta cuvintele secrete"
   },
   "close": {
     "message": "Închide"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "Trebuie să folosiți MetaMask în Google Chrome pentru a vă conecta la portofelul hardware."
   },
   "company": {
-    "message": "Company"
+    "message": "Companie"
   },
   "confirm": {
     "message": "Confirmați"
   },
   "confirmationTime": {
-    "message": "Confirmation time (sec)"
+    "message": "Timp de confirmare (secunde)"
   },
   "confirmed": {
-    "message": "Confirmed"
+    "message": "Confirmat"
   },
   "confirmContract": {
-    "message": "Confirm Contract"
+    "message": "Confirmare contract"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "Confirmare parolă"
   },
   "confirmSecretBackupPhrase": {
-    "message": "Confirm your Secret Backup Phrase"
+    "message": "Confirmați expresia dvs. secretă de rezervă"
   },
   "confirmTransaction": {
-    "message": "Confirm Transaction"
+    "message": "Confirmați tranzacția"
   },
   "congratulations": {
-    "message": "Congratulations"
+    "message": "Felicitări"
   },
   "connectHardwareWallet": {
-    "message": "Connect Hardware Wallet"
+    "message": "Conectare portofel hardware"
   },
   "connect": {
     "message": "Conectează-te"
   },
   "connectRequest": {
-    "message": "Connect Request"
+    "message": "Solicitare de conectare"
   },
   "connecting": {
     "message": "Se stabilește conexiunea..."
   },
   "connectingTo": {
-    "message": "Connecting to $1"
+    "message": "Se conectează la $1"
   },
   "connectingToKovan": {
-    "message": "Connecting to Kovan Test Network"
+    "message": "Se conectează la rețeaua de test Kovan"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "Se conectează la rețeaua Ethereum principală"
   },
   "connectingToRopsten": {
-    "message": "Connecting to Ropsten Test Network"
+    "message": "Se conectează la rețeaua de test Ropsten"
   },
   "connectingToRinkeby": {
-    "message": "Connecting to Rinkeby Test Network"
+    "message": "Se conectează la Rețeaua de test Rinkeby"
   },
   "connectingToLocalhost": {
-    "message": "Connecting to Localhost 8545"
+    "message": "Se conectează la localhost 8545"
   },
   "connectingToGoerli": {
-    "message": "Connecting to Goerli Test Network"
+    "message": "Se conectează la rețeaua de test Goerli"
   },
   "connectingToUnknown": {
-    "message": "Connecting to Unknown Network"
+    "message": "Se conectează la rețea necunoscută"
   },
   "connectToLedger": {
-    "message": "Connect to Ledger"
+    "message": "Conectați-vă la Ledger"
   },
   "connectToTrezor": {
-    "message": "Connect to Trezor"
+    "message": "Conectare la Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "Listă de contacte"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "Adăugați, editați, ștergeți și administrați-vă contactele"
   },
   "continue": {
     "message": "Continuă"
   },
   "continueToCoinbase": {
-    "message": "Continue to Coinbase"
+    "message": "Continuați către Coinbase"
   },
   "continueToWyre": {
-    "message": "Continue to Wyre"
+    "message": "Continuați la Wyre"
   },
   "continueToCoinSwitch": {
-    "message": "Continue to CoinSwitch"
+    "message": "Continuare către CoinSwitch"
   },
   "contractDeployment": {
-    "message": "Contract Deployment"
+    "message": "Implementarea contractului"
   },
   "conversionProgress": {
-    "message": "Conversion in progress"
+    "message": "Conversie în desfășurare"
   },
   "copiedButton": {
-    "message": "Copied"
+    "message": "Copiat"
   },
   "copiedClipboard": {
-    "message": "Copied to Clipboard"
+    "message": "Copiat în clipboard"
   },
   "copiedExclamation": {
     "message": "Copiat!"
   },
   "copiedSafe": {
-    "message": "I've copied it somewhere safe"
+    "message": "Am copiat-o într-un loc sigur"
   },
   "copy": {
     "message": "Copiază"
   },
   "copyAddress": {
-    "message": "Copy address to clipboard"
+    "message": "Copiere adresă în clipboard"
   },
   "copyTransactionId": {
-    "message": "Copy Transaction ID"
+    "message": "Copiați ID-ul tranzacției"
   },
   "copiedTransactionId": {
-    "message": "Copied Transaction ID"
+    "message": "ID-ul tranzacției a fost copiat"
   },
   "copyToClipboard": {
     "message": "Copiați în clipboard"
   },
   "copyButton": {
-    "message": " Copy "
+    "message": "Copiați"
   },
   "copyPrivateKey": {
-    "message": "This is your private key (click to copy)"
+    "message": "Aceasta este cheia dumneavoastră privată (clic pentru a copia)"
   },
   "create": {
     "message": "Creați"
   },
   "createAccount": {
-    "message": "Create Account"
+    "message": "Creați cont"
   },
   "createAWallet": {
-    "message": "Create a Wallet"
+    "message": "Creați un portofel"
   },
   "createDen": {
     "message": "Creați"
   },
   "createPassword": {
-    "message": "Create Password"
+    "message": "Creare parolă"
   },
   "crypto": {
-    "message": "Crypto",
+    "message": "Cripto",
     "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
-    "message": "Currency Conversion"
+    "message": "Schimb valutar"
   },
   "currentLanguage": {
-    "message": "Current Language"
+    "message": "Limba actuală"
   },
   "currentNetwork": {
-    "message": "Current Network"
+    "message": "Rețeaua curentă"
   },
   "currentRpc": {
-    "message": "Current RPC"
+    "message": "RPC prezent"
   },
   "customGas": {
-    "message": "Customize Gas"
+    "message": "Particularizați Gas"
   },
   "customGasSubTitle": {
-    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
+    "message": "Creșterea taxei poate reduce timpii de procesare, dar acest lucru nu este garantat."
   },
   "customToken": {
-    "message": "Custom Token"
+    "message": "Token personalizat"
   },
   "customize": {
     "message": "Personalizează"
   },
   "customRPC": {
-    "message": "Custom RPC"
+    "message": "RPC particularizat"
   },
   "decimalsMustZerotoTen": {
-    "message": "Decimals must be at least 0, and not over 36."
+    "message": "Zecimalele trebuie să fie cel puțin 0, dar nu peste 36."
   },
   "decimal": {
-    "message": "Decimals of Precision"
+    "message": "Zecimale de precizie"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "Rețeaua implicită pentru tranzacțiile cu Ether este Main Net."
   },
   "delete": {
     "message": "Șterge"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "Ștergeți cont"
   },
   "denExplainer": {
-    "message": "Your DEN is your password-encrypted storage within MetaMask."
+    "message": "DEN este spațiul dvs. de stocare criptat cu parolă în cadrul MetaMask."
   },
   "deposit": {
     "message": "Depunere"
   },
   "depositBTC": {
-    "message": "Deposit your BTC to the address below:"
+    "message": "Depuneți-vă BTC la adresa de mai jos:"
   },
   "depositEth": {
-    "message": "Deposit Eth"
+    "message": "Depuneți Eth"
   },
   "depositEther": {
-    "message": "Deposit Ether"
+    "message": "Depuneți Ether"
   },
   "depositFiat": {
-    "message": "Deposit with Fiat"
+    "message": "Depuneți cu Fiat"
   },
   "depositFromAccount": {
-    "message": "Deposit from another account"
+    "message": "Depuneți dintr-un alt cont"
   },
   "depositShapeShift": {
-    "message": "Deposit with ShapeShift"
+    "message": "Depuneți cu ShapeShift"
   },
   "depositShapeShiftExplainer": {
-    "message": "If you own other cryptocurrencies, you can trade and deposit Ether directly into your MetaMask wallet. No Account Needed."
+    "message": "Dacă dețineți criptomonede, puteți tranzacționa și depune Ether direct în portofelul dvs. MetaMask. Nu aveți nevoie de un cont."
   },
   "details": {
     "message": "Detalii"
   },
   "directDeposit": {
-    "message": "Direct Deposit"
+    "message": "Depunere directă"
   },
   "directDepositEther": {
-    "message": "Directly Deposit Ether"
+    "message": "Depuneți direct Ether"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "Dacă deja aveți Ether, cel mai rapid mod de a avea Ether în portofelul nou prin depunere directă."
   },
   "dismiss": {
     "message": "Închide"
@@ -563,707 +563,707 @@
     "message": "Efectuat"
   },
   "downloadGoogleChrome": {
-    "message": "Download Google Chrome"
+    "message": "Descărcare Google Chrome"
   },
   "downloadSecretBackup": {
-    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+    "message": "Descărcați această expresie secretă de rezervă și păstrați-o în siguranță pe o unitate de disc sau un mediu de stocare criptat."
   },
   "downloadStateLogs": {
-    "message": "Download State Logs"
+    "message": "Descărcați jurnalele de stare"
   },
   "dontHaveAHardwareWallet": {
-    "message": "Don’t have a hardware wallet?"
+    "message": "Nu aveți portofel hardware?"
   },
   "dropped": {
-    "message": "Dropped"
+    "message": "Pierdut"
   },
   "edit": {
     "message": "Editează"
   },
   "editNetwork": {
-    "message": "Edit Network"
+    "message": "Editare rețea"
   },
   "editAccountName": {
-    "message": "Edit Account Name"
+    "message": "Editați numele contului"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "Editați contact"
   },
   "editingTransaction": {
-    "message": "Make changes to your transaction"
+    "message": "Modificați tranzacția dvs."
   },
   "emailUs": {
-    "message": "Email us!"
+    "message": "Trimiteți-ne un email!"
   },
   "encryptNewDen": {
-    "message": "Encrypt your new DEN"
+    "message": "Criptați-vă noul DEN"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "Ați trecut testul – păstrați expresia sursă în siguranță, este răspunderea dvs.!"
   },
   "endOfFlowMessage2": {
-    "message": "Tips on storing it safely"
+    "message": "Sfaturi despre stocarea în siguranță"
   },
   "endOfFlowMessage3": {
-    "message": "Save a backup in multiple places."
+    "message": "Salvează o copie de siguranță în mai multe locuri."
   },
   "endOfFlowMessage4": {
-    "message": "Never share the phrase with anyone."
+    "message": "Nu comunicați niciodată fraza cuiva."
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "Aveți grijă la phishing! MetaMask nu vă va cere niciodată în mod spontan expresia sursă."
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "Dacă trebuie să vă salvați din nou fraza seed, puteți să o găsiți în Setări -> Securitate."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "Dacă aveți întrebări sau vedeți ceva suspect, trimiteți un e-mail la support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask nu vă poate recupera expresia sursă. Aflați mai multe."
   },
   "endOfFlowMessage9": {
     "message": "Aflați mai multe."
   },
   "endOfFlowMessage10": {
-    "message": "All Done"
+    "message": "Gata"
   },
   "ensNameNotFound": {
-    "message": "ENS name not found"
+    "message": "Numele ENS nu a fost găsit"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "Eroare la înregistrarea numelui ENS"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "Numele ENS nu s-a găsit pe rețeaua curentă. Încercați să comutați la Rețeaua Ethereum principală."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "Introduceți un alias"
   },
   "enterPassword": {
-    "message": "Enter password"
+    "message": "Introduceți parola"
   },
   "enterPasswordConfirm": {
-    "message": "Enter your password to confirm"
+    "message": "Introduceți parola dvs. pentru confirmare"
   },
   "enterPasswordContinue": {
-    "message": "Enter password to continue"
+    "message": "Introduceți parola pentru a continua"
   },
   "eth": {
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Adresa publică Ethereum"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "Vizualizare cont pe Etherscan"
   },
   "estimatedProcessingTimes": {
-    "message": "Estimated Processing Times"
+    "message": "Timpi estimativi de procesare"
   },
   "exchangeRate": {
-    "message": "Exchange Rate"
+    "message": "Curs de schimb"
   },
   "expandView": {
-    "message": "Expand View"
+    "message": "Extindeți vizualizarea"
   },
   "exportPrivateKey": {
-    "message": "Export Private Key"
+    "message": "Exportați cheia privată"
   },
   "exportPrivateKeyWarning": {
-    "message": "Export private keys at your own risk."
+    "message": "Exportați chei private pe propriul risc."
   },
   "failed": {
-    "message": "Failed"
+    "message": "Eșuat"
   },
   "fast": {
     "message": "Rapid"
   },
   "faster": {
-    "message": "Faster"
+    "message": "Mai repede"
   },
   "fastest": {
     "message": "Cea mai rapidă"
   },
   "feeChartTitle": {
-    "message": "Live Transaction Fee Predictions"
+    "message": "Predicții taxă tranzacție în direct"
   },
   "fiat": {
     "message": "Fiat",
     "description": "Exchange type"
   },
   "fileImportFail": {
-    "message": "File import not working? Click here!",
+    "message": "Importarea fișierului nu funcționează? Dați clic aici!",
     "description": "Helps user import their account from a JSON file"
   },
   "followTwitter": {
-    "message": "Follow us on Twitter"
+    "message": "Urmăriți-ne pe Twitter"
   },
   "forgetDevice": {
     "message": "Uită dispozitivul"
   },
   "from": {
-    "message": "From"
+    "message": "De la"
   },
   "fromToSame": {
-    "message": "From and To address cannot be the same"
+    "message": "Adresa expeditorului și destinatarului nu poate fi aceeași"
   },
   "fromShapeShift": {
-    "message": "From ShapeShift"
+    "message": "De la ShapeShift"
   },
   "functionType": {
-    "message": "Function Type"
+    "message": "Tip funcție"
   },
   "gas": {
     "message": "Gas",
     "description": "Short indication of gas cost"
   },
   "gasFee": {
-    "message": "Gas Fee"
+    "message": "Taxă gas"
   },
   "gasLimit": {
-    "message": "Gas Limit"
+    "message": "Limită gas"
   },
   "gasLimitCalculation": {
-    "message": "We calculate the suggested gas limit based on network success rates."
+    "message": "Calculăm limita de gas sugerată pe baza ratelor de succes ale rețelei."
   },
   "gasLimitInfoModalContent": {
-    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+    "message": "Limita gaz este numărul maxim de unități de gaz pe care sunteți dispus(ă) să le cheltuiți."
   },
   "gasLimitRequired": {
-    "message": "Gas Limit Required"
+    "message": "Limita de GAS este obligatorie"
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "Limita de gaz trebuie să fie de cel puțin 21.000"
   },
   "gasUsed": {
-    "message": "Gas Used"
+    "message": "Suma gaz folosită"
   },
   "generatingSeed": {
-    "message": "Generating Seed..."
+    "message": "Se generează seed-ul..."
   },
   "gasPrice": {
-    "message": "Gas Price (GWEI)"
+    "message": "Preț gas (GWEI)"
   },
   "gasPriceExtremelyLow": {
-    "message": "Gas Price Extremely Low"
+    "message": "Prețul gaz este foarte scăzut"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Prețul în gas indică suma Ether pe care doriți să o plătiți pentru fiecare unitate gas."
   },
   "gasPriceNoDenom": {
-    "message": "Gas Price"
+    "message": "Preț gas"
   },
   "gasPriceCalculation": {
-    "message": "We calculate the suggested gas prices based on network success rates."
+    "message": "Calculăm prețurile sugerate pentru gas pe baza ratelor de succes ale rețelei."
   },
   "gasPriceRequired": {
-    "message": "Gas Price Required"
+    "message": "Prețul gas este obligatoriu"
   },
   "general": {
     "message": "General"
   },
   "generalSettingsDescription": {
-    "message": "Currency conversion, primary currency, language, blockies identicon"
+    "message": "Schimb valutar, moneda principală, limba, blockies identicon"
   },
   "generatingTransaction": {
-    "message": "Generating transaction"
+    "message": "Se generează tranzacția"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Obțineți Ether"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
+    "message": "Obțineți Ether de la un robinet pentru $1",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
-    "message": "Get Help."
+    "message": "Obțineți ajutor."
   },
   "getStarted": {
     "message": "Începe"
   },
   "greaterThanMin": {
-    "message": "must be greater than or equal to $1.",
+    "message": "trebuie să fie mai mare sau egal cu $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
-    "message": "We’re happy to see you."
+    "message": "Ne pare bine să vă vedem."
   },
   "hardware": {
     "message": "hardware"
   },
   "hardwareWalletConnected": {
-    "message": "Hardware wallet connected"
+    "message": "Portofelul hardware a fost conectat"
   },
   "hardwareWallets": {
-    "message": "Connect a hardware wallet"
+    "message": "Conectați un portofel hardware"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "Selectați un portofel hardware pe care doriți să îl folosiți cu MetaMask"
   },
   "havingTroubleConnecting": {
-    "message": "Having trouble connecting?"
+    "message": "Aveți probleme cu conectarea?"
   },
   "here": {
     "message": "aici",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
   "hereList": {
-    "message": "Here's a list!!!!"
+    "message": "Iată o listă!!!!"
   },
   "hexData": {
-    "message": "Hex Data"
+    "message": "Date hexazecimale"
   },
   "hide": {
     "message": "Ascunde"
   },
   "hideToken": {
-    "message": "Hide Token"
+    "message": "Ascunde tokenul"
   },
   "hideTokenPrompt": {
-    "message": "Hide Token?"
+    "message": "Ascunde simbol?"
   },
   "history": {
     "message": "Istoric"
   },
   "howToDeposit": {
-    "message": "How would you like to deposit Ether?"
+    "message": "Cum doriți să depuneți Ether?"
   },
   "holdEther": {
-    "message": "It allows you to hold ether & tokens, and serves as your bridge to decentralized applications."
+    "message": "Vă permite să păstrați ether și token-urile și servește ca o punte către aplicațiile descentralizate."
   },
   "import": {
     "message": "Importă",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
-    "message": "Import Account"
+    "message": "Importare cont"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": "Conturile importate nu vor fi asociate cu seedphrase-ul contului dumneavoastră MetaMask creat inițial. Aflați mai multe despre conturile importate"
   },
   "importAccountSeedPhrase": {
-    "message": "Import an Account with Seed Phrase"
+    "message": "Importați un cont cu fraza seed"
   },
   "importAnAccount": {
-    "message": "Import an account"
+    "message": "Importă un cont"
   },
   "importDen": {
-    "message": "Import Existing DEN"
+    "message": "Importați DEN existent"
   },
   "importWallet": {
-    "message": "Import Wallet"
+    "message": "Importați portofel"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "Importați portofelul existent folosind o frază seed de 12 cuvinte"
   },
   "imported": {
     "message": "Importate",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
   "importUsingSeed": {
-    "message": "Import using account seed phrase"
+    "message": "Importare folosind fraza inițială a contului"
   },
   "importWithSeedPhrase": {
-    "message": "Import with seed phrase"
+    "message": "Importați cu expresia seed"
   },
   "info": {
-    "message": "Info"
+    "message": "Informații"
   },
   "infoHelp": {
-    "message": "Info & Help"
+    "message": "Informații și ajutor"
   },
   "initialTransactionConfirmed": {
-    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+    "message": "Tranzacția inițială a fost confirmată de rețea. Clic pe OK pentru a reveni."
   },
   "insufficientBalance": {
-    "message": "Insufficient balance."
+    "message": "Sold insuficient."
   },
   "insufficientFunds": {
-    "message": "Insufficient funds."
+    "message": "Fonduri insuficiente."
   },
   "insufficientTokens": {
-    "message": "Insufficient tokens."
+    "message": "Tokenuri insuficiente."
   },
   "invalidAddress": {
-    "message": "Invalid address"
+    "message": "Adresă nevalidă"
   },
   "invalidAddressRecipient": {
-    "message": "Recipient address is invalid"
+    "message": "Adresa destinatarului nu este validă"
   },
   "knownAddressRecipient": {
-    "message": "Known contract address."
+    "message": "Adresa cunoscută din contract."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "Nu este rețea ETH, setați pe minuscule"
   },
   "invalidGasParams": {
-    "message": "Invalid Gas Parameters"
+    "message": "Parametrii de gas invalizi"
   },
   "invalidInput": {
-    "message": "Invalid input."
+    "message": "Intrare nevalidă."
   },
   "invalidRequest": {
-    "message": "Invalid Request"
+    "message": "Solicitare nevalidă"
   },
   "invalidRPC": {
-    "message": "Invalid RPC URL"
+    "message": "URL RPC nevalid"
   },
   "invalidSeedPhrase": {
-    "message": "Invalid seed phrase"
+    "message": "Expresie sursă nevalidă"
   },
   "jsonFail": {
-    "message": "Something went wrong. Please make sure your JSON file is properly formatted."
+    "message": "Ceva nu a mers cum trebuie. Vă rugăm să vă asigurați că fișierul dvs. JSON este corect formatat."
   },
   "jsonFile": {
-    "message": "JSON File",
+    "message": "Fișier JSON",
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account."
+    "message": "Țineți evidența simbolurilor pe care le-ați cumpărat cu ajutorul contului dvs. MetaMask."
   },
   "kovan": {
-    "message": "Kovan Test Network"
+    "message": "Rețea de test Kovan"
   },
   "knowledgeDataBase": {
-    "message": "Visit our Knowledge Base"
+    "message": "Vizitați baza noastră de cunoștințe"
   },
   "max": {
-    "message": "Max"
+    "message": "Maximum"
   },
   "learnMore": {
     "message": "Aflați mai multe"
   },
   "ledgerAccountRestriction": {
-    "message": "You need to make use your last account before you can add a new one."
+    "message": "Trebuie să folosiți ultimul cont înainte să adăugați altul."
   },
   "legal": {
-    "message": "Legal"
+    "message": "Juridic"
   },
   "lessThanMax": {
-    "message": "must be less than or equal to $1.",
+    "message": "trebuie să fie mai mic sau egal cu $1.",
     "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
-    "message": "Yes, let’s get set up!"
+    "message": "Da, hai să configurăm!"
   },
   "likeToAddTokens": {
-    "message": "Would you like to add these tokens?"
+    "message": "Adăugați aceste indicative?"
   },
   "links": {
-    "message": "Links"
+    "message": "Link-uri"
   },
   "limit": {
-    "message": "Limit"
+    "message": "Limită"
   },
   "liveGasPricePredictions": {
-    "message": "Live Gas Price Predictions"
+    "message": "Predicții live de preț în gas"
   },
   "loading": {
     "message": "Se încarcă…"
   },
   "loadingTokens": {
-    "message": "Loading Tokens..."
+    "message": "Se încarcă token-urile..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "Încărcați mai multe"
   },
   "localhost": {
     "message": "Localhost 8545"
   },
   "login": {
-    "message": "Log In"
+    "message": "Autentificare"
   },
   "logout": {
-    "message": "Log out"
+    "message": "Deconectați-vă"
   },
   "loose": {
-    "message": "Loose"
+    "message": "Liber"
   },
   "loweCaseWords": {
-    "message": "seed words only have lowercase characters"
+    "message": "cuvintele sursă conțin doar minuscule"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "Rețeaua Ethereum principală"
   },
   "memorizePhrase": {
-    "message": "Memorize this phrase."
+    "message": "Memorați această expresie."
   },
   "memo": {
-    "message": "memo"
+    "message": "notă"
   },
   "menu": {
-    "message": "Menu"
+    "message": "Meniu"
   },
   "message": {
-    "message": "Message"
+    "message": "Mesaj"
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "Vă conectăm la Ethereum și la Internetul descentralizat."
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "Cuvinte Seed MetaMask"
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "Versiune MetaMask"
   },
   "min": {
     "message": "Minimum"
   },
   "missingYourTokens": {
-    "message": "Don't see your tokens?"
+    "message": "Nu vă vedeți token-urile?"
   },
   "minutesShorthand": {
     "message": "Min"
   },
   "mobileSyncTitle": {
-    "message": "Sync accounts with mobile"
+    "message": "Sincronizați conturile cu dispozitivul mobil"
   },
   "mobileSyncText": {
-    "message": "Please enter your password to confirm it's you!"
+    "message": "Vă rugăm introduceți parola pentru a vă confirma identitatea!"
   },
   "myAccounts": {
-    "message": "My Accounts"
+    "message": "Conturile mele"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "Conturi My Wallet"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "Toate conturile dvs. create pe MetaMask vor fi adăugate automat la această secțiune."
   },
   "mustSelectOne": {
-    "message": "Must select at least 1 token."
+    "message": "Trebuie să selectați cel puțin 1 simbol."
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "Pentru a interacționa cu aplicațiile descentralizate prin intermediul MetaMask, trebuie să aveți Ether în portofel."
   },
   "needImportFile": {
-    "message": "You must select a file to import.",
+    "message": "Trebuie să selectați un fișier pentru importare.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "needImportPassword": {
-    "message": "You must enter a password for the selected file.",
+    "message": "Trebuie să introduceți parola pentru fișierul selectat.",
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "Nu se pot trimite sume negative de ETH."
   },
   "networkName": {
-    "message": "Network Name"
+    "message": "Numele rețelei"
   },
   "networks": {
-    "message": "Networks"
+    "message": "Rețele"
   },
   "networkSettingsDescription": {
-    "message": "Add and edit custom RPC networks"
+    "message": "Adăugați și editați rețelele RPC particularizate"
   },
   "nevermind": {
-    "message": "Nevermind"
+    "message": "Nu mai contează"
   },
   "newAccount": {
-    "message": "New Account"
+    "message": "Cont nou"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "A fost detectată o adresă nouă! Faceți clic aici pentru a o adăuga în agenda dvs."
   },
   "newAccountNumberName": {
-    "message": "Account $1",
+    "message": "Cont $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "Contact nou"
   },
   "newContract": {
-    "message": "New Contract"
+    "message": "Contract nou"
   },
   "newPassword": {
-    "message": "New Password (min 8 chars)"
+    "message": "Parola Nouă (minimum 8 caractere)"
   },
   "newPassword8Chars": {
-    "message": "New Password (min 8 chars)"
+    "message": "Parola nouă (min. 8 car.)"
   },
   "newRecipient": {
-    "message": "New Recipient"
+    "message": "Destinatar nou"
   },
   "newNetwork": {
-    "message": "New Network"
+    "message": "Rețea nouă"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "Nefamiliarizat cu MetaMask?"
   },
   "noAlreadyHaveSeed": {
-    "message": "No, I already have a seed phrase"
+    "message": "Nu, am deja o expresie sursă"
   },
   "protectYourKeys": {
-    "message": "Protect Your Keys!"
+    "message": "Protejați-vă cheile!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "Aveți grijă cu expresia dvs. sursă – au existat raportări despre site-uri web care încearcă să imite MetaMask. MetaMask nu vă va cere niciodată expresia sursă!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "Aveți grijă de fraza dvs. Dacă vedeți ceva care este în neregulă sau aveți dubii cu privire la un site, trimiteți un mesaj la support@metamask.io"
   },
   "rpcUrl": {
-    "message": "New RPC URL"
+    "message": "URL RPC nou"
   },
   "showAdvancedOptions": {
-    "message": "Show Advanced Options"
+    "message": "Afișare opțiuni avansate"
   },
   "hideAdvancedOptions": {
-    "message": "Hide Advanced Options"
+    "message": "Ascunde Opțiunile avansate"
   },
   "optionalChainId": {
-    "message": "ChainID (optional)"
+    "message": "ChainID (opțional)"
   },
   "optionalSymbol": {
-    "message": "Symbol (optional)"
+    "message": "Simbol (opțional)"
   },
   "optionalNickname": {
-    "message": "Nickname (optional)"
+    "message": "Pseudonim (opțional)"
   },
   "newTotal": {
-    "message": "New Total"
+    "message": "Total nou"
   },
   "newTransactionFee": {
-    "message": "New Transaction Fee"
+    "message": "Taxă nouă de tranzacție"
   },
   "next": {
     "message": "Înainte"
   },
   "noAddressForName": {
-    "message": "No address has been set for this name."
+    "message": "Nu a fost configurată nicio adresă pentru acest nume."
   },
   "noDeposits": {
-    "message": "No deposits received"
+    "message": "Nicio depunere primită"
   },
   "noConversionRateAvailable": {
-    "message": "No Conversion Rate Available"
+    "message": "Nici o rată de conversie disponibilă"
   },
   "noTransactionHistory": {
-    "message": "No transaction history."
+    "message": "Nu există un istoric al tranzacțiilor."
   },
   "noTransactions": {
-    "message": "You have no transactions"
+    "message": "Nu aveți tranzacții"
   },
   "notEnoughGas": {
-    "message": "Not Enough Gas"
+    "message": "Gas insuficient"
   },
   "notFound": {
     "message": "Nu a fost găsit"
   },
   "notStarted": {
-    "message": "Not Started"
+    "message": "Nepornit"
   },
   "noWebcamFoundTitle": {
-    "message": "Webcam not found"
+    "message": "Camera web nu a fost găsită"
   },
   "noWebcamFound": {
-    "message": "Your computer's webcam was not found. Please try again."
+    "message": "Webcam-ul computerului dvs. nu a fost găsit. Vă rugăm să încercați din nou."
   },
   "ofTextNofM": {
-    "message": "of"
+    "message": "din"
   },
   "oldUI": {
-    "message": "Old UI"
+    "message": "Interfața de utilizator veche"
   },
   "oldUIMessage": {
-    "message": "You have returned to the old UI. You can switch back to the New UI through the option in the top right dropdown menu."
+    "message": "Ați revenit la vechea interfață de utilizare. Puteți comuta iar la noua interfață de utilizare prin opțiunea din meniul derulant din dreapta sus."
   },
   "onlySendToEtherAddress": {
-    "message": "Only send ETH to an Ethereum address."
+    "message": "Trimite ETH doar la adrese Ethereum."
   },
   "onlySendTokensToAccountAddress": {
-    "message": "Only send $1 to an Ethereum account address.",
+    "message": "Trimite $1 doar la o adresă de cont Ethereum.",
     "description": "displays token symbol"
   },
   "openInTab": {
-    "message": "Open in tab"
+    "message": "Deschideți în tab"
   },
   "or": {
-    "message": "or",
+    "message": "sau",
     "description": "choice between creating or importing a new account"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Comandați Trezor sau Ledger și țineți-vă fondurile la rece"
   },
   "origin": {
     "message": "Origine"
   },
   "outgoing": {
-    "message": "Outgoing"
+    "message": "Efectuat"
   },
   "parameters": {
-    "message": "Parameters"
+    "message": "Parametri"
   },
   "originalTotal": {
-    "message": "Original Total"
+    "message": "Total inițial"
   },
   "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
+    "message": "Participați la MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "Alăturați-vă MetaMetrics pentru a ne ajuta să îmbunătățim MetaMask."
   },
   "password": {
     "message": "Parolă"
   },
   "passwordCorrect": {
-    "message": "Please make sure your password is correct."
+    "message": "Vă rugăm să vă asigurați că parola dvs. este corectă."
   },
   "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
+    "message": "Parolele nu se potrivesc"
   },
   "passwordMismatch": {
-    "message": "passwords don't match",
+    "message": "parolele nu sunt identice",
     "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
-    "message": "Password not long enough"
+    "message": "Parola nu este suficient de lungă"
   },
   "passwordShort": {
-    "message": "password not long enough",
+    "message": "parola nu este suficient de lungă",
     "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
-    "message": "Paste your private key string here:",
+    "message": "Lipiți aici șirul de chei private:",
     "description": "For importing an account from a private key"
   },
   "pasteSeed": {
-    "message": "Paste your seed phrase here!"
+    "message": "Copiați-vă expresia seed aici!"
   },
   "pending": {
-    "message": "pending"
+    "message": "în așteptare"
   },
   "personalAddressDetected": {
-    "message": "Personal address detected. Input the token contract address."
+    "message": "A fost detectată o adresă personală. Introduceți adresa de contract indicativ."
   },
   "pleaseReviewTransaction": {
-    "message": "Please review your transaction."
+    "message": "Vă rugăm să vă verificați tranzacția."
   },
   "popularTokens": {
-    "message": "Popular Tokens"
+    "message": "Indicative populare"
   },
   "prev": {
-    "message": "Prev"
+    "message": "Ant"
   },
   "primaryCurrencySetting": {
-    "message": "Primary Currency"
+    "message": "Moneda principală"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "Selectați nativ pentru a prioritiza valorile afișate în moneda nativă a lanțului (ex. ETH). Selectați Fiat pentru a prioritiza valorile afișate în moneda selectată fiat."
   },
   "privacyMsg": {
     "message": "Politica de Confidențialitate"
   },
   "privateKey": {
-    "message": "Private Key",
+    "message": "Cheie privată",
     "description": "select this type of file to use to import an account"
   },
   "privateKeyWarning": {
-    "message": "Warning: Never disclose this key. Anyone with your private keys can steal any assets held in your account."
+    "message": "Avertisment: nu dezvăluiți niciodată această cheie. Oricine are cheile dvs. private poate fura orice activ din contul dvs."
   },
   "privateNetwork": {
-    "message": "Private Network"
+    "message": "Rețea privată"
   },
   "qrCode": {
     "message": "Afișare cod QR"
@@ -1272,97 +1272,97 @@
     "message": "Coadă"
   },
   "readdToken": {
-    "message": "You can add this token back in the future by going to “Add token” in your accounts options menu."
+    "message": "Puteți adăuga din nou acest indicativ în viitor accesând „Adăugați indicativ” din meniul de opțiuni al contului dvs."
   },
   "readMore": {
-    "message": "Read more here."
+    "message": "Citiți mai multe aici."
   },
   "readMore2": {
-    "message": "Read more."
+    "message": "Citiți mai multe."
   },
   "receive": {
-    "message": "Receive"
+    "message": "Primiți"
   },
   "recents": {
-    "message": "Recents"
+    "message": "Recente"
   },
   "recipientAddress": {
-    "message": "Recipient Address"
+    "message": "Adresă destinatar"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Căutare, adresa publică (0x) sau ENS"
   },
   "refundAddress": {
-    "message": "Your Refund Address"
+    "message": "Adresa dvs. pentru restituire"
   },
   "rejectAll": {
-    "message": "Reject All"
+    "message": "Respingere toate"
   },
   "rejectTxsN": {
-    "message": "Reject $1 transactions"
+    "message": "Respingeți $1 (de) tranzacții"
   },
   "rejectTxsDescription": {
-    "message": "You are about to batch reject $1 transactions."
+    "message": "Sunteți pe cale să respingeți în grup $1 (de) tranzacții."
   },
   "rejected": {
-    "message": "Rejected"
+    "message": "Respins"
   },
   "reset": {
     "message": "Resetează"
   },
   "resetAccount": {
-    "message": "Reset Account"
+    "message": "Resetare cont"
   },
   "resetAccountDescription": {
-    "message": "Resetting your account will clear your transaction history."
+    "message": "Resetarea contului va duce la ștergerea istoricului tranzacțiilor dvs."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "Ștergeți rețeaua?"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "Sigur vreți să ștergeți această rețea?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "Reamintește-mi mai târziu"
   },
   "restoreFromSeed": {
-    "message": "Restore account?"
+    "message": "Restabiliți contul?"
   },
   "restoreVault": {
-    "message": "Restore Vault"
+    "message": "Restabiliți seiful"
   },
   "restoreAccountWithSeed": {
-    "message": "Restore your Account with Seed Phrase"
+    "message": "Restaurați-vă contul folosind fraza inițială"
   },
   "requestsAwaitingAcknowledgement": {
-    "message": "requests waiting to be acknowledged"
+    "message": "solicitări care așteaptă să fie confirmate"
   },
   "required": {
-    "message": "Required"
+    "message": "Obligatoriu"
   },
   "retryWithMoreGas": {
-    "message": "Retry with a higher gas price here"
+    "message": "Reîncercați aici cu un preț mai mare al gasului "
   },
   "restore": {
     "message": "Restabilește"
   },
   "revealSeedWords": {
-    "message": "Reveal Seed Words"
+    "message": "Arată cuvintele din seed"
   },
   "revealSeedWordsTitle": {
-    "message": "Seed Phrase"
+    "message": "Expresie sursă"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "Dacă schimbați vreodată browserele sau vă mutați la alt computer, veți avea nevoie de această expresie sursă pentru a vă accesa conturile. Salvați-o într-un loc sigur și secret."
   },
   "revealSeedWordsWarningTitle": {
-    "message": "DO NOT share this phrase with anyone!"
+    "message": "NU împărtășiți această expresie nimănui!"
   },
   "revealSeedWordsWarning": {
-    "message": "These words can be used to steal all your accounts."
+    "message": "Aceste cuvinte pot fi folosite pentru a vă fura toate conturile."
   },
   "revert": {
-    "message": "Revert"
+    "message": "Reveniți"
   },
   "remove": {
     "message": "Elimină"
@@ -1371,25 +1371,25 @@
     "message": "Eliminați contul"
   },
   "removeAccountDescription": {
-    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+    "message": "Acest cont va fi eliminat din portofelul dvs. Înainte de a continua, vă rugăm să vă asigurați că aveți expresia seed inițială sau cheia privată pentru acest cont importat. Puteți importa sau crea conturi din nou din meniul derulant al contului."
   },
   "readyToConnect": {
-    "message": "Ready to Connect?"
+    "message": "Gata de conectare?"
   },
   "rinkeby": {
-    "message": "Rinkeby Test Network"
+    "message": "Rețea test Rinkeby"
   },
   "ropsten": {
-    "message": "Ropsten Test Network"
+    "message": "Rețea de testare Ropsten"
   },
   "goerli": {
-    "message": "Goerli Test Network"
+    "message": "Rețea de test Goerli"
   },
   "rpc": {
-    "message": "Custom RPC"
+    "message": "RPC personalizat"
   },
   "sampleAccountName": {
-    "message": "E.g. My new account",
+    "message": "De ex. Noul meu cont",
     "description": "Help user understand concept of adding a human-readable name to their account"
   },
   "save": {
@@ -1399,491 +1399,491 @@
     "message": "Lent"
   },
   "slower": {
-    "message": "Slower"
+    "message": "Mai încet"
   },
   "saveAsCsvFile": {
-    "message": "Save as CSV File"
+    "message": "Salvați ca fișier CSV "
   },
   "saveAsFile": {
     "message": "Salvează ca fișier",
     "description": "Account export process"
   },
   "saveSeedAsFile": {
-    "message": "Save Seed Words As File"
+    "message": "Salvare cuvinte inițiale ca fișier"
   },
   "scanInstructions": {
-    "message": "Place the QR code in front of your camera"
+    "message": "Așezați codul QR în fața camerei"
   },
   "scanQrCode": {
-    "message": "Scan QR Code"
+    "message": "Scanați codul QR"
   },
   "search": {
     "message": "Caută"
   },
   "searchResults": {
-    "message": "Search Results"
+    "message": "Rezultate căutare"
   },
   "secretBackupPhrase": {
-    "message": "Secret Backup Phrase"
+    "message": "Expresia secretă de rezervă"
   },
   "secretBackupPhraseDescription": {
-    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+    "message": "Expresia dvs. secretă de rezervă înlesnește crearea unei copii de rezervă a contului dvs. și restabilirea acestuia."
   },
   "secretBackupPhraseWarning": {
-    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+    "message": "ATENȚIE: Nu dezvăluiți niciodată expresia dvs. de rezervă. Oricine are această expresie vă poate lua Ether-ul pentru totdeauna."
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "Introduceți aici expresia dvs. secretă din 12 cuvinte pentru a restabili seiful."
   },
   "securityAndPrivacy": {
-    "message": "Security & Privacy"
+    "message": "Securitate și confidențialitate"
   },
   "securitySettingsDescription": {
-    "message": "Privacy settings and wallet seed phrase"
+    "message": "Setările de confidențialitate și fraza seed a portofelului"
   },
   "secondsShorthand": {
     "message": "Sec"
   },
   "seedPhrasePlaceholder": {
-    "message": "Separate each word with a single space"
+    "message": "Despărțiți fiecare cuvânt cu un spațiu"
   },
   "seedPhraseReq": {
-    "message": "Seed phrases are 12 words long"
+    "message": "Expresiile seed sunt lungi de 12 cuvinte"
   },
   "select": {
     "message": "Selectează"
   },
   "selectCurrency": {
-    "message": "Select Currency"
+    "message": "Selectați moneda"
   },
   "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
+    "message": "Vă rugăm să selectați fiecare expresie pentru a vă asigura că este corectă."
   },
   "selectLocale": {
-    "message": "Select Locale"
+    "message": "Alegeți setările regionale"
   },
   "selectService": {
-    "message": "Select Service"
+    "message": "Selectați serviciul"
   },
   "selectType": {
-    "message": "Select Type"
+    "message": "Selectați tipul"
   },
   "send": {
     "message": "Trimite"
   },
   "sendAmount": {
-    "message": "Send Amount"
+    "message": "Suma trimisă"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Trimitere ETH"
   },
   "sendTokens": {
-    "message": "Send Tokens"
+    "message": "Trimiteți indicative"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "trimiteți ether"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "tokenuri trimise"
   },
   "separateEachWord": {
-    "message": "Separate each word with a single space"
+    "message": "Despărțiți fiecare cuvânt cu un spațiu"
   },
   "searchTokens": {
-    "message": "Search Tokens"
+    "message": "Căutați token-uri"
   },
   "selectAnAddress": {
-    "message": "Select an Address"
+    "message": "Selectați o adresă"
   },
   "selectAnAccount": {
-    "message": "Select an Account"
+    "message": "Selectați un cont"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "Selectați contul de vizualizat în MetaMask"
   },
   "selectAnAsset": {
-    "message": "Select an Asset"
+    "message": "Selectați un activ"
   },
   "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+    "message": "Selectați o taxă gas mai mare pentru a accelera procesarea tranzacției.*"
   },
   "selectHdPath": {
-    "message": "Select HD Path"
+    "message": "Selectare cale HD"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "Dacă nu vedeți mai jos conturile dvs. Ledger existente, încercați să comutați calea la „Legacy (MEW / MyCrypto)”"
   },
   "sendTokensAnywhere": {
-    "message": "Send Tokens to anyone with an Ethereum account"
+    "message": "Trimiteți indicative oricui doriți cu un cont Ethereum"
   },
   "settings": {
     "message": "Setări"
   },
   "shapeshiftBuy": {
-    "message": "Buy with Shapeshift"
+    "message": "Cumpărați cu Shapeshift"
   },
   "showAdvancedGasInline": {
-    "message": "Advanced gas controls"
+    "message": "Controale avansate pentru gas"
   },
   "showAdvancedGasInlineDescription": {
-    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+    "message": "Selectați aceasta pentru a arăta prețul gasului și comenzile de limitare direct pe ecranele de trimitere și confirmare."
   },
   "showFiatConversionInTestnets": {
-    "message": "Show Conversion on Testnets"
+    "message": "Afișează conversiile pe rețelele de test (testnets)"
   },
   "showFiatConversionInTestnetsDescription": {
-    "message": "Select this to show fiat conversion on Testnets"
+    "message": "Selectați pentru a afișa conversia fiat pe Testnets"
   },
   "showPrivateKeys": {
-    "message": "Show Private Keys"
+    "message": "Afișați cheile private"
   },
   "showQRCode": {
     "message": "Afișare cod QR"
   },
   "showHexData": {
-    "message": "Show Hex Data"
+    "message": "Arată datele hex"
   },
   "showHexDataDescription": {
-    "message": "Select this to show the hex data field on the send screen"
+    "message": "Selectați această opțiune pentru a arăta câmpul de date hexazecimale în ecranul de trimitere."
   },
   "sign": {
-    "message": "Sign"
+    "message": "Semnați"
   },
   "signatureRequest": {
-    "message": "Signature Request"
+    "message": "Cerere semnătură"
   },
   "signed": {
-    "message": "Signed"
+    "message": "Semnat"
   },
   "signMessage": {
-    "message": "Sign Message"
+    "message": "Semnați mesajul"
   },
   "signNotice": {
-    "message": "Signing this message can have \ndangerous side effects. Only sign messages from \nsites you fully trust with your entire account.\n This dangerous method will be removed in a future version. "
+    "message": "Semnarea acestui mesaj poate avea efecte secundare periculoase. Semnați mesajele numai de pe site-urile în care aveți încredere deplină să vă acceseze întregul cont. Această metodă periculoasă va fi eliminată într-o versiune viitoare."
   },
   "sigRequest": {
-    "message": "Signature Request"
+    "message": "Solicitare de semnătură"
   },
   "sigRequested": {
-    "message": "Signature Requested"
+    "message": "Este necesară semnătura"
   },
   "somethingWentWrong": {
-    "message": "Oops! Something went wrong."
+    "message": "Hopa! A apărut o eroare."
   },
   "spaceBetween": {
-    "message": "there can only be a space between words"
+    "message": "între cuvinte poate exista un singur spațiu"
   },
   "speedUp": {
-    "message": "Speed Up"
+    "message": "Accelerați"
   },
   "speedUpTitle": {
-    "message": "Speed Up Transaction"
+    "message": "Accelerați tranzacția"
   },
   "speedUpSubtitle": {
-    "message": "Increase your gas price to attempt to overwrite and speed up your transaction"
+    "message": "Creșteți prețul gas pentru a încerca să suprascrieți și să vă accelerați tranzacția"
   },
   "speedUpCancellation": {
-    "message": "Speed up this cancellation"
+    "message": "Accelerați această anulare"
   },
   "speedUpTransaction": {
-    "message": "Speed up this transaction"
+    "message": "Accelerați această tranzacție"
   },
   "switchNetworks": {
-    "message": "Switch Networks"
+    "message": "Schimbați rețelele"
   },
   "status": {
     "message": "Stare"
   },
   "stateLogs": {
-    "message": "State Logs"
+    "message": "Jurnale de stare"
   },
   "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+    "message": "Jurnalele de stare conțin adresele contului dvs. public și tranzacțiile trimise."
   },
   "stateLogError": {
-    "message": "Error in retrieving state logs."
+    "message": "Eroare la recuperarea înregistrărilor de stare."
   },
   "step1HardwareWallet": {
-    "message": "1. Connect Hardware Wallet"
+    "message": "1. Conectați portofel hardware"
   },
   "step1HardwareWalletMsg": {
-    "message": "Connect your hardware wallet directly to your computer."
+    "message": "Conectați portofelul hardware direct la computer."
   },
   "step2HardwareWallet": {
-    "message": "2. Select an Account"
+    "message": "2. Selectați un cont"
   },
   "step2HardwareWalletMsg": {
-    "message": "Select the account you want to view. You can only choose one at a time."
+    "message": "Selectați contul pe care vreți să îl vizualizați. Puteți alege doar câte unul odată."
   },
   "step3HardwareWallet": {
-    "message": "3. Start using dApps and more!"
+    "message": "3. Începeți să folosiți dApps și altele!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Use your hardware account like you would with any Ethereum account. Log in to dApps, send Eth, buy and store ERC20 tokens and Non-Fungible tokens like CryptoKitties."
+    "message": "Folosiți-vă contul hardware la fel ca pe orice cont Ethereum. Conectați-vă la dApps, trimiteți Eth, cumpărați și stocați tokenuri ERC20 și tokenuri non-fungibile precum CryptoKitties."
   },
   "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
+    "message": "Păstrați această expresie într-un program de gestionare a parolelor cum ar fi 1Password."
   },
   "submit": {
     "message": "Trimite"
   },
   "submitted": {
-    "message": "Submitted"
+    "message": "Trimis"
   },
   "supportCenter": {
-    "message": "Visit our Support Center"
+    "message": "Accesați centrul de asistență"
   },
   "symbol": {
-    "message": "Symbol"
+    "message": "Simbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be between 0 and 12 characters."
+    "message": "Simbolul trebuie să fie între 0 și 12 caractere."
   },
   "syncWithMobile": {
-    "message": "Sync with mobile"
+    "message": "Sincronizați cu dispozitivul mobil"
   },
   "syncWithMobileTitle": {
-    "message": "Sync with mobile"
+    "message": "Sincronizați cu mobilul"
   },
   "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+    "message": "Vă puteți sincroniza conturile și informațiile cu dispozitivul dvs. mobil. Deschideți aplicația mobilă MetaMask, mergeți la „Setări” și atingeți „Sincronizare de la extensia de browser”"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
+    "message": "Dacă deschideți aplicația pentru mobil MetaMask pentru prima oară, urmați pașii afișați pe telefonul dvs."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
+    "message": "Scanați acest cod folosind aplicația dvs. mobilă MetaMask"
   },
   "syncWithMobileBeCareful": {
-    "message": "Make sure nobody else is looking at your screen when you scan this code"
+    "message": "Asigurați-vă că nimeni altcineva nu poate vedea ecranul dvs. când scanați acest cod"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced succesfully. Enjoy the MetaMask mobile app!"
+    "message": "Datele dvs. au fost sincronizate cu succes. Bucurați-vă de aplicația mobilă MetaMask!"
   },
   "takesTooLong": {
-    "message": "Taking too long?"
+    "message": "Durează prea mult?"
   },
   "terms": {
-    "message": "Terms of Use"
+    "message": "Termeni și condiții"
   },
   "testFaucet": {
-    "message": "Test Faucet"
+    "message": "Robinet de testare"
   },
   "thisWillCreate": {
-    "message": "This will create a new wallet and seed phrase"
+    "message": "Această acțiune va crea un nou portofel și o nouă fraza inițială."
   },
   "tips": {
     "message": "Cadouri bănești"
   },
   "to": {
-    "message": "To"
+    "message": "Către"
   },
   "toETHviaShapeShift": {
-    "message": "$1 to ETH via ShapeShift",
+    "message": "$1 în ETH prin ShapeShift",
     "description": "system will fill in deposit type in start of message"
   },
   "token": {
-    "message": "Token"
+    "message": "Indicativ"
   },
   "tokenAddress": {
-    "message": "Token Address"
+    "message": "Adresă simbol"
   },
   "tokenAlreadyAdded": {
-    "message": "Token has already been added."
+    "message": "Token-ul a fost adăugat deja."
   },
   "tokenBalance": {
-    "message": "Your Token Balance is:"
+    "message": "Soldul de token este:"
   },
   "tokenContractAddress": {
-    "message": "Token Contract Address"
+    "message": "Adresa din contractul de token"
   },
   "tokenSelection": {
-    "message": "Search for tokens or select from our list of popular tokens."
+    "message": "Căutați simboluri sau alegeți din lista noastră de simboluri des folosite."
   },
   "tokenSymbol": {
-    "message": "Token Symbol"
+    "message": "Simbol token"
   },
   "tokenWarning1": {
-    "message": "Keep track of the tokens you’ve bought with your MetaMask account. If you bought tokens using a different account, those tokens will not appear here."
+    "message": "Țineți evidența token-urilor pe care le-ați cumpărat cu contul MetaMask. Dacă ați cumpărat token-uri folosind alt cont, acele token-uri nu vor apărea aici."
   },
   "total": {
     "message": "Total"
   },
   "transaction": {
-    "message": "transaction"
+    "message": "tranzacție"
   },
   "transactionConfirmed": {
-    "message": "Transaction confirmed at $2."
+    "message": "Tranzacție confirmată la $2."
   },
   "transactionCreated": {
-    "message": "Transaction created with a value of $1 at $2."
+    "message": "Tranzacție creată cu o valoare de $1 la $2."
   },
   "transactionWithNonce": {
-    "message": "Transaction $1"
+    "message": "Tranzacție $1"
   },
   "transactionDropped": {
-    "message": "Transaction dropped at $2."
+    "message": "Tranzacție abandonată la $2."
   },
   "transactionSubmitted": {
-    "message": "Transaction submitted with gas fee of $1 at $2."
+    "message": "Tranzacția a fost trimisă, cu o taxă gas de $1 la $2."
   },
   "transactionResubmitted": {
-    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+    "message": "Tranzacția a fost redepusă cu taxa gaz majorată de la $1 la $2"
   },
   "transactionUpdated": {
-    "message": "Transaction updated at $2."
+    "message": "Tranzacție actualizată la $2."
   },
   "transactionUpdatedGas": {
-    "message": "Transaction updated with a gas fee of $1 at $2."
+    "message": "Tranzacția a fost actualizată cu o taxă gas de $1 la $2."
   },
   "transactionErrored": {
-    "message": "Transaction encountered an error."
+    "message": "Tranzacția a întâlnit o eroare."
   },
   "transactionCancelAttempted": {
-    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+    "message": "Tentativă de anulare a tranzacției cu o taxă gas de $1 la $2"
   },
   "transactionCancelSuccess": {
-    "message": "Transaction successfully cancelled at $2"
+    "message": "Tranzacția a fost anulată cu succes la $2"
   },
   "transactions": {
-    "message": "transactions"
+    "message": "tranzacții"
   },
   "transactionError": {
-    "message": "Transaction Error. Exception thrown in contract code."
+    "message": "Eroare de tranzacție. Excepție lansată în codul contractului."
   },
   "transactionErrorNoContract": {
-    "message": "Trying to call a function on a non-contract address."
+    "message": "Se încearcă apelarea unei funcții pe o adresă non-contract."
   },
   "transactionFee": {
-    "message": "Transaction Fee"
+    "message": "Taxa tranzacției"
   },
   "transactionMemo": {
-    "message": "Transaction memo (optional)"
+    "message": "Notă tranzacție (opțional)"
   },
   "transactionNumber": {
-    "message": "Transaction Number"
+    "message": "Număr tranzacție"
   },
   "transactionTime": {
-    "message": "Transaction Time"
+    "message": "Ora tranzacției"
   },
   "transfer": {
     "message": "Transfer"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "Transferă între conturile mele"
   },
   "transferFrom": {
-    "message": "Transfer From"
+    "message": "Transferați de la"
   },
   "transfers": {
-    "message": "Transfers"
+    "message": "Transferuri"
   },
   "trezorHardwareWallet": {
-    "message": "TREZOR Hardware Wallet"
+    "message": "Portofel hardware TREZOR"
   },
   "troubleTokenBalances": {
-    "message": "We had trouble loading your token balances. You can view them ",
+    "message": "Am avut dificultăți cu încărcarea soldurilor dvs. de tokenuri. Le puteți vizualiza",
     "description": "Followed by a link (here) to view token balances"
   },
   "tryAgain": {
     "message": "Încearcă din nou"
   },
   "twelveWords": {
-    "message": "These 12 words are the only way to restore your MetaMask accounts.\nSave them somewhere safe and secret."
+    "message": "Aceste 12 cuvinte sunt singurul mod de a vă restabili conturile MetaMask.\nSalvați-le într-un loc sigur și secret."
   },
   "typePassword": {
-    "message": "Type your MetaMask password"
+    "message": "Scrieți parola dvs. pentru MetaMask"
   },
   "uiMigrationAnnouncement": {
-    "message": "Welcome to the new MetaMask UI. If you have feedback about the UI or feature requests, please reach out to our support team or on GitHub."
+    "message": "Bun venit la noua interfață utilizator MetaMask. Dacă aveți feedback despre IU sau solicitări de funcții, contactați echipa noastră de asistență sau GitHub."
   },
   "uiWelcome": {
-    "message": "Welcome to the New UI (Beta)"
+    "message": "Bine ați venit pe noul UI (Beta)"
   },
   "uiWelcomeMessage": {
-    "message": "You are now using the new MetaMask UI."
+    "message": "Folosiți acum noua interfață de utilizator MetaMask."
   },
   "unapproved": {
-    "message": "Unapproved"
+    "message": "Neaprobat"
   },
   "unavailable": {
     "message": "Indisponibil"
   },
   "units": {
-    "message": "units"
+    "message": "unități"
   },
   "unknown": {
     "message": "Necunoscută"
   },
   "unknownNetwork": {
-    "message": "Unknown Private Network"
+    "message": "Rețea privată necunoscută"
   },
   "unknownNetworkId": {
-    "message": "Unknown network ID"
+    "message": "ID rețea necunoscut"
   },
   "unknownQrCode": {
-    "message": "Error: We couldn't identify that QR code"
+    "message": "Eroare: Acel cod QR nu a putut fi identificat"
   },
   "unknownCameraErrorTitle": {
-    "message": "Ooops! Something went wrong...."
+    "message": "Hopa! A apărut o eroare..."
   },
   "unknownCameraError": {
-    "message": "There was an error while trying to access your camera. Please try again..."
+    "message": "A survenit o eroare la accesarea camerei. Încercați din nou..."
   },
   "unlock": {
     "message": "Deblochează"
   },
   "unlockMessage": {
-    "message": "The decentralized web awaits"
+    "message": "Web-ul descentralizat așteaptă"
   },
   "updatedWithDate": {
-    "message": "Updated $1"
+    "message": "Actualizat $1"
   },
   "uriErrorMsg": {
-    "message": "URIs require the appropriate HTTP/HTTPS prefix."
+    "message": "URL necesită prefixul potrivit HTTP/HTTPS."
   },
   "usaOnly": {
-    "message": "USA only",
+    "message": "Doar S.U.A.",
     "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
-    "message": "Used by a variety of different clients"
+    "message": "Folosit de diverși clienți"
   },
   "useOldUI": {
-    "message": "Use old UI"
+    "message": "Folosiți vechiul UI"
   },
   "userName":{
     "message": "Nume utilizator"
   },
   "validFileImport": {
-    "message": "You must select a valid file to import."
+    "message": "Trebuie să selectați un fișier valabil pentru importare."
   },
   "vaultCreated": {
-    "message": "Vault Created"
+    "message": "Seiful a fost creat"
   },
   "viewAccount": {
     "message": "Afișați contul"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "Vizualizare în Explorator"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "Vizualizare contact"
   },
   "viewOnCustomBlockExplorer": {
-    "message": "View at $1"
+    "message": "Vizualizați la $1"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "Vizualizați pe Etherscan"
   },
   "viewNetworkInfo": {
-    "message": "View Network Info"
+    "message": "Vedeți detaliile rețelei"
   },
   "visitWebSite": {
-    "message": "Visit our web site"
+    "message": "Accesați site-ul nostru"
   },
   "walletSeed": {
-    "message": "Wallet Seed"
+    "message": "Sursă portofel"
   },
   "warning": {
     "message": "Avertisment"
@@ -1892,42 +1892,42 @@
     "message": "Bine ai revenit!"
   },
   "welcome": {
-    "message": "Welcome to MetaMask"
+    "message": "Bun venit la MetaMask"
   },
   "whatsThis": {
-    "message": "What's this?"
+    "message": "Ce este aceasta?"
   },
   "writePhrase": {
-    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+    "message": "Scrieți această expresie pe o bucată de hârtie și păstrați-o într-un loc sigur. Dacă vreți și mai multă securitate, notați-o pe mai multe bucăți de hârtie și păstrați-le în 2 - 3 locuri diferite."
   },
   "yesLetsTry": {
-    "message": "Yes, let's try"
+    "message": "Da, să încercăm"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "You need to allow camera access to use this feature."
+    "message": "Trebuie să permiteți accesul la cameră pentru a folosi această funcție."
   },
   "yourSigRequested": {
-    "message": "Your signature is being requested"
+    "message": "Semnătura dvs. este solicitată"
   },
   "youSign": {
-    "message": "You are signing"
+    "message": "Semnați"
   },
   "yourPrivateSeedPhrase": {
-    "message": "Your private seed phrase"
+    "message": "Expresia dvs. seed privată"
   },
   "yourUniqueAccountImage": {
-    "message": "Your unique account image"
+    "message": "Imaginea dvs. de cont unică"
   },
   "yourUniqueAccountImageDescription1": {
-    "message": "This image was programmatically generated for you by your new account number."
+    "message": "Această imagine a fost generată programatic pentru dvs. de către noul dvs. număr de cont."
   },
   "yourUniqueAccountImageDescription2": {
-    "message": "You’ll see this image everytime you need to confirm a transaction."
+    "message": "Veți vedea această imagine de fiecare dată când trebuie să confirmați o tranzacție."
   },
   "yourUniqueAccountImageDescription3": {
-    "message": "MetaMask will never ask for your seed phrase!"
+    "message": "MetaMask nu vă va solicita niciodată fraza seed!"
   },
   "zeroGasPriceOnSpeedUpError": {
-    "message": "Zero gas price on speed up"
+    "message": "Preț gas zero la accelerare"
   }
 }

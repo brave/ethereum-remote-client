@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Anslut din Ledger hårdvaruplånbok för att interagera med dApps och göra överföringar till andra anslutna plånböcker."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Ny lokal plånbok"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Anslut din Trezor hårdvaruplånbok för att kommunicera med dApps och gör överföringar till andra anslutna plånböcker."
   }
 }

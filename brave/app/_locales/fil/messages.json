@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Ikonekta ang iyong Ledger hardware wallet para makagamit ng dApps at magsagawa ng mga transfer sa iba pang mga nakakonektang wallet."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Bagong Lokal na Wallet"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Ikonekta ang iyong Trezor hardware wallet para makagamit ng dApps at magsagawa ng mga transfer sa iba pang mga nakakonektang wallet."
   }
 }

@@ -1,15 +1,15 @@
 {
   "shareAddress": {
-    "message": "Share Address"
+    "message": "Condividi indirizzo\n"
   },
   "shareAddressToConnect": {
-    "message": "Share your address to connect to $1?"
+    "message": "Condividere il tuo indirizzo per connetterti a $1?\n"
   },
   "shareAddressInfo": {
-    "message": "Sharing your address with $1 will allow you to interact with this dapp. This permission is to protect your privacy by default."
+    "message": "Condividere il tuo indirizzo con $1 ti permetterà di interagire con questo dapp. Questo permesso è per proteggere la tua privacy per impostazione predefinita.\n"
   },
   "privacyModeDefault": {
-    "message": "Privacy Mode is now enabled by default"
+    "message": "La modalità privacy è ora abilitata per impostazione predefinita\n"
   },
   "privacyMode": {
     "message": "Modalità privacy"
@@ -102,10 +102,10 @@
     "message": "Aggiungi Rete"
   },
   "addRecipient": {
-    "message": "Add Recipient"
+    "message": "Aggiungi destinatario"
   },
   "addressBook": {
-    "message": "Address Book"
+    "message": "Rubrica\n"
   },
   "advanced": {
     "message": "Avanzate"
@@ -120,16 +120,16 @@
     "message": "Aggiungi un token personalizzato"
   },
   "addToAddressBook": {
-    "message": "Add to address book"
+    "message": "Aggiungi alla rubrica"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "e.g. John D."
+    "message": "Ad esempio, John D.\n"
   },
   "addAlias": {
-    "message": "Add alias"
+    "message": "Aggiungi alias"
   },
   "addEthAddress": {
-    "message": "Add an Ethereum address"
+    "message": "Aggiungi un indirizzo Ethereum\n"
   },
   "addToken": {
     "message": "Aggiungi Token"
@@ -206,16 +206,16 @@
     "message": "Indietro"
   },
   "backToAll": {
-    "message": "Back to All"
+    "message": "Torna a \"Tutti\""
   },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Esegui il backup del codice di recupero segreto per mantenere il portafoglio e i fondi al sicuro."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "Questo codice segreto è necessario per recuperare il tuo portafoglio nel caso in cui perdi il tuo dispositivo, dimentichi la tua password, debba reinstallare MetaMask o voglia accedere al tuo portafoglio su un altro dispositivo.\n"
   },
   "backupNow": {
-    "message": "Backup now"
+    "message": "Esegui il backup ora"
   },
   "balance": {
     "message": "Bilancio:"
@@ -400,10 +400,10 @@
     "message": "Connettersi al Trezor"
   },
   "contactList": {
-    "message": "Contact List"
+    "message": "Elenco contatti"
   },
   "contactListDescription": {
-    "message": "Add, edit, remove, and manage your contacts"
+    "message": "Aggiungi, modifica, rimuovi e gestisci i tuoi contatti"
   },
   "continue": {
     "message": "Continua"
@@ -515,7 +515,7 @@
     "message": "Elimina"
   },
   "deleteAccount": {
-    "message": "Delete Account"
+    "message": "Cancella account"
   },
   "denExplainer": {
     "message": "Il DEN è il tuo archivio crittato con password dentro MetaMask."
@@ -587,7 +587,7 @@
     "message": "Modifica Nome Account"
   },
   "editContact":{
-    "message": "Edit Contact"
+    "message": "Modifica contatto"
   },
   "editingTransaction": {
     "message": "Modifica la transazione"
@@ -632,13 +632,13 @@
     "message": "Nome ENS non trovato"
   },
   "ensRegistrationError": {
-    "message": "Error in ENS name registration"
+    "message": "Errore nella registrazione del nome ENS"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "Nome ENS non trovato sulla rete attuale. Prova a passare alla rete principale di Ethereum."
   },
   "enterAnAlias": {
-    "message": "Enter an alias"
+    "message": "Inserisci un alias"
   },
   "enterPassword": {
     "message": "Inserisci password"
@@ -653,7 +653,7 @@
     "message": "ETH"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "Indirizzo pubblico Ethereum \n"
   },
   "etherscanView": {
     "message": "Vedi account su Etherscan"
@@ -966,7 +966,7 @@
     "message": "Caricamento Tokens..."
   },
   "loadMore": {
-    "message": "Load More"
+    "message": "Carica di più\n"
   },
   "localhost": {
     "message": "Localhost 8545"
@@ -990,7 +990,7 @@
     "message": "Memorizza questa frase."
   },
   "memo": {
-    "message": "memo"
+    "message": "promemoria"
   },
   "menu": {
     "message": "Menu"
@@ -1026,10 +1026,10 @@
     "message": "Miei Account"
   },
   "myWalletAccounts": {
-    "message": "My Wallet Accounts"
+    "message": "I miei account di portafoglio"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "Tutti gli account creati con MetaMask saranno automaticamente aggiunti a questa sezione.\n"
   },
   "mustSelectOne": {
     "message": "Devi selezionare almeno un token."
@@ -1064,14 +1064,14 @@
     "message": "Nuovo Account"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "New address detected! Click here to add to your address book."
+    "message": "Rilevato un nuovo indirizzo! Clicca qui per aggiungerlo alla tua rubrica.\n"
   },
   "newAccountNumberName": {
     "message": "Account $1",
     "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
-    "message": "New Contact"
+    "message": "Nuovo contatto"
   },
   "newContract": {
     "message": "Nuovo Contratto"
@@ -1284,13 +1284,13 @@
     "message": "Ricevi"
   },
   "recents": {
-    "message": "Recents"
+    "message": "Recenti"
   },
   "recipientAddress": {
     "message": "Indirizzo Destinatario"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Ricerca, indirizzo pubblico (0x) o ENS"
   },
   "refundAddress": {
     "message": "Indirizzo di Rimborso"
@@ -1317,13 +1317,13 @@
     "message": "Ripristinare il tuo account cancellerà lo storico delle transazioni."
   },
   "deleteNetwork": {
-    "message": "Delete Network?"
+    "message": "Cancella la rete?\n"
   },
   "deleteNetworkDescription": {
-    "message": "Are you sure you want to delete this network?"
+    "message": "Sei sicuro di voler eliminare questa rete?"
   },
   "remindMeLater": {
-    "message": "Remind me later"
+    "message": "Ricordami più tardi"
   },
   "restoreFromSeed": {
     "message": "Ripristina da una frase seed"
@@ -1770,7 +1770,7 @@
     "message": "Trasferisci"
   },
   "transferBetweenAccounts": {
-    "message": "Transfer between my accounts"
+    "message": "Trasferimento tra i miei account\n"
   },
   "transferFrom": {
     "message": "Trasferisci Da"
@@ -1865,10 +1865,10 @@
     "message": "Vedi Account"
   },
   "viewinExplorer": {
-    "message": "View in Explorer"
+    "message": "Vista in Explorer\n"
   },
   "viewContact": {
-    "message": "View Contact"
+    "message": "Visualizza contatto\n"
   },
   "viewOnCustomBlockExplorer": {
     "message": "Vedi su $1"

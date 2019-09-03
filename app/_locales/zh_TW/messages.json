@@ -1,6 +1,36 @@
 {
+  "shareAddress": {
+    "message": "分享位址"
+  },
+  "shareAddressToConnect": {
+    "message": "分享你的位址來連接到 $1？"
+  },
+  "shareAddressInfo": {
+    "message": "和 $1 分享位址能讓你與此 dapp 互動。此許可是預設來保護你的隱私。"
+  },
+  "privacyModeDefault": {
+    "message": "隱私模式現已根據預設開啟"
+  },
+  "privacyMode": {
+    "message": "隱私模式"
+  },
+  "privacyModeDescription": {
+    "message": "網站必須請求訪問權限才能查看您的帳戶資訊"
+  },
+  "exposeAccounts": {
+    "message": "公開賬戶"
+  },
+  "exposeDescription": {
+    "message": "將帳戶公開給當前網站。對傳統去中心化應用服務很有用。"
+  },
   "chartOnlyAvailableEth": {
     "message": "圖表僅適用於以太坊網路。"
+  },
+  "confirmExpose": {
+    "message": "您確定要將帳戶公開到當前網站嗎？"
+  },
+  "confirmClear": {
+    "message": "您確定要清除已批准的網站紀錄？"
   },
   "contractInteraction": {
     "message": "合約互動"
@@ -16,6 +46,12 @@
   },
   "aboutSettingsDescription": {
     "message": "版本，支援中心，以及聯絡資訊。"
+  },
+  "aboutUs": {
+    "message": "關於我們"
+  },
+  "accept": {
+    "message": "接受"
   },
   "acceleratingATransaction": {
     "message": "* 提高交易費 Gas 價格將可加速處理時間，但不保證會有顯著效果"
@@ -47,6 +83,9 @@
   "addRecipient": {
     "message": "新增接收人"
   },
+  "addressBook": {
+    "message": "位址簿"
+  },
   "advanced": {
     "message": "進階"
   },
@@ -65,6 +104,9 @@
   "addAlias": {
     "message": "新增化名"
   },
+  "addEthAddress": {
+    "message": "新增一個以太坊位址"
+  },
   "addToken": {
     "message": "加入代幣"
   },
@@ -76,6 +118,15 @@
   },
   "addAcquiredTokens": {
     "message": "將您已經擁有的代幣顯示於 MetaMask"
+  },
+  "agreeTermsOfService": {
+    "message": "我同意服務條款"
+  },
+  "allDone": {
+    "message": "都完成了"
+  },
+  "alreadyHaveSeedPhrase": {
+    "message": "不，我已經有助記詞"
   },
   "amount": {
     "message": "數量"
@@ -115,6 +166,9 @@
   "autoLogoutTimeLimitDescription": {
     "message": "設定閒置分鐘上限，時間到時 MetaMask 將自動登出"
   },
+  "available": {
+    "message": "可使用"
+  },
   "average": {
     "message": "平均"
   },
@@ -146,7 +200,7 @@
     "message": "基本"
   },
   "blockExplorerUrl": {
-    "message": "區塊鏈瀏覽器"
+    "message": "封鎖 Explorer"
   },
   "blockExplorerView": {
     "message": "在 $1 觀看帳號 ",
@@ -183,7 +237,7 @@
     "message": "開啟"
   },
   "optionalBlockExplorerUrl": {
-    "message": "區塊鏈瀏覽器 URL（非必要）"
+    "message": "封鎖 Explorer URL（非必要）"
   },
   "cancel": {
     "message": "取消"
@@ -200,6 +254,12 @@
   "chainId": {
     "message": "鏈 ID"
   },
+  "classicInterface": {
+    "message": "使用舊版界面"
+  },
+  "clickCopy": {
+    "message": "點擊複製"
+  },
   "clickToAdd": {
     "message": "點選下方 $1 新增資訊"
   },
@@ -210,7 +270,10 @@
     "message": "關閉"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "您需要在 Google Chrome 瀏覽器使用 MetaMask 連結您的硬體錢包"
+    "message": "您需要在 Brave Software Brave 瀏覽器使用 MetaMask 連結您的硬體錢包"
+  },
+  "company": {
+    "message": "公司"
   },
   "confirm": {
     "message": "確認"
@@ -253,6 +316,27 @@
   },
   "connectingToGoerli": {
     "message": "連接至 Goerli 測試網路"
+  },
+  "connectingToUnknown": {
+    "message": "連線到未知網路"
+  },
+  "connectToLedger": {
+    "message": "連線到 Ledger"
+  },
+  "connectToTrezor": {
+    "message": "連線到 Trezor"
+  },
+  "contactList": {
+    "message": "聯絡清單"
+  },
+  "contactListDescription": {
+    "message": "新增、編輯、移除、並管理你的聯絡資訊"
+  },
+  "continue": {
+    "message": "繼續"
+  },
+  "continueToCoinbase": {
+    "message": "繼續前往 Coinbase"
   },
   "continueToWyre": {
     "message": "繼續至 Wyre"
@@ -299,6 +383,9 @@
   "createAWallet": {
     "message": "創建錢包"
   },
+  "createDen": {
+    "message": "建立"
+  },
   "createPassword": {
     "message": "建立密碼"
   },
@@ -334,6 +421,9 @@
   },
   "deleteAccount": {
     "message": "刪除帳號"
+  },
+  "denExplainer": {
+    "message": "您的 DEN 是 MetaMask 中您的的密碼加密儲存庫。"
   },
   "deposit": {
     "message": "存入"
@@ -371,8 +461,17 @@
   "edit": {
     "message": "編輯"
   },
-  "editContact": {
+  "editNetwork": {
+    "message": "編輯網路"
+  },
+  "editAccountName": {
+    "message": "編輯帳戶名稱"
+  },
+  "editContact":{
     "message": "編輯聯絡資訊"
+  },
+  "editingTransaction": {
+    "message": "修改交易"
   },
   "emailUs": {
     "message": "寄 Email 給我們!"
@@ -406,6 +505,9 @@
   },
   "endOfFlowMessage10": {
     "message": "都完成了"
+  },
+  "ensNameNotFound": {
+    "message": "ENS 名稱不存在"
   },
   "ensRegistrationError": {
     "message": "ENS 名稱註冊錯誤"
@@ -501,6 +603,9 @@
   },
   "generalSettingsDescription": {
     "message": "貨幣轉換，主要貨幣，語言，區塊鏈哈希頭像"
+  },
+  "generatingTransaction": {
+    "message": "產生交易"
   },
   "getEther": {
     "message": "取得乙太幣"
@@ -605,6 +710,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "非 ETH 網路，設定至小寫"
   },
+  "invalidGasParams": {
+    "message": "Gas 參數錯誤"
+  },
   "invalidInput": {
     "message": "輸入錯誤。"
   },
@@ -633,6 +741,13 @@
   "ledgerAccountRestriction": {
     "message": "您必須使用最後的帳戶才能產生新帳戶"
   },
+  "legal": {
+    "message": "法律條款"
+  },
+  "lessThanMax": {
+    "message": "必須小於等於 $1.",
+    "description": "helper for inputting hex as decimal input"
+  },
   "letsGoSetUp": {
     "message": "好，我們開始吧！"
   },
@@ -653,6 +768,9 @@
   },
   "loadMore": {
     "message": "載入更多"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
   },
   "login": {
     "message": "登入"
@@ -683,6 +801,12 @@
   },
   "missingYourTokens": {
     "message": "看不到您的代幣？"
+  },
+  "minutesShorthand": {
+    "message": "Min"
+  },
+  "mobileSyncTitle": {
+    "message": "用移動裝置同步帳號"
   },
   "mobileSyncText": {
     "message": "請輸入密碼確認身份！"
@@ -759,7 +883,13 @@
     "message": "安全存放你的助記詞。如你察覺有異，或你對某網站起疑，請寄信給 support@metamask.io"
   },
   "rpcUrl": {
-    "message": "新的 RPC URL"
+    "message": "新的 RPC URL\n"
+  },
+  "showAdvancedOptions": {
+    "message": "顯示進階選項"
+  },
+  "hideAdvancedOptions": {
+    "message": "隱藏進階選項"
   },
   "optionalChainId": {
     "message": "ChainID (可選)"
@@ -790,6 +920,12 @@
   },
   "notEnoughGas": {
     "message": "Gas 不夠"
+  },
+  "notFound": {
+    "message": "找不到"
+  },
+  "notStarted": {
+    "message": "尚未開始"
   },
   "noWebcamFoundTitle": {
     "message": "找不到攝影鏡頭"
@@ -867,6 +1003,9 @@
   },
   "recipientAddressPlaceholder": {
     "message": "搜尋，公開地址 (0x)，或 ENS"
+  },
+  "refundAddress": {
+    "message": "您的退款位址"
   },
   "rejectAll": {
     "message": "全部拒絕"
@@ -949,6 +1088,13 @@
   "goerli": {
     "message": "Goerli 測試網路"
   },
+  "rpc": {
+    "message": "自訂 RPC"
+  },
+  "sampleAccountName": {
+    "message": "例如：我的新帳戶",
+    "description": "Help user understand concept of adding a human-readable name to their account"
+  },
   "save": {
     "message": "儲存"
   },
@@ -990,6 +1136,9 @@
   },
   "securitySettingsDescription": {
     "message": "隱私設定及錢包助記詞"
+  },
+  "secondsShorthand": {
+    "message": "秒"
   },
   "seedPhrasePlaceholder": {
     "message": "單詞之間請用空白分隔"
@@ -1035,6 +1184,12 @@
   },
   "selectAnAccount": {
     "message": "選擇帳戶"
+  },
+  "selectAnAccountHelp": {
+    "message": "Select the account to view in MetaMask"
+  },
+  "selectAnAsset": {
+    "message": "選擇一項資產"
   },
   "selectAHigherGasFee": {
     "message": "選擇更高的交易費可加速您的交易處理時間 *"
@@ -1159,6 +1314,9 @@
   "syncWithMobileComplete": {
     "message": "你的資料已成功同步。開始活用 MetaMask 移動 app！"
   },
+  "takesTooLong": {
+    "message": "花費太長時間？"
+  },
   "terms": {
     "message": "使用條款"
   },
@@ -1186,6 +1344,9 @@
   },
   "tokenContractAddress": {
     "message": "代幣合同位址"
+  },
+  "tokenSelection": {
+    "message": "搜尋代幣或是從常見代幣列表中選擇。"
   },
   "tokenSymbol": {
     "message": "代幣代號"
@@ -1305,6 +1466,9 @@
   "viewOnEtherscan": {
     "message": "在 Etherscan 上瀏覽"
   },
+  "viewNetworkInfo": {
+    "message": "瀏覽網路資訊"
+  },
   "visitWebSite": {
     "message": "造訪我們的網站"
   },
@@ -1334,6 +1498,18 @@
   },
   "yourPrivateSeedPhrase": {
     "message": "您的助憶詞"
+  },
+  "yourUniqueAccountImage": {
+    "message": "您的帳戶圖案"
+  },
+  "yourUniqueAccountImageDescription1": {
+    "message": "這個圖案是基於您的帳戶資訊由電腦自動產生。"
+  },
+  "yourUniqueAccountImageDescription2": {
+    "message": "您每一次在交易時，都會看到這個圖案。"
+  },
+  "yourUniqueAccountImageDescription3": {
+    "message": "MetaMask 永遠不會詢問你的助記詞！"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "加速的 Gas 價格為 0"

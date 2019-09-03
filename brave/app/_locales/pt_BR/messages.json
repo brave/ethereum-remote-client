@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Conecte sua carteira de hardware do Ledger para interagir com os dApps e fazer transferências para outras carteiras conectadas."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Nova Carteira Local"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Conecte sua carteira física Trezor para interagir com dApps e fazer transferências para outras carteiras conectadas."
   }
 }

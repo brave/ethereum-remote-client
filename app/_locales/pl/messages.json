@@ -1,21 +1,72 @@
 {
+  "shareAddress": {
+    "message": "Udostępnij adres"
+  },
+  "shareAddressToConnect": {
+    "message": "Udostępnić adres do podłączonego portfela $1?"
+  },
+  "shareAddressInfo": {
+    "message": "Udostępnianie adresu portfelowi $1 umożliwi korzystanie z dapp. To uprawnienie ma domyślnie chronić Twoją prywatność."
+  },
+  "privacyModeDefault": {
+    "message": "Tryb prywatny jest domyślnie włączony"
+  },
+  "privacyMode": {
+    "message": "Tryb prywatny"
+  },
+  "privacyModeDescription": {
+    "message": "Strony internetowe muszą zażądać dostępu do informacji o Twoim koncie."
+  },
+  "exposeAccounts": {
+    "message": "Ujawnij konta"
+  },
+  "exposeDescription": {
+    "message": "Ujawnij konta aktualnej stronie internetowej. Przydatne w przypadku starszych zdecentralizowanych aplikacji (dApps)."
+  },
   "chartOnlyAvailableEth": {
     "message": "Wykres dostępny tylko w sieciach Ethereum"
+  },
+  "confirmExpose": {
+    "message": "Czy na pewno chcesz ujawnić swoje konta aktualnej stronie internetowej?"
+  },
+  "confirmClear": {
+    "message": "Czy na pewno chcesz usunąć zatwierdzone strony internetowe?"
   },
   "contractInteraction": {
     "message": "Interakcja z kontraktem"
   },
+  "clearApprovalDataSuccess": {
+    "message": "Usunięto dane dotyczące zatwierdzonej strony internetowej."
+  },
+  "approvalData": {
+    "message": "Dane poufne"
+  },
+  "approvalDataDescription": {
+    "message": "Usuń dane poufne, aby wszystkie strony internetowe musiały ponownie zażądać dostępu do informacji o koncie."
+  },
+  "clearApprovalData": {
+    "message": "Usuń dane poufne"
+  },
   "reject": {
     "message": "Odrzuć"
   },
-  "likeToConnect": {
+  "providerRequest": {
     "message": "$1 chce połączyć się z Twoim kontem"
+  },
+  "providerRequestInfo": {
+    "message": "Ta strona prosi o dostęp, aby zobaczyć adres Twojego aktualnego konta. Zawsze upewnij się, że ufasz stronom, z którymi wchodzisz w interakcję."
   },
   "about": {
     "message": "Informacje"
   },
   "aboutSettingsDescription": {
-    "message": "Wersja, centrum wsparcia i dane kontaktowe"
+    "message": "Wersja, centrum wsparcia i dane kontaktowe."
+  },
+  "aboutUs": {
+    "message": "Informacje"
+  },
+  "accept": {
+    "message": "Akceptacja"
   },
   "acceleratingATransaction": {
     "message": "* Przyspieszenie transakcji poprzez zastosowanie wyższej ceny gazu zwiększa szanse na jej szybsze przetworzenie przez sieć, jednak skuteczność tej operacji nie jest gwarantowana."
@@ -41,6 +92,12 @@
   "activityLog": {
     "message": "dziennik aktywności"
   },
+  "add": {
+    "message": "Dodaj"
+  },
+  "address": {
+    "message": "Adres"
+  },
   "addNetwork": {
     "message": "Dodaj sieć"
   },
@@ -51,10 +108,13 @@
     "message": "Zaawansowane"
   },
   "advancedSettingsDescription": {
-    "message": "Dostęp do funkcji programisty, pobieranie dzienników stanu, resetowanie konta, konfigurowanie sieci testowych i niestandardowe RPC"
+    "message": "Dostęp do funkcji programisty, pobieranie dzienników stanu, resetowanie konta, konfigurowanie sieci testowych i niestandardowe RPC."
   },
   "advancedOptions": {
     "message": "Opcje zaawansowane"
+  },
+  "addCustomToken": {
+    "message": "Dodaj token"
   },
   "addToAddressBook": {
     "message": "Dodaj do książki adresowej"
@@ -77,8 +137,23 @@
   "addAcquiredTokens": {
     "message": "Dodaj tokeny pozyskane przy pomocy MetaMask"
   },
+  "agreeTermsOfService": {
+    "message": "Akceptuję Regulamin"
+  },
+  "allDone": {
+    "message": "Wszystko gotowe"
+  },
+  "alreadyHaveSeedPhrase": {
+    "message": "Nie, mam już frazę seed"
+  },
   "amount": {
     "message": "Ilość"
+  },
+  "amountPlusGas": {
+    "message": "Ilość + gaz"
+  },
+  "amountPlusTxFee": {
+    "message": "Kwota + opłata transakcyjna"
   },
   "appDescription": {
     "message": "Wtyczka przeglądarki do Ethereum",
@@ -115,6 +190,9 @@
   "autoLogoutTimeLimitDescription": {
     "message": "Ustaw czas bezczynności w minutach, po którym MetaMask wyloguje Cię automatycznie"
   },
+  "available": {
+    "message": "Dostępne"
+  },
   "average": {
     "message": "Średnia"
   },
@@ -138,6 +216,9 @@
   },
   "balanceOutdated": {
     "message": "Saldo może być nieaktualne"
+  },
+  "balances": {
+    "message": "Ilość tokenów"
   },
   "balanceIsInsufficientGas": {
     "message": "Niewystarczająca ilość środków na opłatę za gaz"
@@ -224,6 +305,9 @@
   "confirmSecretBackupPhrase": {
     "message": "Potwierdź swoją tajną frazę zapasową"
   },
+  "confirmTransaction": {
+    "message": "Potwierdź transakcję"
+  },
   "congratulations": {
     "message": "Gratulacje"
   },
@@ -253,6 +337,27 @@
   },
   "connectingToGoerli": {
     "message": "Łączenie z siecią testową Goerli"
+  },
+  "connectingToUnknown": {
+    "message": "Łączenie z nieznaną siecią"
+  },
+  "connectToLedger": {
+    "message": "Połącz z Ledger"
+  },
+  "connectToTrezor": {
+    "message": "Połącz z Trezor"
+  },
+  "contactList": {
+    "message": "Lista kontaktów"
+  },
+  "contactListDescription": {
+    "message": "Dodawaj, edytuj, usuwaj i zarządzaj swoimi kontaktami"
+  },
+  "continue": {
+    "message": "Kontynuuj"
+  },
+  "continueToCoinbase": {
+    "message": "Przejdź do Coinbase"
   },
   "continueToWyre": {
     "message": "Przejdź do Wyre"
@@ -407,6 +512,9 @@
   "endOfFlowMessage10": {
     "message": "Wszystko gotowe"
   },
+  "ensNameNotFound": {
+    "message": "Nie znaleziono nazwy ENS"
+  },
   "ensRegistrationError": {
     "message": "Błąd w rejestracji nazwy ENS"
   },
@@ -430,6 +538,9 @@
   },
   "estimatedProcessingTimes": {
     "message": "Szacunkowy czas przetwarzania"
+  },
+  "exchangeRate": {
+    "message": "Kurs wymiany"
   },
   "expandView": {
     "message": "Rozwiń widok"
@@ -475,11 +586,17 @@
   "gasLimitInfoModalContent": {
     "message": "Limit gazu to maksymalna ilość jednostek gazu, którą jesteś skłonny użyć w transakcji."
   },
+  "gasLimitRequired": {
+    "message": "Limit gazu jest wymagany"
+  },
   "gasLimitTooLow": {
     "message": "Limit gazu musi wynosić co najmniej 21000"
   },
   "gasUsed": {
     "message": "Użyty gaz"
+  },
+  "generatingSeed": {
+    "message": "Generowanie seed..."
   },
   "gasPrice": {
     "message": "Cena gazu (GWEI)"
@@ -501,6 +618,9 @@
   },
   "generalSettingsDescription": {
     "message": "Przeliczanie walut, waluta podstawowa, język, ikona (identicon) Blockies"
+  },
+  "generatingTransaction": {
+    "message": "Generowanie transakcji"
   },
   "getEther": {
     "message": "Zdobądź Eter"
@@ -565,6 +685,12 @@
   "importAccountSeedPhrase": {
     "message": "Zaimportuj konto za pomocą frazy seed"
   },
+  "importAnAccount": {
+    "message": "Importuj konto"
+  },
+  "importDen": {
+    "message": "Importuj istniejące DEN"
+  },
   "importWallet": {
     "message": "Importuj portfel"
   },
@@ -577,6 +703,12 @@
   },
   "importUsingSeed": {
     "message": "Importuj przy pomocy frazy seed konta"
+  },
+  "importWithSeedPhrase": {
+    "message": "Zaimportuj za pomocą frazy seed"
+  },
+  "info": {
+    "message": "Info"
   },
   "infoHelp": {
     "message": "Info & pomoc"
@@ -605,6 +737,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "To nie jest sieć ETH, zmień na małe litery"
   },
+  "invalidGasParams": {
+    "message": "Nieprawidłowe parametry gazu"
+  },
   "invalidInput": {
     "message": "Nieprawidłowe dane."
   },
@@ -632,6 +767,13 @@
   },
   "ledgerAccountRestriction": {
     "message": "Musisz użyć swojego poprzedniego konta zanim dodasz kolejne."
+  },
+  "legal": {
+    "message": "Informacje prawne"
+  },
+  "lessThanMax": {
+    "message": "musi być mniejsze lub równe $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "letsGoSetUp": {
     "message": "Tak, zacznijmy od początku!"
@@ -669,6 +811,12 @@
   "memorizePhrase": {
     "message": "Zapamiętaj tę frazę."
   },
+  "memo": {
+    "message": "memo"
+  },
+  "menu": {
+    "message": "Menu"
+  },
   "message": {
     "message": "Wiadomość"
   },
@@ -680,6 +828,9 @@
   },
   "metamaskVersion": {
     "message": "Wersja MetaMask"
+  },
+  "min": {
+    "message": "Minimum"
   },
   "missingYourTokens": {
     "message": "Nie widzisz swoich token?"
@@ -761,11 +912,20 @@
   "rpcUrl": {
     "message": "Nowy adres URL RPC"
   },
+  "showAdvancedOptions": {
+    "message": "Pokaż opcje zaawansowane"
+  },
+  "hideAdvancedOptions": {
+    "message": "Ukryj opcje zaawansowane"
+  },
   "optionalChainId": {
     "message": "Identyfikator łańcucha (opcjonalnie)"
   },
   "optionalSymbol": {
     "message": "Symbol (opcjonalnie)"
+  },
+  "optionalNickname": {
+    "message": "Nazwa użytkownika (opcjonalnie)"
   },
   "newTotal": {
     "message": "Nowa suma"
@@ -791,6 +951,12 @@
   "notEnoughGas": {
     "message": "Za mało gazu"
   },
+  "notFound": {
+    "message": "Nie znaleziono"
+  },
+  "notStarted": {
+    "message": "Nie rozpoczęto"
+  },
   "noWebcamFoundTitle": {
     "message": "Nie znaleziono kamery"
   },
@@ -800,6 +966,26 @@
   "ofTextNofM": {
     "message": "z"
   },
+  "oldUI": {
+    "message": "Stary interfejs"
+  },
+  "oldUIMessage": {
+    "message": "Wróciłeś do starego interfejsu. Możesz włączyć nowy interfejs przez opcje w rozwijanym menu w prawym górnym rogu."
+  },
+  "onlySendToEtherAddress": {
+    "message": "Na adres Ethereum wysyłaj tylko ETH."
+  },
+  "onlySendTokensToAccountAddress": {
+    "message": "Wyślij tylko $1 na adres konta Ethereum.",
+    "description": "displays token symbol"
+  },
+  "openInTab": {
+    "message": "Otwórz w zakładce"
+  },
+  "or": {
+    "message": "lub",
+    "description": "choice between creating or importing a new account"
+  },
   "orderOneHere": {
     "message": "Zamów Trezor lub Ledger i trzymaj swoje środki w portfelu sprzętowym."
   },
@@ -808,6 +994,9 @@
   },
   "parameters": {
     "message": "Parametry"
+  },
+  "originalTotal": {
+    "message": "Pierwotna suma"
   },
   "participateInMetaMetrics": {
     "message": "Weź udział w MetaMetrics"
@@ -873,6 +1062,9 @@
   },
   "recipientAddressPlaceholder": {
     "message": "Szukaj, adres publiczny (0x) lub ENS"
+  },
+  "refundAddress": {
+    "message": "Twój adres na zwroty"
   },
   "rejectAll": {
     "message": "Odrzuć wszystkie"
@@ -958,6 +1150,13 @@
   "goerli": {
     "message": "Sieć testowa Goerli"
   },
+  "rpc": {
+    "message": "Indywidualne RPC"
+  },
+  "sampleAccountName": {
+    "message": "Np. Moje nowe konto",
+    "description": "Help user understand concept of adding a human-readable name to their account"
+  },
   "save": {
     "message": "Zapisz"
   },
@@ -1000,6 +1199,9 @@
   "securitySettingsDescription": {
     "message": "Ustawienia prywatności i fraza seed portfela"
   },
+  "secondsShorthand": {
+    "message": "Sek."
+  },
   "seedPhrasePlaceholder": {
     "message": "Oddziel słowa pojedynczą spacją"
   },
@@ -1014,6 +1216,9 @@
   },
   "selectLocale": {
     "message": "Wybierz lokalizację"
+  },
+  "selectService": {
+    "message": "Wybierz usługę"
   },
   "selectType": {
     "message": "Wybierz rodzaj"
@@ -1047,6 +1252,9 @@
   },
   "selectAnAccountHelp": {
     "message": "Wybierz konto do przeglądania w MetaMask"
+  },
+  "selectAnAsset": {
+    "message": "Wybierz składnik aktywów"
   },
   "selectAHigherGasFee": {
     "message": "Wybierz wyższą opłatę za gaz, aby przyspieszyć przetwarzanie transakcji.*"
@@ -1141,6 +1349,9 @@
   "storePhrase": {
     "message": "Przechowuj tę frazę w menedżerze haseł, takim jak 1Password."
   },
+  "submit": {
+    "message": "Wyślij"
+  },
   "submitted": {
     "message": "Wysłane"
   },
@@ -1171,6 +1382,9 @@
   "syncWithMobileComplete": {
     "message": "Twoje dane zostały zsynchronizowane. Miłego korzystania z aplikacji mobilnej MetaMask!"
   },
+  "takesTooLong": {
+    "message": "Trwa zbyt długo?"
+  },
   "terms": {
     "message": "Regulamin"
   },
@@ -1195,6 +1409,9 @@
   },
   "tokenContractAddress": {
     "message": "Adres kontraktu tokena"
+  },
+  "tokenSelection": {
+    "message": "Szukaj tokenów lub wybierz z naszej listy popularnych tokenów."
   },
   "tokenSymbol": {
     "message": "Symbol tokena"
@@ -1223,6 +1440,9 @@
   "transactionUpdated": {
     "message": "Transakcja zaktualizowana – $2."
   },
+  "transactionUpdatedGas": {
+    "message": "Transakcja zaktualizowana o opłatę za gaz w wysokości $1 – $2."
+  },
   "transactionErrored": {
     "message": "Wystąpił błąd podczas wykonywania transakcji."
   },
@@ -1231,6 +1451,9 @@
   },
   "transactionCancelSuccess": {
     "message": "Transakcja została anulowana pomyślnie – $2"
+  },
+  "transactions": {
+    "message": "transakcje"
   },
   "transactionError": {
     "message": "Błąd transakcji. Wyjątek w kodzie kontraktu."
@@ -1253,6 +1476,12 @@
   "transferFrom": {
     "message": "Przelew z"
   },
+  "transfers": {
+    "message": "Przelewy"
+  },
+  "trezorHardwareWallet": {
+    "message": "Sprzętowy portfel TREZOR"
+  },
   "troubleTokenBalances": {
     "message": "Wystąpił problem z załadowaniem informacji o Twoich tokenach. Można je zobaczyć ",
     "description": "Followed by a link (here) to view token balances"
@@ -1262,6 +1491,15 @@
   },
   "typePassword": {
     "message": "Wpisz hasło"
+  },
+  "uiMigrationAnnouncement": {
+    "message": "Witamy w nowym interfejsie użytkownika MetaMask. Jeśli chcesz podzielić się z nami swoimi uwagami na temat UI lub zgłosić zapotrzebowanie na nowe funkcje, skontaktuj się z naszym zespołem wsparcia lub dodaj zgłoszenie na GitHubie."
+  },
+  "uiWelcome": {
+    "message": "Witamy w nowym interfejsie (Beta)"
+  },
+  "uiWelcomeMessage": {
+    "message": "Używasz teraz nowego interfejsu MetaMask."
   },
   "unapproved": {
     "message": "Niezatwierdzone"
@@ -1317,6 +1555,9 @@
   "viewOnEtherscan": {
     "message": "Zobacz na Etherscan"
   },
+  "viewNetworkInfo": {
+    "message": "Wyświetl informacje o sieci"
+  },
   "visitWebSite": {
     "message": "Odwiedź naszą stronę"
   },
@@ -1346,6 +1587,18 @@
   },
   "yourPrivateSeedPhrase": {
     "message": "Twoja prywatna fraza seed"
+  },
+  "yourUniqueAccountImage": {
+    "message": "Twój unikalny obraz konta"
+  },
+  "yourUniqueAccountImageDescription1": {
+    "message": "Ten obraz został wygenerowany programowo na podstawie Twojego nowego numeru konta."
+  },
+  "yourUniqueAccountImageDescription2": {
+    "message": "Zobaczysz ten obraz przy każdym potwierdzaniu transakcji."
+  },
+  "yourUniqueAccountImageDescription3": {
+    "message": "MetaMask nigdy nie będzie Cię prosić o podanie frazy seed!"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Przyspieszenie z zerową ceną gazu"

@@ -1,21 +1,72 @@
 {
+  "shareAddress": {
+    "message": "Κοινοποίηση Διεύθυνσης"
+  },
+  "shareAddressToConnect": {
+    "message": "Κοινοποίηση της διεύθυνσής σας για να συνδεθείτε με $1;"
+  },
+  "shareAddressInfo": {
+    "message": "Η κοινή χρήση της διεύθυνσης σας με $1 θα σας επιτρέψει να αλληλεπιδράσετε με αυτό το dapp. Αυτή η άδεια είναι για την προστασία της ιδιωτικής σας ζωής από προεπιλογή."
+  },
+  "privacyModeDefault": {
+    "message": "Η Λειτουργία Απορρήτου είναι πλέον ενεργοποιημένη από προεπιλογή"
+  },
+  "privacyMode": {
+    "message": "Λειτουργία Απορρήτου"
+  },
+  "privacyModeDescription": {
+    "message": "Οι ιστότοποι πρέπει να ζητήσουν πρόσβαση για να δουν τα στοιχεία του λογαριασμού σας."
+  },
+  "exposeAccounts": {
+    "message": "Έκθεση Λογαριασμών"
+  },
+  "exposeDescription": {
+    "message": "Εκθέστε τους λογαριασμούς στον τρέχοντα ιστότοπο. Χρήσιμο για παλαιότερα dapps."
+  },
   "chartOnlyAvailableEth": {
     "message": "Το διάγραμμα είναι διαθέσιμο μόνο σε δίκτυα Ethereum."
+  },
+  "confirmExpose": {
+    "message": "Θέλετε σίγουρα να εκθέσετε τους λογαριασμούς σας στον τρέχοντα ιστότοπο;"
+  },
+  "confirmClear": {
+    "message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε τους εγκεκριμένους ιστότοπους;"
   },
   "contractInteraction": {
     "message": "Αλληλεπίδραση Σύμβασης"
   },
+  "clearApprovalDataSuccess": {
+    "message": "Επιτυχής εκκαθάριση αποδεκτών δεδομένων ιστότοπου."
+  },
+  "approvalData": {
+    "message": "Δεδομένα Απορρήτου"
+  },
+  "approvalDataDescription": {
+    "message": "Κάντε εκκαθάριση των δεδομένων απορρήτου ώστε όλοι οι ιστότοποι να πρέπει να ζητήσουν ξανά πρόσβαση για προβολή των πληροφοριών λογαριασμού. "
+  },
+  "clearApprovalData": {
+    "message": "Εκκαθάριση Δεδομένων Απορρήτου"
+  },
   "reject": {
     "message": "Απόρριψη"
   },
-  "likeToConnect": {
+  "providerRequest": {
     "message": "Αίτημα σύνδεσης στον λογαριασμό σας από $1"
+  },
+  "providerRequestInfo": {
+    "message": "Ο ιστότοπος ζητά πρόσβαση για προβολή της τρέχουσας διεύθυνσης του λογαριασμού σας. Να σιγουρεύεστε πάντα ότι εμπιστεύεστε τους ιστότοπους με τους οποίους αλληλεπιδράτε."
   },
   "about": {
     "message": "Σχετικά με"
   },
   "aboutSettingsDescription": {
-    "message": "Έκδοση, κέντρο υποστήριξης και πληροφορίες επικοινωνίας"
+    "message": "Έκδοση, κέντρο υποστήριξης και πληροφορίες επικοινωνίας."
+  },
+  "aboutUs": {
+    "message": "Σχετικά με Εμάς"
+  },
+  "accept": {
+    "message": "Αποδοχή"
   },
   "acceleratingATransaction": {
     "message": "* Η επιτάχυνση μιας συναλλαγής με τη χρήση υψηλότερης τιμής καυσίμου αυξάνει τις πιθανότητές της για ταχύτερη επεξεργασία από το δίκτυο, αλλά δεν είναι πάντοτε εγγυημένη."
@@ -41,20 +92,32 @@
   "activityLog": {
     "message": "αρχείο καταγραφής δραστηριότητας"
   },
+  "add": {
+    "message": "Προσθήκη"
+  },
+  "address": {
+    "message": "Διεύθυνση"
+  },
   "addNetwork": {
     "message": "Προσθήκη Δικτύου"
   },
   "addRecipient": {
     "message": "Προσθήκη Παραλήπτη"
   },
+  "addressBook": {
+    "message": "Βιβλίο Διευθύνσεων"
+  },
   "advanced": {
     "message": "Σύνθετες"
   },
   "advancedSettingsDescription": {
-    "message": "Αποκτήστε πρόσβαση στις λειτουργίες του προγραμματιστή, κατεβάστε Αρχεία Καταγραφών Καταστάσεων, Επαναφέρετε τον Λογαριασμό, εγκαταστήστε δοκιμαστικά δίκτυα και προσαρμοσμένα RPC"
+    "message": "Αποκτήστε πρόσβαση στις λειτουργίες του προγραμματιστή, κατεβάστε Αρχεία Καταγραφών Καταστάσεων, Επαναφέρετε τον Λογαριασμό, εγκαταστήστε δοκιμαστικά δίκτυα και προσαρμοσμένα RPC."
   },
   "advancedOptions": {
     "message": "Σύνθετες Επιλογές"
+  },
+  "addCustomToken": {
+    "message": "Προσθήκη προσαρμοσμένου token"
   },
   "addToAddressBook": {
     "message": "Προσθήκη στο βιβλίο διευθύνσεων"
@@ -64,6 +127,9 @@
   },
   "addAlias": {
     "message": "Προσθήκη ψευδωνύμου"
+  },
+  "addEthAddress": {
+    "message": "Προσθέστε μια διεύθυνση Ethereum"
   },
   "addToken": {
     "message": "Προσθήκη Token"
@@ -77,8 +143,23 @@
   "addAcquiredTokens": {
     "message": "Προσθέστε τα token που αποκτήσατε χρησιμοποιώντας το MetaMask"
   },
+  "agreeTermsOfService": {
+    "message": "Συμφωνώ με τους Όρους Χρήσης"
+  },
+  "allDone": {
+    "message": "Όλα Έτοιμα"
+  },
+  "alreadyHaveSeedPhrase": {
+    "message": "Όχι, έχω ήδη μια φράση φύτρου"
+  },
   "amount": {
     "message": "Ποσό"
+  },
+  "amountPlusGas": {
+    "message": "Ποσό + Καύσιμο"
+  },
+  "amountPlusTxFee": {
+    "message": "Ποσό + Τέλος TX"
   },
   "appDescription": {
     "message": "Ένα Πορτοφόλι Ethereum στο Πρόγραμμα Περιήγησής σας",
@@ -115,6 +196,9 @@
   "autoLogoutTimeLimitDescription": {
     "message": "Ρυθμίστε τον χρόνο αδράνειας σε λεπτά πριν αποσυνδεθεί αυτόματα το MetaMask"
   },
+  "available": {
+    "message": "Διαθέσιμο"
+  },
   "average": {
     "message": "Μέσος Όρος"
   },
@@ -139,11 +223,21 @@
   "balanceOutdated": {
     "message": "Το υπόλοιπο μπορεί να μην είναι ενημερωμένο"
   },
+  "balances": {
+    "message": "Υπόλοιπο/-α διακριτικών"
+  },
   "balanceIsInsufficientGas": {
     "message": "Ανεπαρκές υπόλοιπο για το τρέχον σύνολο καυσίμου"
   },
   "basic": {
     "message": "Βασικά"
+  },
+  "beta": {
+    "message": "BETA"
+  },
+  "betweenMinAndMax": {
+    "message": "πρέπει να είναι μεγαλύτερο ή ίσο με $1 και μικρότερο ή ίσο με $2.",
+    "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
     "message": "Εξερευνητής Μπλοκ"
@@ -155,11 +249,23 @@
   "blockiesIdenticon": {
     "message": "Χρήση Αναπαράστασης Μπλοκ"
   },
+  "borrowDharma": {
+    "message": "Δανειστείτε Με Dharma (Beta)"
+  },
   "browserNotSupported": {
     "message": "Το Πρόγραμμα Περιήγησής σας δεν υποστηρίζεται..."
   },
   "builtInCalifornia": {
     "message": "Το MetaMask έχει σχεδιαστεί και αναπτυχθεί στην Καλιφόρνια."
+  },
+  "buy": {
+    "message": "Αγορά"
+  },
+  "buyCoinbase": {
+    "message": "Αγοράστε στο Coinbase"
+  },
+  "buyCoinbaseExplainer": {
+    "message": "Το Coinbase είναι ο πιο δημοφιλής τρόπος αγοράς και πώλησης Bitcoin, Ethereum και Litecoin στον κόσμο."
   },
   "buyWithWyre": {
     "message": "Αγοράστε ETH με το Wyre"
@@ -172,6 +278,9 @@
   },
   "buyCoinSwitchExplainer": {
     "message": "Το CoinSwitch είναι ο προορισμός μιας στάσης για ανταλλαγή σε περισσότερα από 300 κρυπτονομίσματα στην καλύτερη ισοτιμία."
+  },
+  "bytes": {
+    "message": "Bytes"
   },
   "off": {
     "message": "Ανενεργό"
@@ -197,8 +306,17 @@
   "cancelled": {
     "message": "Ακυρώθηκε"
   },
+  "cancelN": {
+    "message": "Ακύρωση όλων των συναλλαγών $1"
+  },
   "chainId": {
     "message": "Αναγνωριστικό Αλυσίδας"
+  },
+  "classicInterface": {
+    "message": "Χρήση κλασικού περιβάλλοντος χρήστη"
+  },
+  "clickCopy": {
+    "message": "Κάντε κλικ για Αντιγραφή"
   },
   "clickToAdd": {
     "message": "Κάντε κλικ στο $1 για να τα προσθέσετε στον λογαριασμό σας"
@@ -212,17 +330,29 @@
   "chromeRequiredForHardwareWallets": {
     "message": "Θα πρέπει να χρησιμοποιήσετε το MetaMask στο Google Chrome για να συνδεθείτε στο Πορτοφόλι Υλικού."
   },
+  "company": {
+    "message": "Εταιρεία"
+  },
   "confirm": {
     "message": "Επιβεβαίωση"
   },
+  "confirmationTime": {
+    "message": "Χρόνος επιβεβαίωσης (δευτ.)"
+  },
   "confirmed": {
     "message": "Επιβεβαιωμένο"
+  },
+  "confirmContract": {
+    "message": "Επιβεβαίωση Συμβολαίου"
   },
   "confirmPassword": {
     "message": "Επιβεβαίωση Κωδικού Πρόσβασης"
   },
   "confirmSecretBackupPhrase": {
     "message": "Επιβεβαιώστε τη Μυστική Φράση Αντιγράφου Ασφαλείας"
+  },
+  "confirmTransaction": {
+    "message": "Επιβεβαίωση Συναλλαγής"
   },
   "congratulations": {
     "message": "Συγχαρητήρια"
@@ -232,6 +362,12 @@
   },
   "connect": {
     "message": "Σύνδεση"
+  },
+  "connectRequest": {
+    "message": "Αίτημα Σύνδεσης"
+  },
+  "connecting": {
+    "message": "Σύνδεση…"
   },
   "connectingTo": {
     "message": "Σύνδεση με $1"
@@ -254,6 +390,27 @@
   "connectingToGoerli": {
     "message": "Σύνδεση στο Δίκτυο Δοκιμής Goerli "
   },
+  "connectingToUnknown": {
+    "message": "Σύνδεση με Άγνωστο Δίκτυο"
+  },
+  "connectToLedger": {
+    "message": "Σύνδεση με το Καθολικό"
+  },
+  "connectToTrezor": {
+    "message": "Συνδεθείτε στο Trezor"
+  },
+  "contactList": {
+    "message": "Λίστα Επαφών"
+  },
+  "contactListDescription": {
+    "message": "Προσθήκη, επεξεργασία και διαχείριση των επαφών σας"
+  },
+  "continue": {
+    "message": "Συνέχεια"
+  },
+  "continueToCoinbase": {
+    "message": "Συνεχίστε στο Coinbase"
+  },
   "continueToWyre": {
     "message": "Συνεχίστε στο Wyre"
   },
@@ -269,8 +426,17 @@
   "copiedButton": {
     "message": "Αντιγράφηκε"
   },
+  "copiedClipboard": {
+    "message": "Αντιγράφηκε στο Πρόχειρο"
+  },
   "copiedExclamation": {
     "message": "Έγινε αντιγραφή!"
+  },
+  "copiedSafe": {
+    "message": "Το αντέγραψα κάπου με ασφάλεια"
+  },
+  "copy": {
+    "message": "Αντιγραφή"
   },
   "copyAddress": {
     "message": "Αντιγράψτε τη διεύθυνση στο πρόχειρο"
@@ -299,14 +465,27 @@
   "createAWallet": {
     "message": "Δημιουργήστε ένα Πορτοφόλι"
   },
+  "createDen": {
+    "message": "Δημιουργία"
+  },
   "createPassword": {
     "message": "Δημιουργία Κωδικού Πρόσβασης"
+  },
+  "crypto": {
+    "message": "Κρύπτο",
+    "description": "Exchange type (cryptocurrencies)"
   },
   "currencyConversion": {
     "message": "Μετατροπή Νομίσματος"
   },
   "currentLanguage": {
     "message": "Τρέχουσα Γλώσσα"
+  },
+  "currentNetwork": {
+    "message": "Τρέχον Δίκτυο"
+  },
+  "currentRpc": {
+    "message": "Τρέχον RPC"
   },
   "customGas": {
     "message": "Προσαρμογή Gas"
@@ -316,6 +495,9 @@
   },
   "customToken": {
     "message": "Προσαρμοσμένο Token"
+  },
+  "customize": {
+    "message": "Προσαρμογή"
   },
   "customRPC": {
     "message": "Προσαρμοσμένο RPC"
@@ -335,20 +517,47 @@
   "deleteAccount": {
     "message": "Διαγραφή Λογαριασμού"
   },
+  "denExplainer": {
+    "message": "Το DEN σας είναι ο κρυπτογραφημένος με κωδικό πρόσβασης αποθηκευτικός χώρος στο MetaMask."
+  },
   "deposit": {
     "message": "Κατάθεση"
+  },
+  "depositBTC": {
+    "message": "Καταθέστε το BTC σας στην παρακάτω διεύθυνση:"
+  },
+  "depositEth": {
+    "message": "Κατάθεση Eth"
   },
   "depositEther": {
     "message": "Κατάθεση Ether"
   },
+  "depositFiat": {
+    "message": "Κατάθεση με Παραστατικό Χρήμα"
+  },
+  "depositFromAccount": {
+    "message": "Κατάθεση από άλλο λογαριασμό"
+  },
+  "depositShapeShift": {
+    "message": "Καταθέστε με το ShapeShift"
+  },
+  "depositShapeShiftExplainer": {
+    "message": "Αν διαθέτετε άλλα κρυπτονομίσματα, μπορείτε να πραγματοποιείτε συναλλαγές και να καταθέτετε Ether απευθείας στο πορτοφόλι σας MetaMask. Δεν Απαιτείται Λογαριασμός."
+  },
   "details": {
     "message": "Λεπτομέρειες"
+  },
+  "directDeposit": {
+    "message": "Απευθείας Κατάθεση"
   },
   "directDepositEther": {
     "message": "Απευθείας Κατάθεση Ether"
   },
   "directDepositEtherExplainer": {
     "message": "Αν έχετε ήδη κάποια Ether, ο πιο γρήγορος τρόπος για να πάρετε τα Ether στο νέο σας πορτοφόλι με άμεση κατάθεση."
+  },
+  "dismiss": {
+    "message": "Παράβλεψη"
   },
   "done": {
     "message": "Τέλος"
@@ -371,11 +580,23 @@
   "edit": {
     "message": "Επεξεργασία"
   },
-  "editContact": {
+  "editNetwork": {
+    "message": "Επεξεργασία Δικτύου"
+  },
+  "editAccountName": {
+    "message": "Επεξεργασία Ονόματος Λογαριασμού"
+  },
+  "editContact":{
     "message": "Επεξεργασία Επαφής"
+  },
+  "editingTransaction": {
+    "message": "Κάντε αλλαγές στη συναλλαγή σας"
   },
   "emailUs": {
     "message": "Στείλτε μας email!"
+  },
+  "encryptNewDen": {
+    "message": "Κρυπτογραφήστε το νέο σας DEN"
   },
   "endOfFlowMessage1": {
     "message": "Περάσατε τη δοκιμή - κρατήστε τη φράση φύτρου σας ασφαλή, είναι δική σας ευθύνη!"
@@ -407,6 +628,9 @@
   "endOfFlowMessage10": {
     "message": "Όλα Έτοιμα"
   },
+  "ensNameNotFound": {
+    "message": "Η ονομασία ENS δεν βρέθηκε"
+  },
   "ensRegistrationError": {
     "message": "Σφάλμα στην καταχώριση ονόματος ENS"
   },
@@ -419,8 +643,14 @@
   "enterPassword": {
     "message": "Εισάγετε τον κωδικό πρόσβασης"
   },
+  "enterPasswordConfirm": {
+    "message": "Εισαγάγετε τον κωδικό πρόσβασης για επιβεβαίωση"
+  },
   "enterPasswordContinue": {
     "message": "Πληκτρολογήστε τον κωδικό πρόσβασης για να συνεχίσετε"
+  },
+  "eth": {
+    "message": "ETH"
   },
   "ethereumPublicAddress": {
     "message": "Δημόσια Διεύθυνση Ethereum"
@@ -431,11 +661,17 @@
   "estimatedProcessingTimes": {
     "message": "Εκτιμώμενοι Χρόνοι Επεξεργασίας"
   },
+  "exchangeRate": {
+    "message": "Συναλλαγματική Ισοτιμία"
+  },
   "expandView": {
     "message": "Ανάπτυξη Προβολής"
   },
   "exportPrivateKey": {
     "message": "Εξαγωγή Ιδιωτικού Κλειδιού"
+  },
+  "exportPrivateKeyWarning": {
+    "message": "Κάνετε εξαγωγή των ιδιωτικών κλειδιών με δική σας ευθύνη."
   },
   "failed": {
     "message": "Απέτυχε"
@@ -446,6 +682,12 @@
   "faster": {
     "message": "Πιο γρήγορα"
   },
+  "fastest": {
+    "message": "Πιο γρήγορη"
+  },
+  "feeChartTitle": {
+    "message": "Προβλέψεις Τελών για Ζωντανές Συναλλαγές"
+  },
   "fiat": {
     "message": "Εντολή",
     "description": "Exchange type"
@@ -454,17 +696,30 @@
     "message": "Η εισαγωγή αρχείων δεν λειτουργεί; Κάντε κλικ εδώ!",
     "description": "Helps user import their account from a JSON file"
   },
+  "followTwitter": {
+    "message": "Ακολουθήστε μας στο Twitter"
+  },
   "forgetDevice": {
     "message": "Διαγραφή αυτής της συσκευής"
   },
   "from": {
     "message": "Από "
   },
+  "fromToSame": {
+    "message": "Η διεύθυνση αποστολέα και παραλήπτη δεν μπορεί να είναι η ίδια"
+  },
   "fromShapeShift": {
     "message": "Από το ShapeShift"
   },
   "functionType": {
     "message": "Τύπος Λειτουργίας"
+  },
+  "gas": {
+    "message": "Καύσιμο",
+    "description": "Short indication of gas cost"
+  },
+  "gasFee": {
+    "message": "Χρέωση Αερίου"
   },
   "gasLimit": {
     "message": "Όριο Καυσίμου"
@@ -475,11 +730,17 @@
   "gasLimitInfoModalContent": {
     "message": "Το όριο αερίου είναι το μέγιστο ποσό μονάδων αερίου τι οποίες είστε διατεθειμένοι να δαπανήσετε."
   },
+  "gasLimitRequired": {
+    "message": "Απαιτείται Όριο Gas"
+  },
   "gasLimitTooLow": {
     "message": "Το όριο αερίου πρέπει να είναι τουλάχιστον 21000"
   },
   "gasUsed": {
     "message": "Καύσιμο που Χρησιμοποιήθηκε"
+  },
+  "generatingSeed": {
+    "message": "Δημιουργία Φράσεων ..."
   },
   "gasPrice": {
     "message": "Τιμή Αερίου (GWEI)"
@@ -496,11 +757,17 @@
   "gasPriceCalculation": {
     "message": "Υπολογίζουμε τις προτεινόμενες τιμές αερίου με βάση τα ποσοστά επιτυχίας του δικτύου."
   },
+  "gasPriceRequired": {
+    "message": "Απαιτείται Τιμή Καυσίμου"
+  },
   "general": {
     "message": "Γενικά"
   },
   "generalSettingsDescription": {
     "message": "Μετατροπή νομίσματος, πρωτογενές νόμισμα, γλώσσα, αναπαράσταση μπλοκ"
+  },
+  "generatingTransaction": {
+    "message": "Δημιουργία συναλλαγής"
   },
   "getEther": {
     "message": "Λάβετε Ether"
@@ -514,6 +781,10 @@
   },
   "getStarted": {
     "message": "Έναρξη"
+  },
+  "greaterThanMin": {
+    "message": "πρέπει να είναι μεγαλύτερο ή ίσο με $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Χαιρόμαστε που σας βλέπουμε."
@@ -537,6 +808,9 @@
     "message": "εδώ",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hereList": {
+    "message": "Εδώ είναι μια λίστα!!!!"
+  },
   "hexData": {
     "message": "Δεκαεξαδικά Δεδομένα"
   },
@@ -552,6 +826,12 @@
   "history": {
     "message": "Ιστορικό"
   },
+  "howToDeposit": {
+    "message": "Πώς θέλετε να καταθέσετε Ether;"
+  },
+  "holdEther": {
+    "message": "Σας επιτρέπει να κρατάτε τα ether & τα tokens και χρησιμεύει σαν την γέφυρά σας σε αποκεντρωμένες εφαρμογές."
+  },
   "import": {
     "message": "Εισαγωγή",
     "description": "Button to import an account from a selected file"
@@ -565,6 +845,12 @@
   "importAccountSeedPhrase": {
     "message": "Εισαγωγή λογαριασμού με Φράση Φύτρου"
   },
+  "importAnAccount": {
+    "message": "Εισαγάγετε έναν λογαριασμό"
+  },
+  "importDen": {
+    "message": "Εισαγωγή Υπάρχοντος DEN"
+  },
   "importWallet": {
     "message": "Εισαγωγή Πορτοφολιού"
   },
@@ -577,6 +863,12 @@
   },
   "importUsingSeed": {
     "message": "Εισαγωγή με χρήση φάσης σπόρου λογαριασμού"
+  },
+  "importWithSeedPhrase": {
+    "message": "Εισαγωγή με φράση φύτρου"
+  },
+  "info": {
+    "message": "Πληροφορίες"
   },
   "infoHelp": {
     "message": "Πληροφορίες & Βοήθεια"
@@ -605,24 +897,36 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Δίκτυο μη ETH, ρυθμίστε σε μικρούς χαρακτήρες"
   },
+  "invalidGasParams": {
+    "message": "Μη Έγκυρες Παράμετροι Καυσίμου"
+  },
   "invalidInput": {
     "message": "Μη έγκυρη είσοδος."
+  },
+  "invalidRequest": {
+    "message": "Μη Έγκυρο Αίτημα"
   },
   "invalidRPC": {
     "message": "Μη έγκυρο RPC URL"
   },
-  "invalidBlockExplorerURL": {
-    "message": "Μη έγκυρο Block Explorer URL"
-  },
   "invalidSeedPhrase": {
     "message": "Μη έγκυρη φράση φύτρου"
+  },
+  "jsonFail": {
+    "message": "Κάτι πήγε στραβά. Παρακαλούμε βεβαιωθείτε ότι το αρχείο σας JSON έχει διαμορφωθεί σωστά."
   },
   "jsonFile": {
     "message": "Αρχείο JSON",
     "description": "format for importing an account"
   },
+  "keepTrackTokens": {
+    "message": "Παρακολουθήστε τα tokens τα οποία έχετε αγοράσει με το λογαριασμό MetaMask σας."
+  },
   "kovan": {
     "message": "Δίκτυο Δοκιμής Kovan"
+  },
+  "knowledgeDataBase": {
+    "message": "Επισκεφθείτε τη Γνωσιακή μας Βάση"
   },
   "max": {
     "message": "Μέγ."
@@ -633,6 +937,13 @@
   "ledgerAccountRestriction": {
     "message": "Πρέπει να χρησιμοποιήσετε τον τελευταίο σας λογαριασμό πριν προσθέσετε έναν νέο."
   },
+  "legal": {
+    "message": "Νόμιμος"
+  },
+  "lessThanMax": {
+    "message": "πρέπει να είναι μικρότερο από ή ίσο με $1.",
+    "description": "helper for inputting hex as decimal input"
+  },
   "letsGoSetUp": {
     "message": "Ναι, ας το εγκαταστήσουμε!"
   },
@@ -641,6 +952,9 @@
   },
   "links": {
     "message": "Σύνδεσμοι"
+  },
+  "limit": {
+    "message": "Όριο"
   },
   "liveGasPricePredictions": {
     "message": "Ζωντανές Προβλέψεις Τιμής Καυσίμου"
@@ -662,6 +976,12 @@
   },
   "logout": {
     "message": "Αποσύνδεση"
+  },
+  "loose": {
+    "message": "Χαλαρό"
+  },
+  "loweCaseWords": {
+    "message": "οι λέξεις φύτρου έχουν μόνο πεζούς χαρακτήρες"
   },
   "mainnet": {
     "message": "Κύριο Δίκτυο Ethereum"
@@ -687,8 +1007,17 @@
   "metamaskVersion": {
     "message": "Έκδοση MetaMask "
   },
+  "min": {
+    "message": "Ελάχιστο"
+  },
   "missingYourTokens": {
     "message": "Δεν βλέπετε τα διακριτικά σας;"
+  },
+  "minutesShorthand": {
+    "message": "Ελάχιστο"
+  },
+  "mobileSyncTitle": {
+    "message": "Συγχρονισμός λογαριασμών με κινητό"
   },
   "mobileSyncText": {
     "message": "Παρακαλούμε δώστε τον κωδικό πρόσβασής σας για να επιβεβαιώσετε ότι είστε εσείς!"
@@ -711,6 +1040,10 @@
   "needImportFile": {
     "message": "Πρέπει να επιλέξετε ένα αρχείο για εισαγωγή.",
     "description": "User is important an account and needs to add a file to continue"
+  },
+  "needImportPassword": {
+    "message": "Πρέπει να πληκτρολογήσετε έναν κωδικό πρόσβασης για τον επιλεγμένο φάκελο.",
+    "description": "Password and file needed to import an account"
   },
   "negativeETH": {
     "message": "Δεν μπορεί να γίνει αποστολή αρνητικών ποσών ETH."
@@ -746,6 +1079,12 @@
   "newPassword": {
     "message": "Νέος Κωδικός Πρόσβασης (ελάχιστο 8 χαρακτήρες)"
   },
+  "newPassword8Chars": {
+    "message": "Νέος Κωδικός Πρόσβασης (ελάχιστο 8 χαρακτήρες)"
+  },
+  "newRecipient": {
+    "message": "Νέος Παραλήπτης"
+  },
   "newNetwork": {
     "message": "Νέο Δίκτυο"
   },
@@ -767,11 +1106,20 @@
   "rpcUrl": {
     "message": "Νέο RPC URL"
   },
+  "showAdvancedOptions": {
+    "message": "Εμφάνιση Επιλογών για Προχωρημένους"
+  },
+  "hideAdvancedOptions": {
+    "message": "Απόκρυψη Επιλογών για Προχωρημένους"
+  },
   "optionalChainId": {
     "message": "Ταυτότητα Αλυσίδας (προαιρετικό)"
   },
   "optionalSymbol": {
     "message": "Σύμβολο (προαιρετικό)"
+  },
+  "optionalNickname": {
+    "message": "Ψευδώνυμο (προαιρετικό)"
   },
   "newTotal": {
     "message": "Νέο Σύνολο"
@@ -791,11 +1139,20 @@
   "noConversionRateAvailable": {
     "message": "Δεν Υπάρχει Διαθέσιμη Ισοτιμία Μετατροπής"
   },
+  "noTransactionHistory": {
+    "message": "Δεν υπάρχει ιστορικό συναλλαγών."
+  },
   "noTransactions": {
     "message": "Δεν έχετε καμιά συναλλαγή"
   },
   "notEnoughGas": {
     "message": "Δεν Υπάρχει Αρκετό Αέριο"
+  },
+  "notFound": {
+    "message": "Δεν βρέθηκε"
+  },
+  "notStarted": {
+    "message": "Δεν Ξεκίνησε"
   },
   "noWebcamFoundTitle": {
     "message": "Η διαδικτυακή κάμερα δεν βρέθηκε"
@@ -806,14 +1163,40 @@
   "ofTextNofM": {
     "message": "από"
   },
+  "oldUI": {
+    "message": "Παλαιό Περιβάλλον Χρήστη"
+  },
+  "oldUIMessage": {
+    "message": "Επιστρέψατε στο παλαιό περιβάλλον χρήστη. Μπορείτε να κάνετε αλλαγή πάλι στο Νέο Περιβάλλον Χρήστη μέσω του μενού πολλαπλών επιλογών πάνω δεξιά."
+  },
+  "onlySendToEtherAddress": {
+    "message": "Στείλτε ETH μόνο σε μια διεύθυνση Ethereum."
+  },
+  "onlySendTokensToAccountAddress": {
+    "message": "Στείλτε μόνο $1 σε μια διεύθυνση λογαριασμού Ethereum.",
+    "description": "displays token symbol"
+  },
+  "openInTab": {
+    "message": "Άνοιγμα σε καρτέλα"
+  },
+  "or": {
+    "message": "ή",
+    "description": "choice between creating or importing a new account"
+  },
   "orderOneHere": {
     "message": "Παραγγείλετε ένα Trezor ή Ledger και κρατήστε τα χρήματά σας σε παγωμένη αποθήκευση"
   },
   "origin": {
     "message": "Προέλευση"
   },
+  "outgoing": {
+    "message": "Εξερχόμενος"
+  },
   "parameters": {
     "message": "Παράμετροι"
+  },
+  "originalTotal": {
+    "message": "Αρχικό Σύνολο"
   },
   "participateInMetaMetrics": {
     "message": "Συμμετάσχετε στο MetaMetrics"
@@ -824,21 +1207,41 @@
   "password": {
     "message": "Κωδικός πρόσβασης"
   },
+  "passwordCorrect": {
+    "message": "Παρακαλούμε βεβαιωθείτε ότι ο κωδικός πρόσβασής σας είναι σωστός."
+  },
   "passwordsDontMatch": {
     "message": "Οι κωδικοί πρόσβασης δεν ταιριάζουν"
+  },
+  "passwordMismatch": {
+    "message": "οι κωδικοί πρόσβασης δεν ταιριάζουν",
+    "description": "in password creation process, the two new password fields did not match"
   },
   "passwordNotLongEnough": {
     "message": "Ο Κωδικός Πρόσβασης δεν είναι αρκετά μεγάλος"
   },
+  "passwordShort": {
+    "message": "ο κωδικός πρόσβασης δεν έχει αρκετό μήκος",
+    "description": "in password creation process, the password is not long enough to be secure"
+  },
   "pastePrivateKey": {
     "message": "Επικολλήστε τη συμβολοσειρά ιδιωτικού κλειδιού εδώ:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "Επικολλήστε τη φράση επαναφοράς σας εδώ!"
   },
   "pending": {
     "message": "σε εκκρεμότητα"
   },
   "personalAddressDetected": {
     "message": "Η προσωπική διεύθυνση εντοπίστηκε. Καταχωρίστε τη διεύθυνση συμβολαίου διακριτικού."
+  },
+  "pleaseReviewTransaction": {
+    "message": "Παρακαλούμε επανεξετάστε τη συναλλαγή σας."
+  },
+  "popularTokens": {
+    "message": "Δημοφιλή Διακριτικά"
   },
   "prev": {
     "message": "Προηγούμενο"
@@ -871,6 +1274,15 @@
   "readdToken": {
     "message": "Μπορείτε να προσθέσετε ξανά αυτό το διακριτικό στο μέλλον μεταβαίνοντας στο \"Πρόσθεση διακριτικού\" στο μενού επιλογών των λογαριασμών σας."
   },
+  "readMore": {
+    "message": "Διαβάστε περισσότερα εδώ."
+  },
+  "readMore2": {
+    "message": "Διαβάστε περισσότερα."
+  },
+  "receive": {
+    "message": "Λάβετε"
+  },
   "recents": {
     "message": "Πρόσφατα"
   },
@@ -879,6 +1291,9 @@
   },
   "recipientAddressPlaceholder": {
     "message": "Αναζήτηση, δημόσια διεύθυνση (0x) ή ENS"
+  },
+  "refundAddress": {
+    "message": "Η Διεύθυνση Επιστροφής Χρημάτων σας"
   },
   "rejectAll": {
     "message": "Απόρριψη Όλων"
@@ -913,6 +1328,9 @@
   "restoreFromSeed": {
     "message": "Επαναφορά λογαριασμού;"
   },
+  "restoreVault": {
+    "message": "Επαναφορά Vault"
+  },
   "restoreAccountWithSeed": {
     "message": "Επαναφέρετε τον Λογαριασμό σας με Φράση Επαναφοράς"
   },
@@ -921,6 +1339,9 @@
   },
   "required": {
     "message": "Απαιτείται"
+  },
+  "retryWithMoreGas": {
+    "message": "Δοκιμάστε ξανά με υψηλότερη τιμή καυσίμου εδώ"
   },
   "restore": {
     "message": "Επαναφορά"
@@ -964,6 +1385,13 @@
   "goerli": {
     "message": "Δοκιμαστικό Δίκτυο Goerli"
   },
+  "rpc": {
+    "message": "Προσαρμοσμένο RPC"
+  },
+  "sampleAccountName": {
+    "message": "Π.χ. Ο νέος λογαριασμός μου",
+    "description": "Help user understand concept of adding a human-readable name to their account"
+  },
   "save": {
     "message": "Αποθήκευση"
   },
@@ -975,6 +1403,13 @@
   },
   "saveAsCsvFile": {
     "message": "Αποθηκεύστε ως Αρχείο CSV"
+  },
+  "saveAsFile": {
+    "message": "Αποθήκευση ως Αρχείο",
+    "description": "Account export process"
+  },
+  "saveSeedAsFile": {
+    "message": "Αποθηκεύστε Λέξεις Φύτρου Ως Αρχεία"
   },
   "scanInstructions": {
     "message": "Τοποθετήστε τον κώδικα QR μπροστά από την κάμερά σας"
@@ -1006,11 +1441,17 @@
   "securitySettingsDescription": {
     "message": "Φάση ρυθμίσεων απορρήτου και σπόρου πορτοφολιού"
   },
+  "secondsShorthand": {
+    "message": "Δευτ."
+  },
   "seedPhrasePlaceholder": {
     "message": "Διαχωρίστε κάθε λέξη μ' ένα κενό"
   },
   "seedPhraseReq": {
     "message": "Οι φράσεις φύτρου έχουν μήκος 12 λέξεων"
+  },
+  "select": {
+    "message": "Επιλογή"
   },
   "selectCurrency": {
     "message": "Επιλέξτε Νόμισμα"
@@ -1020,6 +1461,9 @@
   },
   "selectLocale": {
     "message": "Επιλέξτε Τοπικές Ρυθμίσεις"
+  },
+  "selectService": {
+    "message": "Επιλογή Υπηρεσίας"
   },
   "selectType": {
     "message": "Επιλέξτε Τύπο"
@@ -1048,11 +1492,17 @@
   "searchTokens": {
     "message": "Αναζήτηση Tokens"
   },
+  "selectAnAddress": {
+    "message": "Επιλογή Διεύθυνσης"
+  },
   "selectAnAccount": {
     "message": "Επιλέξτε Λογαριασμό"
   },
   "selectAnAccountHelp": {
     "message": "Επιλέξτε τον λογαριασμό για προβολή στο MetaMask"
+  },
+  "selectAnAsset": {
+    "message": "Επιλέξτε ένα Περιουσιακό Στοιχείο"
   },
   "selectAHigherGasFee": {
     "message": "Επιλέξτε ένα μεγαλύτερο τέλος gas για να επιταχύνετε την επεξεργασία της συναλλαγής σας.*"
@@ -1063,8 +1513,14 @@
   "selectPathHelp": {
     "message": "Εάν δεν βλέπετε τους υπάρχοντες λογαριασμούς σας Καθολικού παρακάτω, προσπαθήστε να αλλάξετε τις διαδρομές σε \"Legacy (MEW / MyCrypto)\""
   },
+  "sendTokensAnywhere": {
+    "message": "Στείλτε Διακριτικά σε οποιονδήποτε έχει λογαριασμό Ethereum"
+  },
   "settings": {
     "message": "Ρυθμίσεις"
+  },
+  "shapeshiftBuy": {
+    "message": "Αγοράστε με Shapeshift"
   },
   "showAdvancedGasInline": {
     "message": "Προωθημένος έλεγχος gas"
@@ -1081,6 +1537,9 @@
   "showPrivateKeys": {
     "message": "Εμφάνιση Ιδιωτικών Κλειδιών"
   },
+  "showQRCode": {
+    "message": "Εμφάνιση κωδικού QR"
+  },
   "showHexData": {
     "message": "Εμφάνιση Δεκαεξαδικών Δεδομένων"
   },
@@ -1096,17 +1555,32 @@
   "signed": {
     "message": "Συνδεδεμένος"
   },
+  "signMessage": {
+    "message": "Υπογράψτε Μήνυμα"
+  },
   "signNotice": {
     "message": "Η υπογραφή αυτού του μηνύματος μπορεί να έχει\nεπικίνδυνες παρενέργειες. Υπογράφετε μηνύματα μόνο από\nτοποθεσίες που εμπιστεύεστε πλήρως με ολόκληρο τον λογαριασμό σας.\n  Αυτή η επικίνδυνη μέθοδος θα καταργηθεί σε μια μελλοντική έκδοση."
   },
   "sigRequest": {
     "message": "Αίτημα Υπογραφής"
   },
+  "sigRequested": {
+    "message": "Αίτηση Υπογραφής"
+  },
   "somethingWentWrong": {
     "message": "Ουπς! Κάτι πήγε στραβά."
   },
+  "spaceBetween": {
+    "message": "μόνο ένα κενό μπορεί να υπάρχει μεταξύ των λέξεων"
+  },
   "speedUp": {
     "message": "Επιτάχυνση"
+  },
+  "speedUpTitle": {
+    "message": "Επιτάχυνση Συναλλαγής"
+  },
+  "speedUpSubtitle": {
+    "message": "Αυξήστε την τιμή του φυσικού αερίου για να προσπαθήσετε να αντικαταστήσετε και να επιταχύνετε τη συναλλαγή σας"
   },
   "speedUpCancellation": {
     "message": "Επιτάχυνση αυτής της ακύρωσης"
@@ -1116,6 +1590,9 @@
   },
   "switchNetworks": {
     "message": "Αλλαγή Δικτύων"
+  },
+  "status": {
+    "message": "Κατάσταση"
   },
   "stateLogs": {
     "message": "Αρχεία Καταγραφής Κατάστασης"
@@ -1146,6 +1623,9 @@
   },
   "storePhrase": {
     "message": "Αποθηκεύστε αυτήν τη φράση σε έναν διαχειριστή κωδικών πρόσβασης όπως το 1Password."
+  },
+  "submit": {
+    "message": "Υποβολή"
   },
   "submitted": {
     "message": "Υποβλήθηκε"
@@ -1180,6 +1660,9 @@
   "syncWithMobileComplete": {
     "message": "Τα δεδομένα σας έχουν συγχρονιστεί με επιτυχία. Απολαύστε την εφαρμογή MetaMask για κινητά!"
   },
+  "takesTooLong": {
+    "message": "Παίρνει πολύ ώρα;"
+  },
   "terms": {
     "message": "Όροι Χρήσης"
   },
@@ -1188,6 +1671,9 @@
   },
   "thisWillCreate": {
     "message": "Αυτό θα δημιουργήσει ένα νέο πορτοφόλι και φράση φύτρου"
+  },
+  "tips": {
+    "message": "Tips"
   },
   "to": {
     "message": "Προς"
@@ -1199,14 +1685,26 @@
   "token": {
     "message": "Διακριτικό"
   },
+  "tokenAddress": {
+    "message": "Διεύθυνση Διακριτικού"
+  },
   "tokenAlreadyAdded": {
     "message": "Το διακριτικό έχει ήδη προστεθεί."
+  },
+  "tokenBalance": {
+    "message": "Το Υπόλοιπο Token σας είναι:"
   },
   "tokenContractAddress": {
     "message": "Διεύθυνση Συμβολαίου Token"
   },
+  "tokenSelection": {
+    "message": "Αναζητήστε τις μάρκες ή επιλέξτε από τη λίστα δημοφιλών μαρκών."
+  },
   "tokenSymbol": {
     "message": "Σύμβολο Διακριτικού"
+  },
+  "tokenWarning1": {
+    "message": "Παρακολουθήστε τα διακριτικά που έχετε αγοράσει με τον λογαριασμό σας MetaMask. Αν έχετε αγοράσει διακριτικά χρησιμοποιώντας διαφορετικό λογαριασμό, αυτά τα διακριτικά δεν θα εμφανίζονται εδώ."
   },
   "total": {
     "message": "Σύνολο"
@@ -1220,6 +1718,9 @@
   "transactionCreated": {
     "message": "Η συναλλαγή δημιουργήθηκε με τιμή $1 στο $2."
   },
+  "transactionWithNonce": {
+    "message": "Συναλλαγή $1"
+  },
   "transactionDropped": {
     "message": "Η συναλλαγή υποχώρησε στα $2."
   },
@@ -1232,6 +1733,9 @@
   "transactionUpdated": {
     "message": "Η συναλλαγή ενημερώθηκε σε $2."
   },
+  "transactionUpdatedGas": {
+    "message": "Η συναλλαγή ενημερώθηκε με τέλος gas του $1 σε $2."
+  },
   "transactionErrored": {
     "message": "Η συναλλαγή αντιμετώπισε ένα σφάλμα."
   },
@@ -1241,6 +1745,9 @@
   "transactionCancelSuccess": {
     "message": "Η συναλλαγή ακυρώθηκε με επιτυχία στα $2"
   },
+  "transactions": {
+    "message": "συναλλαγές"
+  },
   "transactionError": {
     "message": "Σφάλμα συναλλαγής. Βρέθηκε εξαίρεση στον κωδικό της σύμβασης."
   },
@@ -1249,6 +1756,12 @@
   },
   "transactionFee": {
     "message": "Χρέωση Συναλλαγής"
+  },
+  "transactionMemo": {
+    "message": "Σημείωση συναλλαγής (προαιρετικό)"
+  },
+  "transactionNumber": {
+    "message": "Αριθμός Συναλλαγής"
   },
   "transactionTime": {
     "message": "Χρόνος Συναλλαγής"
@@ -1262,6 +1775,12 @@
   "transferFrom": {
     "message": "Μεταφορά Από"
   },
+  "transfers": {
+    "message": "Μεταφορές"
+  },
+  "trezorHardwareWallet": {
+    "message": "Υλικό Πορτοφόλι TREZOR"
+  },
   "troubleTokenBalances": {
     "message": "Είχαμε πρόβλημα να φορτώσουμε τα υπόλοιπα του διακριτικού σας. Μπορείτε να τα δείτε",
     "description": "Followed by a link (here) to view token balances"
@@ -1269,11 +1788,26 @@
   "tryAgain": {
     "message": "Δοκιμάστε ξανά"
   },
+  "twelveWords": {
+    "message": "Αυτές οι 12 λέξεις είναι ο μόνος τρόπος για να επαναφέρετε τους λογαριασμούς σας MetaMask.\nΣώστε τους κάπου ασφαλή και μυστικά."
+  },
   "typePassword": {
     "message": "Πληκτρολογήστε τον κωδικό πρόσβασής σας MetaMask"
   },
+  "uiMigrationAnnouncement": {
+    "message": "Καλώς ήρθατε στη νέα διεπαφή χρήστη του MetaMask. Αν έχετε σχόλια σχετικά με τη διεπαφή χρήστη ή τα αιτήματα  λειτουργιών, επικοινωνήστε με την ομάδα υποστήριξης ή με το GitHub."
+  },
+  "uiWelcome": {
+    "message": "Καλώς ήρθατε στην Νέα Διεπαφή Χρήστη (Beta)"
+  },
+  "uiWelcomeMessage": {
+    "message": "Χρησιμοποιείτε τώρα το νέο περιβάλλον εργασίας του MetaMask."
+  },
   "unapproved": {
     "message": "Μη εγκεκριμένο"
+  },
+  "unavailable": {
+    "message": "Μη διαθέσιμο"
   },
   "units": {
     "message": "μονάδες"
@@ -1283,6 +1817,9 @@
   },
   "unknownNetwork": {
     "message": "Άγνωστο Ιδιωτικό Δίκτυο"
+  },
+  "unknownNetworkId": {
+    "message": "Άγνωστο Αναγνωριστικό δικτύου"
   },
   "unknownQrCode": {
     "message": "Σφάλμα: Δεν μπορέσαμε να προσδιορίσουμε αυτόν τον κώδικα QR"
@@ -1302,14 +1839,27 @@
   "updatedWithDate": {
     "message": "Ενημερώθηκε το $1"
   },
-  "urlErrorMsg": {
+  "uriErrorMsg": {
     "message": "Τα URI απαιτούν το κατάλληλο πρόθεμα HTTP/HTTPS."
+  },
+  "usaOnly": {
+    "message": "Μόνο ΗΠΑ",
+    "description": "Using this exchange is limited to people inside the USA"
   },
   "usedByClients": {
     "message": "Χρησιμοποιείται από μια ποικιλία διαφορετικών πελατών"
   },
+  "useOldUI": {
+    "message": "Χρησιμοποιήστε το παλιό περιβάλλον χρήστη"
+  },
   "userName": {
     "message": "Όνομα χρήστη"
+  },
+  "validFileImport": {
+    "message": "Πρέπει να επιλέξετε έναν έγκυρο φάκελο για εισαγωγή."
+  },
+  "vaultCreated": {
+    "message": "Το Χρηματοκιβώτιο Δημιουργήθηκε"
   },
   "viewAccount": {
     "message": "Προβολή λογαριασμού"
@@ -1326,17 +1876,26 @@
   "viewOnEtherscan": {
     "message": "Προβολή στο Etherscan"
   },
+  "viewNetworkInfo": {
+    "message": "Προβολή Πληροφοριών Δικτύου"
+  },
   "visitWebSite": {
     "message": "Επισκεφθείτε τον ιστότοπό μας"
   },
   "walletSeed": {
     "message": "Σπόρος Πορτοφολιού"
   },
+  "warning": {
+    "message": "Προειδοποίηση"
+  },
   "welcomeBack": {
     "message": "Καλώς Ήλθατε και Πάλι!"
   },
   "welcome": {
     "message": "Καλώς ήλθατε στο MetaMask"
+  },
+  "whatsThis": {
+    "message": "Τι είναι αυτό;"
   },
   "writePhrase": {
     "message": "Γράψτε αυτήν τη φάση σε ένα κομμάτι χαρτί και αποθηκεύστε την σε μια ασφαλή τοποθεσία. Εάν θέλετε ακόμη περισσότερη ασφάλεια, γράψτε την σε περισσότερα κομμάτια χαρτί και αποθηκεύστε καθένα από αυτά σε 2-3 διαφορετικές τοποθεσίες."
@@ -1355,6 +1914,18 @@
   },
   "yourPrivateSeedPhrase": {
     "message": "Η προσωπική σας φράση φύτρου"
+  },
+  "yourUniqueAccountImage": {
+    "message": "Η μοναδική εικόνα του λογαριασμού σας"
+  },
+  "yourUniqueAccountImageDescription1": {
+    "message": "Αυτή η εικόνα δημιουργήθηκε προγραμματιστικά για εσάς από τον νέο αριθμό λογαριασμού σας."
+  },
+  "yourUniqueAccountImageDescription2": {
+    "message": "Θα βλέπετε αυτήν την εικόνα κάθε φορά που θα χρειάζεται να επιβεβαιώσετε μια συναλλαγή."
+  },
+  "yourUniqueAccountImageDescription3": {
+    "message": "Το MetaMask δεν θα ζητήσει ποτέ τη φράση επαναφοράς σας!"
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Μηδενική τιμή καυσίμου κατά την επιτάχυνση"

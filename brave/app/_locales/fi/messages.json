@@ -1,14 +1,14 @@
 {
   "ledgerCreateSubText": {
-    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Yhdistä Ledger hardware -lompakkosi vuorovaikutukseen dAppsin kanssa ja tee  siirtoja muihin yhdistettyihin lompakoihin."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Uusi paikallinen kukkaro"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens annonymously with no trading fees."
   },
   "trezorCreateSubText": {
-    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+    "message": "Yhdistä Trezor-laitteistokukkarosi ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa ja tehdäksesi siirtoja muihin yhdistäneisiin kukkaroihin."
   }
 }

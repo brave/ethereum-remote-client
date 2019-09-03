@@ -2,8 +2,11 @@
   "reject": {
     "message": "ปฏิเสธ"
   },
-  "likeToConnect": {
+  "providerRequest": {
     "message": "$1 ต้องการเชื่อมต่อกับบัญชีของคุณ"
+  },
+  "providerRequestInfo": {
+    "message": "โดเมนที่แสดงด้านล่างกำลังพยายามขอเข้าถึง API ของ Ethereum เพื่อให้สามารถโต้ตอบกับบล็อค Ethereum ได้ ตรวจสอบว่าคุณอยู่ในไซต์ที่ถูกต้องก่อนที่จะอนุมัติการเข้าถึง Ethereum เสมอ"
   },
   "about": {
     "message": "เกี่ยวกับ"
@@ -49,6 +52,12 @@
   "backupApprovalNotice": {
     "message": "แบ็คอัพโค้ดกู้คืนลับของคุณเพื่อรักษา Wallet และเงินให้ปลอดภัย"
   },
+  "backupApprovalInfo": {
+    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+  },
+  "backupNow": {
+    "message": "Backup now"
+  },
   "balance": {
     "message": "ยอดคงเหลือ:"
   },
@@ -76,8 +85,35 @@
   "cancellationGasFee": {
     "message": "ค่าธรรมเนียม Gas การยกเลิก"
   },
+  "cancelled": {
+    "message": "Cancelled"
+  },
+  "cancelN": {
+    "message": "Cancel all $1 transactions"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "classicInterface": {
+    "message": "ใช้หน้าตาแบบเก่า"
+  },
+  "clickCopy": {
+    "message": "กดเพื่อคัดลอก"
+  },
+  "clickToAdd": {
+    "message": "Click on $1 to add them to your account"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Close"
+  },
   "chromeRequiredForHardwareWallets": {
     "message": "คุณต้องใช้ MetaMask บน Google Chrome เพื่อเชื่อมต่อกับ Hardware Wallet ของคุณ"
+  },
+  "company": {
+    "message": "Company"
   },
   "confirm": {
     "message": "ยืนยัน"
@@ -88,17 +124,65 @@
   "confirmSecretBackupPhrase": {
     "message": "ยืนยัน Phrase แบ็คอัพลับของคุณ"
   },
+  "confirmTransaction": {
+    "message": "ยืนยันการทำรายการธุรกรรม"
+  },
   "congratulations": {
     "message": "ยินดีด้วย"
   },
+  "connectHardwareWallet": {
+    "message": "Connect Hardware Wallet"
+  },
+  "connect": {
+    "message": "Connect"
+  },
+  "connectRequest": {
+    "message": "Connect Request"
+  },
+  "connecting": {
+    "message": "กำลังเชื่อมต่อ..."
+  },
   "connectingTo": {
     "message": "เชื่อมต่อกับ $1"
+  },
+  "connectingToKovan": {
+    "message": "Connecting to Kovan Test Network"
   },
   "connectingToMainnet": {
     "message": "เชื่อมต่อกับเครือข่าย Ethereum หลัก"
   },
   "connectingToRopsten": {
     "message": "เชื่อมต่อกับเครือข่ายทดสอบ Ropsten"
+  },
+  "connectingToRinkeby": {
+    "message": "Connecting to Rinkeby Test Network"
+  },
+  "connectingToLocalhost": {
+    "message": "Connecting to Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Connecting to Goerli Test Network"
+  },
+  "connectingToUnknown": {
+    "message": "เชื่อมต่อกับเครือข่ายที่ไม่รู้จัก"
+  },
+  "connectToLedger": {
+    "message": "Connect to Ledger"
+  },
+  "connectToTrezor": {
+    "message": "Connect to Trezor"
+  },
+  "contactList": {
+    "message": "Contact List"
+  },
+  "contactListDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "continue": {
+    "message": "ทำต่อไป"
+  },
+  "continueToCoinbase": {
+    "message": "ไปที่ Coinbase"
   },
   "continueToWyre": {
     "message": "ไปที่ Wyre"
@@ -136,14 +220,39 @@
   "createAWallet": {
     "message": "สร้าง Wallet"
   },
+  "createDen": {
+    "message": "สร้าง"
+  },
+  "createPassword": {
+    "message": "Create Password"
+  },
+  "crypto": {
+    "message": "คริปโต",
+    "description": "Exchange type (cryptocurrencies)"
+  },
   "currencyConversion": {
     "message": "การแปลงสกุลเงิน"
+  },
+  "currentLanguage": {
+    "message": "Current Language"
+  },
+  "currentNetwork": {
+    "message": "เครือข่ายปัจจุบัน"
+  },
+  "currentRpc": {
+    "message": "Current RPC"
   },
   "customGas": {
     "message": "กำหนดค่าแก็สเอง"
   },
   "customGasSubTitle": {
     "message": "การเพิ่มค่าธรรมเนียมอาจลดเวลาดำเนินการ แต่ก็ไม่แน่เสมอไป"
+  },
+  "customToken": {
+    "message": "Custom Token"
+  },
+  "customize": {
+    "message": "กำหนดค่าเอง"
   },
   "customRPC": {
     "message": "กำหนดค่า RPC เอง"
@@ -187,11 +296,23 @@
   "dontHaveAHardwareWallet": {
     "message": "ไม่มี Hardware Wallet ใช่ไหม"
   },
+  "dropped": {
+    "message": "Dropped"
+  },
   "edit": {
     "message": "แก้ไข"
   },
-  "editContact": {
+  "editNetwork": {
+    "message": "Edit Network"
+  },
+  "editAccountName": {
+    "message": "แก้ไขชื่อบัญชี"
+  },
+  "editContact":{
     "message": "แก้ไขผู้ติดต่อ"
+  },
+  "editingTransaction": {
+    "message": "Make changes to your transaction"
   },
   "emailUs": {
     "message": "อีเมลหาเรา!"
@@ -199,11 +320,44 @@
   "endOfFlowMessage1": {
     "message": "คุณผ่านการทดสอบแล้ว กรุณารับผิดชอบในการรักษา Seed Phrase ให้ปลอดภัย"
   },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Save a backup in multiple places."
+  },
+  "endOfFlowMessage4": {
+    "message": "Never share the phrase with anyone."
+  },
   "endOfFlowMessage5": {
     "message": "โปรดระวังฟิชชิ่ง MetaMask จะไม่ขอ Seed Phrase ของคุณโดยไม่มีการแจ้งล่วงหน้าเลย"
   },
+  "endOfFlowMessage6": {
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+  },
+  "endOfFlowMessage7": {
+    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+  },
+  "endOfFlowMessage8": {
+    "message": "MetaMask cannot recover your seedphrase. Learn more."
+  },
   "endOfFlowMessage9": {
     "message": "เรียนรู้เพิ่มเติม"
+  },
+  "endOfFlowMessage10": {
+    "message": "All Done"
+  },
+  "ensNameNotFound": {
+    "message": "ไม่พบชื่อ ENS"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
   },
   "enterPassword": {
     "message": "ใส่รหัสผ่าน"
@@ -225,6 +379,12 @@
   },
   "faster": {
     "message": "เร็วขึ้น"
+  },
+  "fastest": {
+    "message": "Fastest"
+  },
+  "feeChartTitle": {
+    "message": "การคาดการณ์ค่าธรรมเนียมธุรกรรมแบบสด"
   },
   "fiat": {
     "message": "เงินตรา",
@@ -257,6 +417,12 @@
   },
   "general": {
     "message": "ทั่วไป"
+  },
+  "generalSettingsDescription": {
+    "message": "Currency conversion, primary currency, language, blockies identicon"
+  },
+  "generatingTransaction": {
+    "message": "Generating transaction"
   },
   "getEther": {
     "message": "รับอีเธอร์"
@@ -292,6 +458,15 @@
     "message": "นำเข้าเรียบร้อย",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
+  "importWithSeedPhrase": {
+    "message": "Import with seed phrase"
+  },
+  "info": {
+    "message": "ข้อมูล"
+  },
   "infoHelp": {
     "message": "ข้อมูลและความช่วยเหลือ"
   },
@@ -309,6 +484,9 @@
   },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ไม่ใช่เครือข่าย ETH ตั้งเป็นตัวพิมพ์เล็ก"
+  },
+  "invalidGasParams": {
+    "message": "ตั้งค่าแก๊สไม่ถูกต้อง"
   },
   "invalidInput": {
     "message": "อินพุทไม่ถูกต้อง"
@@ -328,6 +506,19 @@
   },
   "learnMore": {
     "message": "เรียนรู้เพิ่มเติม"
+  },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "legal": {
+    "message": "กฎหมาย"
+  },
+  "lessThanMax": {
+    "message": "ต้องน้อยกว่าหรือเท่ากับ $1.",
+    "description": "helper for inputting hex as decimal input"
+  },
+  "letsGoSetUp": {
+    "message": "Yes, let’s get set up!"
   },
   "likeToAddTokens": {
     "message": "คุณต้องการเพิ่มโทเค็นเหล่านี้หรือไม่?"
@@ -375,6 +566,9 @@
   "networkSettingsDescription": {
     "message": "เพิ่มและแก้ไขเครือข่าย RPC แบบกำหนดเอง"
   },
+  "nevermind": {
+    "message": "Nevermind"
+  },
   "newAccount": {
     "message": "บัญชีใหม่"
   },
@@ -394,6 +588,39 @@
   "newToMetaMask": {
     "message": "เพิ่งเริ่มใช้ MetaMask?"
   },
+  "noAlreadyHaveSeed": {
+    "message": "No, I already have a seed phrase"
+  },
+  "protectYourKeys": {
+    "message": "Protect Your Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+  },
+  "protectYourKeysMessage2": {
+    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+  },
+  "rpcUrl": {
+    "message": "New RPC URL"
+  },
+  "showAdvancedOptions": {
+    "message": "Show Advanced Options"
+  },
+  "hideAdvancedOptions": {
+    "message": "Hide Advanced Options"
+  },
+  "optionalChainId": {
+    "message": "ChainID (optional)"
+  },
+  "optionalSymbol": {
+    "message": "Symbol (optional)"
+  },
+  "optionalNickname": {
+    "message": "ชื่อเล่น (ไม่บังคับ)"
+  },
+  "newTotal": {
+    "message": "New Total"
+  },
   "newTransactionFee": {
     "message": "ค่าธรรมเนียมธุรกรรมใหม่"
   },
@@ -409,8 +636,84 @@
   "noTransactions": {
     "message": "ยังไม่มีรายการธุรกรรม"
   },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "notFound": {
+    "message": "Not Found"
+  },
+  "notStarted": {
+    "message": "ยังไม่เริ่ม"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam not found"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
+  },
+  "oldUI": {
+    "message": "หน้าตาแบบเก่า"
+  },
+  "oldUIMessage": {
+    "message": "คุณได้เปลี่ยนเป็นหน้าตาแบบเก่าแล้ว คุณสามารถเปลี่ยนเป็นหน้าตาแบบใหม่ได้โดยไปที่ตัวเลือกตรงเมนูมุมขวาบน"
+  },
+  "onlySendToEtherAddress": {
+    "message": "ส่ง ETH ไปยังที่อยู่ Ethereum เท่านั้น"
+  },
+  "onlySendTokensToAccountAddress": {
+    "message": "Only send $1 to an Ethereum account address.",
+    "description": "displays token symbol"
+  },
+  "openInTab": {
+    "message": "Open in tab"
+  },
+  "or": {
+    "message": "หรือ",
+    "description": "choice between creating or importing a new account"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Origin"
+  },
+  "outgoing": {
+    "message": "Outgoing"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "originalTotal": {
+    "message": "ยอดรวมเดิม"
+  },
+  "participateInMetaMetrics": {
+    "message": "Participate in MetaMetrics"
+  },
   "participateInMetaMetricsDescription": {
     "message": "เข้าร่วมใน MetaMetrics เพื่อช่วยเราในการพัฒนา MetaMask"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "passwordCorrect": {
+    "message": "โปรดตรวจสอบว่ารหัสผ่านของคุณถูกต้อง"
+  },
+  "passwordsDontMatch": {
+    "message": "Passwords Don't Match"
+  },
+  "passwordMismatch": {
+    "message": "รหัสผ่านไม่ตรงกัน",
+    "description": "in password creation process, the two new password fields did not match"
+  },
+  "passwordNotLongEnough": {
+    "message": "Password not long enough"
+  },
+  "passwordShort": {
+    "message": "รหัสผ่านไม่ยาวพอ",
+    "description": "in password creation process, the password is not long enough to be secure"
   },
   "pastePrivateKey": {
     "message": "วางคีย์ส่วนตัวของคุณที่นี่:",
@@ -450,6 +753,9 @@
   "deleteNetwork": {
     "message": "ลบเครือข่าย?"
   },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
   "remindMeLater": {
     "message": "เตือนฉันภายหลัง"
   },
@@ -479,6 +785,22 @@
   },
   "slower": {
     "message": "ช้าลง"
+  },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
+  "saveAsFile": {
+    "message": "บันทึกเป็นไฟล์",
+    "description": "Account export process"
+  },
+  "saveSeedAsFile": {
+    "message": "บันทึกกลุ่มคำชีดเป็นไฟล์"
+  },
+  "scanInstructions": {
+    "message": "Place the QR code in front of your camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
   },
   "search": {
     "message": "ค้นหา"
@@ -510,14 +832,38 @@
   "selectAnAccount": {
     "message": "เลือกบัญชี"
   },
+  "selectAnAccountHelp": {
+    "message": "Select the account to view in MetaMask"
+  },
+  "selectAnAsset": {
+    "message": "Select an Asset"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
   "selectHdPath": {
     "message": "เลือกเส้นทาง HD"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+  },
+  "sendTokensAnywhere": {
+    "message": "ส่งโทเค็นไปให้ทุกคนที่มีบัญชีอีเธอเรียม"
   },
   "settings": {
     "message": "การตั้งค่า"
   },
   "showAdvancedGasInline": {
     "message": "การควบคุม Gas ขั้นสูง"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Show Conversion on Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Select this to show fiat conversion on Testnets"
   },
   "showPrivateKeys": {
     "message": "แสดงคีย์ส่วนตัว"
@@ -531,6 +877,9 @@
   "signed": {
     "message": "ลงชื่อแล้ว"
   },
+  "signMessage": {
+    "message": "เซ็นชื่อในข้อความ"
+  },
   "signNotice": {
     "message": "การเซ็นชื่อในข้อความนี้อาจจะเป็นอันตรายได้ \nเซ็นชื่อเฉพาะข้อความจากแหล่งที่คุณไว้วางใจได้จริง ๆ เท่านั้น \nวิธีที่อันตรายนี้จะถูกลบออกในอนาคต"
   },
@@ -539,6 +888,9 @@
   },
   "switchNetworks": {
     "message": "เปลี่ยนเครือข่าย"
+  },
+  "status": {
+    "message": "สถานะ"
   },
   "stateLogs": {
     "message": "บันทึกของสถานะ"
@@ -549,14 +901,29 @@
   "step1HardwareWallet": {
     "message": "1. เชื่อมต่อ Hardware Wallet"
   },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
+  },
   "step2HardwareWallet": {
     "message": "2. เลือกบัญชี"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. Start using dApps and more!"
   },
   "step3HardwareWalletMsg": {
     "message": "ใช้บัญชีฮาร์ดแวร์ของคุณเช่นเดียวกับการใช้กับบัญชี Ethereum ล็อกอินเข้าสู่ dApp ส่ง Eth ซื้อและเก็บโทเคน ERC20 และโทเคนแบบ Non-Fungible เช่น CryptoKitties"
   },
   "storePhrase": {
     "message": "เก็บ Phrase นี้ในตัวจัดการรหัสผ่าน เช่น 1Password"
+  },
+  "submit": {
+    "message": "ตกลง"
+  },
+  "submitted": {
+    "message": "Submitted"
   },
   "supportCenter": {
     "message": "ไปที่ศูนย์สนับสนุนของเรา"
@@ -570,6 +937,9 @@
   "syncWithMobileComplete": {
     "message": "ซิงค์ข้อมูลของคุณเรียบร้อยแล้ว ใช้แอพ MetaMask ให้สนุกนะ!"
   },
+  "takesTooLong": {
+    "message": "ใช้เวลานานเกินไปใช่หรือไม่?"
+  },
   "terms": {
     "message": "ข้อตกลงในการใช้งาน"
   },
@@ -578,6 +948,9 @@
   },
   "thisWillCreate": {
     "message": "สิ่งนี้จะสร้าง Wallet และ Seed Phrase ใหม่"
+  },
+  "tips": {
+    "message": "Tips"
   },
   "to": {
     "message": "ถึง"
@@ -598,11 +971,62 @@
   "transactionDropped": {
     "message": "ธุรกรรมถูกยกเลิกเมื่อ $2"
   },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+  },
+  "transactionUpdated": {
+    "message": "Transaction updated at $2."
+  },
+  "transactionUpdatedGas": {
+    "message": "Transaction updated with a gas fee of $1 at $2."
+  },
+  "transactionErrored": {
+    "message": "Transaction encountered an error."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+  },
   "transactionCancelSuccess": {
     "message": "ยกเลิกธุรกรรมเรียบร้อยแล้วเมื่อ $2"
   },
+  "transactions": {
+    "message": "ธุรกรรม"
+  },
+  "transactionError": {
+    "message": "Transaction Error. Exception thrown in contract code."
+  },
+  "transactionErrorNoContract": {
+    "message": "Trying to call a function on a non-contract address."
+  },
+  "transactionFee": {
+    "message": "Transaction Fee"
+  },
+  "transactionMemo": {
+    "message": "บันทึกช่วยจำของการทำธุรกรรม (ไม่บังคับ)"
+  },
+  "transactionNumber": {
+    "message": "หมายเลขธุรกรรม"
+  },
+  "transactionTime": {
+    "message": "Transaction Time"
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
   "transferBetweenAccounts": {
     "message": "โอนระหว่างบัญชีของฉัน"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
+  },
+  "transfers": {
+    "message": "โอน"
+  },
+  "trezorHardwareWallet": {
+    "message": "TREZOR Hardware Wallet"
   },
   "troubleTokenBalances": {
     "message": "เรามีปัญหาในการโหลดยอดโทเค็นคงเหลือของคุณ คุณสามารถดูได้ที่นี่",
@@ -643,5 +1067,23 @@
   },
   "youSign": {
     "message": "คุณกำลังเซ็นชื่อ"
+  },
+  "yourPrivateSeedPhrase": {
+    "message": "Your private seed phrase"
+  },
+  "yourUniqueAccountImage": {
+    "message": "ภาพบัญชีที่ไม่เหมือนใครของคุณ"
+  },
+  "yourUniqueAccountImageDescription1": {
+    "message": "This image was programmatically generated for you by your new account number."
+  },
+  "yourUniqueAccountImageDescription2": {
+    "message": "You’ll see this image everytime you need to confirm a transaction."
+  },
+  "yourUniqueAccountImageDescription3": {
+    "message": "MetaMask will never ask for your seed phrase!"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Zero gas price on speed up"
   }
 }

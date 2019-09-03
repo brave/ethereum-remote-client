@@ -1,4 +1,28 @@
 {
+  "shareAddress": {
+    "message": "Condividi indirizzo\n"
+  },
+  "shareAddressToConnect": {
+    "message": "Condividere il tuo indirizzo per connetterti a $1?\n"
+  },
+  "shareAddressInfo": {
+    "message": "Condividere il tuo indirizzo con $1 ti permetterà di interagire con questo dapp. Questo permesso è per proteggere la tua privacy per impostazione predefinita.\n"
+  },
+  "privacyModeDefault": {
+    "message": "La modalità privacy è ora abilitata per impostazione predefinita\n"
+  },
+  "privacyMode": {
+    "message": "Modalità privacy"
+  },
+  "privacyModeDescription": {
+    "message": "I siti Web devono richiedere l'accesso per visualizzare le informazioni del tuo account."
+  },
+  "exposeAccounts": {
+    "message": "Esponi Accounts"
+  },
+  "exposeDescription": {
+    "message": "Esporre gli account al sito Web corrente. Utile per dapps legacy."
+  },
   "chartOnlyAvailableEth": {
     "message": "Grafico disponibile solo per le reti Ethereum."
   },
@@ -44,6 +68,9 @@
   "addRecipient": {
     "message": "Aggiungi destinatario"
   },
+  "addressBook": {
+    "message": "Rubrica\n"
+  },
   "advanced": {
     "message": "Avanzate"
   },
@@ -57,10 +84,13 @@
     "message": "Aggiungi alla rubrica"
   },
   "addToAddressBookModalPlaceholder": {
-    "message": "Ad esempio, John D."
+    "message": "Ad esempio, John D.\n"
   },
   "addAlias": {
     "message": "Aggiungi alias"
+  },
+  "addEthAddress": {
+    "message": "Aggiungi un indirizzo Ethereum\n"
   },
   "addToken": {
     "message": "Aggiungi Token"
@@ -122,7 +152,7 @@
     "message": "Esegui il backup del codice di recupero segreto per mantenere il portafoglio e i fondi al sicuro."
   },
   "backupApprovalInfo": {
-    "message": "Questo codice segreto è necessario per recuperare il tuo portafoglio nel caso in cui perdi il tuo dispositivo, dimentichi la tua password, debba reinstallare MetaMask o voglia accedere al tuo portafoglio su un altro dispositivo."
+    "message": "Questo codice segreto è necessario per recuperare il tuo portafoglio nel caso in cui perdi il tuo dispositivo, dimentichi la tua password, debba reinstallare MetaMask o voglia accedere al tuo portafoglio su un altro dispositivo.\n"
   },
   "backupNow": {
     "message": "Esegui il backup ora"
@@ -236,6 +266,27 @@
   "connectingToGoerli": {
     "message": "Connessione alla Rete di Test Goerli"
   },
+  "connectingToUnknown": {
+    "message": "Connessione ad una Rete Sconosciuta"
+  },
+  "connectToLedger": {
+    "message": "Connettersi al Ledger"
+  },
+  "connectToTrezor": {
+    "message": "Connettersi al Trezor"
+  },
+  "contactList": {
+    "message": "Elenco contatti"
+  },
+  "contactListDescription": {
+    "message": "Aggiungi, modifica, rimuovi e gestisci i tuoi contatti"
+  },
+  "continue": {
+    "message": "Continua"
+  },
+  "continueToCoinbase": {
+    "message": "Continua su Coinbase"
+  },
   "continueToWyre": {
     "message": "Continua su Wyre"
   },
@@ -317,6 +368,9 @@
   "deleteAccount": {
     "message": "Cancella account"
   },
+  "denExplainer": {
+    "message": "Il DEN è il tuo archivio crittato con password dentro MetaMask."
+  },
   "deposit": {
     "message": "Deposita"
   },
@@ -353,8 +407,17 @@
   "edit": {
     "message": "Modifica"
   },
-  "editContact": {
+  "editNetwork": {
+    "message": "Modifica Rete"
+  },
+  "editAccountName": {
+    "message": "Modifica Nome Account"
+  },
+  "editContact":{
     "message": "Modifica contatto"
+  },
+  "editingTransaction": {
+    "message": "Modifica la transazione"
   },
   "emailUs": {
     "message": "Mandaci una mail!"
@@ -405,7 +468,7 @@
     "message": "Inserisci la tua password per continuare"
   },
   "ethereumPublicAddress": {
-    "message": "Indirizzo pubblico Ethereum "
+    "message": "Indirizzo pubblico Ethereum \n"
   },
   "etherscanView": {
     "message": "Vedi account su Etherscan"
@@ -631,7 +694,10 @@
     "message": "Caricamento Tokens..."
   },
   "loadMore": {
-    "message": "Carica di più"
+    "message": "Carica di più\n"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
   },
   "login": {
     "message": "Accedi"
@@ -647,6 +713,9 @@
   },
   "memo": {
     "message": "promemoria"
+  },
+  "menu": {
+    "message": "Menu"
   },
   "message": {
     "message": "Messaggio"
@@ -673,7 +742,7 @@
     "message": "I miei account di portafoglio"
   },
   "myWalletAccountsDescription": {
-    "message": "Tutti gli account creati con MetaMask saranno automaticamente aggiunti a questa sezione."
+    "message": "Tutti gli account creati con MetaMask saranno automaticamente aggiunti a questa sezione.\n"
   },
   "mustSelectOne": {
     "message": "Devi selezionare almeno un token."
@@ -704,7 +773,11 @@
     "message": "Nuovo Account"
   },
   "newAccountDetectedDialogMessage": {
-    "message": "Rilevato un nuovo indirizzo! Clicca qui per aggiungerlo alla tua rubrica."
+    "message": "Rilevato un nuovo indirizzo! Clicca qui per aggiungerlo alla tua rubrica.\n"
+  },
+  "newAccountNumberName": {
+    "message": "Account $1",
+    "description": "Default name of next account to be created on create account screen"
   },
   "newContact": {
     "message": "Nuovo contatto"
@@ -846,6 +919,9 @@
   "recipientAddressPlaceholder": {
     "message": "Ricerca, indirizzo pubblico (0x) o ENS"
   },
+  "refundAddress": {
+    "message": "Indirizzo di Rimborso"
+  },
   "rejectAll": {
     "message": "Respingi Tutto"
   },
@@ -868,7 +944,7 @@
     "message": "Ripristinare il tuo account cancellerà lo storico delle transazioni."
   },
   "deleteNetwork": {
-    "message": "Cancella la rete?"
+    "message": "Cancella la rete?\n"
   },
   "deleteNetworkDescription": {
     "message": "Sei sicuro di voler eliminare questa rete?"
@@ -1223,7 +1299,7 @@
     "message": "Trasferisci"
   },
   "transferBetweenAccounts": {
-    "message": "Trasferimento tra i miei account"
+    "message": "Trasferimento tra i miei account\n"
   },
   "transferFrom": {
     "message": "Trasferisci Da"
@@ -1281,10 +1357,10 @@
     "message": "Vedi Account"
   },
   "viewinExplorer": {
-    "message": "Vista in Explorer"
+    "message": "Vista in Explorer\n"
   },
   "viewContact": {
-    "message": "Visualizza contatto"
+    "message": "Visualizza contatto\n"
   },
   "viewOnCustomBlockExplorer": {
     "message": "Vedi su $1"

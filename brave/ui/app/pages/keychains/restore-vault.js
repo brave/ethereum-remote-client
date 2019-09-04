@@ -10,8 +10,11 @@ class BraveRestoreVaultPage extends RestoreVaultPage {
   handleSeedPhraseChange (seedPhrase) {
     let seedPhraseError = null
 
-    if (seedPhrase && this.parseSeedPhrase(seedPhrase).split(' ').length !== 24) {
-      seedPhraseError = this.context.t('seedPhraseReq')
+    if (seedPhrase) {
+      const words = this.parseSeedPhrase(seedPhrase).split(' ')
+      if (words.length !== 24 && words.length !== 12) {
+        seedPhraseError = this.context.t('seedPhraseReq')
+      }
     }
 
     this.setState({ seedPhrase, seedPhraseError })

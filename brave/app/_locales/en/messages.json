@@ -22,5 +22,8 @@
   },
   "trezorCreateSubText": {
     "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
+  },
+  "metamaskImportSubText": {
+    "message": "Note: If importing from a Metamask wallet, enter 12 words instead of 24."
   }
 }

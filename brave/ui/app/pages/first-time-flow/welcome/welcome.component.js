@@ -1,4 +1,5 @@
 import React from 'react'
+import WelcomeModal from '../welcome-modal'
 import Welcome from '../../../../../../ui/app/pages/first-time-flow/welcome/welcome.component'
 import ConnectWallet from '../../../components/app/connect-wallet'
 
@@ -20,6 +21,7 @@ module.exports = class BraveWelcome extends Welcome {
   render () {
     return (
       <div className={'welcome-container'}>
+        <WelcomeModal />
         <div className={'content'}>
           <div>
             <div className={'welcome-title'}>

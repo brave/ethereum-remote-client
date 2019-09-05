@@ -2,6 +2,15 @@
   "backupPhraseFileName": {
     "message": "Crypto Wallets Secret Backup Phrase"
   },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "cryptoWalletsDisclosure": {
+    "message": "Crypto Wallets in Brave is completely separate from Brave Rewards. This is a standalone component which lets you send, receive, and use BAT and other Ethereum assets and collectibles — as well as interacting with Ðapps and other smart contracts. This feature is meant for people who are already familiar with Ethereum or are excited to learn. If that doesn't sound like you, head over to"
+  },
+  "disclosureConfirm": {
+    "message": "I understand"
+  },
   "ledgerCreateSubText": {
     "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
   },
@@ -25,5 +34,8 @@
   },
   "metamaskImportSubText": {
     "message": "Note: If importing from a Metamask wallet, enter 12 words instead of 24."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Welcome to Brave Crypto Wallets"
   }
 }

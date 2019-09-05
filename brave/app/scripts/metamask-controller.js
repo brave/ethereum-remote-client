@@ -33,6 +33,7 @@ module.exports = class BraveController extends MetamaskController {
   getApi () {
     const api = super.getApi()
     api.setBatTokenAdded = nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController)
+    api.setRewardsDisclosureAccepted = nodeify(this.preferencesController.setRewardsDisclosureAccepted, this.preferencesController)
     return api
   }
 }

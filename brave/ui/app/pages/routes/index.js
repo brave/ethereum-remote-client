@@ -45,6 +45,7 @@ function mapStateToProps (state) {
     unapprovedTypedMessagesCount,
     providerRequests,
     batTokenAdded,
+    rewardsDisclosureAccepted,
   } = metamask
   const selected = address || Object.keys(accounts)[0]
 
@@ -90,6 +91,7 @@ function mapStateToProps (state) {
     keyrings,
     providerRequests,
     batTokenAdded,
+    rewardsDisclosureAccepted,
   }
 }
 

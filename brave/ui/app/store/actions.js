@@ -4,7 +4,19 @@ MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
 
+MetaMaskActions.setRewardsDisclosureAccepted = setRewardsDisclosureAccepted
+
 MetaMaskActions.showModal = showModal
+
+var background = null
+const parentSetBackground = MetaMaskActions._setBackgroundConnection
+
+function setBackgroundConnection (newConnection) {
+  parentSetBackground(newConnection)
+  background = newConnection
+}
+
+MetaMaskActions._setBackgroundConnection = setBackgroundConnection
 
 function setBatTokenAdded () {
   return (dispatch) => {
@@ -16,6 +28,20 @@ function setBatTokenAdded () {
     dispatch({
       type: MetaMaskActions.SET_BAT_TOKEN_ADDED,
       value: true,
+    })
+  }
+}
+
+function setRewardsDisclosureAccepted () {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setRewardsDisclosureAccepted((err) => {
+        if (err) {
+          dispatch(MetaMaskActions.displayWarning(err.message))
+          return reject(err)
+        }
+        return MetaMaskActions.forceUpdateMetamaskState(dispatch).then(() => resolve())
+      })
     })
   }
 }

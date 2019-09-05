@@ -497,7 +497,7 @@
     "message": "If you ever have questions or see something fishy, email support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase."
+    "message": "MetaMask cannot recover your seedphrase. Learn more."
   },
   "endOfFlowMessage9": {
     "message": "Learn more."

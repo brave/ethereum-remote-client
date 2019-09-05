@@ -16,6 +16,11 @@ const replaceMetaMask = (str) => {
     .replace(/MetaMask/gi, 'Brave')
 }
 
+const removeLearnMore = (str) => {
+  return str
+    .replace(/ Learn more./gi, '')
+}
+
 const createBraveLocalesTask = () => {
   const writeArgs = { overwrite: true }
 
@@ -27,6 +32,9 @@ const createBraveLocalesTask = () => {
             json[stringName].message = replaceMetaMask(json[stringName].message)
             if (stringName !== 'symbolBetweenZeroTwelve') {
               json[stringName].message = replace12With24(json[stringName].message)
+            }
+            if (stringName === 'endOfFlowMessage8') {
+              json[stringName].message = removeLearnMore(json[stringName].message)
             }
           }
           if (typeof json[stringName].description === 'string') {

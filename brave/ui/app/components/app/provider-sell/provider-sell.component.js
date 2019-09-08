@@ -29,6 +29,7 @@ export default class ProviderSell extends PureComponent {
           `${account.balance} ${account.currency}`,
           `= ${fiat}`,
         ],
+        image: account.logo,
       }
     }
 
@@ -64,6 +65,7 @@ export default class ProviderSell extends PureComponent {
             'usd': {
               name: 'USD Wallet',
               details: '$0.00',
+              image: 'images/usd.svg',
             },
           }}
           selected={'usd'}

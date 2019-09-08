@@ -7,7 +7,7 @@ function mapStateToProps (state) {
     viewingProvider: state.appState.providerShown,
     // TODO extract from state
     providerName: 'Christopher Cooper',
-    providerBalance: 100,
+    providerBalance: 154.46,
   }
 }
 

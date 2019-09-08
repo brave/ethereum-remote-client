@@ -10,7 +10,6 @@ export default class BraveTransactionViewBalance extends PureComponent {
     viewingProvider: PropTypes.bool.isRequired,
     showBuySell: PropTypes.func.isRequired,
     account: PropTypes.object.isRequired,
-    accountId: PropTypes.string.isRequired,
   }
 
   renderBalance () {
@@ -59,7 +58,7 @@ export default class BraveTransactionViewBalance extends PureComponent {
   render () {
     const {
       viewingProvider,
-      accountId,
+      account,
       ...metamaskProps
     } = this.props
 
@@ -72,7 +71,7 @@ export default class BraveTransactionViewBalance extends PureComponent {
         <div className="transaction-view-balance__balance-container">
           <Identicon
             diameter={50}
-            address={accountId}
+            image={account.logo}
           />
           { this.renderBalance() }
         </div>

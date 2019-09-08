@@ -7,7 +7,6 @@ function mapStateToProps (state) {
 
   return {
     viewingProvider: state.appState.providerShown,
-    accountId,
     account: state.metamask.externalProvider.accounts[accountId],
   }
 }

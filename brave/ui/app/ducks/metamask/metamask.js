@@ -13,9 +13,32 @@ module.exports = function (state, action) {
       '0c14e346-9e7f-4d6f-8eb7-d07a02e6ccdd': {
         currency: 'BAT',
         currencyName: 'Basic Attention Token',
+        logo: 'images/contract/BAT_icon.svg',
+        balance: '23.3924',
+        exchangeRate: {
+          amount: 0.183,
+          currency: 'USD',
+        },
+        transactions: [],
+      },
+      'a1e2b76f-9dfc-469c-83f3-b3c191fd2333': {
+        currency: 'ETH',
+        currencyName: 'Ether',
+        logo: 'images/eth_logo.svg',
         balance: '0.2323',
         exchangeRate: {
-          amount: 0.30,
+          amount: 179.01,
+          currency: 'USD',
+        },
+        transactions: [],
+      },
+      '113137dc-0f16-4358-be7a-7fc5ee9eb159': {
+        currency: 'BTC',
+        currencyName: 'Bitcoin',
+        logo: 'images/bitcoin.svg',
+        balance: '0.01034',
+        exchangeRate: {
+          amount: 10502.99,
           currency: 'USD',
         },
         transactions: [
@@ -24,11 +47,11 @@ module.exports = function (state, action) {
             'type': 'send',
             'status': 'completed',
             'amount': {
-              'amount': '-0.00100000',
+              'amount': '-0.00100500',
               'currency': 'BTC',
             },
             'native_amount': {
-              'amount': '-0.01',
+              'amount': '-94.92',
               'currency': 'USD',
             },
             'description': null,
@@ -52,26 +75,6 @@ module.exports = function (state, action) {
             },
           },
         ],
-      },
-      'a1e2b76f-9dfc-469c-83f3-b3c191fd2333': {
-        currency: 'ETH',
-        currencyName: 'Ether',
-        balance: '0.2323',
-        exchangeRate: {
-          amount: 400,
-          currency: 'USD',
-        },
-        transactions: [],
-      },
-      '113137dc-0f16-4358-be7a-7fc5ee9eb159': {
-        currency: 'IDK',
-        currencyName: 'i dunno',
-        balance: '34.00',
-        exchangeRate: {
-          amount: 11.3,
-          currency: 'USD',
-        },
-        transactions: [],
       },
     },
     selectedAccount: '0c14e346-9e7f-4d6f-8eb7-d07a02e6ccdd',

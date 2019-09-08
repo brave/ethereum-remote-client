@@ -27,6 +27,7 @@ export default class ProviderBuy extends PureComponent {
         name: account.currencyName,
         details: account.currency,
         rates: [`@ ${fiat}`],
+        image: account.logo,
       }
     }
 
@@ -66,6 +67,7 @@ export default class ProviderBuy extends PureComponent {
             'chase': {
               name: 'Chase',
               details: 'Checking *******1234',
+              image: 'images/chase-testing.png',
             },
           }}
           selected={'chase'}

@@ -46,7 +46,7 @@ export default class BraveTokenList extends PureComponent {
           <div className="balance-container">
             <Identicon
               diameter={50}
-              address={accountId}
+              image={account.logo}
             />
             <div className="flex-column balance-display">
               <CurrencyDisplayComponent

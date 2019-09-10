@@ -6,11 +6,17 @@ module.exports = class BravePreferencesController extends PreferencesController 
       opts['initState'] = {}
     }
     opts.initState.batTokenAdded = false
+    opts.initState.rewardsDisclosureAccepted = false
     super(opts)
   }
 
   setBatTokenAdded () {
     this.store.updateState({ batTokenAdded: true })
+    return Promise.resolve(true)
+  }
+
+  setRewardsDisclosureAccepted () {
+    this.store.updateState({ rewardsDisclosureAccepted: true })
     return Promise.resolve(true)
   }
 }

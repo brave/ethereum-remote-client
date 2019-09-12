@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import UpholdLogo from './assets/uphold-logo'
 
 module.exports = class ConnectWallet extends PureComponent {
   static contextTypes = {
@@ -38,6 +39,14 @@ module.exports = class ConnectWallet extends PureComponent {
             <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
           </div>),
           subText: t('trezorCreateSubText'),
+        }
+        break
+      case 'uphold':
+        walletText = {
+          title: (<div>
+            <UpholdLogo />
+          </div>),
+          subText: t('upholdCreateSubText'),
         }
         break
       default:

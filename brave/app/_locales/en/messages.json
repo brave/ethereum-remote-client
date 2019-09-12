@@ -32,6 +32,9 @@
   "trezorCreateSubText": {
     "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
   },
+  "upholdCreateSubText": {
+    "message": "Connect to Uphold to buy & sell crypto through the Brave browser, and transfer funds easily between wallets."
+  },
   "metamaskImportSubText": {
     "message": "Note: If importing from a Metamask wallet, enter 12 words instead of 24."
   },

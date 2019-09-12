@@ -14,6 +14,10 @@ module.exports = class BraveWelcome extends Welcome {
     this.props.history.push(INITIALIZE_CREATE_PASSWORD_ROUTE)
   }
 
+  onConnectUphold = () => {
+    this.props.history.push(AUTHORIZE_UPHOLD_ROUTE)
+  }
+
   onRestore = () => {
     this.props.history.push(INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE)
   }
@@ -46,6 +50,15 @@ module.exports = class BraveWelcome extends Welcome {
               onCreate={this.onCreate}
             />
           </div>
+        </div>
+        <div className={'content provider'}>
+          <div className={'provider-title'}>
+            <span>{'Other Wallets'}</span>
+          </div>
+          <ConnectWallet
+            type={'uphold'}
+            onCreate={this.onConnectUphold}
+          />
         </div>
       </div>
     )

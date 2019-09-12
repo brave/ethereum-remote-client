@@ -10,6 +10,23 @@
     padding: 40px 20px;
     text-align: center;
     border-radius: 8px;
+
+    .provider-title {
+      padding-bottom: 15px;
+
+      span {
+        float: left;
+        margin-left: 2px;
+        color: rgb(132, 136, 156);
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  .content.provider {
+    padding: 35px 20px;
   }
 
   .welcome-title span {

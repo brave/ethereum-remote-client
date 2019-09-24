@@ -46,6 +46,7 @@ function mapStateToProps (state) {
     providerRequests,
     batTokenAdded,
     rewardsDisclosureAccepted,
+    hardwareConnect,
   } = metamask
   const selected = address || Object.keys(accounts)[0]
 
@@ -92,6 +93,7 @@ function mapStateToProps (state) {
     providerRequests,
     batTokenAdded,
     rewardsDisclosureAccepted,
+    hardwareConnect,
   }
 }
 

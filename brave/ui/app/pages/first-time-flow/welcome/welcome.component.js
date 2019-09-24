@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import WelcomeModal from '../welcome-modal'
-import Welcome from '../../../../../../ui/app/pages/first-time-flow/welcome/welcome.component'
 import ConnectWallet from '../../../components/app/connect-wallet'
 
 import {
@@ -8,7 +8,10 @@ import {
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
 } from '../../../../../../ui/app/helpers/constants/routes'
 
-module.exports = class BraveWelcome extends Welcome {
+module.exports = class BraveWelcome extends PureComponent {
+  static propTypes = {
+    history: PropTypes.object,
+  }
 
   onCreate = () => {
     this.props.history.push(INITIALIZE_CREATE_PASSWORD_ROUTE)

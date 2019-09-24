@@ -4,6 +4,7 @@ MetaMaskActions.addToken = addToken
 MetaMaskActions.setBatTokenAdded = setBatTokenAdded
 MetaMaskActions.SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'
 
+MetaMaskActions.setHardwareConnect = setHardwareConnect
 MetaMaskActions.setRewardsDisclosureAccepted = setRewardsDisclosureAccepted
 
 MetaMaskActions.showModal = showModal
@@ -36,6 +37,20 @@ function setRewardsDisclosureAccepted () {
   return (dispatch) => {
     return new Promise((resolve, reject) => {
       background.setRewardsDisclosureAccepted((err) => {
+        if (err) {
+          dispatch(MetaMaskActions.displayWarning(err.message))
+          return reject(err)
+        }
+        return MetaMaskActions.forceUpdateMetamaskState(dispatch).then(() => resolve())
+      })
+    })
+  }
+}
+
+function setHardwareConnect (value) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setHardwareConnect(value, (err) => {
         if (err) {
           dispatch(MetaMaskActions.displayWarning(err.message))
           return reject(err)

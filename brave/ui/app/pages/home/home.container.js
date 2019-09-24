@@ -9,6 +9,7 @@ import {
   unsetMigratedPrivacyMode,
   rejectProviderRequestByOrigin,
   addTokens,
+  setHardwareConnect,
 } from '../../store/actions'
 import batToken from '../../store/bat-token'
 import { getEnvironmentType } from '../../../../../app/scripts/lib/util'
@@ -31,6 +32,7 @@ const mapStateToProps = state => {
     seedPhraseBackedUp,
     tokens,
     batTokenAdded,
+    hardwareConnect,
   } = metamask
   const accountBalance = getCurrentEthBalance(state)
   const { forgottenPassword } = appState
@@ -56,6 +58,7 @@ const mapStateToProps = state => {
     shouldShowSeedPhraseReminder: !seedPhraseBackedUp && (parseInt(accountBalance, 16) > 0 || tokens.length > 0),
     isPopup,
     batTokenAdded,
+    hardwareConnect,
   }
 }
 
@@ -64,6 +67,7 @@ const mapDispatchToProps = (dispatch) => ({
   forceApproveProviderRequestByOrigin: (origin) => dispatch(forceApproveProviderRequestByOrigin(origin)),
   rejectProviderRequestByOrigin: origin => dispatch(rejectProviderRequestByOrigin(origin)),
   addBatToken: () => dispatch(addTokens(batToken)),
+  setHardwareConnect: (value) => dispatch(setHardwareConnect(value)),
 })
 
 export default compose(

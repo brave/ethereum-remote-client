@@ -6,6 +6,7 @@ module.exports = class BravePreferencesController extends PreferencesController 
       opts['initState'] = {}
     }
     opts.initState.batTokenAdded = false
+    opts.initState.hardwareConnect = false
     opts.initState.rewardsDisclosureAccepted = false
     super(opts)
   }
@@ -18,5 +19,9 @@ module.exports = class BravePreferencesController extends PreferencesController 
   setRewardsDisclosureAccepted () {
     this.store.updateState({ rewardsDisclosureAccepted: true })
     return Promise.resolve(true)
+  }
+
+  setHardwareConnect (value) {
+    this.store.updateState({ hardwareConnect: value })
   }
 }

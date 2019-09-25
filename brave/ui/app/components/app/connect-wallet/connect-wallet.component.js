@@ -10,6 +10,17 @@ module.exports = class ConnectWallet extends PureComponent {
     type: PropTypes.string,
     onCreate: PropTypes.func,
     onRestore: PropTypes.func,
+    setHardwareConnect: PropTypes.func,
+  }
+
+  onAction = (func) => {
+    const { type } = this.props
+
+    if (type !== 'browser') {
+      this.props.setHardwareConnect(true)
+    }
+
+    func()
   }
 
   renderWalletText = () => {
@@ -74,7 +85,7 @@ module.exports = class ConnectWallet extends PureComponent {
             onCreate
               ? <button
                 style={hwButtonStyle}
-                onClick={onCreate}
+                onClick={this.onAction.bind(this, onCreate)}
                 className={'create'}
               >
                 {innerText}
@@ -84,7 +95,7 @@ module.exports = class ConnectWallet extends PureComponent {
           {
             onRestore
               ? <span
-                onClick={onRestore}
+                onClick={this.onAction.bind(this, onRestore)}
                 className={'restore'}
               >
                 {'Restore'}

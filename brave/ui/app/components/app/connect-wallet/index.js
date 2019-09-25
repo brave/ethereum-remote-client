@@ -1,1 +1,1 @@
-export { default } from './connect-wallet.component'
+export { default } from './connect-wallet.container'

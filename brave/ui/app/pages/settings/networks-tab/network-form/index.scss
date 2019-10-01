@@ -1,0 +1,9 @@
+.network-form__footer {
+
+  button {
+
+    &:disabled {
+      display: none;
+    }
+  }
+}

@@ -190,6 +190,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/settings/advanced-tab/advanced-tab.component'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/connect-screen'/gm,
+          `'${bravePrefix}ui/app/pages/create-account/connect-hardware/connect-screen'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

@@ -93,7 +93,6 @@
     "eth-block-tracker": "^4.4.2",
     "eth-contract-metadata": "^1.11.0",
     "eth-ens-namehash": "^2.0.8",
-    "eth-hd-keyring": "github:brave/eth-hd-keyring",
     "eth-json-rpc-filters": "^3.0.4",
     "eth-json-rpc-infura": "github:brave/eth-json-rpc-infura",
     "eth-keyring-controller": "github:brave/KeyringController",

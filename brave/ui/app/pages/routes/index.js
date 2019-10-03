@@ -114,6 +114,21 @@ Routes.propTypes.batTokenAdded = PropTypes.bool
 
 class BraveRoutes extends Component {
 
+  componentDidMount () {
+    const container = document.querySelector('#app-content')
+
+    if (!container) {
+      return
+    }
+
+    const setTheme = (t) => {
+      container.className += ` ${t.toLowerCase()}`
+    }
+
+    chrome.braveTheme.getBraveThemeType((type) => setTheme(type))
+    chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type))
+  }
+
   render () {
     return (
       <div>

@@ -9,6 +9,10 @@ import {
 } from '../../../../../../ui/app/helpers/constants/routes'
 
 module.exports = class BraveWelcome extends PureComponent {
+  static contextTypes = {
+    t: PropTypes.func,
+  }
+
   static propTypes = {
     history: PropTypes.object,
   }
@@ -22,16 +26,18 @@ module.exports = class BraveWelcome extends PureComponent {
   }
 
   render () {
+    const { t } = this.context
+
     return (
       <div className={'welcome-container'}>
         <WelcomeModal />
         <div className={'content'}>
           <div>
             <div className={'welcome-title'}>
-              <span>{'Crypto Wallets'}</span>
+              <span>{t('cryptoWalletsTitle')}</span>
             </div>
             <div className={'welcome-sub-text'}>
-              <span>{'Choose a type to set up:'}</span>
+              <span>{t('setupSubTitle')}</span>
             </div>
           </div>
           <div>

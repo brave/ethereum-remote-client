@@ -1594,6 +1594,9 @@
   "status": {
     "message": "Status"
   },
+  "stateLogFileName": {
+    "message": "MetaMask State Logs"
+  },
   "stateLogs": {
     "message": "State Logs"
   },

@@ -98,7 +98,7 @@ module.exports = class ConnectWallet extends PureComponent {
                 onClick={this.onAction.bind(this, onRestore)}
                 className={'restore'}
               >
-                {'Restore'}
+                {t('restore')}
               </span>
               : null
           }

@@ -6,7 +6,7 @@
     "message": "Uusi paikallinen kukkaro"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "Luo uusi paikallinen Brave-kukkaro voidaksesi käyttää dAppseja ja tallettaaksesi kryptovaluuttaa ja keräilykohteita turvallisesti. Käy anonyymisti kauppaa tokeneilla ilman kaupankäyntimaksuja."
   },
   "trezorCreateSubText": {
     "message": "Yhdistä Trezor-laitteistokukkarosi ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa ja tehdäksesi siirtoja muihin yhdistäneisiin kukkaroihin."

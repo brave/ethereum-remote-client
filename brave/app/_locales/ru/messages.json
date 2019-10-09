@@ -6,7 +6,7 @@
     "message": "Новый локальный кошелек"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "Создайте новый локальный кошелек Brave, чтобы получить доступ к dApps и безопасно хранить криптовалюту и коллекционные токены. Торгуйте токенами анонимно и без комиссии."
   },
   "trezorCreateSubText": {
     "message": "Подключите свой кошелек Trezor, чтобы взаимодействовать с dApps и совершать переводы на другие подключенные кошельки."

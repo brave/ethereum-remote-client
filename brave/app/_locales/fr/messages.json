@@ -6,7 +6,7 @@
     "message": "Nouveau portefeuille local\n"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "Créez un nouveau portefeuille local Brave pour accéder à dApps et stocker de la cryptomonnaie et  des articles de collection en toute sécurité. Échangez des tokens de façon anonyme sans aucun frais d'opération. "
   },
   "trezorCreateSubText": {
     "message": "Connectez votre portefeuille matériel Trezor pour interagir avec dApps et effectuer des transferts vers d'autres portefeuilles connectés.\n"

@@ -6,7 +6,7 @@
     "message": "新しいローカルウォレット"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "Braveローカルウォレットを新しく作成してdAppsにアクセスし、仮想通貨やコレクションを安全に保管しましょう。トークンを手数料なしで匿名で取引できます。"
   },
   "trezorCreateSubText": {
     "message": "Trezorハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"

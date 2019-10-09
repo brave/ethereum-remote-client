@@ -6,7 +6,7 @@
     "message": "Yeni Yerel Cüzdan"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "dApps'e erişmek ve kripto para birimlerini ve koleksiyon ögelerini güvenli biçimde depolamak için yeni bir Brave yerel cüzdanı oluşturun. Alım satım ücreti olmaksızın anonim biçimde jetonlar alıp satın."
   },
   "trezorCreateSubText": {
     "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Trezor donanım cüzdanınızı bağlayın."

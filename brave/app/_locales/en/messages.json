@@ -39,16 +39,10 @@
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
   },
   "passWarningOne": {
-    "message": "This password protects your private key. Nobody can reset it if you forget it, not even Brave! Warning: No software is perfectly reliable or free from errors. Cryptographic assets come with many inherent risks. Please read the"
-  },
-  "passWarningTwo": {
-    "message": "before using this tool."
+    "message": "This password protects your private key. Nobody can reset it if you forget it, not even Brave!"
   },
   "restore": {
     "message": "Restore"
-  },
-  "riskDisclosure": {
-    "message": "risk disclosure"
   },
   "setupSubTitle": {
     "message": "Choose a type to set up:"

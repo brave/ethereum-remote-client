@@ -58,12 +58,17 @@ module.exports = class WelcomeModal extends Component {
               {t('welcomeCryptoWallets')}
             </span>
             <div className={'__div-line'}></div>
-            <span className={'__disclosure'}>
-              {t('cryptoWalletsDisclosure')}
-              <span className={'__rewards'} onClick={this.openRewards}>
-                {t('braveRewards')}
+            <div className={'__disclosure'}>
+              <span>
+                {t('cryptoWalletsDisclosureOne')}
               </span>
-            </span>
+              <span>
+                {t('cryptoWalletsDisclosureTwo')}
+              </span>
+              <span>
+                {t('cryptoWalletsDisclosureThree')} <span className={'__rewards'} onClick={this.openRewards}>{t('braveRewards')}</span>. {t('cryptoWalletsDisclosureFour')}
+              </span>
+            </div>
           </div>
           <div className={'__button-container'}>
             <button type={'button'} onClick={this.acceptDisclosure}>

@@ -46,12 +46,19 @@
     margin-top: 15px;
     display: block;
     text-align: left;
+
+    span {
+      margin-top: 10px;
+    }
+
+    span:not(.__rewards) {
+      display: block;
+    }
   }
 
   .__rewards {
     color: #0076ff;
     font-size: 14px;
-    margin-left: 5px;
     cursor: pointer;
   }
 

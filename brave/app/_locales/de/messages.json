@@ -9,6 +9,6 @@
     "message": "Erstellen Sie eine lokale Brave Wallet, mit der Sie auf dApps zugreifen und Kryptowährungen sicher speichern können. Sie können Tokens anonym und ohne Transaktionsgebühren handeln."
   },
   "trezorCreateSubText": {
-    "message": "Verknüpfen Sie Ihr Trezor-Hardwarewallet, um mit dApps zu interagieren und Überweisungen an andere verknüpfte Wallets durchzuführen."
+    "message": "Verknüpfen Sie Ihre Trezor-Hardwarewallet, um mit dApps zu interagieren und Überweisungen an andere verknüpfte Wallets durchzuführen."
   }
 }

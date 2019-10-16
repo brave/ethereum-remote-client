@@ -6,7 +6,7 @@
     "message": "新增本地钱包"
   },
   "newLocalWalletSubText": {
-    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+    "message": "创建一个新的 Brave 本地钱包，以便于访问 dApp 并安全地存储加密货币和收藏品。无需交易费即可匿名交易代币。"
   },
   "trezorCreateSubText": {
     "message": "请连接您的 Trezor 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"

@@ -308,6 +308,8 @@
     "yarn": "^1.16.0"
   },
   "resolutions": {
-    "braces": "^2.3.2"
+    "braces": "^2.3.2",
+    "handlebars": "^4.4.5",
+    "https-proxy-agent": "^2.2.3"
   }
 }

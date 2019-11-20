@@ -95,7 +95,7 @@
     "eth-ens-namehash": "^2.0.8",
     "eth-hd-keyring": "github:brave/eth-hd-keyring#d811474329e1a725180d393b67d03c0f3d96106b",
     "eth-json-rpc-filters": "^3.0.4",
-    "eth-json-rpc-infura": "github:brave/eth-json-rpc-infura",
+    "eth-json-rpc-infura": "github:brave/eth-json-rpc-infura#843317e264a703406a656428e82cba53a40e592f",
     "eth-keyring-controller": "github:brave/KeyringController#699e344897842930ab42d92c77c32985346ab05d",
     "eth-ledger-bridge-keyring": "^0.2.0",
     "eth-method-registry": "^1.2.0",

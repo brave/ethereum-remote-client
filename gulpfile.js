@@ -33,11 +33,14 @@ const materialUIDependencies = ['@material-ui/core']
 const reactDepenendencies = dependencies.filter(dep => dep.match(/react/))
 const d3Dependencies = ['c3', 'd3']
 
-const uiDependenciesToBundle = [
-  ...materialUIDependencies,
-  ...reactDepenendencies,
-  ...d3Dependencies,
-]
+const externalDependenciesMap = {
+  background: [
+    '3box',
+  ],
+  ui: [
+    ...materialUIDependencies, ...reactDepenendencies, ...d3Dependencies,
+  ],
+}
 
 function gulpParallel (...args) {
   return function spawnGulpChildProcess (cb) {
@@ -445,18 +448,6 @@ gulp.task('zip:opera', zipTask('opera'))
 gulp.task('zip', gulp.parallel('zip:chrome', 'zip:firefox', 'zip:opera'))
 
 // high level tasks
-
-gulp.task('dev',
-  gulp.series(
-    'clean',
-    'dev:scss',
-    gulp.parallel(
-      'dev:extension:js',
-      'dev:copy',
-      'dev:reload'
-    )
-  )
-)
 
 gulp.task('dev:test',
   gulp.series(

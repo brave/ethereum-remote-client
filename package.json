@@ -53,6 +53,9 @@
     "install-test-deps": "yarn add eth-hd-keyring && yarn add eth-json-rpc-infura && yarn add eth-keyring-controller"
   },
   "resolutions": {
+    "braces": "^2.3.2",
+    "handlebars": "^4.4.5",
+    "https-proxy-agent": "^2.2.3",
     "3box/ipfs/ipld-zcash/zcash-bitcore-lib/lodash": "^4.17.12",
     "pubnub/superagent-proxy": "^2.0.0"
   },
@@ -306,10 +309,5 @@
   "engines": {
     "node": "^10.16.0",
     "yarn": "^1.16.0"
-  },
-  "resolutions": {
-    "braces": "^2.3.2",
-    "handlebars": "^4.4.5",
-    "https-proxy-agent": "^2.2.3"
   }
 }

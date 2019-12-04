@@ -1,6 +1,6 @@
 const MetamaskController = require('../../../app/scripts/metamask-controller')
-const ProviderApprovalController = require('../../../app/scripts/controllers/provider-approval')
 const nodeify = require('../../../app/scripts/lib/nodeify')
+const BravePreferencesController = require('./controllers/preferences')
 
 module.exports = class BraveController extends MetamaskController {
 
@@ -8,15 +8,12 @@ module.exports = class BraveController extends MetamaskController {
     super(opts)
 
     this.optsOpenPopup = opts.openPopup
-    this.providerApprovalController = new ProviderApprovalController({
-      closePopup: opts.closePopup,
-      openPopup: this.openPopup.bind(this),
-      keyringController: this.keyringController,
-      preferencesController: this.preferencesController,
+    this.preferencesController = new BravePreferencesController({
+      initState: opts.initState.PreferencesController,
+      initLangCode: opts.initLangCode,
+      openPopup: opts.openPopup,
+      network: this.networkController,
     })
-
-    this.memStore.config.ProviderApprovalController = this.providerApprovalController.store
-    this.memStore.subscribe(this.sendUpdate.bind(this))
   }
 
   openPopup () {

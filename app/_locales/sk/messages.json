@@ -229,6 +229,10 @@
   "basic": {
     "message": "Základné"
   },
+  "betweenMinAndMax": {
+    "message": "musí být větší nebo roven $1 a menší nebo roven $2.",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerView": {
     "message": "Zobraziť účet na $1",
     "description": "$1 replaced by URL for custom block explorer"
@@ -398,6 +402,9 @@
   "copiedExclamation": {
     "message": "Zkopírováno!"
   },
+  "copy": {
+    "message": "Kopírovat"
+  },
   "copyAddress": {
     "message": "Kopírovať adresu do schránky"
   },
@@ -491,6 +498,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "Pokud už vlastníte nějaký Ether, nejrychleji ho dostanete do peněženky přímým vkladem."
+  },
+  "dismiss": {
+    "message": "Zatvoriť"
   },
   "done": {
     "message": "Hotovo"
@@ -696,6 +706,10 @@
   },
   "getStarted": {
     "message": "Začať"
+  },
+  "greaterThanMin": {
+    "message": "musí být větší nebo roven $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Sme radi, že vás vidíme."
@@ -1071,6 +1085,9 @@
   "pastePrivateKey": {
     "message": "Vložte zde svůj privátní klíč:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "Svou klíčovou frázi vložte zde!"
   },
   "pending": {
     "message": "prebieha"
@@ -1628,6 +1645,9 @@
   },
   "userName": {
     "message": "Meno používateľa"
+  },
+  "validFileImport": {
+    "message": "Musíte vybrat validní soubor k importu."
   },
   "viewAccount": {
     "message": "Zobrazit účet"

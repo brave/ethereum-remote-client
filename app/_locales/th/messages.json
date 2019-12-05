@@ -1,4 +1,10 @@
 {
+  "confirmClear": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการล้างเว็บไซต์ที่ผ่านการอนุมัติ"
+  },
+  "clearApprovalData": {
+    "message": "ล้างข้อมูลการอนุมัติ"
+  },
   "reject": {
     "message": "ปฏิเสธ"
   },
@@ -63,6 +69,10 @@
   },
   "balanceIsInsufficientGas": {
     "message": "ยอดคงเหลือไม่พอสำหรับจ่ายค่าแก๊สทั้งหมด"
+  },
+  "betweenMinAndMax": {
+    "message": "ต้องมากกว่าหรือเท่ากับ $1 และน้อยกว่าหรือเท่ากับ $2",
+    "description": "helper for inputting hex as decimal input"
   },
   "blockiesIdenticon": {
     "message": "ใช้งาน Blockies Identicon"
@@ -202,6 +212,9 @@
   "copiedExclamation": {
     "message": "คัดลอกแล้ว!"
   },
+  "copy": {
+    "message": "คัดลอก"
+  },
   "copyToClipboard": {
     "message": "คัดลอกไปคลิปบอร์ด"
   },
@@ -283,6 +296,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "ถ้าคุณมีอีเธอร์อยู่แล้ววิธีการที่เร็วที่สุดในการเอาเงินเข้ากระเป๋าใหม่ก็คือการโอนตรงๆ"
+  },
+  "dismiss": {
+    "message": "ปิด"
   },
   "done": {
     "message": "เสร็จสิ้น"
@@ -430,6 +446,10 @@
   "getEtherFromFaucet": {
     "message": "รับอีเธอร์ที่ปล่อยจาก $1",
     "description": "Displays network name for Ether faucet"
+  },
+  "greaterThanMin": {
+    "message": "ต้องมากกว่าหรือเท่ากับ $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "here": {
     "message": "ที่นี่",
@@ -718,6 +738,9 @@
   "pastePrivateKey": {
     "message": "วางคีย์ส่วนตัวของคุณที่นี่:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "วางคำชีดของคุณที่นี่!"
   },
   "personalAddressDetected": {
     "message": "ตรวจพบแอดแดรสส่วนตัวแล้ว ใส่แอดแดรสสัญญาโทเค็น"
@@ -1052,6 +1075,9 @@
   },
   "usedByClients": {
     "message": "ถูกใช้งานโดยหลายไคลเอนท์"
+  },
+  "validFileImport": {
+    "message": "คุณต้องเลือกไฟล์ที่ถูกต้องเพื่อนำเข้า"
   },
   "viewAccount": {
     "message": "ดูบัญชี"

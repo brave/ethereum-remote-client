@@ -91,6 +91,7 @@ gulp.task('dev:extension',
     'dev:scss',
     gulp.parallel(
       'dev:extension:js',
+      'build:extension:js:deps:background',
       'dev:copy',
       'dev:reload'
     )

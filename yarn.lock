@@ -2690,6 +2690,13 @@ agent-base@4, agent-base@^4.1.0, agent-base@^4.2.0:
   dependencies:
     es6-promisify "^5.0.0"
 
+agent-base@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
+  integrity sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
+  dependencies:
+    es6-promisify "^5.0.0"
+
 agentkeepalive@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/agentkeepalive/-/agentkeepalive-3.5.2.tgz#a113924dd3fa24a0bc3b78108c450c2abee00f67"
@@ -8502,9 +8509,9 @@ eth-json-rpc-infura@^3.1.0, eth-json-rpc-infura@^3.1.2:
     json-rpc-error "^2.0.0"
     tape "^4.8.0"
 
-"eth-json-rpc-infura@github:brave/eth-json-rpc-infura":
+"eth-json-rpc-infura@github:brave/eth-json-rpc-infura#843317e264a703406a656428e82cba53a40e592f":
   version "4.0.0"
-  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/acf1ee2475a2af134e5b744994d7faa8edb8c36d"
+  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/843317e264a703406a656428e82cba53a40e592f"
   dependencies:
     cross-fetch "^2.1.1"
     eth-json-rpc-middleware "^4.0.0"
@@ -8591,9 +8598,9 @@ eth-keyring-controller@^4.0.0:
     obs-store "^2.4.1"
     promise-filter "^1.1.0"
 
-"eth-keyring-controller@github:brave/KeyringController#699e344897842930ab42d92c77c32985346ab05d":
+"eth-keyring-controller@github:brave/KeyringController#dacfe7caefa40438f4c2c12c067a526c15de4c84":
   version "5.0.2"
-  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/699e344897842930ab42d92c77c32985346ab05d"
+  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/dacfe7caefa40438f4c2c12c067a526c15de4c84"
   dependencies:
     argon2-wasm "^0.9.0"
     bip39 "^2.4.0"
@@ -11222,10 +11229,10 @@ gzip-size@5.0.0:
     duplexer "^0.1.1"
     pify "^3.0.0"
 
-handlebars@^4.0.11:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.4.2.tgz#8810a9821a9d6d52cb2f57d326d6ce7c3dfe741d"
-  integrity sha512-cIv17+GhL8pHHnRJzGu2wwcthL5sb8uDKBHvZ2Dtu5s1YNt0ljbzKbamnc+gr69y7bzwQiBdr5+hOpRd5pnOdg==
+handlebars@^4.0.11, handlebars@^4.4.5:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
+  integrity sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -11683,12 +11690,12 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-https-proxy-agent@2.2.1, https-proxy-agent@^2.1.1, https-proxy-agent@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
-  integrity sha512-HPCTS1LW51bcyMYbxUIOO4HEOlQ1/1qRaFWcyxvwaqUS9TY88aoEuHUY33kuAh1YhVVaDQhLZsnPd+XNARWZlQ==
+https-proxy-agent@2.2.1, https-proxy-agent@^2.1.1, https-proxy-agent@^2.2.1, https-proxy-agent@^2.2.3:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
+  integrity sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
   dependencies:
-    agent-base "^4.1.0"
+    agent-base "^4.3.0"
     debug "^3.1.0"
 
 human-standard-collectible-abi@^1.0.2:

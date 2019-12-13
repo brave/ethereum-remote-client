@@ -9,6 +9,17 @@ module.exports = class BravePreferencesController extends PreferencesController 
     opts.initState.hardwareConnect = false
     opts.initState.rewardsDisclosureAccepted = false
     super(opts)
+    this.optsOpenPopup = opts.openPopup
+  }
+
+  openPopup () {
+    const hasOnboarded = this.store.getState().completedOnboarding
+
+    if (hasOnboarded) {
+      this.optsOpenPopup()
+    } else {
+      chrome.tabs.create({ url: 'chrome://wallet/home.html' })
+    }
   }
 
   setBatTokenAdded () {

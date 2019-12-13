@@ -31,7 +31,7 @@ module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
       return (
         <DraggableSeed
           key={`selected-${seedIndex}-${index}`}
-          className={'confirm-seed-phrase__selected-seed-words__selected-seed'}
+          className="confirm-seed-phrase__selected-seed-words__selected-seed"
           index={index}
           seedIndex={seedIndex}
           word={word}

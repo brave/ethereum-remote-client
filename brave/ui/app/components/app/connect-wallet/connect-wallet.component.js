@@ -37,17 +37,21 @@ module.exports = class ConnectWallet extends PureComponent {
         break
       case 'ledger':
         walletText = {
-          title: (<div>
-            <img className={'hardware-img'} src={'images/ledger-logo.svg'} />
-          </div>),
+          title: (
+            <div>
+              <img className="hardware-img" src="images/ledger-logo.svg" />
+            </div>
+          ),
           subText: t('ledgerCreateSubText'),
         }
         break
       case 'trezor':
         walletText = {
-          title: (<div>
-            <img className={'hardware-img'} src={'images/trezor-logo.svg'} />
-          </div>),
+          title: (
+            <div>
+              <img className="hardware-img" src="images/trezor-logo.svg" />
+            </div>
+          ),
           subText: t('trezorCreateSubText'),
         }
         break
@@ -58,10 +62,10 @@ module.exports = class ConnectWallet extends PureComponent {
 
     return (
       <div>
-        <div className={'wallet-title'}>
+        <div className="wallet-title">
           <span>{walletText.title}</span>
         </div>
-        <div className={'wallet-sub-text'}>
+        <div className="wallet-sub-text">
           <span>{walletText.subText}</span>
         </div>
       </div>
@@ -79,27 +83,31 @@ module.exports = class ConnectWallet extends PureComponent {
     const hwButtonStyle = type !== 'browser' ? { marginRight: '-15px' } : {}
 
     return (
-      <div className={'connect-wallet-container'}>
-        <div className={'controls'}>
+      <div className="connect-wallet-container">
+        <div className="controls">
           {
             onCreate
-              ? <button
-                style={hwButtonStyle}
-                onClick={this.onAction.bind(this, onCreate)}
-                className={'create'}
-              >
-                {innerText}
-              </button>
+              ? (
+                <button
+                  style={hwButtonStyle}
+                  onClick={this.onAction.bind(this, onCreate)}
+                  className="create"
+                >
+                  {innerText}
+                </button>
+              )
               : null
           }
           {
             onRestore
-              ? <span
-                onClick={this.onAction.bind(this, onRestore)}
-                className={'restore'}
-              >
-                {t('restore')}
-              </span>
+              ? (
+                <span
+                  onClick={this.onAction.bind(this, onRestore)}
+                  className="restore"
+                >
+                  {t('restore')}
+                </span>
+              )
               : null
           }
         </div>

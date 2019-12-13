@@ -29,29 +29,29 @@ module.exports = class BraveWelcome extends PureComponent {
     const { t } = this.context
 
     return (
-      <div className={'welcome-container'}>
+      <div className="welcome-container">
         <WelcomeModal />
-        <div className={'content'}>
+        <div className="content">
           <div>
-            <div className={'welcome-title'}>
+            <div className="welcome-title">
               <span>{t('cryptoWalletsTitle')}</span>
             </div>
-            <div className={'welcome-sub-text'}>
+            <div className="welcome-sub-text">
               <span>{t('setupSubTitle')}</span>
             </div>
           </div>
           <div>
             <ConnectWallet
-              type={'browser'}
+              type="browser"
               onCreate={this.onCreate}
               onRestore={this.onRestore}
             />
             <ConnectWallet
-              type={'ledger'}
+              type="ledger"
               onCreate={this.onCreate}
             />
             <ConnectWallet
-              type={'trezor'}
+              type="trezor"
               onCreate={this.onCreate}
             />
           </div>

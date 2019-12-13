@@ -814,9 +814,6 @@
   "invalidSeedPhrase": {
     "message": "无效种子密语"
   },
-  "invalidSeedPhrase": {
-    "message": "无效种子密语"
-  },
   "jsonFile": {
     "message": "JSON 文件",
     "description": "format for importing an account"

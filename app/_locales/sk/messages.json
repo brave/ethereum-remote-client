@@ -804,9 +804,6 @@
   "invalidSeedPhrase": {
     "message": "Neplatná seed fráza"
   },
-  "invalidSeedPhrase": {
-    "message": "Neplatná seed fráza"
-  },
   "jsonFile": {
     "message": "JSON soubor",
     "description": "format for importing an account"

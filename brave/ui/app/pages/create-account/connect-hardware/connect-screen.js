@@ -15,7 +15,7 @@ module.exports = class BraveConnectScreen extends ConnectScreen {
 
     return (
       <div
-        className={'hw-connect__get-hw__msg'}
+        className="hw-connect__get-hw__msg"
         dangerouslySetInnerHTML={{ __html: response }}
       />
     )

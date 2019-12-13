@@ -10,7 +10,7 @@ module.exports = class PasswordWarning extends PureComponent {
     const { t } = this.context
 
     return (
-      <div className={'pass-warning'}>
+      <div className="pass-warning">
         <p>
           <span>{t('passWarningOne')}</span>
         </p>

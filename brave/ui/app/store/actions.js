@@ -9,7 +9,7 @@ MetaMaskActions.setRewardsDisclosureAccepted = setRewardsDisclosureAccepted
 
 MetaMaskActions.showModal = showModal
 
-var background = null
+var background = null // eslint-disable-line no-var
 const parentSetBackground = MetaMaskActions._setBackgroundConnection
 
 function setBackgroundConnection (newConnection) {

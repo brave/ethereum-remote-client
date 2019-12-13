@@ -45,20 +45,20 @@ module.exports = class WelcomeModal extends Component {
     }
 
     return (
-      <div className={'welcome-modal'}>
-        <div className={'__modal'}>
-          <div className={'__close'} onClick={this.hideModal}>
+      <div className="welcome-modal">
+        <div className="__modal">
+          <div className="__close" onClick={this.hideModal}>
             <CloseIcon />
           </div>
           <div>
             <CryptoBanner />
           </div>
-          <div className={'__content'}>
-            <span className={'__header'}>
+          <div className="__content">
+            <span className="__header">
               {t('welcomeCryptoWallets')}
             </span>
-            <div className={'__div-line'}></div>
-            <div className={'__disclosure'}>
+            <div className="__div-line"></div>
+            <div className="__disclosure">
               <span>
                 {t('cryptoWalletsDisclosureOne')}
               </span>
@@ -66,12 +66,12 @@ module.exports = class WelcomeModal extends Component {
                 {t('cryptoWalletsDisclosureTwo')}
               </span>
               <span>
-                {t('cryptoWalletsDisclosureThree')} <span className={'__rewards'} onClick={this.openRewards}>{t('braveRewards')}</span>. {t('cryptoWalletsDisclosureFour')}
+                {t('cryptoWalletsDisclosureThree')} <span className="__rewards" onClick={this.openRewards}>{t('braveRewards')}</span>. {t('cryptoWalletsDisclosureFour')}
               </span>
             </div>
           </div>
-          <div className={'__button-container'}>
-            <button type={'button'} onClick={this.acceptDisclosure}>
+          <div className="__button-container">
+            <button type="button" onClick={this.acceptDisclosure}>
               {t('disclosureConfirm')}
             </button>
           </div>

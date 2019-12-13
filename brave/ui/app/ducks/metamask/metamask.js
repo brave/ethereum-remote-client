@@ -13,7 +13,7 @@ module.exports = function (state, action) {
       return extend(newState, {
         batTokenAdded: action.value,
       })
+    default:
+      return newState
   }
-
-  return newState
 }

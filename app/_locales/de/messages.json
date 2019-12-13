@@ -789,9 +789,6 @@
   "invalidSeedPhrase": {
     "message": "Ungültiger Seedschlüssel"
   },
-  "invalidSeedPhrase": {
-    "message": "Ungültiger Seedschlüssel"
-  },
   "jsonFile": {
     "message": "JSON Datei",
     "description": "format for importing an account"

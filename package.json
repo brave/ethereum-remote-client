@@ -14,7 +14,7 @@
     "start:test": "gulp dev:test",
     "build:test": "gulp build:test",
     "test:base": "yarn install-test-deps && yarn test:unit && yarn lint",
-    "test:ci": "yarn test:base && node scripts/audit.js",
+    "test:ci": "yarn test:unit:global && node scripts/audit.js",
     "test": "yarn test:base && yarn audit",
     "dapp": "static-server test/e2e/contract-test --port 8080",
     "dapp-chain": "GANACHE_ARGS='-b 2' concurrently -k -n ganache,dapp -p '[{time}][{name}]' 'yarn ganache:start' 'sleep 5 && static-server test/e2e/contract-test --port 8080'",

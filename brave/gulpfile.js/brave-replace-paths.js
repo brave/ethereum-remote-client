@@ -196,6 +196,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}ui/app/pages/create-account/connect-hardware/connect-screen'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/threebox'/gm,
+          `'${bravePrefix}app/scripts/controllers/threebox'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

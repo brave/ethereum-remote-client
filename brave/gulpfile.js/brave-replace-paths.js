@@ -202,6 +202,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/controllers/threebox'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/confirm-remove-account\.component'/gm,
+          `'${bravePrefix}ui/app/components/app/modals/confirm-remove-account/confirm-remove-account.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

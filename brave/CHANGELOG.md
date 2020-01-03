@@ -120,23 +120,23 @@
 - [#6975](https://github.com/MetaMask/metamask-extension/pull/6975): Ensure seed phrase backup notification only shows up for new users
 
 ## Remote Component([0.1.30](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.30)), Browser Component: `1.0.14`
-- [#64422](https://github.com/brave/brave-browser/issues/6442): Fixed login issues into wallet
+- [brave-browser#64422](https://github.com/brave/brave-browser/issues/6442): Fixed login issues into wallet
 
 ## Remote Component([0.1.29](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.29)), Browser Component: `1.0.13`
-- [#7032](https://github.com/brave/brave-browser/issues/7032): Fix Crypto Wallets proxy caching
-- [#6824](https://github.com/brave/brave-browser/issues/6824): Crypto Wallets add tokens to account button hidden in side-bar 
-- [#6534](https://github.com/brave/brave-browser/issues/6534): Remove/Replace MetaFox icon from connect wallet popup
-- [#6528](https://github.com/brave/brave-browser/issues/6528): Fix brave wallet scroll when more tokens are added
+- [brave-browser#7032](https://github.com/brave/brave-browser/issues/7032): Fix Crypto Wallets proxy caching
+- [brave-browser#6824](https://github.com/brave/brave-browser/issues/6824): Crypto Wallets add tokens to account button hidden in side-bar 
+- [brave-browser#6534](https://github.com/brave/brave-browser/issues/6534): Remove/Replace MetaFox icon from connect wallet popup
+- [brave-browser#6528](https://github.com/brave/brave-browser/issues/6528): Fix brave wallet scroll when more tokens are added
 
 ## Remote Component([0.1.18](https://github.com/brave/ethereum-remote-client/releases/tag/v0.1.18)), Browser Component: `1.0.12`
-- [#6614](https://github.com/brave/brave-browser/issues/6614): Infura interactions should be behind fastly proxy cache
+- [brave-browser#6614](https://github.com/brave/brave-browser/issues/6614): Infura interactions should be behind fastly proxy cache
 
 ## Remote Component([0.1.17](https://github.com/brave/ethereum-remote-client/releases/tag/v0.1.17)), Browser Comonent: `1.0.11`
-- [#6485](https://github.com/brave/brave-browser/issues/6485): Fix disclosure message landing page link
-- [#6038](https://github.com/brave/brave-browser/issues/6038): Removed Metamask icons in connect hardware screen
+- [brave-browser#6485](https://github.com/brave/brave-browser/issues/6485): Fix disclosure message landing page link
+- [brave-browser#6038](https://github.com/brave/brave-browser/issues/6038): Removed Metamask icons in connect hardware screen
 
 ## Remote Component([0.1.16](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.16)), Browser Component: `1.0.10`
-- [#5698](https://github.com/brave/brave-browser/issues/5698): Added support for restoring Metamask wallet into Crypto Wallet
-- [#6281](https://github.com/brave/brave-browser/issues/6281): Rename save state logs download file name to use Brave
-- [#6161](https://github.com/brave/brave-browser/issues/6161): Remove "Cancel" & "Save" buttons for ETH networks that have already been created and can't be edited
-- [#6210](https://github.com/brave/brave-browser/issues/6210): Fix misspelled words on setup page
+- [brave-browser#5698](https://github.com/brave/brave-browser/issues/5698): Added support for restoring Metamask wallet into Crypto Wallet
+- [brave-browser#6281](https://github.com/brave/brave-browser/issues/6281): Rename save state logs download file name to use Brave
+- [brave-browser#6161](https://github.com/brave/brave-browser/issues/6161): Remove "Cancel" & "Save" buttons for ETH networks that have already been created and can't be edited
+- [brave-browser#6210](https://github.com/brave/brave-browser/issues/6210): Fix misspelled words on setup page

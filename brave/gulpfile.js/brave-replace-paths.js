@@ -138,8 +138,8 @@ const createBraveReplacePathsTask = () => {
       )
       .pipe(
         replace(
-          /'(.*)\/new-account\.component'/gm,
-          `'${bravePrefix}ui/app/pages/first-time-flow/create-password/new-account/new-account.component'`
+          /\} from '\.\/new-account\.component'/gm,
+          `} from '${bravePrefix}ui/app/pages/first-time-flow/create-password/new-account/new-account.component'`
         )
       )
       .pipe(

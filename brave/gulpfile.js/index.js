@@ -4,7 +4,7 @@ const createBraveManifestTask = require('./brave-manifest')
 const createBravePublishTask = require('./brave-publish')
 const createBraveLocalesTask = require('./brave-locales')
 const createBraveHTMLTask = require('./brave-html')
-const createBraveReplacePathsTask = require('./brave-replace-paths')
+const {createBraveReplaceLinksTask, createBraveReplacePathsTask} = require('./brave-replace-paths')
 const createBraveLoadStylesTasks = require('./brave-load-styles')
 require('../../gulpfile.js')
 
@@ -34,6 +34,7 @@ copyTask('dev:copy:fonts:brave', {
 })
 
 createBraveManifestTask()
+createBraveReplaceLinksTask()
 createBraveReplacePathsTask()
 createBraveLocalesTask()
 createBraveHTMLTask()
@@ -67,6 +68,7 @@ gulp.task('build',
   gulp.series(
     'clean',
     'load-brave-styles',
+    'replace-brave-links',
     'replace-brave-paths',
     'build:scss',
     gulpParallel(
@@ -87,6 +89,7 @@ gulp.task('dist',
 gulp.task('dev:extension',
   gulp.series(
     'dev:load-brave-styles',
+    'replace-brave-links',
     'replace-brave-paths',
     'clean',
     'dev:scss',

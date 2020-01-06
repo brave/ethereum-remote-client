@@ -50,8 +50,11 @@
   "reject": {
     "message": "거부"
   },
-  "likeToConnect": {
+  "providerRequest": {
     "message": "$1이 당신의 계정에 연결하길 원합니다."
+  },
+  "providerRequestInfo": {
+    "message": "아래 나열된 도메인은 Web3 API에 대한 액세스를 요청하여 Ethereum 블록 체인과 상호 작용할 수 있습니다. Ethereum 액세스를 승인하기 전에 항상 올바른 사이트에 있는지 다시 확인하십시오."
   },
   "about": {
     "message": "정보"
@@ -211,6 +214,10 @@
   "balanceIsInsufficientGas": {
     "message": "현재 가스 총합에 대해 잔액이 부족합니다"
   },
+  "betweenMinAndMax": {
+    "message": "$1 이상 $2 이하여야 합니다.",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerUrl": {
     "message": "익스플로러 차단"
   },
@@ -311,6 +318,9 @@
   "connect": {
     "message": "연결"
   },
+  "connectRequest": {
+    "message": "연결 요청"
+  },
   "connectingTo": {
     "message": "$1에 연결"
   },
@@ -370,6 +380,9 @@
   },
   "copiedExclamation": {
     "message": "복사됨!"
+  },
+  "copy": {
+    "message": "복사"
   },
   "copyAddress": {
     "message": "클립보드로 주소 복사"
@@ -451,6 +464,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "약간의 이더를 이미 보유하고 있다면, 새로 만든 지갑에 직접 입금하여 이더를 보유할 수 있습니다."
+  },
+  "dismiss": {
+    "message": "숨기기"
   },
   "done": {
     "message": "완료"
@@ -634,6 +650,10 @@
   },
   "getStarted": {
     "message": "시작하기"
+  },
+  "greaterThanMin": {
+    "message": "$1 이상이어야 합니다.",
+    "description": "helper for inputting hex as decimal input"
   },
   "hardware": {
     "message": "하드웨어"
@@ -1005,6 +1025,9 @@
     "message": "개인키를 입력해주세요:",
     "description": "For importing an account from a private key"
   },
+  "pasteSeed": {
+    "message": "시드 구문을 이곳에 붙여넣어 주세요!"
+  },
   "pending": {
     "message": "펜딩 중"
   },
@@ -1334,6 +1357,9 @@
   "storePhrase": {
     "message": "이 구문을 1Password같은 암호 관리자에 저장하세요."
   },
+  "submit": {
+    "message": "제출"
+  },
   "submitted": {
     "message": "제출됨"
   },
@@ -1503,6 +1529,9 @@
   },
   "userName": {
     "message": "사용자이름"
+  },
+  "validFileImport": {
+    "message": "가져오기 위해 유효한 파일을 선택해야 합니다."
   },
   "viewAccount": {
     "message": "계정 보기"

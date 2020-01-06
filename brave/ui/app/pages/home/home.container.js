@@ -3,7 +3,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { unconfirmedTransactionsCountSelector } from '../../../../../ui/app/selectors/confirm-transaction'
-import { getCurrentEthBalance, getDaiV1Token, hasPermissionRequests } from '../../../../../ui/app/selectors/selectors'
+import { getCurrentEthBalance, getDaiV1Token } from '../../../../../ui/app/selectors/selectors'
 import {
   addTokens,
   setHardwareConnect,
@@ -11,6 +11,7 @@ import {
   turnThreeBoxSyncingOn,
   getThreeBoxLastUpdated,
   setShowRestorePromptToFalse,
+  unsetMigratedPrivacyMode,
 } from '../../store/actions'
 import batToken from '../../store/bat-token'
 import { setThreeBoxLastUpdated } from '../../../../../ui/app/ducks/app/app'
@@ -28,6 +29,8 @@ const mapStateToProps = state => {
     selectedAddress,
     batTokenAdded,
     hardwareConnect,
+    providerRequests,
+    migratedPrivacyMode,
   } = metamask
   const accountBalance = getCurrentEthBalance(state)
   const { forgottenPassword, threeBoxLastUpdated } = appState
@@ -46,13 +49,15 @@ const mapStateToProps = state => {
     selectedAddress,
     threeBoxLastUpdated,
     hasDaiV1Token: Boolean(getDaiV1Token(state)),
-    hasPermissionRequests: hasPermissionRequests(state),
     batTokenAdded,
     hardwareConnect,
+    providerRequests,
+    showPrivacyModeNotification: migratedPrivacyMode,
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
+  unsetMigratedPrivacyMode: () => dispatch(unsetMigratedPrivacyMode()),
   turnThreeBoxSyncingOn: () => dispatch(turnThreeBoxSyncingOn()),
   setupThreeBox: () => {
     dispatch(getThreeBoxLastUpdated())

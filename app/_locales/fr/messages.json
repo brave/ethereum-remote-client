@@ -32,6 +32,9 @@
   "confirmClear": {
     "message": "Êtes-vous sûr de vouloir supprimer les sites Web approuvés?"
   },
+  "confirmClear": {
+    "message": "Êtes-vous sûr de vouloir supprimer les sites Web approuvés?"
+  },
   "contractInteraction": {
     "message": "Interaction avec un contrat"
   },
@@ -223,6 +226,10 @@
   "basic": {
     "message": "Général"
   },
+  "betweenMinAndMax": {
+    "message": "doit être supérieur ou égal à $1 et inférieur ou égal à $2",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerView": {
     "message": "Afficher le compte à $1",
     "description": "$1 replaced by URL for custom block explorer"
@@ -389,6 +396,9 @@
   "copiedExclamation": {
     "message": "Copié!"
   },
+  "copy": {
+    "message": "Copier"
+  },
   "copyAddress": {
     "message": "Copier l'addresse dans le presse-papier"
   },
@@ -476,6 +486,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "Si vous avez déjà de l'Ether, le moyen le plus rapide d'obtenir des Ether dans votre nouveau portefeuille est par dépôt direct."
+  },
+  "dismiss": {
+    "message": "Ignorer"
   },
   "done": {
     "message": "Terminé"
@@ -671,6 +684,10 @@
   },
   "getStarted": {
     "message": "Démarrer"
+  },
+  "greaterThanMin": {
+    "message": "doit être supérieur ou égal à $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Nous sommes ravis de vous voir.\n"
@@ -1054,6 +1071,9 @@
     "message": "Collez votre clé privée ici:",
     "description": "For importing an account from a private key"
   },
+  "pasteSeed": {
+    "message": "Collez votre seed phrase ici!"
+  },
   "pending": {
     "message": "En attente"
   },
@@ -1392,6 +1412,9 @@
   "submit": {
     "message": "Soumettre"
   },
+  "submit": {
+    "message": "Soumettre"
+  },
   "submitted": {
     "message": "Envoyé"
   },
@@ -1576,6 +1599,9 @@
   },
   "userName": {
     "message": "Nom d'utilisateur"
+  },
+  "validFileImport": {
+    "message": "Vous devez selectionner un fichier valide à importer."
   },
   "viewAccount": {
     "message": "Afficher le compte"

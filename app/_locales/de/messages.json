@@ -50,8 +50,11 @@
   "reject": {
     "message": "Ablehnen"
   },
-  "likeToConnect": {
+  "providerRequest": {
     "message": "$1 möchte sich mit deinem Account verbinden"
+  },
+  "providerRequestInfo": {
+    "message": "Diese Website fordert Zugriff auf Ihre aktuelle Kontoadresse. Stellen Sie immer sicher, dass Sie den Websites vertrauen, mit denen Sie interagieren."
   },
   "about": {
     "message": "Über"
@@ -216,6 +219,10 @@
   },
   "basic": {
     "message": "Grundlegend"
+  },
+  "betweenMinAndMax": {
+    "message": "Muss größer oder gleich $1 und kleiner oder gleich $2 sein.",
+    "description": "helper for inputting hex as decimal input"
   },
   "blockExplorerUrl": {
     "message": "Block-Explorer"
@@ -386,6 +393,9 @@
   "copiedExclamation": {
     "message": "Kopiert!"
   },
+  "copy": {
+    "message": "Kopieren"
+  },
   "copyAddress": {
     "message": "Adresse in die Zwischenablage kopieren"
   },
@@ -475,6 +485,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "Wenn du bereits Ether besitzt, ist die sofortige Einzahlung die schnellste Methode Ether in deine neue Wallet zu bekommen."
+  },
+  "dismiss": {
+    "message": "Schließen"
   },
   "done": {
     "message": "Fertig"
@@ -674,6 +687,10 @@
   },
   "getStarted": {
     "message": "Erste Schritte"
+  },
+  "greaterThanMin": {
+    "message": "Muss größer oder gleich $1 sein.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Wir freuen uns, Sie zu sehen."
@@ -1062,6 +1079,9 @@
   "pastePrivateKey": {
     "message": "Füge deine Private Key Zeichenfolge hier ein:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "Füge deine Seed-Wörterfolge hier ein!"
   },
   "pending": {
     "message": "ausstehend"
@@ -1621,6 +1641,9 @@
   },
   "userName": {
     "message": "Nutzername"
+  },
+  "validFileImport": {
+    "message": "Du musst eine gültige Datei für den Import auswählen."
   },
   "viewAccount": {
     "message": " Account einsehen"

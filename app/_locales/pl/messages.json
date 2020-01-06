@@ -226,6 +226,10 @@
   "basic": {
     "message": "Podstawy"
   },
+  "betweenMinAndMax": {
+    "message": "musi być większe lub równe $1 i mniejsze lub równe $2,",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerUrl": {
     "message": "Przeglądaj blok"
   },
@@ -317,6 +321,9 @@
   "connect": {
     "message": "Połącz"
   },
+  "connectRequest": {
+    "message": "Potwierdź żądanie"
+  },
   "connectingTo": {
     "message": "Łączenie z $1"
   },
@@ -376,6 +383,9 @@
   },
   "copiedExclamation": {
     "message": "Skopiowane!"
+  },
+  "copy": {
+    "message": "Skopiuj"
   },
   "copyAddress": {
     "message": "Skopiuj adres do schowka"
@@ -454,6 +464,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "Jeśli już masz Eter, najszybciej umieścisz go w swoim nowym portfelu przy pomocy bezpośredniego depozytu."
+  },
+  "dismiss": {
+    "message": "Zamknij"
   },
   "done": {
     "message": "Gotowe"
@@ -634,6 +647,10 @@
   },
   "getStarted": {
     "message": "Rozpocznij"
+  },
+  "greaterThanMin": {
+    "message": "musi być większe lub równe $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Cieszymy się, że tu jesteś."
@@ -1016,6 +1033,9 @@
   "pastePrivateKey": {
     "message": "Tutaj wklej swój prywatny klucz:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "Tutaj wklej swoją frazę seed!"
   },
   "pending": {
     "message": "oczekiwanie"
@@ -1539,6 +1559,9 @@
   },
   "userName": {
     "message": "Nazwa użytkownika"
+  },
+  "validFileImport": {
+    "message": "Należy wybrać prawidłowy plik do zaimportowania."
   },
   "viewAccount": {
     "message": "Zobacz konto"

@@ -232,6 +232,10 @@
   "basic": {
     "message": "基本"
   },
+  "betweenMinAndMax": {
+    "message": "必须大于等于 $1 并且小于等于 $2 。",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerUrl": {
     "message": "屏蔽管理器"
   },
@@ -407,6 +411,9 @@
   "copiedExclamation": {
     "message": "已复制"
   },
+  "copy": {
+    "message": "复制"
+  },
   "copyAddress": {
     "message": "将地址复制到剪贴板"
   },
@@ -500,6 +507,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "如果你已经有了一些 Ether，通过直接转入是你的新钱包获取 Ether 的最快捷方式。"
+  },
+  "dismiss": {
+    "message": "关闭"
   },
   "done": {
     "message": "完成"
@@ -702,6 +712,10 @@
   },
   "getStarted": {
     "message": "开始使用"
+  },
+  "greaterThanMin": {
+    "message": "必须要大于等于 $1。",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "我们很高兴与您见面。"
@@ -1087,6 +1101,9 @@
   "pastePrivateKey": {
     "message": "请粘贴你的私钥:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "请粘贴你的助记词！"
   },
   "pending": {
     "message": "待处理"
@@ -1650,6 +1667,9 @@
   },
   "userName": {
     "message": "用户名"
+  },
+  "validFileImport": {
+    "message": "您必须选择一个有效的文件进行导入."
   },
   "viewAccount": {
     "message": "查看账户"

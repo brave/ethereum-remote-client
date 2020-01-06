@@ -35,6 +35,9 @@
   "contractInteraction": {
     "message": "Interakcija s pogodbo"
   },
+  "clearApprovalData": {
+    "message": "Počisti podatke o odobritvi"
+  },
   "reject": {
     "message": "Zavrni"
   },
@@ -205,6 +208,10 @@
   "basic": {
     "message": "Osnovno"
   },
+  "betweenMinAndMax": {
+    "message": "mora biti večji ali enak $1 in manjši ali enak $1.",
+    "description": "helper for inputting hex as decimal input"
+  },
   "blockExplorerUrl": {
     "message": "Blokiraj Explorer"
   },
@@ -374,6 +381,9 @@
   "copiedExclamation": {
     "message": "Kopirano!"
   },
+  "copy": {
+    "message": "Kopiraj"
+  },
   "copyAddress": {
     "message": "Kopiraj naslov v odložišče"
   },
@@ -457,6 +467,9 @@
   },
   "directDepositEtherExplainer": {
     "message": "Če že imate Ether, ga lahko najhitreje dobite v MetaMask z neposrednim vplačilom."
+  },
+  "dismiss": {
+    "message": "Opusti"
   },
   "done": {
     "message": "Končano"
@@ -634,6 +647,10 @@
   },
   "getStarted": {
     "message": "Začnite"
+  },
+  "greaterThanMin": {
+    "message": "mora biti večji ali enak $1.",
+    "description": "helper for inputting hex as decimal input"
   },
   "happyToSeeYou": {
     "message": "Veseli nas, da ste nas spet obiskali."
@@ -1007,6 +1024,9 @@
   "pastePrivateKey": {
     "message": "Tukaj prilepite vaš zasebni ključ:",
     "description": "For importing an account from a private key"
+  },
+  "pasteSeed": {
+    "message": "Tukaj prilepite seed phase!"
   },
   "pending": {
     "message": "v obdelavi"
@@ -1518,6 +1538,9 @@
   },
   "userName": {
     "message": "Uporabniško ime"
+  },
+  "validFileImport": {
+    "message": "Za uvoz morate izbrati pravilno datoteko."
   },
   "viewAccount": {
     "message": "Poglej račun"

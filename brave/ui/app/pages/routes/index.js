@@ -9,8 +9,6 @@ import { withRouter } from 'react-router-dom'
 import {
   getNetworkIdentifier,
   preferencesSelector,
-  hasPermissionRequests,
-  getAddressConnectedToCurrentTab,
 } from '../../../../../ui/app/selectors/selectors'
 import BraveHeader from '../../components/app/header'
 import {
@@ -50,8 +48,6 @@ function mapStateToProps (state) {
     isMouseUser: state.appState.isMouseUser,
     providerId: getNetworkIdentifier(state),
     autoLogoutTimeLimit,
-    hasPermissionsRequests: hasPermissionRequests(state),
-    addressConnectedToCurrentTab: getAddressConnectedToCurrentTab(state),
     batTokenAdded: state.metamask.batTokenAdded,
     rewardsDisclosureAccepted: state.metamask.rewardsDisclosureAccepted,
     hardwareConnect: state.metamask.hardwareConnect,

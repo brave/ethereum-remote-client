@@ -1,6 +1,29 @@
 const gulp = require('gulp')
 const replace = require('gulp-replace')
 
+/*
+ * This task allows us to avoid unecessary large component
+ * overrides when a simple href attribute just needs to be replaced
+ */
+const createBraveReplaceLinksTask = () => {
+  gulp.task('replace-brave-links', function () {
+    return gulp.src(['ui/app/**/*'])
+      .pipe(
+        replace(
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489591-Basic-Safety-Tips/gm,
+          'https://support.brave.com/hc/en-us/articles/360034535452-How-can-I-add-my-other-Crypto-Wallets-to-Brave-'
+        )
+      )
+      .pipe(
+        replace(
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015289932/gm,
+          'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+        )
+      )
+      .pipe(gulp.dest(file => file.base))
+  })
+}
+
 const createBraveReplacePathsTask = () => {
   const overrideDirs = [
     'ui/app/**/*',
@@ -202,14 +225,8 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/controllers/threebox'`
         )
       )
-      .pipe(
-        replace(
-          /'(.*)\/confirm-remove-account\.component'/gm,
-          `'${bravePrefix}ui/app/components/app/modals/confirm-remove-account/confirm-remove-account.component'`
-        )
-      )
       .pipe(gulp.dest(file => file.base))
   })
 }
 
-module.exports = createBraveReplacePathsTask
+module.exports = { createBraveReplaceLinksTask, createBraveReplacePathsTask }

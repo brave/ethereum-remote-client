@@ -1,6 +1,6 @@
 # Changelog
 
-## Remote Component([0.1.32](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.32)), Browser Component: `1.0.15`
+## Remote Component([0.1.32](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.32)), Browser Component: `1.0.15`(10-Jan-2020)
 
 - [brave-browser#7408](https://github.com/brave/brave-browser/issues/7408): Upgrade base MetaMask from 7.0.1 to 7.7.0
 - [brave-browser#6535](https://github.com/brave/brave-browser/issues/6535): Deposit transactions are not listed
@@ -131,7 +131,7 @@
 ## Remote Component([0.1.18](https://github.com/brave/ethereum-remote-client/releases/tag/v0.1.18)), Browser Component: `1.0.12` (01-Nov-2019)
 - [brave-browser#6614](https://github.com/brave/brave-browser/issues/6614): Infura interactions should be behind fastly proxy cache
 
-## Remote Component([0.1.17](https://github.com/brave/ethereum-remote-client/releases/tag/v0.1.17)), Browser Comonent: `1.0.11` (18-Oct-2019)
+## Remote Component([0.1.17](https://github.com/brave/ethereum-remote-client/releases/tag/v0.1.17)), Browser Component: `1.0.11` (18-Oct-2019)
 - [brave-browser#6485](https://github.com/brave/brave-browser/issues/6485): Fix disclosure message landing page link
 - [brave-browser#6038](https://github.com/brave/brave-browser/issues/6038): Removed Metamask icons in connect hardware screen
 

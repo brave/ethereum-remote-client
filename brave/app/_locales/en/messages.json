@@ -41,6 +41,21 @@
   "passWarningOne": {
     "message": "This password protects your private key. Nobody can reset it if you forget it, not even Brave!"
   },
+  "resetButtonText": {
+    "message": "Erase & Reset"
+  },
+  "resetConfirmationPhrase": {
+    "message": "delete my crypto"
+  },
+  "resetCryptoWallets": {
+    "message": "Reset Crypto Wallets"
+  },
+  "resetDisclaimer": {
+    "message": "This will delete all of your Crypto Wallets data. Your crypto will be destroyed unless you have saved the recovery words for this account. This action cannot be undone."
+  },
+  "resetPlaceholder": {
+    "message": "Type \"delete my crypto\" to continue."
+  },
   "restore": {
     "message": "Restore"
   },

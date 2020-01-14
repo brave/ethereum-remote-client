@@ -57,9 +57,12 @@
     "handlebars": "^4.4.5",
     "https-proxy-agent": "^2.2.3",
     "3box/ipfs/ipld-zcash/zcash-bitcore-lib/lodash": "^4.17.12",
+    "marked": "^0.7.0",
+    "mem": "^4.0.0",
     "pubnub/superagent-proxy": "^2.0.0",
     "set-value": "2.0.1",
-    "serialize-javascript": "2.1.1"
+    "serialize-javascript": "2.1.1",
+    "tree-kill": "^1.2.2"
   },
   "dependencies": {
     "3box": "^1.10.2",

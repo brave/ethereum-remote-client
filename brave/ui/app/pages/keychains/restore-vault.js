@@ -5,8 +5,24 @@ import {
   createNewVaultAndRestore,
   unMarkPasswordForgotten,
 } from '../../store/actions'
+import { DEFAULT_ROUTE } from '../../helpers/constants/routes'
 
 class BraveRestoreVaultPage extends RestoreVaultPage {
+  onClick = () => {
+    const { password, seedPhrase } = this.state
+    const {
+      history,
+      createNewVaultAndRestore,
+      leaveImportSeedScreenState,
+    } = this.props
+
+    leaveImportSeedScreenState()
+    createNewVaultAndRestore(password, this.parseSeedPhrase(seedPhrase))
+      .then(() => {
+        history.push(DEFAULT_ROUTE)
+      })
+  }
+
   handleSeedPhraseChange (seedPhrase) {
     let seedPhraseError = null
 

@@ -1,0 +1,53 @@
+.reset-title {
+  font-weight: bold;
+  color: #000;
+  font-size: 36px;
+}
+
+.unlock-page.reset {
+  width: 510px;
+  text-align: center;
+}
+
+.reset-disclaimer {
+  margin-top: 25px;
+}
+
+.reset-disclaimer {
+  p {
+    color: #ff0000;
+    font-weight: bold;
+  }
+}
+
+.reset-form {
+  label {
+    font-size: 21px;
+  }
+
+  #reset-confirmation {
+    min-height: 45px;
+  }
+}
+
+/* This button module doesn't allow for custom styles :( */
+.reset-button {
+  border-radius: 40px !important;
+  margin-top: 20px !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  text-transform: none !important;
+  max-width: 400px !important;
+  padding: 15px 0px !important;
+  background-color: rgb(206, 55, 46) !important;
+}
+
+.reset-button:disabled {
+  background-color: rgb(236, 190, 189) !important;
+}
+
+.reset-cancel {
+  margin-top: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}

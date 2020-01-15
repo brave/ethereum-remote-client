@@ -6,6 +6,32 @@ import classnames from 'classnames'
 const EMPTY_SEEDS = Array(24).fill(null)
 
 module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
+  handleSubmit = async () => {
+    const {
+      history,
+      setSeedPhraseBackedUp,
+      showingSeedPhraseBackupAfterOnboarding,
+      hideSeedPhraseBackupAfterOnboarding,
+    } = this.props
+
+    if (!this.isValid()) {
+      return
+    }
+
+    try {
+      setSeedPhraseBackedUp(true).then(() => {
+        if (showingSeedPhraseBackupAfterOnboarding) {
+          hideSeedPhraseBackupAfterOnboarding()
+          history.push(DEFAULT_ROUTE)
+        } else {
+          history.push(INITIALIZE_END_OF_FLOW_ROUTE)
+        }
+      })
+    } catch ({ message }) {
+      console.error(message)
+    }
+  }
+
   onDrop = targetIndex => {
     const {
       selectedSeedIndices,

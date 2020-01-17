@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CloseIcon from './assets/close-icon'
 import CryptoBanner from './assets/crypto-banner'
+import CloseIconDark from './assets/close-icon-dark'
 
 module.exports = class WelcomeModal extends Component {
   static contextTypes = {
@@ -48,7 +49,12 @@ module.exports = class WelcomeModal extends Component {
       <div className="welcome-modal">
         <div className="__modal">
           <div className="__close" onClick={this.hideModal}>
-            <CloseIcon />
+            <div className="close-light">
+              <CloseIcon />
+            </div>
+            <div className="close-dark">
+              <CloseIconDark />
+            </div>
           </div>
           <div>
             <CryptoBanner />

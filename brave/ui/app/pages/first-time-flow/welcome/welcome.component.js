@@ -36,9 +36,6 @@ module.exports = class BraveWelcome extends PureComponent {
             <div className="welcome-title">
               <span>{t('cryptoWalletsTitle')}</span>
             </div>
-            <div className="welcome-sub-text">
-              <span>{t('setupSubTitle')}</span>
-            </div>
           </div>
           <div>
             <ConnectWallet

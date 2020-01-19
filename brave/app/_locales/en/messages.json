@@ -44,9 +44,6 @@
   "restore": {
     "message": "Restore"
   },
-  "setupSubTitle": {
-    "message": "Choose a type to set up:"
-  },
   "trezorCreateSubText": {
     "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
   },

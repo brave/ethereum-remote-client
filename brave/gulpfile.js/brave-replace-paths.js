@@ -20,6 +20,18 @@ const createBraveReplaceLinksTask = () => {
           'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
         )
       )
+      .pipe(
+        replace(
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489351-Importing-Accounts/gm,
+          'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+        )
+      )
+      .pipe(
+        replace(
+          /https:\/\/medium\.com\/metamask\/introducing-privacy-mode-42549d4870fa/gm,
+          'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

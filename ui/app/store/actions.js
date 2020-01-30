@@ -346,6 +346,7 @@ var actions = {
   SET_PENDING_TOKENS: 'SET_PENDING_TOKENS',
   CLEAR_PENDING_TOKENS: 'CLEAR_PENDING_TOKENS',
   SET_USE_IN3: 'SET_USE_IN3',
+  setUseIn3,
   setPendingTokens,
   clearPendingTokens,
 
@@ -2468,7 +2469,7 @@ function setShowFiatConversionOnTestnetsPreference (value) {
   return setPreference('showFiatInTestnets', value)
 }
 
-export function setUseIn3 (value) {
+function setUseIn3 (value) {
   log.debug(`background.setUseIn3Network: ${value}`)
   return (dispatch) => {
     dispatch(showLoadingIndication())

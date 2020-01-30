@@ -8,6 +8,7 @@ const providerFromEngine = require('eth-json-rpc-middleware/providerFromEngine')
 const log = require('loglevel')
 const createMetamaskMiddleware = require('./createMetamaskMiddleware')
 const createInfuraClient = require('./createInfuraClient')
+const createIn3Client = require ('./createIn3Client')
 const createJsonRpcClient = require('./createJsonRpcClient')
 const createLocalhostClient = require('./createLocalhostClient')
 const { createSwappableProxy, createEventEmitterProxy } = require('swappable-obj-proxy')
@@ -175,9 +176,12 @@ module.exports = class NetworkController extends EventEmitter {
     const { type, rpcTarget, chainId, ticker, nickname } = opts
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
-    if (isInfura) {
+    const useIn3 = true
+    if (isInfura && !useIn3) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
+    } else if (isInfura && useIn3) {
+      this._configureIn3Provider(opts)
     } else if (type === LOCALHOST) {
       this._configureLocalhostProvider()
     // url-based rpc endpoints
@@ -197,6 +201,19 @@ module.exports = class NetworkController extends EventEmitter {
     this._setNetworkClient(networkClient)
     // setup networkConfig
     var settings = {
+      ticker: 'ETH',
+    }
+    this.networkConfig.putState(settings)
+  }
+
+  _configureIn3Provider ({ type }) {
+    log.info('NetworkController - configureIn3Provider', type)
+    const networkClient = createIn3Client({
+      network: type,
+    })
+    this._setNetworkClient(networkClient)
+    // setup networkConfig
+    const settings = {
       ticker: 'ETH',
     }
     this.networkConfig.putState(settings)

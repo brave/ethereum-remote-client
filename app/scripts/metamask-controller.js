@@ -64,6 +64,7 @@ const {
   PhishingController,
 } = require('gaba')
 const backEndMetaMetricsEvent = require('./lib/backend-metametrics')
+const { IN3, INFURA } = require('./controllers/network/enums')
 
 module.exports = class MetamaskController extends EventEmitter {
 
@@ -486,6 +487,7 @@ module.exports = class MetamaskController extends EventEmitter {
       setCustomRpc: nodeify(this.setCustomRpc, this),
       updateAndSetCustomRpc: nodeify(this.updateAndSetCustomRpc, this),
       delCustomRpc: nodeify(this.delCustomRpc, this),
+      setUseIn3Network: this.setUseIn3Network.bind(this),
 
       // PreferencesController
       setSelectedAddress: nodeify(preferencesController.setSelectedAddress, preferencesController),
@@ -1742,6 +1744,30 @@ module.exports = class MetamaskController extends EventEmitter {
   async initializeThreeBox () {
     await this.threeBoxController.init()
   }
+
+  /**
+   * Sets whether or not to use IN3 NEtwork provider instead of infura
+   * @param {boolean} useIn3 - True for IN3, false for Infura.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setUseIn3Network (useIn3, cb) {
+    try {
+      this.preferencesController.setUseIn3(useIn3)
+      const cfg = this.networkController.getProviderConfig()
+      if (useIn3) {
+        this.networkController.setProviderType(cfg.type, cfg.rpcTarget, cfg.ticker, cfg.nickname, cfg.rpcPrefs, IN3)
+      } else {
+        this.networkController.setProviderType(cfg.type, cfg.rpcTarget, cfg.ticker, cfg.nickname, cfg.rpcPrefs, INFURA)
+      }
+      console.log('metamask-controller.js')
+      console.log(this.preferencesController.store.getState())
+      console.log(this.networkController.store.getState())
+      cb(useIn3, null)
+    } catch (err) {
+      cb(null, err)
+    }
+  }
+
 
   /**
    * Sets whether or not to use the blockie identicon format.

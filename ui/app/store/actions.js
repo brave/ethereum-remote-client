@@ -345,6 +345,7 @@ var actions = {
   retryTransaction,
   SET_PENDING_TOKENS: 'SET_PENDING_TOKENS',
   CLEAR_PENDING_TOKENS: 'CLEAR_PENDING_TOKENS',
+  SET_USE_IN3: 'SET_USE_IN3',
   setPendingTokens,
   clearPendingTokens,
 
@@ -2436,6 +2437,8 @@ function setPreference (preference, value) {
     dispatch(actions.showLoadingIndication())
     return new Promise((resolve, reject) => {
       background.setPreference(preference, value, (err, updatedPreferences) => {
+        console.log(err)
+        console.log(updatedPreferences)
         dispatch(actions.hideLoadingIndication())
 
         if (err) {
@@ -2463,6 +2466,28 @@ function setUseNativeCurrencyAsPrimaryCurrencyPreference (value) {
 
 function setShowFiatConversionOnTestnetsPreference (value) {
   return setPreference('showFiatInTestnets', value)
+}
+
+export function setUseIn3 (value) {
+  log.debug(`background.setUseIn3Network: ${value}`)
+  return (dispatch) => {
+    dispatch(showLoadingIndication())
+    if (typeof variable === 'boolean') {
+      dispatch(displayWarning('useIn3 must be boolean'))
+      return 'error'
+    }
+    background.setUseIn3Network(value, (result, error) => {
+      if (!error) {
+        dispatch({
+          type: actionConstants.SET_USE_IN3,
+          value: result,
+        })
+      } else {
+        dispatch(displayWarning(error.message))
+      }
+      dispatch(hideLoadingIndication())
+    })
+  }
 }
 
 function setAutoLogoutTimeLimit (value) {

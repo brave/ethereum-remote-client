@@ -417,13 +417,23 @@ describe('MetaMask Reducers', () => {
   })
 
   it('sets blockies', () => {
+      const state = reduceMetamask({}, {
+        type: actions.SET_USE_BLOCKIE,
+        value: true,
+      })
+
+      assert.equal(state.useBlockie, true)
+    })
+
+    it('sets use In3', () => {
     const state = reduceMetamask({}, {
-      type: actions.SET_USE_BLOCKIE,
+      type: actions.SET_USE_IN3,
       value: true,
     })
 
-    assert.equal(state.useBlockie, true)
+    assert.equal(state.useIn3, true)
   })
+
 
   it('updates an arbitrary feature flag', () => {
     const state = reduceMetamask({}, {

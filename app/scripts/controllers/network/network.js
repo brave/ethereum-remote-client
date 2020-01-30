@@ -22,8 +22,12 @@ const {
   MAINNET,
   LOCALHOST,
   GOERLI,
+  INFURA,
+  IN3
 } = require('./enums')
 const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, GOERLI]
+
+const RPC_PROVIDER_TYPES = [INFURA, IN3]
 
 const env = process.env.METAMASK_ENV
 const METAMASK_DEBUG = process.env.METAMASK_DEBUG
@@ -130,7 +134,7 @@ module.exports = class NetworkController extends EventEmitter {
     })
   }
 
-  setRpcTarget (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs) {
+  setRpcTarget (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
     const providerConfig = {
       type: 'rpc',
       rpcTarget,
@@ -142,11 +146,14 @@ module.exports = class NetworkController extends EventEmitter {
     this.providerConfig = providerConfig
   }
 
-  async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '') {
+  async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '', rpcPrefs = {}, rpcType = '') {
     assert.notEqual(type, 'rpc', `NetworkController - cannot call "setProviderType" with type 'rpc'. use "setRpcTarget"`)
     assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST, `NetworkController - Unknown rpc type "${type}"`)
-    const providerConfig = { type, rpcTarget, ticker, nickname }
-    this.providerConfig = providerConfig
+    if (!RPC_PROVIDER_TYPES.includes(rpcType)) {
+      rpcType = this.getProviderConfig().rpcType
+    }
+    this.providerConfig = { type, rpcTarget, ticker, nickname, rpcPrefs, rpcType }
+
   }
 
   resetConnection () {
@@ -173,14 +180,18 @@ module.exports = class NetworkController extends EventEmitter {
   }
 
   _configureProvider (opts) {
-    const { type, rpcTarget, chainId, ticker, nickname } = opts
+    const { type, rpcTarget, chainId, ticker, nickname, rpcPrefs, rpcType } = opts
+    console.log(opts)
     // infura type-based endpoints
-    const isInfura = INFURA_PROVIDER_TYPES.includes(type)
+    const isDefaultRpcNetwork = INFURA_PROVIDER_TYPES.includes(type)
     const useIn3 = true
-    if (isInfura && !useIn3) {
+
+    if (isDefaultRpcNetwork && rpcType !== IN3) {
+      console.log('Infura')
       this._configureInfuraProvider(opts)
-    // other type-based rpc endpoints
-    } else if (isInfura && useIn3) {
+    // in3
+    } else if (isDefaultRpcNetwork && rpcType === IN3) {
+      console.log("In3")
       this._configureIn3Provider(opts)
     } else if (type === LOCALHOST) {
       this._configureLocalhostProvider()

@@ -1499,6 +1499,48 @@ describe('Actions', () => {
     })
   })
 
+  describe('#setUseIn3', () => {
+    let setUseIn3Spy
+
+    beforeEach(() => {
+      setUseIn3Spy = sinon.stub(background, 'setUseIn3Network')
+    })
+
+    afterEach(() => {
+      setUseIn3Spy.restore()
+    })
+
+    it('calls setUseIn3 in background', () => {
+      const store = mockStore()
+
+      store.dispatch(actions.setUseIn3())
+      assert(setUseIn3Spy.calledOnce)
+    })
+
+    it('errors when setUseIn3 in background throws', () => {
+      const store = mockStore()
+      const expectedActions = [
+        { type: 'SHOW_LOADING_INDICATION', value: undefined },
+        { type: 'SET_USE_IN3', value: 'Error: error' },
+        { type: 'DISPLAY_WARNING', value: undefined },
+        { type: 'HIDE_LOADING_INDICATION',  value: 'Error: error' },
+      ]
+
+      setUseIn3Spy.callsFake((_, callback) => {
+        callback(new Error('error'))
+      })
+
+      store.dispatch(actions.setUseIn3())
+
+      const rola = store.getActions()
+      for (let i = 0; i < expectedActions.length; ++i) {
+        assert.strictEqual(JSON.stringify(rola[i]), JSON.stringify(expectedActions[i]))
+      }
+      // assert.deepEqual(store.getActions(), expectedActions)
+    })
+  })
+
+
   describe('#updateCurrentLocale', () => {
     let setCurrentLocaleSpy
 

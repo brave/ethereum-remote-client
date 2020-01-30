@@ -17,6 +17,9 @@ const KOVAN_DISPLAY_NAME = 'Kovan'
 const MAINNET_DISPLAY_NAME = 'Main Ethereum Network'
 const GOERLI_DISPLAY_NAME = 'Goerli'
 
+const INFURA = 'infura'
+const IN3 = 'in3'
+
 module.exports = {
   ROPSTEN,
   RINKEBY,
@@ -34,4 +37,6 @@ module.exports = {
   KOVAN_DISPLAY_NAME,
   MAINNET_DISPLAY_NAME,
   GOERLI_DISPLAY_NAME,
+  INFURA,
+  IN3,
 }

@@ -11,6 +11,7 @@ import {
   setAutoLogoutTimeLimit,
   setThreeBoxSyncingPermission,
   turnThreeBoxSyncingOnAndInitialize,
+  setUseIn3,
   setUseNonceField,
 } from '../../../store/actions'
 import {preferencesSelector} from '../../../selectors/selectors'
@@ -24,8 +25,11 @@ export const mapStateToProps = state => {
     } = {},
     threeBoxSyncingAllowed,
     threeBoxDisabled,
+    useIn3,
     useNonceField,
   } = metamask
+  console.log('adanved-tab.container.js')
+  console.log(metamask)
   const { showFiatInTestnets, autoLogoutTimeLimit } = preferencesSelector(state)
 
   return {
@@ -36,6 +40,7 @@ export const mapStateToProps = state => {
     autoLogoutTimeLimit,
     threeBoxSyncingAllowed,
     threeBoxDisabled,
+    useIn3,
     useNonceField,
   }
 }
@@ -50,6 +55,9 @@ export const mapDispatchToProps = dispatch => {
     setUseNonceField: value => dispatch(setUseNonceField(value)),
     setShowFiatConversionOnTestnetsPreference: value => {
       return dispatch(setShowFiatConversionOnTestnetsPreference(value))
+    },
+    setUseIn3: value => {
+      return dispatch(setUseIn3(value))
     },
     setAutoLogoutTimeLimit: value => {
       return dispatch(setAutoLogoutTimeLimit(value))

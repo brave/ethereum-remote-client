@@ -12,7 +12,7 @@ import {
   preferencesSelector,
   getIsMainnet,
 } from '../../../selectors/selectors'
-import { showModal } from '../../../store/actions'
+import { showModal } from '~/brave/ui/app/store/actions'
 
 const mapStateToProps = state => {
   const { showFiatInTestnets } = preferencesSelector(state)

@@ -25,12 +25,12 @@ const {setupMultiplex} = require('./lib/stream-utils.js')
 const KeyringController = require('eth-keyring-controller')
 const EnsController = require('./controllers/ens')
 const NetworkController = require('./controllers/network')
-const PreferencesController = require('./controllers/preferences')
+const PreferencesController = require('~/brave/app/scripts/controllers/preferences')
 const AppStateController = require('./controllers/app-state')
-const InfuraController = require('./controllers/infura')
+const InfuraController = require('~/brave/app/scripts/controllers/infura')
 const CachedBalancesController = require('./controllers/cached-balances')
 const OnboardingController = require('./controllers/onboarding')
-const ThreeBoxController = require('./controllers/threebox')
+const ThreeBoxController = require('~/brave/app/scripts/controllers/threebox')
 const RecentBlocksController = require('./controllers/recent-blocks')
 const IncomingTransactionsController = require('./controllers/incoming-transactions')
 const MessageManager = require('./lib/message-manager')
@@ -63,7 +63,7 @@ const {
   ShapeShiftController,
   PhishingController,
 } = require('gaba')
-const backEndMetaMetricsEvent = require('./lib/backend-metametrics')
+const backEndMetaMetricsEvent = require('~/brave/app/scripts/lib/backend-metametrics')
 const { IN3, INFURA } = require('./controllers/network/enums')
 
 module.exports = class MetamaskController extends EventEmitter {

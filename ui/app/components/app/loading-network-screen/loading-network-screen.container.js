@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import LoadingNetworkScreen from './loading-network-screen.component'
-import actions from '../../../store/actions'
+import actions from '~/brave/ui/app/store/actions'
 import { getNetworkIdentifier } from '../../../selectors/selectors'
 
 const mapStateToProps = state => {

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { compose } from 'recompose'
 import MetaMetricsOptInModal from './metametrics-opt-in-modal.component'
 import withModalProps from '../../../../helpers/higher-order-components/with-modal-props'
-import { setParticipateInMetaMetrics } from '../../../../store/actions'
+import { setParticipateInMetaMetrics } from '~/brave/ui/app/store/actions'
 
 const mapStateToProps = (_, ownProps) => {
   const { unapprovedTxCount } = ownProps

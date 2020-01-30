@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import ImportWithSeedPhrase from './import-with-seed-phrase.component'
+import ImportWithSeedPhrase from '~/brave/ui/app/pages/first-time-flow/create-password/import-with-seed-phrase/import-with-seed-phrase.component'
 import {
   setSeedPhraseBackedUp,
   initializeThreeBox,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 
 const mapDispatchToProps = dispatch => {
   return {

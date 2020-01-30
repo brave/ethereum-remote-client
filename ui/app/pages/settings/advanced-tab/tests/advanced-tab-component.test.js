@@ -2,7 +2,7 @@ import React from 'react'
 import assert from 'assert'
 import sinon from 'sinon'
 import { shallow } from 'enzyme'
-import AdvancedTab from '../advanced-tab.component'
+import AdvancedTab from '~/brave/ui/app/pages/settings/advanced-tab/advanced-tab.component'
 import TextField from '../../../../components/ui/text-field'
 
 describe('AdvancedTab Component', () => {

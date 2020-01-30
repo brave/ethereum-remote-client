@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { hideSidebar, showModal } from '../../../store/actions'
+import { hideSidebar, showModal } from '~/brave/ui/app/store/actions'
 import AccountDetails from './account-details.component'
 
 function mapDispatchToProps (dispatch) {

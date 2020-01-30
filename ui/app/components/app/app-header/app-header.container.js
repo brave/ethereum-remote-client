@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
 
 import AppHeader from './app-header.component'
-const actions = require('../../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 
 const mapStateToProps = state => {
   const { appState, metamask } = state

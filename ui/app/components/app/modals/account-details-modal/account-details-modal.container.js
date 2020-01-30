@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import actions from '../../../../store/actions'
+import actions from '~/brave/ui/app/store/actions'
 import { getSelectedIdentity, getRpcPrefsForCurrentProvider } from '../../../../selectors/selectors'
 import AccountDetailsModal from './account-details-modal.component'
 

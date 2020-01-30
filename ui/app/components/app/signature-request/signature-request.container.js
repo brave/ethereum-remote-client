@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
 import SignatureRequest from './signature-request.component'
-import { goHome } from '../../../store/actions'
+import { goHome } from '~/brave/ui/app/store/actions'
 import { clearConfirmTransaction } from '../../../ducks/confirm-transaction/confirm-transaction.duck'
 import {
   getSelectedAccount,

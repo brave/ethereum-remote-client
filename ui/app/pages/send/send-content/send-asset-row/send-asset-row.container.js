@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import SendAssetRow from './send-asset-row.component'
 import {getMetaMaskAccounts} from '../../../../selectors/selectors'
-import { setSelectedToken } from '../../../../store/actions'
+import { setSelectedToken } from '~/brave/ui/app/store/actions'
 
 function mapStateToProps (state) {
   return {

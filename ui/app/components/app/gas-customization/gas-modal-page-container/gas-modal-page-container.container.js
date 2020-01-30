@@ -11,7 +11,7 @@ import {
   updateSendAmount,
   setGasTotal,
   updateTransaction,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import {
   setCustomGasPrice,
   setCustomGasLimit,

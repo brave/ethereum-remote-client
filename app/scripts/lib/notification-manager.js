@@ -1,4 +1,4 @@
-const extension = require('extensionizer')
+const extension = require('~/brave/lib/extensionizer')
 const NOTIFICATION_HEIGHT = 620
 const NOTIFICATION_WIDTH = 360
 

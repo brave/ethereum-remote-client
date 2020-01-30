@@ -9,8 +9,8 @@ import {
   setNetworksTabAddMode,
   editRpc,
   showModal,
-} from '../../../store/actions'
-import { defaultNetworksData } from './networks-tab.constants'
+} from '~/brave/ui/app/store/actions'
+import { defaultNetworksData } from '~/brave/ui/app/pages/settings/networks-tab/networks-tab.constants'
 const defaultNetworks = defaultNetworksData.map(network => ({ ...network, viewOnly: true }))
 
 const mapStateToProps = state => {

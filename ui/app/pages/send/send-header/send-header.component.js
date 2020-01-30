@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerHeader from '../../../components/ui/page-container/page-container-header'
-import { DEFAULT_ROUTE } from '../../../helpers/constants/routes'
+import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 
 export default class SendHeader extends Component {
 

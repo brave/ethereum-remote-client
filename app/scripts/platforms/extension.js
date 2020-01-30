@@ -1,4 +1,4 @@
-const extension = require('extensionizer')
+const extension = require('~/brave/lib/extensionizer')
 const {createExplorerLink: explorerLink} = require('etherscan-link')
 
 const {getEnvironmentType} = require('../lib/util')

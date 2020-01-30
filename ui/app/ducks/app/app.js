@@ -1,5 +1,5 @@
 const extend = require('xtend')
-const actions = require('../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 const txHelper = require('../../../lib/tx-helper')
 const log = require('loglevel')
 

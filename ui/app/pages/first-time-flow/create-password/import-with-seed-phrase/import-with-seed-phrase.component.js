@@ -6,7 +6,7 @@ import Button from '../../../../components/ui/button'
 import {
   INITIALIZE_SELECT_ACTION_ROUTE,
   INITIALIZE_END_OF_FLOW_ROUTE,
-} from '../../../../helpers/constants/routes'
+} from '~/brave/ui/app/helpers/constants/routes'
 
 export default class ImportWithSeedPhrase extends PureComponent {
   static contextTypes = {

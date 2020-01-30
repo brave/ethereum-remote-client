@@ -2,10 +2,10 @@ import AddContact from './add-contact.component'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { addToAddressBook, showQrScanner, qrCodeDetected } from '../../../../store/actions'
+import { addToAddressBook, showQrScanner, qrCodeDetected } from '~/brave/ui/app/store/actions'
 import {
   CONTACT_ADD_ROUTE,
-} from '../../../../helpers/constants/routes'
+} from '~/brave/ui/app/helpers/constants/routes'
 import {
   getQrCodeData,
 } from '../../../../pages/send/send.selectors'

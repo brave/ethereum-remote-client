@@ -11,7 +11,7 @@ import { calcMaxAmount } from './amount-max-button.utils.js'
 import {
   updateSendAmount,
   setMaxModeTo,
-} from '../../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import AmountMaxButton from './amount-max-button.component'
 import {
   updateSendErrors,

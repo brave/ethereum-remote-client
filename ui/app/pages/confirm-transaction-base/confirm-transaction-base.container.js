@@ -18,7 +18,7 @@ import {
   updateTransaction,
   getNextNonce,
   tryReverseResolveAddress,
-} from '../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import {
   INSUFFICIENT_FUNDS_ERROR_KEY,
   GAS_LIMIT_TOO_LOW_ERROR_KEY,

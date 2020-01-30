@@ -7,7 +7,7 @@ import {
 import {
   getAddressBookEntry,
 } from '../../../selectors/selectors'
-import actions from '../../../store/actions'
+import actions from '~/brave/ui/app/store/actions'
 
 function mapStateToProps (state) {
   const ownedAccounts = accountsWithSendEtherInfoSelector(state)

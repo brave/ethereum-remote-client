@@ -7,11 +7,11 @@ const { compose } = require('recompose')
 const inherits = require('util').inherits
 const { checksumAddress } = require('../../helpers/utils/util')
 // const AccountDropdowns = require('./dropdowns/index.js').AccountDropdowns
-const actions = require('../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 import BalanceComponent from '../ui/balance'
 const TokenList = require('./token-list')
 const selectors = require('../../selectors/selectors')
-const { ADD_TOKEN_ROUTE } = require('../../helpers/constants/routes')
+const { ADD_TOKEN_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
 
 import AddTokenButton from './add-token-button'
 import AccountDetails from './account-details'

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ContactList from '../../../../components/app/contact-list'
-import { CONTACT_MY_ACCOUNTS_VIEW_ROUTE } from '../../../../helpers/constants/routes'
+import { CONTACT_MY_ACCOUNTS_VIEW_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 
 export default class ViewContact extends PureComponent {
 

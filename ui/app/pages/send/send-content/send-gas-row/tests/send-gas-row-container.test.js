@@ -64,7 +64,7 @@ proxyquire('../send-gas-row.container.js', {
     gasFeeIsInError: (s) => `mockGasFeeError:${s}`,
     getGasButtonGroupShown: (s) => `mockGetGasButtonGroupShown:${s}`,
   },
-  '../../../../store/actions': actionSpies,
+  '~/brave/ui/app/store/actions': actionSpies,
   '../../../../selectors/custom-gas': {
     getBasicGasEstimateLoadingStatus: (s) => `mockBasicGasEstimateLoadingStatus:${s}`,
     getRenderableEstimateDataForSmallButtonsFromGWEI: (s) => `mockGasButtonInfo:${s}`,

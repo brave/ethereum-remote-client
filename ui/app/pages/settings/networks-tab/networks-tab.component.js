@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { SETTINGS_ROUTE } from '../../../helpers/constants/routes'
+import { SETTINGS_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 import { ENVIRONMENT_TYPE_POPUP } from '../../../../../app/scripts/lib/enums'
 import { getEnvironmentType } from '../../../../../app/scripts/lib/util'
 import classnames from 'classnames'

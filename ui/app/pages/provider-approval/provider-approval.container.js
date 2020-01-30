@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProviderApproval from './provider-approval.component'
-import { approveProviderRequestByOrigin, rejectProviderRequestByOrigin } from '../../store/actions'
+import { approveProviderRequestByOrigin, rejectProviderRequestByOrigin } from '~/brave/ui/app/store/actions'
 
 function mapDispatchToProps (dispatch) {
   return {

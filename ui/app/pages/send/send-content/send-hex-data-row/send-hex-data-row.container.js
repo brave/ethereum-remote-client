@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import {
   updateSendHexData,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import SendHexDataRow from './send-hex-data-row.component'
 
 export default connect(mapStateToProps, mapDispatchToProps)(SendHexDataRow)

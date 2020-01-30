@@ -4,7 +4,7 @@ const h = require('react-hyperscript')
 const connect = require('react-redux').connect
 const { withRouter } = require('react-router-dom')
 const { compose } = require('recompose')
-const actions = require('../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 const txHelper = require('../../../lib/tx-helper')
 const log = require('loglevel')
 const R = require('ramda')
@@ -12,7 +12,7 @@ const R = require('ramda')
 const SignatureRequest = require('../../components/app/signature-request').default
 const SignatureRequestOriginal = require('../../components/app/signature-request-original')
 const Loading = require('../../components/ui/loading-screen')
-const { DEFAULT_ROUTE } = require('../../helpers/constants/routes')
+const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
 
 module.exports = compose(
   withRouter,

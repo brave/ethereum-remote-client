@@ -4,7 +4,7 @@ import Button from '../../../components/ui/button'
 import MetaFoxLogo from '../../../components/ui/metafox-logo'
 import {
   INITIALIZE_METAMETRICS_OPT_IN_ROUTE,
-} from '../../../helpers/constants/routes'
+} from '~/brave/ui/app/helpers/constants/routes'
 
 export default class SelectAction extends PureComponent {
   static propTypes = {

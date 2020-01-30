@@ -5,7 +5,7 @@ import Button from '../../ui/button'
 import Identicon from '../../ui/identicon'
 import TokenBalance from '../../ui/token-balance'
 import UserPreferencedCurrencyDisplay from '../user-preferenced-currency-display'
-import { SEND_ROUTE } from '../../../helpers/constants/routes'
+import { SEND_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 import { PRIMARY, SECONDARY } from '../../../helpers/constants/common'
 import Tooltip from '../../ui/tooltip-v2'
 

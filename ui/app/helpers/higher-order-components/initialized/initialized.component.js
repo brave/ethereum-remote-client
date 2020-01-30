@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Redirect, Route } from 'react-router-dom'
-import { INITIALIZE_ROUTE } from '../../constants/routes'
+import { INITIALIZE_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 
 export default function Initialized (props) {
   return props.completedOnboarding

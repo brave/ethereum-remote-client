@@ -6,7 +6,7 @@ import {
   signTokenTx,
   signTx,
   updateTransaction,
-} from '../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import SendFooter from './send-footer.component'
 import {
   getGasLimit,

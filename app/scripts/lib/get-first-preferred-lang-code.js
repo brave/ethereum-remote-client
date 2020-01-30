@@ -1,4 +1,4 @@
-const extension = require('extensionizer')
+const extension = require('~/brave/lib/extensionizer')
 const promisify = require('pify')
 const allLocales = require('../../_locales/index.json')
 

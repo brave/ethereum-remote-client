@@ -2,7 +2,7 @@ const { Component } = require('react')
 const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const connect = require('react-redux').connect
-const actions = require('../../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 
 class NotificationModal extends Component {
   static contextProps = {

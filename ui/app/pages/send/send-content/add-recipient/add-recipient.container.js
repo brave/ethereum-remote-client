@@ -10,7 +10,7 @@ import {
 } from '../../../../selectors/selectors'
 import {
   updateSendTo,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import AddRecipient from './add-recipient.component'
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddRecipient)

@@ -8,7 +8,7 @@ import UserPreferencedCurrencyDisplay from '../user-preferenced-currency-display
 import TokenCurrencyDisplay from '../../ui/token-currency-display'
 import TransactionListItemDetails from '../transaction-list-item-details'
 import TransactionTimeRemaining from '../transaction-time-remaining'
-import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
+import { CONFIRM_TRANSACTION_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 import { UNAPPROVED_STATUS, TOKEN_METHOD_TRANSFER } from '../../../helpers/constants/transactions'
 import { PRIMARY, SECONDARY } from '../../../helpers/constants/common'
 import { getStatusKey } from '../../../helpers/utils/transactions.util'

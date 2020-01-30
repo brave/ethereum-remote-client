@@ -2,11 +2,11 @@ const { Component } = require('react')
 const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const connect = require('react-redux').connect
-const actions = require('../../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 const { getMetaMaskAccounts } = require('../../../selectors/selectors')
-const ConnectScreen = require('./connect-screen')
+const ConnectScreen = require('~/brave/ui/app/pages/create-account/connect-hardware/connect-screen')
 const AccountList = require('./account-list')
-const { DEFAULT_ROUTE } = require('../../../helpers/constants/routes')
+const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
 const { formatBalance } = require('../../../helpers/utils/util')
 
 class ConnectHardwareForm extends Component {

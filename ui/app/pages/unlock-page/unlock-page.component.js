@@ -4,8 +4,8 @@ import Button from '@material-ui/core/Button'
 import TextField from '../../components/ui/text-field'
 import getCaretCoordinates from 'textarea-caret'
 import { EventEmitter } from 'events'
-import Mascot from '../../components/ui/mascot'
-import { DEFAULT_ROUTE } from '../../helpers/constants/routes'
+import Mascot from '~/brave/ui/app/components/ui/mascot'
+import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 
 export default class UnlockPage extends Component {
   static contextTypes = {

@@ -5,7 +5,7 @@ const copyToClipboard = require('copy-to-clipboard')
 //
 // Sub-Reducers take in the complete state and return their sub-state
 //
-const reduceMetamask = require('./metamask/metamask')
+const reduceMetamask = require('~/brave/ui/app/ducks/metamask/metamask')
 const reduceLocale = require('./locale/locale')
 const reduceSend = require('./send/send.duck').default
 import reduceApp from './app/app'

@@ -1,4 +1,4 @@
-import SecurityTab from './security-tab.component'
+import SecurityTab from '~/brave/ui/app/pages/settings/security-tab/security-tab.component'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
@@ -7,7 +7,7 @@ import {
   revealSeedConfirmation,
   setFeatureFlag,
   setParticipateInMetaMetrics,
-} from '../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 
 const mapStateToProps = state => {
   const { appState: { warning }, metamask } = state

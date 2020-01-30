@@ -14,7 +14,7 @@ const { ObjectInspector } = require('react-inspector')
 
 import AccountListItem from '../../pages/send/account-list-item/account-list-item.component'
 
-const actions = require('../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 const { conversionUtil } = require('../../helpers/utils/conversion-util')
 
 const {
@@ -27,7 +27,7 @@ const {
 import { clearConfirmTransaction } from '../../ducks/confirm-transaction/confirm-transaction.duck'
 import Button from '../ui/button'
 
-const { DEFAULT_ROUTE } = require('../../helpers/constants/routes')
+const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
 
 function mapStateToProps (state) {
   return {

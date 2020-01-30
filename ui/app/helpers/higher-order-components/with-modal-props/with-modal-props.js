@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { hideModal } from '../../../store/actions'
+import { hideModal } from '~/brave/ui/app/store/actions'
 
 const mapStateToProps = state => {
   const { appState } = state

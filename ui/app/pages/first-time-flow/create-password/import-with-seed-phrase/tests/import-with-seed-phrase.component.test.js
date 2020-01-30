@@ -2,7 +2,7 @@ import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import ImportWithSeedPhrase from '../import-with-seed-phrase.component'
+import ImportWithSeedPhrase from '~/brave/ui/app/pages/first-time-flow/create-password/import-with-seed-phrase/import-with-seed-phrase.component'
 
 function shallowRender (props = {}, context = {}) {
   return shallow(<ImportWithSeedPhrase {...props} />, {

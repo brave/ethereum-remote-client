@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { compose } from 'recompose'
 import ConfirmRemoveAccount from './confirm-remove-account.component'
 import withModalProps from '../../../../helpers/higher-order-components/with-modal-props'
-import { removeAccount } from '../../../../store/actions'
+import { removeAccount } from '~/brave/ui/app/store/actions'
 
 const mapStateToProps = state => {
   return {

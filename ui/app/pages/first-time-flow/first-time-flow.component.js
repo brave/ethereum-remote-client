@@ -19,7 +19,7 @@ import {
   INITIALIZE_END_OF_FLOW_ROUTE,
   INITIALIZE_METAMETRICS_OPT_IN_ROUTE,
   INITIALIZE_BACKUP_SEED_PHRASE_ROUTE,
-} from '../../helpers/constants/routes'
+} from '~/brave/ui/app/helpers/constants/routes'
 
 export default class FirstTimeFlow extends PureComponent {
   static propTypes = {

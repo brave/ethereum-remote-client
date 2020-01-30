@@ -6,10 +6,10 @@ const connect = require('react-redux').connect
 import Identicon from '../ui/identicon'
 const prefixForNetwork = require('../../../lib/etherscan-prefix-for-network')
 const selectors = require('../../selectors/selectors')
-const actions = require('../../store/actions')
+const actions = require('~/brave/ui/app/store/actions')
 const { conversionUtil, multiplyCurrencies } = require('../../helpers/utils/conversion-util')
 
-const TokenMenuDropdown = require('./dropdowns/token-menu-dropdown.js')
+const TokenMenuDropdown = require('~/brave/ui/app/components/app/dropdowns/token-menu-dropdown')
 
 function mapStateToProps (state) {
   return {

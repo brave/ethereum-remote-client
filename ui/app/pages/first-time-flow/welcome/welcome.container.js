@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
-import { closeWelcomeScreen } from '../../../store/actions'
-import Welcome from './welcome.component'
+import { closeWelcomeScreen } from '~/brave/ui/app/store/actions'
+import Welcome from '~/brave/ui/app/pages/first-time-flow/welcome/welcome.component'
 
 const mapStateToProps = ({ metamask }) => {
   const { welcomeScreenSeen, isInitialized, participateInMetaMetrics } = metamask

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import AddToken from './add-token.component'
 
-const { setPendingTokens, clearPendingTokens } = require('../../store/actions')
+const { setPendingTokens, clearPendingTokens } = require('~/brave/ui/app/store/actions')
 
 const mapStateToProps = ({ metamask }) => {
   const { identities, tokens, pendingTokens } = metamask

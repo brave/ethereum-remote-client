@@ -5,7 +5,7 @@ import {
   contractExchangeRateSelector,
   transactionFeeSelector,
 } from '../../selectors/confirm-transaction'
-import { showModal } from '../../store/actions'
+import { showModal } from '~/brave/ui/app/store/actions'
 import { tokenSelector } from '../../selectors/tokens'
 import {
   getTokenData,

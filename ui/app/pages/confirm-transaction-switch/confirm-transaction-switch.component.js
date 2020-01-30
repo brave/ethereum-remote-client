@@ -11,7 +11,7 @@ import {
   CONFIRM_TRANSFER_FROM_PATH,
   CONFIRM_TOKEN_METHOD_PATH,
   SIGNATURE_REQUEST_PATH,
-} from '../../helpers/constants/routes'
+} from '~/brave/ui/app/helpers/constants/routes'
 import {
   TOKEN_METHOD_TRANSFER,
   TOKEN_METHOD_APPROVE,

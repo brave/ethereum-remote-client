@@ -5,8 +5,8 @@ import {
   createNewVaultAndRestore,
   unMarkPasswordForgotten,
   initializeThreeBox,
-} from '../../store/actions'
-import { DEFAULT_ROUTE } from '../../helpers/constants/routes'
+} from '~/brave/ui/app/store/actions'
+import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 import TextField from '../../components/ui/text-field'
 import Button from '../../components/ui/button'
 

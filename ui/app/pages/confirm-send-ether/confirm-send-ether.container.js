@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { compose } from 'recompose'
 import { withRouter } from 'react-router-dom'
-import { updateSend } from '../../store/actions'
+import { updateSend } from '~/brave/ui/app/store/actions'
 import { clearConfirmTransaction } from '../../ducks/confirm-transaction/confirm-transaction.duck'
 import ConfirmSendEther from './confirm-send-ether.component'
 

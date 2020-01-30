@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import ConfirmSeedPhrase from './confirm-seed-phrase.component'
+import ConfirmSeedPhrase from '~/brave/ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/confirm-seed-phrase.component'
 import {
   setSeedPhraseBackedUp,
   hideSeedPhraseBackupAfterOnboarding,
   initializeThreeBox,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import { getSelectedAddress } from '../../../../selectors/selectors'
 
 const mapStateToProps = state => {

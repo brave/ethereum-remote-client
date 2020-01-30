@@ -17,7 +17,7 @@ import { getAmountErrorObject, getGasFeeErrorObject } from '../../send.utils'
 import {
   setMaxModeTo,
   updateSendAmount,
-} from '../../../../store/actions'
+} from '~/brave/ui/app/store/actions'
 import {
   updateSendErrors,
 } from '../../../../ducks/send/send.duck'

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import EndOfFlow from './end-of-flow.component'
-import { setCompletedOnboarding } from '../../../store/actions'
+import { setCompletedOnboarding } from '~/brave/ui/app/store/actions'
 
 const firstTimeFlowTypeNameMap = {
   create: 'New Wallet Created',

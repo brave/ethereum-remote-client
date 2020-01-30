@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ToggleButton from '../../../components/ui/toggle-button'
-import { REVEAL_SEED_ROUTE } from '../../../helpers/constants/routes'
+import { REVEAL_SEED_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
 import Button from '../../../components/ui/button'
 
 export default class SecurityTab extends PureComponent {

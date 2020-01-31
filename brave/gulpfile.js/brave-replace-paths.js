@@ -237,6 +237,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/controllers/threebox'`
         )
       )
+      .pipe(
+        replace(
+          /'(.*)\/provider-page-container\.component'/gm,
+          `'${bravePrefix}ui/app/components/app/provider-page-container/provider-page-container.component'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

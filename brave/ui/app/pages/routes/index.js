@@ -76,7 +76,7 @@ class BraveRoutes extends Component {
     }
 
     const setTheme = (t) => {
-      container.className += ` ${t.toLowerCase()}`
+      container.className = `${t.toLowerCase()}`
     }
 
     if (chrome.hasOwnProperty('braveTheme')) {

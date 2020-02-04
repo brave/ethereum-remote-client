@@ -24,6 +24,10 @@
         filter: invert(0.8);
       }
     }
+
+    .__rewards {
+      color: #0096dc;
+    }
   }
 
   .wallet-view {
@@ -73,8 +77,19 @@
   .modal-container,
   .request-signature__container,
   .request-signature__account-item,
-  .network-display__container {
+  .network-display__container,
+  .send-v2__asset-dropdown__list,
+  .transaction-status--submitted {
     background: #282828;
+  }
+
+  .Select-menu-outer,
+  .simple-dropdown__options,
+  .send-v2__asset-dropdown__list {
+
+    * {
+      background: #282828;
+    }
   }
 
   .confirm-page-container-content {
@@ -129,7 +144,9 @@
   }
 
   .confirm-seed-phrase__seed-word,
-  .reveal-seed-phrase__secret-words {
+  .reveal-seed-phrase__secret-words,
+  .ens-input__wrapper__input,
+  .dialog.send__error-dialog.dialog--error {
     color: #000;
   }
 
@@ -141,7 +158,57 @@
     display: none;
   }
 
-  .hw-connect__btn__img {
+  .hw-connect__btn__img,
+  .deposit-ether-modal__logo {
     filter: invert(0.8);
+  }
+
+  .hw-connect__btn.selected {
+    border: 2px solid #00a8ee;
+  }
+
+  .add-token-button__button {
+    color: #00a8ee;
+  }
+
+  .unlock-page__links {
+
+    div {
+      color: #00a8ee;
+    }
+  }
+
+  .gas-price-button-group--small {
+
+    .button-group__button--active {
+      border: 1px solid #3099f2;
+    }
+  }
+
+  .token-list-placeholder,
+  .currency-display-component {
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .advanced-tab__fee-chart,
+  .gas-modal-content__info-row-wrapper,
+  .qr-scanner {
+
+    * {
+      color: #000;
+    }
+  }
+
+  .btn-warning,
+  .btn-danger {
+    color: #D73A49;
+    border: 2px solid #D73A49;
+  }
+
+  .provider-approval-visual__check {
+    background: url(/images/provider-approval-check.svg) no-repeat;
   }
 }

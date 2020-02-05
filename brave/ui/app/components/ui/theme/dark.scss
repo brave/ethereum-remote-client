@@ -146,7 +146,8 @@
   .confirm-seed-phrase__seed-word,
   .reveal-seed-phrase__secret-words,
   .ens-input__wrapper__input,
-  .dialog.send__error-dialog.dialog--error {
+  .dialog.send__error-dialog.dialog--error,
+  .error-message__text {
     color: #000;
   }
 

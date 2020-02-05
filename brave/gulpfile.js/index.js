@@ -71,11 +71,9 @@ gulp.task('build',
     'replace-brave-links',
     'replace-brave-paths',
     'build:scss',
-    gulpParallel(
-      'build:extension:js:deps:background',
-      'build:extension:js:deps:ui',
-      'build:extension:js'
-    ),
+    'build:extension:js',
+    'build:extension:js:deps:background',
+    'build:extension:js:deps:ui',
     'copy'
   )
 )

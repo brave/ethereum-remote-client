@@ -26,6 +26,7 @@ const {
   IN3
 } = require('./enums')
 const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, GOERLI]
+const IN3_PROVIDER_TYPES = [KOVAN, MAINNET, GOERLI]
 
 const RPC_PROVIDER_TYPES = [INFURA, IN3]
 
@@ -183,14 +184,13 @@ module.exports = class NetworkController extends EventEmitter {
     const { type, rpcTarget, chainId, ticker, nickname, rpcPrefs, rpcType } = opts
     console.log(opts)
     // infura type-based endpoints
-    const isDefaultRpcNetwork = INFURA_PROVIDER_TYPES.includes(type)
-    const useIn3 = true
+    const isInfura = INFURA_PROVIDER_TYPES.includes(type)
+    const isIn3 = IN3_PROVIDER_TYPES.includes(type)
 
-    if (isDefaultRpcNetwork && rpcType !== IN3) {
-      console.log('Infura')
+    if (isInfura && !(isIn3 && rpcType === IN3)) {
       this._configureInfuraProvider(opts)
     // in3
-    } else if (isDefaultRpcNetwork && rpcType === IN3) {
+  } else if (isIn3 && rpcType === IN3) {
       console.log("In3")
       this._configureIn3Provider(opts)
     } else if (type === LOCALHOST) {

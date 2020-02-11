@@ -16,13 +16,13 @@ const createBraveReplaceLinksTask = () => {
       )
       .pipe(
         replace(
-          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015289932/gm,
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489031/gm,
           'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
         )
       )
       .pipe(
         replace(
-          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489351-Importing-Accounts/gm,
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489331-Importing-an-Account/gm,
           'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
         )
       )

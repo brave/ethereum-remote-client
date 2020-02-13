@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import BitGoLogoIcon from '../dropdowns/assets/bitgo-logo'
 
 module.exports = class ConnectWallet extends PureComponent {
   static contextTypes = {
@@ -29,6 +30,16 @@ module.exports = class ConnectWallet extends PureComponent {
     const { type } = this.props
 
     switch (type) {
+      case 'bitgo':
+        walletText = {
+          title: (
+            <div>
+              <BitGoLogoIcon className="hardware-img"/>
+            </div>
+          ),
+          subText: 'Use BitGo to purchase and manage non-Ethereum assets within Brave Crypto Wallets.'
+        }
+        break
       case 'browser':
         walletText = {
           title: t('newLocalWallet'),
@@ -79,7 +90,7 @@ module.exports = class ConnectWallet extends PureComponent {
       onRestore,
     } = this.props
     const { t } = this.context
-    const innerText = type === 'browser' ? t('create') : t('connect')
+    const innerText = type === 'browser' ? t('create') : 'Create Wallet'
     const hwButtonStyle = type !== 'browser' ? { marginRight: '-15px' } : {}
 
     return (

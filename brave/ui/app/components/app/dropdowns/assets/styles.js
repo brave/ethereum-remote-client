@@ -2,11 +2,12 @@ module.exports = {
   container: {
     general: {
       marginRight: '7px',
-      padding: '3px 9px',
-      borderRadius: '20px',
-      border: '1px solid #d3d3d3'
+      padding: '6px 9px 3px 9px',
+      borderRadius: '8px',
+      background: '#5E6175'
     },
     active: {
+      cursor: 'pointer',
       background: 'rgb(94, 97, 117)'
     },
     inactive: {

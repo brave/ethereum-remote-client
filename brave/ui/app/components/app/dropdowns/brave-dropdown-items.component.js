@@ -13,7 +13,7 @@ module.exports = class BraveDropdownItems extends PureComponent {
       type,
       items,
       isOpen,
-      onClickOutside
+      onMouseLeave
     } = this.props
 
     return (
@@ -21,7 +21,7 @@ module.exports = class BraveDropdownItems extends PureComponent {
         zIndex={55}
         isOpen={isOpen}
         style={styles.menu}
-        onClickOutside={onClickOutside}
+        onMouseLeave={onMouseLeave}
         containerClassName={`brave-${type}-menu`}
         innerStyle={styles.innerMenu}
       >
@@ -35,7 +35,7 @@ module.exports = class BraveDropdownItems extends PureComponent {
               key={`item-${inc}`}
               closeMenu={() => {}}
               style={{
-                ...item.style,
+                ...style,
                 textAlign: 'center'
               }}
             >

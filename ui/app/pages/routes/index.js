@@ -50,6 +50,9 @@ import {
   submittedPendingTransactionsSelector,
 } from '../../selectors/transactions'
 
+// Brave
+import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts/connect-accounts.component'
+
 // Routes
 import {
   DEFAULT_ROUTE,
@@ -67,7 +70,8 @@ import {
   CONFIRM_TRANSACTION_ROUTE,
   INITIALIZE_ROUTE,
   INITIALIZE_UNLOCK_ROUTE,
-} from '../../helpers/constants/routes'
+  BRAVE_CONNECT_WALLETS_ROUTE
+} from '~/brave/ui/app/helpers/constants/routes'
 
 // enums
 import {
@@ -117,6 +121,7 @@ class Routes extends Component {
         <Authenticated path={CONFIRM_ADD_SUGGESTED_TOKEN_ROUTE} component={ConfirmAddSuggestedTokenPage} exact />
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={DEFAULT_ROUTE} component={Home} exact />
+        <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={BraveConnectAccounts} exact />
       </Switch>
     )
 

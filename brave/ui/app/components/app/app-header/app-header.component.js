@@ -4,15 +4,18 @@ import React from 'react'
 import classnames from 'classnames'
 
 import {
+  DEFAULT_ROUTE,
   CONNECT_HARDWARE_ROUTE,
   NEW_ACCOUNT_ROUTE,
-  IMPORT_ACCOUNT_ROUTE
+  IMPORT_ACCOUNT_ROUTE,
+  BRAVE_CONNECT_WALLETS_ROUTE
 } from '../../../../../../ui/app/helpers/constants/routes'
 import { Item } from '../dropdowns/components/menu'
 import AppHeader from '../../../../../../ui/app/components/app/app-header/app-header.component'
 
 import ImportIcon from '../dropdowns/assets/import-icon'
 import PlusIcon from '../dropdowns/assets/plus-icon'
+import BitGoLogoIcon from '../dropdowns/assets/bitgo-logo'
 import BraveAccountItems from '../dropdowns/components/account-items.component'
 import BraveDropdownHeader from '../dropdowns/brave-dropdown-header.component'
 import BraveDropdownItems from '../dropdowns/brave-dropdown-items.component'
@@ -44,9 +47,9 @@ module.exports = class BraveAppHeader extends AppHeader {
     }
   }
 
-  handleOutsideClick = (index, event) => {
-    const dropdownParent = document.querySelector(`.${index}-dropdown`)
-    if (dropdownParent && !dropdownParent.contains(event.target)) {
+  handleMouseLeave = (selector, { target }) => {
+    const dropdownItems = document.querySelector(selector)
+    if (dropdownItems && !dropdownItems.contains(target)) {
       this.setState({ activeDropdown: '' })
     }
   }
@@ -108,6 +111,14 @@ module.exports = class BraveAppHeader extends AppHeader {
     return [
       {
         markup: (
+          <div onClick={() => {}} style={this.styles.connectItem}>
+            <BitGoLogoIcon />
+          </div>
+        ),
+        onClick: () => {}
+      },
+      {
+        markup: (
           <div onClick={this.onHardwareConnect} style={this.styles.connectItem}>
             <img style={this.styles.connectImg} src={'images/ledger-logo.svg'} />
           </div>
@@ -132,7 +143,8 @@ module.exports = class BraveAppHeader extends AppHeader {
       provider,
       hideNetworkIndicator,
       disabled,
-      isUnlocked
+      isUnlocked,
+      history
     } = this.props
 
     return (
@@ -142,13 +154,13 @@ module.exports = class BraveAppHeader extends AppHeader {
             type={'browser'}
             items={this.browserItems}
             isOpen={this.state.activeDropdown === 'browser'}
-            onClickOutside={this.handleOutsideClick.bind(this, 'browser')}
+            onMouseLeave={this.handleMouseLeave.bind(this, 'browser-dropdown')}
           />
           <BraveDropdownItems
             type={'connect'}
             items={this.connectItems}
             isOpen={this.state.activeDropdown === 'connect'}
-            onClickOutside={this.handleOutsideClick.bind(this, 'connect')}
+            onMouseLeave={this.handleMouseLeave.bind(this, 'connect-dropdown')}
           />
         </div>
         <div
@@ -157,21 +169,26 @@ module.exports = class BraveAppHeader extends AppHeader {
           })}
         >
           <div className='app-header__contents'>
-            <div className='app-header__logo-container'>
-              <BraveDropdownHeader
-                type={'browser'}
-                title={'Browser Wallet'}
-                onClick={this.handleClick.bind(this, 'browser')}
-                active={this.state.activeDropdown === 'browser'}
-              />
-              <BraveDropdownHeader
-                type={'connect'}
-                isConnect={true}
-                title={'Connect Wallet'}
-                onClick={this.handleClick.bind(this, 'connect')}
-                active={this.state.activeDropdown === 'connect'}
-              />
-            </div>
+            <BraveDropdownHeader
+              type={'browser'}
+              title={'Crypto Wallet'}
+              onClick={() => { history.push(DEFAULT_ROUTE) }}
+              onMouseEnter={this.handleClick.bind(this, 'browser')}
+              onMouseLeave={this.handleMouseLeave.bind(this, 'brave-browser-menu')}
+              active={this.state.activeDropdown === 'browser'}
+            />
+            <BraveDropdownHeader
+              type={'connect'}
+              isConnect={true}
+              title={'Connect Wallet'}
+              onClick={() => {
+                this.setState({ activeDropdown: '' })
+                history.push(BRAVE_CONNECT_WALLETS_ROUTE)
+              }}
+              onMouseEnter={this.handleClick.bind(this, 'connect')}
+              onMouseLeave={this.handleMouseLeave.bind(this, 'brave-connect-menu')}
+              active={this.state.activeDropdown === 'connect'}
+            />
             <div className='app-header__account-menu-container'>
               {!hideNetworkIndicator && (
                 <div className='app-header__network-component-wrapper'>

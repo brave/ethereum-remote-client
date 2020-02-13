@@ -12,7 +12,9 @@ module.exports = class BraveDropdownHeader extends PureComponent {
       isConnect,
       title,
       type,
-      onClick
+      onClick,
+      onMouseEnter,
+      onMouseLeave
     } = this.props
 
     const activeKey = active ? 'active' : 'inactive'
@@ -20,6 +22,8 @@ module.exports = class BraveDropdownHeader extends PureComponent {
     return (
       <div
         onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         className={`${type}-dropdown`}
         style={
           {

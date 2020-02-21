@@ -1,0 +1,71 @@
+.provider-wallet {
+  width: 62vw;
+  background: white;
+  min-height: 800px;
+
+  .__info-column  {
+    float: left;
+    height: 100%;
+    width: 350px;
+    background: #f7f8f9;
+
+    .__account-balance {
+      height: 230px;
+      background: #019fe8;
+    }
+
+    .__account-info {
+      text-align: center;
+      top: 90px;
+      color: #fff;
+      position: relative;
+
+      span {
+        display: block;
+      }
+
+      .__value {
+        color: #6ec8f1;
+      }
+
+      .__balance {
+        font-weight: bold;
+        font-size: 40px;
+      }
+    }
+
+    .__asset-list {
+      color: #000;
+      font-size: 25px;
+
+      .__asset.active {
+        color: #fff;
+        background: #93949d;
+      }
+
+      .__asset {
+        overflow: auto;
+        padding: 20px;
+
+        .__logo {
+          float: left;
+          margin-right: 10px;
+        }
+
+        .__ticker {
+          top: 9px;
+          position: relative;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .__activity_pane {
+    width: 650px;
+  }
+}
+
+.dropdown-menu-item {
+  border-top: none !important;
+}

@@ -146,6 +146,8 @@ module.exports = class BraveAppHeader extends AppHeader {
       isUnlocked,
       history
     } = this.props
+    const isBitGoView = window.location.hash === '#bitgo-account-view'
+    const isConnectWallets = window.location.hash === '#connect-wallets'
 
     return (
       <div>
@@ -177,6 +179,18 @@ module.exports = class BraveAppHeader extends AppHeader {
               onMouseLeave={this.handleMouseLeave.bind(this, 'brave-browser-menu')}
               active={this.state.activeDropdown === 'browser'}
             />
+            {
+              isBitGoView
+              ? <BraveDropdownHeader
+                  type={'browser'}
+                  title={'BitGo Wallet'}
+                  onClick={() => {}}
+                  onMouseEnter={() => {}}
+                  onMouseLeave={() => {}}
+                  active={true}
+                />
+              : null
+            }
             <BraveDropdownHeader
               type={'connect'}
               isConnect={true}
@@ -187,7 +201,7 @@ module.exports = class BraveAppHeader extends AppHeader {
               }}
               onMouseEnter={this.handleClick.bind(this, 'connect')}
               onMouseLeave={this.handleMouseLeave.bind(this, 'brave-connect-menu')}
-              active={this.state.activeDropdown === 'connect'}
+              active={this.state.activeDropdown === 'connect' || isConnectWallets}
             />
             <div className='app-header__account-menu-container'>
               {!hideNetworkIndicator && (

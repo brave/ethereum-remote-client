@@ -1,5 +1,5 @@
 const MetamaskController = require('../../../app/scripts/metamask-controller')
-const { BitGoController, supportedCoins } = require('./controllers/bitgo')
+const { BitGoController } = require('./controllers/bitgo')
 const nodeify = require('../../../app/scripts/lib/nodeify')
 
 module.exports = class BraveController extends MetamaskController {
@@ -46,7 +46,6 @@ module.exports = class BraveController extends MetamaskController {
     api.getBitGoWalletBalance = nodeify(this.bitGoController.getBalance, this.bitGoController)
     api.getBitGoWalletTransfers = nodeify(this.bitGoController.getTransfers, this.bitGoController)
     api.sendBitGoTransaction = nodeify(this.bitGoController.sendTx, this.bitGoController)
-    api.getSupportedCoins = (cb) => cb(null, supportedCoins)
 
     return api
   }

@@ -52,6 +52,7 @@ import {
 
 // Brave
 import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts/connect-accounts.component'
+import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet/provider-wallet.component'
 
 // Routes
 import {
@@ -70,7 +71,8 @@ import {
   CONFIRM_TRANSACTION_ROUTE,
   INITIALIZE_ROUTE,
   INITIALIZE_UNLOCK_ROUTE,
-  BRAVE_CONNECT_WALLETS_ROUTE
+  BRAVE_CONNECT_WALLETS_ROUTE,
+  BRAVE_BITGO_WALLET_INDEX
 } from '~/brave/ui/app/helpers/constants/routes'
 
 // enums
@@ -122,6 +124,7 @@ class Routes extends Component {
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={DEFAULT_ROUTE} component={Home} exact />
         <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={BraveConnectAccounts} exact />
+        <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} exact />
       </Switch>
     )
 

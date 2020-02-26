@@ -92,6 +92,22 @@
     }
   }
 
+  .advanced-tab__transaction-data-summary {
+    background: #fff;
+    margin: 0px 0px -5px 0px;
+  }
+
+  .custom-tooltip th {
+    color: #fff;
+  }
+
+  .send-v2__asset-dropdown__asset {
+
+    &:hover {
+      background-color: #282828;
+    }
+  }
+
   .confirm-page-container-content {
 
     .tabs__list {
@@ -127,7 +143,7 @@
     border: 1px solid #ffffff;
   }
 
-  h1, h2, span, div, label {
+  h1, h2, span, div, label, .import-account__back-button {
     color: #fff;
   }
 

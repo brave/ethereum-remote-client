@@ -10,20 +10,6 @@ import {
 const EMPTY_SEEDS = Array(24).fill(null)
 
 module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
-  componentDidMount () {
-    const container = document.querySelector('#app-content')
-    if (container) {
-      container.setAttribute('style', 'overflow-y: scroll')
-    }
-    super.componentDidMount()
-  }
-
-  componentWillUnmount () {
-    const container = document.querySelector('#app-content')
-    if (container) {
-      container.removeAttribute('style')
-    }
-  }
 
   handleSubmit = async () => {
     const {

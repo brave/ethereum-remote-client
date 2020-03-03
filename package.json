@@ -1,6 +1,6 @@
 {
   "name": "ethereum-remote-client",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "private": true,
   "scripts": {
     "start": "gulp dev:extension",

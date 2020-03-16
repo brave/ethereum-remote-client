@@ -28,8 +28,6 @@ export const mapStateToProps = state => {
     useIn3,
     useNonceField,
   } = metamask
-  console.log('adanved-tab.container.js')
-  console.log(metamask)
   const { showFiatInTestnets, autoLogoutTimeLimit } = preferencesSelector(state)
 
   return {

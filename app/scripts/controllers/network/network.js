@@ -178,7 +178,6 @@ module.exports = class NetworkController extends EventEmitter {
 
   _configureProvider (opts) {
     const { type, rpcTarget, chainId, ticker, nickname, rpcPrefs, rpcType } = opts
-    console.log(opts)
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     const isIn3 = IN3_PROVIDER_TYPES.includes(type)

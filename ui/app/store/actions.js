@@ -2480,12 +2480,12 @@ function setUseIn3 (value) {
     background.setUseIn3Network(value, (result, error) => {
       if (result !== undefined && result !== null) {
         dispatch({
-          type: actionConstants.SET_USE_IN3,
+          type: actions.SET_USE_IN3,
           value: result,
         })
       } else {
         dispatch({
-          type: actionConstants.SET_USE_IN3,
+          type: actions.SET_USE_IN3,
           value: false,
         })
         dispatch(displayWarning(error.message))

@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Identicon from '../../../../components/ui/identicon'
 import TextField from '../../../../components/ui/text-field'
-import { CONTACT_LIST_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
-import { isValidAddress, isValidENSAddress } from '../../../../helpers/utils/util'
-import EnsInput from '../../../../pages/send/send-content/add-recipient/ens-input'
+import { CONTACT_LIST_ROUTE } from '../../../../helpers/constants/routes'
+import { isValidAddress, isValidDomainName } from '../../../../helpers/utils/util'
+import EnsInput from '../../../send/send-content/add-recipient/ens-input'
 import PageContainerFooter from '../../../../components/ui/page-container/page-container-footer'
 import debounce from 'lodash.debounce'
 
@@ -51,7 +51,7 @@ export default class AddContact extends PureComponent {
 
   validate = address => {
     const valid = isValidAddress(address)
-    const validEnsAddress = isValidENSAddress(address)
+    const validEnsAddress = isValidDomainName(address)
     if (valid || validEnsAddress || address === '') {
       this.setState({ error: '', ethAddress: address })
     } else {

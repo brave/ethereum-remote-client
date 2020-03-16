@@ -2,10 +2,15 @@ import React from 'react'
 import ConfirmSeedPhrase from '../../../../../../../ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/confirm-seed-phrase.component'
 import DraggableSeed from '../../../../../../../ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/draggable-seed.component'
 import classnames from 'classnames'
+import {
+  INITIALIZE_END_OF_FLOW_ROUTE,
+  DEFAULT_ROUTE,
+} from '../../../../../../../ui/app/helpers/constants/routes'
 
 const EMPTY_SEEDS = Array(24).fill(null)
 
 module.exports = class BraveConfirmSeedPhrase extends ConfirmSeedPhrase {
+
   handleSubmit = async () => {
     const {
       history,

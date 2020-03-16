@@ -1,5 +1,16 @@
 # Changelog
 
+
+## Remote Component([0.1.44](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.44)), Browser Component: `1.0.16`(12-Feb-2020)
+- [brave-browser#7537](https://github.com/brave/brave-browser/issues/7537): Fix `Restore account? Import using account seed phrase`  
+- [brave-browser#7882](https://github.com/brave/brave-browser/issues/7882): Fix connect to wallet popup to be more responsive to browser size
+- [brave-browser#7045](https://github.com/brave/brave-browser/issues/7045): Fix wallet backup screen to be responsive to browser size
+- [brave-browser#6539](https://github.com/brave/brave-browser/issues/6539): Fix untranslated text on connect hardware screen
+- [brave-browser#7791](https://github.com/brave/brave-browser/issues/7791): Removed "Choose a type to set up" from brave://wallet 
+- [brave-browser#7695](https://github.com/brave/brave-browser/issues/7695): Replace MM support link on `Learn more on connect wallet` popup with Brave support page
+- [brave-browser#8177](https://github.com/brave/brave-browser/issues/8177): Replace MM support link on `Learn More on Add tokens screen points` with Brave support page
+- [brave-browser#8204](https://github.com/brave/brave-browser/issues/8204): Replace MM support link on `Learn more about imported accounts` with Brave support page	
+
 ## Remote Component([0.1.32](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.32)), Browser Component: `1.0.15`(10-Jan-2020)
 
 - [brave-browser#7408](https://github.com/brave/brave-browser/issues/7408): Upgrade base MetaMask from 7.0.1 to 7.7.0

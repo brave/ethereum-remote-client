@@ -21,6 +21,14 @@ const BraveHome = class BraveHome extends Home {
       this.props.setHardwareConnect(false)
       this.props.history.push(CONNECT_HARDWARE_ROUTE)
     }
+
+    const appContent = document.querySelector('#app-content')
+    const mainContainer = document.querySelector('.main-container')
+
+    if (appContent && mainContainer) {
+      appContent.setAttribute('style', 'overflow-y: hidden')
+      mainContainer.setAttribute('style', 'overflow-y: scroll')
+    }
   }
 }
 

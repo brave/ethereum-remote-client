@@ -22,7 +22,13 @@ const createBraveReplaceLinksTask = () => {
       )
       .pipe(
         replace(
-          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489351-Importing-Accounts/gm,
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489031/gm,
+          'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+        )
+      )
+      .pipe(
+        replace(
+          /https:\/\/metamask\.zendesk\.com\/hc\/en-us\/articles\/360015489331-Importing-an-Account/gm,
           'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
         )
       )
@@ -235,6 +241,12 @@ const createBraveReplacePathsTask = () => {
         replace(
           /'(.*)\/threebox'/gm,
           `'${bravePrefix}app/scripts/controllers/threebox'`
+        )
+      )
+      .pipe(
+        replace(
+          /'(.*)\/unlock-page\.container'/gm,
+          `'${bravePrefix}ui/app/pages/unlock-page/unlock-page.container'`
         )
       )
       .pipe(gulp.dest(file => file.base))

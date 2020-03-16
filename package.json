@@ -1,6 +1,6 @@
 {
   "name": "ethereum-remote-client",
-  "version": "0.1.36",
+  "version": "0.1.51",
   "private": true,
   "scripts": {
     "start": "gulp dev:extension",
@@ -62,12 +62,18 @@
     "pubnub/superagent-proxy": "^2.0.0",
     "set-value": "2.0.1",
     "serialize-javascript": "2.1.1",
-    "tree-kill": "^1.2.2"
+    "tree-kill": "^1.2.2",
+    "@hapi/hapi": "^18.4.1",
+    "@hapi/ammo": "^3.1.2",
+    "qs": "^6.3.2",
+    "acorn": "^7.1.1",
+    "swarm-js": "^0.1.40"
   },
   "dependencies": {
     "3box": "^1.10.2",
     "@babel/runtime": "^7.5.5",
     "@material-ui/core": "1.0.0",
+    "@metamask/eth-ledger-bridge-keyring": "^0.2.6",
     "@sentry/browser": "^4.1.1",
     "@zxing/library": "^0.8.0",
     "abi-decoder": "^1.2.0",
@@ -108,7 +114,6 @@
     "eth-json-rpc-infura": "github:brave/eth-json-rpc-infura#e935ea77179447d2da15082cdac913ea6bf1133d",
     "eth-json-rpc-middleware": "^4.4.0",
     "eth-keyring-controller": "github:brave/KeyringController#9d4408c935948fb7797dd267560b4393a44c7379",
-    "eth-ledger-bridge-keyring": "^0.2.0",
     "eth-method-registry": "^1.2.0",
     "eth-phishing-detect": "^1.1.4",
     "eth-query": "^2.1.2",

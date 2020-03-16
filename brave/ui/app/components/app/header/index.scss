@@ -98,3 +98,11 @@
 .app {
   overflow-y: hidden;
 }
+
+#app-content {
+  overflow-y: scroll;
+}
+
+.main-container-wrapper {
+  overflow-y: auto;
+}

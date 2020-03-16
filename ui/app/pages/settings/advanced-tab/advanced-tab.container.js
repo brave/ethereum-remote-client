@@ -1,4 +1,4 @@
-import AdvancedTab from '~/brave/ui/app/pages/settings/advanced-tab/advanced-tab.component'
+import AdvancedTab from './advanced-tab.component'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
@@ -13,7 +13,7 @@ import {
   turnThreeBoxSyncingOnAndInitialize,
   setUseIn3,
   setUseNonceField,
-} from '~/brave/ui/app/store/actions'
+} from '../../../store/actions'
 import {preferencesSelector} from '../../../selectors/selectors'
 
 export const mapStateToProps = state => {

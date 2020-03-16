@@ -70,7 +70,7 @@ export default class ProviderPageContainerContent extends PureComponent {
             {t('providerRequestInfo')}
             <br/>
             <a
-              href="https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-"
+              href="https://medium.com/metamask/introducing-privacy-mode-42549d4870fa"
               target="_blank"
               rel="noopener noreferrer"
             >

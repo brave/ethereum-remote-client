@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { showModal } from '~/brave/ui/app/store/actions'
+import { showModal } from '../../../../store/actions'
 import {
   decGWEIToHexWEI,
   decimalToHex,

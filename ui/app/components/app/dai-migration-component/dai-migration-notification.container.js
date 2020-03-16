@@ -3,7 +3,7 @@ import { compose } from 'recompose'
 import DaiMigrationNotification from './dai-migration-notification.component'
 import withTokenTracker from '../../../helpers/higher-order-components/with-token-tracker'
 import { getSelectedAddress, getDaiV1Token } from '../../../selectors/selectors'
-import { setMkrMigrationReminderTimestamp } from '~/brave/ui/app/store/actions'
+import { setMkrMigrationReminderTimestamp } from '../../../store/actions'
 
 const mapStateToProps = (state) => {
   const {

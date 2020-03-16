@@ -3,14 +3,14 @@ import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
 import { ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
-import { DEFAULT_ROUTE, RESTORE_VAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { DEFAULT_ROUTE, RESTORE_VAULT_ROUTE } from '../../helpers/constants/routes'
 import {
   tryUnlockMetamask,
   forgotPassword,
   markPasswordForgotten,
   forceUpdateMetamaskState,
   showModal,
-} from '~/brave/ui/app/store/actions'
+} from '../../store/actions'
 import UnlockPage from './unlock-page.component'
 
 const mapStateToProps = state => {

@@ -13,7 +13,7 @@ import {
   CONTACT_MY_ACCOUNTS_ROUTE,
   CONTACT_MY_ACCOUNTS_VIEW_ROUTE,
   CONTACT_MY_ACCOUNTS_EDIT_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../helpers/constants/routes'
 
 
 const mapStateToProps = (state, ownProps) => {

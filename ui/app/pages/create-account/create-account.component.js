@@ -9,7 +9,7 @@ import {
   NEW_ACCOUNT_ROUTE,
   IMPORT_ACCOUNT_ROUTE,
   CONNECT_HARDWARE_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 export default class CreateAccountPage extends Component {
   renderTabs () {

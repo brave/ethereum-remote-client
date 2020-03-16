@@ -4,8 +4,8 @@ const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const classnames = require('classnames')
 
-const { requestRevealSeedWords } = require('~/brave/ui/app/store/actions')
-const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
+const { requestRevealSeedWords } = require('../../store/actions')
+const { DEFAULT_ROUTE } = require('../../helpers/constants/routes')
 const ExportTextContainer = require('../../components/ui/export-text-container')
 
 import Button from '../../components/ui/button'

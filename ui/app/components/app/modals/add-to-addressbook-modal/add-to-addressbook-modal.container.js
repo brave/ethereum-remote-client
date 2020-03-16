@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import AddToAddressBookModal from './add-to-addressbook-modal.component'
-import actions from '~/brave/ui/app/store/actions'
+import actions from '../../../../store/actions'
 
 function mapStateToProps (state) {
   return {

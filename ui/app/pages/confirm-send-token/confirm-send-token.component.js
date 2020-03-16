@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ConfirmTokenTransactionBase from '../confirm-token-transaction-base'
-import { SEND_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { SEND_ROUTE } from '../../helpers/constants/routes'
 
 export default class ConfirmSendToken extends Component {
   static propTypes = {

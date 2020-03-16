@@ -5,7 +5,7 @@ import {
   INITIALIZE_SEED_PHRASE_ROUTE,
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
   INITIALIZE_SELECT_ACTION_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../../helpers/constants/routes'
 import TextField from '../../../../components/ui/text-field'
 
 export default class NewAccount extends PureComponent {

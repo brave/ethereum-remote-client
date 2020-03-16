@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Route, Switch, withRouter, matchPath } from 'react-router-dom'
 import { compose } from 'recompose'
-import actions from '~/brave/ui/app/store/actions'
+import actions from '../../store/actions'
 import log from 'loglevel'
 import IdleTimer from 'react-idle-timer'
 import {getNetworkIdentifier, preferencesSelector} from '../../selectors/selectors'
@@ -20,12 +20,12 @@ const Sidebar = require('../../components/app/sidebars').default
 const { WALLET_VIEW_SIDEBAR } = require('../../components/app/sidebars/sidebar.constants')
 
 // other views
-import Home from '~/brave/ui/app/pages/home'
+import Home from '../home'
 import Settings from '../settings'
 import Authenticated from '../../helpers/higher-order-components/authenticated'
 import Initialized from '../../helpers/higher-order-components/initialized'
 import Lock from '../lock'
-const RestoreVaultPage = require('~/brave/ui/app/pages/keychains/restore-vault').default
+const RestoreVaultPage = require('../keychains/restore-vault').default
 const RevealSeedConfirmation = require('../keychains/reveal-seed')
 const MobileSyncPage = require('../mobile-sync')
 const AddTokenPage = require('../add-token')
@@ -67,7 +67,7 @@ import {
   CONFIRM_TRANSACTION_ROUTE,
   INITIALIZE_ROUTE,
   INITIALIZE_UNLOCK_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 // enums
 import {

@@ -2,7 +2,7 @@ import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import ConfirmSeedPhrase from '~/brave/ui/app/pages/first-time-flow/seed-phrase/confirm-seed-phrase/confirm-seed-phrase.component'
+import ConfirmSeedPhrase from '../confirm-seed-phrase/confirm-seed-phrase.component'
 
 function shallowRender (props = {}, context = {}) {
   return shallow(

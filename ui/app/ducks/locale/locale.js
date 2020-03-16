@@ -1,5 +1,5 @@
 const extend = require('xtend')
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../store/actions')
 
 module.exports = reduceMetamask
 

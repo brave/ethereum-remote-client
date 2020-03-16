@@ -43,7 +43,7 @@ import {
   qrCodeDetected,
   updateSendEnsResolution,
   updateSendEnsResolutionError,
-} from '~/brave/ui/app/store/actions'
+} from '../../store/actions'
 import {
   resetSendState,
   updateSendErrors,
@@ -60,7 +60,7 @@ import {
 
 import {
   SEND_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 function mapStateToProps (state) {
   return {

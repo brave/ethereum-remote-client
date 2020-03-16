@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import actions from '~/brave/ui/app/store/actions'
+import actions from '../../store/actions'
 import NewAccountCreateForm from './new-account.component'
 
 const mapStateToProps = state => {

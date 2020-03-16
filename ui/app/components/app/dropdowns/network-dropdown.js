@@ -5,12 +5,12 @@ const inherits = require('util').inherits
 const connect = require('react-redux').connect
 const { withRouter } = require('react-router-dom')
 const { compose } = require('recompose')
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../../store/actions')
 const Dropdown = require('./components/dropdown').Dropdown
 const DropdownMenuItem = require('./components/dropdown').DropdownMenuItem
 const NetworkDropdownIcon = require('./components/network-dropdown-icon')
 const R = require('ramda')
-const { NETWORKS_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
+const { NETWORKS_ROUTE } = require('../../../helpers/constants/routes')
 
 // classes from nodes of the toggle element.
 const notToggleElementClassnames = [

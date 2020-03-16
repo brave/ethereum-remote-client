@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LockIcon from '../../../../components/ui/lock-icon'
 import Button from '../../../../components/ui/button'
-import { INITIALIZE_CONFIRM_SEED_PHRASE_ROUTE, DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { INITIALIZE_CONFIRM_SEED_PHRASE_ROUTE, DEFAULT_ROUTE } from '../../../../helpers/constants/routes'
 import { exportAsFile } from '../../../../helpers/utils/util'
 
 export default class RevealSeedPhrase extends PureComponent {

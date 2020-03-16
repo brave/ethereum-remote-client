@@ -4,9 +4,9 @@ const h = require('react-hyperscript')
 const { withRouter } = require('react-router-dom')
 const { compose } = require('recompose')
 const connect = require('react-redux').connect
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../../store/actions')
 const FileInput = require('react-simple-file-input').default
-const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
+const { DEFAULT_ROUTE } = require('../../../helpers/constants/routes')
 const { getMetaMaskAccounts } = require('../../../selectors/selectors')
 import Button from '../../../components/ui/button'
 

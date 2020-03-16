@@ -5,7 +5,7 @@ import { ENVIRONMENT_TYPE_NOTIFICATION } from '../../../../app/scripts/lib/enums
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
 import ConfirmPageContainer, { ConfirmDetailRow } from '../../components/app/confirm-page-container'
 import { isBalanceSufficient } from '../send/send.utils'
-import { DEFAULT_ROUTE, CONFIRM_TRANSACTION_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { DEFAULT_ROUTE, CONFIRM_TRANSACTION_ROUTE } from '../../helpers/constants/routes'
 import {
   INSUFFICIENT_FUNDS_ERROR_KEY,
   TRANSACTION_ERROR_KEY,

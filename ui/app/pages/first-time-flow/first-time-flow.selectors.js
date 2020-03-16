@@ -2,7 +2,7 @@ import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
   DEFAULT_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 const selectors = {
   getFirstTimeFlowTypeRoute,

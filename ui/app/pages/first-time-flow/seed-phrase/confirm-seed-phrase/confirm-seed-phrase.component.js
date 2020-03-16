@@ -7,7 +7,7 @@ import {
   INITIALIZE_END_OF_FLOW_ROUTE,
   INITIALIZE_SEED_PHRASE_ROUTE,
   DEFAULT_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../../helpers/constants/routes'
 import { exportAsFile } from '../../../../helpers/utils/util'
 import DraggableSeed from './draggable-seed.component'
 

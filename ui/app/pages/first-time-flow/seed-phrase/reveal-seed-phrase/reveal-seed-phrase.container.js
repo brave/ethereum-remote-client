@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import RevealSeedPhrase from '~/brave/ui/app/pages/first-time-flow/seed-phrase/reveal-seed-phrase/reveal-seed-phrase.component'
+import RevealSeedPhrase from './reveal-seed-phrase.component'
 import {
   setCompletedOnboarding,
   setSeedPhraseBackedUp,
-} from '~/brave/ui/app/store/actions'
+} from '../../../../store/actions'
 
 const mapDispatchToProps = dispatch => {
   return {

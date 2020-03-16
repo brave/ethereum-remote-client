@@ -3,9 +3,9 @@ const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const inherits = require('util').inherits
 const connect = require('react-redux').connect
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../../store/actions')
 const genAccountLink = require('etherscan-link').createAccountLink
-const { Menu, Item, CloseArea } = require('~/brave/ui/app/components/app/dropdowns/components/menu')
+const { Menu, Item, CloseArea } = require('./components/menu')
 
 TokenMenuDropdown.contextTypes = {
   t: PropTypes.func,

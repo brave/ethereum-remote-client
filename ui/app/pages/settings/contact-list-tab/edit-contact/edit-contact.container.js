@@ -9,8 +9,8 @@ import {
   CONTACT_MY_ACCOUNTS_VIEW_ROUTE,
   CONTACT_MY_ACCOUNTS_EDIT_ROUTE,
   CONTACT_LIST_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
-import { addToAddressBook, removeFromAddressBook, setAccountLabel } from '~/brave/ui/app/store/actions'
+} from '../../../../helpers/constants/routes'
+import { addToAddressBook, removeFromAddressBook, setAccountLabel } from '../../../../store/actions'
 
 const mapStateToProps = (state, ownProps) => {
   const { location } = ownProps

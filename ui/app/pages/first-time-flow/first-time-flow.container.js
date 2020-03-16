@@ -6,10 +6,10 @@ import {
   createNewVaultAndRestore,
   unlockAndGetSeedPhrase,
   verifySeedPhrase,
-} from '~/brave/ui/app/store/actions'
+} from '../../store/actions'
 import {
   INITIALIZE_BACKUP_SEED_PHRASE_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 const mapStateToProps = (state, ownProps) => {
   const { metamask: { completedOnboarding, isInitialized, isUnlocked, seedPhraseBackedUp } } = state

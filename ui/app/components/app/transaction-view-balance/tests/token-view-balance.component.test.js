@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import TokenBalance from '../../../ui/token-balance'
 import UserPreferencedCurrencyDisplay from '../../user-preferenced-currency-display'
-import { SEND_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { SEND_ROUTE } from '../../../../helpers/constants/routes'
 import TransactionViewBalance from '../transaction-view-balance.component'
 
 const propsMethodSpies = {

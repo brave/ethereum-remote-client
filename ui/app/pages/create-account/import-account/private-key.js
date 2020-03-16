@@ -5,8 +5,8 @@ const { withRouter } = require('react-router-dom')
 const { compose } = require('recompose')
 const PropTypes = require('prop-types')
 const connect = require('react-redux').connect
-const actions = require('~/brave/ui/app/store/actions')
-const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
+const actions = require('../../../store/actions')
+const { DEFAULT_ROUTE } = require('../../../helpers/constants/routes')
 const { getMetaMaskAccounts } = require('../../../selectors/selectors')
 import Button from '../../../components/ui/button'
 

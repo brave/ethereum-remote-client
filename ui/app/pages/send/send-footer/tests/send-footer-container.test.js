@@ -26,7 +26,7 @@ proxyquire('../send-footer.container.js', {
       return () => ({})
     },
   },
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../../store/actions': actionSpies,
   '../send.selectors': {
     getGasLimit: (s) => `mockGasLimit:${s}`,
     getGasPrice: (s) => `mockGasPrice:${s}`,

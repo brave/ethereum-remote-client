@@ -15,7 +15,7 @@ import {
 import {
   getContractMethodData,
   getTokenParams,
-} from '~/brave/ui/app/store/actions'
+} from '../../store/actions'
 import ConfirmTransaction from './confirm-transaction.component'
 import { unconfirmedTransactionsListSelector } from '../../selectors/confirm-transaction'
 

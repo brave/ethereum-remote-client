@@ -56,7 +56,7 @@ proxyquire('../send.container.js', {
     getAddressBook: (s) => `mockAddressBook:${s}`,
     getSelectedAddress: (s) => `mockSelectedAddress:${s}`,
   },
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../store/actions': actionSpies,
   '../../ducks/send/send.duck': duckActionSpies,
   './send.utils.js': {
     calcGasTotal: (gasLimit, gasPrice) => gasLimit + gasPrice,

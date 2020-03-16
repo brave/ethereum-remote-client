@@ -2,7 +2,7 @@ import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import { CONFIRM_TRANSACTION_ROUTE, DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { CONFIRM_TRANSACTION_ROUTE, DEFAULT_ROUTE } from '../../../../helpers/constants/routes'
 import SendFooter from '../send-footer.component.js'
 
 import PageContainerFooter from '../../../../components/ui/page-container/page-container-footer'

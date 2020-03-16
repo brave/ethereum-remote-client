@@ -9,7 +9,7 @@ import {
   updateCurrentLocale,
   setUseNativeCurrencyAsPrimaryCurrencyPreference,
   setParticipateInMetaMetrics,
-} from '~/brave/ui/app/store/actions'
+} from '../../../store/actions'
 import { preferencesSelector } from '../../../selectors/selectors'
 
 const mapStateToProps = state => {

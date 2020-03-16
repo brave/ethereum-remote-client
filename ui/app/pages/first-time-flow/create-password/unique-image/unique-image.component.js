@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../../components/ui/button'
-import { INITIALIZE_END_OF_FLOW_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { INITIALIZE_END_OF_FLOW_ROUTE } from '../../../../helpers/constants/routes'
 
 export default class UniqueImageScreen extends PureComponent {
   static contextTypes = {

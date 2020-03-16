@@ -40,7 +40,7 @@ proxyquire('../gas-modal-page-container.container.js', {
     getRenderableBasicEstimateData: (s) => `mockRenderableBasicEstimateData:${Object.keys(s).length}`,
     getDefaultActiveButtonIndex: (a, b) => a + b,
   },
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../../../store/actions': actionSpies,
   '../../../../ducks/gas/gas.duck': gasActionSpies,
   '../../../../ducks/confirm-transaction/confirm-transaction.duck': confirmTransactionActionSpies,
   '../../../../ducks/send/send.duck': sendActionSpies,

@@ -26,7 +26,7 @@ proxyquire('../add-recipient.container.js', {
     getAddressBook: (s) => [{ name: `mockAddressBook:${s}` }],
     getAddressBookEntry: (s) => `mockAddressBookEntry:${s}`,
   },
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../../../store/actions': actionSpies,
 })
 
 describe('add-recipient container', () => {

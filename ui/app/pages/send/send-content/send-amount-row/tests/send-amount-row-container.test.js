@@ -37,7 +37,7 @@ proxyquire('../send-amount-row.container.js', {
     getAmountErrorObject: (mockDataObject) => ({ ...mockDataObject, mockChange: true }),
     getGasFeeErrorObject: (mockDataObject) => ({ ...mockDataObject, mockGasFeeErrorChange: true }),
   },
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../../../store/actions': actionSpies,
   '../../../../ducks/send/send.duck': duckActionSpies,
 })
 

@@ -30,7 +30,7 @@ proxyquire('../amount-max-button.container.js', {
   './amount-max-button.selectors.js': { getMaxModeOn: (s) => `mockMaxModeOn:${s}` },
   './amount-max-button.utils.js': { calcMaxAmount: (mockObj) => mockObj.val + 1 },
   '../../../../../selectors/custom-gas': { getBasicGasEstimateLoadingStatus: (s) => `mockButtonDataLoading:${s}`},
-  '~/brave/ui/app/store/actions': actionSpies,
+  '../../../../../store/actions': actionSpies,
   '../../../../../ducks/send/send.duck': duckActionSpies,
 })
 

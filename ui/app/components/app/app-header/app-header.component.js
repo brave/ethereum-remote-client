@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Identicon from '../../ui/identicon'
 import MetaFoxLogo from '../../ui/metafox-logo'
-import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { DEFAULT_ROUTE } from '../../../helpers/constants/routes'
 const NetworkIndicator = require('../network')
 
 export default class AppHeader extends PureComponent {

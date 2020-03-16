@@ -8,7 +8,7 @@ import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
   INITIALIZE_SEED_PHRASE_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../helpers/constants/routes'
 
 export default class CreatePassword extends PureComponent {
   static propTypes = {

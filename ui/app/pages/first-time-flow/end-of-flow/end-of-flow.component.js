@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../components/ui/button'
 import MetaFoxLogo from '../../../components/ui/metafox-logo'
-import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { DEFAULT_ROUTE } from '../../../helpers/constants/routes'
 
 export default class EndOfFlowScreen extends PureComponent {
   static contextTypes = {
@@ -50,7 +50,7 @@ export default class EndOfFlowScreen extends PureComponent {
         </div>
         <div className="first-time-flow__text-block end-of-flow__text-4">
           { '*' + t('endOfFlowMessage8') } <a
-            href="https://support.brave.com/hc/en-us/articles/360034535452-How-can-I-add-my-other-Crypto-Wallets-to-Brave-"
+            href="https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-Tips"
             target="_blank"
             rel="noopener noreferrer"
           >

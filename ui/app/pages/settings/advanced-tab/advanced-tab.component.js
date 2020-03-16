@@ -5,7 +5,7 @@ import { exportAsFile } from '../../../helpers/utils/util'
 import ToggleButton from '../../../components/ui/toggle-button'
 import TextField from '../../../components/ui/text-field'
 import Button from '../../../components/ui/button'
-import { MOBILE_SYNC_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { MOBILE_SYNC_ROUTE } from '../../../helpers/constants/routes'
 
 export default class AdvancedTab extends PureComponent {
   static contextTypes = {

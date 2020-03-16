@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import QrScanner from './qr-scanner.component'
 
-const { hideModal, qrCodeDetected, showQrScanner } = require('~/brave/ui/app/store/actions')
+const { hideModal, qrCodeDetected, showQrScanner } = require('../../../../store/actions')
 import {
   SEND_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../../helpers/constants/routes'
 
 const mapStateToProps = state => {
   return {

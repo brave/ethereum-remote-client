@@ -32,7 +32,7 @@ import {
   setCustomGasLimit,
 } from '../../../../ducks/gas/gas.duck'
 import { getGasLoadingError, gasFeeIsInError, getGasButtonGroupShown } from './send-gas-row.selectors.js'
-import { showModal, setGasPrice, setGasLimit, setGasTotal, updateSendAmount } from '~/brave/ui/app/store/actions'
+import { showModal, setGasPrice, setGasLimit, setGasTotal, updateSendAmount } from '../../../../store/actions'
 import { getAdvancedInlineGasShown, getCurrentEthBalance, getSelectedToken } from '../../../../selectors/selectors'
 import SendGasRow from './send-gas-row.component'
 

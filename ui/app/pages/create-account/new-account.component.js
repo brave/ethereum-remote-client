@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { DEFAULT_ROUTE } from '~/brave/ui/app/helpers/constants/routes'
+import { DEFAULT_ROUTE } from '../../helpers/constants/routes'
 import Button from '../../components/ui/button'
 
 export default class NewAccountCreateForm extends Component {

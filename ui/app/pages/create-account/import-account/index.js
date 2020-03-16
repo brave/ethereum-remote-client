@@ -46,7 +46,7 @@ AccountImportSubview.prototype.render = function () {
           },
           onClick: () => {
             global.platform.openWindow({
-              url: 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-',
+              url: 'https://metamask.zendesk.com/hc/en-us/articles/360015289932',
             })
           },
         }, this.context.t('here')),

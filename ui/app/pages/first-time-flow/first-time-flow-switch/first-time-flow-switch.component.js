@@ -7,7 +7,7 @@ import {
   INITIALIZE_WELCOME_ROUTE,
   INITIALIZE_UNLOCK_ROUTE,
   INITIALIZE_METAMETRICS_OPT_IN_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../helpers/constants/routes'
 
 export default class FirstTimeFlowSwitch extends PureComponent {
   static propTypes = {

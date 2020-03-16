@@ -9,7 +9,7 @@ import {
   CONTACT_ADD_ROUTE,
   CONTACT_VIEW_ROUTE,
   CONTACT_MY_ACCOUNTS_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../helpers/constants/routes'
 
 export default class ContactListTab extends Component {
   static contextTypes = {

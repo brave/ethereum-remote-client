@@ -6,7 +6,7 @@ import {
   approveProviderRequestByOrigin,
   rejectProviderRequestByOrigin,
   showModal,
-} from '~/brave/ui/app/store/actions'
+} from '../../../store/actions'
 
 export const mapStateToProps = state => {
   const {

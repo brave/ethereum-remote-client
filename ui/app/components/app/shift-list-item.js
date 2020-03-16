@@ -4,7 +4,7 @@ const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const connect = require('react-redux').connect
 const explorerLink = require('etherscan-link').createExplorerLink
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../store/actions')
 const { formatDate, addressSummary } = require('../../helpers/utils/util')
 
 const CopyButton = require('../ui/copyButton')

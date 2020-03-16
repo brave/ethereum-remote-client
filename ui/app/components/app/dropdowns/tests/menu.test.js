@@ -2,7 +2,7 @@ import React from 'react'
 import assert from 'assert'
 import sinon from 'sinon'
 import { shallow } from 'enzyme'
-import { Menu, Item, Divider, CloseArea } from '~/brave/ui/app/components/app/dropdowns/components/menu'
+import { Menu, Item, Divider, CloseArea } from '../components/menu'
 
 describe('Dropdown Menu Components', () => {
 

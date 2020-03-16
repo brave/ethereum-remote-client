@@ -8,7 +8,7 @@ import {
 } from '../../../selectors/transactions'
 import { getSelectedAddress, getAssetImages, getFeatureFlags } from '../../../selectors/selectors'
 import { selectedTokenSelector } from '../../../selectors/tokens'
-import { updateNetworkNonce } from '~/brave/ui/app/store/actions'
+import { updateNetworkNonce } from '../../../store/actions'
 import { fetchBasicGasAndTimeEstimates, fetchGasEstimates } from '../../../ducks/gas/gas.duck'
 
 const mapStateToProps = (state) => {

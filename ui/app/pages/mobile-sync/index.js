@@ -5,9 +5,9 @@ const h = require('react-hyperscript')
 const classnames = require('classnames')
 const PubNub = require('pubnub')
 
-const { requestRevealSeedWords, fetchInfoToSync } = require('~/brave/ui/app/store/actions')
-const { DEFAULT_ROUTE } = require('~/brave/ui/app/helpers/constants/routes')
-const actions = require('~/brave/ui/app/store/actions')
+const { requestRevealSeedWords, fetchInfoToSync } = require('../../store/actions')
+const { DEFAULT_ROUTE } = require('../../helpers/constants/routes')
+const actions = require('../../store/actions')
 
 const qrCode = require('qrcode-generator')
 

@@ -3,13 +3,13 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { getAddressBookEntry } from '../../../../selectors/selectors'
-import { removeFromAddressBook } from '~/brave/ui/app/store/actions'
+import { removeFromAddressBook } from '../../../../store/actions'
 import { checksumAddress } from '../../../../helpers/utils/util'
 import {
   CONTACT_EDIT_ROUTE,
   CONTACT_MY_ACCOUNTS_EDIT_ROUTE,
   CONTACT_MY_ACCOUNTS_VIEW_ROUTE,
-} from '~/brave/ui/app/helpers/constants/routes'
+} from '../../../../helpers/constants/routes'
 
 const mapStateToProps = (state, ownProps) => {
   const { location } = ownProps

@@ -6,7 +6,7 @@ const Dnode = require('dnode')
 const querystring = require('querystring')
 const LocalMessageDuplexStream = require('post-message-stream')
 const ObjectMultiplex = require('obj-multiplex')
-const extension = require('~/brave/lib/extensionizer')
+const extension = require('extensionizer')
 const PortStream = require('extension-port-stream')
 
 const inpageContent = fs.readFileSync(path.join(__dirname, '..', '..', 'dist', 'chrome', 'inpage.js'), 'utf8')

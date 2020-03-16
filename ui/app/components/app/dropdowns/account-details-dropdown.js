@@ -3,10 +3,10 @@ const PropTypes = require('prop-types')
 const h = require('react-hyperscript')
 const inherits = require('util').inherits
 const connect = require('react-redux').connect
-const actions = require('~/brave/ui/app/store/actions')
+const actions = require('../../../store/actions')
 const { getSelectedIdentity, getRpcPrefsForCurrentProvider } = require('../../../selectors/selectors')
 const genAccountLink = require('../../../../lib/account-link.js')
-const { Menu, Item, CloseArea } = require('~/brave/ui/app/components/app/dropdowns/components/menu')
+const { Menu, Item, CloseArea } = require('./components/menu')
 
 AccountDetailsDropdown.contextTypes = {
   t: PropTypes.func,

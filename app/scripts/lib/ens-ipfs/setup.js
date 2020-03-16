@@ -1,5 +1,5 @@
 const urlUtil = require('url')
-const extension = require('~/brave/lib/extensionizer')
+const extension = require('extensionizer')
 const resolveEnsToIpfsContentId = require('./resolver.js')
 
 const supportedTopLevelDomains = ['eth']

@@ -437,7 +437,6 @@ module.exports = class MetamaskController extends EventEmitter {
     const keyringController = this.keyringController
     const preferencesController = this.preferencesController
     const txController = this.txController
-    const networkController = this.networkController
     const providerApprovalController = this.providerApprovalController
     const onboardingController = this.onboardingController
     const threeBoxController = this.threeBoxController
@@ -483,7 +482,8 @@ module.exports = class MetamaskController extends EventEmitter {
       submitPassword: nodeify(this.submitPassword, this),
 
       // network management
-      setProviderType: nodeify(networkController.setProviderType, networkController),
+      // setProviderType: nodeify(networkController.setProviderType, networkController),
+      setProviderType: this.setProvider.bind(this),
       setCustomRpc: nodeify(this.setCustomRpc, this),
       updateAndSetCustomRpc: nodeify(this.updateAndSetCustomRpc, this),
       delCustomRpc: nodeify(this.delCustomRpc, this),
@@ -1747,6 +1747,18 @@ module.exports = class MetamaskController extends EventEmitter {
 
   async initializeThreeBox () {
     await this.threeBoxController.init()
+  }
+
+  /**
+  * Wrapper for networkController.setProviderType that enforces rpcType, respecting preferences selection
+  */
+  setProvider (type, rpcTarget = '', ticker = 'ETH', nickname = '', rpcPrefs = {}, rpcType = '') {
+    const useIn3 = rpcType === 'in3' ? true : this.preferencesController.getUseIn3()
+    if (useIn3) {
+      this.networkController.setProviderType(type, rpcTarget, ticker, nickname, rpcPrefs, IN3)
+    } else {
+      this.networkController.setProviderType(type, rpcTarget, ticker, nickname, rpcPrefs, INFURA)
+    }
   }
 
   /**

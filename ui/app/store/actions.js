@@ -29,7 +29,7 @@ var actions = {
   hideModal: hideModal,
   // notification state
   CLOSE_NOTIFICATION_WINDOW: 'CLOSE_NOTIFICATION_WINDOW',
-  closeNotifacationWindow: closeNotifacationWindow,
+  closeNotificationWindow: closeNotificationWindow,
   // sidebar state
   SIDEBAR_OPEN: 'UI_SIDEBAR_OPEN',
   SIDEBAR_CLOSE: 'UI_SIDEBAR_CLOSE',
@@ -2066,12 +2066,12 @@ function closeCurrentNotificationWindow () {
       !hasUnconfirmedTransactions(getState())) {
       global.platform.closeCurrentWindow()
 
-      dispatch(closeNotifacationWindow())
+      dispatch(closeNotificationWindow())
     }
   }
 }
 
-function closeNotifacationWindow () {
+function closeNotificationWindow () {
   return {
     type: actions.CLOSE_NOTIFICATION_WINDOW,
   }
@@ -2478,12 +2478,16 @@ function setUseIn3 (value) {
       return 'error'
     }
     background.setUseIn3Network(value, (result, error) => {
-      if (!error) {
+      if (result !== undefined && result !== null) {
         dispatch({
           type: actionConstants.SET_USE_IN3,
           value: result,
         })
       } else {
+        dispatch({
+          type: actionConstants.SET_USE_IN3,
+          value: false,
+        })
         dispatch(displayWarning(error.message))
       }
       dispatch(hideLoadingIndication())

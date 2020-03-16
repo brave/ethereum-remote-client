@@ -16,19 +16,15 @@ const extend = require('extend')
 const networks = { networkList: {} }
 
 const {
-  ROPSTEN,
-  RINKEBY,
-  KOVAN,
-  MAINNET,
-  LOCALHOST,
-  GOERLI,
+  IN3,
   INFURA,
-  IN3
+  IN3_PROVIDER_TYPES,
+  INFURA_PROVIDER_TYPES,
+  LOCALHOST,
+  MAINNET,
+  RINKEBY,
+  RPC_PROVIDER_TYPES
 } = require('./enums')
-const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, GOERLI]
-const IN3_PROVIDER_TYPES = [KOVAN, MAINNET, GOERLI]
-
-const RPC_PROVIDER_TYPES = [INFURA, IN3]
 
 const env = process.env.METAMASK_ENV
 const METAMASK_DEBUG = process.env.METAMASK_DEBUG
@@ -187,12 +183,10 @@ module.exports = class NetworkController extends EventEmitter {
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     const isIn3 = IN3_PROVIDER_TYPES.includes(type)
 
-    if (isInfura && !(isIn3 && rpcType === IN3)) {
-      this._configureInfuraProvider(opts)
-    // in3
-  } else if (isIn3 && rpcType === IN3) {
-      console.log("In3")
-      this._configureIn3Provider(opts)
+    if (rpcType === IN3 && IN3_PROVIDER_TYPES.includes(type)) {
+      this._configureIn3Provider({ type, rpcTarget, chainId, ticker, nickname, rpcPrefs, IN3 })
+    } else if (INFURA_PROVIDER_TYPES.includes(type)) {
+      this._configureInfuraProvider({ type, rpcTarget, chainId, ticker, nickname, rpcPrefs, INFURA })
     } else if (type === LOCALHOST) {
       this._configureLocalhostProvider()
     // url-based rpc endpoints

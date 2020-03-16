@@ -425,7 +425,7 @@ describe('MetaMask Reducers', () => {
       assert.equal(state.useBlockie, true)
     })
 
-    it('sets use In3', () => {
+  it('sets use In3', () => {
     const state = reduceMetamask({}, {
       type: actions.SET_USE_IN3,
       value: true,

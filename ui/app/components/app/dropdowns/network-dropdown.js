@@ -69,13 +69,17 @@ module.exports = compose(
 // TODO: specify default props and proptypes
 NetworkDropdown.prototype.render = function () {
   const props = this.props
-  const { provider: { type: providerType, rpcTarget: activeNetwork }, setNetworksTabAddMode } = props
+  const { provider: { type: providerType, rpcTarget: activeNetwork, rpcType: rpcType }, setNetworksTabAddMode } = this.props
   const rpcListDetail = props.frequentRpcListDetail
   const isOpen = this.props.networkDropdownOpen
   const dropdownMenuItemStyle = {
     fontSize: '16px',
     lineHeight: '20px',
     padding: '12px 0',
+  }
+
+  const hidden = {
+    display: 'none',
   }
 
   return h(Dropdown, {
@@ -106,7 +110,7 @@ NetworkDropdown.prototype.render = function () {
       h('div.network-dropdown-title', {}, this.context.t('networks')),
 
       h('div.network-dropdown-divider'),
-
+      h('div.network-dropdown-content', {style: { textAlign: 'center', fontSize: '16px' }}, h("Provider: " + rpcType)),
       h('div.network-dropdown-content',
         {},
         this.context.t('defaultNetwork')
@@ -141,7 +145,7 @@ NetworkDropdown.prototype.render = function () {
         key: 'ropsten',
         closeMenu: () => this.props.hideNetworkDropdown(),
         onClick: () => this.handleClick('ropsten'),
-        style: dropdownMenuItemStyle,
+        style: rpcType === 'in3' ? hidden : dropdownMenuItemStyle,
       },
       [
         providerType === 'ropsten' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
@@ -185,7 +189,7 @@ NetworkDropdown.prototype.render = function () {
         key: 'rinkeby',
         closeMenu: () => this.props.hideNetworkDropdown(),
         onClick: () => this.handleClick('rinkeby'),
-        style: dropdownMenuItemStyle,
+        style: rpcType === 'in3' ? hidden : dropdownMenuItemStyle,
       },
       [
         providerType === 'rinkeby' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),

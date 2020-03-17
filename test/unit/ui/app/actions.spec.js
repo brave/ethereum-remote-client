@@ -1519,11 +1519,12 @@ describe('Actions', () => {
 
     it('errors when setUseIn3 in background throws', () => {
       const store = mockStore()
+      
       const expectedActions = [
         { type: 'SHOW_LOADING_INDICATION', value: undefined },
-        { type: 'SET_USE_IN3', value: 'Error: error' },
-        { type: 'DISPLAY_WARNING', value: undefined },
-        { type: 'HIDE_LOADING_INDICATION',  value: 'Error: error' },
+        { type: 'HIDE_LOADING_INDICATION' },
+        { type: 'DISPLAY_WARNING', value: 'error' },
+        { type: 'SET_USE_IN3', value: undefined },
       ]
 
       setUseIn3Spy.callsFake((_, callback) => {
@@ -1531,12 +1532,7 @@ describe('Actions', () => {
       })
 
       store.dispatch(actions.setUseIn3())
-
-      const rola = store.getActions()
-      for (let i = 0; i < expectedActions.length; ++i) {
-        assert.strictEqual(JSON.stringify(rola[i]), JSON.stringify(expectedActions[i]))
-      }
-      // assert.deepEqual(store.getActions(), expectedActions)
+      assert.deepEqual(store.getActions(), expectedActions)
     })
   })
 

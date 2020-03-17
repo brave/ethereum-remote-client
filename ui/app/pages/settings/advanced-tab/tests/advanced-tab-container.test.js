@@ -17,6 +17,7 @@ const defaultState = {
     },
     threeBoxSyncingAllowed: false,
     threeBoxDisabled: false,
+    useIn3: false,
     useNonceField: false,
   },
 }
@@ -29,6 +30,7 @@ describe('AdvancedTab Container', () => {
       sendHexData: false,
       advancedInlineGas: false,
       showFiatInTestnets: false,
+      useIn3:false,
       autoLogoutTimeLimit: 0,
       threeBoxSyncingAllowed: false,
       threeBoxDisabled: false,

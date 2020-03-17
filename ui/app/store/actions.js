@@ -2470,27 +2470,42 @@ function setShowFiatConversionOnTestnetsPreference (value) {
 }
 
 function setUseIn3 (value) {
-  log.debug(`background.setUseIn3Network: ${value}`)
+  // log.debug(`background.setUseIn3Network: ${value}`)
+  // return (dispatch) => {
+  //   dispatch(showLoadingIndication())
+  //   if (typeof value !== 'boolean') {
+  //     dispatch(displayWarning('useIn3 must be boolean'))
+  //     return 'error'
+  //   }
+  //   background.setUseIn3Network(value, (result, error) => {
+  //     if (result !== undefined && result !== null) {
+  //       dispatch({
+  //         type: actions.SET_USE_IN3,
+  //         value: result,
+  //       })
+  //     } else {
+  //       dispatch({
+  //         type: actions.SET_USE_IN3,
+  //         value: false,
+  //       })
+  //       dispatch(displayWarning(error.message))
+  //     }
+  //     dispatch(hideLoadingIndication())
+  //   })
+  // }
+
   return (dispatch) => {
-    dispatch(showLoadingIndication())
-    if (typeof variable === 'boolean') {
-      dispatch(displayWarning('useIn3 must be boolean'))
-      return 'error'
-    }
-    background.setUseIn3Network(value, (result, error) => {
-      if (result !== undefined && result !== null) {
-        dispatch({
-          type: actions.SET_USE_IN3,
-          value: result,
-        })
-      } else {
-        dispatch({
-          type: actions.SET_USE_IN3,
-          value: false,
-        })
-        dispatch(displayWarning(error.message))
+    dispatch(actions.showLoadingIndication())
+    log.debug(`background.setUseIn3`)
+    background.setUseIn3Network(value, (err) => {
+      dispatch(actions.hideLoadingIndication())
+      if (err) {
+        return dispatch(actions.displayWarning(err.message))
       }
-      dispatch(hideLoadingIndication())
+    })
+    dispatch({
+      type: actions.SET_USE_IN3,
+      value: value,
     })
   }
 }

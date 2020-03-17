@@ -1763,21 +1763,21 @@ module.exports = class MetamaskController extends EventEmitter {
 
   /**
    * Sets whether or not to use IN3 NEtwork provider instead of infura
-   * @param {boolean} useIn3 - True for IN3, false for Infura.
+   * @param {boolean} val - True for IN3, false for Infura.
    * @param {Function} cb - A callback function called when complete.
    */
-  setUseIn3Network (useIn3, cb) {
+  setUseIn3Network (val, cb) {
     try {
-      this.preferencesController.setUseIn3(useIn3)
+      this.preferencesController.setUseIn3(val)
       const cfg = this.networkController.getProviderConfig()
       if (useIn3) {
         this.networkController.setProviderType(cfg.type, cfg.rpcTarget, cfg.ticker, cfg.nickname, cfg.rpcPrefs, IN3)
       } else {
         this.networkController.setProviderType(cfg.type, cfg.rpcTarget, cfg.ticker, cfg.nickname, cfg.rpcPrefs, INFURA)
       }
-      cb(useIn3, null)
+      cb(null)
     } catch (err) {
-      cb(null, err)
+      cb(err)
     }
   }
 

@@ -110,7 +110,7 @@ NetworkDropdown.prototype.render = function () {
       h('div.network-dropdown-title', {}, this.context.t('networks')),
 
       h('div.network-dropdown-divider'),
-      h('div.network-dropdown-content', {style: { textAlign: 'center', fontSize: '16px' }}, h("Provider: " + rpcType)),
+      h('div.network-dropdown-content', {style: { textAlign: 'center', fontSize: '16px' }}, "Provider: " + rpcType),
       h('div.network-dropdown-content',
         {},
         this.context.t('defaultNetwork')

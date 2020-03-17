@@ -10104,9 +10104,9 @@ eth-json-rpc-filters@^4.1.1:
     lodash.flatmap "^4.5.0"
     safe-event-emitter "^1.0.1"
 
-eth-json-rpc-in3@0.1.9:
+eth-json-rpc-in3@^0.1.9:
   version "0.1.9"
-  resolved "https://npm.slock.it/eth-json-rpc-in3/-/eth-json-rpc-in3-0.1.9.tgz#85fa7c3afbcfce40092df15fa04729644b0d066f"
+  resolved "https://registry.npmjs.org/eth-json-rpc-in3/-/eth-json-rpc-in3-0.1.9.tgz#85fa7c3afbcfce40092df15fa04729644b0d066f"
   integrity sha512-KFvaqy8+T8m1kNM7FoClrlahu63KD6IolRwhqRCokc9YyYE/hHIAQo+cwtT4Z2R7+juC/UE93JJhvUnIIUOApw==
   dependencies:
     "@babel/runtime" "^7.5.5"
@@ -14075,7 +14075,7 @@ in-publish@^2.0.0:
 
 in3-asmjs@2.1.0:
   version "2.1.0"
-  resolved "https://npm.slock.it/in3-asmjs/-/in3-asmjs-2.1.0.tgz#9cd04df81043998934274ef9d6414cc952a45697"
+  resolved "https://registry.npmjs.org/in3-asmjs/-/in3-asmjs-2.1.0.tgz#9cd04df81043998934274ef9d6414cc952a45697"
   integrity sha512-/f86fnQQNvLufp4fdNpVmbxnVQgrDM016LaFIgdBsFKorY+C5QIgRLzJVGbNkJCR4yJ2c9kWtvYczyaKt4f2rg==
 
 indefinite-observable@^1.0.1:

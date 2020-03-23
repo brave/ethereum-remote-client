@@ -1,5 +1,18 @@
 # Changelog
 
+## Remote Component([0.1.51])(https://github.com/brave/ethereum-remote-client/releases/tag/0.1.51)), Browser Component: `1.0.17`(6-Mar-2020)
+- [brave-browser#8530](https://github.com/brave/brave-browser/issues/8530): Fix incorrect ledger account for transaction signing
+- [brave-browser#8438](https://github.com/brave/brave-browser/issues/8438): Fix muntiple scroll bars on wallet page
+- [brave-browser#8223](https://github.com/brave/brave-browser/issues/8223): Fix `eth_signTypedData` button rendering on confirmation page
+- [brave-browser#8085](https://github.com/brave/brave-browser/issues/8085): Fix dark theme issues
+- [brave-browser#7141](https://github.com/brave/brave-browser/issues/7141): Fix wallet popup to be more responsive  
+- [MetaMask/metamask-extension#8162](https://github.com/MetaMask/metamask-extension/pull/8162): Remove invalid Ledger accounts
+- [MetaMask/metamask-extension#8162](https://github.com/MetaMask/metamask-extension/pull/8163): Fix account index check
+- [MetaMask/metamask-extension#8154](https://github.com/MetaMask/metamask-extension/pull/8154): Prevent signing from incorrect Ledger account
+- [MetaMask/metamask-extension#8053](https://github.com/MetaMask/metamask-extension/pull/8053): Inline the source text not the binary encoding for inpage script
+- [MetaMask/metamask-extension#8049](https://github.com/MetaMask/metamask-extension/pull/8049): Add warning to watchAsset API when editing a known token
+- [MetaMask/metamask-extension#8051](https://github.com/MetaMask/metamask-extension/pull/8051): Update Wyre ETH purchase url
+- [MetaMask/metamask-extension#8059](https://github.com/MetaMask/metamask-extension/pull/8059): Attempt ENS resolution on any valid domain name
 
 ## Remote Component([0.1.44](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.44)), Browser Component: `1.0.16`(12-Feb-2020)
 - [brave-browser#7537](https://github.com/brave/brave-browser/issues/7537): Fix `Restore account? Import using account seed phrase`  

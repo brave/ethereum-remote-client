@@ -1,6 +1,21 @@
 const ObservableStore = require('obs-store')
 const bgUtil = require('brave-bitgo-client')
 
+const supportedCoins = {
+  btc: 'Bitcoin',
+  bch: 'Bitcoin Cash',
+  btg: 'Bitcoin Gold',
+  bsv: 'Bitcoin SV',
+  zec: 'ZCash',
+  xlm: 'Stellar',
+  xrp: 'Ripple',
+  ltc: 'Litecoin',
+  dash: 'Dash',
+  algo: 'Algorand',
+  trx: 'Tron',
+  eos: 'Eos'
+}
+
 const uint8ToArrayBuf = (array) => {
   return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset)
 }
@@ -43,22 +58,8 @@ class BitGoController {
     return window.fetch(req)
   }
 
-  async getSupportedCoins () {
-    const response = await this.request('get-all-coins')
-    if (!response.ok) {
-      return
-    }
-    const resp = await response.json()
-    if (resp) {
-      this.store.updateState({
-        bitgoCoins: resp
-      })
-    }
-    return resp
-  }
-
   async createWallet (coin) {
-    if (!this.store.getState().bitgoCoins.includes(coin)) {
+    if (!supportedCoins[coin]) {
       throw new Error(`Coin type ${coin} is not supported.`)
     }
     const seed = await promiseGetSeed(uint8ToArrayBuf(this.encryptionKey))

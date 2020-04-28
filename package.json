@@ -89,6 +89,7 @@
     "bluebird": "^3.5.0",
     "bn.js": "^4.11.7",
     "boron": "^0.2.3",
+    "brave-bitgo-client": "github:brave/bitgo-client#3300bcb9b59cdfbfe739d43db17f8bc655d6eae3",
     "browser-passworder": "^2.0.3",
     "browserify-derequire": "^0.9.4",
     "browserify-unibabel": "^3.0.0",

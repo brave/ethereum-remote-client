@@ -70,7 +70,8 @@
     "swarm-js": "^0.1.40",
     "minimist": "^1.2.3",
     "node-sass": "^4.13.1",
-    "kind-of": "^6.0.3"
+    "kind-of": "^6.0.3",
+    "sanitize-html": "1.13.0"
   },
   "dependencies": {
     "3box": "^1.10.2",

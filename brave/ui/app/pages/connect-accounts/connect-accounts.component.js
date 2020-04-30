@@ -18,18 +18,17 @@ module.exports = class BraveConnectAccounts extends PureComponent {
 
   static propTypes = {
     history: PropTypes.object,
+    createBitGoWallet: PropTypes.func,
   }
 
   constructor (props) {
     super(props)
 
-    this.bitGoCurrencies = Object.keys(supportedCoins).map((coin) => {
-      return supportedCoins[coin]
-    })
 
     const checkedAssets = {}
-    this.bitGoCurrencies.map((asset) => {
-      checkedAssets[asset] = false
+
+    Object.keys(supportedCoins).map((key) => {
+      checkedAssets[key] = false
     })
 
     this.state = {
@@ -47,6 +46,9 @@ module.exports = class BraveConnectAccounts extends PureComponent {
   }
 
   onCreateBitGoWallets = () => {
+    for (let coin in this.state.checkedAssets) {
+      this.props.createBitGoWallet(coin)
+    }
     this.props.history.push(BRAVE_BITGO_WALLET_INDEX)
   }
 
@@ -87,22 +89,22 @@ module.exports = class BraveConnectAccounts extends PureComponent {
             </h3>
             <p>{'A new wallet will be generated for each coin checked. Two of three private keys are stored on BitGo. The third key will be stored securely on Brave.'}</p>
             <div className="__wallets-area">
-              {this.bitGoCurrencies.map((asset) => {
-                const isChecked = checkedAssets[asset]
+              {Object.keys(supportedCoins).map((key) => {
+                const isChecked = checkedAssets[key]
 
                 return (
                   <div
-                    key={`${asset}-wallet`}
+                    key={`${key}-wallet`}
                     className={'__bitgo-wallet-item'}
-                    onClick={this.checkAsset.bind(this, asset)}>
+                    onClick={this.checkAsset.bind(this, key)}>
                       <div className="__left-info">
                         <div className={`__checkmark ${isChecked ? 'checked' : ''}`}>
                         </div>
                         <div className="__asset-icon">
-                          {this.getCryptoImage(asset)}
+                          {this.getCryptoImage(key)}
                         </div>
                         <div className="__asset-name">
-                          {asset}
+                          {supportedCoins[key]}
                         </div>
                       </div>
                   </div>
@@ -124,7 +126,7 @@ module.exports = class BraveConnectAccounts extends PureComponent {
     const { showBitGoModal } = this.state
 
     return (
-      <div className="welcome-container" style={{ width: '62vw' }}>
+      <div className="welcome-container">
         {
           showBitGoModal
           ? this.renderBitGoModal()
@@ -138,7 +140,6 @@ module.exports = class BraveConnectAccounts extends PureComponent {
             <ConnectWallet
               type="bitgo"
               onCreate={this.onConnectBitGoWallets}
-              onRestore={this.onConnectFinish}
             />
             <ConnectWallet
               type="ledger"

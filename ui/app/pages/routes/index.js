@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Route, Switch, withRouter, matchPath } from 'react-router-dom'
 import { compose } from 'recompose'
-import actions from '../../store/actions'
+import actions from '~/brave/ui/app/store/actions'
 import log from 'loglevel'
 import IdleTimer from 'react-idle-timer'
 import {getNetworkIdentifier, preferencesSelector} from '../../selectors/selectors'
@@ -20,12 +20,12 @@ const Sidebar = require('../../components/app/sidebars').default
 const { WALLET_VIEW_SIDEBAR } = require('../../components/app/sidebars/sidebar.constants')
 
 // other views
-import Home from '../home'
+import Home from '~/brave/ui/app/pages/home'
 import Settings from '../settings'
 import Authenticated from '../../helpers/higher-order-components/authenticated'
 import Initialized from '../../helpers/higher-order-components/initialized'
 import Lock from '../lock'
-const RestoreVaultPage = require('../keychains/restore-vault').default
+const RestoreVaultPage = require('~/brave/ui/app/pages/keychains/restore-vault').default
 const RevealSeedConfirmation = require('../keychains/reveal-seed')
 const MobileSyncPage = require('../mobile-sync')
 const AddTokenPage = require('../add-token')
@@ -43,7 +43,7 @@ const Modal = require('../../components/app/modals').Modal
 // Global Alert
 const Alert = require('../../components/ui/alert')
 
-import AppHeader from '../../components/app/app-header'
+import AppHeader from '~/brave/ui/app/components/app/app-header'
 import UnlockPage from '../unlock-page'
 
 import {
@@ -51,7 +51,7 @@ import {
 } from '../../selectors/transactions'
 
 // Brave
-import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts/connect-accounts.component'
+import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts/connect-accounts'
 import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet/provider-wallet.component'
 
 // Routes

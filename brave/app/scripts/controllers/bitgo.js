@@ -74,10 +74,12 @@ class BitGoController {
       userPub: userKeychain.pub,
       backupPub: backupKeychain.pub
     }
+    console.log({req})
     const response = await this.request('create-wallet', {
       method: 'POST',
       body: JSON.stringify(req)
     })
+    console.log({response})
     if (!response.ok) {
       return
     }

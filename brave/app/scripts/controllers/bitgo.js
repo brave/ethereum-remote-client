@@ -1,5 +1,5 @@
 const ObservableStore = require('obs-store')
-const bgUtil = require('brave-bitgo-client')
+const bgUtil = require('brave-bitgo-client').util
 
 const supportedCoins = {
   btc: 'Bitcoin',
@@ -39,15 +39,13 @@ class BitGoController {
     this.proxyOrigin = opts.isProduction
       ? 'https://bitgo-proxy.brave.com/' // TODO: update this
       : 'http://localhost:3000/'
-    this.store = new ObservableStore(initState)
-    // keyringController must be initialized with the password and unlocked
-    // TODO: refactor KeyringController so we're not calling a private interface
-    if (opts.password) {
-      opts.keyringController.submitPassword(opts.password)
-    }
-    this.encryptionKey = opts.keyringController._getSubkey('ethwallet-encryptor')
-    // to get project ID, call chrome.braveWallet.getProjectID
+    this.password = opts.password
     this.braveServiceKey = opts.projectId
+    this.store = new ObservableStore(initState)
+    this.keyringController = opts.keyringController
+    chrome.braveWallet.getProjectID((projectId) => {
+      this.braveServiceKey = projectId
+    })
   }
 
   request (path, opts) {
@@ -56,6 +54,12 @@ class BitGoController {
     headers.append('x-brave-key', this.braveServiceKey)
     const req = new window.Request(url, Object.assign({ headers }, opts))
     return window.fetch(req)
+  }
+
+  async unlockAndSetKey (password) {
+    this.password = password
+    await this.keyringController.submitPassword(this.password)
+    this.encryptionKey = await this.keyringController._getSubkey('ethwallet-encryptor')
   }
 
   async createWallet (coin) {

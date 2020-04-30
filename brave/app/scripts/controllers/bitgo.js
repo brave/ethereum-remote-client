@@ -187,4 +187,7 @@ class BitGoController {
   }
 }
 
-module.exports = BitGoController
+module.exports = {
+  BitGoController,
+  supportedCoins
+}

@@ -8,10 +8,34 @@ module.exports = function (state, action) {
   newState.batTokenAdded = newState.batTokenAdded || false
   newState.rewardsDisclosureAccepted = newState.rewardsDisclosureAccepted || false
 
+  // BitGo
+  newState.bitGoBalances = newState.bitGoBalances || {}
+  newState.bitGoTransfers = newState.bitGoTransfers || {}
+
   switch (action.type) {
     case actions.SET_BAT_TOKEN_ADDED:
       return extend(newState, {
         batTokenAdded: action.value,
+      })
+    case actions.SET_BITGO_BALANCE:
+      const updatedBitGoBalances = {
+        ...newState.bitGoBalances
+      }
+
+      updatedBitGoBalances[action.coin] = action.balance
+
+      return extend(newState, {
+        bitGoBalances: updatedBitGoBalances
+      })
+    case actions.SET_BITGO_TRANSFERS:
+      const updatedBitGoTransfers = {
+        ...newState.bitGoTransfers
+      }
+
+      updatedBitGoTransfers[action.coin] = action.transfers
+
+      return extend(newState, {
+        bitGoTransfers: updatedBitGoTransfers
       })
     default:
       return newState

@@ -9,6 +9,15 @@ MetaMaskActions.setRewardsDisclosureAccepted = setRewardsDisclosureAccepted
 
 MetaMaskActions.showModal = showModal
 
+// BitGo
+MetaMaskActions.createBitGoWallet = createBitGoWallet
+MetaMaskActions.getBitGoWalletBalance = getBitGoWalletBalance
+MetaMaskActions.getBitGoWalletTransfers = getBitGoWalletTransfers
+MetaMaskActions.sendBitGoTransaction = sendBitGoTransaction
+
+MetaMaskActions.SET_BITGO_BALANCE = 'SET_BITGO_BALANCE'
+MetaMaskActions.SET_BITGO_TRANSFERS = 'SET_BITGO_TRANSFERS'
+
 var background = null // eslint-disable-line no-var
 const parentSetBackground = MetaMaskActions._setBackgroundConnection
 
@@ -18,6 +27,66 @@ function setBackgroundConnection (newConnection) {
 }
 
 MetaMaskActions._setBackgroundConnection = setBackgroundConnection
+
+function createBitGoWallet (coin) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.createBitGoWallet(coin, (err) => {
+        if (err) {
+          dispatch(MetaMaskActions.displayWarning(err.message))
+          return reject(err)
+        }
+        resolve()
+      })
+    })
+  }
+}
+
+function getBitGoWalletBalance (coin) {
+  return (dispatch) => {
+    background.getBitGoWalletBalance(coin, (err, balance) => {
+      if (err) {
+        log.error(err)
+        return dispatch(actions.displayWarning(`Could not get BitGo balances for ${coin}`))
+      }
+      dispatch({
+        coin,
+        balance,
+        type: MetaMaskActions.SET_BITGO_BALANCE
+      })
+    })
+  }
+}
+
+function getBitGoWalletTransfers (coin) {
+  return (dispatch) => {
+    background.getBitGoWalletTransfers(coin, (err, transfers) => {
+      if (err) {
+        log.error(err)
+        return dispatch(actions.displayWarning(`Could not get BitGo transfers for ${coin}`))
+      }
+      dispatch({
+        coin,
+        transfers,
+        type: MetaMaskActions.SET_BITGO_TRANSFERS
+      })
+    })
+  }
+}
+
+function sendBitGoTransaction (coin, amount, recipientAddress) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.sendBitGoTransaction(coin, amount, recipientAddress, (err) => {
+        if (err) {
+          dispatch(MetaMaskActions.displayWarning(err.message))
+          return reject(err)
+        }
+        resolve()
+      })
+    })
+  }
+}
 
 function setBatTokenAdded () {
   return (dispatch) => {

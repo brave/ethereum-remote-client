@@ -37,10 +37,8 @@ class BitGoController {
   constructor (opts = {}) {
     const initState = opts.initState || {}
     this.proxyOrigin = opts.isProduction
-      ? 'https://bitgo-proxy.brave.com/' // TODO: update this
+      ? 'https://bitgo-proxy.brave.com/'
       : 'http://localhost:3000/'
-    this.password = opts.password
-    this.braveServiceKey = opts.projectId
     this.store = new ObservableStore(initState)
     this.keyringController = opts.keyringController
     chrome.braveWallet.getProjectID((projectId) => {

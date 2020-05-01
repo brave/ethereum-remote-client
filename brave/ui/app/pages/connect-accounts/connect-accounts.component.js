@@ -76,6 +76,11 @@ module.exports = class BraveConnectAccounts extends PureComponent {
   }
 
   getCryptoImage = (asset) => {
+    // temporary
+    if (asset === 'bsv' || asset === 'btg' || asset === 'eos' || asset === 'algo') {
+      asset = 'btc'
+    }
+
     return (
       <img src={`images/${asset}-small.png`} />
     )

@@ -1,6 +1,88 @@
 import React, { PureComponent } from 'react'
 
 module.exports = class BraveProviderWallet extends PureComponent {
+  static contextTypes = {
+    t: PropTypes.func,
+  }
+
+  static propTypes = {
+    bitGoBalances: PropTypes.object,
+    bitGoTransfers: PropTypes.object,
+    bitGoCreatedWallets: PropTypes.array,
+    getBitGoWalletBalance: PropTypes.func,
+    getBitGoWalletTransfers: PropTypes.func,
+    sendBitGoTransaction: PropTypes.func,
+  }
+
+  constructor (props) {
+    super (props)
+
+    this.refreshTimer = null
+
+    const { bitGoCreatedWallets } = this.props
+    const currentAsset = bitGoCreatedWallets.length ? bitGoCreatedWallets[0] : ''
+
+    this.state = {
+      currentAsset
+    }
+  }
+
+  componentDidMount () {
+    this.updateBitGoInfo()
+    this.refreshTimer = setInterval(this.updateBitGoInfo, 150000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.refreshTimer)
+  }
+
+  updateBitGoInfo = () => {
+    const {
+      getBitGoWalletBalance,
+      getBitGoWalletTransfers,
+    } = this.props
+
+    getBitGoWalletBalance()
+    getBitGoWalletTransfers()
+  }
+
+  getCryptoIcon = (asset, large = true) => {
+    const ext = large ? 'large' : 'small'
+
+    return (
+      <img src={`images/${asset}-${ext}.png`} />
+    )
+  }
+
+  renderAssetList = () => {
+    const {
+      bitGoBalances,
+      bitGoCreatedWallets,
+    } = this.props
+
+    return (
+      <div className="__asset-list">
+        {bitGoCreatedWallets.map((asset) => {
+          const balance = bitGoBalances[asset] || '0.00'
+          const activeClass = this.state.currentAsset === asset ? 'active' : ''
+
+          return (
+            <div key={`asset-${asset}`} className={`__asset ${activeClass}`}>
+              <div className="__logo">
+                {this.getCryptoIcon(asset)}
+              </div>
+              <span className="__ticker">{`${balance} ${asset.toUpperCase()}`}</span>
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  renderTransactions = () => {
+    const { bitGoTransfers } = this.props
+    return null
+  }
 
   render () {
     return (
@@ -12,22 +94,10 @@ module.exports = class BraveProviderWallet extends PureComponent {
               <span className="__balance">$0.00</span>
             </div>
           </div>
-          <div className="__asset-list">
-            <div className="__asset active">
-              <div className="__logo">
-                <img src="https://cryptoicons.org/api/color/btc/50/fabb60" />
-              </div>
-              <span className="__ticker">{'0 BTC'}</span>
-            </div>
-            <div className="__asset">
-              <div className="__logo">
-                <img src="https://cryptoicons.org/api/color/xrp/50/000000" />
-              </div>
-              <span className="__ticker">{'0 XRP'}</span>
-            </div>
-          </div>
+          {this.renderAssetList()}
         </div>
         <div className="__activity-pane">
+          {this.renderTransactions()}
         </div>
       </div>
     )

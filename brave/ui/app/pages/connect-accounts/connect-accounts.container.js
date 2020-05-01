@@ -5,7 +5,11 @@ import { createBitGoWallet } from '../../store/actions'
 import ConnectAccounts from './connect-accounts.component'
 
 const mapStateToProps = ({ metamask }) => {
-  return {}
+  const { bitGoCreatedWallets } = metamask
+
+  return {
+    bitGoCreatedWallets
+  }
 }
 
 const mapDispatchToProps = dispatch => {

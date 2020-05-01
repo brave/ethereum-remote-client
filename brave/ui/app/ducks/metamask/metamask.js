@@ -11,6 +11,7 @@ module.exports = function (state, action) {
   // BitGo
   newState.bitGoBalances = newState.bitGoBalances || {}
   newState.bitGoTransfers = newState.bitGoTransfers || {}
+  newState.bitGoCreatedWallets = newState.bitGoCreatedWallets || []
 
   switch (action.type) {
     case actions.SET_BAT_TOKEN_ADDED:
@@ -36,6 +37,13 @@ module.exports = function (state, action) {
 
       return extend(newState, {
         bitGoTransfers: updatedBitGoTransfers
+      })
+
+    case actions.SET_BITGO_WALLET_CREATED:
+      const updatedBitGoCreatedWallets = newState.bitGoCreatedWallets.push(action.coin)
+
+      return extend(newState, {
+        bitGoCreatedWallets: updatedBitGoCreatedWallets
       })
     default:
       return newState

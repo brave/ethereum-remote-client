@@ -17,6 +17,7 @@ MetaMaskActions.sendBitGoTransaction = sendBitGoTransaction
 
 MetaMaskActions.SET_BITGO_BALANCE = 'SET_BITGO_BALANCE'
 MetaMaskActions.SET_BITGO_TRANSFERS = 'SET_BITGO_TRANSFERS'
+MetaMaskActions.SET_BITGO_WALLET_CREATED = 'SET_BITGO_WALLET_CREATED'
 
 var background = null // eslint-disable-line no-var
 const parentSetBackground = MetaMaskActions._setBackgroundConnection
@@ -36,6 +37,10 @@ function createBitGoWallet (coin) {
           dispatch(MetaMaskActions.displayWarning(err.message))
           return reject(err)
         }
+        dispatch({
+          coin,
+          type: MetaMaskActions.SET_BITGO_WALLET_CREATED
+        })
         resolve()
       })
     })

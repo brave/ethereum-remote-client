@@ -19,15 +19,23 @@ module.exports = class BraveConnectAccounts extends PureComponent {
   static propTypes = {
     history: PropTypes.object,
     createBitGoWallet: PropTypes.func,
+    bitGoCreatedWallets: PropTypes.array,
   }
 
   constructor (props) {
     super(props)
 
-
     const checkedAssets = {}
+    const { bitGoCreatedWallets } = this.props
+    this.bitGoCreateableAssets = {}
 
-    Object.keys(supportedCoins).map((key) => {
+    for (let coin in supportedCoins) {
+      if (!bitGoCreatedWallets.includes(coin)) {
+        this.bitGoCreateableAssets[coin] = supportedCoins[coin]
+      }
+    }
+
+    Object.keys(this.bitGoCreateableAssets).map((key) => {
       checkedAssets[key] = false
     })
 
@@ -94,7 +102,7 @@ module.exports = class BraveConnectAccounts extends PureComponent {
             </h3>
             <p>{'A new wallet will be generated for each coin checked. Two of three private keys are stored on BitGo. The third key will be stored securely on Brave.'}</p>
             <div className="__wallets-area">
-              {Object.keys(supportedCoins).map((key) => {
+              {Object.keys(this.bitGoCreateableAssets).map((key) => {
                 const isChecked = checkedAssets[key]
 
                 return (
@@ -109,7 +117,7 @@ module.exports = class BraveConnectAccounts extends PureComponent {
                           {this.getCryptoImage(key)}
                         </div>
                         <div className="__asset-name">
-                          {supportedCoins[key]}
+                          {this.bitGoCreateableAssets[key]}
                         </div>
                       </div>
                   </div>

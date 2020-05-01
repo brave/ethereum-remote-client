@@ -46,9 +46,14 @@ module.exports = class BraveConnectAccounts extends PureComponent {
   }
 
   onCreateBitGoWallets = () => {
-    for (let coin in this.state.checkedAssets) {
-      this.props.createBitGoWallet(coin)
+    const { checkedAssets } = this.state
+
+    for (let coin in checkedAssets) {
+      if (checkedAssets[coin]) {
+        this.props.createBitGoWallet(coin)
+      }
     }
+
     this.props.history.push(BRAVE_BITGO_WALLET_INDEX)
   }
 
@@ -64,7 +69,7 @@ module.exports = class BraveConnectAccounts extends PureComponent {
 
   getCryptoImage = (asset) => {
     return (
-      <img src="" />
+      <img src={`images/${asset}-small.png`} />
     )
   }
 

@@ -51,7 +51,7 @@ import {
 } from '../../selectors/transactions'
 
 // Brave
-import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts/connect-accounts'
+import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts'
 import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet/provider-wallet.component'
 
 // Routes

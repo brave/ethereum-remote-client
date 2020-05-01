@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
-import { createBitGoWallet } from '../../../store/actions'
+import { createBitGoWallet } from '../../store/actions'
 import ConnectAccounts from './connect-accounts.component'
 
 const mapStateToProps = ({ metamask }) => {

@@ -1,1 +1,1 @@
-export { default } from './provider-wallets.container'
+export { default } from './provider-wallet.container'

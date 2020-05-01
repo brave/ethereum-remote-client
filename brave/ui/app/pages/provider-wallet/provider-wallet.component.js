@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 module.exports = class BraveProviderWallet extends PureComponent {
   static contextTypes = {

@@ -41,9 +41,7 @@ class BitGoController {
       : 'http://localhost:3000/'
     this.store = new ObservableStore(initState)
     this.keyringController = opts.keyringController
-    chrome.braveWallet.getProjectID((projectId) => {
-      this.braveServiceKey = projectId
-    })
+    this.braveServiceKey = opts.projectId
   }
 
   request (path, opts) {
@@ -72,12 +70,10 @@ class BitGoController {
       userPub: userKeychain.pub,
       backupPub: backupKeychain.pub
     }
-    console.log({req})
     const response = await this.request('create-wallet', {
       method: 'POST',
       body: JSON.stringify(req)
     })
-    console.log({response})
     if (!response.ok) {
       return
     }

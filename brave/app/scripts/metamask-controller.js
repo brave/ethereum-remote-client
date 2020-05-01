@@ -7,14 +7,17 @@ module.exports = class BraveController extends MetamaskController {
   constructor (opts) {
     super(opts)
 
-    this.bitGoController = new BitGoController({
-      ...this.opts,
-      keyringController: this.keyringController
-    })
+    chrome.braveWallet.getProjectID((projectId) => {
+      this.bitGoController = new BitGoController({
+        ...this.opts,
+        projectId: projectId,
+        keyringController: this.keyringController
+      })
 
-    if (this.keyringController.password) {
-      this.bitGoController.unlockAndSetKey(this.keyringController.password)
-    }
+      if (this.keyringController.password) {
+        this.bitGoController.unlockAndSetKey(this.keyringController.password)
+      }
+    })
   }
 
   getApi () {

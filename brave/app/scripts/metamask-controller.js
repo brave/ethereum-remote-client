@@ -17,16 +17,6 @@ module.exports = class BraveController extends MetamaskController {
     }
   }
 
-  async createNewVaultAndKeychain (password) {
-    await super.createNewVaultAndKeychain(password)
-    this.bitGoController.unlockAndSetKey(password)
-  }
-
-  async createNewVaultAndRestore (password) {
-    await super.createNewVaultAndRestore(password)
-    this.bitGoController.unlockAndSetKey(password)
-  }
-
   getApi () {
     const api = super.getApi()
 
@@ -40,6 +30,7 @@ module.exports = class BraveController extends MetamaskController {
     api.getBitGoWalletBalance = nodeify(this.bitGoController.getBalance, this.bitGoController)
     api.getBitGoWalletTransfers = nodeify(this.bitGoController.getTransfers, this.bitGoController)
     api.sendBitGoTransaction = nodeify(this.bitGoController.sendTx, this.bitGoController)
+    api.unlockAndSetKey = nodeify(this.bitGoController.unlockAndSetKey, this.bitGoController)
 
     return api
   }

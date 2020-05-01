@@ -14,6 +14,8 @@ MetaMaskActions.createBitGoWallet = createBitGoWallet
 MetaMaskActions.getBitGoWalletBalance = getBitGoWalletBalance
 MetaMaskActions.getBitGoWalletTransfers = getBitGoWalletTransfers
 MetaMaskActions.sendBitGoTransaction = sendBitGoTransaction
+MetaMaskActions.createNewVault = createNewVault
+MetaMaskActions.createNewVaultAndRestore = createNewVaultAndRestore
 
 MetaMaskActions.SET_BITGO_BALANCE = 'SET_BITGO_BALANCE'
 MetaMaskActions.SET_BITGO_TRANSFERS = 'SET_BITGO_TRANSFERS'
@@ -90,6 +92,58 @@ function sendBitGoTransaction (coin, amount, recipientAddress) {
         resolve()
       })
     })
+  }
+}
+
+function createNewVault (password) {
+  return new Promise((resolve, reject) => {
+    background.createNewVaultAndKeychain(password, error => {
+      if (error) {
+        return reject(error)
+      }
+      background.unlockAndSetKey(password, (err) => {
+        if (err) {
+          return dispatch(MetaMaskActions.displayWarning(err.message))
+        }
+      })
+      resolve(true)
+    })
+  })
+}
+
+function createNewVaultAndRestore (password, seed) {
+  return (dispatch) => {
+    dispatch(MetaMaskActions.showLoadingIndication())
+    log.debug(`background.createNewVaultAndRestore`)
+    let vault
+    return new Promise((resolve, reject) => {
+      background.createNewVaultAndRestore(password, seed, (err, _vault) => {
+        if (err) {
+          return reject(err)
+        }
+        vault = _vault
+        resolve()
+      })
+    })
+      .then(() => {
+        background.unlockAndSetKey(password, (err) => {
+          if (err) {
+            return dispatch(MetaMaskActions.displayWarning(err.message))
+          }
+          return true
+        })
+      })
+      .then(() => dispatch(MetaMaskActions.unMarkPasswordForgotten()))
+      .then(() => {
+        dispatch(MetaMaskActions.showAccountsPage())
+        dispatch(MetaMaskActions.hideLoadingIndication())
+        return vault
+      })
+      .catch(err => {
+        dispatch(MetaMaskActions.displayWarning(err.message))
+        dispatch(MetaMaskActions.hideLoadingIndication())
+        return Promise.reject(err)
+      })
   }
 }
 

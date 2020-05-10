@@ -23,7 +23,7 @@ try {
   // Approved exceptions only, in cases where
   // both a patch will likely not be available
   // and where the actual risk is low.
-  const exceptions = ['decompress']
+  const exceptions = []
 
   // There is erroneous data that is not valid JSON that
   // yarn can produce, as they do not echo out a valid JSON

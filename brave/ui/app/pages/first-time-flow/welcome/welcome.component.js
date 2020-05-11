@@ -25,12 +25,22 @@ module.exports = class BraveWelcome extends PureComponent {
     this.props.history.push(INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE)
   }
 
+  renderModal = () => {
+    if (chrome.braveWallet.hasOwnProperty('loadUI')) {
+      return null
+    }
+
+    return (
+      <WelcomeModal />
+    )
+  }
+
   render () {
     const { t } = this.context
 
     return (
       <div className="welcome-container">
-        <WelcomeModal />
+        {this.renderModal()}
         <div className="content">
           <div>
             <div className="welcome-title">

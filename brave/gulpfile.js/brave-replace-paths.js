@@ -267,6 +267,12 @@ const createBraveReplacePathsTask = () => {
           `'${bravePrefix}app/scripts/controllers/recent-blocks'`
         )
       )
+      .pipe(
+        replace(
+          /'gaba'/gm,
+          `'${bravePrefix}lib/gaba'`
+        )
+      )
       .pipe(gulp.dest(file => file.base))
   })
 }

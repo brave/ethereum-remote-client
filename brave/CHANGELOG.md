@@ -1,6 +1,11 @@
 # Changelog
 
-## Remote Component([0.1.51])(https://github.com/brave/ethereum-remote-client/releases/tag/0.1.51)), Browser Component: `1.0.17`(6-Mar-2020)
+## Remote Component([0.1.52](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.52)), Browser Component: `1.0.18`(14-May-2020)
+- [brave-browser#9757](https://github.com/brave/brave-browser/issues/9757): Implemented lazy install and loading of Crypto Wallet component
+- [brave-browser#8470](https://github.com/brave/brave-browser/issues/8470): Fix decompress module to resolve security audit warning
+
+
+## Remote Component([0.1.51](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.51)), Browser Component: `1.0.17`(6-Mar-2020)
 - [brave-browser#8530](https://github.com/brave/brave-browser/issues/8530): Fix incorrect ledger account for transaction signing
 - [brave-browser#8438](https://github.com/brave/brave-browser/issues/8438): Fix muntiple scroll bars on wallet page
 - [brave-browser#8223](https://github.com/brave/brave-browser/issues/8223): Fix `eth_signTypedData` button rendering on confirmation page

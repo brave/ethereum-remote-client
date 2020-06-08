@@ -1,5 +1,10 @@
 # Changelog
 
+
+## Remote Component([0.1.54](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.54)), Browser Component: `1.0.19`(03-June-2020)
+- [brave-browser#9754](https://github.com/brave/brave-browser/issues/9754): Implemented proxy cache for ETH phishing blacklist
+- [brave-browser#8925](https://github.com/brave/brave-browser/issues/8925): Fixed background polling of sites when component is not loaded 
+
 ## Remote Component([0.1.52](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.52)), Browser Component: `1.0.18`(14-May-2020)
 - [brave-browser#9757](https://github.com/brave/brave-browser/issues/9757): Implemented lazy install and loading of Crypto Wallet component
 - [brave-browser#8470](https://github.com/brave/brave-browser/issues/8470): Fix decompress module to resolve security audit warning

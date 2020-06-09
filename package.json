@@ -72,7 +72,9 @@
     "node-sass": "^4.13.1",
     "kind-of": "^6.0.3",
     "decompress": "^4.2.1",
-    "yargs-parser": "^13.1.2"
+    "yargs-parser": "^13.1.2",
+    "apollo-server-express": "^2.4.12",
+    "apollo-server-core": "^2.4.12"
   },
   "dependencies": {
     "3box": "^1.10.2",

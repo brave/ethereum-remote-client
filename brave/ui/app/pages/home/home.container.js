@@ -3,7 +3,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { unconfirmedTransactionsCountSelector } from '../../../../../ui/app/selectors/confirm-transaction'
-import { getCurrentEthBalance, getDaiV1Token } from '../../../../../ui/app/selectors/selectors'
+import { getCurrentEthBalance } from '../../../../../ui/app/selectors/selectors'
 import {
   addTokens,
   setHardwareConnect,
@@ -48,7 +48,6 @@ const mapStateToProps = state => {
     showRestorePrompt,
     selectedAddress,
     threeBoxLastUpdated,
-    hasDaiV1Token: Boolean(getDaiV1Token(state)),
     batTokenAdded,
     hardwareConnect,
     providerRequests,

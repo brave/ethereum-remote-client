@@ -1,3 +1,11 @@
 .request-signature__container {
   height: 620px;
 }
+
+.signature-request-message {
+
+  &--root {
+    max-height: 220px;
+    overflow-y: scroll;
+  }
+}

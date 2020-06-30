@@ -469,7 +469,7 @@
     "message": "Email us!"
   },
   "endOfFlowMessage1": {
-    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+    "message": "You passed the test - keep your seed phrase safe, it's your responsibility!"
   },
   "endOfFlowMessage2": {
     "message": "Tips on storing it safely"
@@ -484,13 +484,13 @@
     "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
   },
   "endOfFlowMessage6": {
-    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security. The seed phrase only works with Brave; to export your wallet private key to use with a different application, go to Details -> Export Private Key."
   },
   "endOfFlowMessage7": {
     "message": "If you ever have questions or see something fishy, email support@metamask.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase. Learn more."
+    "message": "MetaMask cannot recover your seed phrase. Learn more."
   },
   "endOfFlowMessage9": {
     "message": "Learn more."
@@ -1066,7 +1066,7 @@
     "message": "Seed Phrase"
   },
   "revealSeedWordsDescription": {
-    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret. This phrase only works with Brave; to export your private key to use with a different application, click on Details -> Export Private Key."
   },
   "revealSeedWordsWarningTitle": {
     "message": "DO NOT share this phrase with anyone!"

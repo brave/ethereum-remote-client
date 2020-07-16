@@ -74,7 +74,8 @@
     "decompress": "^4.2.1",
     "yargs-parser": "^13.1.2",
     "apollo-server-express": "^2.4.12",
-    "apollo-server-core": "^2.4.12"
+    "apollo-server-core": "^2.4.12",
+    "lodash": "^4.17.19"
   },
   "dependencies": {
     "3box": "^1.10.2",

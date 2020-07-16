@@ -229,4 +229,15 @@
   .provider-approval-visual__check {
     background: url(/images/provider-approval-check.svg) no-repeat;
   }
+
+  .signature-request-message {
+
+    &--root {
+      background: #282828;
+    }
+  }
+
+  .signature-request.page-container {
+    background: #282828;
+  }
 }

@@ -1,5 +1,22 @@
 # Changelog
 
+## Remote Component([0.1.56](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.56)), Browser Component: `1.0.20`(17-July-2020)
+- [brave-browser#9775](https://github.com/brave/brave-browser/issues/9775): Fixed connect popup responsiveness when using "Sign Typed Data"
+- [#8446](https://github.com/MetaMask/metamask-extension/pull/8446): Fix popup not opening
+- [#8449](https://github.com/MetaMask/metamask-extension/pull/8449): Skip adding history entry for empty txMeta diffs
+- [#8447](https://github.com/MetaMask/metamask-extension/pull/8447): Delete Dai/Sai migration notification
+- [#8460](https://github.com/MetaMask/metamask-extension/pull/8460): Update deposit copy for Wyre
+- [#8458](https://github.com/MetaMask/metamask-extension/pull/8458): Snapshot txMeta without cloning history
+- [#8459](https://github.com/MetaMask/metamask-extension/pull/8459): Fix method registry initialization
+- [#8455](https://github.com/MetaMask/metamask-extension/pull/8455): Add Dai/Sai to currency display
+- [#8461](https://github.com/MetaMask/metamask-extension/pull/8461): Prevent network switch upon close of network timeout overlay
+- [#8457](https://github.com/MetaMask/metamask-extension/pull/8457): Add INR currency option
+- [#8462](https://github.com/MetaMask/metamask-extension/pull/8462): Fix display of Kovan and Rinkeby chain IDs
+- [#8465](https://github.com/MetaMask/metamask-extension/pull/8465): Use ethereum-ens-network-map for network support
+- [#8463](https://github.com/MetaMask/metamask-extension/pull/8463): Update deprecated Etherscam link
+- [#8474](https://github.com/MetaMask/metamask-extension/pull/8474): Only update pending transactions upon block update
+- [#8476](https://github.com/MetaMask/metamask-extension/pull/8476): Update eth-contract-metadata
+- [#8509](https://github.com/MetaMask/metamask-extension/pull/8509): Fix Tohen Typo
 
 ## Remote Component([0.1.54](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.54)), Browser Component: `1.0.19`(03-June-2020)
 - [brave-browser#9754](https://github.com/brave/brave-browser/issues/9754): Implemented proxy cache for ETH phishing blacklist

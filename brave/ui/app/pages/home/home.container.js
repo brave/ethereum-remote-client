@@ -6,6 +6,7 @@ import { unconfirmedTransactionsCountSelector } from '../../../../../ui/app/sele
 import { getCurrentEthBalance } from '../../../../../ui/app/selectors/selectors'
 import {
   addTokens,
+  setBatTokenAdded,
   setHardwareConnect,
   restoreFromThreeBox,
   turnThreeBoxSyncingOn,
@@ -71,7 +72,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   restoreFromThreeBox: (address) => dispatch(restoreFromThreeBox(address)),
   setShowRestorePromptToFalse: () => dispatch(setShowRestorePromptToFalse()),
-  addBatToken: () => dispatch(addTokens(batToken)),
+  addBatToken: () => {
+    dispatch(addTokens(batToken))
+    dispatch(setBatTokenAdded())
+  },
   setHardwareConnect: (value) => dispatch(setHardwareConnect(value)),
 })
 

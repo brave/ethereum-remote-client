@@ -11,7 +11,7 @@ module.exports = function (state, action) {
   switch (action.type) {
     case actions.SET_BAT_TOKEN_ADDED:
       return extend(newState, {
-        batTokenAdded: action.value,
+        batTokenAdded: true,
       })
     default:
       return newState

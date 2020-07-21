@@ -27,8 +27,7 @@ function setBatTokenAdded () {
       }
     })
     dispatch({
-      type: MetaMaskActions.SET_BAT_TOKEN_ADDED,
-      value: true,
+      type: MetaMaskActions.SET_BAT_TOKEN_ADDED
     })
   }
 }

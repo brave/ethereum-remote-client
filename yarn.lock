@@ -10620,9 +10620,9 @@ eth-keyring-controller@^5.3.0:
     loglevel "^1.5.0"
     obs-store "^4.0.3"
 
-"eth-keyring-controller@github:brave/KeyringController#9d4408c935948fb7797dd267560b4393a44c7379":
+"eth-keyring-controller@github:brave/KeyringController#74dde0a374a0a43d5cec92f1d8fb01d2bfb72d08":
   version "5.4.0"
-  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/9d4408c935948fb7797dd267560b4393a44c7379"
+  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/74dde0a374a0a43d5cec92f1d8fb01d2bfb72d08"
   dependencies:
     argon2-wasm "^0.9.0"
     bip39 "^2.4.0"
@@ -10635,6 +10635,7 @@ eth-keyring-controller@^5.3.0:
     ethereumjs-util "^5.1.2"
     loglevel "^1.5.0"
     obs-store "^4.0.3"
+    promise-filter "1.1.0"
 
 eth-lib@0.2.7:
   version "0.2.7"
@@ -21762,7 +21763,7 @@ prometheus-gc-stats@~0.6.0:
   optionalDependencies:
     gc-stats "^1.2.1"
 
-promise-filter@^1.1.0:
+promise-filter@1.1.0, promise-filter@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/promise-filter/-/promise-filter-1.1.0.tgz#7ec3ce990c867ccb9de8638dbd19ee17a52a4b59"
   integrity sha1-fsPOmQyGfMud6GONvRnuF6UqS1k=

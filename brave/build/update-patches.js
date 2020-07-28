@@ -5,34 +5,10 @@
 
 const path = require('path')
 const fs = require('fs-extra')
-const { spawn } = require('child_process')
+const { runAsync } = require('./lib/util')
 
 const desiredReplacementSeparator = '-'
 const patchExtension = '.patch'
-
-const runAsync = (cmd, args = []) => {
-  return new Promise((resolve, reject) => {
-    const prog = spawn(cmd, args, {})
-    let stderr = ''
-    let stdout = ''
-    prog.stderr.on('data', (data) => {
-      stderr += data
-    })
-    prog.stdout.on('data', (data) => {
-      stdout += data
-    })
-    prog.on('close', (statusCode) => {
-      if (statusCode !== 0) {
-        const err = new Error(`Program ${cmd} exited with error code ${statusCode}.`)
-        err.stderr = stderr
-        err.stdout = stdout
-        reject(err)
-        return
-      }
-      resolve(stdout)
-    })
-  })
-}
 
 async function getModifiedPaths (gitRepoPath) {
   const modifiedDiffArgs = ['diff', '--diff-filter=M', '--name-only', '--ignore-space-at-eol']
@@ -72,9 +48,10 @@ const readDirPromise = (pathName) => new Promise((resolve, reject) =>
   }) // eslint-disable-line comma-dangle
 )
 
-async function removeStalePatchFiles (patchDirPath) {
+async function removeStalePatchFiles (patchFilenames, patchDirPath, keepPatchFilenames) {
+  let existingPathFilenames
   try {
-    ((await readDirPromise(patchDirPath)) || [])
+    existingPathFilenames = ((await readDirPromise(patchDirPath)) || [])
       .filter((s) => s.endsWith('.patch'))
   } catch (err) {
     if (err.code === 'ENOENT') {
@@ -83,18 +60,29 @@ async function removeStalePatchFiles (patchDirPath) {
     }
     throw err
   }
+
+  const validFilenames = patchFilenames.concat(keepPatchFilenames)
+  const toRemoveFilenames = existingPathFilenames.filter((x) => !validFilenames.includes(x))
+
+  let removedProgress = 0
+  for (const filename of toRemoveFilenames) {
+    const fullPath = path.join(patchDirPath, filename)
+    fs.removeSync(fullPath)
+    removedProgress++
+    console.log(`updatePatches *REMOVED* ${removedProgress}/${toRemoveFilenames.length}: ${filename}`)
+  }
 }
 
 async function updatePatches (gitRepoPath, patchDirPath, pathFilter) {
   let modifiedPaths = await getModifiedPaths(gitRepoPath)
   modifiedPaths = modifiedPaths.filter(pathFilter)
-  await writePatchFiles(modifiedPaths, gitRepoPath, patchDirPath)
-  await removeStalePatchFiles(patchDirPath)
+  const patchFilenames = await writePatchFiles(modifiedPaths, gitRepoPath, patchDirPath)
+  await removeStalePatchFiles(patchFilenames, patchDirPath, [])
 }
 
 const patchDir = path.join(path.dirname(__filename), '..', 'patches')
 const metaMaskDir = path.join(path.dirname(__filename), '..', '..')
-const pathFilter = (f) => f.length > 0 && !f.endsWith('package.json')
+const pathFilter = (f) => f.length > 0 && !f.endsWith('package.json') && !f.startsWith('brave')
 
 updatePatches(metaMaskDir, patchDir, pathFilter)
   .then(() => {

@@ -1,0 +1,19 @@
+.first-time-flow__checkbox-container {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .new-account {
+    position: static;
+  }
+}
+
+.pass-warning {
+  max-width: 515px;
+  margin-top: 20px;
+}
+
+.risk-disclosure {
+  margin: 0px 5px;
+  color: #037DD6;
+}

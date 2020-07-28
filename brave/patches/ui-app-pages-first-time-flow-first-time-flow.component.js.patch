@@ -1,0 +1,23 @@
+diff --git a/ui/app/pages/first-time-flow/first-time-flow.component.js b/ui/app/pages/first-time-flow/first-time-flow.component.js
+index a0dee962b5620b5237456c7ca519ee5535e0badf..761ca8e5922fade80d45387177450cc76984ad95 100644
+--- a/ui/app/pages/first-time-flow/first-time-flow.component.js
++++ b/ui/app/pages/first-time-flow/first-time-flow.component.js
+@@ -2,8 +2,7 @@ import React, { PureComponent } from 'react'
+ import PropTypes from 'prop-types'
+ import { Switch, Route } from 'react-router-dom'
+ import FirstTimeFlowSwitch from './first-time-flow-switch'
+-import Welcome from './welcome'
+-import SelectAction from './select-action'
++import Welcome from '../../../../brave/components/welcome'
+ import EndOfFlow from './end-of-flow'
+ import Unlock from '../unlock-page'
+ import CreatePassword from './create-password'
+@@ -138,7 +137,7 @@ export default class FirstTimeFlow extends PureComponent {
+           />
+           <Route
+             path={INITIALIZE_SELECT_ACTION_ROUTE}
+-            component={SelectAction}
++            component={Welcome}
+           />
+           <Route
+             path={INITIALIZE_UNLOCK_ROUTE}

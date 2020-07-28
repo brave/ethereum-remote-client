@@ -1,0 +1,50 @@
+.connect-wallet-container {
+  width: 100%;
+  border: 1px solid rgb(218, 220, 232);
+  border-radius: 12px;
+  padding: 20px 35px;
+  text-align: left;
+  margin-top: 20px;
+
+  .wallet-title span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(59, 62, 79);
+  }
+
+  .wallet-sub-text span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    max-width: 515px;
+  }
+
+  .controls {
+    float: right;
+    margin-top: 23px;
+  }
+
+  .create {
+    width: 85px;
+    height: 32px;
+    border: 1px solid rgb(194, 196, 207);
+    border-radius: 100px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(59, 62, 79);
+    cursor: pointer;
+  }
+
+  .restore {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .hardware-img {
+    width: 100px;
+  }
+}

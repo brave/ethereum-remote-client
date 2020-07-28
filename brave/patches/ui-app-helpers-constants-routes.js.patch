@@ -1,0 +1,13 @@
+diff --git a/ui/app/helpers/constants/routes.js b/ui/app/helpers/constants/routes.js
+index 4dcb62670b78dfbf57e466b7188447dfc6612837..51d100de3cd324e3b143f52d42478d27d2bfc69e 100644
+--- a/ui/app/helpers/constants/routes.js
++++ b/ui/app/helpers/constants/routes.js
+@@ -37,7 +37,7 @@ const INITIALIZE_WELCOME_ROUTE = '/initialize/welcome'
+ const INITIALIZE_UNLOCK_ROUTE = '/initialize/unlock'
+ const INITIALIZE_CREATE_PASSWORD_ROUTE = '/initialize/create-password'
+ const INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE = '/initialize/create-password/import-with-seed-phrase'
+-const INITIALIZE_SELECT_ACTION_ROUTE = '/initialize/select-action'
++const INITIALIZE_SELECT_ACTION_ROUTE = '/initialize/welcome'
+ const INITIALIZE_SEED_PHRASE_ROUTE = '/initialize/seed-phrase'
+ const INITIALIZE_BACKUP_SEED_PHRASE_ROUTE = '/initialize/backup-seed-phrase'
+ const INITIALIZE_END_OF_FLOW_ROUTE = '/initialize/end-of-flow'

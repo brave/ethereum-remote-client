@@ -1,0 +1,15 @@
+diff --git a/ui/app/pages/create-account/connect-hardware/select-hardware.js b/ui/app/pages/create-account/connect-hardware/select-hardware.js
+index 5c16bd452876878bd54f40ca95ea11806aa6b37c..f21108c92558270184867dec9a9daa8b634c3be8 100644
+--- a/ui/app/pages/create-account/connect-hardware/select-hardware.js
++++ b/ui/app/pages/create-account/connect-hardware/select-hardware.js
+@@ -109,8 +109,8 @@ export default class SelectHardware extends Component {
+ 
+   getAffiliateLinks () {
+     const links = {
+-      trezor: `<a class='hw-connect__get-hw__link' href='https://shop.trezor.io/?a=metamask' target='_blank'>Trezor</a>`,
+-      ledger: `<a class='hw-connect__get-hw__link' href='https://www.ledger.com/products/ledger-nano-s?r=17c4991a03fa&tracker=MY_TRACKER' target='_blank'>Ledger</a>`,
++      trezor: `<a class='hw-connect__get-hw__link' href='https://shop.trezor.io/product/trezor-one-metallic?offer_id=24&aff_id=3494' target='_blank'>Trezor</a>`,
++      ledger: `<a class='hw-connect__get-hw__link' href='https://shop.ledger.com/?r=0ba5d7199327' target='_blank'>Ledger</a>`,
+     }
+ 
+     const text = this.context.t('orderOneHere')

@@ -1,0 +1,25 @@
+diff --git a/app/scripts/controllers/preferences.js b/app/scripts/controllers/preferences.js
+index 47fa73746bf4cb1c0cee900564f9d726effea6d3..60b6ede5ff559724be287df00e110b8f6bd09e42 100644
+--- a/app/scripts/controllers/preferences.js
++++ b/app/scripts/controllers/preferences.js
+@@ -62,6 +62,8 @@ export default class PreferencesController {
+ 
+       // ENS decentralized website resolution
+       ipfsGateway: 'dweb.link',
++
++      batTokenAdded: false,
+     }, opts.initState)
+ 
+     this.diagnostics = opts.diagnostics
+@@ -639,6 +641,11 @@ export default class PreferencesController {
+     return Promise.resolve(domain)
+   }
+ 
++  setBatTokenAdded () {
++    this.store.updateState({ batTokenAdded: true })
++    return Promise.resolve(true)
++  }
++
+   //
+   // PRIVATE METHODS
+   //

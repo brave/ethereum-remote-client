@@ -1,0 +1,26 @@
+diff --git a/ui/app/ducks/metamask/metamask.js b/ui/app/ducks/metamask/metamask.js
+index e3f35bf38e960fb4ed60ba92ececdc597386ed5b..fb609cd85e31867669bd7cc8b9ef119fdd2d0eae 100644
+--- a/ui/app/ducks/metamask/metamask.js
++++ b/ui/app/ducks/metamask/metamask.js
+@@ -46,6 +46,7 @@ export default function reduceMetamask (state = {}, action) {
+     participateInMetaMetrics: null,
+     metaMetricsSendCount: 0,
+     nextNonce: null,
++    batTokenAdded: false,
+   }, state)
+ 
+   switch (action.type) {
+@@ -362,6 +363,13 @@ export default function reduceMetamask (state = {}, action) {
+       }
+     }
+ 
++    case actionConstants.SET_BAT_TOKEN_ADDED: {
++      return {
++        ...metamaskState,
++        batTokenAdded: true,
++      }
++    }
++
+     default:
+       return metamaskState
+   }

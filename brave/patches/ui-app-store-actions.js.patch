@@ -1,0 +1,21 @@
+diff --git a/ui/app/store/actions.js b/ui/app/store/actions.js
+index abb855233fa3daf992bd8b3462cd3cbceba93d46..d74b277ad17ab6d652e743a145568de54477a05a 100644
+--- a/ui/app/store/actions.js
++++ b/ui/app/store/actions.js
+@@ -2419,3 +2419,16 @@ export function getCurrentWindowTab () {
+     dispatch(setCurrentWindowTab(currentWindowTab))
+   }
+ }
++
++export function setBatTokenAdded () {
++  return (dispatch) => {
++    background.setBatTokenAdded((err) => {
++      if (err) {
++        return dispatch(displayWarning(err.message))
++      }
++    })
++    dispatch({
++      type: actionConstants.SET_BAT_TOKEN_ADDED,
++    })
++  }
++}

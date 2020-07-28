@@ -1,0 +1,12 @@
+diff --git a/ui/app/pages/routes/routes.container.js b/ui/app/pages/routes/routes.container.js
+index d4a638250f829a7125c1afa245fb5b5f22e55b7c..084c65144beb012641dc1ba600139da3df9e4e55 100644
+--- a/ui/app/pages/routes/routes.container.js
++++ b/ui/app/pages/routes/routes.container.js
+@@ -45,6 +45,7 @@ function mapStateToProps (state) {
+     providerId: getNetworkIdentifier(state),
+     autoLockTimeLimit,
+     hasPermissionsRequests: hasPermissionRequests(state),
++    batTokenAdded: state.metamask.batTokenAdded,
+   }
+ }
+ 

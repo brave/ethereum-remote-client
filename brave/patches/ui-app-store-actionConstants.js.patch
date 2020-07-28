@@ -1,0 +1,10 @@
+diff --git a/ui/app/store/actionConstants.js b/ui/app/store/actionConstants.js
+index 4a11aa11135e1d3a6e6cbdcdd88cb2d308930e0c..2fbdcbe470f2d0a1cfe0f56c85f497fd260b567e 100644
+--- a/ui/app/store/actionConstants.js
++++ b/ui/app/store/actionConstants.js
+@@ -112,3 +112,5 @@ export const LOADING_TOKEN_PARAMS_FINISHED = 'LOADING_TOKEN_PARAMS_FINISHED'
+ export const SET_REQUEST_ACCOUNT_TABS = 'SET_REQUEST_ACCOUNT_TABS'
+ export const SET_CURRENT_WINDOW_TAB = 'SET_CURRENT_WINDOW_TAB'
+ export const SET_OPEN_METAMASK_TAB_IDS = 'SET_OPEN_METAMASK_TAB_IDS'
++
++export const SET_BAT_TOKEN_ADDED = 'SET_BAT_TOKEN_ADDED'

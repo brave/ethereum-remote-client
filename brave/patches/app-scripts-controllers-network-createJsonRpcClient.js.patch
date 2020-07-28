@@ -1,0 +1,13 @@
+diff --git a/app/scripts/controllers/network/createJsonRpcClient.js b/app/scripts/controllers/network/createJsonRpcClient.js
+index 3759070411cd32530127b61d2e5bb11086d8b329..675d30ed03a832083ab564ec8b45eec0abab3661 100644
+--- a/app/scripts/controllers/network/createJsonRpcClient.js
++++ b/app/scripts/controllers/network/createJsonRpcClient.js
+@@ -10,7 +10,7 @@ import BlockTracker from 'eth-block-tracker'
+ export default function createJsonRpcClient ({ rpcUrl }) {
+   const fetchMiddleware = createFetchMiddleware({ rpcUrl })
+   const blockProvider = providerFromMiddleware(fetchMiddleware)
+-  const blockTracker = new BlockTracker({ provider: blockProvider })
++  const blockTracker = new BlockTracker({ provider: blockProvider, pollingInterval: (30 * 1000) })
+ 
+   const networkMiddleware = mergeMiddleware([
+     createBlockRefRewriteMiddleware({ blockTracker }),

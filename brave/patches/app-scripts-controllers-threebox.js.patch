@@ -1,0 +1,18 @@
+diff --git a/app/scripts/controllers/threebox.js b/app/scripts/controllers/threebox.js
+index bca43d9f65366ddc5f498b05d814ee530396cbe2..cd54753cb9d9d21a4e3c6af3d0593ca55217a3fc 100644
+--- a/app/scripts/controllers/threebox.js
++++ b/app/scripts/controllers/threebox.js
+@@ -71,11 +71,13 @@ export default class ThreeBoxController {
+   }
+ 
+   async init () {
++    /*
+     const accounts = await this.keyringController.getAccounts()
+     this.address = accounts[0]
+     if (this.address && !(this.box && this.store.getState().threeBoxSynced)) {
+       await this.new3Box()
+     }
++    */
+   }
+ 
+   async _update3Box () {

@@ -1,0 +1,27 @@
+diff --git a/app/scripts/lib/backend-metametrics.js b/app/scripts/lib/backend-metametrics.js
+index baaf1c6661e38b09627f1e41791bd4cb2bd37b22..ea522f62d6ad29ed2933d10028b10b2c08f6e0fc 100644
+--- a/app/scripts/lib/backend-metametrics.js
++++ b/app/scripts/lib/backend-metametrics.js
+@@ -1,3 +1,4 @@
++/*
+ import { getBackgroundMetaMetricState } from '../../../ui/app/selectors'
+ import { sendMetaMetricsEvent } from '../../../ui/app/helpers/utils/metametrics.util'
+ 
+@@ -6,8 +7,9 @@ const inDevelopment = process.env.NODE_ENV === 'development'
+ const METAMETRICS_TRACKING_URL = inDevelopment
+   ? 'http://www.metamask.io/metametrics'
+   : 'http://www.metamask.io/metametrics-prod'
+-
+-export default function backEndMetaMetricsEvent (metaMaskState, eventData) {
++*/
++export default function backEndMetaMetricsEvent (_metaMaskState, _eventData) {
++  /*
+   const stateEventData = getBackgroundMetaMetricState({ metamask: metaMaskState })
+ 
+   if (stateEventData.participateInMetaMetrics) {
+@@ -17,4 +19,5 @@ export default function backEndMetaMetricsEvent (metaMaskState, eventData) {
+       url: METAMETRICS_TRACKING_URL + '/backend',
+     })
+   }
++  */
+ }

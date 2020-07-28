@@ -1,0 +1,16 @@
+diff --git a/app/scripts/lib/setupSentry.js b/app/scripts/lib/setupSentry.js
+index 04c4b50144f8d9cd7a82d6f0f848b9e034f2b712..04b6a510e1331724da19131ba3780ce0a6546184 100644
+--- a/app/scripts/lib/setupSentry.js
++++ b/app/scripts/lib/setupSentry.js
+@@ -112,7 +112,10 @@ export default function setupSentry ({ release, getState }) {
+     return report
+   }
+ 
+-  return Sentry
++  return {
++    captureMessage: (_msg, _extra = {}) => { /* no-op */ },
++    captureException: (_msg, _extra = {}) => { /* no-op */ },
++  }
+ }
+ 
+ function simplifyErrorMessages (report) {

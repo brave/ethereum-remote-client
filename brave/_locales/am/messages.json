@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "የ Ledger ሃርድዌር ቋትዎን ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
+  },
+  "newLocalWallet": {
+    "message": "አዲስ ከባቢያዊ ቋት"
+  },
+  "newLocalWalletSubText": {
+    "message": "ወደ dApps ለመድረስና crypto እና ተሰብሳቢዎችን በአስተማማኝ መንገድ ለማስቀመጥ አዲስ የ Brave አካባባቢ ዋሌትን ይፍጠሩ። ተለዋጭ ስሞችን ስም ሳይገለጽና የንግድ ክፍያዎችን ሳይከፍሉ ይገበያዩ።"
+  },
+  "trezorCreateSubText": {
+    "message": "የ Trezor ሃርድዌር ቋትዎ ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
+  }
+}

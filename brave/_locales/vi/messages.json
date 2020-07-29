@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Kết nối ví phần cứng Ledger của bạn để tương tác với các ứng dụng phi tập trung và chuyển khoản sang các ví được kết nối khác."
+  },
+  "newLocalWallet": {
+    "message": "Ví trên máy tính mới"
+  },
+  "newLocalWalletSubText": {
+    "message": "Tạo một ví cục bộ Brave mới để truy cập dApps và lưu trữ tiền mã hóa và sưu tập một cách an toàn. Giao dịch token ẩn danh không có phí giao dịch."
+  },
+  "trezorCreateSubText": {
+    "message": "Kết nối ví phần cứng Trezor của bạn để tương tác với các ứng dụng phi tập trung và chuyển khoản sang các ví được kết nối khác."
+  }
+}

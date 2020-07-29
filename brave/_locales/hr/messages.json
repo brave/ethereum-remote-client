@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Povežite sa sa svojim hardverskim novčanikom Ledger kako biste ostvarili interakciju s dApps i obavljali prijenose u druge povezane novčanike."
+  },
+  "newLocalWallet": {
+    "message": "Novi lokalni novčanik"
+  },
+  "newLocalWalletSubText": {
+    "message": "Stvorite novi lokalni novčanik Brave kako biste pristupili aplikacijama i sigurno pohranili kriptovalute i prikupljena sredstva. Anonimno trgujte tokenima bez naknade za njihovo trgovanje."
+  },
+  "trezorCreateSubText": {
+    "message": "Povežite sa sa svojim hardverskim novčanikom Trezor kako biste ostvarili interakciju s dApps i obavljali prijenose u druge povezane novčanike."
+  }
+}

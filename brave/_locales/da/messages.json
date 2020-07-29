@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Forbind din Ledger hardwarepung for at interagere med dApps og foretag overførsler til andre forbundne punge."
+  },
+  "newLocalWallet": {
+    "message": "Ny lokal pung"
+  },
+  "newLocalWalletSubText": {
+    "message": "Opret en ny lokal tegnebog fra Brave for at få adgang til dApps samt opbevare krypto og samlerobjekter sikkert. Handel med tokens anonymt uden handelsgebyrer."
+  },
+  "trezorCreateSubText": {
+    "message": "Tilslut din hardware-tegnebog fra Trezor for at interagere med dApps og foretage overførsler til andre tilsluttede tegnebøger."
+  }
+}

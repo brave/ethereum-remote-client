@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Pievienojiet savu Ledger aparatūras maku, lai veiktu darbības ar dApps un pārskaitījumus uz citiem pievienotajiem makiem."
+  },
+  "newLocalWallet": {
+    "message": "Jauns vietējais maks"
+  },
+  "newLocalWalletSubText": {
+    "message": "Izveidojiet jaunu Brave vietējo maku, lai piekļūtu dApps un droši uzglabātu Kripto un kolekciju vienumus. Anonīmi tirgojieties ar marķieriem bez darījumu nodevām."
+  },
+  "trezorCreateSubText": {
+    "message": "Pievienojiet savu Trezor aparatūras maku, lai veiktu darbības ar dApps un pārskaitījumus uz citiem pievienotajiem makiem."
+  }
+}

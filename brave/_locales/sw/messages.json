@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Unganisha programu maunzi yako ya waleti ya Leja ili kuingiliana na dApps na hamishia kwenye waleti nyinginezo zilizounganishwa."
+  },
+  "newLocalWallet": {
+    "message": "Waleti Mpya ya Mahali Husika"
+  },
+  "newLocalWalletSubText": {
+    "message": "Fungua mkoba mpya wa Brave katika eneo lako ili uweze kufikia dApps na kuhifadhi kwa njia salama sarafu ya crypto na vitu vya thamani ulivyokusanya. Uza na ununue tokeni bila kutozwa ada na bila kujitambulisha."
+  },
+  "trezorCreateSubText": {
+    "message": "Unganisha programu maunzi yako ya waleti ya Trezor ili kuingiliana na dApps na hamishia kwenye waleti nyinginezo zilizounganishwa."
+  }
+}

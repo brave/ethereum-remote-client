@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Collega il tuo portafoglio hardware di Ledger per interagire con dApp ed effettuare trasferimenti ad altri portafogli collegati.\n"
+  },
+  "newLocalWallet": {
+    "message": "Nuovo portafoglio locale\n"
+  },
+  "newLocalWalletSubText": {
+    "message": "Crea un nuovo portafoglio locale Brave per accedere alle dApp e conservare in sicurezza criptovalute e oggetti da collezione. Scambia token in modo anonimo senza commissioni."
+  },
+  "trezorCreateSubText": {
+    "message": "Collega il tuo portafoglio hardware Trezor per interagire con dApp ed effettuare trasferimenti ad altri portafogli collegati.\n"
+  }
+}

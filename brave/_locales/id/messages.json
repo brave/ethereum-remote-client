@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Hubungkan dompet perangkat keras Ledger Anda untuk berinteraksi dengan dApps dan melakukan transfer ke dompet lain yang terhubung."
+  },
+  "newLocalWallet": {
+    "message": "Dompet Lokal Baru"
+  },
+  "newLocalWalletSubText": {
+    "message": "Buat dompet lokal Brave baru untuk mengakses dApps dan menyimpan kripto dan koleksi dengan aman. Berdaganglah token secara anonim tanpa biaya dagang."
+  },
+  "trezorCreateSubText": {
+    "message": "Hubungkan dompet perangkat keras Trezor Anda untuk berinteraksi dengan dApps dan melakukan transfer ke dompet lain yang terhubung."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Prijunkite savo sąskaitų knygos techninės įrangos piniginę, kad ji palaikytų ryšį su „dApps“, ir atlikite pervedimus į kitas prijungtas pinigines."
+  },
+  "newLocalWallet": {
+    "message": "Nauja vietinė slaptažodinė"
+  },
+  "newLocalWalletSubText": {
+    "message": "Susikurkite naują „Brave“ vietinę piniginę, kad galėtumėte pasiekti „dApps“ ir saugiai laikyti kriptovaliutą bei savo kolekciją. Anonimiškai keiskite žetonus, nemokėdami mokesčių už sandorius."
+  },
+  "trezorCreateSubText": {
+    "message": "Prijunkite savo „Trezor“ techninės įrangos slaptažodinę, kad ji palaikytų ryšį su decentralizuotomis programomis, ir atlikite pervedimus į kitas prijungtas slaptažodines."
+  }
+}

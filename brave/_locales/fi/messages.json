@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Yhdistä Ledger hardware -lompakkosi vuorovaikutukseen dAppsin kanssa ja tee  siirtoja muihin yhdistettyihin lompakoihin."
+  },
+  "newLocalWallet": {
+    "message": "Uusi paikallinen kukkaro"
+  },
+  "newLocalWalletSubText": {
+    "message": "Luo uusi paikallinen Brave-kukkaro voidaksesi käyttää dAppseja ja tallettaaksesi kryptovaluuttaa ja keräilykohteita turvallisesti. Käy anonyymisti kauppaa tokeneilla ilman kaupankäyntimaksuja."
+  },
+  "trezorCreateSubText": {
+    "message": "Yhdistä Trezor-laitteistokukkarosi ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa ja tehdäksesi siirtoja muihin yhdistäneisiin kukkaroihin."
+  }
+}

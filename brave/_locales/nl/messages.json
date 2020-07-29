@@ -1,0 +1,14 @@
+{
+  "ledgerCreateSubText": {
+    "message": "Verbind je Ledger hardware-wallet om met dApps te communiceren  en overschrijvingen te doen naar andere verbonden wallets."
+  },
+  "newLocalWallet": {
+    "message": "Nieuwe Lokale Wallet"
+  },
+  "newLocalWalletSubText": {
+    "message": "Creëer een nieuwe Brave local wallet om toegang te krijgen tot dApps en om crypto en collectibles veilig op te slaan. Verhandel tokens anoniem zonder trading fees."
+  },
+  "trezorCreateSubText": {
+    "message": "Verbind je Trezor hardware-wallet om met dApps te communiceren  en overschrijvingen te doen naar andere verbonden wallets."
+  }
+}

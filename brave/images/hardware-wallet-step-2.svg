@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="295px" height="101px" viewBox="0 0 295 101" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="98.6824484%" y1="50.2223998%" x2="1.31755164%" y2="50.2223998%" id="linearGradient-1">
+      <stop stop-color="#BF14A2" offset="0%"></stop>
+      <stop stop-color="#F73A1C" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="98.6824484%" y1="50.2223998%" x2="1.31755164%" y2="50.2223998%" id="linearGradient-2">
+      <stop stop-color="#BF14A2" offset="0%"></stop>
+      <stop stop-color="#F73A1C" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="98.6824484%" y1="50.2223998%" x2="1.31755164%" y2="50.2223998%" id="linearGradient-3">
+      <stop stop-color="#BF14A2" offset="0%"></stop>
+      <stop stop-color="#F73A1C" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="MM-Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Artboard" transform="translate(-139.000000, -328.000000)">
+      <g id="select-account" transform="translate(141.000000, 330.000000)">
+        <circle id="Oval" stroke="#1E2029" stroke-width="1.5" opacity="0.405180432" cx="37.75" cy="14.75" r="7.75"></circle>
+        <circle id="Oval" stroke="#1E2029" stroke-width="1.5" opacity="0.405180432" cx="37.25" cy="59.25" r="7.75"></circle>
+        <circle id="Oval" stroke="#1E2029" stroke-width="1.5" opacity="0.405180432" cx="37.25" cy="84.25" r="7.75"></circle>
+        <rect id="Rectangle" stroke="url(#linearGradient-1)" stroke-width="3" opacity="0.402553013" x="21" y="0" width="249" height="97"></rect>
+        <path d="M22.5,71.5 L268.5,71.5" id="Line" stroke="url(#linearGradient-2)" stroke-width="3" stroke-linecap="square"></path>
+        <text id="0Xa4…s0a2" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="71.218" y="19.5">0Xa4…s0a2</tspan>
+        </text>
+        <text id="0.01500-ETH" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="161.302" y="20">0.01500 ETH</tspan>
+        </text>
+        <text id="1" opacity="0.405180432" font-family="Poppins-Bold, Poppins" font-size="13" font-weight="bold" fill="#2F3032">
+          <tspan x="53.186" y="20.5">1</tspan>
+        </text>
+        <text id="0xz3…T3A4" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="73.3435" y="65.5">0xz3…T3A4</tspan>
+        </text>
+        <text id="0.02000-ETH" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="159.495" y="66">0.02000 ETH</tspan>
+        </text>
+        <text id="3" opacity="0.405180432" font-family="Poppins-Bold, Poppins" font-size="13" font-weight="bold" fill="#2F3032">
+          <tspan x="51.5675" y="66.5">3</tspan>
+        </text>
+        <text id="0xd2…D0V4" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="70.5225" y="88.5">0xd2…D0V4</tspan>
+        </text>
+        <text id="0.03000-ETH" opacity="0.405180432" font-family="Poppins-Regular, Poppins" font-size="13" font-weight="normal" fill="#2F3032">
+          <tspan x="159.352" y="89">0.03000 ETH</tspan>
+        </text>
+        <text id="4" opacity="0.405180432" font-family="Poppins-Bold, Poppins" font-size="13" font-weight="bold" fill="#2F3032">
+          <tspan x="51.132" y="89.5">4</tspan>
+        </text>
+        <rect id="Rectangle" stroke="url(#linearGradient-3)" stroke-width="3" fill="url(#linearGradient-3)" x="0" y="21" width="291" height="32"></rect>
+        <g id="Essentials/check-circle" transform="translate(10.500000, 29.000000)" fill="#FFFFFF">
+          <path d="M8.5,17 C3.81295833,17 0,13.1870417 0,8.5 C0,3.81295833 3.81295833,0 8.5,0 C13.1870417,0 17,3.81295833 17,8.5 C17,13.1870417 13.1870417,17 8.5,17 Z M8.5,1.41666667 C4.59425,1.41666667 1.41666667,4.59425 1.41666667,8.5 C1.41666667,12.40575 4.59425,15.5833333 8.5,15.5833333 C12.40575,15.5833333 15.5833333,12.40575 15.5833333,8.5 C15.5833333,4.59425 12.40575,1.41666667 8.5,1.41666667 Z M8.32433333,11.7994167 C8.18479167,11.9595 7.98858333,12.0416667 7.79166667,12.0416667 C7.63583333,12.0416667 7.47929167,11.9906667 7.34966667,11.8865417 L3.80729167,9.05320833 C3.502,8.80883333 3.45241667,8.36329167 3.69679167,8.05729167 C3.941875,7.752 4.388125,7.70241667 4.692,7.94679167 L7.70454167,10.3565417 L12.2173333,5.20058333 C12.4751667,4.90591667 12.922125,4.87616667 13.2167917,5.13329167 C13.51075,5.391125 13.5405,5.83879167 13.2826667,6.13275 L8.32433333,11.7994167 Z" id="Shape"></path>
+        </g>
+        <text id="0Xe7…B0a1" font-family="Poppins-Regular, Poppins" font-size="16" font-weight="normal" fill="#FFFFFF">
+          <tspan x="57.932" y="43">0Xe7…B0a1</tspan>
+        </text>
+        <text id="0.04100-ETH" font-family="Poppins-Regular, Poppins" font-size="16" font-weight="normal" fill="#FFFFFF">
+          <tspan x="164.532" y="43">0.04100 ETH</tspan>
+        </text>
+        <text id="2" font-family="Poppins-Bold, Poppins" font-size="16" font-weight="bold" fill="#FFFFFF">
+          <tspan x="34.972" y="43">2</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

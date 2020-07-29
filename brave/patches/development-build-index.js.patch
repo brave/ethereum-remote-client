@@ -1,0 +1,28 @@
+diff --git a/development/build/index.js b/development/build/index.js
+index a665410b265aa104df4b8b7949059d98b4964c6c..de6c34afda991a33a53d165054a0e7718aaa0437 100755
+--- a/development/build/index.js
++++ b/development/build/index.js
+@@ -30,14 +30,22 @@ function defineAllTasks () {
+   const scriptTasks = createScriptTasks({ livereload, browserPlatforms })
+   const { clean, reload, zip } = createEtcTasks({ livereload, browserPlatforms })
+ 
++  // Brave Tasks
++  const createBraveHTMLTasks = require('../../brave/build/html')
++  const createBraveLoadStylesTasks = require('../../brave/build/styles')
++  const braveHTMLTasks = createBraveHTMLTasks()
++  const braveLoadStylesTasks = createBraveLoadStylesTasks()
++
+   // build for development (livereload)
+   createTask('dev',
+     composeSeries(
+       clean,
+       styleTasks.dev,
++      braveLoadStylesTasks,
++      staticTasks.dev,
++      braveHTMLTasks,
+       composeParallel(
+         scriptTasks.dev,
+-        staticTasks.dev,
+         manifestTasks.dev,
+         reload,
+       ),

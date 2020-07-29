@@ -185,7 +185,7 @@ module.exports = class GitPatcher {
         patchData.error = err
       }
     }
-    this.logProgressLine('All patch apply done.')
+    this.logProgressLine('All patches applied.')
     const patchInfoOps = []
     for (const { appliesTo, patchPath, patchInfoPath } of patchSets.filter((p) => !p.error)) {
       patchInfoOps.push(this.writePatchInfo(patchInfoPath, appliesTo, patchPath))

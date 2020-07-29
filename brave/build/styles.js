@@ -21,10 +21,10 @@ function createBraveLoadStylesTasks () {
       .pipe(
         replace(
           /(?:\/\*BRAVE\*\/.*)?$/,
-          `/*BRAVE*/${braveImports.join('')}`
-        )
+          `/*BRAVE*/${braveImports.join('')}`,
+        ),
       )
-      .pipe(gulp.dest(file => file.base))
+      .pipe(gulp.dest((file) => file.base))
   })
 
   return styleTask

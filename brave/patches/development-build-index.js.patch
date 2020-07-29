@@ -1,16 +1,24 @@
 diff --git a/development/build/index.js b/development/build/index.js
-index a665410b265aa104df4b8b7949059d98b4964c6c..de6c34afda991a33a53d165054a0e7718aaa0437 100755
+index a665410b265aa104df4b8b7949059d98b4964c6c..484c21c9cdb1eeffed36fc4bc77982000ae78393 100755
 --- a/development/build/index.js
 +++ b/development/build/index.js
-@@ -30,14 +30,22 @@ function defineAllTasks () {
+@@ -11,6 +11,9 @@ const createScriptTasks = require('./scripts')
+ const createStyleTasks = require('./styles')
+ const createStaticAssetTasks = require('./static')
+ const createEtcTasks = require('./etc')
++const createBraveHTMLTasks = require('../../brave/build/html')
++const createBraveLoadStylesTasks = require('../../brave/build/styles')
++const createBraveManifestTasks = require('../../brave/build/manifest')
+ 
+ const browserPlatforms = [
+   'firefox',
+@@ -30,15 +33,22 @@ function defineAllTasks () {
    const scriptTasks = createScriptTasks({ livereload, browserPlatforms })
    const { clean, reload, zip } = createEtcTasks({ livereload, browserPlatforms })
  
-+  // Brave Tasks
-+  const createBraveHTMLTasks = require('../../brave/build/html')
-+  const createBraveLoadStylesTasks = require('../../brave/build/styles')
 +  const braveHTMLTasks = createBraveHTMLTasks()
 +  const braveLoadStylesTasks = createBraveLoadStylesTasks()
++  const braveManifestTasks = createBraveManifestTasks()
 +
    // build for development (livereload)
    createTask('dev',
@@ -19,10 +27,13 @@ index a665410b265aa104df4b8b7949059d98b4964c6c..de6c34afda991a33a53d165054a0e771
        styleTasks.dev,
 +      braveLoadStylesTasks,
 +      staticTasks.dev,
++      manifestTasks.dev,
 +      braveHTMLTasks,
++      braveManifestTasks,
        composeParallel(
          scriptTasks.dev,
 -        staticTasks.dev,
-         manifestTasks.dev,
+-        manifestTasks.dev,
          reload,
        ),
+     ),

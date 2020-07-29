@@ -82,7 +82,13 @@ async function updatePatches (gitRepoPath, patchDirPath, pathFilter) {
 
 const patchDir = path.join(path.dirname(__filename), '..', 'patches')
 const metaMaskDir = path.join(path.dirname(__filename), '..', '..')
-const pathFilter = (f) => f.length > 0 && !f.endsWith('package.json') && !f.startsWith('brave')
+const pathFilter = (f) => {
+  return f.length > 0 &&
+    !f.endsWith('package.json') &&
+    !f.endsWith('yarn.lock') &&
+    !f.startsWith('brave') &&
+    !f.endsWith('ui/app/css/index.scss')
+}
 
 updatePatches(metaMaskDir, patchDir, pathFilter)
   .then(() => {

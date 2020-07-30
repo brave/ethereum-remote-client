@@ -1,0 +1,24 @@
+diff --git a/ui/app/pages/settings/security-tab/security-tab.component.js b/ui/app/pages/settings/security-tab/security-tab.component.js
+index a9670a9d83a3ab095cdda5e9a614e3f98a9cb006..cad8559df4285e45a87e372027861c5c6603809d 100644
+--- a/ui/app/pages/settings/security-tab/security-tab.component.js
++++ b/ui/app/pages/settings/security-tab/security-tab.component.js
+@@ -55,7 +55,7 @@ export default class SecurityTab extends PureComponent {
+     )
+   }
+ 
+-  renderMetaMetricsOptIn () {
++  _renderMetaMetricsOptIn () {
+     const { t } = this.context
+     const { participateInMetaMetrics, setParticipateInMetaMetrics } = this.props
+ 
+@@ -81,6 +81,10 @@ export default class SecurityTab extends PureComponent {
+     )
+   }
+ 
++  renderMetaMetricsOptIn () {
++    return null
++  }
++
+   renderIncomingTransactionsOptIn () {
+     const { t } = this.context
+     const { showIncomingTransactions, setShowIncomingTransactionsFeatureFlag } = this.props

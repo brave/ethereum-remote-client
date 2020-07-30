@@ -43,3 +43,17 @@ h5 {
 .reveal-seed-phrase__secret {
   margin-bottom: 36px;
 }
+
+.network-form__footer {
+  button {
+    &:disabled {
+      display: none;
+    }
+  }
+}
+
+div.settings-page__content-row > div:nth-child(2) > div:nth-child(3),
+div.settings-page__content__tabs > div > div:nth-child(7),
+div.menu.account-menu > div:nth-child(10) {
+  display: none;
+}

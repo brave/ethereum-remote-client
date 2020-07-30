@@ -1,0 +1,44 @@
+diff --git a/ui/app/pages/settings/advanced-tab/advanced-tab.component.js b/ui/app/pages/settings/advanced-tab/advanced-tab.component.js
+index df952eff6a1140737280cc6d7ee7e40305963752..6fcf5c2b2fabefa2b5006162c4dade32d1e47602 100644
+--- a/ui/app/pages/settings/advanced-tab/advanced-tab.component.js
++++ b/ui/app/pages/settings/advanced-tab/advanced-tab.component.js
+@@ -44,7 +44,7 @@ export default class AdvancedTab extends PureComponent {
+     ipfsGatewayError: '',
+   }
+ 
+-  renderMobileSync () {
++  _renderMobileSync () {
+     const { t } = this.context
+     const { history } = this.props
+ 
+@@ -71,6 +71,10 @@ export default class AdvancedTab extends PureComponent {
+     )
+   }
+ 
++  renderMobileSync () {
++    return null
++  }
++
+   renderStateLogs () {
+     const { t } = this.context
+     const { displayWarning } = this.props
+@@ -341,7 +345,7 @@ export default class AdvancedTab extends PureComponent {
+     )
+   }
+ 
+-  renderThreeBoxControl () {
++  _renderThreeBoxControl () {
+     const { t } = this.context
+     const {
+       threeBoxSyncingAllowed,
+@@ -386,6 +390,10 @@ export default class AdvancedTab extends PureComponent {
+     )
+   }
+ 
++  renderThreeBoxControl () {
++    return null
++  }
++
+   handleIpfsGatewayChange (url) {
+     const { t } = this.context
+ 

@@ -2,21 +2,44 @@
  * Brave Generic Font Rules
  */
 
- @import url('../fonts/muli.css');
- @import url('../fonts/poppins.css');
- 
- button {
-   font-family: Muli;
-   font-weight: bold;
- }
- 
- p, span, label, div, a, input {
-   font-family: Muli;
-   font-weight: normal;
- }
- 
- h1, h2, h3, h4, h5 {
-   font-family: Poppins;
-   font-weight: normal;
- }
- 
+@import url('../fonts/muli.css');
+@import url('../fonts/poppins.css');
+
+button {
+  font-family: Muli;
+  font-weight: bold;
+}
+
+p,
+span,
+label,
+div,
+a,
+input {
+  font-family: Muli;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Poppins;
+  font-weight: normal;
+}
+
+/*
+ * Brave Style Overrides
+ */
+.provider-approval-container__content {
+  margin-bottom: 25px;
+
+  .secure-badge {
+    display: none;
+  }
+}
+
+.reveal-seed-phrase__secret {
+  margin-bottom: 36px;
+}

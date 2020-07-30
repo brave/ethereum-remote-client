@@ -1,0 +1,22 @@
+diff --git a/ui/app/components/ui/mascot.js b/ui/app/components/ui/mascot.js
+index db2037cdf38586b4acc72e12c0c0890584e96186..1c17376bb89c19d2d1d27742bb6f1a70b296ce4b 100644
+--- a/ui/app/components/ui/mascot.js
++++ b/ui/app/components/ui/mascot.js
+@@ -55,7 +55,7 @@ export default class Mascot extends Component {
+     this.logo.stopAnimation()
+   }
+ 
+-  render () {
++  _render () {
+     // this is a bit hacky
+     // the event emitter is on `this.props`
+     // and we dont get that until render
+@@ -67,4 +67,8 @@ export default class Mascot extends Component {
+       />
+     )
+   }
++
++  render () {
++    return null
++  }
+ }

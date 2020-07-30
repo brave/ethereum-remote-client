@@ -1,0 +1,246 @@
+#app-content.dark {
+  color: #fff;
+  background: #1d2025;
+
+  .main-container,
+  .new-account {
+    border: 1px solid #686868;
+  }
+
+  .first-time-flow {
+    background: #1d2025;
+
+    .first-time-flow__wrapper,
+    .end-of-flow {
+      background: #282a2c;
+    }
+
+    .welcome-container {
+      background: #1d2025;
+
+      .content {
+        background: #282a2c;
+      }
+
+      .hardware-img {
+        filter: invert(0.8);
+      }
+    }
+
+    .__rewards {
+      color: #0096dc;
+    }
+  }
+
+  .wallet-view {
+    background: #171719;
+  }
+
+  .transaction-list-item {
+    background: #282828;
+
+    .transaction-status--confirmed {
+      background: #609a1c;
+    }
+  }
+
+  /*
+   * This block contains inner containers and form elements
+   * that are not targetable with general rules
+   */
+  .app-header,
+  .transaction-view,
+  .account-modal-container,
+  .new-account,
+  .page-container > div,
+  .new-account-import-disclaimer,
+  .unlock-page__container,
+  select,
+  .Select,
+  .simple-dropdown,
+  .Select-control,
+  .settings-page,
+  .add-to-address-book-modal,
+  .send-v2__form-row > div,
+  .transaction-list-item-details__body,
+  .send__select-recipient-wrapper__group-label,
+  .send-v2__asset-dropdown,
+  .unit-input,
+  .send__dialog.dialog--message,
+  .ens-input__wrapper--valid,
+  .confirm-page-container-summary,
+  .provider-approval-container,
+  .confirm-page-container-content__data-box,
+  .confirm-page-container-content__data-box,
+  .page-container__warning-container,
+  .export-text-container__text-container,
+  .export-text-container__text,
+  .first-view-main-wrapper,
+  .modal-container,
+  .request-signature__container,
+  .request-signature__account-item,
+  .network-display__container,
+  .send-v2__asset-dropdown__list,
+  .transaction-status--submitted {
+    background: #282828;
+  }
+
+  .Select-menu-outer,
+  .simple-dropdown__options,
+  .send-v2__asset-dropdown__list {
+    * {
+      background: #282828;
+    }
+  }
+
+  .advanced-tab__transaction-data-summary {
+    background: #fff;
+    margin: 0 0 -5px 0;
+  }
+
+  .custom-tooltip th {
+    color: #fff;
+  }
+
+  .send-v2__asset-dropdown__asset {
+    &:hover {
+      background-color: #282828;
+    }
+  }
+
+  .confirm-page-container-content {
+    .tabs__list {
+      background: #282828;
+    }
+
+    .tab.tab--active {
+      color: #8c8e94;
+    }
+  }
+
+  .unlock-page__container {
+    button {
+      background-color: inherit !important;
+    }
+  }
+
+  .app-header {
+    &::after {
+      background: #282828;
+    }
+  }
+
+  /* QR code will not work without background contrast */
+  .qr-wrapper {
+    background: #fff;
+  }
+
+  button {
+    color: #fff;
+    background: inherit;
+    border: 1px solid #fff;
+  }
+
+  h1,
+  h2,
+  span,
+  div,
+  label,
+  .import-account__back-button {
+    color: #fff;
+  }
+
+  .ens-input,
+  input {
+    color: #fff;
+    background: inherit;
+  }
+
+  .welcome-modal {
+    .__modal {
+      background: #1d2025;
+    }
+  }
+
+  .confirm-seed-phrase__seed-word,
+  .reveal-seed-phrase__secret-words,
+  .ens-input__wrapper__input,
+  .dialog.send__error-dialog.dialog--error,
+  .error-message__text {
+    color: #000;
+  }
+
+  .close-dark {
+    display: block;
+  }
+
+  .close-light {
+    display: none;
+  }
+
+  .hw-connect__btn__img,
+  .deposit-ether-modal__logo {
+    filter: invert(0.8);
+  }
+
+  .hw-connect__btn.selected {
+    border: 2px solid #00a8ee;
+  }
+
+  .add-token-button__button {
+    color: #00a8ee;
+  }
+
+  .unlock-page__links {
+    div {
+      color: #00a8ee;
+    }
+  }
+
+  .gas-price-button-group--small {
+    .button-group__button--active {
+      border: 1px solid #3099f2;
+    }
+  }
+
+  .token-list-placeholder,
+  .currency-display-component {
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .advanced-tab__fee-chart,
+  .gas-modal-content__info-row-wrapper,
+  .qr-scanner,
+  .gas-modal-content {
+    * {
+      color: #000;
+    }
+  }
+
+  .btn-warning,
+  .btn-danger {
+    color: #d73a49;
+    border: 2px solid #d73a49;
+  }
+
+  .provider-approval-visual__check {
+    background: url(/images/provider-approval-check.svg) no-repeat;
+  }
+
+  .signature-request-message {
+    &--root {
+      background: #282828;
+    }
+  }
+
+  .signature-request.page-container {
+    background: #282828;
+  }
+
+  .home__tabs,
+  .home__main-view {
+    background: inherit;
+  }
+}

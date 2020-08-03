@@ -151,7 +151,8 @@
   }
 
   .ens-input,
-  input {
+  input,
+  .first-time-flow__seedphrase {
     color: #fff;
     background: inherit;
   }
@@ -235,12 +236,20 @@
     }
   }
 
-  .signature-request.page-container {
+  .signature-request.page-container,
+  .asset__container,
+  .home__tabs,
+  .home__main-view,
+  .list-item.asset-list-item,
+  .permissions-connect,
+  .permission-approval-container,
+  .request-signature__header-background,
+  .request-signature__header__tip {
     background: #282828;
   }
 
-  .home__tabs,
-  .home__main-view {
-    background: inherit;
+  .menu-bar__account-options,
+  .asset-breadcrumb {
+    border: none;
   }
 }

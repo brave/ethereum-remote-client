@@ -136,6 +136,7 @@
     "obs-store": "^4.0.3",
     "pify": "^5.0.0",
     "post-message-stream": "^3.0.0",
+    "promise-filter": "1.1.0",
     "promise-to-callback": "^1.0.0",
     "prop-types": "^15.6.1",
     "pubnub": "4.27.3",

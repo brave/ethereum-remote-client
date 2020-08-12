@@ -1,7 +1,17 @@
 diff --git a/app/scripts/metamask-controller.js b/app/scripts/metamask-controller.js
-index 3f1511333e6be632dca96c651ac94cb4cedd6f26..b6ae733ca2809ee5f44ec6389c599235bdd9f2d5 100644
+index 3f1511333e6be632dca96c651ac94cb4cedd6f26..f716f8a29b2bad1727ddbde3c3d29fd2efa7c1a3 100644
 --- a/app/scripts/metamask-controller.js
 +++ b/app/scripts/metamask-controller.js
+@@ -63,8 +63,8 @@ import contractMap from 'eth-contract-metadata'
+ import {
+   AddressBookController,
+   CurrencyRateController,
+-  PhishingController,
+ } from '@metamask/controllers'
++import { PhishingController } from '../../brave/lib/phishing-controller'
+ 
+ import backEndMetaMetricsEvent from './lib/backend-metametrics'
+ 
 @@ -336,6 +336,10 @@ export default class MetamaskController extends EventEmitter {
      ) {
        this.submitPassword(password)

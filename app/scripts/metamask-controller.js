@@ -1848,13 +1848,18 @@ export default class MetamaskController extends EventEmitter {
     }
 
     const metamaskState = await this.getState()
-    backgroundMetaMetricsEvent(metamaskState, {
-      customVariables,
-      eventOpts: {
-        action,
-        name,
+    const version = this.platform.getVersion()
+    backgroundMetaMetricsEvent(
+      metamaskState,
+      version,
+      {
+        customVariables,
+        eventOpts: {
+          action,
+          name,
+        },
       },
-    })
+    )
   }
 
   //=============================================================================

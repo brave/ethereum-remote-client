@@ -1,0 +1,22 @@
+diff --git a/ui/app/components/app/modals/metametrics-opt-in-modal/metametrics-opt-in-modal.component.js b/ui/app/components/app/modals/metametrics-opt-in-modal/metametrics-opt-in-modal.component.js
+index 9dc9533156f3e28236840ffd2fe2f3efa8c8e317..997f779174f3bb6a12c4910ecd582ababd86bb3e 100644
+--- a/ui/app/components/app/modals/metametrics-opt-in-modal/metametrics-opt-in-modal.component.js
++++ b/ui/app/components/app/modals/metametrics-opt-in-modal/metametrics-opt-in-modal.component.js
+@@ -13,7 +13,7 @@ export default class MetaMetricsOptInModal extends Component {
+     metricsEvent: PropTypes.func,
+   }
+ 
+-  render () {
++  _render () {
+     const { metricsEvent } = this.context
+     const { setParticipateInMetaMetrics, hideModal } = this.props
+ 
+@@ -128,4 +128,8 @@ export default class MetaMetricsOptInModal extends Component {
+       </div>
+     )
+   }
++
++  render () {
++    return null
++  }
+ }

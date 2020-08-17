@@ -1,5 +1,5 @@
 diff --git a/ui/app/store/actions.js b/ui/app/store/actions.js
-index abb855233fa3daf992bd8b3462cd3cbceba93d46..d74b277ad17ab6d652e743a145568de54477a05a 100644
+index 49a43da246a40a672682a4107dbc8c676b8d56a0..e3447eabfcf397fe460a3653499aadace5508d93 100644
 --- a/ui/app/store/actions.js
 +++ b/ui/app/store/actions.js
 @@ -2419,3 +2419,16 @@ export function getCurrentWindowTab () {

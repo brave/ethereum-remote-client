@@ -1,8 +1,24 @@
 diff --git a/ui/app/components/ui/mascot.js b/ui/app/components/ui/mascot.js
-index db2037cdf38586b4acc72e12c0c0890584e96186..1c17376bb89c19d2d1d27742bb6f1a70b296ce4b 100644
+index db2037cdf38586b4acc72e12c0c0890584e96186..c63212f4eaccfa4c377e38b518669b731aa606ab 100644
 --- a/ui/app/components/ui/mascot.js
 +++ b/ui/app/components/ui/mascot.js
-@@ -55,7 +55,7 @@ export default class Mascot extends Component {
+@@ -44,10 +44,14 @@ export default class Mascot extends Component {
+     this.refollowMouse()
+   }
+ 
+-  componentDidMount () {
++  _componentDidMount () {
+     this.mascotContainer.current.appendChild(this.logo.container)
+   }
+ 
++  componentDidMount () {
++    /* no-op */
++  }
++
+   componentWillUnmount () {
+     this.animations = this.props.animationEventEmitter
+     this.animations.removeAllListeners()
+@@ -55,7 +59,7 @@ export default class Mascot extends Component {
      this.logo.stopAnimation()
    }
  
@@ -11,7 +27,7 @@ index db2037cdf38586b4acc72e12c0c0890584e96186..1c17376bb89c19d2d1d27742bb6f1a70
      // this is a bit hacky
      // the event emitter is on `this.props`
      // and we dont get that until render
-@@ -67,4 +67,8 @@ export default class Mascot extends Component {
+@@ -67,4 +71,8 @@ export default class Mascot extends Component {
        />
      )
    }

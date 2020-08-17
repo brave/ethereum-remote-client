@@ -1,21 +1,22 @@
 diff --git a/ui/app/store/actions.js b/ui/app/store/actions.js
-index 49a43da246a40a672682a4107dbc8c676b8d56a0..e3447eabfcf397fe460a3653499aadace5508d93 100644
+index 49a43da246a40a672682a4107dbc8c676b8d56a0..b0c99f92ccc12af1af9e3a94e002a3b342066cf7 100644
 --- a/ui/app/store/actions.js
 +++ b/ui/app/store/actions.js
-@@ -2419,3 +2419,16 @@ export function getCurrentWindowTab () {
+@@ -2419,3 +2419,17 @@ export function getCurrentWindowTab () {
      dispatch(setCurrentWindowTab(currentWindowTab))
    }
  }
 +
-+export function setBatTokenAdded () {
++export function setBatTokenAdded (network) {
 +  return (dispatch) => {
-+    background.setBatTokenAdded((err) => {
++    background.setBatTokenAdded(network, (err) => {
 +      if (err) {
 +        return dispatch(displayWarning(err.message))
 +      }
 +    })
 +    dispatch({
 +      type: actionConstants.SET_BAT_TOKEN_ADDED,
++      value: network
 +    })
 +  }
 +}

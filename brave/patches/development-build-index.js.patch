@@ -1,8 +1,8 @@
 diff --git a/development/build/index.js b/development/build/index.js
-index a665410b265aa104df4b8b7949059d98b4964c6c..53e11ba83580052cc202bb2457f01441e41c6cac 100755
+index a665410b265aa104df4b8b7949059d98b4964c6c..ea0f5029ede4823d49502c0e95b9927641b24f20 100755
 --- a/development/build/index.js
 +++ b/development/build/index.js
-@@ -11,6 +11,11 @@ const createScriptTasks = require('./scripts')
+@@ -11,6 +11,12 @@ const createScriptTasks = require('./scripts')
  const createStyleTasks = require('./styles')
  const createStaticAssetTasks = require('./static')
  const createEtcTasks = require('./etc')
@@ -10,17 +10,19 @@ index a665410b265aa104df4b8b7949059d98b4964c6c..53e11ba83580052cc202bb2457f01441
 +const createBraveLoadStylesTasks = require('../../brave/build/styles')
 +const createBraveManifestTasks = require('../../brave/build/manifest')
 +const createBraveLocalesTasks = require('../../brave/build/locales')
-+const { fontsTask, imagesTask } = require('../../brave/build/assets')
++const createBravePublishTasks = require('../../brave/build/publish')
++const { fontsTask, imagesTask, fontsTaskProd, imagesTaskProd } = require('../../brave/build/assets')
  
  const browserPlatforms = [
    'firefox',
-@@ -30,15 +35,27 @@ function defineAllTasks () {
+@@ -30,20 +36,59 @@ function defineAllTasks () {
    const scriptTasks = createScriptTasks({ livereload, browserPlatforms })
    const { clean, reload, zip } = createEtcTasks({ livereload, browserPlatforms })
  
 +  const braveHTMLTasks = createBraveHTMLTasks()
 +  const braveLoadStylesTasks = createBraveLoadStylesTasks()
 +  const braveManifestTasks = createBraveManifestTasks()
++  const bravePublishTasks = createBravePublishTasks()
 +  const { stringTask, combineTask } = createBraveLocalesTasks()
 +
    // build for development (livereload)
@@ -44,3 +46,34 @@ index a665410b265aa104df4b8b7949059d98b4964c6c..53e11ba83580052cc202bb2457f01441
          reload,
        ),
      ),
+   )
+ 
++  createTask('prod:brave',
++    composeSeries(
++      clean,
++      braveLoadStylesTasks,
++      composeParallel(
++        styleTasks.prod,
++        staticTasks.prod,
++        manifestTasks.prod,
++        scriptTasks.prod,
++      ),
++      braveHTMLTasks,
++      braveManifestTasks,
++      stringTask,
++      combineTask,
++      fontsTaskProd,
++      imagesTaskProd,
++      zip,
++    ),
++  )
++
++  createTask('publish:brave',
++    composeSeries(
++      bravePublishTasks,
++    ),
++  )
++
+   // build for test development (livereload)
+   createTask('testDev',
+     composeSeries(

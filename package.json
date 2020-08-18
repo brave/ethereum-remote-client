@@ -1,10 +1,13 @@
 {
-  "name": "metamask-crx",
-  "version": "0.0.0",
+  "name": "ethereum-remote-client",
+  "version": "0.1.61",
   "private": true,
   "scripts": {
     "start": "yarn build dev",
     "dist": "yarn build prod",
+    "dev:brave": "yarn apply-patches && yarn build dev",
+    "dist:brave": "yarn apply-patches && yarn build prod:brave",
+    "publish:brave": "yarn dist:brave && yarn build brave-publish",
     "build": "node development/build/index.js",
     "start:test": "yarn build testDev",
     "benchmark:chrome": "SELENIUM_BROWSER=chrome node test/e2e/benchmark.js",

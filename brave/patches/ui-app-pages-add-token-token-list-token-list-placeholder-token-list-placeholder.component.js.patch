@@ -1,0 +1,13 @@
+diff --git a/ui/app/pages/add-token/token-list/token-list-placeholder/token-list-placeholder.component.js b/ui/app/pages/add-token/token-list/token-list-placeholder/token-list-placeholder.component.js
+index 20f5509276d70c12be8111359c1df98004588624..f9ba0d268aa04b077c95338057a06b8da7725bd4 100644
+--- a/ui/app/pages/add-token/token-list/token-list-placeholder/token-list-placeholder.component.js
++++ b/ui/app/pages/add-token/token-list/token-list-placeholder/token-list-placeholder.component.js
+@@ -15,7 +15,7 @@ export default class TokenListPlaceholder extends Component {
+         </div>
+         <a
+           className="token-list-placeholder__link"
+-          href="https://metamask.zendesk.com/hc/en-us/articles/360015489031"
++          href="https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-"
+           target="_blank"
+           rel="noopener noreferrer"
+         >

@@ -1,0 +1,13 @@
+diff --git a/ui/app/pages/create-account/import-account/json.js b/ui/app/pages/create-account/import-account/json.js
+index 304e52c5069261f4501957d43b807de6c8d3e08a..4e80d2531a01c3ace0d345880505282d9b9f1b8d 100644
+--- a/ui/app/pages/create-account/import-account/json.js
++++ b/ui/app/pages/create-account/import-account/json.js
+@@ -9,7 +9,7 @@ import { getMetaMaskAccounts } from '../../../selectors'
+ import Button from '../../../components/ui/button'
+ import { getMostRecentOverviewPage } from '../../../ducks/history/history'
+ 
+-const HELP_LINK = 'https://metamask.zendesk.com/hc/en-us/articles/360015489331-Importing-an-Account'
++const HELP_LINK = 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+ 
+ class JsonImportSubview extends Component {
+   state = {

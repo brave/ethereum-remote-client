@@ -1,0 +1,13 @@
+diff --git a/ui/app/pages/create-account/import-account/index.js b/ui/app/pages/create-account/import-account/index.js
+index 13d26f8f047936aacac3a1c67630fa6c8f14effd..3a673c509732ac8bd408bf6fc83cd49fd39d7656 100644
+--- a/ui/app/pages/create-account/import-account/index.js
++++ b/ui/app/pages/create-account/import-account/index.js
+@@ -51,7 +51,7 @@ export default class AccountImportSubview extends Component {
+             }}
+             onClick={() => {
+               global.platform.openTab({
+-                url: 'https://metamask.zendesk.com/hc/en-us/articles/360015289932',
++                url: 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-',
+               })
+             }}
+           >

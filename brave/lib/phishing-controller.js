@@ -7,7 +7,7 @@ class BravePhishingController extends PhishingController {
     this.phishfortResourceUrl = 'https://mainnet-staging-infura-api.bravesoftware.com/blacklist'
   }
 
-  async updatePhishingLists() {
+  async updatePhishingLists () {
     if (this.disabled) {
       return
     }
@@ -15,7 +15,7 @@ class BravePhishingController extends PhishingController {
     // Whitelists and tolerances still need to be fetched from the original endpoint
     await super.updatePhishingLists()
 
-    const phishFortDenylist = await fetch(this.phishfortResourceUrl)
+    const phishFortDenylist = await fetch(this.phishfortResourceUrl) // eslint-disable-line no-undef
     const parsedList = await phishFortDenylist.json()
 
     if (parsedList && this.detector) {

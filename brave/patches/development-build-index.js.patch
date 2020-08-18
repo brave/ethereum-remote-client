@@ -1,5 +1,5 @@
 diff --git a/development/build/index.js b/development/build/index.js
-index a665410b265aa104df4b8b7949059d98b4964c6c..d0188ab8cd1f151ff112956a195c6bb0d15d61f5 100755
+index a665410b265aa104df4b8b7949059d98b4964c6c..1e7c727f2c4e9cf045f4ba7404da13ccc3e94878 100755
 --- a/development/build/index.js
 +++ b/development/build/index.js
 @@ -11,6 +11,12 @@ const createScriptTasks = require('./scripts')
@@ -15,21 +15,14 @@ index a665410b265aa104df4b8b7949059d98b4964c6c..d0188ab8cd1f151ff112956a195c6bb0
  
  const browserPlatforms = [
    'firefox',
-@@ -21,6 +27,7 @@ const browserPlatforms = [
- 
- defineAllTasks()
- detectAndRunEntryTask()
-+createBravePublishTasks()
- 
- function defineAllTasks () {
- 
-@@ -30,20 +37,52 @@ function defineAllTasks () {
+@@ -30,20 +36,59 @@ function defineAllTasks () {
    const scriptTasks = createScriptTasks({ livereload, browserPlatforms })
    const { clean, reload, zip } = createEtcTasks({ livereload, browserPlatforms })
  
 +  const braveHTMLTasks = createBraveHTMLTasks()
 +  const braveLoadStylesTasks = createBraveLoadStylesTasks()
 +  const braveManifestTasks = createBraveManifestTasks()
++  const bravePublishTasks = createBravePublishTasks()
 +  const { stringTask, combineTask } = createBraveLocalesTasks()
 +
    // build for development (livereload)
@@ -72,6 +65,12 @@ index a665410b265aa104df4b8b7949059d98b4964c6c..d0188ab8cd1f151ff112956a195c6bb0
 +        scriptTasks.prod,
 +      ),
 +      zip,
++    ),
++  )
++
++  createTask('publish:brave',
++    composeSeries(
++      bravePublishTasks,
 +    ),
 +  )
 +

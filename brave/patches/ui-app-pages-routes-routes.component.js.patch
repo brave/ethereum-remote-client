@@ -1,5 +1,5 @@
 diff --git a/ui/app/pages/routes/routes.component.js b/ui/app/pages/routes/routes.component.js
-index 1dc556a9828835e5a2581423a4966ad27d6c92c0..270946c4422ae1be695d5610dc72e24c8f579d61 100644
+index 1dc556a9828835e5a2581423a4966ad27d6c92c0..9eb6b2dcf3af95afeb8e355eb1b1059146bd3f62 100644
 --- a/ui/app/pages/routes/routes.component.js
 +++ b/ui/app/pages/routes/routes.component.js
 @@ -31,6 +31,7 @@ import AppHeader from '../../components/app/app-header'
@@ -19,12 +19,12 @@ index 1dc556a9828835e5a2581423a4966ad27d6c92c0..270946c4422ae1be695d5610dc72e24c
    }
  
    static contextTypes = {
-@@ -88,6 +91,37 @@ export default class Routes extends Component {
+@@ -88,6 +91,33 @@ export default class Routes extends Component {
      metricsEvent: PropTypes.func,
    }
  
 +  componentDidMount () {
-+    const { addBatToken, batTokenNetworks, network } = this.props
++    const { addBatToken, network } = this.props
 +    const container = document.querySelector('#app-content')
 +
 +    if (!container) {
@@ -40,24 +40,20 @@ index 1dc556a9828835e5a2581423a4966ad27d6c92c0..270946c4422ae1be695d5610dc72e24c
 +      chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type))  // eslint-disable-line no-undef
 +    }
 +
-+    if (!(network in batTokenNetworks)) {
-+      addBatToken(network)
-+    }
++    addBatToken(network)
 +  }
 +
 +  componentDidUpdate (prevProps) {
-+    const { addBatToken, batTokenNetworks, network } = this.props
-+    if (prevProps.network !== this.props.network) {
-+      if (!(network in batTokenNetworks)) {
-+        addBatToken(network)
-+      }      
++    const { addBatToken, network } = this.props
++    if (prevProps.network !== network) {
++      addBatToken(network) 
 +    }
 +  }
 +
    UNSAFE_componentWillMount () {
      const { currentCurrency, pageChanged, setCurrentCurrencyToUSD } = this.props
  
-@@ -217,53 +251,56 @@ export default class Routes extends Component {
+@@ -217,53 +247,56 @@ export default class Routes extends Component {
        !submittedPendingTransactions.find(({ id }) => id === sidebarTransaction.id)
  
      return (

@@ -29,7 +29,7 @@ function createBraveLocalesTasks () {
         Object.keys(json).forEach((stringName) => {
           if (stringName !== 'metamaskImportSubText' && typeof json[stringName].message === 'string') {
             json[stringName].message = replaceMetaMask(json[stringName].message)
-            if (stringName !== 'symbolBetweenZeroTwelve') {
+            if (stringName !== 'symbolBetweenZeroTwelve' && stringName !== 'seedPhraseReq') {
               json[stringName].message = replace12With24(json[stringName].message)
             }
             if (stringName === 'endOfFlowMessage8') {

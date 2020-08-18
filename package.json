@@ -6,6 +6,7 @@
     "start": "yarn build dev",
     "dist": "yarn build prod",
     "dev:brave": "yarn apply-patches && yarn build dev",
+    "dist:brave": "yarn apply-patches && yarn build prod:brave",
     "build": "node development/build/index.js",
     "start:test": "yarn build testDev",
     "benchmark:chrome": "SELENIUM_BROWSER=chrome node test/e2e/benchmark.js",

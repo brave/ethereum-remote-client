@@ -1,0 +1,15 @@
+diff --git a/ui/app/components/app/modals/modal.js b/ui/app/components/app/modals/modal.js
+index 812090f10f461623e911ef2d96c45452f48824e8..df4f19f9a390c3c59d52219ec124eb7cca9ae14c 100644
+--- a/ui/app/components/app/modals/modal.js
++++ b/ui/app/components/app/modals/modal.js
+@@ -438,6 +438,10 @@ class Modal extends Component {
+     const modalStyle = modal[isMobileView() ? 'mobileModalStyle' : 'laptopModalStyle']
+     const contentStyle = modal.contentStyle || {}
+ 
++    if (this.props.modalState.name === 'METAMETRICS_OPT_IN_MODAL') {
++      return null
++    }
++
+     return (
+       <FadeModal
+         keyboard={false}

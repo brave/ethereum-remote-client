@@ -1,0 +1,13 @@
+diff --git a/ui/app/components/app/permissions-connect-footer/permissions-connect-footer.component.js b/ui/app/components/app/permissions-connect-footer/permissions-connect-footer.component.js
+index 7bc2a8afd952ddae637b98dba6e3eda557ef0441..fcd87e55f21f11b6cc244eb93f7f742197391200 100644
+--- a/ui/app/components/app/permissions-connect-footer/permissions-connect-footer.component.js
++++ b/ui/app/components/app/permissions-connect-footer/permissions-connect-footer.component.js
+@@ -15,7 +15,7 @@ export default class PermissionsConnectFooter extends Component {
+           <div
+             className="permissions-connect-footer__text--link"
+             onClick={() => {
+-              global.platform.openTab({ url: 'https://medium.com/metamask/privacy-mode-is-now-enabled-by-default-1c1c957f4d57' })
++              global.platform.openTab({ url: 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-' })
+             }}
+           >{ t('learnMore') }
+           </div>

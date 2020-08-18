@@ -1,0 +1,13 @@
+diff --git a/ui/app/pages/home/home.component.js b/ui/app/pages/home/home.component.js
+index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..d48c591746cfc7b358ae5c4473f53e738f142678 100644
+--- a/ui/app/pages/home/home.component.js
++++ b/ui/app/pages/home/home.component.js
+@@ -25,7 +25,7 @@ import {
+   CONNECTED_ACCOUNTS_ROUTE,
+ } from '../../helpers/constants/routes'
+ 
+-const LEARN_MORE_URL = 'https://metamask.zendesk.com/hc/en-us/articles/360045129011-Intro-to-MetaMask-v8-extension'
++const LEARN_MORE_URL = 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
+ 
+ export default class Home extends PureComponent {
+   static contextTypes = {

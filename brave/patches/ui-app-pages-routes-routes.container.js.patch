@@ -1,12 +1,46 @@
 diff --git a/ui/app/pages/routes/routes.container.js b/ui/app/pages/routes/routes.container.js
-index d4a638250f829a7125c1afa245fb5b5f22e55b7c..8545b507fbbec57cb67cd44489b7c3932a90512b 100644
+index d4a638250f829a7125c1afa245fb5b5f22e55b7c..4764904b195423d1d568a70ea863d8a7264cb11b 100644
 --- a/ui/app/pages/routes/routes.container.js
 +++ b/ui/app/pages/routes/routes.container.js
-@@ -45,6 +45,7 @@ function mapStateToProps (state) {
+@@ -14,9 +14,22 @@ import {
+   setCurrentCurrency,
+   setLastActiveTime,
+   setMouseUserState,
++  addTokens,
++  setBatTokenAdded,
+ } from '../../store/actions'
+ import { pageChanged } from '../../ducks/history/history'
+ 
++const batToken = {
++  '0x0D8775F648430679A709E98d2b0Cb6250d2887EF': {
++    'name': 'Basic Attention Token',
++    'logo': 'BAT_icon.svg',
++    'erc20': true,
++    'symbol': 'BAT',
++    'decimals': 18,
++    'address': '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
++  },
++}
++
+ function mapStateToProps (state) {
+   const { appState } = state
+   const {
+@@ -45,6 +58,7 @@ function mapStateToProps (state) {
      providerId: getNetworkIdentifier(state),
      autoLockTimeLimit,
      hasPermissionsRequests: hasPermissionRequests(state),
 +    batTokenNetworks: state.metamask.batTokenNetworks,
+   }
+ }
+ 
+@@ -56,6 +70,10 @@ function mapDispatchToProps (dispatch) {
+     setMouseUserState: (isMouseUser) => dispatch(setMouseUserState(isMouseUser)),
+     setLastActiveTime: () => dispatch(setLastActiveTime()),
+     pageChanged: (path) => dispatch(pageChanged(path)),
++    addBatToken: (network) => {
++      dispatch(addTokens(batToken))
++      dispatch(setBatTokenAdded(network))
++    },
    }
  }
  

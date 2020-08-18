@@ -1,68 +1,13 @@
 diff --git a/ui/app/components/app/dropdowns/network-dropdown.js b/ui/app/components/app/dropdowns/network-dropdown.js
-index e578a8b7561ea2b8dee2507c40fcd0ff0b15dad5..5f912a0a801b910a5d17951170d71d0252743f8c 100644
+index e578a8b7561ea2b8dee2507c40fcd0ff0b15dad5..91ca5d186297337d5c851e537a573cf05b9f53de 100644
 --- a/ui/app/components/app/dropdowns/network-dropdown.js
 +++ b/ui/app/components/app/dropdowns/network-dropdown.js
-@@ -17,12 +17,24 @@ const notToggleElementClassnames = [
-   'network-component',
- ]
- 
-+const batToken = {
-+  '0x0D8775F648430679A709E98d2b0Cb6250d2887EF': {
-+    'name': 'Basic Attention Token',
-+    'logo': 'BAT_icon.svg',
-+    'erc20': true,
-+    'symbol': 'BAT',
-+    'decimals': 18,
-+    'address': '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
-+  },
-+}
-+
- function mapStateToProps (state) {
-   return {
-     provider: state.metamask.provider,
-     frequentRpcListDetail: state.metamask.frequentRpcListDetail || [],
-     networkDropdownOpen: state.appState.networkDropdownOpen,
-     network: state.metamask.network,
-+    batTokenNetworks: state.metamask.batTokenNetworks,
-   }
- }
- 
-@@ -39,6 +51,10 @@ function mapDispatchToProps (dispatch) {
-     },
-     hideNetworkDropdown: () => dispatch(actions.hideNetworkDropdown()),
-     setNetworksTabAddMode: (isInAddMode) => dispatch(actions.setNetworksTabAddMode(isInAddMode)),
-+    addBatToken: (network) => {
-+      dispatch(actions.addTokens(batToken))
-+      dispatch(actions.setBatTokenAdded(network))
-+    },
-   }
- }
- 
-@@ -64,12 +80,26 @@ class NetworkDropdown extends Component {
-     networkDropdownOpen: PropTypes.bool.isRequired,
-     history: PropTypes.object.isRequired,
-     delRpcTarget: PropTypes.func.isRequired,
-+    batTokenNetworks: PropTypes.object,
-+    addBatToken: PropTypes.func.isRequired,
-+  }
-+
-+  componentDidMount () {
-+    const { provider: { type: providerType }, batTokenNetworks, addBatToken } = this.props
-+
-+    if (!(providerType in batTokenNetworks)) {
-+      addBatToken(providerType)
-+    }
+@@ -67,7 +67,7 @@ class NetworkDropdown extends Component {
    }
  
    handleClick (newProviderType) {
 -    const { provider: { type: providerType }, setProviderType } = this.props
-+    const { provider: { type: providerType }, setProviderType, batTokenNetworks, addBatToken } = this.props
++    const { provider: { type: providerType }, setProviderType, } = this.props
      const { metricsEvent } = this.context
  
-+    if (!(newProviderType in batTokenNetworks)) {
-+      addBatToken(newProviderType)
-+    }
-+
      metricsEvent({
-       eventOpts: {
-         category: 'Navigation',

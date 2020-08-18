@@ -252,4 +252,30 @@
   .asset-breadcrumb {
     border: none;
   }
+
+  .selected-account,
+  .permissions-connect-choose-account__account {
+    &:hover {
+      background: inherit;
+    }
+  }
+
+  .account-modal-close {
+    border: none;
+  }
+
+  .tab--active {
+    color: #fff;
+  }
+  
+  .new-account-modal {
+    background: black;
+  }
+
+  .menu__container.account-options-menu {
+    background: black;
+    .menu-item {
+      color: #fff;
+    }
+  }
 }

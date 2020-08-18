@@ -27,7 +27,7 @@ function createBraveLocalesTasks () {
     return gulp.src('./dist/brave/_locales/**/*')
       .pipe(jsoneditor(function (json) {
         Object.keys(json).forEach((stringName) => {
-          if (typeof json[stringName].message === 'string') {
+          if (stringName !== 'metamaskImportSubText' && typeof json[stringName].message === 'string') {
             json[stringName].message = replaceMetaMask(json[stringName].message)
             if (stringName !== 'symbolBetweenZeroTwelve') {
               json[stringName].message = replace12With24(json[stringName].message)

@@ -44,4 +44,14 @@ const fontsTask = copyTask('brave-fonts', {
   destinations: ['./dist/brave/fonts'],
 })
 
-module.exports = { fontsTask, imagesTask }
+const imagesTaskProd = copyTask('brave-images-prod', {
+  source: './brave/images/',
+  destinations: ['./dist/brave/images'],
+})
+
+const fontsTaskProd = copyTask('brave-fonts-prod', {
+  source: './brave/fonts/',
+  destinations: ['./dist/brave/fonts'],
+})
+
+module.exports = { fontsTask, imagesTask, fontsTaskProd, imagesTaskProd }

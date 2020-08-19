@@ -1,16 +1,7 @@
 diff --git a/ui/app/store/actions.js b/ui/app/store/actions.js
-index 49a43da246a40a672682a4107dbc8c676b8d56a0..f98e76dc3c1839258992a4903ef3193a75b61265 100644
+index 49a43da246a40a672682a4107dbc8c676b8d56a0..b0c99f92ccc12af1af9e3a94e002a3b342066cf7 100644
 --- a/ui/app/store/actions.js
 +++ b/ui/app/store/actions.js
-@@ -168,7 +168,7 @@ export function createNewVault (password) {
- 
- export function verifyPassword (password) {
-   return new Promise((resolve, reject) => {
--    background.verifyPassword(password, (error) => {
-+    background.submitPassword(password, (error) => {
-       if (error) {
-         return reject(error)
-       }
 @@ -2419,3 +2419,17 @@ export function getCurrentWindowTab () {
      dispatch(setCurrentWindowTab(currentWindowTab))
    }

@@ -1,0 +1,58 @@
+diff --git a/ui/app/pages/home/home.container.js b/ui/app/pages/home/home.container.js
+index 8a1c0eed77aac737942c1f81ec414544ac0f41e0..32af5a3c0a6a95aab38d1c4eae884e2cdd56810a 100644
+--- a/ui/app/pages/home/home.container.js
++++ b/ui/app/pages/home/home.container.js
+@@ -16,6 +16,8 @@ import {
+   setShowRestorePromptToFalse,
+   setConnectedStatusPopoverHasBeenShown,
+   setDefaultHomeActiveTabName,
++  addTokens,
++  setBatTokenAdded,
+ } from '../../store/actions'
+ import { setThreeBoxLastUpdated } from '../../ducks/app/app'
+ import { getEnvironmentType } from '../../../../app/scripts/lib/util'
+@@ -24,6 +26,17 @@ import {
+   ENVIRONMENT_TYPE_POPUP,
+ } from '../../../../app/scripts/lib/enums'
+ 
++const batToken = {
++  '0x0D8775F648430679A709E98d2b0Cb6250d2887EF': {
++    'name': 'Basic Attention Token',
++    'logo': 'BAT_icon.svg',
++    'erc20': true,
++    'symbol': 'BAT',
++    'decimals': 18,
++    'address': '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
++  },
++}
++
+ const mapStateToProps = (state) => {
+   const { metamask, appState } = state
+   const {
+@@ -35,6 +48,7 @@ const mapStateToProps = (state) => {
+     selectedAddress,
+     connectedStatusPopoverHasBeenShown,
+     defaultHomeActiveTabName,
++    network,
+   } = metamask
+   const accountBalance = getCurrentEthBalance(state)
+   const { forgottenPassword, threeBoxLastUpdated } = appState
+@@ -64,6 +78,7 @@ const mapStateToProps = (state) => {
+     totalUnapprovedCount,
+     connectedStatusPopoverHasBeenShown,
+     defaultHomeActiveTabName,
++    network,
+   }
+ }
+ 
+@@ -84,6 +99,10 @@ const mapDispatchToProps = (dispatch) => ({
+   setShowRestorePromptToFalse: () => dispatch(setShowRestorePromptToFalse()),
+   setConnectedStatusPopoverHasBeenShown: () => dispatch(setConnectedStatusPopoverHasBeenShown()),
+   onTabClick: (name) => dispatch(setDefaultHomeActiveTabName(name)),
++  addBatToken: (network) => {
++    dispatch(addTokens(batToken))
++    dispatch(setBatTokenAdded(network))
++  },
+ })
+ 
+ export default compose(

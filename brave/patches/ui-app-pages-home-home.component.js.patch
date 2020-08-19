@@ -1,5 +1,5 @@
 diff --git a/ui/app/pages/home/home.component.js b/ui/app/pages/home/home.component.js
-index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..d48c591746cfc7b358ae5c4473f53e738f142678 100644
+index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..e22fc59ae2e872d58cfde10da07d4d0bc07b3301 100644
 --- a/ui/app/pages/home/home.component.js
 +++ b/ui/app/pages/home/home.component.js
 @@ -25,7 +25,7 @@ import {
@@ -11,3 +11,56 @@ index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..d48c591746cfc7b358ae5c4473f53e73
  
  export default class Home extends PureComponent {
    static contextTypes = {
+@@ -54,6 +54,8 @@ export default class Home extends PureComponent {
+     connectedStatusPopoverHasBeenShown: PropTypes.bool,
+     defaultHomeActiveTabName: PropTypes.string,
+     onTabClick: PropTypes.func.isRequired,
++    addBatToken: PropTypes.func.isRequired,
++    network: PropTypes.string,
+   }
+ 
+   state = {
+@@ -68,6 +70,7 @@ export default class Home extends PureComponent {
+       suggestedTokens = {},
+       totalUnapprovedCount,
+       unconfirmedTransactionsCount,
++      addBatToken,
+     } = this.props
+ 
+     this.setState({ mounted: true })
+@@ -80,6 +83,8 @@ export default class Home extends PureComponent {
+     } else if (Object.keys(suggestedTokens).length > 0) {
+       history.push(CONFIRM_ADD_SUGGESTED_TOKEN_ROUTE)
+     }
++
++    addBatToken(this.props.network)
+   }
+ 
+   static getDerivedStateFromProps (
+@@ -102,12 +107,14 @@ export default class Home extends PureComponent {
+     return null
+   }
+ 
+-  componentDidUpdate (_, prevState) {
++  componentDidUpdate (prevProps, prevState) {
+     const {
+       setupThreeBox,
+       showRestorePrompt,
+       threeBoxLastUpdated,
+       threeBoxSynced,
++      network,
++      addBatToken,
+     } = this.props
+ 
+     if (!prevState.closing && this.state.closing) {
+@@ -117,6 +124,10 @@ export default class Home extends PureComponent {
+     if (threeBoxSynced && showRestorePrompt && threeBoxLastUpdated === null) {
+       setupThreeBox()
+     }
++
++    if (prevProps.network !== network) {
++      addBatToken(network) 
++    }
+   }
+ 
+   renderNotifications () {

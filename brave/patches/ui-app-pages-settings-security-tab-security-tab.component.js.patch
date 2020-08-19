@@ -1,7 +1,16 @@
 diff --git a/ui/app/pages/settings/security-tab/security-tab.component.js b/ui/app/pages/settings/security-tab/security-tab.component.js
-index a9670a9d83a3ab095cdda5e9a614e3f98a9cb006..cad8559df4285e45a87e372027861c5c6603809d 100644
+index a9670a9d83a3ab095cdda5e9a614e3f98a9cb006..85dcb5972414728807361a18bc4409d7438fd52c 100644
 --- a/ui/app/pages/settings/security-tab/security-tab.component.js
 +++ b/ui/app/pages/settings/security-tab/security-tab.component.js
+@@ -13,7 +13,7 @@ export default class SecurityTab extends PureComponent {
+   static propTypes = {
+     warning: PropTypes.string,
+     history: PropTypes.object,
+-    participateInMetaMetrics: PropTypes.bool.isRequired,
++    participateInMetaMetrics: PropTypes.bool,
+     setParticipateInMetaMetrics: PropTypes.func.isRequired,
+     showIncomingTransactions: PropTypes.bool.isRequired,
+     setShowIncomingTransactionsFeatureFlag: PropTypes.func.isRequired,
 @@ -55,7 +55,7 @@ export default class SecurityTab extends PureComponent {
      )
    }

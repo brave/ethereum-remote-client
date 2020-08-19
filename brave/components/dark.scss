@@ -1,4 +1,5 @@
-#app-content.dark {
+#app-content.dark,
+#popover-content.dark {
   color: #fff;
   background: #1d2025;
 
@@ -276,6 +277,34 @@
     background: black;
     .menu-item {
       color: #fff;
+    }
+  }
+
+  .permissions-connect-footer__text--link,
+  .permissions-connect-choose-account__text-blue {
+    color: #037dd6;
+  }
+
+  .popover-wrap,
+  .menu__container.account-options-menu {
+    .menu-item,
+    .popover-header__button {
+      border: none;
+    }
+
+    * {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  .cancel-transaction-gas-fee {
+    background: inherit;
+  }
+
+  .hw-account-list {
+    &__item:nth-of-type(even) {
+      background: rgba(0, 0, 0, 0.03);
     }
   }
 }

@@ -1,5 +1,5 @@
 diff --git a/ui/app/pages/routes/routes.component.js b/ui/app/pages/routes/routes.component.js
-index 1dc556a9828835e5a2581423a4966ad27d6c92c0..9eb6b2dcf3af95afeb8e355eb1b1059146bd3f62 100644
+index 1dc556a9828835e5a2581423a4966ad27d6c92c0..4d9bcbaae19dca385a4a74168daf05d707c26a16 100644
 --- a/ui/app/pages/routes/routes.component.js
 +++ b/ui/app/pages/routes/routes.component.js
 @@ -31,6 +31,7 @@ import AppHeader from '../../components/app/app-header'
@@ -10,50 +10,33 @@ index 1dc556a9828835e5a2581423a4966ad27d6c92c0..9eb6b2dcf3af95afeb8e355eb1b10591
  
  import {
    ADD_TOKEN_ROUTE,
-@@ -81,6 +82,8 @@ export default class Routes extends Component {
-     hasPermissionsRequests: PropTypes.bool,
-     autoLockTimeLimit: PropTypes.number,
-     pageChanged: PropTypes.func.isRequired,
-+    batTokenNetworks: PropTypes.object,
-+    addBatToken: PropTypes.func.isRequired,
-   }
- 
-   static contextTypes = {
-@@ -88,6 +91,33 @@ export default class Routes extends Component {
+@@ -88,6 +89,25 @@ export default class Routes extends Component {
      metricsEvent: PropTypes.func,
    }
  
 +  componentDidMount () {
-+    const { addBatToken, network } = this.props
 +    const container = document.querySelector('#app-content')
++    const popover = document.getElementById('popover-content')
 +
-+    if (!container) {
++    if (!container || !popover) {
 +      return
 +    }
 +
 +    const setTheme = (t) => {
 +      container.className = `${t.toLowerCase()}`
++      popover.className = `${t.toLowerCase()}`
 +    }
 +
 +    if (chrome.hasOwnProperty('braveTheme')) {  // eslint-disable-line no-undef
 +      chrome.braveTheme.getBraveThemeType((type) => setTheme(type))  // eslint-disable-line no-undef
 +      chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type))  // eslint-disable-line no-undef
 +    }
-+
-+    addBatToken(network)
-+  }
-+
-+  componentDidUpdate (prevProps) {
-+    const { addBatToken, network } = this.props
-+    if (prevProps.network !== network) {
-+      addBatToken(network) 
-+    }
 +  }
 +
    UNSAFE_componentWillMount () {
      const { currentCurrency, pageChanged, setCurrentCurrencyToUSD } = this.props
  
-@@ -217,53 +247,56 @@ export default class Routes extends Component {
+@@ -217,53 +237,56 @@ export default class Routes extends Component {
        !submittedPendingTransactions.find(({ id }) => id === sidebarTransaction.id)
  
      return (
@@ -92,20 +75,6 @@ index 1dc556a9828835e5a2581423a4966ad27d6c92c0..9eb6b2dcf3af95afeb8e355eb1b10591
 +          <Alert
 +            visible={this.props.alertOpen}
 +            msg={alertMessage}
-+          />
-+          { !this.hideAppHeader() && (
-+            <AppHeader
-+              hideNetworkIndicator={this.onInitializationUnlockPage()}
-+              disabled={this.onConfirmPage()}
-+            />
-+          ) }
-+          <Sidebar
-+            sidebarOpen={sidebarIsOpen}
-+            sidebarShouldClose={sidebarShouldClose}
-+            hideSidebar={this.props.hideSidebar}
-+            transitionName={sidebarTransitionName}
-+            type={sidebarType}
-+            sidebarProps={sidebar.props}
            />
 -        ) }
 -        <Sidebar
@@ -125,6 +94,20 @@ index 1dc556a9828835e5a2581423a4966ad27d6c92c0..9eb6b2dcf3af95afeb8e355eb1b10591
 -          { isLoading && <Loading loadingMessage={loadMessage} /> }
 -          { !isLoading && isLoadingNetwork && <LoadingNetwork /> }
 -          { this.renderRoutes() }
++          { !this.hideAppHeader() && (
++            <AppHeader
++              hideNetworkIndicator={this.onInitializationUnlockPage()}
++              disabled={this.onConfirmPage()}
++            />
++          ) }
++          <Sidebar
++            sidebarOpen={sidebarIsOpen}
++            sidebarShouldClose={sidebarShouldClose}
++            hideSidebar={this.props.hideSidebar}
++            transitionName={sidebarTransitionName}
++            type={sidebarType}
++            sidebarProps={sidebar.props}
++          />
 +          <NetworkDropdown
 +            provider={provider}
 +            frequentRpcListDetail={frequentRpcListDetail}

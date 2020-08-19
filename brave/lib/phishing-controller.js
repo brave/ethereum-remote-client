@@ -4,7 +4,7 @@ class BravePhishingController extends PhishingController {
   constructor (config, state) {
     super(config, state)
     this.configUrl = 'https://mainnet-infura-api.brave.com/blacklist'
-    this.phishfortResourceUrl = 'https://mainnet-staging-infura-api.bravesoftware.com/blacklist'
+    this.phishfortResourceUrl = 'https://mainnet-infura-api.brave.com/phishfort'
   }
 
   async updatePhishingLists () {

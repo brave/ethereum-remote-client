@@ -1,6 +1,6 @@
 {
   "name": "ethereum-remote-client",
-  "version": "0.1.66",
+  "version": "0.1.67",
   "private": true,
   "scripts": {
     "start": "yarn build dev",

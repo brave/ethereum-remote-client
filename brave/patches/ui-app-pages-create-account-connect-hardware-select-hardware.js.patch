@@ -1,5 +1,5 @@
 diff --git a/ui/app/pages/create-account/connect-hardware/select-hardware.js b/ui/app/pages/create-account/connect-hardware/select-hardware.js
-index 5c16bd452876878bd54f40ca95ea11806aa6b37c..f21108c92558270184867dec9a9daa8b634c3be8 100644
+index 5c16bd452876878bd54f40ca95ea11806aa6b37c..7e69338c98247abcbd7801dd786a15132105b486 100644
 --- a/ui/app/pages/create-account/connect-hardware/select-hardware.js
 +++ b/ui/app/pages/create-account/connect-hardware/select-hardware.js
 @@ -109,8 +109,8 @@ export default class SelectHardware extends Component {
@@ -13,3 +13,12 @@ index 5c16bd452876878bd54f40ca95ea11806aa6b37c..f21108c92558270184867dec9a9daa8b
      }
  
      const text = this.context.t('orderOneHere')
+@@ -196,7 +196,7 @@ export default class SelectHardware extends Component {
+         {this.renderButtons()}
+         <p className="hw-connect__footer__msg">
+           {this.context.t('havingTroubleConnecting')}
+-          <a className="hw-connect__footer__link" href="https://support.metamask.io/" target="_blank" rel="noopener noreferrer">
++          <a className="hw-connect__footer__link" href="https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-" target="_blank" rel="noopener noreferrer">
+             {this.context.t('getHelp')}
+           </a>
+         </p>

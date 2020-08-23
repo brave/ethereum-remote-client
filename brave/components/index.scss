@@ -52,12 +52,8 @@ h5 {
   }
 }
 
-div.settings-page__content-row > div:nth-child(2) > div:nth-child(3),
-div.settings-page__content__tabs > div > div:nth-child(7),
-div.menu.account-menu > div:nth-child(10) {
+div.settings-page__content-row > div:nth-child(2) > div:nth-child(3):not(.address-book__view-contact__group),
+div.settings-page__content__tabs > div > div:nth-child(7):not(.address-book__view-contact__group),
+div.menu.account-menu > div:nth-child(10):not(.address-book__view-contact__group) {
   display: none;
-}
-
-.address-book__view-contact__group {
-  display: block;
 }

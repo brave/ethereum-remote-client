@@ -1,9 +1,12 @@
 diff --git a/ui/app/pages/home/home.component.js b/ui/app/pages/home/home.component.js
-index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..4be3666021eaa7e2f4bc42b9181a3b812616b151 100644
+index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..3ecce41be888b44cbbf27083271a104ed7e27542 100644
 --- a/ui/app/pages/home/home.component.js
 +++ b/ui/app/pages/home/home.component.js
-@@ -25,7 +25,7 @@ import {
+@@ -23,9 +23,10 @@ import {
+   CONNECT_ROUTE,
+   CONNECTED_ROUTE,
    CONNECTED_ACCOUNTS_ROUTE,
++  CONNECT_HARDWARE_ROUTE,
  } from '../../helpers/constants/routes'
  
 -const LEARN_MORE_URL = 'https://metamask.zendesk.com/hc/en-us/articles/360045129011-Intro-to-MetaMask-v8-extension'
@@ -11,7 +14,27 @@ index 880e438e0be1787a6bb1ec9c0bb753a8e650a424..4be3666021eaa7e2f4bc42b9181a3b81
  
  export default class Home extends PureComponent {
    static contextTypes = {
-@@ -102,7 +102,7 @@ export default class Home extends PureComponent {
+@@ -68,6 +69,7 @@ export default class Home extends PureComponent {
+       suggestedTokens = {},
+       totalUnapprovedCount,
+       unconfirmedTransactionsCount,
++      hardwareConnect,
+     } = this.props
+ 
+     this.setState({ mounted: true })
+@@ -80,6 +82,11 @@ export default class Home extends PureComponent {
+     } else if (Object.keys(suggestedTokens).length > 0) {
+       history.push(CONFIRM_ADD_SUGGESTED_TOKEN_ROUTE)
+     }
++
++    if (hardwareConnect) {
++      this.props.setHardwareConnect(false)
++      this.props.history.push(CONNECT_HARDWARE_ROUTE)
++    }
+   }
+ 
+   static getDerivedStateFromProps (
+@@ -102,7 +109,7 @@ export default class Home extends PureComponent {
      return null
    }
  

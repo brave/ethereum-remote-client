@@ -1,5 +1,5 @@
 diff --git a/app/scripts/metamask-controller.js b/app/scripts/metamask-controller.js
-index 5aa4539e325c067185a6325d5d40d01714d06f1b..7c9e00cf835cabef9b70661c928f8c6dc1710d88 100644
+index 5aa4539e325c067185a6325d5d40d01714d06f1b..af78cd609593ff2b344c88be903e7f3d0f226b8a 100644
 --- a/app/scripts/metamask-controller.js
 +++ b/app/scripts/metamask-controller.js
 @@ -63,8 +63,8 @@ import contractMap from 'eth-contract-metadata'
@@ -23,12 +23,13 @@ index 5aa4539e325c067185a6325d5d40d01714d06f1b..7c9e00cf835cabef9b70661c928f8c6d
    }
  
    /**
-@@ -572,6 +576,8 @@ export default class MetamaskController extends EventEmitter {
+@@ -572,6 +576,9 @@ export default class MetamaskController extends EventEmitter {
        addPermittedAccount: nodeify(permissionsController.addPermittedAccount, permissionsController),
        removePermittedAccount: nodeify(permissionsController.removePermittedAccount, permissionsController),
        requestAccountsPermissionWithId: nodeify(permissionsController.requestAccountsPermissionWithId, permissionsController),
 +
 +      setBatTokenAdded: nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController),
++      setHardwareConnect: nodeify(this.preferencesController.setHardwareConnect, this.preferencesController),
      }
    }
  

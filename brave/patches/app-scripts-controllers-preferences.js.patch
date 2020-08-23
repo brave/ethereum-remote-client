@@ -1,17 +1,18 @@
 diff --git a/app/scripts/controllers/preferences.js b/app/scripts/controllers/preferences.js
-index 47fa73746bf4cb1c0cee900564f9d726effea6d3..fbf263c26890c99a6e6ad42d0d4f62f683369e76 100644
+index 47fa73746bf4cb1c0cee900564f9d726effea6d3..ae6bd103784aacfcdf376fd99d7a853327498c86 100644
 --- a/app/scripts/controllers/preferences.js
 +++ b/app/scripts/controllers/preferences.js
-@@ -62,6 +62,8 @@ export default class PreferencesController {
+@@ -62,6 +62,9 @@ export default class PreferencesController {
  
        // ENS decentralized website resolution
        ipfsGateway: 'dweb.link',
 +
 +      batTokenNetworks: {},
++      hardwareConnect: false,
      }, opts.initState)
  
      this.diagnostics = opts.diagnostics
-@@ -382,9 +384,48 @@ export default class PreferencesController {
+@@ -382,9 +385,48 @@ export default class PreferencesController {
  
      selectedIdentity.lastSelected = Date.now()
      this.store.updateState({ identities, selectedAddress: address })
@@ -60,7 +61,7 @@ index 47fa73746bf4cb1c0cee900564f9d726effea6d3..fbf263c26890c99a6e6ad42d0d4f62f6
    /**
     * Getter for the `selectedAddress` property
     *
-@@ -639,6 +680,13 @@ export default class PreferencesController {
+@@ -639,6 +681,17 @@ export default class PreferencesController {
      return Promise.resolve(domain)
    }
  
@@ -69,6 +70,10 @@ index 47fa73746bf4cb1c0cee900564f9d726effea6d3..fbf263c26890c99a6e6ad42d0d4f62f6
 +    batNetworks[network] = true
 +    this.store.updateState({ batTokenNetworks: batNetworks })
 +    return Promise.resolve(true)
++  }
++
++  setHardwareConnect (value) {
++    this.store.updateState({ hardwareConnect: value })
 +  }
 +
    //

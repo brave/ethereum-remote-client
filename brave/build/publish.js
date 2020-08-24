@@ -13,7 +13,7 @@ function createBravePublishTasks () {
         json.scripts = {}
         return json
       }))
-      .pipe(gulp.dest('./dist/brave', { overwrite: true }))    
+      .pipe(gulp.dest('./dist/brave', { overwrite: true }))
   })
 
   return bravePublishTask

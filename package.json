@@ -8,6 +8,7 @@
     "dev:brave": "yarn apply-patches && yarn build dev",
     "dist:brave": "yarn apply-patches && yarn build prod:brave",
     "publish:brave": "yarn dist:brave && yarn build brave-publish",
+    "audit-deps": "node brave/scripts/audit.js",
     "build": "node development/build/index.js",
     "start:test": "yarn build testDev",
     "benchmark:chrome": "SELENIUM_BROWSER=chrome node test/e2e/benchmark.js",
@@ -62,7 +63,13 @@
     "**/socketcluster/minimist": "^1.2.5",
     "3box/ipfs/ipld-zcash/zcash-bitcore-lib/lodash": "^4.17.19",
     "ganache-core/lodash": "^4.17.19",
-    "eth-hd-keyring": "github:brave/eth-hd-keyring#482acf341f01a8d1e924d55bfdbd309444a78e46"
+    "eth-hd-keyring": "github:brave/eth-hd-keyring#482acf341f01a8d1e924d55bfdbd309444a78e46",
+    "serialize-javascript": "^3.1.0",
+    "dot-prop": "4.2.1",
+    "elliptic": "^6.5.3",
+    "apollo-server-core": "^2.14.2",
+    "apollo-server-express": "^2.14.2",
+    "yargs-parser": "13.1.2"
   },
   "dependencies": {
     "3box": "^1.10.2",

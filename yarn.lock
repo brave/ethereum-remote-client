@@ -10078,23 +10078,9 @@ eth-ens-namehash@^1.0.2:
     idna-uts46 "^1.0.1"
     js-sha3 "^0.5.7"
 
-eth-hd-keyring@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/eth-hd-keyring/-/eth-hd-keyring-3.5.0.tgz#3976d83a27b24305481c389178f290d9264e839d"
-  integrity sha512-Ix1LcWYxHMxCCSIMz+TLXLtt50zF6ZDd/TRVXthdw91IwOk1ajuf7QHg3bCDcfeUpdf9oEpwIPbL3xjDqEEjYw==
-  dependencies:
-    bip39 "^2.2.0"
-    eth-sig-util "^2.4.4"
-    eth-simple-keyring "^3.5.0"
-    ethereumjs-abi "^0.6.5"
-    ethereumjs-util "^5.1.1"
-    ethereumjs-wallet "^0.6.0"
-    events "^1.1.1"
-    xtend "^4.0.1"
-
-eth-hd-keyring@brave/eth-hd-keyring#d811474329e1a725180d393b67d03c0f3d96106b:
+eth-hd-keyring@^3.5.0, eth-hd-keyring@brave/eth-hd-keyring#d811474329e1a725180d393b67d03c0f3d96106b, "eth-hd-keyring@github:brave/eth-hd-keyring#482acf341f01a8d1e924d55bfdbd309444a78e46":
   version "2.0.0"
-  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/d811474329e1a725180d393b67d03c0f3d96106b"
+  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/482acf341f01a8d1e924d55bfdbd309444a78e46"
   dependencies:
     bip39 "^2.2.0"
     brave-crypto "^0.2.1"
@@ -10341,7 +10327,7 @@ eth-sig-util@^2.2.0:
     tweetnacl "^1.0.0"
     tweetnacl-util "^0.15.0"
 
-eth-sig-util@^2.4.4, eth-sig-util@^2.5.0:
+eth-sig-util@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/eth-sig-util/-/eth-sig-util-2.5.0.tgz#1018cf8bef2fe275ecbd526cf3248757b0880053"
   integrity sha512-ahApxr+e1cls/GwcFSGsgRLrMqG6D6cBnK9CRHhx97O/s9ow+URIxbPvov8jfE70ZnNBdHMircoSCpi1b4QHjA==

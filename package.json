@@ -61,7 +61,8 @@
     "**/optimist/minimist": "^1.2.5",
     "**/socketcluster/minimist": "^1.2.5",
     "3box/ipfs/ipld-zcash/zcash-bitcore-lib/lodash": "^4.17.19",
-    "ganache-core/lodash": "^4.17.19"
+    "ganache-core/lodash": "^4.17.19",
+    "eth-hd-keyring": "github:brave/eth-hd-keyring#482acf341f01a8d1e924d55bfdbd309444a78e46"
   },
   "dependencies": {
     "3box": "^1.10.2",

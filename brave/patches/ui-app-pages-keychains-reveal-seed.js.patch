@@ -1,0 +1,42 @@
+diff --git a/ui/app/pages/keychains/reveal-seed.js b/ui/app/pages/keychains/reveal-seed.js
+index 8f9e0aec43ce3713a4e4c69681c29e7cb9940e0a..c26bf05357e4e9f53fdcc0242404cef2fccb1744 100644
+--- a/ui/app/pages/keychains/reveal-seed.js
++++ b/ui/app/pages/keychains/reveal-seed.js
+@@ -2,7 +2,7 @@ import React, { Component } from 'react'
+ import { connect } from 'react-redux'
+ import PropTypes from 'prop-types'
+ import classnames from 'classnames'
+-import { requestRevealSeedWords } from '../../store/actions'
++import { hideWarning, requestRevealSeedWords } from '../../store/actions'
+ import ExportTextContainer from '../../components/ui/export-text-container'
+ import { getMostRecentOverviewPage } from '../../ducks/history/history'
+ 
+@@ -26,6 +26,12 @@ class RevealSeedPage extends Component {
+     }
+   }
+ 
++  componentWillUnmount () {
++    if (this.state.error) {
++      this.props.clearWarning()
++    }
++  }
++
+   handleSubmit (event) {
+     event.preventDefault()
+     this.setState({ seedWords: null, error: null })
+@@ -167,6 +173,7 @@ RevealSeedPage.propTypes = {
+   requestRevealSeedWords: PropTypes.func,
+   history: PropTypes.object,
+   mostRecentOverviewPage: PropTypes.string.isRequired,
++  clearWarning: PropTypes.func,
+ }
+ 
+ RevealSeedPage.contextTypes = {
+@@ -182,6 +189,7 @@ const mapStateToProps = (state) => {
+ const mapDispatchToProps = (dispatch) => {
+   return {
+     requestRevealSeedWords: (password) => dispatch(requestRevealSeedWords(password)),
++    clearWarning: () => dispatch(hideWarning()),
+   }
+ }
+ 

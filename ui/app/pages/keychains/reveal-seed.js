@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { requestRevealSeedWords } from '../../store/actions'
+import { hideWarning, requestRevealSeedWords } from '../../store/actions'
 import ExportTextContainer from '../../components/ui/export-text-container'
 import { getMostRecentOverviewPage } from '../../ducks/history/history'
 
@@ -23,6 +23,12 @@ class RevealSeedPage extends Component {
     const passwordBox = document.getElementById('password-box')
     if (passwordBox) {
       passwordBox.focus()
+    }
+  }
+
+  componentWillUnmount () {
+    if (this.state.error) {
+      this.props.clearWarning()
     }
   }
 
@@ -167,6 +173,7 @@ RevealSeedPage.propTypes = {
   requestRevealSeedWords: PropTypes.func,
   history: PropTypes.object,
   mostRecentOverviewPage: PropTypes.string.isRequired,
+  clearWarning: PropTypes.func,
 }
 
 RevealSeedPage.contextTypes = {
@@ -182,6 +189,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     requestRevealSeedWords: (password) => dispatch(requestRevealSeedWords(password)),
+    clearWarning: () => dispatch(hideWarning()),
   }
 }
 

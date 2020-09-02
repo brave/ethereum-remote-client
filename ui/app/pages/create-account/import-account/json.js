@@ -9,7 +9,7 @@ import { getMetaMaskAccounts } from '../../../selectors'
 import Button from '../../../components/ui/button'
 import { getMostRecentOverviewPage } from '../../../ducks/history/history'
 
-const HELP_LINK = 'https://metamask.zendesk.com/hc/en-us/articles/360015489331-Importing-an-Account'
+const HELP_LINK = 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
 
 class JsonImportSubview extends Component {
   state = {

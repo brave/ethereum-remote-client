@@ -44,7 +44,7 @@ export default class AdvancedTab extends PureComponent {
     ipfsGatewayError: '',
   }
 
-  renderMobileSync () {
+  _renderMobileSync () {
     const { t } = this.context
     const { history } = this.props
 
@@ -69,6 +69,10 @@ export default class AdvancedTab extends PureComponent {
         </div>
       </div>
     )
+  }
+
+  renderMobileSync () {
+    return null
   }
 
   renderStateLogs () {
@@ -341,7 +345,7 @@ export default class AdvancedTab extends PureComponent {
     )
   }
 
-  renderThreeBoxControl () {
+  _renderThreeBoxControl () {
     const { t } = this.context
     const {
       threeBoxSyncingAllowed,
@@ -384,6 +388,10 @@ export default class AdvancedTab extends PureComponent {
         </div>
       </div>
     )
+  }
+
+  renderThreeBoxControl () {
+    return null
   }
 
   handleIpfsGatewayChange (url) {

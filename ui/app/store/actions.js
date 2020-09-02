@@ -2419,3 +2419,17 @@ export function getCurrentWindowTab () {
     dispatch(setCurrentWindowTab(currentWindowTab))
   }
 }
+
+export function setHardwareConnect (value) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setHardwareConnect(value, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        return forceUpdateMetamaskState(dispatch).then(() => resolve())
+      })
+    })
+  }
+}

@@ -23,7 +23,7 @@ export default class NewAccount extends PureComponent {
     confirmPassword: '',
     passwordError: '',
     confirmPasswordError: '',
-    termsChecked: false,
+    termsChecked: true,
   }
 
   isValid () {

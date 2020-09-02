@@ -62,6 +62,8 @@ export default class PreferencesController {
 
       // ENS decentralized website resolution
       ipfsGateway: 'dweb.link',
+
+      hardwareConnect: false,
     }, opts.initState)
 
     this.diagnostics = opts.diagnostics
@@ -382,7 +384,48 @@ export default class PreferencesController {
 
     selectedIdentity.lastSelected = Date.now()
     this.store.updateState({ identities, selectedAddress: address })
+    this._ensureBatTokenAdded(address)
     return Promise.resolve(tokens)
+  }
+
+  _ensureBatTokenAdded (address) {
+    const tokens = this.store.getState().tokens
+    const assetImages = this.getAssetImages()
+    const { accountTokens } = this._getTokenRelatedStates()
+
+    const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
+    const networks = ['mainnet', 'rinkeby', 'ropsten', 'goerli', 'kovan']
+    const BATToken = {
+      address: BATAddress,
+      decimals: 18,
+      symbol: 'BAT',
+    }
+
+    if (!(address in accountTokens)) {
+      accountTokens[address] = {}
+    }
+
+    networks.map((network) => {
+      if (!(network in accountTokens[address])) {
+        accountTokens[address][network] = []
+      }
+
+      if (!accountTokens[address][network].find((token) => token.address === BATAddress)) {
+        accountTokens[address][network].push(BATToken)
+      }
+
+      return null
+    })
+
+    if (!(BATAddress in assetImages)) {
+      assetImages[BATAddress] = null
+    }
+
+    if (!tokens.find((token) => token.address === BATAddress)) {
+      tokens.push(BATToken)
+    }
+
+    this.store.updateState({ accountTokens, tokens, assetImages })
   }
 
   /**
@@ -637,6 +680,10 @@ export default class PreferencesController {
   setIpfsGateway (domain) {
     this.store.updateState({ ipfsGateway: domain })
     return Promise.resolve(domain)
+  }
+
+  setHardwareConnect (value) {
+    this.store.updateState({ hardwareConnect: value })
   }
 
   //

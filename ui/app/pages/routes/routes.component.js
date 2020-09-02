@@ -31,6 +31,7 @@ import AppHeader from '../../components/app/app-header'
 import UnlockPage from '../unlock-page'
 import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
+import BraveNavigation from '../../../../brave/components/navigation'
 
 import {
   ADD_TOKEN_ROUTE,
@@ -86,6 +87,25 @@ export default class Routes extends Component {
   static contextTypes = {
     t: PropTypes.func,
     metricsEvent: PropTypes.func,
+  }
+
+  componentDidMount () {
+    const container = document.querySelector('#app-content')
+    const popover = document.getElementById('popover-content')
+
+    if (!container || !popover) {
+      return
+    }
+
+    const setTheme = (t) => {
+      container.className = `${t.toLowerCase()}`
+      popover.className = `${t.toLowerCase()}`
+    }
+
+    if (chrome.hasOwnProperty('braveTheme')) { // eslint-disable-line no-undef
+      chrome.braveTheme.getBraveThemeType((type) => setTheme(type)) // eslint-disable-line no-undef
+      chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type)) // eslint-disable-line no-undef
+    }
   }
 
   UNSAFE_componentWillMount () {
@@ -217,53 +237,56 @@ export default class Routes extends Component {
       !submittedPendingTransactions.find(({ id }) => id === sidebarTransaction.id)
 
     return (
-      <div
-        className={classnames('app', { 'mouse-user-styles': isMouseUser })}
-        dir={textDirection}
-        onClick={() => setMouseUserState(true)}
-        onKeyDown={(e) => {
-          if (e.keyCode === 9) {
-            setMouseUserState(false)
-          }
-        }}
-      >
-        <Modal />
-        <Alert
-          visible={this.props.alertOpen}
-          msg={alertMessage}
-        />
-        { !this.hideAppHeader() && (
-          <AppHeader
-            hideNetworkIndicator={this.onInitializationUnlockPage()}
-            disabled={this.onConfirmPage()}
+      <>
+        <BraveNavigation />
+        <div
+          className={classnames('app', { 'mouse-user-styles': isMouseUser })}
+          dir={textDirection}
+          onClick={() => setMouseUserState(true)}
+          onKeyDown={(e) => {
+            if (e.keyCode === 9) {
+              setMouseUserState(false)
+            }
+          }}
+        >
+          <Modal />
+          <Alert
+            visible={this.props.alertOpen}
+            msg={alertMessage}
           />
-        ) }
-        <Sidebar
-          sidebarOpen={sidebarIsOpen}
-          sidebarShouldClose={sidebarShouldClose}
-          hideSidebar={this.props.hideSidebar}
-          transitionName={sidebarTransitionName}
-          type={sidebarType}
-          sidebarProps={sidebar.props}
-        />
-        <NetworkDropdown
-          provider={provider}
-          frequentRpcListDetail={frequentRpcListDetail}
-        />
-        <AccountMenu />
-        <div className="main-container-wrapper">
-          { isLoading && <Loading loadingMessage={loadMessage} /> }
-          { !isLoading && isLoadingNetwork && <LoadingNetwork /> }
-          { this.renderRoutes() }
+          { !this.hideAppHeader() && (
+            <AppHeader
+              hideNetworkIndicator={this.onInitializationUnlockPage()}
+              disabled={this.onConfirmPage()}
+            />
+          ) }
+          <Sidebar
+            sidebarOpen={sidebarIsOpen}
+            sidebarShouldClose={sidebarShouldClose}
+            hideSidebar={this.props.hideSidebar}
+            transitionName={sidebarTransitionName}
+            type={sidebarType}
+            sidebarProps={sidebar.props}
+          />
+          <NetworkDropdown
+            provider={provider}
+            frequentRpcListDetail={frequentRpcListDetail}
+          />
+          <AccountMenu />
+          <div className="main-container-wrapper">
+            { isLoading && <Loading loadingMessage={loadMessage} /> }
+            { !isLoading && isLoadingNetwork && <LoadingNetwork /> }
+            { this.renderRoutes() }
+          </div>
+          {
+            isUnlocked
+              ? (
+                <Alerts />
+              )
+              : null
+          }
         </div>
-        {
-          isUnlocked
-            ? (
-              <Alerts />
-            )
-            : null
-        }
-      </div>
+      </>
     )
   }
 

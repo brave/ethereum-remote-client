@@ -71,11 +71,13 @@ export default class ThreeBoxController {
   }
 
   async init () {
+    /*
     const accounts = await this.keyringController.getAccounts()
     this.address = accounts[0]
     if (this.address && !(this.box && this.store.getState().threeBoxSynced)) {
       await this.new3Box()
     }
+    */
   }
 
   async _update3Box () {

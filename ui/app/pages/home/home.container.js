@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import {
   unconfirmedTransactionsCountSelector,
-  getCurrentEthBalance,
   getFirstPermissionRequest,
   getTotalUnapprovedCount,
 } from '../../selectors'
@@ -16,6 +15,7 @@ import {
   setShowRestorePromptToFalse,
   setConnectedStatusPopoverHasBeenShown,
   setDefaultHomeActiveTabName,
+  setHardwareConnect,
 } from '../../store/actions'
 import { setThreeBoxLastUpdated } from '../../ducks/app/app'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
@@ -29,14 +29,13 @@ const mapStateToProps = (state) => {
   const {
     suggestedTokens,
     seedPhraseBackedUp,
-    tokens,
     threeBoxSynced,
     showRestorePrompt,
     selectedAddress,
     connectedStatusPopoverHasBeenShown,
     defaultHomeActiveTabName,
+    hardwareConnect,
   } = metamask
-  const accountBalance = getCurrentEthBalance(state)
   const { forgottenPassword, threeBoxLastUpdated } = appState
   const totalUnapprovedCount = getTotalUnapprovedCount(state)
 
@@ -53,7 +52,7 @@ const mapStateToProps = (state) => {
     forgottenPassword,
     suggestedTokens,
     unconfirmedTransactionsCount: unconfirmedTransactionsCountSelector(state),
-    shouldShowSeedPhraseReminder: !seedPhraseBackedUp && (parseInt(accountBalance, 16) > 0 || tokens.length > 0),
+    shouldShowSeedPhraseReminder: !seedPhraseBackedUp,
     isPopup,
     isNotification,
     threeBoxSynced,
@@ -64,6 +63,7 @@ const mapStateToProps = (state) => {
     totalUnapprovedCount,
     connectedStatusPopoverHasBeenShown,
     defaultHomeActiveTabName,
+    hardwareConnect,
   }
 }
 
@@ -84,6 +84,7 @@ const mapDispatchToProps = (dispatch) => ({
   setShowRestorePromptToFalse: () => dispatch(setShowRestorePromptToFalse()),
   setConnectedStatusPopoverHasBeenShown: () => dispatch(setConnectedStatusPopoverHasBeenShown()),
   onTabClick: (name) => dispatch(setDefaultHomeActiveTabName(name)),
+  setHardwareConnect: (value) => dispatch(setHardwareConnect(value)),
 })
 
 export default compose(

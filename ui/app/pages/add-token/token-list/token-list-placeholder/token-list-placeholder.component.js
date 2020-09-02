@@ -15,7 +15,7 @@ export default class TokenListPlaceholder extends Component {
         </div>
         <a
           className="token-list-placeholder__link"
-          href="https://metamask.zendesk.com/hc/en-us/articles/360015489031"
+          href="https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-"
           target="_blank"
           rel="noopener noreferrer"
         >

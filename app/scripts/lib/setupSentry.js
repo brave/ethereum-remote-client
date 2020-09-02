@@ -112,7 +112,10 @@ export default function setupSentry ({ release, getState }) {
     return report
   }
 
-  return Sentry
+  return {
+    captureMessage: (_msg, _extra = {}) => { /* no-op */ },
+    captureException: (_msg, _extra = {}) => { /* no-op */ },
+  }
 }
 
 function simplifyErrorMessages (report) {

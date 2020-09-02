@@ -12,7 +12,7 @@ export default class MetaFoxLogo extends PureComponent {
     onClick: undefined,
   }
 
-  render () {
+  _render () {
     const { onClick, unsetIconHeight } = this.props
     const iconProps = unsetIconHeight ? {} : { height: 42, width: 42 }
 
@@ -35,5 +35,9 @@ export default class MetaFoxLogo extends PureComponent {
         />
       </div>
     )
+  }
+
+  render () {
+    return null
   }
 }

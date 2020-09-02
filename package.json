@@ -5,8 +5,8 @@
   "scripts": {
     "start": "yarn build dev",
     "dist": "yarn build prod",
-    "dev:brave": "yarn apply-patches && yarn build dev",
-    "dist:brave": "yarn apply-patches && yarn build prod:brave",
+    "dev:brave": "yarn build dev",
+    "dist:brave": "yarn build prod:brave",
     "publish:brave": "yarn dist:brave && yarn build brave-publish",
     "audit-deps": "node brave/scripts/audit.js",
     "build": "node development/build/index.js",

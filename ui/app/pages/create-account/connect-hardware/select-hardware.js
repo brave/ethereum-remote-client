@@ -109,8 +109,8 @@ export default class SelectHardware extends Component {
 
   getAffiliateLinks () {
     const links = {
-      trezor: `<a class='hw-connect__get-hw__link' href='https://shop.trezor.io/?a=metamask' target='_blank'>Trezor</a>`,
-      ledger: `<a class='hw-connect__get-hw__link' href='https://www.ledger.com/products/ledger-nano-s?r=17c4991a03fa&tracker=MY_TRACKER' target='_blank'>Ledger</a>`,
+      trezor: `<a class='hw-connect__get-hw__link' href='https://shop.trezor.io/product/trezor-one-metallic?offer_id=24&aff_id=3494' target='_blank'>Trezor</a>`,
+      ledger: `<a class='hw-connect__get-hw__link' href='https://shop.ledger.com/?r=0ba5d7199327' target='_blank'>Ledger</a>`,
     }
 
     const text = this.context.t('orderOneHere')
@@ -196,7 +196,7 @@ export default class SelectHardware extends Component {
         {this.renderButtons()}
         <p className="hw-connect__footer__msg">
           {this.context.t('havingTroubleConnecting')}
-          <a className="hw-connect__footer__link" href="https://support.metamask.io/" target="_blank" rel="noopener noreferrer">
+          <a className="hw-connect__footer__link" href="https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-" target="_blank" rel="noopener noreferrer">
             {this.context.t('getHelp')}
           </a>
         </p>

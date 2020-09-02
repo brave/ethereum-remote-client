@@ -40,7 +40,7 @@ export function useTokenTracker (tokens) {
       userAddress: address,
       provider: global.ethereumProvider,
       tokens: tokenList,
-      pollingInterval: 8000,
+      pollingInterval: (16 * 1000),
     })
 
     tokenTracker.current.on('update', updateBalances)

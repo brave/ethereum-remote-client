@@ -55,6 +55,8 @@ export default class Home extends PureComponent {
     connectedStatusPopoverHasBeenShown: PropTypes.bool,
     defaultHomeActiveTabName: PropTypes.string,
     onTabClick: PropTypes.func.isRequired,
+    hardwareConnect: PropTypes.bool,
+    setHardwareConnect: PropTypes.func,
   }
 
   state = {
@@ -109,7 +111,7 @@ export default class Home extends PureComponent {
     return null
   }
 
-  componentDidUpdate (prevProps, prevState) {
+  componentDidUpdate (_prevProps, prevState) {
     const {
       setupThreeBox,
       showRestorePrompt,

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { isEqual } from 'lodash'
 
 import TokenCell from '../token-cell'
-import { useI18nContext } from '../../../hooks/useI18nContext'
+// import { useI18nContext } from '../../../hooks/useI18nContext'
 import { useTokenTracker } from '../../../hooks/useTokenTracker'
 import { useSelector } from 'react-redux'
 import { getAssetImages } from '../../../selectors'
 import { getTokens } from '../../../ducks/metamask/metamask'
 
 export default function TokenList ({ onTokenClick }) {
-  const t = useI18nContext()
+  // const t = useI18nContext()
   const assetImages = useSelector(getAssetImages)
   // use `isEqual` comparison function because the token array is serialized
   // from the background so it has a new reference with each background update,

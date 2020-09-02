@@ -31,14 +31,14 @@ async function braveStylesTask () {
     .map(getImportedPath)
   await new Promise((resolve, _reject) => {
     gulp.src(appRootScss)
-    .pipe(
-      replace(
-        /(?:\/\*BRAVE\*\/.*)?$/,
-        `/*BRAVE*/${braveImports.join('')}`,
-      ),
-    )
-    .pipe(gulp.dest((file) => file.base))
-    .on('end', resolve)    
+      .pipe(
+        replace(
+          /(?:\/\*BRAVE\*\/.*)?$/,
+          `/*BRAVE*/${braveImports.join('')}`,
+        ),
+      )
+      .pipe(gulp.dest((file) => file.base))
+      .on('end', resolve)
   })
 }
 

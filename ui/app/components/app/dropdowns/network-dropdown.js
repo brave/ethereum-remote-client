@@ -67,7 +67,7 @@ class NetworkDropdown extends Component {
   }
 
   handleClick (newProviderType) {
-    const { provider: { type: providerType }, setProviderType, } = this.props
+    const { provider: { type: providerType }, setProviderType } = this.props
     const { metricsEvent } = this.context
 
     metricsEvent({

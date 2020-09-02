@@ -102,9 +102,9 @@ export default class Routes extends Component {
       popover.className = `${t.toLowerCase()}`
     }
 
-    if (chrome.hasOwnProperty('braveTheme')) {  // eslint-disable-line no-undef
-      chrome.braveTheme.getBraveThemeType((type) => setTheme(type))  // eslint-disable-line no-undef
-      chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type))  // eslint-disable-line no-undef
+    if (chrome.hasOwnProperty('braveTheme')) { // eslint-disable-line no-undef
+      chrome.braveTheme.getBraveThemeType((type) => setTheme(type)) // eslint-disable-line no-undef
+      chrome.braveTheme.onBraveThemeTypeChanged.addListener((type) => setTheme(type)) // eslint-disable-line no-undef
     }
   }
 

@@ -398,7 +398,7 @@ export default class PreferencesController {
     const BATToken = {
       address: BATAddress,
       decimals: 18,
-      symbol: 'BAT'
+      symbol: 'BAT',
     }
 
     if (!(address in accountTokens)) {
@@ -413,6 +413,8 @@ export default class PreferencesController {
       if (!accountTokens[address][network].find((token) => token.address === BATAddress)) {
         accountTokens[address][network].push(BATToken)
       }
+
+      return null
     })
 
     if (!(BATAddress in assetImages)) {

@@ -64,7 +64,7 @@ import {
   AddressBookController,
   CurrencyRateController,
 } from '@metamask/controllers'
-import { PhishingController } from '../../brave/lib/phishing-controller'
+import PhishingController from '../../brave/lib/phishing-controller'
 
 import backEndMetaMetricsEvent from './lib/backend-metametrics'
 
@@ -577,7 +577,6 @@ export default class MetamaskController extends EventEmitter {
       removePermittedAccount: nodeify(permissionsController.removePermittedAccount, permissionsController),
       requestAccountsPermissionWithId: nodeify(permissionsController.requestAccountsPermissionWithId, permissionsController),
 
-      setBatTokenAdded: nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController),
       setHardwareConnect: nodeify(this.preferencesController.setHardwareConnect, this.preferencesController),
     }
   }

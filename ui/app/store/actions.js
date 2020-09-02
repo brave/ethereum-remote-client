@@ -2420,20 +2420,6 @@ export function getCurrentWindowTab () {
   }
 }
 
-export function setBatTokenAdded (network) {
-  return (dispatch) => {
-    background.setBatTokenAdded(network, (err) => {
-      if (err) {
-        return dispatch(displayWarning(err.message))
-      }
-    })
-    dispatch({
-      type: actionConstants.SET_BAT_TOKEN_ADDED,
-      value: network
-    })
-  }
-}
-
 export function setHardwareConnect (value) {
   return (dispatch) => {
     return new Promise((resolve, reject) => {

@@ -63,8 +63,8 @@ import contractMap from 'eth-contract-metadata'
 import {
   AddressBookController,
   CurrencyRateController,
-  PhishingController,
 } from '@metamask/controllers'
+import { PhishingController } from '../../brave/lib/phishing-controller'
 
 import backEndMetaMetricsEvent from './lib/backend-metametrics'
 
@@ -336,6 +336,10 @@ export default class MetamaskController extends EventEmitter {
     ) {
       this.submitPassword(password)
     }
+
+    if (chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
+      chrome.braveWallet.ready() // eslint-disable-line no-undef
+    }
   }
 
   /**
@@ -572,6 +576,9 @@ export default class MetamaskController extends EventEmitter {
       addPermittedAccount: nodeify(permissionsController.addPermittedAccount, permissionsController),
       removePermittedAccount: nodeify(permissionsController.removePermittedAccount, permissionsController),
       requestAccountsPermissionWithId: nodeify(permissionsController.requestAccountsPermissionWithId, permissionsController),
+
+      setBatTokenAdded: nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController),
+      setHardwareConnect: nodeify(this.preferencesController.setHardwareConnect, this.preferencesController),
     }
   }
 

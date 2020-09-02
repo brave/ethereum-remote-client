@@ -10,7 +10,7 @@ import BlockTracker from 'eth-block-tracker'
 export default function createJsonRpcClient ({ rpcUrl }) {
   const fetchMiddleware = createFetchMiddleware({ rpcUrl })
   const blockProvider = providerFromMiddleware(fetchMiddleware)
-  const blockTracker = new BlockTracker({ provider: blockProvider })
+  const blockTracker = new BlockTracker({ provider: blockProvider, pollingInterval: (30 * 1000) })
 
   const networkMiddleware = mergeMiddleware([
     createBlockRefRewriteMiddleware({ blockTracker }),

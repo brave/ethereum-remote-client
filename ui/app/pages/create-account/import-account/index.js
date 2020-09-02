@@ -51,7 +51,7 @@ export default class AccountImportSubview extends Component {
             }}
             onClick={() => {
               global.platform.openTab({
-                url: 'https://metamask.zendesk.com/hc/en-us/articles/360015289932',
+                url: 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-',
               })
             }}
           >

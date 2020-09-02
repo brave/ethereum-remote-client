@@ -16,23 +16,7 @@ export default function TokenList ({ onTokenClick }) {
   // from the background so it has a new reference with each background update,
   // even if the tokens haven't changed
   const tokens = useSelector(getTokens, isEqual)
-  const { loading, error, tokensWithBalances } = useTokenTracker(tokens)
-
-  if (loading) {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          height: '250px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '30px',
-        }}
-      >
-        {t('loadingTokens')}
-      </div>
-    )
-  }
+  const { error, tokensWithBalances } = useTokenTracker(tokens)
 
   return (
     <div>

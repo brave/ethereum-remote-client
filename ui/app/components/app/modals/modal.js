@@ -417,11 +417,15 @@ class Modal extends Component {
   }
 
   hide () {
-    this.modalRef.hide()
+    if (this.modalRef) {
+      this.modalRef.hide()
+    }
   }
 
   show () {
-    this.modalRef.show()
+    if (this.modalRef) {
+      this.modalRef.show()
+    }
   }
 
   UNSAFE_componentWillReceiveProps (nextProps, _) {
@@ -437,6 +441,10 @@ class Modal extends Component {
     const { contents: children, disableBackdropClick = false } = modal
     const modalStyle = modal[isMobileView() ? 'mobileModalStyle' : 'laptopModalStyle']
     const contentStyle = modal.contentStyle || {}
+
+    if (this.props.modalState.name === 'METAMETRICS_OPT_IN_MODAL') {
+      return null
+    }
 
     return (
       <FadeModal

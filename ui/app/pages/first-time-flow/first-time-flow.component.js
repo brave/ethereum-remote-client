@@ -2,8 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
 import FirstTimeFlowSwitch from './first-time-flow-switch'
-import Welcome from './welcome'
-import SelectAction from './select-action'
+import Welcome from '../../../../brave/components/welcome'
 import EndOfFlow from './end-of-flow'
 import Unlock from '../unlock-page'
 import CreatePassword from './create-password'
@@ -138,7 +137,7 @@ export default class FirstTimeFlow extends PureComponent {
           />
           <Route
             path={INITIALIZE_SELECT_ACTION_ROUTE}
-            component={SelectAction}
+            component={Welcome}
           />
           <Route
             path={INITIALIZE_UNLOCK_ROUTE}

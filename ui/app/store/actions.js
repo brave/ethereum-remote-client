@@ -2419,3 +2419,31 @@ export function getCurrentWindowTab () {
     dispatch(setCurrentWindowTab(currentWindowTab))
   }
 }
+
+export function setBatTokenAdded (network) {
+  return (dispatch) => {
+    background.setBatTokenAdded(network, (err) => {
+      if (err) {
+        return dispatch(displayWarning(err.message))
+      }
+    })
+    dispatch({
+      type: actionConstants.SET_BAT_TOKEN_ADDED,
+      value: network
+    })
+  }
+}
+
+export function setHardwareConnect (value) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setHardwareConnect(value, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        return forceUpdateMetamaskState(dispatch).then(() => resolve())
+      })
+    })
+  }
+}

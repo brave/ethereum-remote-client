@@ -12,7 +12,11 @@ export default function reduceMetamask (state = {}, action) {
     frequentRpcList: [],
     addressBook: [],
     contractExchangeRates: {},
-    tokens: [],
+    tokens: [{
+      address: '0x0d8775f648430679a709e98d2b0cb6250d2887ef',
+      decimals: 18,
+      symbol: 'BAT',
+    }],
     pendingTokens: {},
     customNonceValue: '',
     send: {

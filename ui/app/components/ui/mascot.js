@@ -44,8 +44,12 @@ export default class Mascot extends Component {
     this.refollowMouse()
   }
 
-  componentDidMount () {
+  _componentDidMount () {
     this.mascotContainer.current.appendChild(this.logo.container)
+  }
+
+  componentDidMount () {
+    /* no-op */
   }
 
   componentWillUnmount () {
@@ -55,7 +59,7 @@ export default class Mascot extends Component {
     this.logo.stopAnimation()
   }
 
-  render () {
+  _render () {
     // this is a bit hacky
     // the event emitter is on `this.props`
     // and we dont get that until render
@@ -66,5 +70,9 @@ export default class Mascot extends Component {
         style={{ zIndex: 0 }}
       />
     )
+  }
+
+  render () {
+    return null
   }
 }

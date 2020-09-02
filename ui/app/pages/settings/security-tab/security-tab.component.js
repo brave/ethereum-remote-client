@@ -13,7 +13,7 @@ export default class SecurityTab extends PureComponent {
   static propTypes = {
     warning: PropTypes.string,
     history: PropTypes.object,
-    participateInMetaMetrics: PropTypes.bool.isRequired,
+    participateInMetaMetrics: PropTypes.bool,
     setParticipateInMetaMetrics: PropTypes.func.isRequired,
     showIncomingTransactions: PropTypes.bool.isRequired,
     setShowIncomingTransactionsFeatureFlag: PropTypes.func.isRequired,
@@ -55,7 +55,7 @@ export default class SecurityTab extends PureComponent {
     )
   }
 
-  renderMetaMetricsOptIn () {
+  _renderMetaMetricsOptIn () {
     const { t } = this.context
     const { participateInMetaMetrics, setParticipateInMetaMetrics } = this.props
 
@@ -79,6 +79,10 @@ export default class SecurityTab extends PureComponent {
         </div>
       </div>
     )
+  }
+
+  renderMetaMetricsOptIn () {
+    return null
   }
 
   renderIncomingTransactionsOptIn () {

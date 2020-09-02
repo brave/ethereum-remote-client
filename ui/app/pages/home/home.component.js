@@ -23,9 +23,10 @@ import {
   CONNECT_ROUTE,
   CONNECTED_ROUTE,
   CONNECTED_ACCOUNTS_ROUTE,
+  CONNECT_HARDWARE_ROUTE,
 } from '../../helpers/constants/routes'
 
-const LEARN_MORE_URL = 'https://metamask.zendesk.com/hc/en-us/articles/360045129011-Intro-to-MetaMask-v8-extension'
+const LEARN_MORE_URL = 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
 
 export default class Home extends PureComponent {
   static contextTypes = {
@@ -68,6 +69,7 @@ export default class Home extends PureComponent {
       suggestedTokens = {},
       totalUnapprovedCount,
       unconfirmedTransactionsCount,
+      hardwareConnect,
     } = this.props
 
     this.setState({ mounted: true })
@@ -79,6 +81,11 @@ export default class Home extends PureComponent {
       history.push(CONFIRM_TRANSACTION_ROUTE)
     } else if (Object.keys(suggestedTokens).length > 0) {
       history.push(CONFIRM_ADD_SUGGESTED_TOKEN_ROUTE)
+    }
+
+    if (hardwareConnect) {
+      this.props.setHardwareConnect(false)
+      this.props.history.push(CONNECT_HARDWARE_ROUTE)
     }
   }
 
@@ -102,7 +109,7 @@ export default class Home extends PureComponent {
     return null
   }
 
-  componentDidUpdate (_, prevState) {
+  componentDidUpdate (prevProps, prevState) {
     const {
       setupThreeBox,
       showRestorePrompt,

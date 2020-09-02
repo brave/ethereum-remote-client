@@ -1,4 +1,4 @@
-const defaultNetworksData = [
+const _defaultNetworksData = [
   {
     labelKey: 'mainnet',
     iconColor: '#29B6AF',
@@ -53,6 +53,13 @@ const defaultNetworksData = [
     blockExplorerUrl: 'https://etherscan.io',
   },
 ]
+
+const defaultNetworksData = _defaultNetworksData.map((net) => {
+  return {
+    ...net,
+    rpcUrl: `${net.providerType}.infura.io/v3`,
+  }
+})
 
 export {
   defaultNetworksData,

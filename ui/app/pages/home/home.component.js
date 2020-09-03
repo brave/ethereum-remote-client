@@ -145,17 +145,13 @@ export default class Home extends PureComponent {
     return (
       <MultipleNotifications>
         {
-          shouldShowSeedPhraseReminder
+          shouldShowSeedPhraseReminder && !isPopup
             ? (
               <HomeNotification
                 descriptionText={t('backupApprovalNotice')}
                 acceptText={t('backupNow')}
                 onAccept={() => {
-                  if (isPopup) {
-                    global.platform.openExtensionInBrowser(INITIALIZE_BACKUP_SEED_PHRASE_ROUTE)
-                  } else {
-                    history.push(INITIALIZE_BACKUP_SEED_PHRASE_ROUTE)
-                  }
+                  history.push(INITIALIZE_BACKUP_SEED_PHRASE_ROUTE)
                 }}
                 infoText={t('backupApprovalInfo')}
                 key="home-backupApprovalNotice"

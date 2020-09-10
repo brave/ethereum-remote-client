@@ -69,7 +69,8 @@
     "elliptic": "^6.5.3",
     "apollo-server-core": "^2.14.2",
     "apollo-server-express": "^2.14.2",
-    "yargs-parser": "13.1.2"
+    "yargs-parser": "13.1.2",
+    "bl": "^3.0.1"
   },
   "dependencies": {
     "3box": "^1.10.2",

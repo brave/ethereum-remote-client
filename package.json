@@ -110,7 +110,7 @@
     "eth-json-rpc-filters": "^4.1.1",
     "eth-json-rpc-middleware": "^5.0.2",
     "eth-json-rpc-infura": "github:brave/eth-json-rpc-infura#577a3dab322a280b1d3b3b4b8d086fa417120e73",
-    "eth-keyring-controller": "github:brave/KeyringController#9fd9fdda4e2460c912b9bc682afd4c00445ffa9f",
+    "eth-keyring-controller": "github:brave/KeyringController#593cf415d2027c5783b4bf90aa3cbb2a9e105007",
     "eth-method-registry": "^1.2.0",
     "eth-phishing-detect": "^1.1.4",
     "eth-query": "^2.1.2",

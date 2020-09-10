@@ -299,8 +299,37 @@
     }
   }
 
-  .cancel-transaction-gas-fee {
+  .cancel-transaction-gas-fee,
+  .menu__container,
+  .popover-wrap {
     background: inherit;
+  }
+
+  .menu__container {
+    .menu-item {
+      border: none;
+    }
+  }
+
+  .private-key-password-warning {
+    background: #cd5c5c;
+  }
+
+  .notification-modal__header,
+  .notification-modal__message-wrapper {
+    background: #282828;
+  }
+
+  .address-book__view-contact__group__static-address--copy-icon {
+    border: none;
+  }
+
+  .qr-scanner {
+    background: #282828;
+
+    div {
+      color: #fff;
+    }
   }
 
   .hw-account-list {

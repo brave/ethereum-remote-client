@@ -26,12 +26,19 @@ export default class ExportPrivateKeyModal extends Component {
     showAccountDetailModal: PropTypes.func.isRequired,
     hideModal: PropTypes.func.isRequired,
     previousModalState: PropTypes.string,
+    clearWarning: PropTypes.func,
   }
 
   state = {
     password: '',
     privateKey: null,
     showWarning: true,
+  }
+
+  componentWillUnmount () {
+    if (this.state.showWarning) {
+      this.props.clearWarning()
+    }
   }
 
   exportAccountAndGetPrivateKey = (password, address) => {

@@ -16,7 +16,7 @@ describe('Welcome', function () {
     sinon.restore()
   })
 
-  it('routes to select action when participateInMetaMetrics is not initialized', function () {
+  it('routes to the welcome view when participateInMetaMetrics is not initialized', function () {
 
     const props = {
       history: {
@@ -30,7 +30,7 @@ describe('Welcome', function () {
 
     const getStartedButton = wrapper.find('.btn-primary.first-time-flow__button')
     getStartedButton.simulate('click')
-    assert.equal(props.history.push.getCall(0).args[0], '/initialize/select-action')
+    assert.equal(props.history.push.getCall(0).args[0], '/initialize/welcome')
 
   })
 

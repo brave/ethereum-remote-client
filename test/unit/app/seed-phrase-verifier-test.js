@@ -24,6 +24,7 @@ describe('SeedPhraseVerifier', function () {
       assert(keyringController)
 
       await keyringController.createNewVaultAndKeychain(password)
+      // await keyringController.persistAllKeyrings()
       primaryKeyring = keyringController.getKeyringsByType(hdKeyTree)[0]
     })
 

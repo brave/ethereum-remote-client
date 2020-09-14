@@ -167,16 +167,14 @@ describe('MetaMaskController', function () {
   })
 
   describe('submitPassword', function () {
-    const password = 'password'
+    it('removes any identities that do not correspond to known accounts.', async function () {
+      const fakeAddress = '0xbad0'
+      const password = 'password'
 
-    beforeEach(async function () {
       await metamaskController.createNewVaultAndKeychain(password)
       threeBoxSpies.init.reset()
       threeBoxSpies.turnThreeBoxSyncingOn.reset()
-    })
 
-    it('removes any identities that do not correspond to known accounts.', async function () {
-      const fakeAddress = '0xbad0'
       metamaskController.preferencesController.addAddresses([fakeAddress])
       await metamaskController.submitPassword(password)
 
@@ -190,12 +188,6 @@ describe('MetaMaskController', function () {
       addresses.forEach((address) => {
         assert.ok(identities.includes(address), `identities should include all Addresses: ${address}`)
       })
-    })
-
-    it('gets the address from threebox and creates a new 3box instance', async function () {
-      await metamaskController.submitPassword(password)
-      assert(threeBoxSpies.init.calledOnce)
-      assert(threeBoxSpies.turnThreeBoxSyncingOn.calledOnce)
     })
   })
 

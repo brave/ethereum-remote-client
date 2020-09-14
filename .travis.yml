@@ -17,4 +17,4 @@ branches:
   only:
     - master
 script:
-  - yarn audit-deps && yarn lint
+  - yarn test:brave

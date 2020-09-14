@@ -129,12 +129,15 @@ describe('preferences controller', function () {
   })
 
   describe('getTokens', function () {
-    it('should return an empty list initially', async function () {
+    it('should contain only BAT intially', async function () {
       preferencesController.setAddresses([ '0x7e57e2' ])
       await preferencesController.setSelectedAddress('0x7e57e2')
 
       const tokens = preferencesController.getTokens()
-      assert.equal(tokens.length, 0, 'empty list of tokens')
+      assert.equal(tokens.length, 1, 'empty list of tokens')
+      assert.equal(tokens[0].symbol, 'BAT')
+      assert.equal(tokens[0].address, '0x0d8775f648430679a709e98d2b0cb6250d2887ef')
+      assert.equal(tokens[0].decimals, 18)
     })
   })
 
@@ -149,9 +152,9 @@ describe('preferences controller', function () {
       await preferencesController.addToken(address, symbol, decimals)
 
       const tokens = preferencesController.getTokens()
-      assert.equal(tokens.length, 1, 'one token added')
+      assert.equal(tokens.length, 2, 'one token added')
 
-      const added = tokens[0]
+      const added = tokens[1]
       assert.equal(added.address, address, 'set address correctly')
       assert.equal(added.symbol, symbol, 'set symbol correctly')
       assert.equal(added.decimals, decimals, 'set decimals correctly')
@@ -170,9 +173,9 @@ describe('preferences controller', function () {
       await preferencesController.addToken(address, symbol, newDecimals)
 
       const tokens = preferencesController.getTokens()
-      assert.equal(tokens.length, 1, 'one token added')
+      assert.equal(tokens.length, 2, 'one token added')
 
-      const added = tokens[0]
+      const added = tokens[1]
       assert.equal(added.address, address, 'set address correctly')
       assert.equal(added.symbol, symbol, 'set symbol correctly')
       assert.equal(added.decimals, newDecimals, 'updated decimals correctly')
@@ -190,11 +193,11 @@ describe('preferences controller', function () {
 
       await preferencesController.setSelectedAddress('0x7e57e2')
       await preferencesController.addToken(address, symbol, decimals)
-      assert.equal(preferencesController.getTokens().length, 1, 'one token added for 1st address')
+      assert.equal(preferencesController.getTokens().length, 2, 'one token added for 1st address')
 
       await preferencesController.setSelectedAddress('0xda22le')
       await preferencesController.addToken(address, symbol, decimals)
-      assert.equal(preferencesController.getTokens().length, 1, 'one token added for 2nd address')
+      assert.equal(preferencesController.getTokens().length, 2, 'one token added for 2nd address')
     })
 
     it('should add token per account', async function () {
@@ -240,14 +243,14 @@ describe('preferences controller', function () {
   })
 
   describe('removeToken', function () {
-    it('should remove the only token from its state', async function () {
+    it('should remove a token, leaving BAT', async function () {
       preferencesController.setAddresses([ '0x7e57e2' ])
       await preferencesController.setSelectedAddress('0x7e57e2')
       await preferencesController.addToken('0xa', 'A', 5)
       await preferencesController.removeToken('0xa')
 
       const tokens = preferencesController.getTokens()
-      assert.equal(tokens.length, 0, 'one token removed')
+      assert.equal(tokens.length, 1, 'one token removed')
     })
 
     it('should remove a token from its state', async function () {
@@ -258,9 +261,9 @@ describe('preferences controller', function () {
       await preferencesController.removeToken('0xa')
 
       const tokens = preferencesController.getTokens()
-      assert.equal(tokens.length, 1, 'one token removed')
+      assert.equal(tokens.length, 2, 'one token removed')
 
-      const [token1] = tokens
+      const token1 = tokens[1]
       assert.deepEqual(token1, { address: '0xb', symbol: 'B', decimals: 5 })
     })
 
@@ -280,9 +283,9 @@ describe('preferences controller', function () {
       await preferencesController.removeToken('0xa')
 
       const tokensFirst = preferencesController.getTokens()
-      assert.equal(tokensFirst.length, 1, 'one token removed in account')
+      assert.equal(tokensFirst.length, 2, 'one token removed in account')
 
-      const [token1] = tokensFirst
+      const token1 = tokensFirst[1]
       assert.deepEqual(token1, { address: '0xb', symbol: 'B', decimals: 5 })
 
       await preferencesController.setSelectedAddress('0x7e57e3')

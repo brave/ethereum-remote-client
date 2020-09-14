@@ -54,10 +54,8 @@ describe('Security Tab', function () {
     assert(props.setUsePhishDetect.calledOnce)
   })
 
-  it('toggles metaMetrics', function () {
+  it('metametrics toggle is not available', function () {
     const metaMetrics = wrapper.find({ type: 'checkbox' }).at(2)
-
-    metaMetrics.simulate('click')
-    assert(props.setParticipateInMetaMetrics.calledOnce)
+    assert.equal(metaMetrics.length, 0)
   })
 })

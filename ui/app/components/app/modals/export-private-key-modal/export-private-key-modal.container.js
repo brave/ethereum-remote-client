@@ -32,6 +32,7 @@ function mapDispatchToProps (dispatch) {
     },
     showAccountDetailModal: () => dispatch(showModal({ name: 'ACCOUNT_DETAILS' })),
     hideModal: () => dispatch(hideModal()),
+    clearWarning: () => dispatch(hideWarning()),
   }
 }
 

@@ -15,7 +15,6 @@ const createBraveHTMLTasks = require('../../brave/build/html')
 const createBraveManifestTasks = require('../../brave/build/manifest')
 const createBraveLocalesTasks = require('../../brave/build/locales')
 const createBravePublishTasks = require('../../brave/build/publish')
-const { fontsTask, imagesTask, fontsTaskProd, imagesTaskProd } = require('../../brave/build/assets')
 
 const browserPlatforms = [
   'firefox',
@@ -51,8 +50,6 @@ function defineAllTasks () {
       braveManifestTasks,
       stringTask,
       combineTask,
-      fontsTask,
-      imagesTask,
       composeParallel(
         scriptTasks.dev,
         reload,
@@ -70,8 +67,6 @@ function defineAllTasks () {
       braveManifestTasks,
       stringTask,
       combineTask,
-      fontsTaskProd,
-      imagesTaskProd,
       scriptTasks.prod,
       zip,
     ),

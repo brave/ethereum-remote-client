@@ -385,7 +385,7 @@
     "message": "தேடல்"
   },
   "secretPhrase": {
-    "message": "உங்கள் பெட்டகத்தை மீட்டெடுப்பதற்காக இங்கே உங்கள் ரகசிய பன்னிரண்டு வார்த்தை சொற்றொடரை உள்ளிடவும்."
+    "message": "உங்கள் பெட்டகத்தை மீட்டெடுப்பதற்காக இங்கே உங்கள் ரகசிய 24 வார்த்தை சொற்றொடரை உள்ளிடவும்."
   },
   "seedPhraseReq": {
     "message": "விதை வாக்கியங்கள் 12 வார்த்தைகள் நீண்டவை"
@@ -570,5 +570,17 @@
   },
   "userName": {
     "message": "பயனர்பெயர்"
+  },
+  "ledgerCreateSubText": {
+    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+  },
+  "newLocalWallet": {
+    "message": "New Local Wallet"
+  },
+  "newLocalWalletSubText": {
+    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+  },
+  "trezorCreateSubText": {
+    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
   }
 }

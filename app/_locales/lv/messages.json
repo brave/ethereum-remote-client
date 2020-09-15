@@ -6,7 +6,7 @@
     "message": "Līguma mijiedarbības"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "reject": {
@@ -76,7 +76,7 @@
     "message": "Pievienot ieteiktos marķierus"
   },
   "addAcquiredTokens": {
-    "message": "Pievienojiet marķierus, ko ieguvāt, izmantojot MetaMask"
+    "message": "Pievienojiet marķierus, ko ieguvāt, izmantojot Brave"
   },
   "amount": {
     "message": "Apjoms"
@@ -110,7 +110,7 @@
     "message": "Automātiskās izrakstīšanās taimeris (minūtes)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Iestatiet bezdarbības laiku minūtēs, pēc kura MetaMask veiks automātisku izrakstīšanu"
+    "message": "Iestatiet bezdarbības laiku minūtēs, pēc kura Brave veiks automātisku izrakstīšanu"
   },
   "average": {
     "message": "Vidēji"
@@ -125,7 +125,7 @@
     "message": "Dublējiet savu slepeno atgūšanas kodu, lai maks un līdzekļi atrastos drošībā."
   },
   "backupApprovalInfo": {
-    "message": "Šis slepenais kods ir nepieciešams, lai atjaunotu jūsu maku, ja pazaudējat ierīci, aizmirstat paroli, jāpārinstalē MetaMask vai vēlaties piekļūt makam no citas ierīces."
+    "message": "Šis slepenais kods ir nepieciešams, lai atjaunotu jūsu maku, ja pazaudējat ierīci, aizmirstat paroli, jāpārinstalē Brave vai vēlaties piekļūt makam no citas ierīces."
   },
   "backupNow": {
     "message": "Dublēt tagad"
@@ -153,13 +153,13 @@
     "message": "Jūsu pārlūkprogramma netiek atbalstīta..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask ir izstrādāta un izveidota Kalifornijā."
+    "message": "Brave ir izstrādāta un izveidota Kalifornijā."
   },
   "buyWithWyre": {
     "message": "Pirkt ETH ar Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre ļauj noguldīt ETH tieši jūsu MetaMask kontā, izmantojot kredītkarti."
+    "message": "Wyre ļauj noguldīt ETH tieši jūsu Brave kontā, izmantojot kredītkarti."
   },
   "buyCoinSwitch": {
     "message": "Pirkt CoinSwitch"
@@ -204,7 +204,7 @@
     "message": "Aizvērt"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "MetaMask ir jāpalaiž pārlūkprogrammā Google Chrome, lai varētu pievienot aparatūras maku."
+    "message": "Brave ir jāpalaiž pārlūkprogrammā Google Chrome, lai varētu pievienot aparatūras maku."
   },
   "confirm": {
     "message": "Apstiprināt"
@@ -372,16 +372,16 @@
     "message": "Nekad neizpaudiet šo frāzi citiem cilvēkiem."
   },
   "endOfFlowMessage5": {
-    "message": "Uzmanieties no pikšķerēšanas! MetaMask nekad pēkšņi nelūgs norādīt atkopšanas frāzi."
+    "message": "Uzmanieties no pikšķerēšanas! Brave nekad pēkšņi nelūgs norādīt atkopšanas frāzi."
   },
   "endOfFlowMessage6": {
     "message": "Ja nepieciešams atkārtoti dublēt atkopšanas frāzi, varat to atrast, dodoties uz Iestatījumi -> Drošība."
   },
   "endOfFlowMessage7": {
-    "message": "Ja jums rodas kādi jautājumi vai pamanāt ko aizdomīgu, rakstiet uz support@metamask.io."
+    "message": "Ja jums rodas kādi jautājumi vai pamanāt ko aizdomīgu, rakstiet uz support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask nevar atjaunot jūsu atkopšanas frāzi. Uzzināt vairāk."
+    "message": "Brave nevar atjaunot jūsu atkopšanas frāzi. Uzzināt vairāk."
   },
   "endOfFlowMessage9": {
     "message": "Uzzināt vairāk."
@@ -497,7 +497,7 @@
     "message": "Pieslēdziet aparatūras maku"
   },
   "hardwareWalletsMsg": {
-    "message": "Atlasiet aparatūras maku lietošanai ar MetaMask"
+    "message": "Atlasiet aparatūras maku lietošanai ar Brave"
   },
   "havingTroubleConnecting": {
     "message": "Neizdodas pieslēgties?"
@@ -526,7 +526,7 @@
     "message": "Importēt kontu"
   },
   "importAccountMsg": {
-    "message": "Importētie konti netiks piesaistīti sākotnēji izveidotā MetaMask konta atkopšanas frāzei. Uzziniet vairāk par importētajiem kontiem"
+    "message": "Importētie konti netiks piesaistīti sākotnēji izveidotā Brave konta atkopšanas frāzei. Uzziniet vairāk par importētajiem kontiem"
   },
   "importAccountSeedPhrase": {
     "message": "Importēt kontu ar atkopšanas frāzi"
@@ -535,7 +535,7 @@
     "message": "Importēt maku"
   },
   "importYourExisting": {
-    "message": "Importējiet esošo maku, izmantojot 12 vārdu atkopšanas frāzi"
+    "message": "Importējiet esošo maku, izmantojot 24 vārdu atkopšanas frāzi"
   },
   "imported": {
     "message": "Importēts",
@@ -642,7 +642,7 @@
     "message": "Veido savienojumu ar Ethereum un decentralizēto tīmekli."
   },
   "metamaskVersion": {
-    "message": "MetaMask versija"
+    "message": "Brave versija"
   },
   "mobileSyncText": {
     "message": "Lūdzu, ievadiet paroli, lai apstiprinātu, ka tas esat jūs."
@@ -654,13 +654,13 @@
     "message": "Mana maka konti"
   },
   "myWalletAccountsDescription": {
-    "message": "Visi jūsu izveidotie MetaMask konti tiks automātiski pievienoti šajā sadaļā."
+    "message": "Visi jūsu izveidotie Brave konti tiks automātiski pievienoti šajā sadaļā."
   },
   "mustSelectOne": {
     "message": "Jāatlasa vismaz 1 marķieris."
   },
   "needEtherInWallet": {
-    "message": "Lai izmantotu decentralizētas lietotnes ar MetaMask, jūsu makā jābūt Ether."
+    "message": "Lai izmantotu decentralizētas lietotnes ar Brave, jūsu makā jābūt Ether."
   },
   "needImportFile": {
     "message": "Jums jāatlasa fails, ko importēt",
@@ -704,7 +704,7 @@
     "message": "Jauns tīkls"
   },
   "newToMetaMask": {
-    "message": "Nepazīstat MetaMask?"
+    "message": "Nepazīstat Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Nē, man jau ir atkopšanas frāze"
@@ -713,10 +713,10 @@
     "message": "Sargājiet savas atslēgas!"
   },
   "protectYourKeysMessage1": {
-    "message": "Rīkojieties uzmanīgi ar sēklas frāzi — saņemti ziņojumi par tīmekļa vietnēm, kas mēģina imitēt MetaMask. MetaMask nekad nelūgs norādīt sēklas frāzi."
+    "message": "Rīkojieties uzmanīgi ar sēklas frāzi — saņemti ziņojumi par tīmekļa vietnēm, kas mēģina imitēt Brave. Brave nekad nelūgs norādīt sēklas frāzi."
   },
   "protectYourKeysMessage2": {
-    "message": "Glabājiet frāzi drošībā. Ja kaut kas šķiet aizdomīgs vai neesat pārliecināti par tīmekļa vietni, rakstiet e-pastu uz support@metamask.io"
+    "message": "Glabājiet frāzi drošībā. Ja kaut kas šķiet aizdomīgs vai neesat pārliecināti par tīmekļa vietni, rakstiet e-pastu uz support@brave.com"
   },
   "rpcUrl": {
     "message": "Jauns RPC URL"
@@ -997,7 +997,7 @@
     "message": "Atlasiet kontu"
   },
   "selectAnAccountHelp": {
-    "message": "Atlasiet kontu, ko skatīt MetaMask"
+    "message": "Atlasiet kontu, ko skatīt Brave"
   },
   "selectAHigherGasFee": {
     "message": "Atlasiet lielāku maksu par Gas, lai paātrinātu darījuma apstrādi.*"
@@ -1111,19 +1111,19 @@
     "message": "Sinhronizēt ar tālruni"
   },
   "syncWithMobileDesc": {
-    "message": "Jūs varat sinhronizēt savus kontus un informāciju ar mobilo ierīci. Atveriet MetaMask mobilo lietotni, ejiet uz \"Iestatījumi\" un pieskarieties pie \"Sinhronizēt no pārlūka paplašinājuma\""
+    "message": "Jūs varat sinhronizēt savus kontus un informāciju ar mobilo ierīci. Atveriet Brave mobilo lietotni, ejiet uz \"Iestatījumi\" un pieskarieties pie \"Sinhronizēt no pārlūka paplašinājuma\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Ja esat pirmoreiz atvēris MetaMask mobilo lietotni, vienkārši sekojiet norādēm tālrunī."
+    "message": "Ja esat pirmoreiz atvēris Brave mobilo lietotni, vienkārši sekojiet norādēm tālrunī."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Noskenējiet šo kodu ar MetaMask mobilo lietotni"
+    "message": "Noskenējiet šo kodu ar Brave mobilo lietotni"
   },
   "syncWithMobileBeCareful": {
     "message": "Pārliecinieties, ka neviens cits neskatās jūsu ekrānā, kad skenējat šo kodu."
   },
   "syncWithMobileComplete": {
-    "message": "Jūsu dati sekmīgi sinhronizēti. Patīkamu MetaMask mobilās lietotnes lietošanu!"
+    "message": "Jūsu dati sekmīgi sinhronizēti. Patīkamu Brave mobilās lietotnes lietošanu!"
   },
   "terms": {
     "message": "Lietošanas noteikumi"
@@ -1214,7 +1214,7 @@
     "message": "Mēģināt vēlreiz"
   },
   "typePassword": {
-    "message": "Ievadiet savu MetaMask paroli"
+    "message": "Ievadiet savu Brave paroli"
   },
   "unapproved": {
     "message": "Nav apstiprināts"
@@ -1280,7 +1280,7 @@
     "message": "Ar atgriešanos!"
   },
   "welcome": {
-    "message": "Laipni lūgti MetaMask"
+    "message": "Laipni lūgti Brave"
   },
   "writePhrase": {
     "message": "Pierakstiet šo frāzi uz lapiņas, un noglabājiet to drošā vietā! Ja vēlaties stiprināt drošību, pierakstiet to uz vairākām lapiņām un glabājiet tās 2–3 dažādās vietās."
@@ -1302,5 +1302,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Gas nulles cena pie paātrinājuma"
+  },
+  "ledgerCreateSubText": {
+    "message": "Pievienojiet savu Ledger aparatūras maku, lai veiktu darbības ar dApps un pārskaitījumus uz citiem pievienotajiem makiem."
+  },
+  "newLocalWallet": {
+    "message": "Jauns vietējais maks"
+  },
+  "newLocalWalletSubText": {
+    "message": "Izveidojiet jaunu Brave vietējo maku, lai piekļūtu dApps un droši uzglabātu Kripto un kolekciju vienumus. Anonīmi tirgojieties ar marķieriem bez darījumu nodevām."
+  },
+  "trezorCreateSubText": {
+    "message": "Pievienojiet savu Trezor aparatūras maku, lai veiktu darbības ar dApps un pārskaitījumus uz citiem pievienotajiem makiem."
   }
 }

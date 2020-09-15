@@ -25,7 +25,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -50,7 +50,7 @@
     "message": "Blockies Identicon kullan"
   },
   "builtInCalifornia": {
-    "message": "MetaMask California'da tasarlandı ve yaratıldı"
+    "message": "Brave California'da tasarlandı ve yaratıldı"
   },
   "buyCoinSwitch": {
     "message": "CoinSwitch'de satın al"
@@ -208,7 +208,7 @@
     "message": "Hesap Al"
   },
   "importAccountMsg": {
-    "message": " Alınan hesaplar orjinal kaynakifadenizle yarattığınız MetaMask hesabınızla ilişkilendirilmez. Alınan hesaplar ile ilgili daha fazla bilgi edinin "
+    "message": " Alınan hesaplar orjinal kaynakifadenizle yarattığınız Brave hesabınızla ilişkilendirilmez. Alınan hesaplar ile ilgili daha fazla bilgi edinin "
   },
   "imported": {
     "message": "Alındı",
@@ -276,7 +276,7 @@
     "message": "Mesaj"
   },
   "metamaskDescription": {
-    "message": "MetaMask Ethereum için güvenli bir kimlik kasasıdır."
+    "message": "Brave Ethereum için güvenli bir kimlik kasasıdır."
   },
   "myAccounts": {
     "message": "Hesaplarım"
@@ -285,7 +285,7 @@
     "message": "En az bir jeton seçilmeli"
   },
   "needEtherInWallet": {
-    "message": "MetaMask kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
+    "message": "Brave kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
   },
   "needImportFile": {
     "message": "Almak için bir dosya seçmelisiniz.",
@@ -382,7 +382,7 @@
     "message": "Ara"
   },
   "secretPhrase": {
-    "message": "Kasanızı geri getirmek için gizli 12 kelimelik ifadenizi giriniz."
+    "message": "Kasanızı geri getirmek için gizli 24 kelimelik ifadenizi giriniz."
   },
   "seedPhraseReq": {
     "message": "Kaynak ifadeleri 12 kelimedir."
@@ -497,12 +497,24 @@
     "message": "Cüzdan Kaynağı"
   },
   "welcome": {
-    "message": "MetaMask'ya Hoşgeldiniz"
+    "message": "Brave'ya Hoşgeldiniz"
   },
   "yourSigRequested": {
     "message": "İmzanız isteniyor"
   },
   "youSign": {
     "message": "İmzalıyorsunuz"
+  },
+  "ledgerCreateSubText": {
+    "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Ledger donanım cüzdanınızı bağlayın."
+  },
+  "newLocalWallet": {
+    "message": "Yeni Yerel Cüzdan"
+  },
+  "newLocalWalletSubText": {
+    "message": "dApps'e erişmek ve kripto para birimlerini ve koleksiyon ögelerini güvenli biçimde depolamak için yeni bir Brave yerel cüzdanı oluşturun. Alım satım ücreti olmaksızın anonim biçimde jetonlar alıp satın."
+  },
+  "trezorCreateSubText": {
+    "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Trezor donanım cüzdanınızı bağlayın."
   }
 }

@@ -72,7 +72,7 @@
     "message": "Lisa soovitatud lube"
   },
   "addAcquiredTokens": {
-    "message": "Lisage load, mis olete MetaMaskiga saanud"
+    "message": "Lisage load, mis olete Braveiga saanud"
   },
   "amount": {
     "message": "Summa"
@@ -82,7 +82,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Automaatse väljalogimise taimer (minutites)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Seadistage jõudeolek minutites, enne kui MetaMask automaatselt välja logib"
+    "message": "Seadistage jõudeolek minutites, enne kui Brave automaatselt välja logib"
   },
   "average": {
     "message": "Keskmine"
@@ -125,7 +125,7 @@
     "message": "Varundage oma salajane taastamisvõti, et oma rahakott ja vahendid turvalisena hoida."
   },
   "backupApprovalInfo": {
-    "message": "See salakood on vajalik teie rahakoti taastamiseks, kui kaotate oma seadme, unustate parooli, peate MetaMaski uuesti alla laadima, või kui soovite avada oma rahakoti mõnel teisel seadmel."
+    "message": "See salakood on vajalik teie rahakoti taastamiseks, kui kaotate oma seadme, unustate parooli, peate Bravei uuesti alla laadima, või kui soovite avada oma rahakoti mõnel teisel seadmel."
   },
   "backupNow": {
     "message": "Varunda kohe"
@@ -153,13 +153,13 @@
     "message": "Teie lehitsejat ei toetata..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask on projekteeritud ja loodud Californias."
+    "message": "Brave on projekteeritud ja loodud Californias."
   },
   "buyWithWyre": {
     "message": "Ostke ETH-d Wyre'iga"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre võimaldab kasutada krediitkaarti, et teha ETH sissemakse otse MetaMaski kontole."
+    "message": "Wyre võimaldab kasutada krediitkaarti, et teha ETH sissemakse otse Bravei kontole."
   },
   "buyCoinSwitch": {
     "message": "Osta CoinSwitchil"
@@ -204,7 +204,7 @@
     "message": "Sule"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Riistvararahakoti ühendamiseks peate kasutama MetaMaski Google Chrome'is."
+    "message": "Riistvararahakoti ühendamiseks peate kasutama Bravei Google Chrome'is."
   },
   "confirm": {
     "message": "Kinnita"
@@ -372,16 +372,16 @@
     "message": "Ärge jagage fraasi mitte kellegagi."
   },
   "endOfFlowMessage5": {
-    "message": "Olge ettevaatlik andmepüügi osas! MetaMask ei küsi kunagi spontaanselt teie seemnefraasi."
+    "message": "Olge ettevaatlik andmepüügi osas! Brave ei küsi kunagi spontaanselt teie seemnefraasi."
   },
   "endOfFlowMessage6": {
     "message": "Kui peate oma seemnefraasi uuesti varundama, leiate selle valikust Settings (Seaded) -> Security (Turvalisus)."
   },
   "endOfFlowMessage7": {
-    "message": "Kui teil on küsimusi või näete midagi kahtlast, kirjutage meile support@metamask.io."
+    "message": "Kui teil on küsimusi või näete midagi kahtlast, kirjutage meile support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask ei saa teie seemnefraasi taastada. Lisateave."
+    "message": "Brave ei saa teie seemnefraasi taastada. Lisateave."
   },
   "endOfFlowMessage9": {
     "message": "Lisateave."
@@ -497,7 +497,7 @@
     "message": "Ühendage riistvara rahakott"
   },
   "hardwareWalletsMsg": {
-    "message": "Valige riistvara rahakott, mida soovite MetaMaskis kasutada"
+    "message": "Valige riistvara rahakott, mida soovite Braveis kasutada"
   },
   "havingTroubleConnecting": {
     "message": "Kas ühendamisel esineb probleeme?"
@@ -526,7 +526,7 @@
     "message": "Impordi konto"
   },
   "importAccountMsg": {
-    "message": "Imporditud kontosid ei seostata teie ainulaadse MetaMaski konto seemnefraasiga. Lugege imporditud kontode kohta lähemalt"
+    "message": "Imporditud kontosid ei seostata teie ainulaadse Bravei konto seemnefraasiga. Lugege imporditud kontode kohta lähemalt"
   },
   "importAccountSeedPhrase": {
     "message": "Impordi seemnefraasiga konto"
@@ -535,7 +535,7 @@
     "message": "Importige rahakott"
   },
   "importYourExisting": {
-    "message": "Importige 12-sõnalise seemnefraasi abil olemasolev rahakott"
+    "message": "Importige 24-sõnalise seemnefraasi abil olemasolev rahakott"
   },
   "imported": {
     "message": "Imporditud",
@@ -636,7 +636,7 @@
     "message": "Teid ühendatakse Ethereumi ja detsentraliseeritud võrguga."
   },
   "metamaskVersion": {
-    "message": "MetaMaski versioon"
+    "message": "Bravei versioon"
   },
   "mobileSyncText": {
     "message": "Sisestage parool, et saaksime teid tuvastada!"
@@ -648,13 +648,13 @@
     "message": "Minu rahakotikontod"
   },
   "myWalletAccountsDescription": {
-    "message": "Sellesse jaotisesse lisatakse automaatselt kõik teie MetaMaski kontod."
+    "message": "Sellesse jaotisesse lisatakse automaatselt kõik teie Bravei kontod."
   },
   "mustSelectOne": {
     "message": "Peate valima vähemalt 1 loa."
   },
   "needEtherInWallet": {
-    "message": "Selleks, et suhelda MetaMaski abil detsentraliseeritud rakendustega, peab teil rahakotis eetrit olema."
+    "message": "Selleks, et suhelda Bravei abil detsentraliseeritud rakendustega, peab teil rahakotis eetrit olema."
   },
   "needImportFile": {
     "message": "Peate importimiseks faili valima.",
@@ -698,7 +698,7 @@
     "message": "Uus võrk"
   },
   "newToMetaMask": {
-    "message": "Pole MetaMaski varem kasutanud?"
+    "message": "Pole Bravei varem kasutanud?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ei, mul on juba seemnefraas"
@@ -707,10 +707,10 @@
     "message": "Kaitske oma võtmeid!"
   },
   "protectYourKeysMessage1": {
-    "message": "Kaitske oma seemnefraasi. Meid on teavitatud veebilehtedest, mis püüavad MetaMaski jäljendada. MetaMask ei küsi teilt kunagi teie seemnefraasi!"
+    "message": "Kaitske oma seemnefraasi. Meid on teavitatud veebilehtedest, mis püüavad Bravei jäljendada. Brave ei küsi teilt kunagi teie seemnefraasi!"
   },
   "protectYourKeysMessage2": {
-    "message": "Kaitske oma seemnefraasi. Kui näete midagi kahtlast või pole veebilehe ehtsuses kindel, saatke e-kiri aadressile support@metamask.io"
+    "message": "Kaitske oma seemnefraasi. Kui näete midagi kahtlast või pole veebilehe ehtsuses kindel, saatke e-kiri aadressile support@brave.com"
   },
   "rpcUrl": {
     "message": "Uus RPC URL"
@@ -764,7 +764,7 @@
     "message": "Osalege MetaMetricsis"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Osalege MetaMetricsis, et aidata meil MetaMaski paremaks teha"
+    "message": "Osalege MetaMetricsis, et aidata meil Bravei paremaks teha"
   },
   "password": {
     "message": "Parool"
@@ -937,7 +937,7 @@
     "message": "HOIATUS! Ärge avaldage kunagi oma varundusfraasi. Selle fraasiga on võimalik teie eeter igaveseks ära võtta."
   },
   "secretPhrase": {
-    "message": "Sisestage hoidla taastamiseks oma salajane 12-sõnaline fraas."
+    "message": "Sisestage hoidla taastamiseks oma salajane 24-sõnaline fraas."
   },
   "securityAndPrivacy": {
     "message": "Turvalisus ja privaatsus"
@@ -991,7 +991,7 @@
     "message": "Valige konto"
   },
   "selectAnAccountHelp": {
-    "message": "Valige konto, mida MetaMaskis vaadata"
+    "message": "Valige konto, mida Braveis vaadata"
   },
   "selectAHigherGasFee": {
     "message": "Valige suurem gaasihind, et kiirendada tehingu töötlemist.*"
@@ -1105,19 +1105,19 @@
     "message": "Mobiiliga sünkroonimine"
   },
   "syncWithMobileDesc": {
-    "message": "Saate sünkroonida oma kontod ja teabe oma mobiiliseadmega. Avage MetaMaski mobiilirakendus, avage \"Settings\" (Seaded) ja puudutage valikut \"Sync from Browser Extension\" (Sünkroonimine lehitseja laiendusest)"
+    "message": "Saate sünkroonida oma kontod ja teabe oma mobiiliseadmega. Avage Bravei mobiilirakendus, avage \"Settings\" (Seaded) ja puudutage valikut \"Sync from Browser Extension\" (Sünkroonimine lehitseja laiendusest)"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Järgige MetaMaski mobiilirakenduse esmakordsel avamisel telefonis esitatud samme."
+    "message": "Järgige Bravei mobiilirakenduse esmakordsel avamisel telefonis esitatud samme."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Skanneerige see kood MetaMaski mobiilirakendusega"
+    "message": "Skanneerige see kood Bravei mobiilirakendusega"
   },
   "syncWithMobileBeCareful": {
     "message": "Veenduge, et keegi teine ei vaata selle koodi skannimisel teie ekraani"
   },
   "syncWithMobileComplete": {
-    "message": "Teie andmed on edukalt sünkroonitud. Nautige MetaMaski mobiilirakendust!"
+    "message": "Teie andmed on edukalt sünkroonitud. Nautige Bravei mobiilirakendust!"
   },
   "terms": {
     "message": "Teenusetingimused"
@@ -1208,7 +1208,7 @@
     "message": "Proovi uuesti"
   },
   "typePassword": {
-    "message": "Sisestage oma MetaMaski parool"
+    "message": "Sisestage oma Bravei parool"
   },
   "unapproved": {
     "message": "Kinnitamata"
@@ -1274,7 +1274,7 @@
     "message": "Tere tulemast tagasi!"
   },
   "welcome": {
-    "message": "Tere tulemast MetaMaski"
+    "message": "Tere tulemast Bravei"
   },
   "writePhrase": {
     "message": "Kirjutage see fraas paberile ja hoidke seda turvalises kohas. Veel suurema turvalisuse tagamiseks kirjutage see mitmele paberile ja hoidke neid 2–3 erinevas kohas."
@@ -1296,5 +1296,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Null gaasihind kiirendamisel"
+  },
+  "ledgerCreateSubText": {
+    "message": "Ühendage oma Ledgeri riistvara rahakott, et suhelda dAppsiga ja teha tehinguid teistele ühendatud rahakottidele."
+  },
+  "newLocalWallet": {
+    "message": "Uus kohalik rahakott"
+  },
+  "newLocalWalletSubText": {
+    "message": "Loo uus Brave'i kohalik rahakott, et pääseda ligi dAppsile ja hoiustada krüptovaluutat ning sissenõutavaid summasid turvaliselt. Kauple anonüümselt tokenitega ilma mingite kauplemistasudeta."
+  },
+  "trezorCreateSubText": {
+    "message": "Ühendage oma Trezori riistvara rahakott, et suhelda dAppsiga ja teha tehinguid teistele ühendatud rahakottidele."
   }
 }

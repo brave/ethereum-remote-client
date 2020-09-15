@@ -72,7 +72,7 @@
     "message": "Dodajte sugerisane tokene"
   },
   "addAcquiredTokens": {
-    "message": "Dodajte stečene tokene koristeći MetaMask."
+    "message": "Dodajte stečene tokene koristeći Brave."
   },
   "amount": {
     "message": "Iznos"
@@ -82,7 +82,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Tajmer za automatsko odjavljivanje (u minutama)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Podesite vreme mirovanja u minutima pre nego što se MetaMask automatski odjavi. "
+    "message": "Podesite vreme mirovanja u minutima pre nego što se Brave automatski odjavi. "
   },
   "average": {
     "message": "Prosečno"
@@ -125,7 +125,7 @@
     "message": "Napravite rezervnu kopiju tajnog kôda za oporavak da bi vaš novčanik i sredstva bili bezbedni."
   },
   "backupApprovalInfo": {
-    "message": "Potreban je tajni kôd za oporavak vašeg novčanika u slučaju da izgubite uređaj, zaboravite lozinku, morate ponovo da instalirate MetaMask ili želite da pristupite novčaniku sa drugog uređaja."
+    "message": "Potreban je tajni kôd za oporavak vašeg novčanika u slučaju da izgubite uređaj, zaboravite lozinku, morate ponovo da instalirate Brave ili želite da pristupite novčaniku sa drugog uređaja."
   },
   "backupNow": {
     "message": "Napravite rezervu sad"
@@ -153,13 +153,13 @@
     "message": "Vaš pregledač nije podržan..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask je dizajniran i izgrađen u Kaliforniji."
+    "message": "Brave je dizajniran i izgrađen u Kaliforniji."
   },
   "buyWithWyre": {
     "message": "Kupite ETH preko servisa Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre vam dozvoljava da koristite kreditnu karticu kako biste deponovali ETH pravo na vaš MetaMask nalog."
+    "message": "Wyre vam dozvoljava da koristite kreditnu karticu kako biste deponovali ETH pravo na vaš Brave nalog."
   },
   "buyCoinSwitch": {
     "message": "Kupujte na CoinSwitch"
@@ -201,7 +201,7 @@
     "message": "Затвори"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Da biste se povezali sa Vašim hardverskim novčanikom morate da koristite MetaMask na Google Chrome-u."
+    "message": "Da biste se povezali sa Vašim hardverskim novčanikom morate da koristite Brave na Google Chrome-u."
   },
   "confirm": {
     "message": "Потврди"
@@ -369,16 +369,16 @@
     "message": "Nikada ne delite frazu ni sa kim."
   },
   "endOfFlowMessage5": {
-    "message": "Čuvajte se pecanja (krađe podataka)! MetaMask nikad neće spontano tražiti vašu šifru za oporavak naloga (seed phrase)."
+    "message": "Čuvajte se pecanja (krađe podataka)! Brave nikad neće spontano tražiti vašu šifru za oporavak naloga (seed phrase)."
   },
   "endOfFlowMessage6": {
     "message": "Ako treba ponovo da izradite rezervnu kopiju svoje početne fraze, možete je pronaći u Postavke -> Bezbednost."
   },
   "endOfFlowMessage7": {
-    "message": "Ako imate bilo kakvih pitanja ili primetite nešto sumnjivo, pošaljite e-poruku na support@metamask.io."
+    "message": "Ako imate bilo kakvih pitanja ili primetite nešto sumnjivo, pošaljite e-poruku na support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask ne može da oporavi vašu početnu frazu. Saznajte više."
+    "message": "Brave ne može da oporavi vašu početnu frazu. Saznajte više."
   },
   "endOfFlowMessage9": {
     "message": "Saznajte više."
@@ -498,7 +498,7 @@
     "message": "Povežite hardverski novčanik"
   },
   "hardwareWalletsMsg": {
-    "message": "Izaberite hardverski novčanik koji biste voleli da koristite sa MetaMask-om"
+    "message": "Izaberite hardverski novčanik koji biste voleli da koristite sa Brave-om"
   },
   "havingTroubleConnecting": {
     "message": "Da li imate problem sa povezivanjem?"
@@ -527,7 +527,7 @@
     "message": "Uvezite nalog"
   },
   "importAccountMsg": {
-    "message": "Uvezeni nalozi neće biti povezani sa početnom frazom koju ste prvobitno kreirali za MetaMask nalog. Saznajte više o uvezenim nalozima."
+    "message": "Uvezeni nalozi neće biti povezani sa početnom frazom koju ste prvobitno kreirali za Brave nalog. Saznajte više o uvezenim nalozima."
   },
   "importAccountSeedPhrase": {
     "message": "Uvezi račun sa frazom početnih vrednosti"
@@ -536,7 +536,7 @@
     "message": "Uvezite novčanik"
   },
   "importYourExisting": {
-    "message": "Uvezite vaš postojeći novčanik koristeći seed frazu sa 12 reči"
+    "message": "Uvezite vaš postojeći novčanik koristeći seed frazu sa 24 reči"
   },
   "imported": {
     "message": "Увезени",
@@ -637,7 +637,7 @@
     "message": "Povezivanje na Ethereum i decentralizovani veb."
   },
   "metamaskVersion": {
-    "message": "MetaMask verzija"
+    "message": "Brave verzija"
   },
   "mobileSyncText": {
     "message": "Molimo vas unesite šifru kako biste potvrdili da ste to vi!"
@@ -649,13 +649,13 @@
     "message": "Moji nalozi novčanika"
   },
   "myWalletAccountsDescription": {
-    "message": "Svi vaši nalozi kreirani u aplikaciji MetaMask biće automatski dodati u ovaj deo."
+    "message": "Svi vaši nalozi kreirani u aplikaciji Brave biće automatski dodati u ovaj deo."
   },
   "mustSelectOne": {
     "message": "Morate izabrati najmanje 1 token."
   },
   "needEtherInWallet": {
-    "message": "Da biste stupili u interakciju sa decentralizovanim aplikacijama koristeći MetaMask, biće vam potreban Ether u vašem novčaniku."
+    "message": "Da biste stupili u interakciju sa decentralizovanim aplikacijama koristeći Brave, biće vam potreban Ether u vašem novčaniku."
   },
   "needImportFile": {
     "message": "Morate izabrati fajl koji ćete uvesti.",
@@ -699,7 +699,7 @@
     "message": "Nova mreža"
   },
   "newToMetaMask": {
-    "message": "Novi ste u MetaMask-u?"
+    "message": "Novi ste u Brave-u?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ne, već imam frazu početnih vrednosti"
@@ -708,10 +708,10 @@
     "message": "Zaštitite svoje ključeve!"
   },
   "protectYourKeysMessage1": {
-    "message": "Budite pažljivi sa vašom seed frazom - bilo je izveštaja o veb lokacijama koje pokušavaju da imitiraju MetaMask. MetaMask nikada neće tražiti vašu seed frazu!"
+    "message": "Budite pažljivi sa vašom seed frazom - bilo je izveštaja o veb lokacijama koje pokušavaju da imitiraju Brave. Brave nikada neće tražiti vašu seed frazu!"
   },
   "protectYourKeysMessage2": {
-    "message": "Čuvajte svoju frazu. Ako primetite nešto sumnjivo, ili niste sigurni u vezi veb lokacije, pošaljite e-poruku na upport@metamask.io"
+    "message": "Čuvajte svoju frazu. Ako primetite nešto sumnjivo, ili niste sigurni u vezi veb lokacije, pošaljite e-poruku na upport@brave.com"
   },
   "rpcUrl": {
     "message": "Novi RPC URL"
@@ -765,7 +765,7 @@
     "message": "Učestvujte u MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Učestvujte u MetaMetrics da biste nam pomogli da poboljšamo MetaMask."
+    "message": "Učestvujte u MetaMetrics da biste nam pomogli da poboljšamo Brave."
   },
   "password": {
     "message": "Лозинка"
@@ -992,7 +992,7 @@
     "message": "Izaberite nalog"
   },
   "selectAnAccountHelp": {
-    "message": "Izaberite nalog za prikaz u MetaMask-u"
+    "message": "Izaberite nalog za prikaz u Brave-u"
   },
   "selectAHigherGasFee": {
     "message": "Izaberite veću vrednost gas naknade da biste ubrzali procesuiranje vaše transakcije.*"
@@ -1106,19 +1106,19 @@
     "message": "Sinhronizujte sa mobilnim uređajem"
   },
   "syncWithMobileDesc": {
-    "message": "Možete sinhronizovati vaše naloge i informacije sa svojim mobilnim uređajem. Otvorite mobilnu aplikaciju MetaMask, idite na \"Podešavanja\" i pritisnite \"Sinhronizuj iz ekstenzije za pregledač\""
+    "message": "Možete sinhronizovati vaše naloge i informacije sa svojim mobilnim uređajem. Otvorite mobilnu aplikaciju Brave, idite na \"Podešavanja\" i pritisnite \"Sinhronizuj iz ekstenzije za pregledač\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Ako prvi put otvorite aplikaciju MetaMask Mobile, samo sledite korake u svom telefonu."
+    "message": "Ako prvi put otvorite aplikaciju Brave Mobile, samo sledite korake u svom telefonu."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Skenirajte ovaj kod uz pomoć svoje MetaMask mobilne aplikacije"
+    "message": "Skenirajte ovaj kod uz pomoć svoje Brave mobilne aplikacije"
   },
   "syncWithMobileBeCareful": {
     "message": "Obratite pažnju da niko drugi ne gleda u vaš ekran kad skenirate ovaj kod"
   },
   "syncWithMobileComplete": {
-    "message": "Vaši podaci su uspešno sinhronizovani. Uživajte u mobilnoj aplikaciji MetaMask!"
+    "message": "Vaši podaci su uspešno sinhronizovani. Uživajte u mobilnoj aplikaciji Brave!"
   },
   "terms": {
     "message": "Uslovi korišćenja"
@@ -1203,7 +1203,7 @@
     "message": "Пробај поново"
   },
   "typePassword": {
-    "message": "Ukucajte svoju MetaMask šifru"
+    "message": "Ukucajte svoju Brave šifru"
   },
   "unapproved": {
     "message": "Neodobren"
@@ -1269,7 +1269,7 @@
     "message": "Dobro došli nazad!"
   },
   "welcome": {
-    "message": "Dobro došli na MetaMask"
+    "message": "Dobro došli na Brave"
   },
   "writePhrase": {
     "message": "Napišite ovaj izraz na parčetu papira i stavite ga na bezbedno mesto. Ukoliko želite još više sigurnosti, zapišite ga na više komada papira i svaki stavite na 2-3 različita mesta."
@@ -1291,5 +1291,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nulta cena gasa ubrzava"
+  },
+  "ledgerCreateSubText": {
+    "message": "Povežite hardverski novčanik Ledger-a da biste komunicirali sa dApps-om i vršili prenose na druge povezane novčanike."
+  },
+  "newLocalWallet": {
+    "message": "Novi lokalni novčanik"
+  },
+  "newLocalWalletSubText": {
+    "message": "Napravite novi Brave lokalni novčanik da biste pristupili decentralizovanim aplikacijama (dApps) i bezbedno skladištili kriptovalute i kolekcije. Anonimno trgujte tokenima bez naknada za trgovinu."
+  },
+  "trezorCreateSubText": {
+    "message": "Povežite svoj Tezor hardverski novčanik kako biste komunicirali sa  decentralizovanim aplikacijama (dApps) i vršili prenose na druge povezane novčanike."
   }
 }

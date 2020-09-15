@@ -6,7 +6,7 @@
     "message": "Szerződéses interakció"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "reject": {
@@ -76,7 +76,7 @@
     "message": "Javasolt tokenek hozzáadása"
   },
   "addAcquiredTokens": {
-    "message": "Adja hozzá MetaMask-kal a kapott érméket"
+    "message": "Adja hozzá Brave-kal a kapott érméket"
   },
   "amount": {
     "message": "Összeg"
@@ -110,7 +110,7 @@
     "message": "Automatikus kijelentkezés időzítő (perc)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Adja meg a MetaMask automatikus kijelentkezéséig tartó tétlen állapot idejét percekben "
+    "message": "Adja meg a Brave automatikus kijelentkezéséig tartó tétlen állapot idejét percekben "
   },
   "average": {
     "message": "Átlag"
@@ -125,7 +125,7 @@
     "message": "Készíts biztonsági másolatot titkos helyreállítási kódodról, hogy pénztárcád és pénzalapod biztosítva legyen."
   },
   "backupApprovalInfo": {
-    "message": "Ez a titkos kód a tárca helyreállításához szükséges, ha elveszíti eszközét, elfelejti jelszavát, újra kell telepítenie a MetaMask alkalmazást, vagy ha a tárcájához egy másik eszközről szeretne hozzáférni."
+    "message": "Ez a titkos kód a tárca helyreállításához szükséges, ha elveszíti eszközét, elfelejti jelszavát, újra kell telepítenie a Brave alkalmazást, vagy ha a tárcájához egy másik eszközről szeretne hozzáférni."
   },
   "backupNow": {
     "message": "Készíts biztonsági mentést most"
@@ -153,7 +153,7 @@
     "message": "Az ön böngészője nem támogatott..."
   },
   "builtInCalifornia": {
-    "message": "A MetaMaskot Kaliforniában tervezték és hozták létre."
+    "message": "A Braveot Kaliforniában tervezték és hozták létre."
   },
   "buyWithWyre": {
     "message": "Vásároljon ETH-t a Wyre-rel"
@@ -204,7 +204,7 @@
     "message": "Bezárás"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "A MetaMask-ot Google Chrome-mal kell használnia a Hardveres pénztárcához való csatlakozáshoz."
+    "message": "A Brave-ot Google Chrome-mal kell használnia a Hardveres pénztárcához való csatlakozáshoz."
   },
   "confirm": {
     "message": "Megerősítés"
@@ -372,16 +372,16 @@
     "message": "Soha ne ossza meg senkivel a mondatot."
   },
   "endOfFlowMessage5": {
-    "message": "Vigyázzon az adathalászokkal! A MetaMask soha nem kéri spontán módon a seed mondatot."
+    "message": "Vigyázzon az adathalászokkal! A Brave soha nem kéri spontán módon a seed mondatot."
   },
   "endOfFlowMessage6": {
     "message": "Ha ismét biztonsági másolatot kell készítenie a seed mondatról, megtalálja azt a Beállítások -> Biztonság menüben."
   },
   "endOfFlowMessage7": {
-    "message": "Ha bármilyen kérdése van, vagy valami gyanús dolgot tapasztal, írjon a support@metamask.io címre."
+    "message": "Ha bármilyen kérdése van, vagy valami gyanús dolgot tapasztal, írjon a support@brave.com címre."
   },
   "endOfFlowMessage8": {
-    "message": "A MetaMask nem tudta helyreállítani a seed mondatot. Tudjon meg többet."
+    "message": "A Brave nem tudta helyreállítani a seed mondatot. Tudjon meg többet."
   },
   "endOfFlowMessage9": {
     "message": "Bővebb információk."
@@ -497,7 +497,7 @@
     "message": "Hardveres tárca csatlakoztatása"
   },
   "hardwareWalletsMsg": {
-    "message": "Válassza ki a MetaMask-kal használni kívánt hardveres pénztárcát"
+    "message": "Válassza ki a Brave-kal használni kívánt hardveres pénztárcát"
   },
   "havingTroubleConnecting": {
     "message": "Gond van a csatlakozással?"
@@ -526,7 +526,7 @@
     "message": "Fiók importálása"
   },
   "importAccountMsg": {
-    "message": "Az importált fiókot nem társítjuk az eredetileg létrehozott MetaMask-fiók seed mondatához. További információ az importált fiókokról"
+    "message": "Az importált fiókot nem társítjuk az eredetileg létrehozott Brave-fiók seed mondatához. További információ az importált fiókokról"
   },
   "importAccountSeedPhrase": {
     "message": "Fiók importálása seed mondat segítségével"
@@ -535,7 +535,7 @@
     "message": "Pénztárca importálása"
   },
   "importYourExisting": {
-    "message": "Importálja meglévő pénztárcáját a 12 szóból álló seed mondat segítségével"
+    "message": "Importálja meglévő pénztárcáját a 24 szóból álló seed mondat segítségével"
   },
   "imported": {
     "message": "Importált",
@@ -639,7 +639,7 @@
     "message": "Csatlakozás az Ethereumhoz és a decentralizált hálózathoz."
   },
   "metamaskVersion": {
-    "message": "MetaMask verzió"
+    "message": "Brave verzió"
   },
   "mobileSyncText": {
     "message": "Kérünk írd be jelszavad, hogy igazold kiléted!"
@@ -651,13 +651,13 @@
     "message": "Saját tárca fiókjai"
   },
   "myWalletAccountsDescription": {
-    "message": "Az összes MetaMask által létrehozott fiókot automatikusan hozzáadja a munkamenethez."
+    "message": "Az összes Brave által létrehozott fiókot automatikusan hozzáadja a munkamenethez."
   },
   "mustSelectOne": {
     "message": "Legalább 1 tokent ki kell választania."
   },
   "needEtherInWallet": {
-    "message": "Ha a MetaMaskon keresztül szeretne interakcióba lépni decentralizált alkalmazással, ahhoz a tárcájában Ethernek kell lennie."
+    "message": "Ha a Braveon keresztül szeretne interakcióba lépni decentralizált alkalmazással, ahhoz a tárcájában Ethernek kell lennie."
   },
   "needImportFile": {
     "message": "Ki kell választania az importálni kívánt fájlt.",
@@ -701,7 +701,7 @@
     "message": "Új hálózat"
   },
   "newToMetaMask": {
-    "message": "Új a MetaMask-on?"
+    "message": "Új a Brave-on?"
   },
   "noAlreadyHaveSeed": {
     "message": "Nem, már rendelkezem gyarapítási fázissal"
@@ -710,10 +710,10 @@
     "message": "Védje kulcsait!"
   },
   "protectYourKeysMessage1": {
-    "message": "Vigyázzod a gyarapítási fázissal - olyan oldalakat jelentettek, amelyek a MetaMask-ot utánozzák. A MetaMask soha nem kéri el a gyarapítási fázisát."
+    "message": "Vigyázzod a gyarapítási fázissal - olyan oldalakat jelentettek, amelyek a Brave-ot utánozzák. A Brave soha nem kéri el a gyarapítási fázisát."
   },
   "protectYourKeysMessage2": {
-    "message": "Őrizze biztonságos helyen a mondatot. Ha bármilyen gyanús dolgot tapasztal, vagy bizonytalan egy weboldalt illetően, írjon a support@metamask.io címre."
+    "message": "Őrizze biztonságos helyen a mondatot. Ha bármilyen gyanús dolgot tapasztal, vagy bizonytalan egy weboldalt illetően, írjon a support@brave.com címre."
   },
   "rpcUrl": {
     "message": "Új RPC URL"
@@ -767,7 +767,7 @@
     "message": "Vegyen részt a MetaMetrics-ben"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Vegyél részt a MetaMetricsben, hogy segíts a MetaMask fejlesztésében."
+    "message": "Vegyél részt a MetaMetricsben, hogy segíts a Brave fejlesztésében."
   },
   "password": {
     "message": "Jelszó"
@@ -994,7 +994,7 @@
     "message": "Válasszon fiókot"
   },
   "selectAnAccountHelp": {
-    "message": "Válássza ki a MetaMask-ban megtekinteni kívánt fiókot"
+    "message": "Válássza ki a Brave-ban megtekinteni kívánt fiókot"
   },
   "selectAHigherGasFee": {
     "message": "Válasszon magasabb gázdíjat az ügylet feldolgozásának gyorsításához.*"
@@ -1108,19 +1108,19 @@
     "message": "Szinkronizálás mobillal"
   },
   "syncWithMobileDesc": {
-    "message": "Szinkronizálhatja fiókjait és adatait a mobilkészülékkel. Nyissa meg a MetaMask mobilalkalmazást, lépjen a \"Beállítások\" elemre, majd koppintson a \"Szinkronizálás a böngésző bővítményéből\" elemre."
+    "message": "Szinkronizálhatja fiókjait és adatait a mobilkészülékkel. Nyissa meg a Brave mobilalkalmazást, lépjen a \"Beállítások\" elemre, majd koppintson a \"Szinkronizálás a böngésző bővítményéből\" elemre."
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Ha most először nyitja meg a MetaMask mobilalkalmazást, kövesse a telefonon megadott lépéseket."
+    "message": "Ha most először nyitja meg a Brave mobilalkalmazást, kövesse a telefonon megadott lépéseket."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Olvasd be ezt a kódot MetaMask mobilalkalmazásoddal"
+    "message": "Olvasd be ezt a kódot Brave mobilalkalmazásoddal"
   },
   "syncWithMobileBeCareful": {
     "message": "Győződjön meg arról, hogy senki nem látja a képernyőt, amikor beolvassa ezt a kódot"
   },
   "syncWithMobileComplete": {
-    "message": "Adatai szinkronizálása sikerült. Élvezze a MetaMask mobilalkalmazást!"
+    "message": "Adatai szinkronizálása sikerült. Élvezze a Brave mobilalkalmazást!"
   },
   "terms": {
     "message": "Használati feltételek"
@@ -1208,7 +1208,7 @@
     "message": "Újra"
   },
   "typePassword": {
-    "message": "Írd be MetaMask jelszavadat"
+    "message": "Írd be Brave jelszavadat"
   },
   "unapproved": {
     "message": "Jóvá nem hagyott"
@@ -1274,7 +1274,7 @@
     "message": "Üdvözöljük újra!"
   },
   "welcome": {
-    "message": "Üdvözöljük a MetaMaskban"
+    "message": "Üdvözöljük a Braveban"
   },
   "writePhrase": {
     "message": "Írd le ezt a szókapcsolatot egy darab papírra és őrizd meg egy biztonságos helyen. Ha még nagyobb biztonságra törekszel, írd le több darab papírra, és tartsd őket 2-3 különböző helyen."
@@ -1296,5 +1296,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nulla gázár a gyorsuláshoz"
+  },
+  "ledgerCreateSubText": {
+    "message": "Csatlakoztasd Ledger hardverpéntárcádat hogy kommunikálhass dAppekkel és átutalásokat végezhess más csatlakoztatott pénztárcákra."
+  },
+  "newLocalWallet": {
+    "message": "Új helyi pénztárca"
+  },
+  "newLocalWalletSubText": {
+    "message": "Készíts egy új Brave helyi tárcát a dApps használatához valamint a kriptó és a kollekciók biztonságos tárolásához. Kereskedj tokenekkel névtelenül és kereskedési díjak nélkül."
+  },
+  "trezorCreateSubText": {
+    "message": "Csatlakoztasd Trezor hardverpénztárcádat, hogy kommunikálhass dAppekkel, és átutalásokat végezhess más csatlakoztatott pénztárcákra."
   }
 }

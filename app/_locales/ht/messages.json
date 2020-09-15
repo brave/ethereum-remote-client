@@ -30,7 +30,7 @@
     "message": "Ajoute Token Yo Sikjere W"
   },
   "addAcquiredTokens": {
-    "message": "Ajoute tokens yo ou te achte lè l sèvi avèk MetaMask"
+    "message": "Ajoute tokens yo ou te achte lè l sèvi avèk Brave"
   },
   "amount": {
     "message": "Kantite lajan"
@@ -40,7 +40,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -74,7 +74,7 @@
     "message": "Navigatè ou a pa sipòte..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask fèt e bati nan California."
+    "message": "Brave fèt e bati nan California."
   },
   "buyCoinSwitch": {
     "message": "Achte sou CoinSwitch"
@@ -98,7 +98,7 @@
     "message": "Fèmen"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Ou bezwen sèvi ak MetaMask sou Google Chrome yo nan lòd yo konekte sou Hardware Wallet."
+    "message": "Ou bezwen sèvi ak Brave sou Google Chrome yo nan lòd yo konekte sou Hardware Wallet."
   },
   "confirm": {
     "message": "Konfime"
@@ -272,7 +272,7 @@
     "message": "Materyèl Wallet konekte"
   },
   "hardwareWalletsMsg": {
-    "message": "Chwazi yon Materyèl Wallet ou ta renmen itilize ak MetaMask"
+    "message": "Chwazi yon Materyèl Wallet ou ta renmen itilize ak Brave"
   },
   "havingTroubleConnecting": {
     "message": "Èske w gen pwoblèm pou konekte?"
@@ -298,7 +298,7 @@
     "message": "Pòte Kont"
   },
   "importAccountMsg": {
-    "message": " Kont pòte pa pral asosye avèk orijinal ou te kreye nan kont MetaMask seed fraz. Aprann plis sou kont enpòte "
+    "message": " Kont pòte pa pral asosye avèk orijinal ou te kreye nan kont Brave seed fraz. Aprann plis sou kont enpòte "
   },
   "imported": {
     "message": "Pòte",
@@ -375,10 +375,10 @@
     "message": "Mesaje"
   },
   "metamaskDescription": {
-    "message": "MetaMask sekirize idantite pou Ethereum."
+    "message": "Brave sekirize idantite pou Ethereum."
   },
   "metamaskVersion": {
-    "message": "MetaMask Vèsyon"
+    "message": "Brave Vèsyon"
   },
   "myAccounts": {
     "message": "Kont mwen"
@@ -387,7 +387,7 @@
     "message": "Ou dwe chwazi omwen 1 token."
   },
   "needEtherInWallet": {
-    "message": "Pou kominike avèk aplikasyon desantralize ou dwe itilize MetaMask, ou pral bezwen Ether nan Wallet ou."
+    "message": "Pou kominike avèk aplikasyon desantralize ou dwe itilize Brave, ou pral bezwen Ether nan Wallet ou."
   },
   "needImportFile": {
     "message": "Ou dwe chwazi yon dosye pou enpòte.",
@@ -577,7 +577,7 @@
     "message": "Rezilta rechèch"
   },
   "secretPhrase": {
-    "message": "Antre fraz sekrè douz mo ou a pou w restore kòf ou a."
+    "message": "Antre fraz sekrè 24 mo ou a pou w restore kòf ou a."
   },
   "seedPhraseReq": {
     "message": "Seed fraz yo se 12 long mo"
@@ -616,7 +616,7 @@
     "message": "Chwazi yon kont"
   },
   "selectAnAccountHelp": {
-    "message": "Chwazi kont pou wè nan MetaMask"
+    "message": "Chwazi kont pou wè nan Brave"
   },
   "selectHdPath": {
     "message": "Chwazi chemen HD"
@@ -788,7 +788,7 @@
     "message": "Bon Retou!"
   },
   "welcome": {
-    "message": "Byenveni nan MetaMask"
+    "message": "Byenveni nan Brave"
   },
   "yesLetsTry": {
     "message": "Wi, ann eseye"

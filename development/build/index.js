@@ -13,7 +13,6 @@ const createStaticAssetTasks = require('./static')
 const createEtcTasks = require('./etc')
 const createBraveHTMLTasks = require('../../brave/build/html')
 const createBraveManifestTasks = require('../../brave/build/manifest')
-const createBraveLocalesTasks = require('../../brave/build/locales')
 const createBravePublishTasks = require('../../brave/build/publish')
 
 const browserPlatforms = [
@@ -37,7 +36,6 @@ function defineAllTasks () {
   const braveHTMLTasks = createBraveHTMLTasks()
   const braveManifestTasks = createBraveManifestTasks()
   const bravePublishTasks = createBravePublishTasks()
-  const { stringTask, combineTask } = createBraveLocalesTasks()
 
   // build for development (livereload)
   createTask('dev',
@@ -48,8 +46,6 @@ function defineAllTasks () {
       manifestTasks.dev,
       braveHTMLTasks,
       braveManifestTasks,
-      stringTask,
-      combineTask,
       composeParallel(
         scriptTasks.dev,
         reload,
@@ -65,8 +61,6 @@ function defineAllTasks () {
       manifestTasks.prod,
       braveHTMLTasks,
       braveManifestTasks,
-      stringTask,
-      combineTask,
       scriptTasks.prod,
       zip,
     ),

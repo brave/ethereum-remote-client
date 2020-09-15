@@ -25,7 +25,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -47,7 +47,7 @@
     "message": "Usar Blockies Identicon"
   },
   "builtInCalifornia": {
-    "message": "MetaMask é desenhada e construída na California."
+    "message": "Brave é desenhada e construída na California."
   },
   "buyCoinSwitch": {
     "message": "Comprar no CoinSwitch"
@@ -181,7 +181,7 @@
     "message": "Importar Conta"
   },
   "importAccountMsg": {
-    "message": "Contas importadas não irão ser associadas com a frase seed da conta criada originalmente pelo MetaMask. Saiba mais sobre contas importadas."
+    "message": "Contas importadas não irão ser associadas com a frase seed da conta criada originalmente pelo Brave. Saiba mais sobre contas importadas."
   },
   "imported": {
     "message": "Importado",
@@ -240,7 +240,7 @@
     "message": "Mensagem"
   },
   "metamaskDescription": {
-    "message": "O MetaMask é um lugar seguro para guardar a sua identidade em em Ethereum."
+    "message": "O Brave é um lugar seguro para guardar a sua identidade em em Ethereum."
   },
   "myAccounts": {
     "message": "As minhas contas"
@@ -249,7 +249,7 @@
     "message": "Deve escolher no mínimo 1 token."
   },
   "needEtherInWallet": {
-    "message": "Para interagir com applicações descentralizadas usando MetaMask tem de ter Ether na sua carteira."
+    "message": "Para interagir com applicações descentralizadas usando Brave tem de ter Ether na sua carteira."
   },
   "needImportFile": {
     "message": "Deve selecionar um ficheiro para importar.",
@@ -340,7 +340,7 @@
     "message": "Procurar"
   },
   "secretPhrase": {
-    "message": "Introduza a sua frase secreta de 12 palavras para recuperar o seu ."
+    "message": "Introduza a sua frase secreta de 24 palavras para recuperar o seu ."
   },
   "seedPhraseReq": {
     "message": "seed phrases are 12 words long"
@@ -431,12 +431,24 @@
     "message": "Visite o nosso site"
   },
   "welcome": {
-    "message": "Bem-vindo ao MetaMask"
+    "message": "Bem-vindo ao Brave"
   },
   "yourSigRequested": {
     "message": "A sua assinatura está a ser pedida"
   },
   "youSign": {
     "message": "Está a assinar"
+  },
+  "ledgerCreateSubText": {
+    "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
+  },
+  "newLocalWallet": {
+    "message": "New Local Wallet"
+  },
+  "newLocalWalletSubText": {
+    "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."
+  },
+  "trezorCreateSubText": {
+    "message": "Connect your Trezor hardware wallet to interact with dApps and make transfers to other connected wallets."
   }
 }

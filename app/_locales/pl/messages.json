@@ -72,7 +72,7 @@
     "message": "Dodaj sugerowane tokeny."
   },
   "addAcquiredTokens": {
-    "message": "Dodaj tokeny pozyskane przy pomocy MetaMask"
+    "message": "Dodaj tokeny pozyskane przy pomocy Brave"
   },
   "amount": {
     "message": "Ilość"
@@ -82,7 +82,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Czas automatycznego wylogowania (w minutach)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Ustaw czas bezczynności w minutach, po którym MetaMask wyloguje Cię automatycznie"
+    "message": "Ustaw czas bezczynności w minutach, po którym Brave wyloguje Cię automatycznie"
   },
   "average": {
     "message": "Średnia"
@@ -125,7 +125,7 @@
     "message": "Utwórz kopię zapasową tajnego kodu odzyskiwania, aby zapewnić bezpieczeństwo swojego portfela i środków."
   },
   "backupApprovalInfo": {
-    "message": "Ten tajny kod jest wymagany do odzyskania portfela w przypadku zgubienia urządzenia, zapomnienia hasła, ponownego zainstalowania MetaMask lub potrzeby uzyskania dostępu do portfela na innym urządzeniu."
+    "message": "Ten tajny kod jest wymagany do odzyskania portfela w przypadku zgubienia urządzenia, zapomnienia hasła, ponownego zainstalowania Brave lub potrzeby uzyskania dostępu do portfela na innym urządzeniu."
   },
   "backupNow": {
     "message": "Utwórz kopię zapasową"
@@ -153,13 +153,13 @@
     "message": "Twoja przeglądarka nie jest obsługiwana..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask został zaprojektowany i stworzony w Kaliforni."
+    "message": "Brave został zaprojektowany i stworzony w Kaliforni."
   },
   "buyWithWyre": {
     "message": "Kup ETH poprzez Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Dzięki Wyre możesz użyć karty kredytowej, aby wpłacić ETH bezpośrednio na swoje konto MetaMask."
+    "message": "Dzięki Wyre możesz użyć karty kredytowej, aby wpłacić ETH bezpośrednio na swoje konto Brave."
   },
   "buyCoinSwitch": {
     "message": "Kup w CoinSwitch"
@@ -201,7 +201,7 @@
     "message": "Zamknij"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Żeby połączyć się z portfelem sprzętowym, należy uruchomić MetaMask z przeglądarką Google Chrome."
+    "message": "Żeby połączyć się z portfelem sprzętowym, należy uruchomić Brave z przeglądarką Google Chrome."
   },
   "confirm": {
     "message": "Potwierdź"
@@ -369,16 +369,16 @@
     "message": "Nigdy nie udostępniaj nikomu tej frazy."
   },
   "endOfFlowMessage5": {
-    "message": "Uważaj na phishing! MetaMask nigdy spontanicznie nie poprosi Cię o podanie frazy seed."
+    "message": "Uważaj na phishing! Brave nigdy spontanicznie nie poprosi Cię o podanie frazy seed."
   },
   "endOfFlowMessage6": {
     "message": "Jeśli zajdzie konieczność ponownego wykonania kopii zapasowej frazy seed, znajdziesz ją w Ustawieniach -> Zabezpieczenia."
   },
   "endOfFlowMessage7": {
-    "message": "Jeśli masz jakieś pytania lub zauważysz coś podejrzanego, wyślij e-mail na adres support@metamask.io."
+    "message": "Jeśli masz jakieś pytania lub zauważysz coś podejrzanego, wyślij e-mail na adres support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask nie może odzyskać Twojej frazy seed. Dowiedz się więcej."
+    "message": "Brave nie może odzyskać Twojej frazy seed. Dowiedz się więcej."
   },
   "endOfFlowMessage9": {
     "message": "Dowiedz się więcej."
@@ -498,7 +498,7 @@
     "message": "Podłącz sprzętowy portfel"
   },
   "hardwareWalletsMsg": {
-    "message": "Wybierz portfel sprzętowy, którego chcesz użyć z MetaMaskiem"
+    "message": "Wybierz portfel sprzętowy, którego chcesz użyć z Braveiem"
   },
   "havingTroubleConnecting": {
     "message": "Problem z połączeniem?"
@@ -527,7 +527,7 @@
     "message": "Importuj konto"
   },
   "importAccountMsg": {
-    "message": " Importowane konta nie będą powiązane z Twoją pierwotną frazą seed MetaMask. Dowiedz się więcej o importowaniu kont "
+    "message": " Importowane konta nie będą powiązane z Twoją pierwotną frazą seed Brave. Dowiedz się więcej o importowaniu kont "
   },
   "importAccountSeedPhrase": {
     "message": "Zaimportuj konto za pomocą frazy seed"
@@ -536,7 +536,7 @@
     "message": "Importuj portfel"
   },
   "importYourExisting": {
-    "message": "Zaimportuj istniejący portfel, wprowadzając 12 słów frazy seed"
+    "message": "Zaimportuj istniejący portfel, wprowadzając 24 słów frazy seed"
   },
   "imported": {
     "message": "Zaimportowane",
@@ -637,10 +637,10 @@
     "message": "Wiadomość"
   },
   "metamaskDescription": {
-    "message": "MetaMask to bezpieczny portfel dla Ethereum."
+    "message": "Brave to bezpieczny portfel dla Ethereum."
   },
   "metamaskVersion": {
-    "message": "Wersja MetaMask"
+    "message": "Wersja Brave"
   },
   "mobileSyncText": {
     "message": "Wpisz hasło, aby potwierdzić, że to Ty!"
@@ -652,13 +652,13 @@
     "message": "Moja konta portfeli"
   },
   "myWalletAccountsDescription": {
-    "message": "Wszystkie Twoje konta utworzone w MetaMask zostaną automatycznie dodane do tej sekcji."
+    "message": "Wszystkie Twoje konta utworzone w Brave zostaną automatycznie dodane do tej sekcji."
   },
   "mustSelectOne": {
     "message": "Należy wybrać co najmniej 1 token."
   },
   "needEtherInWallet": {
-    "message": "Żeby skorzystać ze zdecentraliowanych aplikacji (dApps) przy pomocy MetaMask, potrzebujesz Eteru w swoim portfelu."
+    "message": "Żeby skorzystać ze zdecentraliowanych aplikacji (dApps) przy pomocy Brave, potrzebujesz Eteru w swoim portfelu."
   },
   "needImportFile": {
     "message": "Musisz wybrać plik do zaimportowania.",
@@ -702,7 +702,7 @@
     "message": "Nowa sieć"
   },
   "newToMetaMask": {
-    "message": "Pierwszy raz w MetaMask?"
+    "message": "Pierwszy raz w Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Nie, mam już frazę seed"
@@ -711,10 +711,10 @@
     "message": "Chroń swoje klucze!"
   },
   "protectYourKeysMessage1": {
-    "message": "Traktuj swoją frazę seed z ostrożnością – zgłaszano nam przypadki stron internetowych, które podają się za MetaMask. MetaMask nigdy nie poprosi Cię o podanie frazy seed!"
+    "message": "Traktuj swoją frazę seed z ostrożnością – zgłaszano nam przypadki stron internetowych, które podają się za Brave. Brave nigdy nie poprosi Cię o podanie frazy seed!"
   },
   "protectYourKeysMessage2": {
-    "message": "Przechowuj frazę z zachowaniem zasad bezpieczeństwa. Jeśli zauważysz coś podejrzanego lub nie masz pewności co do strony internetowej, wyślij e-mail na adres support@metamask.io"
+    "message": "Przechowuj frazę z zachowaniem zasad bezpieczeństwa. Jeśli zauważysz coś podejrzanego lub nie masz pewności co do strony internetowej, wyślij e-mail na adres support@brave.com"
   },
   "rpcUrl": {
     "message": "Nowy adres URL RPC"
@@ -768,7 +768,7 @@
     "message": "Weź udział w MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Weź udział w MetaMetrics, aby pomóc nam ulepszyć MetaMask"
+    "message": "Weź udział w MetaMetrics, aby pomóc nam ulepszyć Brave"
   },
   "password": {
     "message": "Hasło"
@@ -941,7 +941,7 @@
     "message": "OSTRZEŻENIE: Nigdy nie ujawniaj swojej frazy zapasowej. Każdy, kto pozna tę frazę, może bezpowrotnie odebrać Ci kryptowalutę Ether."
   },
   "secretPhrase": {
-    "message": "Żeby otworzyć schowek, wpisz tutaj swoją frazę dwunastu słów."
+    "message": "Żeby otworzyć schowek, wpisz tutaj swoją frazę 24 słów."
   },
   "securityAndPrivacy": {
     "message": "Bezpieczeństwo i prywatność"
@@ -995,7 +995,7 @@
     "message": "Wybierz konto"
   },
   "selectAnAccountHelp": {
-    "message": "Wybierz konto do przeglądania w MetaMask"
+    "message": "Wybierz konto do przeglądania w Brave"
   },
   "selectAHigherGasFee": {
     "message": "Wybierz wyższą opłatę za gaz, aby przyspieszyć przetwarzanie transakcji.*"
@@ -1106,19 +1106,19 @@
     "message": "Synchronizuj z telefonem"
   },
   "syncWithMobileDesc": {
-    "message": "Możesz synchronizować swoje konta i informacje z urządzeniem mobilnym. Otwórz aplikację mobilną MetaMask, przejdź do „Ustawień” i wybierz opcję „Synchronizuj z rozszerzeniem przeglądarki”."
+    "message": "Możesz synchronizować swoje konta i informacje z urządzeniem mobilnym. Otwórz aplikację mobilną Brave, przejdź do „Ustawień” i wybierz opcję „Synchronizuj z rozszerzeniem przeglądarki”."
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jeśli po raz pierwszy otwierasz aplikację MetaMask Mobile, postępuj zgodnie z instrukcjami w telefonie."
+    "message": "Jeśli po raz pierwszy otwierasz aplikację Brave Mobile, postępuj zgodnie z instrukcjami w telefonie."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Zeskanuj ten kod za pomocą aplikacji mobilnej MetaMask"
+    "message": "Zeskanuj ten kod za pomocą aplikacji mobilnej Brave"
   },
   "syncWithMobileBeCareful": {
     "message": "Upewnij się, że nikt inny nie patrzy na Twój ekran podczas skanowania tego kodu"
   },
   "syncWithMobileComplete": {
-    "message": "Twoje dane zostały zsynchronizowane. Miłego korzystania z aplikacji mobilnej MetaMask!"
+    "message": "Twoje dane zostały zsynchronizowane. Miłego korzystania z aplikacji mobilnej Brave!"
   },
   "terms": {
     "message": "Regulamin"
@@ -1272,7 +1272,7 @@
     "message": "Witaj z powrotem!"
   },
   "welcome": {
-    "message": "Witaj w MetaMask"
+    "message": "Witaj w Brave"
   },
   "writePhrase": {
     "message": "Zapisz tę frazę na kartce papieru i przechowuj w bezpiecznym miejscu. Jeśli chcesz zapewnić jeszcze większe bezpieczeństwo, zapisz ją na kilku kartkach i przechowuj w 2-3 różnych miejscach."
@@ -1294,5 +1294,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Przyspieszenie z zerową ceną gazu"
+  },
+  "ledgerCreateSubText": {
+    "message": "Podłącz portfel Ledger, aby korzystać z dApps i dokonać transakcje do innych podłączonych portfeli."
+  },
+  "newLocalWallet": {
+    "message": "Nowy portfel lokalny"
+  },
+  "newLocalWalletSubText": {
+    "message": "Utwórz nowy, lokalny portfel Brave, aby korzystać z dApps i bezpiecznie przechowywać kryptowaluty. Handluj tokenami anonimowo, bez opłat handlowych."
+  },
+  "trezorCreateSubText": {
+    "message": "Podłącz portfel Trezor, aby korzystać z dApps i dokonać transakcje do innych podłączonych portfeli."
   }
 }

@@ -6,7 +6,7 @@
     "message": "Interaksi Kontrak"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "reject": {
@@ -76,7 +76,7 @@
     "message": "Tambah Token yang Disarankan"
   },
   "addAcquiredTokens": {
-    "message": "Tambahkan token yang sudah Anda peroleh menggunakan MetaMask"
+    "message": "Tambahkan token yang sudah Anda peroleh menggunakan Brave"
   },
   "amount": {
     "message": "Jumlah"
@@ -110,7 +110,7 @@
     "message": "Jangka Waktu Keluar-Otomatis (menit)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Atur waktu diam dalam menit sebelum MetaMask mengeluarkan Anda secara otomatis"
+    "message": "Atur waktu diam dalam menit sebelum Brave mengeluarkan Anda secara otomatis"
   },
   "average": {
     "message": "Rata-rata"
@@ -125,7 +125,7 @@
     "message": "Cadangkan kode Pemulihan Rahasia guna mengamankan dompet dan dana Anda."
   },
   "backupApprovalInfo": {
-    "message": "Kode rahasia Anda diperlukan untuk memulihkan dompet jika perangkat hilang, lupa sandi, harus menginstal ulang MetaMask, atau ingin mengakses dompet Anda di perangkat lain."
+    "message": "Kode rahasia Anda diperlukan untuk memulihkan dompet jika perangkat hilang, lupa sandi, harus menginstal ulang Brave, atau ingin mengakses dompet Anda di perangkat lain."
   },
   "backupNow": {
     "message": "Cadangkan sekarang"
@@ -153,13 +153,13 @@
     "message": "Peramban Anda tidak didukung..."
   },
   "builtInCalifornia": {
-    "message": "MetaMask dirancang dan dibangun di California."
+    "message": "Brave dirancang dan dibangun di California."
   },
   "buyWithWyre": {
     "message": "Membeli ETH dengan Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre mengizinkan Anda menggunakan kartu kredit untuk mendepositkan ETH langsung ke akun  MetaMask."
+    "message": "Wyre mengizinkan Anda menggunakan kartu kredit untuk mendepositkan ETH langsung ke akun  Brave."
   },
   "buyCoinSwitch": {
     "message": "Beli di CoinSwitch"
@@ -204,7 +204,7 @@
     "message": "Tutup"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Anda harus menggunakan MetaMask di Google Chrome untuk menyambung ke dompet Perangkat Keras Anda."
+    "message": "Anda harus menggunakan Brave di Google Chrome untuk menyambung ke dompet Perangkat Keras Anda."
   },
   "confirm": {
     "message": "Konfirmasi"
@@ -363,16 +363,16 @@
     "message": "Jangan pernah bagikan frasa dengan siapa pun."
   },
   "endOfFlowMessage5": {
-    "message": "Hati-hati terhadap phishing! MetaMask tidak akan pernah meminta frasa benih Anda secara spontan."
+    "message": "Hati-hati terhadap phishing! Brave tidak akan pernah meminta frasa benih Anda secara spontan."
   },
   "endOfFlowMessage6": {
     "message": "Jika Anda perlu mencadangkan frase seed lagi, Anda dapat menemukannya dalam Pengaturan -> Keamanan."
   },
   "endOfFlowMessage7": {
-    "message": "Jika Anda punya pertanyaan atau melihat sesuatu yang ganjil, kirimkan email ke support@metamask.io."
+    "message": "Jika Anda punya pertanyaan atau melihat sesuatu yang ganjil, kirimkan email ke support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask tidak dapat memulihkan frasa seed Anda. Pelajari lebih lanjut."
+    "message": "Brave tidak dapat memulihkan frasa seed Anda. Pelajari lebih lanjut."
   },
   "endOfFlowMessage9": {
     "message": "Pelajari lebih lanjut."
@@ -488,7 +488,7 @@
     "message": "Hubungkan dompet peranti keras"
   },
   "hardwareWalletsMsg": {
-    "message": "Pilih dompet hardware yang ingin Anda pakai dengan MetaMask"
+    "message": "Pilih dompet hardware yang ingin Anda pakai dengan Brave"
   },
   "havingTroubleConnecting": {
     "message": "Kesulitan menghubungkan?"
@@ -517,7 +517,7 @@
     "message": "Impor Akun"
   },
   "importAccountMsg": {
-    "message": "Akun impor tidak akan dihubungkan dengan frasa benih akun MetaMask yang diciptakan pertama kali. Pelajari lebih lanjut tentang akun impor"
+    "message": "Akun impor tidak akan dihubungkan dengan frasa benih akun Brave yang diciptakan pertama kali. Pelajari lebih lanjut tentang akun impor"
   },
   "importAccountSeedPhrase": {
     "message": "Impor Akun dengan Frasa Benih"
@@ -526,7 +526,7 @@
     "message": "Impor Dompet"
   },
   "importYourExisting": {
-    "message": "Impor dompet Anda yang ada menggunakan frasa 12 benih kata"
+    "message": "Impor dompet Anda yang ada menggunakan frasa 24 benih kata"
   },
   "imported": {
     "message": "Diimpor",
@@ -627,7 +627,7 @@
     "message": "Menghubungkan Anda ke Ethereum dan Web Terdesentralisasi."
   },
   "metamaskVersion": {
-    "message": "Versi MetaMask"
+    "message": "Versi Brave"
   },
   "mobileSyncText": {
     "message": "Harap masukkan sandi untuk mengonfirmasi ini memang Anda!"
@@ -639,13 +639,13 @@
     "message": "Akun Dompet Saya"
   },
   "myWalletAccountsDescription": {
-    "message": "Semua akun Anda yang dibuat oleh MetaMask otomatis akan ditambahkan ke bagian ini."
+    "message": "Semua akun Anda yang dibuat oleh Brave otomatis akan ditambahkan ke bagian ini."
   },
   "mustSelectOne": {
     "message": "Harus memilih setidaknya 1 token."
   },
   "needEtherInWallet": {
-    "message": "Untuk berinteraksi dengan aplikasi terdesentralisasi menggunakan MetaMask, Anda memerlukan adanya Ether di dompet Anda."
+    "message": "Untuk berinteraksi dengan aplikasi terdesentralisasi menggunakan Brave, Anda memerlukan adanya Ether di dompet Anda."
   },
   "needImportFile": {
     "message": "Anda harus memilih berkas untuk diimpor.",
@@ -689,7 +689,7 @@
     "message": "Jaringan Baru"
   },
   "newToMetaMask": {
-    "message": "Baru di MetaMask?"
+    "message": "Baru di Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Tidak, saya sudah memiliki frasa seed"
@@ -698,10 +698,10 @@
     "message": "Lindungi Kunci Anda!"
   },
   "protectYourKeysMessage1": {
-    "message": "Berhati-hatilah dengan frasa seed Anda — terdapat laporan tentang website yang coba mengimitasi MetaMask. MetaMask tidak akan pernah meminta frasa seed Anda!"
+    "message": "Berhati-hatilah dengan frasa seed Anda — terdapat laporan tentang website yang coba mengimitasi Brave. Brave tidak akan pernah meminta frasa seed Anda!"
   },
   "protectYourKeysMessage2": {
-    "message": "Jaga keamanan frasa Anda. Jika Anda menemukan sesuatu yang mencurigakan, atau ragu dengan sebuah situs web, kirim surel ke support@metamask.io"
+    "message": "Jaga keamanan frasa Anda. Jika Anda menemukan sesuatu yang mencurigakan, atau ragu dengan sebuah situs web, kirim surel ke support@brave.com"
   },
   "rpcUrl": {
     "message": "URL RPC Baru"
@@ -755,7 +755,7 @@
     "message": "Berpartisipasilah di MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Berpartisipasilah dalam MetaMetrics guna membantu kami menjadikan MetaMask lebih baik"
+    "message": "Berpartisipasilah dalam MetaMetrics guna membantu kami menjadikan Brave lebih baik"
   },
   "password": {
     "message": "Sandi"
@@ -982,7 +982,7 @@
     "message": "Pilih Akun"
   },
   "selectAnAccountHelp": {
-    "message": "Pilih akun untuk dilihat di MetaMask"
+    "message": "Pilih akun untuk dilihat di Brave"
   },
   "selectAHigherGasFee": {
     "message": "Pilih biaya gas yang lebih tinggi untuk mempercepat proses transaksi Anda.*"
@@ -1096,19 +1096,19 @@
     "message": "Sinkronkan dengan seluler"
   },
   "syncWithMobileDesc": {
-    "message": "Anda dapat menyinkronkan akun dan informasi Anda dengan perangkat seluler. Buka aplikasi seluler MetaMask, pilih \"Pengaturan\" lalu ketuk \"Sinkronkan dari Ekstensi Peramban\""
+    "message": "Anda dapat menyinkronkan akun dan informasi Anda dengan perangkat seluler. Buka aplikasi seluler Brave, pilih \"Pengaturan\" lalu ketuk \"Sinkronkan dari Ekstensi Peramban\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jika Anda baru saja membuka aplikasi MetaMask Mobile untuk pertama kali, ikuti langkah-langkah pada ponsel Anda."
+    "message": "Jika Anda baru saja membuka aplikasi Brave Mobile untuk pertama kali, ikuti langkah-langkah pada ponsel Anda."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Pindai kode ini dengan aplikasi ponsel MetaMask "
+    "message": "Pindai kode ini dengan aplikasi ponsel Brave "
   },
   "syncWithMobileBeCareful": {
     "message": "Pastikan tidak ada yang melihat ke layar ketika kode ini Anda pindai"
   },
   "syncWithMobileComplete": {
-    "message": "Data Anda telah berhasil disinkronkan. Nikmati aplikasi mobile MetaMask!"
+    "message": "Data Anda telah berhasil disinkronkan. Nikmati aplikasi mobile Brave!"
   },
   "terms": {
     "message": "Syarat Penggunaan"
@@ -1190,7 +1190,7 @@
     "message": "Coba lagi"
   },
   "typePassword": {
-    "message": "Ketik kata sandi MetaMask Anda"
+    "message": "Ketik kata sandi Brave Anda"
   },
   "unapproved": {
     "message": "Tak disetujui"
@@ -1256,7 +1256,7 @@
     "message": "Selamat Datang Kembali!"
   },
   "welcome": {
-    "message": "Selamat Datang di MetaMask"
+    "message": "Selamat Datang di Brave"
   },
   "writePhrase": {
     "message": "Tuliskan frasa ini di selembar kertas dan simpan di tempat aman. Jika ingin lebih aman, tulislah di beberapa lembar kertas dan simpan masing-masing kertas di 2 - 3 lokasi berbeda."
@@ -1278,5 +1278,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Harga gas nol saat mempercepat"
+  },
+  "ledgerCreateSubText": {
+    "message": "Hubungkan dompet perangkat keras Ledger Anda untuk berinteraksi dengan dApps dan melakukan transfer ke dompet lain yang terhubung."
+  },
+  "newLocalWallet": {
+    "message": "Dompet Lokal Baru"
+  },
+  "newLocalWalletSubText": {
+    "message": "Buat dompet lokal Brave baru untuk mengakses dApps dan menyimpan kripto dan koleksi dengan aman. Berdaganglah token secara anonim tanpa biaya dagang."
+  },
+  "trezorCreateSubText": {
+    "message": "Hubungkan dompet perangkat keras Trezor Anda untuk berinteraksi dengan dApps dan melakukan transfer ke dompet lain yang terhubung."
   }
 }

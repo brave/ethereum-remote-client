@@ -25,7 +25,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -50,7 +50,7 @@
     "message": "Použít Blockies Identicon"
   },
   "builtInCalifornia": {
-    "message": "MetaMask je navržen a vytvořen v Kalifornii."
+    "message": "Brave je navržen a vytvořen v Kalifornii."
   },
   "buyCoinSwitch": {
     "message": "Nákup na CoinSwitch"
@@ -201,7 +201,7 @@
     "message": "Import účtu"
   },
   "importAccountMsg": {
-    "message": "Importované účty nebudou spojeny s vaší původní MetaMaskovou klíčovou frází. Zjistěte více o importovaných účtech "
+    "message": "Importované účty nebudou spojeny s vaší původní Braveovou klíčovou frází. Zjistěte více o importovaných účtech "
   },
   "imported": {
     "message": "Importováno",
@@ -260,7 +260,7 @@
     "message": "Zpráva"
   },
   "metamaskDescription": {
-    "message": "MetaMask je bezpečný osobní trezor pro Ethereum."
+    "message": "Brave je bezpečný osobní trezor pro Ethereum."
   },
   "myAccounts": {
     "message": "Moje účty"
@@ -269,7 +269,7 @@
     "message": "Musíte zvolit aspoň 1 token."
   },
   "needEtherInWallet": {
-    "message": "Potřebujete Ether v peněžence, abyste mohli pomocí MetaMasku interagovat s decentralizovanými aplikacemi."
+    "message": "Potřebujete Ether v peněžence, abyste mohli pomocí Braveu interagovat s decentralizovanými aplikacemi."
   },
   "needImportFile": {
     "message": "Musíte zvolit soubor k importu.",
@@ -360,7 +360,7 @@
     "message": "Hledat"
   },
   "secretPhrase": {
-    "message": "Zadejte svých 12 slov tajné fráze k obnovení trezoru."
+    "message": "Zadejte svých 24 slov tajné fráze k obnovení trezoru."
   },
   "seedPhraseReq": {
     "message": "klíčové fráze mají 12 slov"
@@ -475,12 +475,24 @@
     "message": "Klíčová fráze peněženky"
   },
   "welcome": {
-    "message": "Vítejte v MetaMask"
+    "message": "Vítejte v Brave"
   },
   "yourSigRequested": {
     "message": "Je vyžadován váš podpis"
   },
   "youSign": {
     "message": "Podepisujete"
+  },
+  "ledgerCreateSubText": {
+    "message": "Připojte svou hardwarovou peněženku Ledger pro interakci s dApps a provádění převodů na ostatní připojené peněženky."
+  },
+  "newLocalWallet": {
+    "message": "Nová lokální peněženka"
+  },
+  "newLocalWalletSubText": {
+    "message": "Vytvořte novou lokální peněženku Brave pro přístup k dApps a bezpečné uchovávání kryptoměn a sběratelských předmětů. Obchodujte s tokeny anonymně a bez poplatků."
+  },
+  "trezorCreateSubText": {
+    "message": "Připojte svou hardwarovou peněženku Trezor pro interakci s dApps a provádění převodů na ostatní připojené peněženky."
   }
 }

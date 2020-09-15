@@ -1,14 +1,8 @@
-# MetaMask Browser Extension
+# Brave Ethereum Remote Client Extension
 
-You can find the latest version of MetaMask on [our official website](https://metamask.io/). For help using MetaMask, visit our [User Support Site](https://metamask.zendesk.com/hc/en-us).
+Ethereum Remote Client is the extension which powers Brave's Crypto Wallets.  It was originally a fork of MetaMask but will be diverging significantly over time.
 
-MetaMask supports Firefox, Google Chrome, and Chromium-based browsers. We recommend using the latest available browser version.
-
-For up to the minute news, follow our [Twitter](https://twitter.com/metamask_io) or [Medium](https://medium.com/metamask) pages.
-
-To learn how to develop MetaMask-compatible applications, visit our [Developer Docs](https://metamask.github.io/metamask-docs/).
-
-To learn how to contribute to the MetaMask project itself, visit our [Internal Docs](https://github.com/MetaMask/metamask-extension/tree/develop/docs).
+Brave's Ethereum Remote Client is a Chromium extension for interacting with the Ethereum blockchain. It supports transfering ether, working with assets (ERC20 & ERC223, ERC721, ERC1155), and running Dapps. This extension is only meant to be used within Brave.
 
 ## Building locally
 
@@ -43,21 +37,28 @@ You can run the linter by itself with `yarn lint`.
 ## Development
 
 ```bash
-yarn
-yarn start
+yarn install
+yarn dev:brave
 ```
 
 ## Build for Publishing
 
 ```bash
-yarn dist
+yarn install
+yarn run dist:brave
+```
+
+## Publish to npm
+```bash
+npm install
+npm run publish:brave
 ```
 
 ## Other Docs
 
 - [How to add custom build to Chrome](./docs/add-to-chrome.md)
 - [How to add custom build to Firefox](./docs/add-to-firefox.md)
-- [How to add a new translation to MetaMask](./docs/translating-guide.md)
+- [How to add a new translation](./docs/translating-guide.md)
 - [Publishing Guide](./docs/publishing.md)
 - [How to use the TREZOR emulator](./docs/trezor-emulator.md)
 - [How to generate a visualization of this repository's development](./development/gource-viz.sh)

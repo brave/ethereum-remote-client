@@ -72,7 +72,7 @@
     "message": "Pridėti siūlomų žetonų"
   },
   "addAcquiredTokens": {
-    "message": "Pridėkite žetonus, kuriuos gavote naudodamiesi „MetaMask“"
+    "message": "Pridėkite žetonus, kuriuos gavote naudodamiesi „Brave“"
   },
   "amount": {
     "message": "Suma"
@@ -82,7 +82,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "„MetaMask“",
+    "message": "„Brave“",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Automatinio atjungimo laikmatis (minutės)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Nustatykite laukimo  trukmę minutėmis iki „MetaMask“ automatinio atsijungimo"
+    "message": "Nustatykite laukimo  trukmę minutėmis iki „Brave“ automatinio atsijungimo"
   },
   "average": {
     "message": "Vidurkis"
@@ -125,7 +125,7 @@
     "message": "Pasidarykite atsarginę savo slapto atkūrimo kodo kopiją, kad jūsų slaptažodinė ir fondai būtų saugūs."
   },
   "backupApprovalInfo": {
-    "message": "Šis slaptas kodas reikalingas norint atkurti jūsų slaptažodinę, jeigu pamestumėte savo įrenginį, pamirštumėte savo slaptažodį, iš naujo įdiegtumėte „MetaMask“, taip pat norint pasiekti slaptažodinę iš kito įrenginio."
+    "message": "Šis slaptas kodas reikalingas norint atkurti jūsų slaptažodinę, jeigu pamestumėte savo įrenginį, pamirštumėte savo slaptažodį, iš naujo įdiegtumėte „Brave“, taip pat norint pasiekti slaptažodinę iš kito įrenginio."
   },
   "backupNow": {
     "message": "Daryti atsarginę kopiją dabar"
@@ -153,13 +153,13 @@
     "message": "Jūsų naršyklė neatpažįstama..."
   },
   "builtInCalifornia": {
-    "message": "„MetaMask“ suprojektuota ir įdiegta Kalifornijoje."
+    "message": "„Brave“ suprojektuota ir įdiegta Kalifornijoje."
   },
   "buyWithWyre": {
     "message": "Pirkti ETH su „Wyre“"
   },
   "buyWithWyreDescription": {
-    "message": "„Wyre“ leidžia naudotis kreditine kortele norint įnešti ETH tiesiai į jūsų „MetaMask“ paskyrą."
+    "message": "„Wyre“ leidžia naudotis kreditine kortele norint įnešti ETH tiesiai į jūsų „Brave“ paskyrą."
   },
   "buyCoinSwitch": {
     "message": "Pirkti „CoinSwitch“"
@@ -204,7 +204,7 @@
     "message": "Uždaryti"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Norėdami prisijungti prie aparatinės įrangos slaptažodinės, „MetaMask“ naudokitės „Google Chrome“ naršyklėje."
+    "message": "Norėdami prisijungti prie aparatinės įrangos slaptažodinės, „Brave“ naudokitės „Google Chrome“ naršyklėje."
   },
   "confirm": {
     "message": "Patvirtinti"
@@ -372,16 +372,16 @@
     "message": "Niekam niekada nepasakykite šios frazės."
   },
   "endOfFlowMessage5": {
-    "message": "Saugokitės informacijos vagių! „MetaMask“ niekada spontaniškai neklaus jūsų atkūrimo frazės."
+    "message": "Saugokitės informacijos vagių! „Brave“ niekada spontaniškai neklaus jūsų atkūrimo frazės."
   },
   "endOfFlowMessage6": {
     "message": "Jeigu reikia dar kartą padaryti jūsų atkūrimo frazės kopiją, ją galite rasti pasirinkę Nuostatos -> Sauga."
   },
   "endOfFlowMessage7": {
-    "message": "Jeigu turite klausimų arba pastebite ką nors įtartino, rašykite el. paštu support@metamask.io."
+    "message": "Jeigu turite klausimų arba pastebite ką nors įtartino, rašykite el. paštu support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "„MetaMask“ negali atkurti jūsų atkūrimo frazės. Sužinokite daugiau."
+    "message": "„Brave“ negali atkurti jūsų atkūrimo frazės. Sužinokite daugiau."
   },
   "endOfFlowMessage9": {
     "message": "Sužinokite daugiau."
@@ -530,7 +530,7 @@
     "message": "Importuoti paskyrą"
   },
   "importAccountMsg": {
-    "message": "Importuotos paskyros nebus susietos su pirmiau sukurta „MetaMask“ paskyros atkūrimo fraze. Sužinokite daugiau apie importuotas paskyras"
+    "message": "Importuotos paskyros nebus susietos su pirmiau sukurta „Brave“ paskyros atkūrimo fraze. Sužinokite daugiau apie importuotas paskyras"
   },
   "importAccountSeedPhrase": {
     "message": "Importuoti paskyrą su atkūrimo fraze"
@@ -539,7 +539,7 @@
     "message": "Importuoti slaptažodinę"
   },
   "importYourExisting": {
-    "message": "Importuoti turimą piniginę naudojant 12 žodžių atkūrimo frazę"
+    "message": "Importuoti turimą piniginę naudojant 24 žodžių atkūrimo frazę"
   },
   "imported": {
     "message": "Importuota",
@@ -646,7 +646,7 @@
     "message": "Prijungiame jus prie „Ethereum“ ir decentralizuotojo žiniatinklio."
   },
   "metamaskVersion": {
-    "message": "„MetaMask“ versija"
+    "message": "„Brave“ versija"
   },
   "mobileSyncText": {
     "message": "Įveskite savo slaptažodį, kad patvirtintumėte, jog tai tikrai jūs!"
@@ -658,13 +658,13 @@
     "message": "Mano piniginės paskyros"
   },
   "myWalletAccountsDescription": {
-    "message": "Visos jūsų „MetaMask“ sukurtos paskyros bus automatiškai įtrauktos į šį skyrių."
+    "message": "Visos jūsų „Brave“ sukurtos paskyros bus automatiškai įtrauktos į šį skyrių."
   },
   "mustSelectOne": {
     "message": "Turite pasirinkti bent 1 žetoną."
   },
   "needEtherInWallet": {
-    "message": "Norėdami dirbti su decentralizuotomis programomis „MetaMask“, savo piniginėje turite turėti eterių."
+    "message": "Norėdami dirbti su decentralizuotomis programomis „Brave“, savo piniginėje turite turėti eterių."
   },
   "needImportFile": {
     "message": "Turite pasirinkti failą, kurį pageidaujate importuoti.",
@@ -708,7 +708,7 @@
     "message": "Naujas tinklas"
   },
   "newToMetaMask": {
-    "message": "Tik pradedate naudotis „MetaMask“?"
+    "message": "Tik pradedate naudotis „Brave“?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ne, jau turiu atkūrimo frazę."
@@ -717,10 +717,10 @@
     "message": "Apsaugokite savo raktus!"
   },
   "protectYourKeysMessage1": {
-    "message": "Saugokite savo atkūrimo frazę – gavome pranešimų apie interneto svetaines, kuriomis bandoma imituoti „MetaMask“. „MetaMask“ niekada neprašys jūsų pateikti savo atkūrimo frazę!"
+    "message": "Saugokite savo atkūrimo frazę – gavome pranešimų apie interneto svetaines, kuriomis bandoma imituoti „Brave“. „Brave“ niekada neprašys jūsų pateikti savo atkūrimo frazę!"
   },
   "protectYourKeysMessage2": {
-    "message": "Saugokite savo frazę. Jei pastebėjote kažką įtartino arba nesate tikri dėl svetainės, rašykite mums adresu support@metamask.io"
+    "message": "Saugokite savo frazę. Jei pastebėjote kažką įtartino arba nesate tikri dėl svetainės, rašykite mums adresu support@brave.com"
   },
   "rpcUrl": {
     "message": "Naujas RPC URL"
@@ -774,7 +774,7 @@
     "message": "Dalyvaukite „MetaMetrics“"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Dalyvaukite „MetaMetrics“ ir padėkite mums tobulinti „MetaMask“"
+    "message": "Dalyvaukite „MetaMetrics“ ir padėkite mums tobulinti „Brave“"
   },
   "password": {
     "message": "Slaptažodis"
@@ -1001,7 +1001,7 @@
     "message": "Pasirinkite paskyrą"
   },
   "selectAnAccountHelp": {
-    "message": "Pasirinkite paskyrą peržiūrėti „MetaMask“"
+    "message": "Pasirinkite paskyrą peržiūrėti „Brave“"
   },
   "selectAHigherGasFee": {
     "message": "Pasirinkite didesnį dujų mokestį, kad paspartintumėte savo operacijos apdorojimą.*"
@@ -1115,19 +1115,19 @@
     "message": "Sinchronizuoti su mobiliuoju"
   },
   "syncWithMobileDesc": {
-    "message": "Galite sinchronizuoti paskyrą ir informaciją su savo mobiliuoju įrenginiu. Atverkite „MetaMask“ mobiliąją programą, eikite į „Nuostatos“ ir palieskite „Sinchronizuoti iš naršyklės plėtinio“"
+    "message": "Galite sinchronizuoti paskyrą ir informaciją su savo mobiliuoju įrenginiu. Atverkite „Brave“ mobiliąją programą, eikite į „Nuostatos“ ir palieskite „Sinchronizuoti iš naršyklės plėtinio“"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jeigu „MetaMask“ mobiliąją programą atveriate tik pirmą kartą, tiesiog sekite veiksmus telefone."
+    "message": "Jeigu „Brave“ mobiliąją programą atveriate tik pirmą kartą, tiesiog sekite veiksmus telefone."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Nuskaitykite šį kodą su savo „MetaMask“ mobiliąja programa"
+    "message": "Nuskaitykite šį kodą su savo „Brave“ mobiliąja programa"
   },
   "syncWithMobileBeCareful": {
     "message": "Pasirūpinkite, kad jums nuskaitant šį kodą niekas nežiūrėtų į jūsų ekraną."
   },
   "syncWithMobileComplete": {
-    "message": "Jūsų duomenys sėkmingai sinchronizuoti. Mėgaukitės „MetaMask“ mobiliąja programa! "
+    "message": "Jūsų duomenys sėkmingai sinchronizuoti. Mėgaukitės „Brave“ mobiliąja programa! "
   },
   "terms": {
     "message": "Naudojimo sąlygos"
@@ -1218,7 +1218,7 @@
     "message": "Bandyti dar kartą"
   },
   "typePassword": {
-    "message": "Įveskite savo „MetaMask“ slaptažodį"
+    "message": "Įveskite savo „Brave“ slaptažodį"
   },
   "unapproved": {
     "message": "Nepatvirtinta"
@@ -1284,7 +1284,7 @@
     "message": "Sveiki sugrįžę!"
   },
   "welcome": {
-    "message": "Sveiki, tai „MetaMask“"
+    "message": "Sveiki, tai „Brave“"
   },
   "writePhrase": {
     "message": "Užrašykite šią frazę ant lapelio ir laikykite ją saugioje vietoje. Jeigu pageidaujate dar daugiau saugos, užrašykite ją ant kelių lapelių ir 2 ar 3 skirtingose vietose."
@@ -1306,5 +1306,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nustatykite nulinę dujų kainą greitėjant"
+  },
+  "ledgerCreateSubText": {
+    "message": "Prijunkite savo sąskaitų knygos techninės įrangos piniginę, kad ji palaikytų ryšį su „dApps“, ir atlikite pervedimus į kitas prijungtas pinigines."
+  },
+  "newLocalWallet": {
+    "message": "Nauja vietinė slaptažodinė"
+  },
+  "newLocalWalletSubText": {
+    "message": "Susikurkite naują „Brave“ vietinę piniginę, kad galėtumėte pasiekti „dApps“ ir saugiai laikyti kriptovaliutą bei savo kolekciją. Anonimiškai keiskite žetonus, nemokėdami mokesčių už sandorius."
+  },
+  "trezorCreateSubText": {
+    "message": "Prijunkite savo „Trezor“ techninės įrangos slaptažodinę, kad ji palaikytų ryšį su decentralizuotomis programomis, ir atlikite pervedimus į kitas prijungtas slaptažodines."
   }
 }

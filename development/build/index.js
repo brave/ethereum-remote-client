@@ -11,11 +11,7 @@ const createScriptTasks = require('./scripts')
 const createStyleTasks = require('./styles')
 const createStaticAssetTasks = require('./static')
 const createEtcTasks = require('./etc')
-const createBraveHTMLTasks = require('../../brave/build/html')
-const createBraveManifestTasks = require('../../brave/build/manifest')
-const createBraveLocalesTasks = require('../../brave/build/locales')
 const createBravePublishTasks = require('../../brave/build/publish')
-const { fontsTask, imagesTask, fontsTaskProd, imagesTaskProd } = require('../../brave/build/assets')
 
 const browserPlatforms = [
   'firefox',
@@ -35,10 +31,7 @@ function defineAllTasks () {
   const scriptTasks = createScriptTasks({ livereload, browserPlatforms })
   const { clean, reload, zip } = createEtcTasks({ livereload, browserPlatforms })
 
-  const braveHTMLTasks = createBraveHTMLTasks()
-  const braveManifestTasks = createBraveManifestTasks()
   const bravePublishTasks = createBravePublishTasks()
-  const { stringTask, combineTask } = createBraveLocalesTasks()
 
   // build for development (livereload)
   createTask('dev',
@@ -47,12 +40,6 @@ function defineAllTasks () {
       styleTasks.dev,
       staticTasks.dev,
       manifestTasks.dev,
-      braveHTMLTasks,
-      braveManifestTasks,
-      stringTask,
-      combineTask,
-      fontsTask,
-      imagesTask,
       composeParallel(
         scriptTasks.dev,
         reload,
@@ -66,12 +53,6 @@ function defineAllTasks () {
       styleTasks.prod,
       staticTasks.prod,
       manifestTasks.prod,
-      braveHTMLTasks,
-      braveManifestTasks,
-      stringTask,
-      combineTask,
-      fontsTaskProd,
-      imagesTaskProd,
       scriptTasks.prod,
       zip,
     ),

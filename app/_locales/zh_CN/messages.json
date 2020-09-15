@@ -72,7 +72,7 @@
     "message": "添加推荐代币"
   },
   "addAcquiredTokens": {
-    "message": "在MetaMask上添加已用的代币"
+    "message": "在Brave上添加已用的代币"
   },
   "amount": {
     "message": "数量"
@@ -82,7 +82,7 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "自动注销计时器（分钟）"
   },
   "autoLockTimeLimitDescription": {
-    "message": "请设置 MetaMask 自动注销前的空闲时间（以分钟为单位）"
+    "message": "请设置 Brave 自动注销前的空闲时间（以分钟为单位）"
   },
   "average": {
     "message": "平均值"
@@ -125,7 +125,7 @@
     "message": "请备份您的私密恢复代码，保证个人钱包和资金安全。"
   },
   "backupApprovalInfo": {
-    "message": "如果不慎丢失个人设备，忘记密码，或者需要重新安装 MetaMask，亦或是需在另一台设备上打开钱包，请使用该保密码恢复个人钱包数据。"
+    "message": "如果不慎丢失个人设备，忘记密码，或者需要重新安装 Brave，亦或是需在另一台设备上打开钱包，请使用该保密码恢复个人钱包数据。"
   },
   "backupNow": {
     "message": "立即备份"
@@ -153,13 +153,13 @@
     "message": "您的浏览器不支持该功能…"
   },
   "builtInCalifornia": {
-    "message": "MetaMask在加利福尼亚设计和制造。"
+    "message": "Brave在加利福尼亚设计和制造。"
   },
   "buyWithWyre": {
     "message": "使用 Wyre 购买 ETH"
   },
   "buyWithWyreDescription": {
-    "message": "您可以通过 Wyre 使用信用卡将 ETH 存入您的 MetaMask 账户。"
+    "message": "您可以通过 Wyre 使用信用卡将 ETH 存入您的 Brave 账户。"
   },
   "buyCoinSwitch": {
     "message": "在CoinSwitch上购买"
@@ -204,7 +204,7 @@
     "message": "关闭"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "您需要通过 Google Chrome 浏览器使用 MetaMask ，连接个人硬件钱包。"
+    "message": "您需要通过 Google Chrome 浏览器使用 Brave ，连接个人硬件钱包。"
   },
   "confirm": {
     "message": "确认"
@@ -372,16 +372,16 @@
     "message": "绝不向任何分享该密语。"
   },
   "endOfFlowMessage5": {
-    "message": "谨防网络钓鱼！MetaMask 绝不会主动要求您提供个人种子密语。"
+    "message": "谨防网络钓鱼！Brave 绝不会主动要求您提供个人种子密语。"
   },
   "endOfFlowMessage6": {
     "message": "如果您需要再次备份个人种子密语，请通过设置 -> 安全选项完成该操作。"
   },
   "endOfFlowMessage7": {
-    "message": "如果您仍存有疑问或发现任何可疑的地方，请发送电子邮件至 support@metamask.io 进行咨询。"
+    "message": "如果您仍存有疑问或发现任何可疑的地方，请发送电子邮件至 support@brave.com 进行咨询。"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask 无法恢复您的种子密语。了解更多。"
+    "message": "Brave 无法恢复您的种子密语。了解更多。"
   },
   "endOfFlowMessage9": {
     "message": "了解详情。"
@@ -495,7 +495,7 @@
     "message": "连接硬件钱包"
   },
   "hardwareWalletsMsg": {
-    "message": "请选择希望用于 MetaMask 的硬件钱包"
+    "message": "请选择希望用于 Brave 的硬件钱包"
   },
   "havingTroubleConnecting": {
     "message": "连接出现问题？"
@@ -530,7 +530,7 @@
     "message": "导入钱包"
   },
   "importYourExisting": {
-    "message": "请使用 12 字种子密语导入现有钱包"
+    "message": "请使用 24 字种子密语导入现有钱包"
   },
   "imported": {
     "message": "已导入",
@@ -631,10 +631,10 @@
     "message": "消息"
   },
   "metamaskDescription": {
-    "message": "MetaMask is a secure identity vault for Ethereum."
+    "message": "Brave is a secure identity vault for Ethereum."
   },
   "metamaskVersion": {
-    "message": "MetaMask 版本"
+    "message": "Brave 版本"
   },
   "mobileSyncText": {
     "message": "请输入密码确认个人身份！"
@@ -643,13 +643,13 @@
     "message": "我的钱包账户"
   },
   "myWalletAccountsDescription": {
-    "message": "所有已创建的 MetaMask 账户将自动添加到该部分。"
+    "message": "所有已创建的 Brave 账户将自动添加到该部分。"
   },
   "mustSelectOne": {
     "message": "至少选择一种代币."
   },
   "needEtherInWallet": {
-    "message": "使用 MetaMask 与 DAPP 交互，需要你的钱包里有 Ether。"
+    "message": "使用 Brave 与 DAPP 交互，需要你的钱包里有 Ether。"
   },
   "needImportFile": {
     "message": "必须选择导入一个文件。",
@@ -690,7 +690,7 @@
     "message": "新增网络"
   },
   "newToMetaMask": {
-    "message": "新增至 MetaMask？"
+    "message": "新增至 Brave？"
   },
   "noAlreadyHaveSeed": {
     "message": "不，我已经有一个种子密语了。"
@@ -699,10 +699,10 @@
     "message": "妥善保管您的密钥！"
   },
   "protectYourKeysMessage1": {
-    "message": "请注意个人种子密语安全。报告显示有多个网站企图伪造 MetaMask。MetaMask 绝不会要求您提供个人种子密语！"
+    "message": "请注意个人种子密语安全。报告显示有多个网站企图伪造 Brave。Brave 绝不会要求您提供个人种子密语！"
   },
   "protectYourKeysMessage2": {
-    "message": "请妥善保管您的密语。如果您发现任何可疑的地方，或无法确认网络安全性，请发送电子邮件至 support@metamask.io 进行咨询"
+    "message": "请妥善保管您的密语。如果您发现任何可疑的地方，或无法确认网络安全性，请发送电子邮件至 support@brave.com 进行咨询"
   },
   "rpcUrl": {
     "message": "新增 RPC URL"
@@ -756,7 +756,7 @@
     "message": "加入 MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "加入 MetaMetrics ，帮助我们改善 MetaMask 服务"
+    "message": "加入 MetaMetrics ，帮助我们改善 Brave 服务"
   },
   "password": {
     "message": "密码"
@@ -929,7 +929,7 @@
     "message": "警告：切勿向他人透露您的备份密语。任何人一旦持有该密语，即可取走您的以太币。"
   },
   "secretPhrase": {
-    "message": "输入12位助记词以恢复金库."
+    "message": "输入24位助记词以恢复金库."
   },
   "securityAndPrivacy": {
     "message": "安全与隐私"
@@ -983,7 +983,7 @@
     "message": "选择账户"
   },
   "selectAnAccountHelp": {
-    "message": "请通过 MetaMask 选择需要查看的账户"
+    "message": "请通过 Brave 选择需要查看的账户"
   },
   "selectAHigherGasFee": {
     "message": "请选择价格稍高的天然气费，加快交易处理速度。*"
@@ -1097,19 +1097,19 @@
     "message": "使用移动设备进行同步"
   },
   "syncWithMobileDesc": {
-    "message": "您可以使用个人移动设备同步个人账户与信息。打开 MetaMask 移动应用程序，进入“设置”选项，点击“通过浏览器扩展程序同步”"
+    "message": "您可以使用个人移动设备同步个人账户与信息。打开 Brave 移动应用程序，进入“设置”选项，点击“通过浏览器扩展程序同步”"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "如果您是首次启用 MetaMask 移动应用程序，请通过个人手机完成如下操作。"
+    "message": "如果您是首次启用 Brave 移动应用程序，请通过个人手机完成如下操作。"
   },
   "syncWithMobileScanThisCode": {
-    "message": "使用 MetaMask 应用程序扫描编码"
+    "message": "使用 Brave 应用程序扫描编码"
   },
   "syncWithMobileBeCareful": {
     "message": "扫描编码时，请确保身边无其他人正在查看您的显示页面"
   },
   "syncWithMobileComplete": {
-    "message": "您的数据已同步成功。尽情体验 MetaMask 应用程序！"
+    "message": "您的数据已同步成功。尽情体验 Brave 应用程序！"
   },
   "terms": {
     "message": "使用条款"
@@ -1263,7 +1263,7 @@
     "message": "欢迎回来！"
   },
   "welcome": {
-    "message": "欢迎使用 MetaMask 测试版"
+    "message": "欢迎使用 Brave 测试版"
   },
   "writePhrase": {
     "message": "请将该密语记录在纸上，并保存在安全的地方。如果希望提升信息安全性，请将信息记录在多张纸上，并分别保存在 2 - 3 个不同的地方。"
@@ -1285,5 +1285,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "天然气价格加速上涨"
+  },
+  "ledgerCreateSubText": {
+    "message": "请连接您的 Ledger 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"
+  },
+  "newLocalWallet": {
+    "message": "新增本地钱包"
+  },
+  "newLocalWalletSubText": {
+    "message": "创建一个新的 Brave 本地钱包，以便于访问 dApp 并安全地存储加密货币和收藏品。无需交易费即可匿名交易代币。"
+  },
+  "trezorCreateSubText": {
+    "message": "请连接您的 Trezor 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"
   }
 }

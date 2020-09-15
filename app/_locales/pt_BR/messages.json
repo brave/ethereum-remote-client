@@ -6,7 +6,7 @@
     "message": "Interação do Contrato"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Brave",
     "description": "The name of the application"
   },
   "reject": {
@@ -76,7 +76,7 @@
     "message": "Adicionar Tokens Sugeridos"
   },
   "addAcquiredTokens": {
-    "message": "Adicione os tokens que você adquiriu usando o MetaMask"
+    "message": "Adicione os tokens que você adquiriu usando o Brave"
   },
   "amount": {
     "message": "Valor"
@@ -110,7 +110,7 @@
     "message": "Temporizador de Logout Automático (minutos)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Defina o tempo de inatividade em minutos antes de o MetaMask fazer logout automaticamente"
+    "message": "Defina o tempo de inatividade em minutos antes de o Brave fazer logout automaticamente"
   },
   "average": {
     "message": "Média"
@@ -125,7 +125,7 @@
     "message": "Faça backup de seu Código Secreto de Recuperação para manter sua carteira e seus fundos em segurança."
   },
   "backupApprovalInfo": {
-    "message": "Esse código secreto é necessário para recuperar sua carteira, caso você perca seu dispositivo, esqueça sua senha, precise reinstalar o MetaMask ou queira acessar sua carteira em outro dispositivo."
+    "message": "Esse código secreto é necessário para recuperar sua carteira, caso você perca seu dispositivo, esqueça sua senha, precise reinstalar o Brave ou queira acessar sua carteira em outro dispositivo."
   },
   "backupNow": {
     "message": "Fazer backup agora"
@@ -150,13 +150,13 @@
     "message": "Seu navegador não é compatível..."
   },
   "builtInCalifornia": {
-    "message": "O MetaMask foi projetado e desenvolvido na Califórnia."
+    "message": "O Brave foi projetado e desenvolvido na Califórnia."
   },
   "buyWithWyre": {
     "message": "Comprar ETH com Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "O Wyre permite que você utilize um cartão de crédito para depositar ETH direto na sua conta do MetaMask."
+    "message": "O Wyre permite que você utilize um cartão de crédito para depositar ETH direto na sua conta do Brave."
   },
   "buyCoinSwitch": {
     "message": "Compre no CoinSwitch"
@@ -198,7 +198,7 @@
     "message": "Fechar"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Você precisa usar o MetaMask no Google Chrome para se conectar à sua Carteira de Hardware."
+    "message": "Você precisa usar o Brave no Google Chrome para se conectar à sua Carteira de Hardware."
   },
   "confirm": {
     "message": "Confirmar"
@@ -366,16 +366,16 @@
     "message": "Nunca compartilhe a frase com ninguém."
   },
   "endOfFlowMessage5": {
-    "message": "Cuidado com o phishing! O MetaMask nunca solicitará espontaneamente sua frase semente."
+    "message": "Cuidado com o phishing! O Brave nunca solicitará espontaneamente sua frase semente."
   },
   "endOfFlowMessage6": {
     "message": "Se precisar fazer backup de sua frase-semente de novo, acesse Configurações -> Segurança."
   },
   "endOfFlowMessage7": {
-    "message": "Caso você tenha alguma dúvida ou veja algo suspeito, envie um e-mail para support@metamask.io."
+    "message": "Caso você tenha alguma dúvida ou veja algo suspeito, envie um e-mail para support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "O MetaMask não pode recuperar sua frase semente. Saiba mais."
+    "message": "O Brave não pode recuperar sua frase semente. Saiba mais."
   },
   "endOfFlowMessage9": {
     "message": "Saiba mais."
@@ -495,7 +495,7 @@
     "message": "Conecte uma carteira física"
   },
   "hardwareWalletsMsg": {
-    "message": "Selecione um hardware que gostaria de utilizar com o MetaMask"
+    "message": "Selecione um hardware que gostaria de utilizar com o Brave"
   },
   "havingTroubleConnecting": {
     "message": "Está tendo dificuldade para se conectar?"
@@ -524,7 +524,7 @@
     "message": "Importar Conta"
   },
   "importAccountMsg": {
-    "message": "As contas importadas não serão associadas à sua frase-semente da conta MetaMask criada originalmente. Saiba mais sobre contas importadas"
+    "message": "As contas importadas não serão associadas à sua frase-semente da conta Brave criada originalmente. Saiba mais sobre contas importadas"
   },
   "importAccountSeedPhrase": {
     "message": "Importar uma Conta com Frase-semente"
@@ -533,7 +533,7 @@
     "message": "Importar Carteira"
   },
   "importYourExisting": {
-    "message": "Importe sua carteira existente usando uma frase-semente de 12 palavras"
+    "message": "Importe sua carteira existente usando uma frase-semente de 24 palavras"
   },
   "imported": {
     "message": "Importado",
@@ -634,7 +634,7 @@
     "message": "Conectando você ao Ethereum e à Web Descentralizada."
   },
   "metamaskVersion": {
-    "message": "Versão do MetaMask"
+    "message": "Versão do Brave"
   },
   "mobileSyncText": {
     "message": "Insira sua senha para confirmar que é você!"
@@ -646,13 +646,13 @@
     "message": "Contas da Minha Carteira"
   },
   "myWalletAccountsDescription": {
-    "message": "Todas as suas contas criadas no MetaMask serão automaticamente adicionadas a esta seção."
+    "message": "Todas as suas contas criadas no Brave serão automaticamente adicionadas a esta seção."
   },
   "mustSelectOne": {
     "message": "É preciso selecionar pelo menos 1 token."
   },
   "needEtherInWallet": {
-    "message": "Para interagir com aplicações descentralizadas usando o MetaMask, você precisará de Ether na sua carteira."
+    "message": "Para interagir com aplicações descentralizadas usando o Brave, você precisará de Ether na sua carteira."
   },
   "needImportFile": {
     "message": "Você deve selecionar um arquivo para importar.",
@@ -696,7 +696,7 @@
     "message": "Nova Rede"
   },
   "newToMetaMask": {
-    "message": "Novo no MetaMask?"
+    "message": "Novo no Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Não, eu já tenho uma frase semente"
@@ -705,10 +705,10 @@
     "message": "Proteja as suas chaves!"
   },
   "protectYourKeysMessage1": {
-    "message": "Tome cuidado com sua frase semente — houve relatos de sites que tentam imitar o MetaMask. O MetaMask nunca pedirá sua frase semente!"
+    "message": "Tome cuidado com sua frase semente — houve relatos de sites que tentam imitar o Brave. O Brave nunca pedirá sua frase semente!"
   },
   "protectYourKeysMessage2": {
-    "message": "Mantenha a sua frase segura. Se você vir algo esquisito ou está inseguro quanto a um site, envie um e-mail para support@metamask.io"
+    "message": "Mantenha a sua frase segura. Se você vir algo esquisito ou está inseguro quanto a um site, envie um e-mail para support@brave.com"
   },
   "rpcUrl": {
     "message": "Nova URL RPC"
@@ -762,7 +762,7 @@
     "message": "Participar do MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participe do MetaMetrics para nos ajudar a tornar o MetaMask melhor"
+    "message": "Participe do MetaMetrics para nos ajudar a tornar o Brave melhor"
   },
   "password": {
     "message": "Senha"
@@ -989,7 +989,7 @@
     "message": "Selecione uma Conta"
   },
   "selectAnAccountHelp": {
-    "message": "Selecione a conta para ver no MetaMask"
+    "message": "Selecione a conta para ver no Brave"
   },
   "selectAHigherGasFee": {
     "message": "Selecione uma taxa de gás mais alta para acelerar o processamento de sua transação.*"
@@ -1103,19 +1103,19 @@
     "message": "Sincronizar com o celular"
   },
   "syncWithMobileDesc": {
-    "message": "Você pode sincronizar suas contas e informações com seu dispositivo móvel. Abra o aplicativo móvel MetaMask, vá em \"Configurações\" e toque em \"Sincronizar da Extensão do Navegador\""
+    "message": "Você pode sincronizar suas contas e informações com seu dispositivo móvel. Abra o aplicativo móvel Brave, vá em \"Configurações\" e toque em \"Sincronizar da Extensão do Navegador\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Se você acabou de abrir o aplicativo MetaMask Mobile pela primeira vez, basta seguir os passos no seu telefone."
+    "message": "Se você acabou de abrir o aplicativo Brave Mobile pela primeira vez, basta seguir os passos no seu telefone."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Digitalize este código com o seu app móvel do MetaMask"
+    "message": "Digitalize este código com o seu app móvel do Brave"
   },
   "syncWithMobileBeCareful": {
     "message": "Certifique-se de que ninguém mais esteja olhando para sua tela ao digitalizar esse código"
   },
   "syncWithMobileComplete": {
-    "message": "Seus dados foram sincronizados com sucesso. Aproveite o aplicativo MetaMask!"
+    "message": "Seus dados foram sincronizados com sucesso. Aproveite o aplicativo Brave!"
   },
   "terms": {
     "message": "Termos de Uso"
@@ -1200,7 +1200,7 @@
     "message": "Tentar novamente"
   },
   "typePassword": {
-    "message": "Digite sua senha do MetaMask"
+    "message": "Digite sua senha do Brave"
   },
   "unapproved": {
     "message": "Desaprovado"
@@ -1266,7 +1266,7 @@
     "message": "Bem-vindo de volta!"
   },
   "welcome": {
-    "message": "Bem-vindo ao MetaMask"
+    "message": "Bem-vindo ao Brave"
   },
   "writePhrase": {
     "message": "Escreva esta frase em um papel e guarde-o em um lugar seguro. Se quiser ainda mais segurança, anote-a em vários papéis diferentes e guarde-os em 2 ou 3 lugares diferentes."
@@ -1288,5 +1288,17 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Preço de Gas zero na agilização"
+  },
+  "ledgerCreateSubText": {
+    "message": "Conecte sua carteira de hardware do Ledger para interagir com os dApps e fazer transferências para outras carteiras conectadas."
+  },
+  "newLocalWallet": {
+    "message": "Nova Carteira Local"
+  },
+  "newLocalWalletSubText": {
+    "message": "Crie uma nova carteira no Brave para acessar dApps e armazenar criptomoedas e colecionáveis com segurança. Negocie tokens anonimamente sem taxas de negociação."
+  },
+  "trezorCreateSubText": {
+    "message": "Conecte sua carteira física Trezor para interagir com dApps e fazer transferências para outras carteiras conectadas."
   }
 }

@@ -2,9 +2,9 @@
 
 ## Remote Component([0.1.76](https://github.com/brave/ethereum0remote-client/releases/tag/0.1.76)), Browser Component: `1.0.22`(15-Sep-2020)
 
-- [brave-browser#11357](https://github.com/brave/brave-browser/issues/11357): Fixed account listing when wrong password is entered on reveal pass phrase screen.
-- [brave-browser#11646](https://github.com/brave/brave-browser/issues/11646): Removed MetaMask branding on browser action button.
-- [brave-browser#11261](https://github.com/brave/brave-browser/issues/11261): Removed "Backup wallet" message on browser action window.
+- [brave-browser#11357](https://github.com/brave/brave-browser/issues/11357): Fixed account listing when wrong password is entered on reveal pass phrase screen
+- [brave-browser#11646](https://github.com/brave/brave-browser/issues/11646): Removed MetaMask branding on browser action button
+- [brave-browser#11261](https://github.com/brave/brave-browser/issues/11261): Removed "Backup wallet" message on browser action window
 - [#9228](https://github.com/MetaMask/metamask-extension/pull/9228): Move transaction confirmation footer buttons to scrollable area
 - [#9256](https://github.com/MetaMask/metamask-extension/pull/9256): Handle non-String web3 property access
 - [#9266](https://github.com/MetaMask/metamask-extension/pull/9266): Use `@metamask/controllers@2.0.5`
@@ -19,7 +19,7 @@
 - [#9085](https://github.com/MetaMask/metamask-extension/pull/9085): Support longer text in network dropdown
 - [#8873](https://github.com/MetaMask/metamask-extension/pull/8873): Fix onboarding bug where user can be asked to verify seed phrase twice
 - [#9104](https://github.com/MetaMask/metamask-extension/pull/9104): Replace "Email us" button with "Contact us" button
-- [#9137](https://github.com/MetaMask/metamask-extension/pull/9137): Fix bug where `accountsChanged` events stop after a dapp connection is closed.
+- [#9137](https://github.com/MetaMask/metamask-extension/pull/9137): Fix bug where `accountsChanged` events stop after a dapp connection is closed
 - [#9152](https://github.com/MetaMask/metamask-extension/pull/9152): Fix network name alignment
 - [#9144](https://github.com/MetaMask/metamask-extension/pull/9144): Add web3 usage metrics and prepare for web3 removal
 

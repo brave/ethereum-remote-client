@@ -12815,16 +12815,6 @@ git-url-parse@^11.1.2:
   dependencies:
     git-up "^4.0.0"
 
-gl-mat4@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/gl-mat4/-/gl-mat4-1.1.4.tgz#1e895b55892e56a896867abd837d38f37a178086"
-  integrity sha1-HolbVYkuVqiWhnq9g30483oXgIY=
-
-gl-vec3@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gl-vec3/-/gl-vec3-1.0.3.tgz#110fd897d0729f6398307381567d0944941bf22b"
-  integrity sha1-EQ/Yl9Byn2OYMHOBVn0JRJQb8is=
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -18512,14 +18502,6 @@ mersenne-twister@^1.0.1, mersenne-twister@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mersenne-twister/-/mersenne-twister-1.1.0.tgz#f916618ee43d7179efcf641bec4531eb9670978a"
   integrity sha1-+RZhjuQ9cXnvz2Qb7EUx65Zwl4o=
-
-metamask-logo@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/metamask-logo/-/metamask-logo-2.1.4.tgz#0612b2b0ffc7eeb6be480c310785426ad9599e3c"
-  integrity sha512-hg/FzMfijpzGgLdZWH+KJKS56cRYaMEwcOq8UcnL/MznpgK4OMlJEaIfO8lg7P2F4Z74Ki+ulrTrFW6jf9L2bw==
-  dependencies:
-    gl-mat4 "1.1.4"
-    gl-vec3 "1.0.3"
 
 methods@^1.1.1, methods@~1.1.2:
   version "1.1.2"

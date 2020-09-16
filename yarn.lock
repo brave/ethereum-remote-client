@@ -10558,7 +10558,7 @@ eth-keyring-controller@^5.3.0, eth-keyring-controller@^5.6.1:
     bluebird "^3.5.0"
     brave-crypto "^0.2.2"
     browser-passworder "^2.0.3"
-    eth-hd-keyring brave/eth-hd-keyring#d811474329e1a725180d393b67d03c0f3d96106b
+    eth-hd-keyring brave/eth-hd-keyring#482acf341f01a8d1e924d55bfdbd309444a78e46
     eth-sig-util "^1.4.0"
     eth-simple-keyring "^3.5.0"
     ethereumjs-util "^5.1.2"

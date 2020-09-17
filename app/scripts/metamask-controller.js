@@ -65,7 +65,7 @@ import {
   AddressBookController,
   CurrencyRateController,
 } from '@metamask/controllers'
-import PhishingController from '../../brave/lib/phishing-controller'
+import PhishingController from './controllers/phishing-controller'
 
 import backgroundMetaMetricsEvent from './lib/background-metametrics'
 

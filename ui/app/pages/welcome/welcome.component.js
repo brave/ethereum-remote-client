@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import ConnectWallet from '../connect-wallet'
+import ConnectWallet from '../../components/app/connect-wallet'
 
 import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
-} from '../../../ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 export default class BraveWelcome extends PureComponent {
   static contextTypes = {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../components/ui/button'
-import PasswordWarning from '../../../../brave/components/password-warning'
+import PasswordWarning from '../../components/app/password-warning'
 
 export default class NewAccountCreateForm extends Component {
   static defaultProps = {

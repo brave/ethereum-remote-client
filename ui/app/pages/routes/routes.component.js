@@ -31,7 +31,7 @@ import AppHeader from '../../components/app/app-header'
 import UnlockPage from '../unlock-page'
 import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
-import BraveNavigation from '../../../../brave/components/navigation'
+import BraveNavigation from '../../components/app/navigation'
 
 import {
   ADD_TOKEN_ROUTE,

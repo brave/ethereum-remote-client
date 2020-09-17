@@ -11,7 +11,7 @@ const createScriptTasks = require('./scripts')
 const createStyleTasks = require('./styles')
 const createStaticAssetTasks = require('./static')
 const createEtcTasks = require('./etc')
-const createBravePublishTasks = require('../../brave/build/publish')
+const createBravePublishTasks = require('./publish')
 
 const browserPlatforms = [
   'firefox',

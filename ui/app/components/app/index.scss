@@ -1,3 +1,5 @@
+@import url('fonts/muli.css');
+@import url('fonts/poppins.css');
 @import 'account-menu/index';
 @import 'add-token-button/index';
 @import 'alerts/alerts';
@@ -57,3 +59,8 @@
 @import 'wallet-overview/index';
 @import '../ui/account-mismatch-warning/index';
 @import '../ui/icon-border/icon-border';
+@import 'connect-wallet/index';
+@import 'navigation/index';
+@import 'password-warning/index';
+@import 'custom';
+@import 'dark';

@@ -5,7 +5,7 @@ import ConnectWallet from '../../components/app/connect-wallet'
 import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
-} from '../../../ui/app/helpers/constants/routes'
+} from '../../helpers/constants/routes'
 
 export default class BraveWelcome extends PureComponent {
   static contextTypes = {

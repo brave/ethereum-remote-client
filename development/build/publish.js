@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const jsoneditor = require('gulp-json-editor')
-const { createTask } = require('../../development/build/task')
+const { createTask } = require('./task')
 
 function createBravePublishTasks () {
   const bravePublishTask = createTask('brave-publish', function () {

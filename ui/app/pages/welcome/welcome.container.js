@@ -1,7 +1,7 @@
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { setHardwareConnect } from '../../../ui/app/store/actions' // eslint-disable-line import/named
+import { setHardwareConnect } from '../../store/actions'
 import BraveWelcome from './welcome.component'
 
 const mapDispatchToProps = (dispatch) => {

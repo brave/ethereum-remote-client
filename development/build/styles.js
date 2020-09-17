@@ -9,38 +9,10 @@ const sourcemaps = require('gulp-sourcemaps')
 const rtlcss = require('gulp-rtlcss')
 const rename = require('gulp-rename')
 const pump = pify(require('pump'))
-const glob = require('fast-glob')
-const replace = require('gulp-replace')
 const { createTask } = require('./task')
-
 
 // scss compilation and autoprefixing tasks
 module.exports = createStyleTasks
-
-const getImportedPath = (path) => {
-  const mmPath = path.split('brave/')[1]
-  const braveStyleRelative = '../../../brave/'
-
-  return `@import '${braveStyleRelative}${mmPath}';`
-}
-
-async function braveStylesTask () {
-  const braveScss = 'brave/components/**/*.scss'
-  const appRootScss = 'ui/app/css/index.scss'
-  const braveImports = glob.sync(braveScss)
-    .map(getImportedPath)
-  await new Promise((resolve, _reject) => {
-    gulp.src(appRootScss)
-      .pipe(
-        replace(
-          /(?:\/\*BRAVE\*\/.*)?$/,
-          `/*BRAVE*/${braveImports.join('')}`,
-        ),
-      )
-      .pipe(gulp.dest((file) => file.base))
-      .on('end', resolve)
-  })
-}
 
 function createStyleTasks ({ livereload }) {
 
@@ -70,10 +42,8 @@ function createStyleTasks ({ livereload }) {
 
   return { prod, dev, lint }
 
-
   function createScssBuildTask ({ src, dest, devMode, pattern }) {
     return async function () {
-      await braveStylesTask()
       if (devMode) {
         watch(pattern, async (event) => {
           await buildScss(devMode)
@@ -101,6 +71,4 @@ function createStyleTasks ({ livereload }) {
       ].filter(Boolean))
     }
   }
-
-
 }

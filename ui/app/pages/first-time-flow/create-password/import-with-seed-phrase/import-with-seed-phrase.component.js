@@ -7,7 +7,7 @@ import {
   INITIALIZE_SELECT_ACTION_ROUTE,
   INITIALIZE_END_OF_FLOW_ROUTE,
 } from '../../../../helpers/constants/routes'
-import PasswordWarning from '../../../../../../brave/components/password-warning'
+import PasswordWarning from '../../../../components/app/password-warning'
 
 export default class ImportWithSeedPhrase extends PureComponent {
   static contextTypes = {

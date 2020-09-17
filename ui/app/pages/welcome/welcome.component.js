@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import ConnectWallet from '../connect-wallet'
+import ConnectWallet from '../../components/app/connect-wallet'
 
 import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,

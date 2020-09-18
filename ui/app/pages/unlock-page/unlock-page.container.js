@@ -2,20 +2,24 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
-import { ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
+import { ENVIRONMENT_TYPE_NOTIFICATION, ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
 import { DEFAULT_ROUTE, RESTORE_VAULT_ROUTE } from '../../helpers/constants/routes'
 import {
   tryUnlockMetamask,
   forgotPassword,
   markPasswordForgotten,
   forceUpdateMetamaskState,
+  rejectAllPermissionsRequests,
   showModal,
 } from '../../store/actions'
 import UnlockPage from './unlock-page.component'
 
 const mapStateToProps = (state) => {
   const { metamask: { isUnlocked } } = state
+  const isNotification = getEnvironmentType() === ENVIRONMENT_TYPE_NOTIFICATION
+
   return {
+    isNotification,
     isUnlocked,
   }
 }
@@ -27,6 +31,7 @@ const mapDispatchToProps = (dispatch) => {
     markPasswordForgotten: () => dispatch(markPasswordForgotten()),
     forceUpdateMetamaskState: () => forceUpdateMetamaskState(dispatch),
     showOptInModal: () => dispatch(showModal({ name: 'METAMETRICS_OPT_IN_MODAL' })),
+    rejectAllPermissionsRequests: () => dispatch(rejectAllPermissionsRequests()),
   }
 }
 

@@ -268,6 +268,21 @@ export class PermissionsController {
   }
 
   /**
+   * Rejects all pending permissions requests
+   * (Used in the event of closing a locked request window)
+   */
+  async rejectAllPermissionsRequests () {
+    if (!this.pendingApprovals.size) {
+      log.debug(`No permissions request in queue`)
+      return
+    }
+
+    this.pendingApprovals.forEach(async (_approval, id) => {
+      await this.rejectPermissionsRequest(id)
+    })
+  }
+
+  /**
    * Expose an account to the given origin. Changes the eth_accounts
    * permissions and emits accountsChanged.
    *

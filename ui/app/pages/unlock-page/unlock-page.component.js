@@ -20,6 +20,8 @@ export default class UnlockPage extends Component {
     onSubmit: PropTypes.func,
     forceUpdateMetamaskState: PropTypes.func,
     showOptInModal: PropTypes.func,
+    isNotification: PropTypes.bool,
+    rejectAllPermissionsRequests: PropTypes.func,
   }
 
   state = {
@@ -39,12 +41,36 @@ export default class UnlockPage extends Component {
     }
   }
 
+  componentDidMount () {
+    const { isNotification } = this.props
+    if (isNotification) {
+      window.addEventListener('beforeunload', this.beforeUnload)
+    }
+  }
+
+  beforeUnload = () => {
+    const {
+      isUnlocked,
+      rejectAllPermissionsRequests,
+    } = this.props
+
+    // We only want to reject requests in the event that
+    // a user closes the popup without unlocking.
+    if (!isUnlocked) {
+      rejectAllPermissionsRequests()
+    }
+  }
+
+  removeBeforeUnload = () => {
+    window.removeEventListener('beforeunload', this.beforeUnload)
+  }
+
   handleSubmit = async (event) => {
     event.preventDefault()
     event.stopPropagation()
 
     const { password } = this.state
-    const { onSubmit, forceUpdateMetamaskState, showOptInModal } = this.props
+    const { onSubmit, forceUpdateMetamaskState, isNotification, showOptInModal } = this.props
 
     if (password === '' || this.submitting) {
       return
@@ -67,6 +93,10 @@ export default class UnlockPage extends Component {
 
       if (newState.participateInMetaMetrics === null || newState.participateInMetaMetrics === undefined) {
         showOptInModal()
+      }
+
+      if (isNotification) {
+        this.removeBeforeUnload()
       }
     } catch ({ message }) {
       if (message === 'Incorrect password') {

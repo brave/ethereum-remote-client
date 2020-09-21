@@ -2097,6 +2097,25 @@ export function rejectPermissionsRequest (requestId) {
 }
 
 /**
+ * Rejects all pending permissions requests
+ */
+export function rejectAllPermissionsRequests () {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.rejectAllPermissionsRequests((err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        return forceUpdateMetamaskState(dispatch)
+          .then(resolve)
+          .catch(reject)
+      })
+    })
+  }
+}
+
+/**
  * Clears the given permissions for the given origin.
  */
 export function removePermissionsFor (domains) {

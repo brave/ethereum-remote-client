@@ -1170,6 +1170,69 @@ describe('permissions controller', function () {
     })
   })
 
+  describe('rejectAllPermissionsRequests', function () {
+    let permController, requestUserApproval
+
+    beforeEach(async function () {
+      permController = initPermController()
+      requestUserApproval = getRequestUserApprovalHelper(permController)
+    })
+
+    it('does nothing if there are no pending permissions requests', async function () {
+      assert.equal(
+        permController.pendingApprovals.size, 0,
+        'pending approvals should be empty on init',
+      )
+      await assert.doesNotReject(
+        permController.rejectAllPermissionsRequests(),
+        'should not throw on non-existing request',
+      )
+      assert.equal(
+        permController.pendingApprovals.size, 0,
+        'pending approvals should still be empty after request',
+      )
+    })
+
+    it('rejects a single request', async function () {
+      const requestRejection = assert.rejects(
+        requestUserApproval(REQUEST_IDS.b, DOMAINS.b.origin),
+        ERRORS.rejectPermissionsRequest.rejection(),
+        'should reject with expected error',
+      )
+
+      await permController.rejectAllPermissionsRequests()
+      await requestRejection
+
+      assert.equal(
+        permController.pendingApprovals.size, 0,
+        'pending approvals should be empty after rejection',
+      )
+    })
+
+    it('rejects all requests in the queue', async function () {
+      const requestRejection1 = assert.rejects(
+        requestUserApproval(REQUEST_IDS.b, DOMAINS.b.origin),
+        ERRORS.rejectPermissionsRequest.rejection(),
+        'should reject with expected error',
+      )
+
+      const requestRejection2 = assert.rejects(
+        requestUserApproval(REQUEST_IDS.c, DOMAINS.c.origin),
+        ERRORS.rejectPermissionsRequest.rejection(),
+        'should reject with expected error',
+      )
+
+      await permController.rejectAllPermissionsRequests()
+      await requestRejection1
+      await requestRejection2
+
+      assert.equal(
+        permController.pendingApprovals.size, 0,
+        'pending approvals should be empty after rejection',
+      )
+    })
+  })
+
   // see permissions-middleware-test for testing the middleware itself
   describe('createMiddleware', function () {
 

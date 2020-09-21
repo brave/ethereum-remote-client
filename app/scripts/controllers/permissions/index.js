@@ -277,9 +277,9 @@ export class PermissionsController {
       return
     }
 
-    this.pendingApprovals.forEach(async (_approval, id) => {
+    for (const [id] of this.pendingApprovals) {
       await this.rejectPermissionsRequest(id)
-    })
+    }
   }
 
   /**

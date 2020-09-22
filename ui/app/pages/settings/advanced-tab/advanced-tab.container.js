@@ -8,8 +8,6 @@ import {
   showModal,
   setShowFiatConversionOnTestnetsPreference,
   setAutoLockTimeLimit,
-  setThreeBoxSyncingPermission,
-  turnThreeBoxSyncingOnAndInitialize,
   setUseNonceField,
   setIpfsGateway,
 } from '../../../store/actions'
@@ -23,8 +21,6 @@ export const mapStateToProps = (state) => {
       transactionTime,
       advancedInlineGas,
     } = {},
-    threeBoxSyncingAllowed,
-    threeBoxDisabled,
     useNonceField,
     ipfsGateway,
   } = metamask
@@ -37,8 +33,6 @@ export const mapStateToProps = (state) => {
     transactionTime,
     showFiatInTestnets,
     autoLockTimeLimit,
-    threeBoxSyncingAllowed,
-    threeBoxDisabled,
     useNonceField,
     ipfsGateway,
   }
@@ -57,13 +51,6 @@ export const mapDispatchToProps = (dispatch) => {
     },
     setAutoLockTimeLimit: (value) => {
       return dispatch(setAutoLockTimeLimit(value))
-    },
-    setThreeBoxSyncingPermission: (newThreeBoxSyncingState) => {
-      if (newThreeBoxSyncingState) {
-        dispatch(turnThreeBoxSyncingOnAndInitialize())
-      } else {
-        dispatch(setThreeBoxSyncingPermission(newThreeBoxSyncingState))
-      }
     },
     setIpfsGateway: (value) => {
       return dispatch(setIpfsGateway(value))

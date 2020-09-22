@@ -9,15 +9,11 @@ import {
 } from '../../selectors'
 
 import {
-  restoreFromThreeBox,
-  turnThreeBoxSyncingOn,
-  getThreeBoxLastUpdated,
   setShowRestorePromptToFalse,
   setConnectedStatusPopoverHasBeenShown,
   setDefaultHomeActiveTabName,
   setHardwareConnect,
 } from '../../store/actions'
-import { setThreeBoxLastUpdated } from '../../ducks/app/app'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
 import {
   ENVIRONMENT_TYPE_NOTIFICATION,
@@ -29,14 +25,13 @@ const mapStateToProps = (state) => {
   const {
     suggestedTokens,
     seedPhraseBackedUp,
-    threeBoxSynced,
     showRestorePrompt,
     selectedAddress,
     connectedStatusPopoverHasBeenShown,
     defaultHomeActiveTabName,
     hardwareConnect,
   } = metamask
-  const { forgottenPassword, threeBoxLastUpdated } = appState
+  const { forgottenPassword } = appState
   const totalUnapprovedCount = getTotalUnapprovedCount(state)
 
   const envType = getEnvironmentType()
@@ -55,10 +50,8 @@ const mapStateToProps = (state) => {
     shouldShowSeedPhraseReminder: !seedPhraseBackedUp,
     isPopup,
     isNotification,
-    threeBoxSynced,
     showRestorePrompt,
     selectedAddress,
-    threeBoxLastUpdated,
     firstPermissionsRequestId,
     totalUnapprovedCount,
     connectedStatusPopoverHasBeenShown,
@@ -68,19 +61,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  turnThreeBoxSyncingOn: () => dispatch(turnThreeBoxSyncingOn()),
-  setupThreeBox: () => {
-    dispatch(getThreeBoxLastUpdated())
-      .then((lastUpdated) => {
-        if (lastUpdated) {
-          dispatch(setThreeBoxLastUpdated(lastUpdated))
-        } else {
-          dispatch(setShowRestorePromptToFalse())
-          dispatch(turnThreeBoxSyncingOn())
-        }
-      })
-  },
-  restoreFromThreeBox: (address) => dispatch(restoreFromThreeBox(address)),
   setShowRestorePromptToFalse: () => dispatch(setShowRestorePromptToFalse()),
   setConnectedStatusPopoverHasBeenShown: () => dispatch(setConnectedStatusPopoverHasBeenShown()),
   onTabClick: (name) => dispatch(setDefaultHomeActiveTabName(name)),

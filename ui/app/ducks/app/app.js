@@ -1,8 +1,5 @@
 import * as actionConstants from '../../store/actionConstants'
 
-// actionConstants
-const SET_THREEBOX_LAST_UPDATED = 'metamask/app/SET_THREEBOX_LAST_UPDATED'
-
 export default function reduceApp (state = {}, action) {
   // default state
   const appState = Object.assign({
@@ -46,8 +43,6 @@ export default function reduceApp (state = {}, action) {
     networksTabSelectedRpcUrl: '',
     networksTabIsInAddMode: false,
     loadingMethodData: false,
-    show3BoxModalAfterImport: false,
-    threeBoxLastUpdated: null,
     requestAccountTabs: {},
     openMetaMaskTabs: {},
     currentWindowTab: {},
@@ -329,12 +324,6 @@ export default function reduceApp (state = {}, action) {
         loadingMethodData: false,
       }
 
-    case SET_THREEBOX_LAST_UPDATED:
-      return {
-        ...appState,
-        threeBoxLastUpdated: action.value,
-      }
-
     case actionConstants.SET_REQUEST_ACCOUNT_TABS:
       return {
         ...appState,
@@ -355,13 +344,5 @@ export default function reduceApp (state = {}, action) {
 
     default:
       return appState
-  }
-}
-
-// Action Creators
-export function setThreeBoxLastUpdated (lastUpdated) {
-  return {
-    type: SET_THREEBOX_LAST_UPDATED,
-    value: lastUpdated,
   }
 }

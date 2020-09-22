@@ -6,27 +6,6 @@ import AdvancedTab from '../advanced-tab.component'
 import TextField from '../../../../components/ui/text-field'
 
 describe('AdvancedTab Component', function () {
-  it('should render correctly when threeBoxFeatureFlag', function () {
-    const root = shallow(
-      <AdvancedTab
-        ipfsGateway=""
-        setAutoLockTimeLimit={() => {}}
-        setIpfsGateway={() => {}}
-        setShowFiatConversionOnTestnetsPreference={() => {}}
-        setThreeBoxSyncingPermission={() => {}}
-        threeBoxDisabled
-        threeBoxSyncingAllowed={false}
-      />,
-      {
-        context: {
-          t: (s) => `_${s}`,
-        },
-      },
-    )
-
-    assert.equal(root.find('.settings-page__content-row').length, 9)
-  })
-
   it('should update autoLockTimeLimit', function () {
     const setAutoLockTimeLimitSpy = sinon.spy()
     const root = shallow(
@@ -35,9 +14,6 @@ describe('AdvancedTab Component', function () {
         setAutoLockTimeLimit={setAutoLockTimeLimitSpy}
         setIpfsGateway={() => {}}
         setShowFiatConversionOnTestnetsPreference={() => {}}
-        setThreeBoxSyncingPermission={() => {}}
-        threeBoxDisabled
-        threeBoxSyncingAllowed={false}
       />,
       {
         context: {

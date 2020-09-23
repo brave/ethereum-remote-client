@@ -8,26 +8,7 @@ import firstTimeState from '../../localhostState'
 import createTxMeta from '../../../lib/createTxMeta'
 import EthQuery from 'eth-query'
 
-const threeBoxSpies = {
-  init: sinon.stub(),
-  getThreeBoxSyncingState: sinon.stub().returns(true),
-  turnThreeBoxSyncingOn: sinon.stub(),
-  _registerUpdates: sinon.spy(),
-}
 import proxyquire from 'proxyquire'
-
-class ThreeBoxControllerMock {
-  constructor () {
-    this.store = {
-      subscribe: () => {},
-      getState: () => ({}),
-    }
-    this.init = threeBoxSpies.init
-    this.getThreeBoxSyncingState = threeBoxSpies.getThreeBoxSyncingState
-    this.turnThreeBoxSyncingOn = threeBoxSpies.turnThreeBoxSyncingOn
-    this._registerUpdates = threeBoxSpies._registerUpdates
-  }
-}
 
 const ExtensionizerMock = {
   runtime: {
@@ -59,7 +40,6 @@ const createLoggerMiddlewareMock = () => (req, res, next) => {
 }
 
 const MetaMaskController = proxyquire('../../../../app/scripts/metamask-controller', {
-  './controllers/threebox': { default: ThreeBoxControllerMock },
   'extensionizer': ExtensionizerMock,
   './lib/createLoggerMiddleware': { default: createLoggerMiddlewareMock },
 }).default
@@ -172,8 +152,6 @@ describe('MetaMaskController', function () {
       const password = 'password'
 
       await metamaskController.createNewVaultAndKeychain(password)
-      threeBoxSpies.init.reset()
-      threeBoxSpies.turnThreeBoxSyncingOn.reset()
 
       metamaskController.preferencesController.addAddresses([fakeAddress])
       await metamaskController.submitPassword(password)

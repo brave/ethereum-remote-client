@@ -1482,15 +1482,6 @@
   "symbolBetweenZeroTwelve": {
     "message": "Symbol must be 11 characters or fewer."
   },
-  "syncWithThreeBox": {
-    "message": "Sync data with 3Box (experimental)"
-  },
-  "syncWithThreeBoxDescription": {
-    "message": "Turn on to have your settings backed up with 3Box. This feature is currently experimental; use at your own risk."
-  },
-  "syncWithThreeBoxDisabled": {
-    "message": "3Box has been disabled due to an error during the initial sync"
-  },
   "syncWithMobile": {
     "message": "Sync with mobile"
   },

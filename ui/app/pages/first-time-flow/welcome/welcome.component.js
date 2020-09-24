@@ -1,4 +1,3 @@
-import EventEmitter from 'events'
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../components/ui/button'
@@ -13,12 +12,6 @@ export default class Welcome extends PureComponent {
 
   static contextTypes = {
     t: PropTypes.func,
-  }
-
-  constructor (props) {
-    super(props)
-
-    this.animationEventEmitter = new EventEmitter()
   }
 
   componentDidMount () {

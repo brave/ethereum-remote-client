@@ -21,7 +21,10 @@ export default class MultipleNotifications extends PureComponent {
     const { showAll } = this.state
     const { children, classNames } = this.props
 
-    const childrenToRender = children ? children.filter((child) => child) : []
+    const childrenToRender = children ? (
+      children instanceof Array ? children.filter((child) => child) : [children]
+    ) : []
+
     if (childrenToRender.length === 0) {
       return null
     }

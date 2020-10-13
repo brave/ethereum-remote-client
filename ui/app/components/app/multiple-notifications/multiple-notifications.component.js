@@ -9,7 +9,7 @@ export default class MultipleNotifications extends PureComponent {
   }
 
   static propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.object,
     classNames: PropTypes.array,
   }
 

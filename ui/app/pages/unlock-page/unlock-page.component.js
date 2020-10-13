@@ -136,7 +136,7 @@ export default class UnlockPage extends Component {
         style={style}
         disabled={!this.state.password}
         fullWidth
-        variant="raised"
+        variant="contained"
         size="large"
         onClick={this.handleSubmit}
         disableRipple

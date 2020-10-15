@@ -70,7 +70,8 @@
     "yargs-parser": "13.1.2",
     "bl": "^3.0.1",
     "node-fetch": "^2.6.1",
-    "object-path": "^0.11.5 "
+    "object-path": "^0.11.5",
+    "sanitize-html": "1.13.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -93,6 +94,7 @@
     "await-semaphore": "^0.1.1",
     "bignumber.js": "^4.1.0",
     "bip39": "^2.2.0",
+    "brave-bitgo-client": "github:brave/bitgo-client#e83140c9963057a6b527090c3f3f75c224d2c334",
     "bn.js": "^4.11.7",
     "c3": "^0.7.10",
     "classnames": "^2.2.6",

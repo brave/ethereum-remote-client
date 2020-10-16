@@ -22,6 +22,16 @@ export default class ConnectWallet extends PureComponent {
     const { type } = this.props
 
     switch (type) {
+      case 'bitgo':
+        walletText = {
+          title: (
+            <div>
+              <BitGoLogoIcon className="hardware-img"/>
+            </div>
+          ),
+          subText: 'Use BitGo to purchase and manage non-Ethereum assets within Brave Crypto Wallets.'
+        }
+        break
       case 'browser':
         walletText = {
           title: t('newLocalWallet'),

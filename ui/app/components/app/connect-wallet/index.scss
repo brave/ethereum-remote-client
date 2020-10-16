@@ -36,15 +36,46 @@
     font-weight: bold;
     color: rgb(59, 62, 79);
     cursor: pointer;
+    width: 120px;
   }
 
   .restore {
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+    margin-left: 65px;
+    margin-top: 7px;
+    display: block;
   }
 
   .hardware-img {
     width: 100px;
+  }
+}
+
+.app-header {
+
+  &--back-drop {
+
+    &::after {
+      height: 0px;
+      background: inherit;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    height: 75px;
+    justify-content: center;
+
+    &--back-drop {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background: inherit;
+        bottom: -32px;
+      }
+    }
   }
 }

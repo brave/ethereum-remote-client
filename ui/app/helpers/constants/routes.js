@@ -1,3 +1,5 @@
+import braveRoutes from '../../../../brave/ui/app/helpers/constants/routes'
+
 const DEFAULT_ROUTE = '/'
 const UNLOCK_ROUTE = '/unlock'
 const LOCK_ROUTE = '/lock'
@@ -110,4 +112,5 @@ export {
   CONNECT_CONFIRM_PERMISSIONS_ROUTE,
   CONNECTED_ROUTE,
   CONNECTED_ACCOUNTS_ROUTE,
+  ...braveRoutes,
 }

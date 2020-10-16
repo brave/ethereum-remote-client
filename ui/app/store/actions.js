@@ -82,9 +82,9 @@ export function tryUnlockMetamask (password) {
 export function createNewVaultAndRestore (password, seed) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
-    log.debug(`background.createNewVaultAndRestore`)
+
     let vault
-    return new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
       background.createNewVaultAndRestore(password, seed, (err, _vault) => {
         if (err) {
           return reject(err)
@@ -93,6 +93,21 @@ export function createNewVaultAndRestore (password, seed) {
         resolve()
       })
     })
+
+    // mcu: special case this API call for BitGo, need to abstract
+    if (background.unlockAndSetKey) {
+      promise = promise.then(() => {
+        background.unlockAndSetKey(password, (err) => {
+          // mcu: TODO shouldn't this be handled w/ resolve/reject?
+          if (err) {
+            return dispatch(displayWarning(err.message))
+          }
+          return true
+        })
+      })
+    }
+
+    return promise
       .then(() => dispatch(unMarkPasswordForgotten()))
       .then(() => {
         dispatch(showAccountsPage())
@@ -161,6 +176,15 @@ export function createNewVault (password) {
         return reject(error)
       }
 
+      if (background.unlockAndSetKey) {
+        // mcu: TODO should this be resolve/rejected? seems like a race
+
+        background.unlockAndSetKey(password, (err) => {
+          if (err) {
+            return dispatch(displayWarning(err.message))
+          }
+        })
+      }
       resolve(true)
     })
   })
@@ -2370,6 +2394,70 @@ export function setHardwareConnect (value) {
           return reject(err)
         }
         return forceUpdateMetamaskState(dispatch).then(() => resolve())
+      })
+    })
+  }
+}
+
+export function createBitGoWallet (coin) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.createBitGoWallet(coin, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        dispatch({
+          coin,
+          type: actionConstants.SET_BITGO_WALLET_CREATED
+        })
+        resolve()
+      })
+    })
+  }
+}
+
+export function getBitGoWalletBalance (coin) {
+  return (dispatch) => {
+    background.getBitGoWalletBalance(coin, (err, balance) => {
+      if (err) {
+        log.error(err)
+        return dispatch(displayWarning(`Could not get BitGo balances for ${coin}`))
+      }
+      dispatch({
+        coin,
+        balance,
+        type: actionConstants..SET_BITGO_BALANCE
+      })
+    })
+  }
+}
+
+export function getBitGoWalletTransfers (coin) {
+  return (dispatch) => {
+    background.getBitGoWalletTransfers(coin, (err, transfers) => {
+      if (err) {
+        log.error(err)
+        return dispatch(displayWarning(`Could not get BitGo transfers for ${coin}`))
+      }
+      dispatch({
+        coin,
+        transfers,
+        type: actionConstants.SET_BITGO_TRANSFERS
+      })
+    })
+  }
+}
+
+export function sendBitGoTransaction (coin, amount, recipientAddress) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.sendBitGoTransaction(coin, amount, recipientAddress, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        resolve()
       })
     })
   }

@@ -32,6 +32,8 @@ import UnlockPage from '../unlock-page'
 import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
 import BraveNavigation from '../../components/app/navigation'
+import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts'
+import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet'
 
 import {
   ADD_TOKEN_ROUTE,
@@ -51,6 +53,8 @@ import {
   SEND_ROUTE,
   SETTINGS_ROUTE,
   UNLOCK_ROUTE,
+  BRAVE_CONNECT_WALLETS_ROUTE,
+  BRAVE_BITGO_WALLET_INDEX,
 } from '../../helpers/constants/routes'
 
 import { ENVIRONMENT_TYPE_NOTIFICATION, ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
@@ -149,6 +153,8 @@ export default class Routes extends Component {
         <Authenticated path={`${CONNECT_ROUTE}/:id`} component={PermissionsConnect} />
         <Authenticated path={`${ASSET_ROUTE}/:asset`} component={Asset} />
         <Authenticated path={DEFAULT_ROUTE} component={Home} />
+        <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={BraveConnectAccounts} exact />
+        <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} exact />
       </Switch>
     )
 

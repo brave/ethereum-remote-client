@@ -9,7 +9,7 @@
     "dist:brave": "yarn build prod:brave",
     "publish:brave": "yarn dist:brave && yarn build brave-publish",
     "audit-deps": "node app/scripts/audit.js",
-    "build": "node development/build/index.js",
+    "build": "node --max-old-space-size=8192 development/build/index.js",
     "start:test": "yarn build testDev",
     "benchmark:chrome": "SELENIUM_BROWSER=chrome node test/e2e/benchmark.js",
     "benchmark:firefox": "SELENIUM_BROWSER=firefox node test/e2e/benchmark.js",

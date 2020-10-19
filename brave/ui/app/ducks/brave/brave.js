@@ -1,5 +1,5 @@
 const extend = require('extend')
-const actions = require('../../store/actions')
+const actionConstants = require('../../../../../ui/app/store/actionConstants')
 
 export default function reduceBrave (state = {}, action) {
   const newState = Object.assign({
@@ -11,11 +11,11 @@ export default function reduceBrave (state = {}, action) {
   }, state)
 
   switch (action.type) {
-    case actions.SET_BAT_TOKEN_ADDED:
+    case actionConstants.SET_BAT_TOKEN_ADDED:
       return extend(newState, {
         batTokenAdded: action.value,
       })
-    case actions.SET_BITGO_BALANCE:
+    case actionConstants.SET_BITGO_BALANCE:
       const updatedBitGoBalances = {
         ...newState.bitGoBalances
       }
@@ -25,7 +25,7 @@ export default function reduceBrave (state = {}, action) {
       return extend(newState, {
         bitGoBalances: updatedBitGoBalances
       })
-    case actions.SET_BITGO_TRANSFERS:
+    case actionConstants.SET_BITGO_TRANSFERS:
       const updatedBitGoTransfers = {
         ...newState.bitGoTransfers
       }
@@ -36,7 +36,7 @@ export default function reduceBrave (state = {}, action) {
         bitGoTransfers: updatedBitGoTransfers
       })
 
-    case actions.SET_BITGO_WALLET_CREATED:
+    case actionConstants.SET_BITGO_WALLET_CREATED:
       const updatedBitGoCreatedWallets = newState.bitGoCreatedWallets.push(action.coin)
 
       return extend(newState, {

@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { compose } from 'recompose'
+import { compose } from 'redux'
 import {
   getBitGoWalletBalance,
   getBitGoWalletTransfers,
   sendBitGoTransaction
-} from '../../store/actions'
+} from '../../../../../ui/app/store/actions'
 import ProviderWallet from './provider-wallet.component'
 
 const mapStateToProps = ({ metamask }) => {

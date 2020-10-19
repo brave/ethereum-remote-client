@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import BitGoLogoIcon from '../../components/app/dropdowns/assets/bitgo-logo'
-import ConnectWallet from '../../components/app/connect-wallet'
-import CloseIcon from '../first-time-flow/welcome-modal/assets/close-icon'
-import CloseIconDark from '../first-time-flow/welcome-modal/assets/close-icon-dark'
+import ConnectWallet from '../../../../../ui/app/components/app/connect-wallet'
+import CloseIcon from '../../../../../ui/app/components/ui/icon/close-icon'
+import CloseIconDark from '../../../../../ui/app/components/ui/icon/close-icon-dark'
 import {
   BRAVE_CONNECT_WALLETS_ROUTE,
   INITIALIZE_CREATE_PASSWORD_ROUTE,

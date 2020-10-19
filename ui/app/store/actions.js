@@ -2427,7 +2427,7 @@ export function getBitGoWalletBalance (coin) {
       dispatch({
         coin,
         balance,
-        type: actionConstants..SET_BITGO_BALANCE
+        type: actionConstants.SET_BITGO_BALANCE,
       })
     })
   }

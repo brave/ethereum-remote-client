@@ -3,7 +3,7 @@ const { showAccountDetail } = actions
 
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { compose } from 'recompose'
+import { compose } from 'redux'
 
 import AppHeader from './app-header.component'
 import { getMetaMaskAccounts } from '../../../../../../ui/app/selectors/selectors'

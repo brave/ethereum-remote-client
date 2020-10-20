@@ -12,7 +12,7 @@ import {
   INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE,
 } from '../../helpers/constants/routes'
 
-const { supportedCoins } = require('../../../../brave/app/scripts/controllers/bitgo')
+const { supportedCoins } = require('../../../../app/scripts/controllers/bitgo')
 
 export default class BraveWelcome extends PureComponent {
   static contextTypes = {

@@ -65,6 +65,7 @@ import {
   CurrencyRateController,
 } from '@metamask/controllers'
 import PhishingController from './controllers/phishing-controller'
+const { BitGoController } = require('./controllers/bitgo')
 
 import backgroundMetaMetricsEvent from './lib/background-metametrics'
 
@@ -322,6 +323,18 @@ export default class MetamaskController extends EventEmitter {
     if (chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
       chrome.braveWallet.ready() // eslint-disable-line no-undef
     }
+
+    chrome.braveWallet.getProjectID(projectId => {
+      this.bitGoController = new BitGoController({
+          ...this.opts,
+          projectId: projectId,
+          keyringController: this.keyringController
+        })
+
+      if (this.keyringController.password) {
+        this.bitGoController.unlockAndSetKey(this.keyringController.password)
+      }
+    })
   }
 
   /**
@@ -551,7 +564,17 @@ export default class MetamaskController extends EventEmitter {
       removePermittedAccount: nodeify(permissionsController.removePermittedAccount, permissionsController),
       requestAccountsPermissionWithId: nodeify(permissionsController.requestAccountsPermissionWithId, permissionsController),
 
+      // Brave
       setHardwareConnect: nodeify(this.preferencesController.setHardwareConnect, this.preferencesController),
+      setBatTokenAdded: nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController),
+      setRewardsDisclosureAccepted: nodeify(this.preferencesController.setRewardsDisclosureAccepted, this.preferencesController),
+
+      //// BitGo
+      createBitGoWallet: nodeify(this.bitGoController.createWallet, this.bitGoController),
+      getBitGoWalletBalance: nodeify(this.bitGoController.getBalance, this.bitGoController),
+      getBitGoWalletTransfers: nodeify(this.bitGoController.getTransfers, this.bitGoController),
+      sendBitGoTransaction: nodeify(this.bitGoController.sendTx, this.bitGoController),
+      unlockAndSetKey: nodeify(this.bitGoController.unlockAndSetKey, this.bitGoController),
     }
   }
 

@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
+import BitGoLogoIcon from '../../../../../brave/ui/app/components/app/dropdowns/assets/bitgo-logo'
+
 export default class ConnectWallet extends PureComponent {
   static contextTypes = {
     t: PropTypes.func,

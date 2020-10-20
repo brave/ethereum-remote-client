@@ -9,7 +9,8 @@ import {
   INITIALIZE_CREATE_PASSWORD_ROUTE,
   BRAVE_BITGO_WALLET_INDEX
 } from '../../helpers/constants/routes'
-const { supportedCoins } = require('../../../../app/scripts/controllers/bitgo')
+
+const { supportedCoins } = require('../../../../../brave/app/scripts/controllers/bitgo')
 
 module.exports = class BraveConnectAccounts extends PureComponent {
   static contextTypes = {

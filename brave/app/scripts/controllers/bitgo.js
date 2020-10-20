@@ -1,5 +1,4 @@
 const ObservableStore = require('obs-store')
-const bgUtil = require('brave-bitgo-client').util
 
 const supportedCoins = {
   btc: 'Bitcoin',
@@ -59,6 +58,7 @@ class BitGoController {
   }
 
   async createWallet (coin) {
+    const bgUtil = require('brave-bitgo-client').util
     if (!supportedCoins[coin]) {
       throw new Error(`Coin type ${coin} is not supported.`)
     }
@@ -160,6 +160,7 @@ class BitGoController {
     }
     const resp = await response.json()
     if (!resp.error) {
+      const bgUtil = require('brave-bitgo-client').util
       const seed = await promiseGetSeed(uint8ToArrayBuf(this.encryptionKey))
       const userKeychain = bgUtil.createKeychain(coin, seed)
       const backupKeychain = bgUtil.createKeychain(coin, seed)

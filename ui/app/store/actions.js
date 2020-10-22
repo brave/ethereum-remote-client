@@ -177,15 +177,16 @@ export function createNewVault (password) {
       }
 
       if (background.unlockAndSetKey) {
-        // mcu: TODO should this be resolve/rejected? seems like a race
-
         background.unlockAndSetKey(password, (err) => {
           if (err) {
-            return dispatch(displayWarning(err.message))
+            return reject(err)
           }
+
+          resolve(true)
         })
+      } else {
+        resolve(true)
       }
-      resolve(true)
     })
   })
 }
@@ -2400,7 +2401,7 @@ export function setHardwareConnect (value) {
 }
 
 export function createBitGoWallet (coin) {
-  return (dispatch) => {
+  return async (dispatch) => {
     return new Promise((resolve, reject) => {
       background.createBitGoWallet(coin, (err) => {
         if (err) {

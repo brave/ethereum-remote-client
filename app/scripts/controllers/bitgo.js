@@ -1,7 +1,9 @@
 const ObservableStore = require('obs-store')
+const bgUtil = require('brave-bitgo-client').util
 
 const supportedCoins = {
   btc: 'Bitcoin',
+  tbtc: 'Bitcoin Testnet',
   bch: 'Bitcoin Cash',
   btg: 'Bitcoin Gold',
   bsv: 'Bitcoin SV',
@@ -43,12 +45,13 @@ class BitGoController {
     this.braveServiceKey = opts.projectId
   }
 
-  request (path, opts) {
+  async request (path, opts) {
     const url = `${this.proxyOrigin}${path}`
     const headers = new window.Headers()
     headers.append('x-brave-key', this.braveServiceKey)
+    headers.append('content-type', 'application/json')
     const req = new window.Request(url, Object.assign({ headers }, opts))
-    return window.fetch(req)
+    return await window.fetch(req)
   }
 
   async unlockAndSetKey (password) {
@@ -58,13 +61,16 @@ class BitGoController {
   }
 
   async createWallet (coin) {
-    const bgUtil = require('brave-bitgo-client').util
+    if (!this.encryptionKey) {
+      this.encryptionKey = await this.keyringController._getSubkey('ethwallet-encryptor')
+    }
+
     if (!supportedCoins[coin]) {
       throw new Error(`Coin type ${coin} is not supported.`)
     }
     const seed = await promiseGetSeed(uint8ToArrayBuf(this.encryptionKey))
     const userKeychain = bgUtil.createKeychain(coin, seed)
-    const backupKeychain = bgUtil.createKeychain(coin, seed)
+    const backupKeychain = bgUtil.createKeychain(coin, seed, true)
     const req = {
       coin,
       userPub: userKeychain.pub,
@@ -77,9 +83,10 @@ class BitGoController {
     if (!response.ok) {
       return
     }
+
     const resp = await response.json()
     if (!resp.error) {
-      const state = this.store().getState()
+      const state = this.store.getState()
       const bitgoWallets = state.bitgoWallets || {}
       bitgoWallets[resp.id] = Object.assign(req, resp)
       this.store.updateState({
@@ -90,7 +97,7 @@ class BitGoController {
   }
 
   async getBalance (id) {
-    const bitgoWallets = this.store().getState().bitgoWallets
+    const bitgoWallets = this.store.getState().bitgoWallets
     const bitgoWallet = bitgoWallets[id]
     if (!bitgoWallet) {
       return
@@ -116,7 +123,7 @@ class BitGoController {
   }
 
   async getTransfers (id) {
-    const bitgoWallets = this.store().getState().bitgoWallets
+    const bitgoWallets = this.store.getState().bitgoWallets
     const bitgoWallet = bitgoWallets[id]
     if (!bitgoWallet) {
       return
@@ -142,7 +149,7 @@ class BitGoController {
   }
 
   async sendTx (id, amount, destinationAddress) {
-    const bitgoWallets = this.store().getState().bitgoWallets
+    const bitgoWallets = this.store.getState().bitgoWallets
     const bitgoWallet = bitgoWallets[id]
     if (!bitgoWallet) {
       return
@@ -160,7 +167,6 @@ class BitGoController {
     }
     const resp = await response.json()
     if (!resp.error) {
-      const bgUtil = require('brave-bitgo-client').util
       const seed = await promiseGetSeed(uint8ToArrayBuf(this.encryptionKey))
       const userKeychain = bgUtil.createKeychain(coin, seed)
       const backupKeychain = bgUtil.createKeychain(coin, seed)

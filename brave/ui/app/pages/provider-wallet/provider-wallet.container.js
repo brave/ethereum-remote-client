@@ -8,12 +8,12 @@ import {
 } from '../../../../../ui/app/store/actions'
 import ProviderWallet from './provider-wallet.component'
 
-const mapStateToProps = ({ metamask }) => {
+const mapStateToProps = ({ brave }) => {
   const {
     bitGoBalances,
     bitGoTransfers,
     bitGoCreatedWallets
-  } = metamask
+  } = brave
 
   return {
     bitGoBalances,

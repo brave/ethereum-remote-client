@@ -1,5 +1,9 @@
-const actions = require('../../../store/actions')
-const { showAccountDetail } = actions
+const actions = require('../../../../../../ui/app/store/actions')
+const {
+  createBitGoWallet,
+  setHardwareConnect,
+  showAccountDetail,
+} = actions
 
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
@@ -9,7 +13,7 @@ import AppHeader from './app-header.component'
 import { getMetaMaskAccounts } from '../../../../../../ui/app/selectors/selectors'
 
 const mapStateToProps = state => {
-  const { appState, metamask } = state
+  const { appState, metamask, brave } = state
   const { networkDropdownOpen } = appState
   const {
     network,
@@ -18,8 +22,12 @@ const mapStateToProps = state => {
     isUnlocked,
     isAccountMenuOpen,
     keyrings,
-    identities
+    identities,
   } = metamask
+
+  const {
+    bitGoCreatedWallets,
+  } = brave
 
   return {
     networkDropdownOpen,
@@ -30,7 +38,8 @@ const mapStateToProps = state => {
     isAccountMenuOpen,
     keyrings,
     identities,
-    accounts: getMetaMaskAccounts(state)
+    accounts: getMetaMaskAccounts(state),
+    bitGoCreatedWallets,
   }
 }
 
@@ -40,6 +49,7 @@ const mapDispatchToProps = dispatch => {
     showNetworkDropdown: () => dispatch(actions.showNetworkDropdown()),
     hideNetworkDropdown: () => dispatch(actions.hideNetworkDropdown()),
     toggleAccountMenu: () => dispatch(actions.toggleAccountMenu()),
+    createBitGoWallet: (coin) => dispatch(createBitGoWallet(coin)),
   }
 }
 

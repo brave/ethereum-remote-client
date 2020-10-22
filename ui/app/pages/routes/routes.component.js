@@ -27,12 +27,12 @@ import NetworkDropdown from '../../components/app/dropdowns/network-dropdown'
 import AccountMenu from '../../components/app/account-menu'
 import { Modal } from '../../components/app/modals'
 import Alert from '../../components/ui/alert'
-import AppHeader from '../../components/app/app-header'
+import AppHeader from '../../../../brave/ui/app/components/app/app-header'
 import UnlockPage from '../unlock-page'
 import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
 import BraveNavigation from '../../components/app/navigation'
-import BraveConnectAccounts from '../../../../brave/ui/app/pages/connect-accounts'
+import Welcome from '../welcome'
 import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet'
 
 import {
@@ -152,9 +152,9 @@ export default class Routes extends Component {
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={`${CONNECT_ROUTE}/:id`} component={PermissionsConnect} />
         <Authenticated path={`${ASSET_ROUTE}/:asset`} component={Asset} />
-        <Authenticated path={DEFAULT_ROUTE} component={Home} />
-        <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={BraveConnectAccounts} exact />
-        <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} exact />
+        <Authenticated path={DEFAULT_ROUTE} component={Home} exact />
+        <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={Welcome} />
+        <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} />
       </Switch>
     )
 
@@ -279,6 +279,10 @@ export default class Routes extends Component {
           <div className="main-container-wrapper">
             { isLoading && <Loading loadingMessage={loadMessage} /> }
             { !isLoading && isLoadingNetwork && <LoadingNetwork /> }
+            <div>
+              { `YOU IN ${this.props.history.location.pathname}#${this.props.history.location.hash}` }
+              <br/>
+            </div>
             { this.renderRoutes() }
           </div>
           {

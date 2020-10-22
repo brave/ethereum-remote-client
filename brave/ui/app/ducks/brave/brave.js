@@ -37,10 +37,11 @@ export default function reduceBrave (state = {}, action) {
       })
 
     case actionConstants.SET_BITGO_WALLET_CREATED:
-      const updatedBitGoCreatedWallets = newState.bitGoCreatedWallets.push(action.coin)
-
       return extend(newState, {
-        bitGoCreatedWallets: updatedBitGoCreatedWallets
+        bitGoCreatedWallets: [
+          ...newState.bitGoCreatedWallets,
+          action.coin,
+        ],
       })
     default:
       return newState

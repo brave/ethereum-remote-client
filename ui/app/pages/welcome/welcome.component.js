@@ -80,6 +80,7 @@ export default class BraveWelcome extends PureComponent {
   onConnectBitGoWallets = () => {
     this.setState({ showBitGoModal: !this.state.showBitGoModal })
   }
+
   onRestore = () => {
     this.props.history.push(INITIALIZE_IMPORT_WITH_SEED_PHRASE_ROUTE)
   }

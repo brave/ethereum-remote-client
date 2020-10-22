@@ -69,7 +69,8 @@
     "apollo-server-express": "^2.14.2",
     "yargs-parser": "13.1.2",
     "bl": "^3.0.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "object-path": "^0.11.5 "
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",

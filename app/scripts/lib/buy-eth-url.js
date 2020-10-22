@@ -8,17 +8,13 @@
  * network does not match any of the specified cases, or if no network is given, returns undefined.
  *
  */
-export default function getBuyEthUrl ({ network, address, service }) {
+export default function getBuyEthUrl ({ network, service }) {
   // default service by network if not specified
   if (!service) {
     service = getDefaultServiceForNetwork(network)
   }
 
   switch (service) {
-    case 'wyre':
-      return `https://pay.sendwyre.com/?dest=ethereum:${address}&destCurrency=ETH&accountId=AC-7AG3W4XH4N2&paymentMethod=debit-card`
-    case 'coinswitch':
-      return `https://metamask.coinswitch.co/?address=${address}&to=eth`
     case 'metamask-faucet':
       return 'https://faucet.metamask.io/'
     case 'rinkeby-faucet':
@@ -34,8 +30,6 @@ export default function getBuyEthUrl ({ network, address, service }) {
 
 function getDefaultServiceForNetwork (network) {
   switch (network) {
-    case '1':
-      return 'wyre'
     case '3':
       return 'metamask-faucet'
     case '4':

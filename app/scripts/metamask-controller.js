@@ -1861,15 +1861,14 @@ export default class MetamaskController extends EventEmitter {
    * A method for forwarding the user to the easiest way to obtain ether,
    * or the network "gas" currency, for the current selected network.
    *
-   * @param {string} address - The address to fund.
    * @param {string} amount - The amount of ether desired, as a base 10 string.
    */
-  buyEth (address, amount) {
+  buyEth (amount) {
     if (!amount) {
       amount = '5'
     }
     const network = this.networkController.getNetworkState()
-    const url = getBuyEthUrl({ network, address, amount })
+    const url = getBuyEthUrl({ network, amount })
     if (url) {
       this.platform.openTab({ url })
     }

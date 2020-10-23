@@ -337,4 +337,13 @@
       background: rgba(0, 0, 0, 0.03);
     }
   }
+
+  .hide-token-confirmation {
+    border-radius: 0;
+    background: #282a2c;
+  }
+
+  .token-options__button {
+    border: none;
+  }
 }

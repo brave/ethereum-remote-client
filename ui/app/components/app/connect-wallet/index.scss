@@ -1,55 +1,74 @@
 .connect-wallet-container {
-  width: 100%;
-  border: 1px solid rgb(218, 220, 232);
+  border: 1px solid $brave-grey-2;
   border-radius: 12px;
-  padding: 20px 35px;
-  text-align: left;
-  margin-top: 20px;
+  margin: 20px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 
-  .wallet-title span {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    color: rgb(59, 62, 79);
-  }
+  .wallet-desc {
+    flex: 1 1 auto;
+    max-width: 75%;
 
-  .wallet-sub-text span {
-    display: block;
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 5px;
-    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    div {
+      text-align: left;
+    }
+
+    .wallet-title span {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 600;
+      font-family: 'Poppins';
+      img {
+        width: 100px;
+      }
+    }
+
+    .wallet-sub-text span {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 18px;
+
+      margin-top: 5px;
+    }
   }
 
   .controls {
-    float: right;
-    margin-top: 23px;
-  }
+    flex: 0 0 auto;
 
-  .create {
-    width: 85px;
-    height: 32px;
-    border: 1px solid rgb(194, 196, 207);
-    border-radius: 100px;
-    margin-right: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: rgb(59, 62, 79);
-    cursor: pointer;
-    width: 120px;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
-  .restore {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 65px;
-    margin-top: 7px;
-    display: block;
-  }
+    .create, .restore {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 600;
+      color: $brave-grey-7;
+      font-family: 'Poppins';
+    }
 
-  .hardware-img {
-    width: 100px;
+    .create {
+      background-color: white;
+      border: 1px solid $brave-grey-2;
+      border-radius: 24px;
+      cursor: pointer;
+
+      .create-icon path {
+        fill: $brave-grey-7;
+      }
+    }
+
+    .restore {
+      cursor: pointer;
+      margin: 10px 15px 0px 0px;
+    }
   }
 }
 

@@ -279,10 +279,6 @@ export default class Routes extends Component {
           <div className="main-container-wrapper">
             { isLoading && <Loading loadingMessage={loadMessage} /> }
             { !isLoading && isLoadingNetwork && <LoadingNetwork /> }
-            <div>
-              { `YOU IN ${this.props.history.location.pathname}#${this.props.history.location.hash}` }
-              <br/>
-            </div>
             { this.renderRoutes() }
           </div>
           {

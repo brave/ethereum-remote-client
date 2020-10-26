@@ -1,7 +1,11 @@
 #app-content.dark,
 #popover-content.dark {
   color: #fff;
-  background: #1d2025;
+  background: $brave-black;
+
+  .import-account__back-button {
+    color: #fff;
+  }
 
   .main-container,
   .new-account {
@@ -9,22 +13,53 @@
   }
 
   .first-time-flow {
-    background: #1d2025;
+    background: $brave-black;
 
     .first-time-flow__wrapper,
     .end-of-flow {
-      background: #282a2c;
+      background: $brave-grey-9;
     }
 
     .welcome-container {
-      background: #1d2025;
+      background-color: $brave-black;
 
       .content {
-        background: #282a2c;
+        background: $brave-grey-9;
       }
 
-      .hardware-img {
-        filter: invert(0.8);
+      .connect-wallet-container {
+        border-color: $brave-grey-8;
+
+        .trezor-logo, .ledger-logo path {
+          fill: $brave-grey-2;
+        }
+
+        .bitgo-logo {
+          filter: none;
+          .logo-text {
+            fill: $brave-grey-2;
+          }
+        }
+
+        .wallet-title {
+          color: $brave-grey-2;
+        }
+
+        .wallet-sub-text {
+          color: $brave-grey-4;
+        }
+
+        .create, .restore {
+          color: $brave-grey-2;
+        }
+
+        .create {
+          border-color: $brave-grey-7;
+        }
+
+        .create-icon path {
+          fill: $brave-grey-2;
+        }
       }
     }
 
@@ -34,11 +69,11 @@
   }
 
   .wallet-view {
-    background: #171719;
+    background: $brave-black;
   }
 
   .transaction-list-item {
-    background: #282828;
+    background: $brave-grey-9;
 
     .transaction-status--confirmed {
       background: #609a1c;
@@ -83,14 +118,14 @@
   .network-display__container,
   .send-v2__asset-dropdown__list,
   .transaction-status--submitted {
-    background: #282828;
+    background: $brave-grey-9;
   }
 
   .Select-menu-outer,
   .simple-dropdown__options,
   .send-v2__asset-dropdown__list {
     * {
-      background: #282828;
+      background: $brave-grey-9;
     }
   }
 
@@ -105,13 +140,13 @@
 
   .send-v2__asset-dropdown__asset {
     &:hover {
-      background-color: #282828;
+      background-color: $brave-grey-9;
     }
   }
 
   .confirm-page-container-content {
     .tabs__list {
-      background: #282828;
+      background: $brave-grey-9;
     }
 
     .tab.tab--active {
@@ -127,7 +162,7 @@
 
   .app-header {
     &::after {
-      background: #282828;
+      background: $brave-grey-9;
     }
   }
 
@@ -142,15 +177,6 @@
     border: 1px solid #fff;
   }
 
-  h1,
-  h2,
-  span,
-  div,
-  label,
-  .import-account__back-button {
-    color: #fff;
-  }
-
   .ens-input,
   input,
   .first-time-flow__seedphrase {
@@ -160,7 +186,7 @@
 
   .welcome-modal {
     .__modal {
-      background: #1d2025;
+      background: $brave-black;
     }
   }
 
@@ -233,7 +259,7 @@
 
   .signature-request-message {
     &--root {
-      background: #282828;
+      background: $brave-grey-9;
     }
   }
 
@@ -246,7 +272,7 @@
   .permission-approval-container,
   .request-signature__header-background,
   .request-signature__header__tip {
-    background: #282828;
+    background: $brave-grey-9;
   }
 
   .menu-bar__account-options,
@@ -317,7 +343,7 @@
 
   .notification-modal__header,
   .notification-modal__message-wrapper {
-    background: #282828;
+    background: $brave-grey-9;
   }
 
   .address-book__view-contact__group__static-address--copy-icon {
@@ -325,7 +351,7 @@
   }
 
   .qr-scanner {
-    background: #282828;
+    background: $brave-grey-9;
 
     div {
       color: #fff;

@@ -1,5 +1,11 @@
 # Changelog
 
+## Remote Component([0.1.80](https://github.com/brave/ethereum0remote-client/releases/tag/0.1.80)), Browser Component: `1.0.23`(28-Oct-2020)
+
+- [brave-browser#12269](https://github.com/brave/brave-browser/issues/12269) - Updated Deposit Ether page 
+- [brave-browser#11941](https://github.com/brave/brave-browser/issues/11941) - Fixed transaction confirmation for certain sign data types
+- [brave-browser#11764](https://github.com/brave/brave-browser/issues/11764) - Fixed permission request on a locked connection window
+
 ## Remote Component([0.1.76](https://github.com/brave/ethereum0remote-client/releases/tag/0.1.76)), Browser Component: `1.0.22`(15-Sep-2020)
 
 - [brave-browser#11357](https://github.com/brave/brave-browser/issues/11357): Fixed account listing when wrong password is entered on reveal pass phrase screen

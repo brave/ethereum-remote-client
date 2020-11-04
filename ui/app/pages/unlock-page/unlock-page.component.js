@@ -25,6 +25,9 @@ export default class UnlockPage extends Component {
   state = {
     password: '',
     error: null,
+    canReset: false,
+    isResetting: false,
+    confirmationPhrase: '',
   }
 
   submitting = false
@@ -42,6 +45,12 @@ export default class UnlockPage extends Component {
     if (isNotification) {
       window.addEventListener('beforeunload', this.beforeUnload)
     }
+
+    window.addEventListener('beforeunload', (_e) => {
+      if (this.state.isResetting) {
+        chrome.braveWallet.resetWallet() // eslint-disable-line no-undef
+      }
+    })
   }
 
   beforeUnload = () => {
@@ -59,6 +68,28 @@ export default class UnlockPage extends Component {
 
   removeBeforeUnload = () => {
     window.removeEventListener('beforeunload', this.beforeUnload)
+  }
+
+  onResetPrompt = () => {
+    this.setState({ isResetting: true })
+  }
+
+  handleReset = (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+    chrome.tabs.getCurrent(({ id }) => { // eslint-disable-line no-undef
+      chrome.tabs.remove(id, () => {}) // eslint-disable-line no-undef
+    })
+  }
+
+  cancelReset = () => {
+    this.setState({ isResetting: false })
+  }
+
+  handleInputUpdate = ({ target }) => {
+    const confirmationPhrase = target.value
+    const canReset = confirmationPhrase === this.context.t('resetConfirmationPhrase')
+    this.setState({ canReset, confirmationPhrase })
   }
 
   handleSubmit = async (event) => {
@@ -119,6 +150,57 @@ export default class UnlockPage extends Component {
     this.setState({ password: target.value, error: null })
   }
 
+  renderResetView () {
+    const { t } = this.context
+    const { canReset, confirmationPhrase } = this.state
+
+    return (
+      <div>
+        <span className="reset-title">
+          { t('resetCryptoWallets') }
+        </span>
+        <div className="reset-disclaimer">
+          <p>{ t('resetDisclaimer') }</p>
+        </div>
+        <div className="reset-form">
+          <form
+            className="unlock-page__form"
+            onSubmit={this.handleReset}
+          >
+            <TextField
+              id="reset-confirmation"
+              label={t('resetPlaceholder')}
+              type="text"
+              value={confirmationPhrase}
+              onChange={(event) => this.handleInputUpdate(event)}
+              error=""
+              autoFocus
+              material
+              fullWidth
+            />
+          </form>
+          <Button
+            type="submit"
+            className="reset-button"
+            disabled={!canReset}
+            fullWidth
+            variant="raised"
+            size="large"
+            onClick={this.handleReset}
+            disableRipple
+          >
+            { this.context.t('resetButtonText') }
+          </Button>
+          <div className="reset-cancel">
+            <span onClick={this.cancelReset}>
+              { t('cancel') }
+            </span>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   renderSubmitButton () {
     const style = {
       backgroundColor: '#f7861c',
@@ -146,50 +228,71 @@ export default class UnlockPage extends Component {
     )
   }
 
-  render () {
+  renderUnlockView () {
     const { password, error } = this.state
     const { t } = this.context
     const { onImport, onRestore } = this.props
 
     return (
-      <div className="unlock-page__container">
-        <div className="unlock-page">
-          <h1 className="unlock-page__title">
-            { t('welcomeBack') }
-          </h1>
-          <div>{ t('unlockMessage') }</div>
-          <form
-            className="unlock-page__form"
-            onSubmit={this.handleSubmit}
+      <>
+        <h1 className="unlock-page__title">
+          { t('welcomeBack') }
+        </h1>
+        <div>{ t('unlockMessage') }</div>
+        <form
+          className="unlock-page__form"
+          onSubmit={this.handleSubmit}
+        >
+          <TextField
+            id="password"
+            label={t('password')}
+            type="password"
+            value={password}
+            onChange={(event) => this.handleInputChange(event)}
+            error={error}
+            autoFocus
+            autoComplete="current-password"
+            theme="material"
+            fullWidth
+          />
+        </form>
+        { this.renderSubmitButton() }
+        <div className="unlock-page__links">
+          <div
+            className="unlock-page__link"
+            onClick={() => onRestore()}
           >
-            <TextField
-              id="password"
-              label={t('password')}
-              type="password"
-              value={password}
-              onChange={(event) => this.handleInputChange(event)}
-              error={error}
-              autoFocus
-              autoComplete="current-password"
-              theme="material"
-              fullWidth
-            />
-          </form>
-          { this.renderSubmitButton() }
-          <div className="unlock-page__links">
-            <div
-              className="unlock-page__link"
-              onClick={() => onRestore()}
-            >
-              { t('restoreFromSeed') }
-            </div>
-            <div
-              className="unlock-page__link unlock-page__link--import"
-              onClick={() => onImport()}
-            >
-              { t('importUsingSeed') }
-            </div>
+            { t('restoreFromSeed') }
           </div>
+          <div
+            className="unlock-page__link unlock-page__link--import"
+            onClick={() => onImport()}
+          >
+            { t('importUsingSeed') }
+          </div>
+          <div
+            className="unlock-page__link unlock-page__link--import"
+            onClick={this.onResetPrompt}
+          >
+            { t('resetCryptoWallets') }
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  render () {
+    const isResetting = this.state.isResetting
+    const className = `unlock-page ${isResetting ? 'reset' : ''}`
+
+    return (
+      <div className="unlock-page__container">
+        <div className={className}>
+          {
+            isResetting
+              ? this.renderResetView()
+              : this.renderUnlockView()
+          }
         </div>
       </div>
     )

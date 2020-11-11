@@ -20,6 +20,9 @@ export default class UnlockPage extends Component {
     showOptInModal: PropTypes.func,
     isNotification: PropTypes.bool,
     rejectAllPermissionsRequests: PropTypes.func,
+    isInitialized: PropTypes.bool,
+    completedOnboarding: PropTypes.bool,
+    setCompletedOnboarding: PropTypes.func,
   }
 
   state = {
@@ -38,7 +41,17 @@ export default class UnlockPage extends Component {
   }
 
   componentDidMount () {
-    const { isNotification } = this.props
+    const {
+      isInitialized,
+      isNotification,
+      completedOnboarding,
+      setCompletedOnboarding,
+    } = this.props
+
+    if (isInitialized && !completedOnboarding) {
+      setCompletedOnboarding()
+    }
+
     if (isNotification) {
       window.addEventListener('beforeunload', this.beforeUnload)
     }

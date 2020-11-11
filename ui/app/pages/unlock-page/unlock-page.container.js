@@ -11,16 +11,19 @@ import {
   forceUpdateMetamaskState,
   rejectAllPermissionsRequests,
   showModal,
+  setCompletedOnboarding,
 } from '../../store/actions'
 import UnlockPage from './unlock-page.component'
 
 const mapStateToProps = (state) => {
-  const { metamask: { isUnlocked } } = state
+  const { metamask: { isUnlocked, isInitialized, completedOnboarding } } = state
   const isNotification = getEnvironmentType() === ENVIRONMENT_TYPE_NOTIFICATION
 
   return {
     isNotification,
     isUnlocked,
+    isInitialized,
+    completedOnboarding,
   }
 }
 
@@ -32,6 +35,7 @@ const mapDispatchToProps = (dispatch) => {
     forceUpdateMetamaskState: () => forceUpdateMetamaskState(dispatch),
     showOptInModal: () => dispatch(showModal({ name: 'METAMETRICS_OPT_IN_MODAL' })),
     rejectAllPermissionsRequests: () => dispatch(rejectAllPermissionsRequests()),
+    setCompletedOnboarding: () => dispatch(setCompletedOnboarding()),
   }
 }
 

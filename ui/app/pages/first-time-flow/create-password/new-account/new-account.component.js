@@ -6,6 +6,7 @@ import {
   INITIALIZE_SELECT_ACTION_ROUTE,
 } from '../../../../helpers/constants/routes'
 import TextField from '../../../../components/ui/text-field'
+import PasswordWarning from '../../../../components/app/password-warning'
 
 export default class NewAccount extends PureComponent {
   static contextTypes = {
@@ -228,6 +229,7 @@ export default class NewAccount extends PureComponent {
             { t('create') }
           </Button>
         </form>
+        <PasswordWarning />
       </div>
     )
   }

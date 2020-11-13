@@ -218,7 +218,7 @@ function createScriptTasks ({ browserPlatforms, livereload }) {
           .pipe(sourcemaps.write())
       } else {
         buildStream = buildStream
-          .pipe(sourcemaps.write('../sourcemaps'))
+          .pipe(sourcemaps.write('../sourcemaps', { addComment: false }))
       }
 
       // write completed bundles

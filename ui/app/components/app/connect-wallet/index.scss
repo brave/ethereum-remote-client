@@ -1,6 +1,6 @@
 .connect-wallet-container {
-  border: 1px solid $brave-grey-2;
-  border-radius: 12px;
+  background-color: $brave-card-background;
+  border-radius: 4px;
   margin: 20px 0px;
   padding: 20px;
   display: flex;
@@ -49,19 +49,18 @@
     .create, .restore {
       font-size: 14px;
       line-height: 21px;
-      font-weight: 600;
-      color: $brave-grey-7;
+      color: $brave-text;
       font-family: 'Poppins';
     }
 
     .create {
-      background-color: white;
-      border: 1px solid $brave-grey-2;
+      background-color: inherit;
+      border: 1px solid $brave-border;
       border-radius: 24px;
       cursor: pointer;
 
       .create-icon path {
-        fill: $brave-grey-7;
+        fill: $brave-icon;
       }
     }
 

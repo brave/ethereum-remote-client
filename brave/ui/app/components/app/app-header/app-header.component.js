@@ -19,17 +19,18 @@ import PlusIcon from '../dropdowns/assets/plus-icon'
 import BitGoLogoIcon from '../dropdowns/assets/bitgo-logo'
 import CloseIcon from '../../../../../../ui/app/components/ui/icon/close-icon'
 import CloseIconDark from '../../../../../../ui/app/components/ui/icon/close-icon-dark'
+import BitGoWallets from '../dropdowns/components/bitgo-wallets.component'
 import BraveAccountItems from '../dropdowns/components/account-items.component'
 import BraveDropdownHeader from '../dropdowns/brave-dropdown-header.component'
 import BraveDropdownItems from '../dropdowns/brave-dropdown-items.component'
 
 const { supportedCoins } = require('../../../../../../app/scripts/controllers/bitgo')
 
-module.exports = class BraveAppHeader extends AppHeader {
+export default class BraveAppHeader extends AppHeader {
   constructor(props) {
     super(props)
 
-    const checkedAssets = {}
+    /*const checkedAssets = {}
     const { bitGoCreatedWallets } = this.props
     this.bitGoCreateableAssets = {}
 
@@ -41,10 +42,10 @@ module.exports = class BraveAppHeader extends AppHeader {
 
     Object.keys(this.bitGoCreateableAssets).map((key) => {
       checkedAssets[key] = false
-    })
+    })*/
 
     this.state = {
-      checkedAssets,
+      //checkedAssets,
       showBitGoModal: false
     }
   }
@@ -98,7 +99,7 @@ module.exports = class BraveAppHeader extends AppHeader {
   }
 
   onCreateBitGoWallets = async() => {
-    const { checkedAssets, showBitGoModal } = this.state
+    /*const { checkedAssets, showBitGoModal } = this.state
 
     for (let coin in checkedAssets) {
       if (checkedAssets[coin]) {
@@ -107,7 +108,7 @@ module.exports = class BraveAppHeader extends AppHeader {
     }
 
     this.props.history.push(BRAVE_BITGO_WALLET_INDEX)
-    this.setState({ showBitGoModal: !showBitGoModal })
+    this.setState({ showBitGoModal: !showBitGoModal })*/
   }
 
   get itemStyle () {
@@ -148,6 +149,26 @@ module.exports = class BraveAppHeader extends AppHeader {
     ]
   }
 
+  get bitGoItems () {
+    return [
+      {
+        markup: (
+          <BitGoWallets />
+        )
+      },
+      {
+        markup: (
+          <Item
+            icon={<PlusIcon />}
+            onClick={this.onCreateAccount}
+            text={this.context.t('createAccount')}
+          />
+        ),
+        style: this.itemStyle
+      },
+    ]
+  }
+
   get connectItems () {
     return [
       {
@@ -178,77 +199,6 @@ module.exports = class BraveAppHeader extends AppHeader {
     ]
   }
 
-  checkAsset = (asset) => {
-    const { checkedAssets } = this.state
-    checkedAssets[asset] = !checkedAssets[asset]
-    this.setState({ checkedAssets })
-  }
-
-  getCryptoImage = (asset) => {
-    // temporary
-    if (asset === 'bsv' || asset === 'btg' || asset === 'eos' || asset === 'algo' || asset == 'tbtc') {
-      asset = 'btc'
-    }
-
-    return (
-      <img src={`images/${asset}-small.png`} />
-    )
-  }
-
-  renderBitGoModal () {
-    const { checkedAssets } = this.state
-
-    return (
-      <div className="welcome-modal">
-        <div className="__modal">
-          <div className="__close" onClick={this.onBitGoConnect}>
-            <div className="close-light">
-              <CloseIcon />
-            </div>
-            <div className="close-dark">
-              <CloseIconDark />
-            </div>
-          </div>
-          <div className="__content __bitgo" style={{ textAlign: 'left' }}>
-            <BitGoLogoIcon />
-            <h3>
-              {'Select all crypto assets you would like to interact with.'}
-            </h3>
-            <p>{'A new wallet will be generated for each coin checked. Two of three private keys are stored on BitGo. The third key will be stored securely on Brave.'}</p>
-            <div className="__wallets-area">
-              {Object.keys(this.bitGoCreateableAssets).map((key) => {
-                const isChecked = checkedAssets[key]
-
-                return (
-                  <div
-                    key={`${key}-wallet`}
-                    className={'__bitgo-wallet-item'}
-                    onClick={this.checkAsset.bind(this, key)}>
-                      <div className="__left-info">
-                        <div className={`__checkmark ${isChecked ? 'checked' : ''}`}>
-                        </div>
-                        <div className="__asset-icon">
-                          {this.getCryptoImage(key)}
-                        </div>
-                        <div className="__asset-name">
-                          {this.bitGoCreateableAssets[key]}
-                        </div>
-                      </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-          <div className="__button-container">
-            <button type="__button-create" onClick={this.onCreateBitGoWallets}>
-              {'Create Wallets'}
-            </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   render() {
     const {
       network,
@@ -256,19 +206,21 @@ module.exports = class BraveAppHeader extends AppHeader {
       hideNetworkIndicator,
       disabled,
       isUnlocked,
-      history
+      history,
+      bitgoWallets,
     } = this.props
     const { showBitGoModal } = this.state
-    const isBitGoView = window.location.hash === '#bitgo-account-view'
-    const isConnectWallets = window.location.hash === '#connect-wallets'
+    const isBitGoView = history.location.pathname === BRAVE_BITGO_WALLET_INDEX
+    const isConnectWallets = history.location.pathname === BRAVE_CONNECT_WALLETS_ROUTE
+    const haveBitGoWallets = Object.keys(bitgoWallets).length > 0;
 
     return (
       <div>
-        {
+        {/*
           showBitGoModal
           ? this.renderBitGoModal()
           : null
-        }
+        */null}
         <div className={'brave-dropdown-items'}>
           <BraveDropdownItems
             type={'browser'}
@@ -282,6 +234,12 @@ module.exports = class BraveAppHeader extends AppHeader {
             isOpen={this.state.activeDropdown === 'connect'}
             onMouseLeave={this.handleMouseLeave.bind(this, 'connect-dropdown')}
           />
+          <BraveDropdownItems
+            type="bitgo"
+            items={this.bitGoItems}
+            isOpen={this.state.activeDropdown === 'bitgo'}
+            onMouseLeave={this.handleMouseLeave.bind(this, 'bitgo-dropdown')}
+          />
         </div>
         <div
           className={classnames('app-header', {
@@ -291,21 +249,21 @@ module.exports = class BraveAppHeader extends AppHeader {
           <div className='app-header__contents'>
             <BraveDropdownHeader
               type={'browser'}
-              title={'Crypto Wallet'}
+              title={'Ethereum Wallet'}
               onClick={() => { history.push(DEFAULT_ROUTE) }}
               onMouseEnter={this.handleClick.bind(this, 'browser')}
               onMouseLeave={this.handleMouseLeave.bind(this, 'brave-browser-menu')}
               active={this.state.activeDropdown === 'browser'}
             />
             {
-              isBitGoView
+              haveBitGoWallets
               ? <BraveDropdownHeader
-                  type={'browser'}
+                  type={'bitgo'}
                   title={'BitGo Wallet'}
                   onClick={() => {}}
-                  onMouseEnter={() => {}}
-                  onMouseLeave={() => {}}
-                  active={true}
+                  onMouseEnter={this.handleClick.bind(this, 'bitgo')}
+                  onMouseLeave={this.handleMouseLeave.bind(this, 'brave-bitgo-menu')}
+                  active={this.state.activeDropdown === 'bitgo' || isBitGoView}
                 />
               : null
             }
@@ -321,21 +279,6 @@ module.exports = class BraveAppHeader extends AppHeader {
               onMouseLeave={this.handleMouseLeave.bind(this, 'brave-connect-menu')}
               active={this.state.activeDropdown === 'connect' || isConnectWallets}
             />
-            {/*
-            <div className='app-header__account-menu-container'>
-              {!hideNetworkIndicator && (
-                <div className='app-header__network-component-wrapper'>
-                  <NetworkIndicator
-                    network={network}
-                    provider={provider}
-                    onClick={event => this.handleNetworkIndicatorClick(event)}
-                    disabled={disabled}
-                  />
-                </div>
-              )}
-              {this.renderAccountMenu()}
-            </div>
-            */}
           </div>
         </div>
       </div>

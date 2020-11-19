@@ -14,7 +14,7 @@ $warning-light-orange: #f8b588;
   @include h6;
 
   font-weight: 500;
-  font-family: Roboto, Arial;
+  font-family: 'Muli';
   line-height: 1.25rem;
   padding: 0.75rem 1rem;
   display: flex;
@@ -81,17 +81,33 @@ $warning-light-orange: #f8b588;
 
   &:hover {
     border-color: $Blue-500;
+    @media (prefers-color-scheme: dark) {
+      border-color: $brave-brand-color;
+    }
   }
 
   &:active {
     background: $Blue-000;
     border-color: $Blue-500;
+    @media (prefers-color-scheme: dark) {
+      background-color: $brave-brand-color;
+      border-color: $brave-brand-color;
+    }
   }
 
   &--disabled,
   &[disabled] {
     opacity: 1;
     color: $hover-secondary;
+    @media (prefers-color-scheme: dark) {
+      color: $brave-dark-border;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent;
+    color: $brave-white;
+    border-color: $brave-grey-0;
   }
 }
 
@@ -135,6 +151,10 @@ $warning-light-orange: #f8b588;
     opacity: 1;
     color: $hover-red;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent;
+  }
 }
 
 .btn-danger-primary {
@@ -171,12 +191,22 @@ $warning-light-orange: #f8b588;
   &:active {
     background: #fbfbfc;
     border-color: $Grey-500;
+    @media (prefers-color-scheme: dark) {
+      background-color: transparent;
+      color: $Grey-500;
+    }
   }
 
   &--disabled,
   &[disabled] {
     opacity: 1;
     color: $hover-default;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent;
+    border-color: $brave-grey-0;
+    color: $brave-white;
   }
 }
 
@@ -188,17 +218,38 @@ $warning-light-orange: #f8b588;
   &:hover {
     border-color: $hover-confirm;
     background-color: $hover-confirm;
+    @media (prefers-color-scheme: dark) {
+      border-color: lighten($brave-brand-color, 5%);
+      color: lighten($brave-brand-color, 5%);
+      background-color: transparent;
+    }
   }
 
   &:active {
     background: $Blue-600;
     border-color: $Blue-600;
+
+    @media (prefers-color-scheme: dark) {
+      border-color: darken($brave-brand-color, 10%);
+      color: darken($brave-brand-color, 10%);
+      background-color: transparent;
+    }
   }
 
   &--disabled,
   &[disabled] {
     border-color: $hover-secondary;
     background-color: $hover-secondary;
+    @media (prefers-color-scheme: dark) {
+      border-color: $brave-brand-color;
+      color: rgba($brave-brand-color, 0.25);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent;
+    border-color: $brave-brand-color;
+    color: $brave-brand-color;
   }
 }
 
@@ -344,3 +395,32 @@ button.primary {
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    background-color: transparent;
+    border-color: $brave-white;
+    color: $brave-white;
+
+    &.btn-primary {
+      background-color: transparent;
+      border-color: $brave-brand-color;
+      color: $brave-brand-color;
+
+      &:active, &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &.btn-secondary {
+      background-color: transparent;
+      border-color: $brave-white;
+      color: $brave-white;
+
+      &:active, &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+

@@ -4,7 +4,7 @@ import styles from './assets/styles'
 import PlusIcon from './assets/plus-icon'
 import CaratDownIcon from './assets/carat-down'
 
-module.exports = class BraveDropdownHeader extends PureComponent {
+export default class BraveDropdownHeader extends PureComponent {
 
   render () {
     const {

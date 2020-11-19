@@ -99,4 +99,12 @@
       'icon sub      sub      sub      sub      mid mid mid mid right right right'
       '.    actions  actions  actions  actions  mid mid mid mid right right right';
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: $brave-dark-text;
+
+    &__mid-content, &__subheading {
+      color: $brave-dark-subtext;
+    }
+  }
 }

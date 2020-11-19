@@ -5,6 +5,7 @@
 @import 'alerts/alerts';
 @import 'app-header/index';
 @import 'asset-list-item/asset-list-item';
+@import 'bitgo-modal/index';
 @import '../ui/breadcrumbs/index';
 @import '../ui/button-group/index';
 @import '../ui/card/index';
@@ -62,5 +63,6 @@
 @import 'connect-wallet/index';
 @import 'navigation/index';
 @import 'password-warning/index';
+@import '../../../../brave/ui/app/components/app/app-header/index.scss';
 @import 'custom';
 @import 'dark';

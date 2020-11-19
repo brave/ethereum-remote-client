@@ -59,6 +59,10 @@
     line-height: 45px;
     width: 100%;
     justify-content: center;
+
+    @media (prefers-color-scheme: dark) {
+      color: $brave-dark-text;
+    }
   }
 
   &__cached-star {

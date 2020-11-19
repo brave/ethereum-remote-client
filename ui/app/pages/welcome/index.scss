@@ -1,14 +1,12 @@
 .welcome-container {
-  background: #d5d9dc;
+  background: $brave-main-background;
   width: 100%;
   height: 100vh;
 
   .content {
     width: 930px;
-    margin: 40px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
+    margin: 30px auto;
+    background: $brave-main-background;
   }
 
   .welcome-title span {
@@ -20,11 +18,11 @@
 }
 
 #app-content {
-  background: #d5d9dc;
+  background: $brave-main-background;
 }
 
 .first-time-flow {
-  background-color: #d5d9dc;
+  background: $brave-main-background;
 
   button {
     border-radius: 30px;
@@ -33,7 +31,7 @@
 
 .first-time-flow__wrapper,
 .end-of-flow {
-  background: #fff;
+  background: $brave-card-background;
   border-radius: 8px;
   margin-top: 40px;
 }

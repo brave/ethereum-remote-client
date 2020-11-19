@@ -120,20 +120,10 @@ export default class UnlockPage extends Component {
   }
 
   renderSubmitButton () {
-    const style = {
-      backgroundColor: '#f7861c',
-      color: 'white',
-      marginTop: '20px',
-      height: '60px',
-      fontWeight: '400',
-      boxShadow: 'none',
-      borderRadius: '4px',
-    }
-
     return (
       <Button
         type="submit"
-        style={style}
+        className="unlock-submit"
         disabled={!this.state.password}
         fullWidth
         variant="contained"
@@ -157,7 +147,9 @@ export default class UnlockPage extends Component {
           <h1 className="unlock-page__title">
             { t('welcomeBack') }
           </h1>
-          <div>{ t('unlockMessage') }</div>
+          <h6 className="unlock-page__subtitle">
+            { t('unlockMessage') }
+          </h6>
           <form
             className="unlock-page__form"
             onSubmit={this.handleSubmit}

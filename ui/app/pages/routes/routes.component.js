@@ -33,7 +33,7 @@ import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
 import BraveNavigation from '../../components/app/navigation'
 import Welcome from '../welcome'
-import BraveProviderWallet from '../../../../brave/ui/app/pages/provider-wallet'
+import BraveProviderWallet from '../provider-wallet'
 
 import {
   ADD_TOKEN_ROUTE,
@@ -152,9 +152,10 @@ export default class Routes extends Component {
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={`${CONNECT_ROUTE}/:id`} component={PermissionsConnect} />
         <Authenticated path={`${ASSET_ROUTE}/:asset`} component={Asset} />
-        <Authenticated path={DEFAULT_ROUTE} component={Home} exact />
         <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={Welcome} />
         <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} />
+
+        <Authenticated path={DEFAULT_ROUTE} component={Home} />
       </Switch>
     )
 

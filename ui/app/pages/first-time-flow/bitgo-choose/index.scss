@@ -1,0 +1,22 @@
+.first-time-flow__wrapper {
+  button {
+    color: $brave-white;
+    background-color: $brave-link;
+    border-color: $brave-link;
+    border-radius: 24px;
+    border-width: 0px;
+    height: 48px;
+    width: 150px;
+    font-size: 14px;
+
+    &[disabled] {
+      background-color: $brave-dark-subtext;
+      border-color: $brave-dark-subtext;
+    }
+
+    &[hover] {
+      background-color: $brave-link;
+      border-color: $brave-link;
+    }
+  }
+}

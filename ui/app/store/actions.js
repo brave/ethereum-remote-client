@@ -41,7 +41,6 @@ export function tryUnlockMetamask (password) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
     dispatch(unlockInProgress())
-    log.debug(`background.submitPassword`)
 
     return new Promise((resolve, reject) => {
       background.submitPassword(password, (error) => {
@@ -2400,8 +2399,36 @@ export function setHardwareConnect (value) {
   }
 }
 
+export function setHomeRedirectRoute (value) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setHomeRedirectRoute(value, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        return forceUpdateMetamaskState(dispatch).then(resolve).catch(reject)
+      })
+    })
+  }
+}
+
+export function setHomeRedirecting (value) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.setHomeRedirecting(value, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        return forceUpdateMetamaskState(dispatch).then(resolve).catch(reject)
+      })
+    })
+  }
+}
+
 export function createBitGoWallet (coin) {
-  return async (dispatch) => {
+  return (dispatch) => {
     return new Promise((resolve, reject) => {
       background.createBitGoWallet(coin, (err) => {
         if (err) {
@@ -2410,7 +2437,7 @@ export function createBitGoWallet (coin) {
         }
         dispatch({
           coin,
-          type: actionConstants.SET_BITGO_WALLET_CREATED
+          type: actionConstants.SET_BITGO_WALLET_CREATED,
         })
         resolve()
       })
@@ -2420,15 +2447,19 @@ export function createBitGoWallet (coin) {
 
 export function getBitGoWalletBalance (coin) {
   return (dispatch) => {
-    background.getBitGoWalletBalance(coin, (err, balance) => {
-      if (err) {
-        log.error(err)
-        return dispatch(displayWarning(`Could not get BitGo balances for ${coin}`))
-      }
-      dispatch({
-        coin,
-        balance,
-        type: actionConstants.SET_BITGO_BALANCE,
+    return new Promise((resolve, reject) => {
+      background.getBitGoWalletBalance(coin, (err, balance) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          console.log(err)
+          return reject(err)
+        }
+        dispatch({
+          coin,
+          balance,
+          type: actionConstants.SET_BITGO_BALANCE,
+        })
+        resolve()
       })
     })
   }
@@ -2436,15 +2467,19 @@ export function getBitGoWalletBalance (coin) {
 
 export function getBitGoWalletTransfers (coin) {
   return (dispatch) => {
-    background.getBitGoWalletTransfers(coin, (err, transfers) => {
-      if (err) {
-        log.error(err)
-        return dispatch(displayWarning(`Could not get BitGo transfers for ${coin}`))
-      }
-      dispatch({
-        coin,
-        transfers,
-        type: actionConstants.SET_BITGO_TRANSFERS
+    return new Promise((resolve, reject) => {
+      background.getBitGoWalletTransfers(coin, (err, transfers) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          console.log(err)
+          return reject(err)
+        }
+        dispatch({
+          coin,
+          transfers,
+          type: actionConstants.SET_BITGO_TRANSFERS,
+        })
+        resolve()
       })
     })
   }

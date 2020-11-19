@@ -6,7 +6,7 @@ import {
 } from '../../../../../../ui/app/components/app/dropdowns/components/dropdown'
 import styles from './assets/styles'
 
-module.exports = class BraveDropdownItems extends PureComponent {
+export default class BraveDropdownItems extends PureComponent {
 
   render () {
     const {

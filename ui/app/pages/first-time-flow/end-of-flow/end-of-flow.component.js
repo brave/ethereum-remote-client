@@ -22,7 +22,7 @@ export default class EndOfFlowScreen extends PureComponent {
   }
 
   onComplete = async () => {
-    const { history, completionMetaMetricsName, onboardingInitiator } = this.props
+    const { history, completionMetaMetricsName, homeRedirectRoute, onboardingInitiator } = this.props
 
     this.context.metricsEvent({
       eventOpts: {
@@ -35,7 +35,8 @@ export default class EndOfFlowScreen extends PureComponent {
     if (onboardingInitiator) {
       await returnToOnboardingInitiator(onboardingInitiator)
     }
-    history.push(DEFAULT_ROUTE)
+
+    history.push(homeRedirectRoute || DEFAULT_ROUTE)
   }
 
   render () {

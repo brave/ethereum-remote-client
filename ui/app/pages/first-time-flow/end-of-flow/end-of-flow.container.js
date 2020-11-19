@@ -8,7 +8,7 @@ const firstTimeFlowTypeNameMap = {
 }
 
 const mapStateToProps = (state) => {
-  const { metamask: { firstTimeFlowType } } = state
+  const { metamask: { firstTimeFlowType, homeRedirectRoute } } = state
 
   return {
     completionMetaMetricsName: firstTimeFlowTypeNameMap[firstTimeFlowType],

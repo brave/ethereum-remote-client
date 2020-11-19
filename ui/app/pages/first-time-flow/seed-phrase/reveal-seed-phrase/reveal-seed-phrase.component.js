@@ -53,7 +53,7 @@ export default class RevealSeedPhrase extends PureComponent {
   }
 
   handleSkip = async () => {
-    const { history, setSeedPhraseBackedUp, setCompletedOnboarding, onboardingInitiator } = this.props
+    const { history, homeRedirectRoute, setSeedPhraseBackedUp, setCompletedOnboarding, onboardingInitiator } = this.props
 
     this.context.metricsEvent({
       eventOpts: {
@@ -68,7 +68,7 @@ export default class RevealSeedPhrase extends PureComponent {
     if (onboardingInitiator) {
       await returnToOnboardingInitiator(onboardingInitiator)
     }
-    history.push(DEFAULT_ROUTE)
+    history.push(homeRedirectRoute || DEFAULT_ROUTE)
   }
 
   renderSecretWordsContainer () {

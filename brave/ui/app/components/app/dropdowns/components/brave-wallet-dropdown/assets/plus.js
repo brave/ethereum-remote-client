@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-module.exports = class PlusIcon extends PureComponent {
+export default class PlusIcon extends PureComponent {
   render () {
     return (
       <svg width='15px' height='15px' viewBox='0 0 15 15' version='1.1' xmlns='http://www.w3.org/2000/svg'>

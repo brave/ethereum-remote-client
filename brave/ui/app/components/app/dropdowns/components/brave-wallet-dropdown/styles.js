@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   container: {
     general: {
       marginRight: '5px',

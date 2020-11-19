@@ -5,20 +5,27 @@ import {
   getBitGoWalletBalance,
   getBitGoWalletTransfers,
   sendBitGoTransaction
-} from '../../../../../ui/app/store/actions'
+} from '../../store/actions'
 import ProviderWallet from './provider-wallet.component'
 
-const mapStateToProps = ({ brave }) => {
+const mapStateToProps = ({ brave, metamask }) => {
   const {
     bitGoBalances,
     bitGoTransfers,
-    bitGoCreatedWallets
+    bitGoCreatedWallets,
   } = brave
+
+  const {
+    BitGoController: {
+      bitgoWallets,
+    }
+  } = metamask
 
   return {
     bitGoBalances,
     bitGoTransfers,
-    bitGoCreatedWallets
+    bitGoCreatedWallets,
+    bitgoWallets,
   }
 }
 

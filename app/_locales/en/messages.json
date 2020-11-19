@@ -1784,7 +1784,7 @@
     "message": "Note: If importing from a Metamask wallet, enter 12 words instead of 24."
   },
   "newLocalWallet": {
-    "message": "New Local Wallet"
+    "message": "Ethereum Wallet"
   },
   "newLocalWalletSubText": {
     "message": "Create a new Brave local wallet to access dApps and store crypto and collectibles securely. Trade tokens anonymously with no trading fees."

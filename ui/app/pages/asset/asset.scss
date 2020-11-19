@@ -29,6 +29,10 @@
   &__asset {
     font-weight: bold;
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: $brave-white;
+  }
 }
 
 .token-options {
@@ -41,5 +45,9 @@
 
   &__icon {
     font-size: 16px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $brave-white;
   }
 }

@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
+    "@bitgo/account-lib": "file:.yalc/@bitgo/account-lib",
     "@download/blockies": "^1.0.3",
     "@formatjs/intl-relativetimeformat": "^5.2.6",
     "@fortawesome/fontawesome-free": "^5.13.0",
@@ -93,7 +94,7 @@
     "bignumber.js": "^4.1.0",
     "bip39": "^2.2.0",
     "bn.js": "^4.11.7",
-    "brave-bitgo-client": "github:brave/bitgo-client#bc9ece719cb541c27287ecfdce42826628379ad6",
+    "brave-bitgo-client": "file:.yalc/brave-bitgo-client",
     "c3": "^0.7.10",
     "classnames": "^2.2.6",
     "content-hash": "^2.5.2",

@@ -64,6 +64,7 @@ export default class PreferencesController {
       ipfsGateway: 'dweb.link',
 
       hardwareConnect: false,
+      homeRedirectRoute: null,
     }, opts.initState)
 
     this.diagnostics = opts.diagnostics
@@ -684,6 +685,11 @@ export default class PreferencesController {
 
   setHardwareConnect (value) {
     this.store.updateState({ hardwareConnect: value })
+  }
+
+  setHomeRedirectRoute (value) {
+    this.store.updateState({ homeRedirectRoute: value })
+    return Promise.resolve(value)
   }
 
   //

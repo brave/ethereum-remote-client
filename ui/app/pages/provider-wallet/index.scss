@@ -1,0 +1,269 @@
+.provider-wallet {
+  background: white;
+  min-height: 800px;
+
+  .asset-info {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    .asset-logo {
+      img {
+        width: 42px;
+        height: 42px;
+      }
+      margin-right: 20px;
+    }
+
+    .asset-balance {
+      .title {
+        font-size: 24px;
+        color: $brave-text;
+      }
+      .subtitle {
+        font-size: 16px;
+        color: $brave-subtext;
+      }
+    }
+  }
+
+  .transactions {
+    .tx {
+      padding: 20px;
+      border-bottom: 1px solid $brave-border;
+
+      svg {
+        width: 42px;
+        height: 42px;
+        margin-right: 20px;
+      }
+
+      .tx-info {
+        flex: 1 0 auto;
+        text-align: right;
+
+        .title {
+          font-size: 16px;
+          color: $brave-subtext;
+        }
+        .subtitle {
+          font-size: 16px;
+          color: $brave-subtext;
+        }
+      }
+    }
+  }
+
+  .__info-column  {
+    float: left;
+    height: 100%;
+    width: 33%;
+    background: #f7f8f9;
+
+    .__account-balance {
+      height: 230px;
+      background: #019fe8;
+    }
+
+    .__account-info {
+      text-align: center;
+      top: 90px;
+      color: $brave-white;
+      position: relative;
+
+      span {
+        display: block;
+      }
+
+      .__value {
+        color: #6ec8f1;
+      }
+
+      .__balance {
+        font-weight: bold;
+        font-size: 40px;
+      }
+    }
+
+    .__asset-list {
+      color: #000;
+      font-size: 25px;
+
+      .asset-info.active {
+        color: $brave-white;
+        background: $brave-menu-active-background;
+      }
+
+      .asset-info {
+        padding: 20px;
+      }
+    }
+  }
+
+  .__activity-pane {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      flex: 1 0 auto;
+      display: flex;
+      margin: 32px 18px 40px 18px;
+
+      .buttons {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0px;
+        margin-bottom: 8px;
+      }
+
+      .history {
+        flex: 1 0 auto;
+        font-family: 'Muli';
+        font-weight: 700;
+      }
+
+      .address {
+        flex: 1 0 auto;
+        text-align: right;
+        font-size: 12px;
+        color: $brave-link;
+        text-decoration: underline;
+
+        cursor: pointer;
+      }
+    }
+
+    .separator {
+      height: 1px;
+      background-color: $brave-border;
+      margin-bottom: 8px;
+    }
+
+    .no-transactions {
+      color: $brave-border;
+      text-align: center;
+    }
+  }
+}
+
+.dropdown-menu-item {
+  border-top: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .provider-wallet {
+    background: $brave-grey-9;
+
+    .asset-info {
+      .asset-balance {
+        .title {
+          color: $brave-dark-text;
+        }
+        .subtitle {
+          color: $brave-dark-subtext;
+        }
+      }
+    }
+
+    .transactions {
+      .tx {
+        border-bottom-color: $brave-dark-border;
+        .tx-info {
+          .title, .subtitle {
+            color: $brave-dark-subtext;
+          }
+        }
+      }
+    }
+
+    .__info-column {
+      background: #171719;
+      .__asset-list {
+        color: $brave-dark-text;
+      }
+    }
+
+    .__activity-pane {
+      .separator {
+        background-color: $brave-dark-subtext;
+      }
+
+      .no-transactions {
+        color: $brave-dark-subtext;
+      }
+
+      .send-page {
+        margin: 26px 30px 0px 24px;
+
+        .send-form {
+          .amount-icon {
+            width: 16px;
+            height: 16px;
+          }
+
+          .MuiOutlinedInput-root {
+            .MuiOutlinedInput-notchedOutline {
+              @media (prefers-color-scheme: dark) {
+                border-color: $neutral-grey;
+                &[focused] {
+                  border-color: $brave-white;
+                }
+              }
+            }
+          }
+
+          .MuiOutlinedInput-root.Mui-error {
+            .MuiOutlinedInput-notchedOutline {
+              border-color: $brave-error;
+              &[focused] {
+                border-color: $brave-error;
+              }
+            }
+          }
+
+          .MuiTextField-root {
+            margin-top: 24px;
+            .MuiInputBase-input,
+            .MuiFormHelperText-root {
+              @media (prefers-color-scheme: dark) {
+                color: $brave-white;
+              }
+            }
+
+            .MuiFormHelperText-root.Mui-error {
+              color: $brave-error;
+            }
+
+            .MuiFormLabel-root {
+              @media (prefers-color-scheme: dark) {
+                color: $brave-dark-subtext;
+                &[focused] {
+                  border-color: $brave-white;
+                }
+              }
+            }
+
+            .MuiTypography-colorTextSecondary {
+              @media (prefers-color-scheme: dark) {
+                color: $brave-dark-subtext;
+              }
+            }
+          }
+
+          @media (prefers-color-scheme: dark) {
+            .MuiInput-underline:before,
+            .MuiInput-underline:hover:not(.Mui-disabled):before {
+              border-bottom-color: $brave-dark-border;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

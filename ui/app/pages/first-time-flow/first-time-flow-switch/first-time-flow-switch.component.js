@@ -25,8 +25,15 @@ export default class FirstTimeFlowSwitch extends PureComponent {
       optInMetaMetrics,
     } = this.props
 
+    console.log('[first-time-flow-switch]', JSON.stringify({
+      completedOnboarding,
+      isInitialized,
+      isUnlocked,
+      optInMetaMetrics,
+    }, null, 2))
+
     if (completedOnboarding) {
-      return <Redirect to={{ pathname: DEFAULT_ROUTE }} />
+      return <Redirect to={{ pathname: INITIALIZE_WELCOME_ROUTE }} />
     }
 
     if (isUnlocked) {

@@ -11,7 +11,7 @@ $Grey-700: #5e6175;
 $Grey-800: #3b3e4f;
 $Grey-900: #282a2c;
 
-$Black-100: #1d2126;
+$Black-100: #1e2127;
 
 $brave-grey-0: $Grey-000;
 $brave-grey-1: $Grey-100;
@@ -25,6 +25,26 @@ $brave-grey-8: $Grey-800;
 $brave-grey-9: $Grey-900;
 
 $brave-black: $Black-100;
+$brave-white: #f4f4f4;
+$brave-brand-color: #ff7654;
 
 $neutral-black: $Black-100;
 $neutral-grey: $Grey-400;
+
+$brave-main-background: #f1f3f5;
+$brave-card-background: #ffffff;
+$brave-text: #424242;
+$brave-subtext: $brave-grey-8;
+$brave-border: $brave-grey-4;
+$brave-link: $brave-brand-color;
+$brave-icon: $brave-text;
+$brave-menu-active-background: $brave-grey-7;
+$brave-error: #bf0000;
+
+$brave-dark-main-background: $brave-black;
+$brave-dark-card-background: #292a2d;
+$brave-dark-text: $brave-white;
+$brave-dark-subtext: #9aa0a6;
+$brave-dark-border: $brave-grey-8;
+$brave-dark-icon: $brave-white;
+$brave-dark-menu-active-background: $brave-grey-8;

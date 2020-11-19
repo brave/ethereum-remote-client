@@ -112,4 +112,4 @@ export {
   CONNECTED_ACCOUNTS_ROUTE,
 }
 
-export * from '../../../../brave/ui/app/helpers/constants/routes'
+export * from './brave-routes'

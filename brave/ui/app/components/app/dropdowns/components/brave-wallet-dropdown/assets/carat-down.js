@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-module.exports = class CaratDownIcon extends PureComponent {
+export default class CaratDownIcon extends PureComponent {
   render () {
     return (
       <svg width='10px' height='6px' viewBox='0 0 10 6' version='1.1' xmlns='http://www.w3.org/2000/svg'>

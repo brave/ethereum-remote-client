@@ -23,6 +23,9 @@ const mapStateToProps = state => {
     isAccountMenuOpen,
     keyrings,
     identities,
+    BitGoController: {
+      bitgoWallets,
+    },
   } = metamask
 
   const {
@@ -40,6 +43,7 @@ const mapStateToProps = state => {
     identities,
     accounts: getMetaMaskAccounts(state),
     bitGoCreatedWallets,
+    bitgoWallets,
   }
 }
 

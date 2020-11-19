@@ -1,23 +1,33 @@
 .check-box {
   -webkit-appearance: none;
   appearance: none;
-  background: $white;
-  color: $Grey-100;
-  width: 18px;
-  height: 18px;
-  font-size: 21px;
+  background: $brave-white;
+  color: $brave-grey-1;
+  width: 16px;
+  height: 16px;
+  font-size: 18px;
   line-height: 0.9;
   border-radius: 2px;
   display: flex;
 
   &__checked,
   &__indeterminate {
-    color: $primary-blue;
-    border-color: $primary-blue;
+    color: $brave-brand-color;
+    border-color: $brave-brand-color;
   }
 
   &:disabled {
-    color: $Grey-100;
+    color: $brave-grey-1;
     cursor: not-allowed;
+  }
+}
+
+@media  (prefers-color-scheme: dark) {
+  .check-box {
+    background: $brave-black;
+
+    &:disabled {
+      color: $brave-grey-8;
+    }
   }
 }

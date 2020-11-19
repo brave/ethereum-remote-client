@@ -1,0 +1,18 @@
+.provider-error-wrapper {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 12px;
+
+  .message {
+    color: gray;
+  }
+
+  .settings {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px auto 0 auto;
+    color: #00a8ee;
+  }
+}

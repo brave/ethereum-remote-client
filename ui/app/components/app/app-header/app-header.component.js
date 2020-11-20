@@ -5,6 +5,9 @@ import Identicon from '../../ui/identicon'
 import MetaFoxLogo from '../../ui/metafox-logo'
 import { DEFAULT_ROUTE } from '../../../helpers/constants/routes'
 import NetworkIndicator from '../network'
+import SelectedProviderIndicator from '../selected-provider-indicator'
+import { getEnvironmentType } from '../../../../../app/scripts/lib/util'
+import { ENVIRONMENT_TYPE_POPUP } from '../../../../../app/scripts/lib/enums'
 
 export default class AppHeader extends PureComponent {
   static propTypes = {
@@ -86,11 +89,13 @@ export default class AppHeader extends PureComponent {
       hideNetworkIndicator,
       disabled,
     } = this.props
+    const showProviderIndicator = getEnvironmentType() === ENVIRONMENT_TYPE_POPUP
 
     return (
       <div
         className={classnames('app-header', { 'app-header--back-drop': isUnlocked })}
       >
+        {showProviderIndicator && <SelectedProviderIndicator isUnlocked={isUnlocked} />}
         <div className="app-header__contents">
           <MetaFoxLogo
             unsetIconHeight

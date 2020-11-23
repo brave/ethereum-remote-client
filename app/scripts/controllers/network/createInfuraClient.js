@@ -34,15 +34,15 @@ function createNetworkAndChainIdMiddleware ({ network }) {
   switch (network) {
     case 'mainnet':
       netId = networkEnums.MAINNET_NETWORK_ID
-      chainId = '0x01'
+      chainId = networkEnums.MAINNET_CHAIN_ID
       break
     case 'ropsten':
       netId = networkEnums.ROPSTEN_NETWORK_ID
-      chainId = '0x03'
+      chainId = networkEnums.ROPSTEN_CHAIN_ID
       break
     case 'rinkeby':
       netId = networkEnums.RINKEBY_NETWORK_ID
-      chainId = '0x04'
+      chainId = networkEnums.RINKEBY_CHAIN_ID
       break
     case 'kovan':
       netId = networkEnums.KOVAN_NETWORK_ID
@@ -50,7 +50,7 @@ function createNetworkAndChainIdMiddleware ({ network }) {
       break
     case 'goerli':
       netId = networkEnums.GOERLI_NETWORK_ID
-      chainId = '0x05'
+      chainId = networkEnums.GOERLI_CHAIN_ID
       break
     default:
       throw new Error(`createInfuraClient - unknown network "${network}"`)

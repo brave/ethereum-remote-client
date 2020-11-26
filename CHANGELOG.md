@@ -38,7 +38,7 @@
 
 ## Remote Component([0.1.74](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.74)), Browser Component: `1.0.21`(25-Aug-2020)
 
-- [brave-browser#11311](https://github.com/brave/brave-browser/issues/11311): Rebase CryptoWallet to MetaMask V8
+- [brave-browser#11311](https://github.com/brave/brave-browser/issues/11311): Rebase Crypto Wallet to MetaMask V8
 - [brave-browser#7497](https://github.com/brave/brave-browser/issues/7497): Enabled Browser action button when Crypto Wallet is enabled
 - [brave-browser#8176](https://github.com/brave/brave-browser/issues/8176): Fixed an issue where logging back in didn't show backup seed phrase message
 - [brave-browser#10769](https://github.com/brave/brave-browser/issues/10769): Fix dark theme issue on sign type data connect window

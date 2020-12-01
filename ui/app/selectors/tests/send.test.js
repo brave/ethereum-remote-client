@@ -33,6 +33,7 @@ import {
   getGasButtonGroupShown,
   getTitleKey,
   isSendFormInError,
+  getIsContractAddress,
 } from '../send'
 import mockState from './send-selectors-test-data'
 
@@ -194,6 +195,60 @@ describe('send selectors', function () {
           decimals: 4,
           symbol: 'DEF',
         },
+      )
+    })
+  })
+
+  describe('getIsContractAddress()', function () {
+    it('should return true when the send address is the same as the selected token\'s contract address', function () {
+      assert.equal(
+        getIsContractAddress({
+          metamask: {
+            send: {
+              token: {
+                address: '0x8d6b81208414189a58339873ab429b6c47ab92d3',
+                decimals: 4,
+                symbol: 'DEF',
+              },
+              to: '0x8d6b81208414189a58339873ab429b6c47ab92d3',
+            },
+          },
+        }),
+        true,
+      )
+    })
+    it('should return true when the send address is the same as the selected token\'s contract address, capitalized input', function () {
+      assert.equal(
+        getIsContractAddress({
+          metamask: {
+            send: {
+              token: {
+                address: '0x8d6b81208414189a58339873ab429b6c47ab92d3',
+                decimals: 4,
+                symbol: 'DEF',
+              },
+              to: '0X8D6B81208414189A58339873AB429B6C47AB92D3',
+            },
+          },
+        }),
+        true,
+      )
+    })
+    it('should return false when the recipient address differs', function () {
+      assert.equal(
+        getIsContractAddress({
+          metamask: {
+            send: {
+              token: {
+                address: '0x8d6b81208414189a58339873ab429b6c47ab92d3',
+                decimals: 4,
+                symbol: 'DEF',
+              },
+              to: '0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B',
+            },
+          },
+        }),
+        false,
       )
     })
   })

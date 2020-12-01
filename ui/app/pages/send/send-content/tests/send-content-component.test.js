@@ -75,6 +75,26 @@ describe('SendContent Component', function () {
       assert(PageContainerContentChild.childAt(2).is(SendGasRow), 'row[3] should be SendGasRow')
       assert.equal(PageContainerContentChild.childAt(3).exists(), false)
     })
+
+    it('should render contract warning when sending a token to its own address', function () {
+      wrapper.setProps({
+        showHexData: false,
+        isOwnedAccount: true,
+        isContractAddress: true,
+      })
+      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
+      assert(PageContainerContentChild.childAt(0).is('.contract-error-dialog'), 'row[0] should be contract error dialog')
+    })
+
+    it('should not render contract warning when sending a token to an appropriate address', function () {
+      wrapper.setProps({
+        showHexData: false,
+        isOwnedAccount: true,
+        isContractAddress: false,
+      })
+      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
+      assert(PageContainerContentChild.childAt(0).is(SendAssetRow), 'row[0] should be SendAssetRow')
+    })
   })
 
   it('should not render the asset dropdown if token length is 0 ', function () {

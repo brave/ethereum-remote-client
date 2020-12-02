@@ -19,6 +19,7 @@ export default class SendContent extends Component {
     showHexData: PropTypes.bool,
     contact: PropTypes.object,
     isOwnedAccount: PropTypes.bool,
+    isContractAddress: PropTypes.bool,
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
@@ -27,6 +28,7 @@ export default class SendContent extends Component {
     return (
       <PageContainerContent>
         <div className="send-v2__form">
+          { this.maybeRenderContractWarning() }
           { this.maybeRenderAddContact() }
           <SendAssetRow />
           <SendAmountRow updateGas={this.updateGas} />
@@ -40,6 +42,27 @@ export default class SendContent extends Component {
           }
         </div>
       </PageContainerContent>
+    )
+  }
+
+  maybeRenderContractWarning () {
+    const { t } = this.context
+    const { isContractAddress } = this.props
+
+    if (!isContractAddress) {
+      return
+    }
+
+    return (
+      <div className="contract-error-dialog">
+        <Dialog
+          type="error"
+          className="error__dialog"
+          onClick={undefined}
+        >
+          {t('contractErrorMessage')}
+        </Dialog>
+      </div>
     )
   }
 

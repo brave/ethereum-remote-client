@@ -1,15 +1,173 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Okudum ve kabul ediyorum: $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "İzin verilen hesaplarınızın adreslerini görüntüleyin (gerekli)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Bağlı siteler"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 bu sitelere bağlı. Hesap adreslerinizi görüntüleyebilirler.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 herhangi bir siteye bağlı değil.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Bu siteye bağlı 1 hesabınız var."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Bu siteye bağlı $1 hesaplarınız var.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave bu siteye bağlı değil. Bir web3 sitesine bağlanmak için, o sitedeki bağlan butonunu bulun."
+  },
+  "currentAccountNotConnected": {
+    "message": "Mevcut hesabınız bağlı değil"
+  },
+  "switchToThisAccount": {
+    "message": "Bu hesaba geç"
+  },
+  "disconnectThisAccount": {
+    "message": "Bu hesabın bağlantısını kes"
+  },
+  "permissions": {
+    "message": "İzinler"
+  },
+  "showPermissions": {
+    "message": "İzinleri göster"
+  },
+  "authorizedPermissions": {
+    "message": "Aşağıdaki izinleri onayladınız"
+  },
+  "connectManually": {
+    "message": "Mevcut siteye elle bağlan"
+  },
+  "disconnect": {
+    "message": "Bağlantıyı Kes"
+  },
+  "disconnectAllAccounts": {
+    "message": "Tüm hesapların bağlantısını kes"
+  },
+  "disconnectPrompt": {
+    "message": "$1 bağlantısını kes"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Bağlantıyı kesmek istediğinizden emin misiniz? Sitenin işlevselliğini kaybedebilirsiniz."
+  },
+  "dismiss": {
+    "message": "Dismiss"
+  },
+  "showIncomingTransactions": {
+    "message": "Gelecek İşlemleri Göster"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Etherscan'in işlemler listesinde gelecek olan işlemleri göstermesi için seçin"
+  },
+  "chartOnlyAvailableEth": {
+    "message": "Chart only available on Ethereum networks."
+  },
+  "connecting": {
+    "message": "Connecting..."
+  },
+  "connectWithMetaMask": {
+    "message": "Brave ile Bağlanın"
+  },
+  "connectTo": {
+    "message": "Şuna bağlan: $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Şunların tümüne bağlanın: $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "hesaplar",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Şuna bağlan: $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 hesap",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
+  },
+  "contractInteraction": {
+    "message": "Contract Interaction"
+  },
   "reject": {
     "message": "Reddetmek"
+  },
+  "about": {
+    "message": "About"
+  },
+  "aboutSettingsDescription": {
+    "message": "Sürüm, destek merkezi ve iletişim bilgileri"
+  },
+  "acceleratingATransaction": {
+    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 bu maksimum miktara erişim sağlayabilir ve harcama yapabilir",
+    "description": "$1 is the url of the site requesting ability to spend"
+  },
+  "accessingYourCamera": {
+    "message": "Accessing your camera..."
   },
   "account": {
     "message": "Hesap"
   },
   "accountDetails": {
-    "message": "Hesap Detayları"
+    "message": "Hesap detayları"
   },
   "accountName": {
     "message": "Hesap İsmi"
+  },
+  "accountOptions": {
+    "message": "Account Options"
+  },
+  "accountSelectionRequired": {
+    "message": "You need to select an account!"
+  },
+  "active": {
+    "message": "Etkin"
+  },
+  "activity": {
+    "message": "Eylem"
+  },
+  "activityLog": {
+    "message": "activity log"
+  },
+  "addNetwork": {
+    "message": "Add Network"
+  },
+  "addRecipient": {
+    "message": "Add Recipient"
+  },
+  "advanced": {
+    "message": "Advanced"
+  },
+  "advancedSettingsDescription": {
+    "message": "Geliştirici özelliklerine erişin, Durum Kayıtlarını indirin, Hesabı Sıfırlayın, testnet ve özel RPC kurun "
+  },
+  "advancedOptions": {
+    "message": "Advanced Options"
+  },
+  "addToAddressBook": {
+    "message": "Add to address book"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "e.g. John D."
+  },
+  "addAlias": {
+    "message": "Add alias"
   },
   "addToken": {
     "message": "Jeton ekle"
@@ -17,40 +175,143 @@
   "addTokens": {
     "message": "Jetonlar ekle"
   },
+  "addSuggestedTokens": {
+    "message": "Add Suggested Tokens"
+  },
+  "addAcquiredTokens": {
+    "message": "Brave kullanarak elde ettiğiniz tokenleri ekleyin"
+  },
+  "alerts": {
+    "message": "Uyarılar"
+  },
+  "alertsSettingsDescription": {
+    "message": "Her uyarıyı etkinleştirin veya devre dışı bırakın"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Seçili ve bağlı olmayan bi hesapla websitesinde gezinme"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Bu uyarı, bağlı bir Web3 sitesinde siz gezinirken açılan pencerede çıkar ama şu anda seçili hesap bağlı değil."
+  },
+  "allowOriginSpendToken": {
+    "message": "$1 için $2 harcamasına izin verilsin mi?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Bu sitenin şunu yapmasına izin ver:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Bu harici eklentiye izin ver:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "$1 için aşağıdaki miktarı çekmesine ve harcama yapmasına izin ver:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
   "amount": {
     "message": "Tutar"
+  },
+  "amountWithColon": {
+    "message": "Tutar:"
   },
   "appDescription": {
     "message": "Ethereum Tarayıcı Uzantısı",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Onaylamak"
+    "message": "Harcama limitini onaylayın"
+  },
+  "approveSpendLimit": {
+    "message": "$1 harcama limitidni onayla",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Onaylandı"
   },
+  "asset": {
+    "message": "Asset"
+  },
+  "assets": {
+    "message": "Varlıklar"
+  },
   "attemptingConnect": {
     "message": "Blockchain'e bağlanmayı deniyor"
+  },
+  "attemptToCancel": {
+    "message": "Attempt to Cancel?"
+  },
+  "attemptToCancelDescription": {
+    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
   },
   "attributions": {
     "message": "Atıflar"
   },
+  "autoLockTimeLimit": {
+    "message": "Auto-Lock Zamanlayıcı (dakika)"
+  },
+  "autoLockTimeLimitDescription": {
+    "message": "Brave kilitlenmeden önce boş zamanı dakika olarak belirleyin."
+  },
+  "average": {
+    "message": "Average"
+  },
   "back": {
     "message": "Geri"
+  },
+  "backToAll": {
+    "message": "Back to All"
+  },
+  "backupApprovalNotice": {
+    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+  },
+  "backupApprovalInfo": {
+    "message": "Bu gizli kod, cihazınızı kaybetme, şifrenizi unutma, Brave'i tekrardan kurmak zorunda kalma veya cüzdanınıza başka bir cihazdan erişmeniz durumunda, cüzdanınızı kurtarmak için gereklidir."
+  },
+  "backupNow": {
+    "message": "Backup now"
   },
   "balance": {
     "message": "Bakiye:"
   },
+  "balanceOutdated": {
+    "message": "Balance may be outdated"
+  },
+  "basic": {
+    "message": "Basic"
+  },
+  "blockExplorerUrl": {
+    "message": "Block Explorer"
+  },
+  "blockExplorerView": {
+    "message": "View account at $1",
+    "description": "$1 replaced by URL for custom block explorer"
+  },
   "blockiesIdenticon": {
     "message": "Blockies Identicon kullan"
   },
+  "nonceField": {
+    "message": "İşlem nonsunu özelleştir"
+  },
+  "nonceFieldHeading": {
+    "message": "Özel Nons"
+  },
+  "nonceFieldDescription": {
+    "message": "Onay ekranlarında nonsu (işlem numarasını) değiştirmek için bunu açın. Bu, geişmiş bir özelliktir, dikkatli kullanın."
+  },
+  "browserNotSupported": {
+    "message": "Your Browser is not supported..."
+  },
   "builtInCalifornia": {
-    "message": "Brave California'da tasarlandı ve yaratıldı"
+    "message": "Brave Kaliforniya'da tasarlanmış ve oluşturulmuştur."
+  },
+  "buyWithWyre": {
+    "message": "Buy ETH with Wyre"
+  },
+  "buyWithWyreDescription": {
+    "message": "Wyre, doğrudan Brave hesabınıza ETH yatırmanız için hesap kartı kullanmanıza izin verir."
   },
   "buyCoinSwitch": {
     "message": "CoinSwitch'de satın al"
@@ -58,11 +319,44 @@
   "buyCoinSwitchExplainer": {
     "message": "Cairnswich, 300'den fazla kriptona en iyi oranda eşlik eden tek durak noktasıdır."
   },
+  "bytes": {
+    "message": "Bytes"
+  },
+  "off": {
+    "message": "Off"
+  },
   "ok": {
     "message": "Tamam"
   },
+  "on": {
+    "message": "On"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "Block Explorer URL (optional)"
+  },
   "cancel": {
     "message": "Vazgeç"
+  },
+  "cancelAttempt": {
+    "message": "Cancel Attempt"
+  },
+  "cancellationGasFee": {
+    "message": "Cancellation Gas Fee"
+  },
+  "cancelled": {
+    "message": "Cancelled"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "Donanım Cüzdanınıza bağlanmak için Brave'i Google Chrome'da kullanmalısınız."
   },
   "confirm": {
     "message": "Onayla"
@@ -71,7 +365,25 @@
     "message": "Onaylandı"
   },
   "confirmPassword": {
-    "message": "Şifreyi onayla"
+    "message": "Şifreyi Onayla"
+  },
+  "confirmSecretBackupPhrase": {
+    "message": "Confirm your Secret Backup Phrase"
+  },
+  "congratulations": {
+    "message": "Congratulations"
+  },
+  "connectAccountOrCreate": {
+    "message": "Hesabı bağlayın ya da yeni oluşturun"
+  },
+  "connectHardwareWallet": {
+    "message": "Connect Hardware Wallet"
+  },
+  "connect": {
+    "message": "Connect"
+  },
+  "connectingTo": {
+    "message": "Connecting to $1"
   },
   "connectingToKovan": {
     "message": "Kovan Test Ağına bağlanıyor"
@@ -85,6 +397,24 @@
   "connectingToRinkeby": {
     "message": "Rinkeby Test Ağına bağlanıyor"
   },
+  "connectingToLocalhost": {
+    "message": "Connecting to Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Connecting to Goerli Test Network"
+  },
+  "contacts": {
+    "message": "Kişiler"
+  },
+  "contactsSettingsDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "contactUs": {
+    "message": "Bizimle İletişime Geçin!"
+  },
+  "continueToWyre": {
+    "message": "Continue to Wyre"
+  },
   "continueToCoinSwitch": {
     "message": "CoinSwitch'e devam et"
   },
@@ -93,6 +423,15 @@
   },
   "copiedExclamation": {
     "message": "Kopyalandı!"
+  },
+  "copyAddress": {
+    "message": "Copy address to clipboard"
+  },
+  "copyTransactionId": {
+    "message": "Copy Transaction ID"
+  },
+  "copiedTransactionId": {
+    "message": "Copied Transaction ID"
   },
   "copyToClipboard": {
     "message": "Panoya kopyala"
@@ -106,14 +445,38 @@
   "createAccount": {
     "message": "Hesap Oluştur"
   },
+  "createAWallet": {
+    "message": "Create a Wallet"
+  },
+  "createPassword": {
+    "message": "Create Password"
+  },
+  "currencyConversion": {
+    "message": "Currency Conversion"
+  },
+  "currentExtension": {
+    "message": "Mevcut uzantı sayfası"
+  },
+  "currentLanguage": {
+    "message": "Current Language"
+  },
   "customGas": {
     "message": "Gas'i özelleştir"
+  },
+  "customGasSubTitle": {
+    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
   },
   "customToken": {
     "message": "Özel Jeton"
   },
   "customRPC": {
     "message": "Özel RPC"
+  },
+  "customSpendLimit": {
+    "message": "Özel Harcama Limiti"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Hesap verilerinizin bir kısmı, önceki Brave yüklemeniz sırasında yedeklendi. Buna ayarlarınız, kişileriniz ve paralarınız dahil olabilir. Bu verileri şimdi eski haline getirmek ister misiniz?"
   },
   "decimalsMustZerotoTen": {
     "message": "Ondalıklar en azından 0 olmalı ve 36'dan büyük olmamalı."
@@ -123,6 +486,12 @@
   },
   "defaultNetwork": {
     "message": "Ether işlemleri için varsayılan ağ Main Net."
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
   },
   "deposit": {
     "message": "Yatır"
@@ -142,8 +511,20 @@
   "done": {
     "message": "Bitti"
   },
+  "dontShowThisAgain": {
+    "message": "Bunu tekrar gösterme"
+  },
+  "downloadGoogleChrome": {
+    "message": "Download Brave Software Brave"
+  },
+  "downloadSecretBackup": {
+    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+  },
   "downloadStateLogs": {
     "message": "Durum kayıtlarını indir"
+  },
+  "dontHaveAHardwareWallet": {
+    "message": "Don’t have a hardware wallet?"
   },
   "dropped": {
     "message": "Bırakıldı"
@@ -151,17 +532,128 @@
   "edit": {
     "message": "Düzenle"
   },
+  "editContact": {
+    "message": "Edit Contact"
+  },
+  "editPermission": {
+    "message": "İzni Düzenle"
+  },
+  "endOfFlowMessage1": {
+    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+  },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Save a backup in multiple places."
+  },
+  "endOfFlowMessage4": {
+    "message": "Never share the phrase with anyone."
+  },
+  "endOfFlowMessage5": {
+    "message": "E-dolandırıclığa dikkat edin! Brave kaynak ifadenizi durduk yere sizden asla istemez."
+  },
+  "endOfFlowMessage6": {
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+  },
+  "endOfFlowMessage7": {
+    "message": "Sorunuz veya şüphelendiğiniz bir şey olursa, support@brave.com'a e-posta gönderin."
+  },
+  "endOfFlowMessage8": {
+    "message": "Brave kaynak ifadenizi kurtaramaz."
+  },
+  "endOfFlowMessage9": {
+    "message": "Learn more."
+  },
+  "endOfFlowMessage10": {
+    "message": "All Done"
+  },
+  "externalExtension": {
+    "message": "Harici Eklenti"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" bu sekmeyi kapatacak ve doğrudan şuraya geri yönlendirecek: $2",
+    "description": "Return the user to the site that initiated onboarding"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
+  },
+  "enterMaxSpendLimit": {
+    "message": "Maksimum Harcama Limitini Girin"
+  },
   "enterPassword": {
     "message": "Parolanızı girin"
   },
+  "enterPasswordContinue": {
+    "message": "Enter password to continue"
+  },
+  "errorCode": {
+    "message": "Kod: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Hata Detayları",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Mesaj: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Kod: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave bir hatayla karşılaştı",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Sayfayı tekrar yüklemeyi deneyin veya support@brave.com adresinden destek ekibi ile iletişime geçin",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Popup ekranını kapatıp yeniden açmayı deneyin ya da support@brave.com adresinden destek alın",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Dizi:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
+  },
   "etherscanView": {
     "message": "Hesabı Etherscan üzerinde izle"
+  },
+  "estimatedProcessingTimes": {
+    "message": "Estimated Processing Times"
+  },
+  "expandView": {
+    "message": "Görünümü Genişlet"
   },
   "exportPrivateKey": {
     "message": "Özel anahtarı ver"
   },
   "failed": {
     "message": "Başarısız oldu"
+  },
+  "failureMessage": {
+    "message": "Bir hata oluştu ve eylemi tamamlayamadık"
+  },
+  "fast": {
+    "message": "Fast"
+  },
+  "faster": {
+    "message": "Faster"
+  },
+  "feeAssociatedRequest": {
+    "message": "Bu isteğe bir ücret bağlı."
   },
   "fiat": {
     "message": "Para",
@@ -171,17 +663,59 @@
     "message": "Dosya alma çalışmıyor mu? Buraya tıklayın!",
     "description": "Helps user import their account from a JSON file"
   },
+  "forgetDevice": {
+    "message": "Forget this device"
+  },
   "from": {
     "message": "Kimden"
+  },
+  "fromAddress": {
+    "message": "Gönderen: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "İşlev: Onay"
+  },
+  "functionType": {
+    "message": "Function Type"
   },
   "gasLimit": {
     "message": "Gas Limiti"
   },
+  "gasLimitInfoModalContent": {
+    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+  },
   "gasLimitTooLow": {
     "message": "Gas limiti en az 21000 olmalıdır"
   },
+  "gasUsed": {
+    "message": "Gas Used"
+  },
   "gasPrice": {
     "message": "Gas Fiyatı (GWEI)"
+  },
+  "gasPriceExtremelyLow": {
+    "message": "Gas Price Extremely Low"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+  },
+  "gasPriceNoDenom": {
+    "message": "Gas Price"
+  },
+  "gdprMessage": {
+    "message": "Bu veri kümelenmiş durumda ve bu yüzden Genel Verileri Koruma Kanunu (AB) 2016/679'un amaçlarına göre anonimdir. Gizlilik uygulamamıza ilişkin daha fazka bilgi için lütfen şuna bakın: $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Gizlilik Politikası buradan",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
+  "general": {
+    "message": "General"
+  },
+  "generalSettingsDescription": {
+    "message": "Currency conversion, primary currency, language, blockies identicon"
   },
   "getEther": {
     "message": "Ether Al"
@@ -190,15 +724,49 @@
     "message": "Musluktan $1 karşılığı Ether alın",
     "description": "Displays network name for Ether faucet"
   },
+  "getHelp": {
+    "message": "Get Help."
+  },
+  "getStarted": {
+    "message": "Get Started"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "Donanım"
+  },
+  "hardwareWalletConnected": {
+    "message": "Hardware wallet connected"
+  },
+  "hardwareWallets": {
+    "message": "Connect a hardware wallet"
+  },
+  "hardwareWalletsMsg": {
+    "message": "Brave'de kullanmak istediğiniz bir donanım cüzdanı seçin"
+  },
+  "havingTroubleConnecting": {
+    "message": "Having trouble connecting?"
+  },
   "here": {
     "message": "burada",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hexData": {
+    "message": "Hex Data"
+  },
   "hide": {
     "message": "Gizle"
   },
+  "hideTokenSymbol": {
+    "message": "Şunu Gizle: $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "Jetonu gizle?"
+  },
+  "history": {
+    "message": "History"
   },
   "import": {
     "message": "Al",
@@ -208,14 +776,32 @@
     "message": "Hesap Al"
   },
   "importAccountMsg": {
-    "message": " Alınan hesaplar orjinal kaynakifadenizle yarattığınız Brave hesabınızla ilişkilendirilmez. Alınan hesaplar ile ilgili daha fazla bilgi edinin "
+    "message": "Aktarılan hesaplar, asıl Brave hesabınızın seedphrase'i ile ilişkilendirilmeyecektir. Aktarılan hesaplarla ilgili daha fazlasını öğrenin"
+  },
+  "importAccountSeedPhrase": {
+    "message": "Kaynak ifadeli bir hesabı içe aktar"
+  },
+  "importWallet": {
+    "message": "Cüzdanı İçe Aktarın"
+  },
+  "importYourExisting": {
+    "message": "24 kelimelik bir seed phrase kullanarak mevcut bir cüzdanınızı içe aktarın"
   },
   "imported": {
     "message": "Alındı",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
   "infoHelp": {
     "message": "Bilgi ve yardım"
+  },
+  "initialTransactionConfirmed": {
+    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+  },
+  "insufficientBalance": {
+    "message": "Insufficient balance."
   },
   "insufficientFunds": {
     "message": "Yetersiz kaynak."
@@ -229,6 +815,18 @@
   "invalidAddressRecipient": {
     "message": "Alıcı adresi geçersiz"
   },
+  "knownAddressRecipient": {
+    "message": "Known contract address."
+  },
+  "knownTokenWarning": {
+    "message": "Bu eylem, cüzdanınızda zaten listelenmiş olan ve kimlik avında kullanılabilecek olan tokenleri düzenleyecektir. Bu tokenlerin neyi temsil ettiğini değiştirmek istediğinizden emin değilseniz onaylamayın. "
+  },
+  "reusedTokenNameWarning": {
+    "message": "Buradaki bir para, izlediğiniz başka bir paranın sembolü olabilir, ve bu kafa karıştırıcı ya da aldatıcı olabilir."
+  },
+  "invalidAddressRecipientNotEthNetwork": {
+    "message": "Not ETH network, set to lowercase"
+  },
   "invalidInput": {
     "message": "Geçersiz giriş."
   },
@@ -236,7 +834,22 @@
     "message": "Geçersiz RPC URI"
   },
   "invalidBlockExplorerURL": {
-    "message": "Geçersiz Block Explorer URI"
+    "message": "Geçersiz Blok Gezgini Uzantısı"
+  },
+  "invalidSeedPhrase": {
+    "message": "Invalid seed phrase"
+  },
+  "ipfsGateway": {
+    "message": "IPFS Geçidi"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ENS içerik çözünürlüğünü kullanmak için IPFS CID geçidinin uzantısını girin."
+  },
+  "invalidIpfsGateway": {
+    "message": "Geçersiz IPFS Geçidi: Değer geçerli bir uzantı olmalı"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Yasaklı IPFS Geçidi: Lütfen bir CID geçidi belirtin"
   },
   "jsonFile": {
     "message": "JSON Dosyası",
@@ -248,8 +861,17 @@
   "max": {
     "message": "Maksimum"
   },
+  "lastConnected": {
+    "message": "Son Bağlantı"
+  },
   "learnMore": {
     "message": "Daha fazla bilgi."
+  },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "letsGoSetUp": {
+    "message": "Yes, let’s get set up!"
   },
   "likeToAddTokens": {
     "message": "Bu jetonlara adres eklemek ister misiniz?"
@@ -257,35 +879,71 @@
   "links": {
     "message": "Bağlantılar"
   },
+  "liveGasPricePredictions": {
+    "message": "Live Gas Price Predictions"
+  },
   "loading": {
     "message": "Yükleniyor..."
   },
   "loadingTokens": {
     "message": "Jetonlar yükleniyor..."
   },
-  "unlock": {
-    "message": "Giriş yap"
+  "loadMore": {
+    "message": "Load More"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
   },
   "lock": {
-    "message": "Çıkış"
+    "message": "Kilit"
+  },
+  "lockTimeTooGreat": {
+    "message": "Kilit zamanı fazla harika"
   },
   "mainnet": {
     "message": "Main Ethereum Ağı"
   },
+  "memorizePhrase": {
+    "message": "Memorize this phrase."
+  },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "Mesaj"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Artık Brave'deki hesap bağlantılarınız üzerinde daha fazla kontrol sahibisiniz."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Bağlantı durumu butonu, gezindiğiniz websitesinin mevcut seçili hesabınıza bağlı olup olmadığını gösterir."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Bağlı hesaplarınızı yönetmek için buna tıklayın."
   },
   "metamaskDescription": {
     "message": "Brave Ethereum için güvenli bir kimlik kasasıdır."
   },
+  "metamaskVersion": {
+    "message": "Brave Sürümü"
+  },
+  "mobileSyncText": {
+    "message": "Please enter your password to confirm it's you!"
+  },
   "myAccounts": {
     "message": "Hesaplarım"
+  },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "Brave'de oluşturulmuş tüm hesaplarınız otomatik olarak bu bölüme eklenecek."
   },
   "mustSelectOne": {
     "message": "En az bir jeton seçilmeli"
   },
   "needEtherInWallet": {
-    "message": "Brave kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
+    "message": "Brave kullanarak merkezi olmayan uygulamalar ile etkileşime girmek istiyorsanız, cüzdanınızda Ether'e ihtiyacınız olacak."
   },
   "needImportFile": {
     "message": "Almak için bir dosya seçmelisiniz.",
@@ -294,30 +952,127 @@
   "negativeETH": {
     "message": "Negatif ETH miktarları gönderilemez."
   },
+  "networkName": {
+    "message": "Network Name"
+  },
   "networks": {
     "message": "Ağlar"
   },
+  "networkSettingsDescription": {
+    "message": "Add and edit custom RPC networks"
+  },
+  "nevermind": {
+    "message": "Nevermind"
+  },
   "newAccount": {
     "message": "Yeni Hesap"
+  },
+  "newAccountDetectedDialogMessage": {
+    "message": "New address detected! Click here to add to your address book."
   },
   "newAccountNumberName": {
     "message": "Hesap $1",
     "description": "Default name of next account to be created on create account screen"
   },
+  "newContact": {
+    "message": "New Contact"
+  },
   "newContract": {
     "message": "Yeni Sözleşme"
   },
   "newPassword": {
-    "message": "Yeni Parola (min 8 karakter)"
+    "message": "Yeni şifre (en az 8 karakter)"
+  },
+  "newNetwork": {
+    "message": "New Network"
+  },
+  "newToMetaMask": {
+    "message": "Brave sizin için yeni mi?"
+  },
+  "noAlreadyHaveSeed": {
+    "message": "No, I already have a seed phrase"
+  },
+  "protectYourKeys": {
+    "message": "Protect Your Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "Kaynak ifadenize dikkat edin — Brave'i taklit etme girişiminde bulunan websiteler bildirildi. Brave kaynak ifadenizi sizden asla istemez!"
+  },
+  "protectYourKeysMessage2": {
+    "message": "İfadenizi güvende tutun. Şüpheli bir şey görürseniz veya bir websiteden emin değilseniz, support@brave.com'a e-posta gönderin"
+  },
+  "rpcUrl": {
+    "message": "New RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "Sadece güvendiğiniz sitelere bağlanın."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Kötü amaçlı bşr Ethereum ağ sunucusu, blok zincirinin durumu hakkında yalan söyleyebilir ve ağ faaliyetinizi kaydedebilir. Sadece güvendiğiniz özel ağları ekleyin."
+  },
+  "optionalChainId": {
+    "message": "ChainID (optional)"
+  },
+  "optionalSymbol": {
+    "message": "Symbol (optional)"
+  },
+  "newTotal": {
+    "message": "New Total"
+  },
+  "newTransactionFee": {
+    "message": "New Transaction Fee"
   },
   "next": {
     "message": "Sonraki"
   },
+  "nextNonceWarning": {
+    "message": "Nons, önerilen $1 nonsundan daha yüksek",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Bu isim için bir adres tanımlanmamış."
   },
+  "noConversionRateAvailable": {
+    "message": "No Conversion Rate Available"
+  },
   "noTransactions": {
     "message": "İşlem yok"
+  },
+  "noThanks": {
+    "message": "Hayır, Teşekkürler"
+  },
+  "notCurrentAccount": {
+    "message": "Bu, doğru hesap mı? Cüzdanınızdaki mevcut seçili hesaptan farklı"
+  },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam not found"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Origin"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "participateInMetaMetrics": {
+    "message": "Participate in MetaMetrics"
+  },
+  "participateInMetaMetricsDescription": {
+    "message": "Brave'i daha iyi yapmamıza yardımcı olmak için MetaMetrics'e katılım sağlayın"
+  },
+  "password": {
+    "message": "Password"
   },
   "passwordsDontMatch": {
     "message": "Parolalar eşleşmiyor"
@@ -329,8 +1084,30 @@
     "message": "Özel anahtar dizinizi buraya yapıştırın:",
     "description": "For importing an account from a private key"
   },
+  "pending": {
+    "message": "Beklemede"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Bu izne onay verdiniz"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Bu izne onay vermediniz"
+  },
   "personalAddressDetected": {
     "message": "Kişisel adres tespit edilidi. Jeton sözleşme adresini girin."
+  },
+  "plusXMore": {
+    "message": "+ $1 daha",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Prev"
+  },
+  "primaryCurrencySetting": {
+    "message": "Primary Currency"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
   },
   "privacyMsg": {
     "message": "Gizlilik Şartları"
@@ -345,29 +1122,105 @@
   "privateNetwork": {
     "message": "Özel Ağ"
   },
+  "proposedApprovalLimit": {
+    "message": "Teklif Edilen Onay Limiti"
+  },
+  "queue": {
+    "message": "Queue"
+  },
+  "queued": {
+    "message": "Sıraya Alındı"
+  },
   "readdToken": {
     "message": "Gelecekte Bu jetonu hesap seçenekleri menüsünde “Jeton ekle”'ye giderek geri ekleyebilirsiniz."
+  },
+  "recents": {
+    "message": "Recents"
+  },
+  "receive": {
+    "message": "Al"
   },
   "recipientAddress": {
     "message": "Alıcı adresi"
   },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
+  },
+  "rejectAll": {
+    "message": "Reject All"
+  },
+  "rejectTxsN": {
+    "message": "Reject $1 transactions"
+  },
+  "rejectTxsDescription": {
+    "message": "You are about to batch reject $1 transactions."
+  },
   "rejected": {
     "message": "Rededildi"
+  },
+  "reset": {
+    "message": "Reset"
   },
   "resetAccount": {
     "message": "Hesabı sıfıla"
   },
+  "resetAccountDescription": {
+    "message": "Hesabınızı sıfırlamak, işlem geçmişinizi de temizleyecek. Bu, hesabınızdaki bakiyeleri değiştirmez veya kaynak ifadedinizi tekrar girmenizi gerektirmez."
+  },
+  "deleteNetwork": {
+    "message": "Delete Network?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
+  "remindMeLater": {
+    "message": "Remind me later"
+  },
   "restoreFromSeed": {
     "message": "Kaynak ifadeden geri getir. Restore from seed phrase"
+  },
+  "restoreAccountWithSeed": {
+    "message": "Restore your Account with Seed Phrase"
+  },
+  "restoreWalletPreferences": {
+    "message": "$1 kaynağından bir veri yedeğiniz bulundu. Cüzdan tercihlerini eski haline getirmek ister misiniz?",
+    "description": "$1 is the date at which the data was backed up"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "requests waiting to be acknowledged"
   },
   "required": {
     "message": "Gerekli"
   },
+  "restore": {
+    "message": "Restore"
+  },
   "revealSeedWords": {
-    "message": "Kaynak kelimelerini göster"
+    "message": "Kaynak İfadesini Göster"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
+  },
+  "revealSeedWordsDescription": {
+    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "DO NOT share this phrase with anyone!"
   },
   "revealSeedWordsWarning": {
     "message": "Açık bir yerde kaynak kelimeliriniz geri getirmeyin! Bu kelimeler tüm hesaplarınızı çalmak için kullanılabilir."
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeAccount": {
+    "message": "Remove account"
+  },
+  "removeAccountDescription": {
+    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+  },
+  "readyToConnect": {
+    "message": "Ready to Connect?"
   },
   "rinkeby": {
     "message": "Rinkeby Test Ağı"
@@ -375,26 +1228,92 @@
   "ropsten": {
     "message": "Ropsten Test Ağı"
   },
+  "goerli": {
+    "message": "Goerli Test Network"
+  },
   "save": {
     "message": "Kaydet"
+  },
+  "slow": {
+    "message": "Slow"
+  },
+  "slower": {
+    "message": "Slower"
+  },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
+  "scanInstructions": {
+    "message": "Place the QR code in front of your camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
   },
   "search": {
     "message": "Ara"
   },
+  "searchResults": {
+    "message": "Search Results"
+  },
+  "secretBackupPhrase": {
+    "message": "Secret Backup Phrase"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+  },
+  "secretBackupPhraseWarning": {
+    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+  },
   "secretPhrase": {
-    "message": "Kasanızı geri getirmek için gizli 24 kelimelik ifadenizi giriniz."
+    "message": "Kasanızı eski konuma getirmek için 24 kelimeli gizli ifadenizi buraya girin."
+  },
+  "securityAndPrivacy": {
+    "message": "Security & Privacy"
+  },
+  "securitySettingsDescription": {
+    "message": "Privacy settings and wallet seed phrase"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "Separate each word with a single space"
+  },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Kaynak ifadeyi panodan yapıştır"
+  },
+  "showSeedPhrase": {
+    "message": "Kaynak ifadeyi göster"
   },
   "seedPhraseReq": {
-    "message": "Kaynak ifadeleri 12 kelimedir."
+    "message": "Kaynak ifadeler 12, 15, 18, 21, veya 24 kelime içerir"
+  },
+  "selectingAllWillAllow": {
+    "message": "Tümünü seçerek, mevcut hesaplarınızın tümünü bu sitenin görmesine izin vermiş olursunuz. Bu siteye güvendiğinizden emin olun."
+  },
+  "selectAccounts": {
+    "message": "Hesap(ları) seç"
+  },
+  "selectAll": {
+    "message": "Tümünü seç"
   },
   "selectCurrency": {
     "message": "Döviz Seç"
   },
+  "selectEachPhrase": {
+    "message": "Please select each phrase in order to make sure it is correct."
+  },
+  "selectLocale": {
+    "message": "Select Locale"
+  },
   "selectType": {
     "message": "Tip Seç"
   },
+  "buy": {
+    "message": "Satın al"
+  },
   "send": {
     "message": "Gönder"
+  },
+  "sendAmount": {
+    "message": "Send Amount"
   },
   "sendETH": {
     "message": "ETH Gönder"
@@ -402,20 +1321,75 @@
   "sendTokens": {
     "message": "Jeton Gönder"
   },
+  "sentEther": {
+    "message": "sent ether"
+  },
+  "sentTokens": {
+    "message": "sent tokens"
+  },
+  "sendSpecifiedTokens": {
+    "message": "$1 gönder",
+    "description": "Symbol of the specified token"
+  },
+  "separateEachWord": {
+    "message": "Separate each word with a single space"
+  },
   "searchTokens": {
     "message": "Jeton ara"
+  },
+  "searchAccounts": {
+    "message": "Hesapları Ara"
+  },
+  "noAccountsFound": {
+    "message": "Bu arama isteği için hesap bulunamadı"
+  },
+  "selectAnAccount": {
+    "message": "Select an Account"
+  },
+  "selectAnAccountHelp": {
+    "message": "Brave'de görüntülenecek hesabı seçin"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
+  "selectHdPath": {
+    "message": "Select HD Path"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
   },
   "settings": {
     "message": "Ayarlar"
   },
+  "showAdvancedGasInline": {
+    "message": "Advanced gas controls"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Show Conversion on Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Select this to show fiat conversion on Testnets"
+  },
   "showPrivateKeys": {
     "message": "Özel anahtarları göster"
+  },
+  "showHexData": {
+    "message": "Show Hex Data"
+  },
+  "showHexDataDescription": {
+    "message": "Select this to show the hex data field on the send screen"
   },
   "sign": {
     "message": "İmza"
   },
   "signatureRequest": {
     "message": "İmza isteği"
+  },
+  "signatureRequest1": {
+    "message": "Mesaj"
   },
   "signed": {
     "message": "İmzalandı"
@@ -426,6 +1400,37 @@
   "sigRequest": {
     "message": "İmza isteği"
   },
+  "somethingWentWrong": {
+    "message": "Oops! Something went wrong."
+  },
+  "speedUp": {
+    "message": "Speed Up"
+  },
+  "speedUpCancellation": {
+    "message": "Speed up this cancellation"
+  },
+  "speedUpTransaction": {
+    "message": "Speed up this transaction"
+  },
+  "spendLimitPermission": {
+    "message": "Harcama limiti izni"
+  },
+  "spendLimitRequestedBy": {
+    "message": "$1 tarafından istenen harcama limiti",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Harcama limiti çok büyük"
+  },
+  "spendLimitInvalid": {
+    "message": "Harcama limiti geçersiz; pozitif bir rakam olmalı"
+  },
+  "switchNetworks": {
+    "message": "Switch Networks"
+  },
+  "stateLogFileName": {
+    "message": "Brave Durum Kayıtları"
+  },
   "stateLogs": {
     "message": "Durum Kayıtları"
   },
@@ -435,14 +1440,68 @@
   "stateLogError": {
     "message": "Durum kayıtlarını alma hatası"
   },
+  "statusConnected": {
+    "message": "Bağlı"
+  },
+  "statusNotConnected": {
+    "message": "Bağlı değil"
+  },
+  "step1HardwareWallet": {
+    "message": "1. Connect Hardware Wallet"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
+  },
+  "step2HardwareWallet": {
+    "message": "2. Select an Account"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. Web3 sitelerini ve daha fazlasını kullanmaya başlayın!"
+  },
+  "step3HardwareWalletMsg": {
+    "message": "Donanım hesabınızı, tıpkı herhangi bir Ethereum hesabınızı kullanıyormuşcasına kullanın. Web3 sitelerine bağlanın, ERC20 ve CryptoKitties gibi mübadelesi mümkün olmayan para alın ve depolayın."
+  },
+  "storePhrase": {
+    "message": "Store this phrase in a password manager like 1Password."
+  },
+  "submit": {
+    "message": "Gönder"
+  },
   "submitted": {
     "message": "Gönderildi"
   },
   "supportCenter": {
     "message": "Destek merkezimizi ziyaret edin"
   },
+  "symbol": {
+    "message": "Symbol"
+  },
   "symbolBetweenZeroTwelve": {
-    "message": "Sembol 11 karakter veya daha az olmalıdır."
+    "message": "Sembol, 11 ya da daha az karakterden oluşmalıdır."
+  },
+  "syncWithMobile": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileTitle": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileDesc": {
+    "message": "Hesaplarınızı ve bilgilerinizi mobil cihazınız ile eş zamanlayabilirsiniz. Brave mobil uygulamasını açın, \"Ayarlar\"a girip \"Tarayıcı Uzantısından Eş Zamanla\"ya dokunun"
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "Brave Mobil uygulamasını ilk kez açıyorsanız, telefonunuzdaki adımları takip etmeniz yeterli."
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "Bu kodu Brave mobil uygulamanız ile tarayın"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "Make sure nobody else is looking at your screen when you scan this code"
+  },
+  "syncWithMobileComplete": {
+    "message": "Verileriniz başarılı bir şekilde eş zamanlandı. Brave mobil uygulamanın keyfini çıkarın!"
   },
   "terms": {
     "message": "Kullanım şartları"
@@ -450,11 +1509,33 @@
   "testFaucet": {
     "message": "Test Musluğu"
   },
+  "thisWillCreate": {
+    "message": "This will create a new wallet and seed phrase"
+  },
+  "tips": {
+    "message": "Tips"
+  },
   "to": {
     "message": "Kime"
   },
+  "toAddress": {
+    "message": "Kime: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Alıcı:"
+  },
+  "token": {
+    "message": "Token"
+  },
   "tokenAlreadyAdded": {
     "message": "Jeton çoktan eklenmiş."
+  },
+  "tokenContractAddress": {
+    "message": "Token Contract Address"
+  },
+  "tokenOptions": {
+    "message": "Token seçenekleri"
   },
   "tokenSymbol": {
     "message": "Jeton Sembolü"
@@ -462,18 +1543,82 @@
   "total": {
     "message": "Toplam"
   },
+  "transaction": {
+    "message": "transaction"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmed at $2."
+  },
+  "transactionCreated": {
+    "message": "Transaction created with a value of $1 at $2."
+  },
+  "transactionDropped": {
+    "message": "Transaction dropped at $2."
+  },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+  },
+  "transactionUpdated": {
+    "message": "Transaction updated at $2."
+  },
+  "transactionErrored": {
+    "message": "Transaction encountered an error."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+  },
+  "transactionCancelSuccess": {
+    "message": "Transaction successfully cancelled at $2"
+  },
   "transactionError": {
     "message": "İşlem Hatası. Sözleşme kodundan kural dışı durum fırlatıldı."
+  },
+  "transactionErrorNoContract": {
+    "message": "Trying to call a function on a non-contract address."
+  },
+  "transactionFee": {
+    "message": "Transaction Fee"
+  },
+  "transactionTime": {
+    "message": "Transaction Time"
+  },
+  "showTransactionTimeDescription": {
+    "message": "Ana Ethereum Ağındayken eylem sekmesindeki bekleyen işlem zamanı tahminini görüntülemek için bunu seçin. Not: tahminler, ağ durumlarına göre değişen yaklaşık tahminlerdir"
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
+  "transferBetweenAccounts": {
+    "message": "Transfer between my accounts"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
   },
   "troubleTokenBalances": {
     "message": "Jeton bakiyelerinizi yüklerken sorun yaşadık. Buradan izleyebilirsiniz ",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Bu siteye güveniyor musunuz? İzin vererek, $1 için $2 geri almasına ve sizin için işlemleri otomatiğe almasını onaylamış olursunuz.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
+  "tryAgain": {
+    "message": "Try again"
+  },
   "typePassword": {
-    "message": "Parolanızı girin"
+    "message": "Brave şifrenizi yazın"
   },
   "unapproved": {
     "message": "Onaylanmadı"
+  },
+  "alertDisableTooltip": {
+    "message": "Bu, \"Ayarlar > Uyarılar\"dan değiştirilebilir"
+  },
+  "units": {
+    "message": "units"
   },
   "unknown": {
     "message": "Bilinmeyen"
@@ -481,23 +1626,90 @@
   "unknownNetwork": {
     "message": "Bilinmeyen özel ağ"
   },
+  "unknownQrCode": {
+    "message": "Error: We couldn't identify that QR code"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "Ooops! Something went wrong...."
+  },
+  "unknownCameraError": {
+    "message": "There was an error while trying to access your camera. Please try again..."
+  },
+  "unlimited": {
+    "message": "Limitsiz"
+  },
+  "unlock": {
+    "message": "Unlock"
+  },
+  "unlockMessage": {
+    "message": "The decentralized web awaits"
+  },
+  "updatedWithDate": {
+    "message": "Updated $1"
+  },
   "urlErrorMsg": {
-    "message": "URIler için HTTP/HTTPS öneki gerekmektedir."
+    "message": "Uzantılar, uygun HTTP/HTTPS ön ekini gerektirir."
+  },
+  "urlExistsErrorMsg": {
+    "message": "Uzantı zaten mevcut ağ listesinde var"
   },
   "usedByClients": {
     "message": "Farklı istemciler tarafından kullanılmakta"
   },
+  "usePhishingDetection": {
+    "message": "E-dolandırıclık Tespiti Kullan"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Ethereum kullanıcılarını hedef alan e-dolandırıcılık alanları için uyarı görüntüleyin"
+  },
+  "userName": {
+    "message": "Username"
+  },
   "viewAccount": {
     "message": "Hesabı İncele"
+  },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "View at $1"
+  },
+  "viewOnEtherscan": {
+    "message": "View on Etherscan"
+  },
+  "retryTransaction": {
+    "message": "İşlemi Tekrar Deneyin"
   },
   "visitWebSite": {
     "message": "Web sitemizi ziyaret edin"
   },
   "walletSeed": {
-    "message": "Cüzdan Kaynağı"
+    "message": "Kaynak ifade"
+  },
+  "welcomeBack": {
+    "message": "Welcome Back!"
   },
   "welcome": {
-    "message": "Brave'ya Hoşgeldiniz"
+    "message": "Brave'a Hoş Geldiniz"
+  },
+  "whatsThis": {
+    "message": "Bu nedir?"
+  },
+  "writePhrase": {
+    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+  },
+  "xOfY": {
+    "message": "$2'nin $1'i",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "You need to allow camera access to use this feature."
   },
   "yourSigRequested": {
     "message": "İmzanız isteniyor"
@@ -505,8 +1717,74 @@
   "youSign": {
     "message": "İmzalıyorsunuz"
   },
+  "yourPrivateSeedPhrase": {
+    "message": "Your private seed phrase"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Zero gas price on speed up"
+  },
+  "decryptRequest": {
+    "message": "İsteği çöz"
+  },
+  "decrypt": {
+    "message": "Şifreyi çöz"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 eyleminizi tamamlamak için bu mesajı okumak istiyor",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Mesajı çöz"
+  },
+  "decryptCopy": {
+    "message": "Kodlanmış mesajı kopyala"
+  },
+  "decryptInlineError": {
+    "message": "Bu mesajın kodu şu hatadan dolayı çözülemiyor: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Ver"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Kodlamanın genel anahtarını iste"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1, genel kodlama anahtarınızı ister. Onay verdiğinizde, bu site size kodlanmış mesajlar oluşturabilecek.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Kripto Cüzdan Gizli Yedekleme İfadesi"
+  },
+  "braveRewards": {
+    "message": "Brave Ödülleri"
+  },
+  "braveSettings": {
+    "message": "Brave Ayarları"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Kripto Cüzdanlar, Brave'deki kripto para biriminiz ve ilgili varlıklarınızı yönetmenize izin verir. Kripto Cüzdanlar, koleksiyonların yanı sıra ETH ve BAT gibi Ethereum paralarını destekler ve Dapps ile diğer akıllı kontratları yönetmenize imkan sağlar. Bunların hepsi, Ethereum'a ve diğer blok zinciri sistemlerine aşina olanlar — veya öğrenmeye istekli olanlar içindir."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Kripto Cüzdanı, bu kullanımdan doğabilecek tüm risklerden sadece kendinizin sorumlu olduğunu ve Brave Yazılımının, tesadüfen veya sonunda bu kullanımdan yaşayabileceğiniz zararlar dahil, hiçbir sorumluluk ya da yükümlülük taşımadığını kabul ediyorsanız kullanın. "
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Bunların tamamı şundan tamamen ayrıdır:"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Favori sitelerinizi desteklemek istediyseniz, o sitelere yönelin."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Kripto Cüzdanlar"
+  },
+  "disclosureConfirm": {
+    "message": "Anladım"
+  },
   "ledgerCreateSubText": {
     "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Ledger donanım cüzdanınızı bağlayın."
+  },
+  "metamaskImportSubText": {
+    "message": "Not: Metamask cüzdandan içeri aktarım yapıyorsanız, 24 yerine 12 kelime girin."
   },
   "newLocalWallet": {
     "message": "Yeni Yerel Cüzdan"
@@ -514,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "dApps'e erişmek ve kripto para birimlerini ve koleksiyon ögelerini güvenli biçimde depolamak için yeni bir Brave yerel cüzdanı oluşturun. Alım satım ücreti olmaksızın anonim biçimde jetonlar alıp satın."
   },
+  "passWarningOne": {
+    "message": "Bu şifre, özel anahtarınızı korur. Unutursanız kimse sıfırlayamaz, Brave bile!"
+  },
+  "providerErrorMessage": {
+    "message": "Bu cüzdan varsayılan Ethereum Dapp sununcunuz değil."
+  },
   "trezorCreateSubText": {
     "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Trezor donanım cüzdanınızı bağlayın."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Brave Kripto Cüzdan'a Hoşgeldiniz"
   }
 }

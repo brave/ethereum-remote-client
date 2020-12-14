@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Прочетох и приемам $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Преглед на адресите на разрешените ви акаунти (задължително)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Свързани сайтове"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 е свързан с тези сайтове. Те могат да видят адреса на вашия акаунт.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 не е свързан с никакви сайтове.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Имате 1 акаунт, свързан с този сайт."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Имате $1 акаунта, свързани с този сайт.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave не е свързан с този сайт. За да се свържете с web3 сайт, намерете бутона за свързване на техния сайт."
+  },
+  "currentAccountNotConnected": {
+    "message": "Текущият ви акаунт не е свързан"
+  },
+  "switchToThisAccount": {
+    "message": "Превключете към този акаунт"
+  },
+  "disconnectThisAccount": {
+    "message": "Прекъсване на връзката с този акаунт"
+  },
+  "permissions": {
+    "message": "Разрешения"
+  },
+  "showPermissions": {
+    "message": "Показване на разрешенията"
+  },
+  "authorizedPermissions": {
+    "message": "Одобрихте следните разрешения"
+  },
+  "connectManually": {
+    "message": "Ръчно свързване с текущия сайт"
+  },
+  "disconnect": {
+    "message": "Прекъсване на връзката"
+  },
+  "disconnectAllAccounts": {
+    "message": "Прекъсване на връзката с всички акаунти"
+  },
+  "disconnectPrompt": {
+    "message": "Прекъсване на връзката с $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Наистина ли искате да прекъснете връзката? Може да загубите функционалността на сайта."
+  },
+  "dismiss": {
+    "message": "Отхвърляне"
+  },
+  "showIncomingTransactions": {
+    "message": "Показване на входящи транзакции"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Изберете това, за да използвате Etherscan за показване на входящи транзакции в списъка с транзакции"
+  },
   "chartOnlyAvailableEth": {
     "message": "Диаграмата е достъпна само в мрежи на Ethereum."
+  },
+  "connecting": {
+    "message": "Установява се връзка..."
+  },
+  "connectWithMetaMask": {
+    "message": "Свързване с Brave"
+  },
+  "connectTo": {
+    "message": "Свързване с $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Свържете се с всичките си $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "акаунти",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Свързване с $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 акаунта",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Взаимодействие с договор"
@@ -16,6 +113,10 @@
   },
   "acceleratingATransaction": {
     "message": "* Ускоряването на транзакция чрез използване на по-висока цена на газа увеличава шансовете й да се обработва по-бързо от мрежата, но това не винаги е гарантирано."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 може да осъществи достъп и да похарчи до тази максимална сума",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Достъп до вашата камера ..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "Трябва да изберете акаунт!"
   },
+  "active": {
+    "message": "Активно"
+  },
+  "activity": {
+    "message": "Дейност"
+  },
   "activityLog": {
     "message": "Дневник на дейността"
   },
@@ -48,7 +155,7 @@
     "message": "Разширени"
   },
   "advancedSettingsDescription": {
-    "message": "Достъп до функции за разработчици, изтегляйте дневници, нулиране на акаунта, тестови мрежи за настройка и персонализиран RPC"
+    "message": "Достъп до функции за разработчици, изтегляне на отчети за състоянието, нулиране на акаунт, настройка на тестови мрежи и персонализиран RPC"
   },
   "advancedOptions": {
     "message": "Разширени опции"
@@ -72,27 +179,63 @@
     "message": "Добавете препоръчани жетони"
   },
   "addAcquiredTokens": {
-    "message": "Добавете жетоните, които сте придобили с помощта на Brave"
+    "message": "Добавете токените, които сте придобили с помощта на Brave"
+  },
+  "alerts": {
+    "message": "Сигнали"
+  },
+  "alertsSettingsDescription": {
+    "message": "Активирайте или деактивирайте всеки сигнал"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Преглеждате уебсайт с избран несвързан акаунт"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Това предупреждение се показва в изскачащия прозорец, когато разглеждате свързан Web3 сайт, но избраният в момента акаунт не е свързан."
+  },
+  "allowOriginSpendToken": {
+    "message": "Ще позволете ли на $1 да похарчи вашите $2?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Позволете на този сайт да:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Разрешете на това външно разширение да:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Позволете на $1 да тегли и харчи до следната сума:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Сума"
+  },
+  "amountWithColon": {
+    "message": "Количество:"
   },
   "appDescription": {
     "message": "\nПортфейл за етереум в браузъра Ви",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Одобри"
+    "message": "Одобрете лимита на разходите"
+  },
+  "approveSpendLimit": {
+    "message": "Одобряване лимит на разходите за $1",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Одобрено"
   },
   "asset": {
     "message": "Актив"
+  },
+  "assets": {
+    "message": "Активи"
   },
   "attemptingConnect": {
     "message": "Опит за свързване с blockchain."
@@ -107,10 +250,10 @@
     "message": "Функции"
   },
   "autoLockTimeLimit": {
-    "message": "Таймер за автоматично излизане (минути)"
+    "message": "Таймер за автоматично заключване (минути)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Задайте времето на неактивност в минути, преди Brave автоматично да Ви отпише от акаунта"
+    "message": "Задайте времето за бездействие в минути, преди Brave да се заключи."
   },
   "average": {
     "message": "Средно аритметично"
@@ -125,7 +268,7 @@
     "message": "Раправете резервно копие на вашия Secret Recovery код, за да запазите портфейла и средствата си."
   },
   "backupApprovalInfo": {
-    "message": "Този секретен код е необходим за възстановяване на портфейла ви, в случай че загубите устройството си, забравите паролата си, трябва да инсталирате отново Brave или искате да получите достъп до портфейла си на друго устройство."
+    "message": "Този таен код е необходим за възстановяване на портфейла ви, в случай че загубите устройството си, забравите паролата си, трябва да преинсталирате Brave или искате да осъществите достъп до портфейла си на друго устройство."
   },
   "backupNow": {
     "message": "Архивиране сега"
@@ -149,6 +292,15 @@
   "blockiesIdenticon": {
     "message": "Използване на Blockies Identicon"
   },
+  "nonceField": {
+    "message": "Персонализиране nonce на транзакцията"
+  },
+  "nonceFieldHeading": {
+    "message": "Персонализиран Nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "Включете това, за да промените nonce (номера на транзакцията) на екраните за потвърждение. Това е функция за напреднали, използвайте внимателно."
+  },
   "browserNotSupported": {
     "message": "Браузърът ви не се поддържа ..."
   },
@@ -159,7 +311,7 @@
     "message": "Купете ETH с Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre ви позволява да използвате кредитна карта, за да депозирате ETH право във вашата Brave сметка."
+    "message": "Wyre ви позволява да използвате дебитна карта, за да депозирате ETH направо във вашия акаунт в Brave."
   },
   "buyCoinSwitch": {
     "message": "Купете на CoinSwitch"
@@ -189,7 +341,7 @@
     "message": "Отмяна на опита"
   },
   "cancellationGasFee": {
-    "message": "Такса в газ за анулиране "
+    "message": "Такса в газ за анулиране \n"
   },
   "cancelled": {
     "message": "Отменен"
@@ -204,7 +356,7 @@
     "message": "Затваряне"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "За да се свържете с хардуерния си портфейл, трябва да използвате Brave в Google Chrome."
+    "message": "Трябва да използвате Brave в Google Chrome, за да се свържете с вашия хардуерен портфейл."
   },
   "confirm": {
     "message": "Потвърждаване"
@@ -220,6 +372,9 @@
   },
   "congratulations": {
     "message": "Поздравления"
+  },
+  "connectAccountOrCreate": {
+    "message": "Свържете акаунт или създайте нов"
   },
   "connectHardwareWallet": {
     "message": "Свържете хардуерен портфейл"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Свързване с тестова мрежа на Goerli"
+  },
+  "contacts": {
+    "message": "Контакти"
+  },
+  "contactsSettingsDescription": {
+    "message": "Добавете, редактирайте, премахвайте и управлявайте контактите си"
+  },
+  "contactUs": {
+    "message": "Свържете се с нас!"
   },
   "continueToWyre": {
     "message": "Продължете към Wyre"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "Конвертиране на валута"
   },
+  "currentExtension": {
+    "message": "Текуща страница на разширението"
+  },
   "currentLanguage": {
     "message": "Настоящ език"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC по избор"
+  },
+  "customSpendLimit": {
+    "message": "Персонализиран лимит на разходите"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Някои от данните на вашия акаунт бяха архивирани по време на предишна инсталация на Brave. Това може да включва вашите настройки, контакти и токени. Искате ли да възстановите тези данни сега?"
   },
   "decimalsMustZerotoTen": {
     "message": "Десетичните знаци трябва да бъдат най-малко 0 и не повече от 36."
@@ -338,6 +511,9 @@
   "done": {
     "message": "Готово"
   },
+  "dontShowThisAgain": {
+    "message": "Не показвайте това отново"
+  },
   "downloadGoogleChrome": {
     "message": "Изтеглете Google Chrome"
   },
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "Редактиране на контакт"
   },
+  "editPermission": {
+    "message": "Редактиране на разрешението"
+  },
   "endOfFlowMessage1": {
     "message": "Преминахте теста - пазете основната си фраза на сигурно място, това е Ваша отговорност!"
   },
@@ -372,22 +551,29 @@
     "message": "Никога не споделяйте фразата с никого."
   },
   "endOfFlowMessage5": {
-    "message": "Внимавайте с фишинга! Brave никога няма да поиска спонтанно вашата фраза зародиш."
+    "message": "Пазете се от фишинг! Brave никога няма да поиска спонтанно сийд фразата ви."
   },
   "endOfFlowMessage6": {
     "message": "Ако отново трябва да архивирате основната си фраза, можете да я намерите в Настройки -> Защита."
   },
   "endOfFlowMessage7": {
-    "message": "Ако имате въпроси или забележите нещо съмнително, изпратете имейл на support@brave.com."
+    "message": "Ако някога имате въпроси или видите нещо необичайно, изпратете имейл на support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave не може да възстанови ключовата Ви фраза. Научете повече."
+    "message": "Brave не може да възстанови вашата сийд фраза."
   },
   "endOfFlowMessage9": {
     "message": "Научете повече."
   },
   "endOfFlowMessage10": {
     "message": "Всичко е готово"
+  },
+  "externalExtension": {
+    "message": "Външно разширение"
+  },
+  "onboardingReturnNotice": {
+    "message": "„$1“ ще затвори този раздел и ще се насочи обратно към $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Грешка при регистрацията на име на ENS"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "Въведете псевдоним"
   },
+  "enterMaxSpendLimit": {
+    "message": "Въведете лимит за максималните разходи"
+  },
   "enterPassword": {
     "message": "Въведете парола"
   },
   "enterPasswordContinue": {
     "message": "Въведете парола, за да продължите"
+  },
+  "errorCode": {
+    "message": "Код: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Подробности за грешката",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Съобщение: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Код: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave срещна грешка",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Опитайте отново, като презаредите страницата или се свържете с екипа за поддръжка на support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Опитайте отново, като затворите и отворите отново изскачащия прозорец, или се свържете с екипа за поддръжка на support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Стек:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Публичен адрес за етереум"
@@ -414,7 +635,7 @@
     "message": "Приблизителни времена за обработка"
   },
   "expandView": {
-    "message": "Разгъване на изглед"
+    "message": "Разгънете изгледа"
   },
   "exportPrivateKey": {
     "message": "Експортиране на частен ключ"
@@ -422,11 +643,21 @@
   "failed": {
     "message": "Неуспешно"
   },
+  "failureMessage": {
+    "message": "Нещо се обърка и не успяхме да завършим действието"
+  },
   "fast": {
     "message": "Бързо"
   },
   "faster": {
     "message": "По-бързо"
+  },
+  "feeAssociatedRequest": {
+    "message": "С тази заявка се прилага такса."
+  },
+  "fiat": {
+    "message": "Fiat",
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "Импортирането на файл не работи? Натиснете тук!",
@@ -437,6 +668,13 @@
   },
   "from": {
     "message": "От"
+  },
+  "fromAddress": {
+    "message": "От: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Функция: Одобрение"
   },
   "functionType": {
     "message": "Тип функция"
@@ -465,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Цена на газа"
   },
+  "gdprMessage": {
+    "message": "Тези данни са обобщени и следователно са анонимни за целите на Общия регламент за защита на данните (ЕС) 2016/679. За повече информация във връзка с нашите практики за поверителност, моля, вижте нашата $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Политика за поверителност тук",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Общ"
   },
@@ -488,7 +734,7 @@
     "message": "Радваме се да Ви видим."
   },
   "hardware": {
-    "message": "хардуер"
+    "message": "Хардуер"
   },
   "hardwareWalletConnected": {
     "message": "Свързан е хардуерен портфейл"
@@ -512,6 +758,10 @@
   "hide": {
     "message": "Скриване"
   },
+  "hideTokenSymbol": {
+    "message": "Скриване на $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "Скриване на жетон?"
   },
@@ -526,16 +776,16 @@
     "message": "Импортиране на акаунт"
   },
   "importAccountMsg": {
-    "message": "Импортираните акаунти няма да бъдат свързани с първоначално създадената ви фраза за метаМаск акаунт. Научете повече за импортираните акаунти"
+    "message": "Импортираните акаунти няма да бъдат свързани с първоначално създадената сийд фраза на акаунта ви в Brave. Научете повече за импортираните акаунти"
   },
   "importAccountSeedPhrase": {
-    "message": "Импортирайте акаунт с фраза зародиш"
+    "message": "Импортирайте акаунт със сийд фраза"
   },
   "importWallet": {
-    "message": "Импортиране на портфейла"
+    "message": "Импортиране на портфейл"
   },
   "importYourExisting": {
-    "message": "Импортирайте съществуващия си портфейл с помощта на фраза зародиш с 24 думи"
+    "message": "Импортирайте съществуващия си портфейл, като използвате сийд фраза от 24 думи"
   },
   "imported": {
     "message": "Импортирани",
@@ -568,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Известен адрес на договора."
   },
+  "knownTokenWarning": {
+    "message": "Това действие ще редактира токени, вече присъстващи в портфейла ви, което може да се използва за фишинг. Одобрете само ако сте сигурни, че искате да промените това, което представляват тези токени."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Тук токен използва повторно символ от друг токен, който гледате, това може да бъде объркващо или измамно."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Не е ETH мрежа, задаване на малки букви"
   },
@@ -578,10 +834,22 @@
     "message": "Невалиден RPC URL адрес"
   },
   "invalidBlockExplorerURL": {
-    "message": "Невалиден Block Explorer URL адрес"
+    "message": "Невалиден URL адрес на Block Explorer"
   },
   "invalidSeedPhrase": {
     "message": "Невалидна фраза зародиш"
+  },
+  "ipfsGateway": {
+    "message": "IPFS шлюз"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Въведете URL адреса на IPFS CID шлюза, който да използвате за разрешение на ENS съдържанието."
+  },
+  "invalidIpfsGateway": {
+    "message": "Невалиден IPFS шлюз: Стойността трябва да е валиден URL адрес"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Забранен IPFS шлюз: Моля, посочете CID шлюз"
   },
   "jsonFile": {
     "message": "JSON файл",
@@ -592,6 +860,9 @@
   },
   "max": {
     "message": "Макс"
+  },
+  "lastConnected": {
+    "message": "Последна връзка"
   },
   "learnMore": {
     "message": "Научете повече"
@@ -624,7 +895,10 @@
     "message": "Локален хост 8545"
   },
   "lock": {
-    "message": "Излизане"
+    "message": "Заключване"
+  },
+  "lockTimeTooGreat": {
+    "message": "Времето за заключване е твърде голямо"
   },
   "mainnet": {
     "message": "Основна мрежа на Етереум"
@@ -637,6 +911,15 @@
   },
   "message": {
     "message": "Съобщение"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Вече имате по-голям контрол върху връзките на акаунта си в Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Бутонът за състояние на връзката показва дали уебсайтът, който посещавате, е свързан с избрания в момента акаунт."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Щракнете върху това, за да управлявате свързаните си акаунти."
   },
   "metamaskDescription": {
     "message": "Свързва ви с Ethereum и децентрализираната мрежа."
@@ -654,13 +937,13 @@
     "message": "Моите акаунти в портфейла"
   },
   "myWalletAccountsDescription": {
-    "message": "Всичките ви създадени от Brave акаунти ще бъдат автоматично добавени в този раздел."
+    "message": "Всички ваши създадени акаунти в Brave автоматично ще бъдат добавени към този раздел."
   },
   "mustSelectOne": {
     "message": "Трябва да изберете поне 1 жетон."
   },
   "needEtherInWallet": {
-    "message": "За да взаимодействате с децентрализираните приложения, използвайки Brave, ще ви е необходим етер в портфейла ви."
+    "message": "За да взаимодействате с децентрализирани приложения, използващи Brave, ще ви трябва Ether в портфейла ви."
   },
   "needImportFile": {
     "message": "Трябва да изберете файл за импортиране.",
@@ -698,13 +981,13 @@
     "message": "Нов договор"
   },
   "newPassword": {
-    "message": "Нова парола (мин. 8 символа)"
+    "message": "Нова парола (минимум 8 символа)"
   },
   "newNetwork": {
     "message": "Нова мрежа"
   },
   "newToMetaMask": {
-    "message": "Нови ли сте в Brave?"
+    "message": "Нови сте в Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Не, вече имам фраза зародиш"
@@ -713,13 +996,19 @@
     "message": "Защитете ключовете си!"
   },
   "protectYourKeysMessage1": {
-    "message": "Внимавайте с вашата фраза - има съобщения за уебсайтове, които се опитват да имитират Brave. Brave никога няма да поиска вашата фраза-зародиш!"
+    "message": "Бъдете внимателни с вашата сийд фраза — има съобщения за уебсайтове, които се опитват да имитират Brave. Brave никога няма да поиска вашата сийд фраза!"
   },
   "protectYourKeysMessage2": {
-    "message": "Пазете фразата си. Ако забележите нещо съмнително или не сте сигурни за даден уебсайт, изпратете имейл на support@brave.com"
+    "message": "Пазете фразата си в безопасност. Ако забележите нещо съмнително или не сте сигурни за даден уебсайт, изпратете имейл на support@brave.com"
   },
   "rpcUrl": {
     "message": "Нов URL адрес за RPC"
+  },
+  "onlyConnectTrust": {
+    "message": "Свързвайте се само със сайтове, на които имате доверие."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Злонамерен доставчик на мрежа Ethereum може да лъже за състоянието на блокчейна и да записва вашата мрежова активност. Добавяйте само персонализирани мрежи, на които имате доверие."
   },
   "optionalChainId": {
     "message": "ChainID (по избор)"
@@ -736,6 +1025,10 @@
   "next": {
     "message": "Напред"
   },
+  "nextNonceWarning": {
+    "message": "Nonce е по-висок от предложения nonce от $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "За това име не е зададен адрес."
   },
@@ -744,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Нямате транзакции"
+  },
+  "noThanks": {
+    "message": "Не, благодаря"
+  },
+  "notCurrentAccount": {
+    "message": "Това ли е правилният акаунт? Той се различава от избрания в момента акаунт в портфейла ви"
   },
   "notEnoughGas": {
     "message": "Няма достатъчно газ"
@@ -770,7 +1069,7 @@
     "message": "Участвайте в MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Участвайте в MetaMetrics, за да ни помогнете да подобрим Brave"
+    "message": "Участвайте в MetaMetrics, за да ни помогнете да направим Brave по-добър"
   },
   "password": {
     "message": "Парола"
@@ -786,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "в изчакване"
+    "message": "Предстоящо"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Вие одобрихте това разрешение"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Не сте одобрили това разрешение"
   },
   "personalAddressDetected": {
     "message": "Открит е личен адрес. Въведете адреса на договора за жетони."
+  },
+  "plusXMore": {
+    "message": "+ още $1",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Предишен"
@@ -813,14 +1122,23 @@
   "privateNetwork": {
     "message": "Частна мрежа"
   },
+  "proposedApprovalLimit": {
+    "message": "Предложено ограничение за одобрение"
+  },
   "queue": {
     "message": "Опашка"
+  },
+  "queued": {
+    "message": "На опашка"
   },
   "readdToken": {
     "message": "Можете да добавите този жетон в бъдеще, като отидете на „Добавяне на жетон“ в менюто с опции на акаунти."
   },
   "recents": {
     "message": "Скорошни"
+  },
+  "receive": {
+    "message": "Получаване"
   },
   "recipientAddress": {
     "message": "Адрес на получателя"
@@ -847,7 +1165,7 @@
     "message": "Нулиране на акаунта"
   },
   "resetAccountDescription": {
-    "message": "Нулирането на вашия акаунт ще изчисти историята на транзакциите ви."
+    "message": "Нулирането на акаунта ви ще изчисти историята на транзакциите ви. Това няма да промени салдото във вашите сметки, нито ще изисква да въведете отново вашата сийд фраза."
   },
   "deleteNetwork": {
     "message": "Да се изтрие ли мрежата?"
@@ -864,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Възстановете акаунта си с фраза зародиш"
   },
+  "restoreWalletPreferences": {
+    "message": "Намерено е архивно копие на вашите данни от $1. Искате ли да възстановите предпочитанията на портфейла си?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "искания, които чакат да бъдат потвърдени"
   },
@@ -874,7 +1196,7 @@
     "message": "Възстановяване"
   },
   "revealSeedWords": {
-    "message": "Разкрий думите зародиш"
+    "message": "Разкриване на сийд фразата"
   },
   "revealSeedWordsTitle": {
     "message": "Фраза зародиш"
@@ -943,7 +1265,7 @@
     "message": "ВНИМАНИЕ: Никога не разкривайте резервната си фраза. Всеки с тази фраза може да вземе вашия етер завинаги."
   },
   "secretPhrase": {
-    "message": "Въведете своята тайна фраза от дванадесет думи тук, за да възстановите портфейла си."
+    "message": "Въведете тайната си фраза от 24 думи тук, за да възстановите сейфа си."
   },
   "securityAndPrivacy": {
     "message": "Сигурност и поверителност"
@@ -954,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Отделете всяка дума с един интервал"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Поставете сийд фразата от клипборда"
+  },
+  "showSeedPhrase": {
+    "message": "Показване на сийд фразата"
+  },
   "seedPhraseReq": {
-    "message": "Фразите зародиш се състоят от 12 думи"
+    "message": "Сийд фразите съдържат 12, 15, 18, 21 или 24 думи"
+  },
+  "selectingAllWillAllow": {
+    "message": "Избирането на всички ще позволи на този сайт да вижда всички ваши текущи акаунти. Уверете се, че имате доверие на този сайт."
+  },
+  "selectAccounts": {
+    "message": "Изберете акаунт(и)"
+  },
+  "selectAll": {
+    "message": "Избиране на всички"
   },
   "selectCurrency": {
     "message": "Изберете валута"
@@ -968,6 +1305,9 @@
   },
   "selectType": {
     "message": "Изберете тип"
+  },
+  "buy": {
+    "message": "Купи"
   },
   "send": {
     "message": "Изпращане"
@@ -987,17 +1327,27 @@
   "sentTokens": {
     "message": "изпратени жетони"
   },
+  "sendSpecifiedTokens": {
+    "message": "Изпращане на $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Отделете всяка дума с интервал"
   },
   "searchTokens": {
     "message": "Търсене на маркери"
   },
+  "searchAccounts": {
+    "message": "Търсене на акаунти"
+  },
+  "noAccountsFound": {
+    "message": "Не са намерени акаунти за дадената заявка за търсене"
+  },
   "selectAnAccount": {
     "message": "Изберете акаунт"
   },
   "selectAnAccountHelp": {
-    "message": "Изберете акаунта за преглед в Brave"
+    "message": "Изберете акаунта, който да видите в Brave"
   },
   "selectAHigherGasFee": {
     "message": "\nИзберете по-висока такса за газ, за ​​да ускорите обработката на Вашата транзакция.*"
@@ -1038,6 +1388,9 @@
   "signatureRequest": {
     "message": "Заявка за подпис"
   },
+  "signatureRequest1": {
+    "message": "Съобщение"
+  },
   "signed": {
     "message": "Подписан"
   },
@@ -1059,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Ускорете тази транзакция"
   },
+  "spendLimitPermission": {
+    "message": "Разрешение за ограничаване на разходите"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Ограничение на разходите, поискано от $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Ограничението на разходите е твърде голямо"
+  },
+  "spendLimitInvalid": {
+    "message": "Невалиден лимит на разходите; трябва да е положително число"
+  },
   "switchNetworks": {
     "message": "Превключване на мрежи"
+  },
+  "stateLogFileName": {
+    "message": "Отчети за състоянието на Brave"
   },
   "stateLogs": {
     "message": "Държавни дневници"
@@ -1070,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Грешка при извличането на дневници на състоянието."
+  },
+  "statusConnected": {
+    "message": "Установена е връзка"
+  },
+  "statusNotConnected": {
+    "message": "Няма връзка"
   },
   "step1HardwareWallet": {
     "message": "1. Свържете хардуерния портфейл"
@@ -1084,13 +1459,16 @@
     "message": "Изберете акаунта, който искате да видите. В даден момент можете да изберете само един."
   },
   "step3HardwareWallet": {
-    "message": "3. Започнете да използвате dApps и други!"
+    "message": "3. Започнете да използвате web3 сайтове и други!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Използвайте хардуерния си акаунт, както бихте правили с всеки акаунт в Ethereum. Влезте в dApps, изпратете Eth, купете и съхранявайте жетони ERC20 и незаменими жетони като CryptoKitties."
+    "message": "Използвайте своя хардуерен акаунт, както бихте използвали всеки акаунт в Ethereum. Свържете се с web3 сайтове, изпратете ETH, купете и съхранявайте токени ERC20 и незаменяеми токени като CryptoKitties."
   },
   "storePhrase": {
     "message": "Съхранявайте тази фраза в мениджър на пароли като 1Password."
+  },
+  "submit": {
+    "message": "Изпращане"
   },
   "submitted": {
     "message": "Изпратен"
@@ -1102,7 +1480,7 @@
     "message": "Символ"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Символът трябва да е 11 символа или по-малко."
+    "message": "Символът трябва да съдържа не повече от 11 знака."
   },
   "syncWithMobile": {
     "message": "Синхронизиране с мобилни устройства"
@@ -1111,10 +1489,10 @@
     "message": "Синхронизиране с мобилни устройства"
   },
   "syncWithMobileDesc": {
-    "message": "Можете да синхронизирате вашите акаунти и информация с мобилното си устройство. Отворете мобилното приложение Brave, отидете на „Настройки“ и докоснете „Синхронизиране от разширението на браузъра“"
+    "message": "Можете да синхронизирате своите акаунти и информация с мобилното си устройство. Отворете мобилното приложение Brave, отидете на „Настройки“ и натиснете „Синхронизиране от разширението на браузъра“"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Ако отворите приложението Brave Mobile за първи път, просто следвайте стъпките в телефона си."
+    "message": "Ако току-що отворихте мобилното приложение Brave за първи път, просто следвайте стъпките в телефона си."
   },
   "syncWithMobileScanThisCode": {
     "message": "Сканирайте този код с вашето мобилно приложение Brave"
@@ -1140,6 +1518,13 @@
   "to": {
     "message": "На"
   },
+  "toAddress": {
+    "message": "До: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "До:"
+  },
   "token": {
     "message": "Жетон"
   },
@@ -1148,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "Адрес на договор за жетони"
+  },
+  "tokenOptions": {
+    "message": "Опции за токените"
   },
   "tokenSymbol": {
     "message": "Символ на маркер"
@@ -1197,6 +1585,9 @@
   "transactionTime": {
     "message": "Време на транзакция"
   },
+  "showTransactionTimeDescription": {
+    "message": "Изберете това, за да се покаже прогнозното време на изчакващите транзакции в раздел Активност, докато сте в Главната мрежа на Ethereum. Забележка: прогнозите са приблизителни, въз основа на мрежовите условия."
+  },
   "transfer": {
     "message": "Трансфер"
   },
@@ -1210,14 +1601,21 @@
     "message": "Имахме проблеми със зареждането на вашите символи. Можете да ги видите",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Имате ли доверие на този сайт? Предоставяйки това разрешение, вие позволявате на $1 да изтегли вашите $2 и да автоматизира транзакциите за вас.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Нов опит"
   },
   "typePassword": {
-    "message": "Въведете паролата си за Brave"
+    "message": "Въведете вашата парола за Brave"
   },
   "unapproved": {
     "message": "Неодобрено"
+  },
+  "alertDisableTooltip": {
+    "message": "Това може да се промени в „Настройки > Сигнали“"
   },
   "units": {
     "message": "елементи"
@@ -1237,6 +1635,9 @@
   "unknownCameraError": {
     "message": "При опита за достъп до камерата Ви възникна грешка. Моля, опитайте отново..."
   },
+  "unlimited": {
+    "message": "Без ограничение"
+  },
   "unlock": {
     "message": "Отключване"
   },
@@ -1247,10 +1648,19 @@
     "message": "Актуализирано $1 "
   },
   "urlErrorMsg": {
-    "message": "URI изискват съответния HTTP / HTTPS префикс."
+    "message": "URL адресите изискват подходящия префикс HTTP/HTTPS."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL-адресът вече присъства в настоящия списък с мрежи"
   },
   "usedByClients": {
     "message": "Използва се от различни клиенти"
+  },
+  "usePhishingDetection": {
+    "message": "Използвайте откриване на фишинг"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Показване на предупреждение за фишинг домейни, насочени към потребители на Ethereum"
   },
   "userName": {
     "message": "Потребителско име"
@@ -1270,11 +1680,14 @@
   "viewOnEtherscan": {
     "message": "Преглед на Etherscan"
   },
+  "retryTransaction": {
+    "message": "Повторен опит за транзакция"
+  },
   "visitWebSite": {
     "message": "Посетете нашият уеб сайт"
   },
   "walletSeed": {
-    "message": "Начална фраза за портфейл "
+    "message": "Сийд фраза"
   },
   "welcomeBack": {
     "message": "Добре дошли отново!"
@@ -1282,8 +1695,15 @@
   "welcome": {
     "message": "Добре дошли в Brave"
   },
+  "whatsThis": {
+    "message": "Какво е това?"
+  },
   "writePhrase": {
     "message": "Напишете тази фраза на лист хартия и я съхранявайте на сигурно място. Ако искате още по-голяма сигурност, запишете я на няколко листа хартия и ги съхранявайте на 2 - 3 различни места."
+  },
+  "xOfY": {
+    "message": "$1 от $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Да, нека опитаме"
@@ -1303,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Нулева цена на газ при ускоряване"
   },
+  "decryptRequest": {
+    "message": "Заявка за дешифриране"
+  },
+  "decrypt": {
+    "message": "Дешифриране"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 иска да прочете това съобщение, за да завърши действието ви",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Дешифриране на съобщението"
+  },
+  "decryptCopy": {
+    "message": "Копиране на криптираното съобщение"
+  },
+  "decryptInlineError": {
+    "message": "Това съобщение не може да бъде дешифрирано поради грешка: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Осигуряване"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Заявете публичен ключ за криптиране"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 иска вашия публичен ключ за криптиране. Като се съгласите, този сайт ще може да ви съставя криптирани съобщения.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Тайна резервна фраза на Crypto Wallets"
+  },
+  "braveRewards": {
+    "message": "Brave награди"
+  },
+  "braveSettings": {
+    "message": "Настройки на Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallets ви позволява да работите с криптовалута и свързани активи в Brave. Crypto Wallets поддържа токени на Ethereum като ETH и BAT, както и колекционерски елементи, и ви позволява да работите с Ðapps и други интелигентни договори. Всичко това е предназначено за хора, които са запознати с Ethereum и други блокчейн системи — или са развълнувани да научат."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Използвайте Crypto Wallets, само ако приемате, че единствено вие носите отговорност за целия риск, свързан с тази употреба, и че Brave Software не носи отговорност или задължение за загуби, включително случайни или последващи загуби, които бихте могли да понесете в резултат на тази употреба."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Всичко това е напълно отделно от"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Така че, ако искате да подкрепите любимите си сайтове, вместо това се насочете към тях."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Крипто портфейли"
+  },
+  "disclosureConfirm": {
+    "message": "Разбирам"
+  },
   "ledgerCreateSubText": {
     "message": "Свържете хардуерния си портфейл Ledger, за да взаимодействате с dApps и да прехвърляте към други свързани портфейли. "
+  },
+  "metamaskImportSubText": {
+    "message": "Забележка: Ако импортирате от портфейла на Metamask, въведете 12 думи вместо 24."
   },
   "newLocalWallet": {
     "message": "Нов местен портфейл"
@@ -1312,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Създайте нов локален портфейл Brave за достъп до dApps и безопасно съхраняване на криптовалути и колекционерски  предмети. Търгувайте жетони анонимно, без такси за търговия."
   },
+  "passWarningOne": {
+    "message": "Тази парола защитава вашия частен ключ. Никой не може да я възстанови, ако я забравите, дори и Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "Този портфейл не е вашият доставчик на Ethereum Dapp по подразбиране."
+  },
   "trezorCreateSubText": {
     "message": "Свържете хардуерния си портфейл Trezor, за да взаимодействате с dApps и да извършвате прехвърляния към други свързани портфейли."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Добре дошли в Brave Crypto Wallets"
   }
 }

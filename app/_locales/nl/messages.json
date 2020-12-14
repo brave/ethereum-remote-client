@@ -1,6 +1,128 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Ik heb de $1 gelezen en ga ermee akkoord",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Bekijk de adressen van uw toegestane accounts (verplicht)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Gekoppelde sites"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 is gekoppeld aan deze sites. Zij kunnen uw accountadres bekijken.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 is niet gekoppeld aan welke site dan ook.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "U hebt 1 account aan deze site gekoppeld."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "U hebt $1 accounts aan deze site gekoppeld.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave is niet verbonden met deze site. Om verbinding te maken met een web3 site, vindt u de connect-knop op hun site."
+  },
+  "currentAccountNotConnected": {
+    "message": "Uw huidige account is niet verbonden"
+  },
+  "switchToThisAccount": {
+    "message": "Overschakelen naar deze account"
+  },
+  "disconnectThisAccount": {
+    "message": "Ontkoppel deze account"
+  },
+  "permissions": {
+    "message": "Rechten"
+  },
+  "showPermissions": {
+    "message": "Toestemmingen weergeven"
+  },
+  "authorizedPermissions": {
+    "message": "U hebt de volgende machtigingen verleend"
+  },
+  "connectManually": {
+    "message": "Handmatig verbinden met de huidige site"
+  },
+  "disconnect": {
+    "message": "Verbinding verbreken"
+  },
+  "disconnectAllAccounts": {
+    "message": "Alle accounts loskoppelen"
+  },
+  "disconnectPrompt": {
+    "message": "$1 ontkoppelen"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Weet u zeker dat u de verbinding wilt verbreken? U verliest mogelijk de functionaliteit van de site."
+  },
+  "dismiss": {
+    "message": "Dismiss"
+  },
+  "showIncomingTransactions": {
+    "message": "Toon inkomende transacties"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Selecteer dit om Etherscan te gebruiken om inkomende transacties weer te geven in de lijst met transacties"
+  },
+  "chartOnlyAvailableEth": {
+    "message": "Kaart alleen beschikbaar op Ethereum netwerken."
+  },
+  "connecting": {
+    "message": "Connecting..."
+  },
+  "connectWithMetaMask": {
+    "message": "Verbinding maken met Brave"
+  },
+  "connectTo": {
+    "message": "Verbinding maken met $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Maak verbinding met al uw $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "accounts",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Verbinding maken met $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 accounts",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
+  },
+  "contractInteraction": {
+    "message": "Contract Interaction"
+  },
   "reject": {
     "message": "Afwijzen"
+  },
+  "about": {
+    "message": "Over"
+  },
+  "aboutSettingsDescription": {
+    "message": "Versie, ondersteuningscentrum en contactgegevens"
+  },
+  "acceleratingATransaction": {
+    "message": "* Versnellen van een transactie door het gebruik van een hogere gas prijs verhoogt de kansen om sneller door het netwerk te worden verwerkt, maar dit wordt niet altijd gegarandeerd."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 mag toegang hebben en tot dit maximale bedrag uitgaven doen",
+    "description": "$1 is the url of the site requesting ability to spend"
+  },
+  "accessingYourCamera": {
+    "message": "Toegang tot jouw camera verkrijgen..."
+  },
+  "account": {
+    "message": "Account"
   },
   "accountDetails": {
     "message": "Accountgegevens"
@@ -8,43 +130,188 @@
   "accountName": {
     "message": "Accountnaam"
   },
+  "accountOptions": {
+    "message": "Account Opties"
+  },
+  "accountSelectionRequired": {
+    "message": "Je dient een account te selecteren!"
+  },
+  "active": {
+    "message": "Actief"
+  },
+  "activity": {
+    "message": "Activiteit"
+  },
+  "activityLog": {
+    "message": "activiteiten logbestand"
+  },
+  "addNetwork": {
+    "message": "Network toevoegen"
+  },
+  "addRecipient": {
+    "message": "Voeg ontvanger toe"
+  },
+  "advanced": {
+    "message": "Geavanceerd"
+  },
+  "advancedSettingsDescription": {
+    "message": "Krijg toegang tot ontwikkelaarsfuncties, download statuslogboeken, reset accounts, stel testnets in en aangepaste RPC."
+  },
+  "advancedOptions": {
+    "message": "Geavanceerde Opties"
+  },
+  "addToAddressBook": {
+    "message": "Voeg toe aan adresboek"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "e.g. John D."
+  },
+  "addAlias": {
+    "message": "Voeg alias toe"
+  },
   "addToken": {
     "message": "Voeg token toe"
   },
   "addTokens": {
     "message": "Tokens toevoegen"
   },
+  "addSuggestedTokens": {
+    "message": "Add Suggested Tokens"
+  },
+  "addAcquiredTokens": {
+    "message": "Voeg de tokens toe die u hebt verworven door Brave te gebruiken"
+  },
+  "alerts": {
+    "message": "Waarschuwingen"
+  },
+  "alertsSettingsDescription": {
+    "message": "Schakel elke waarschuwing in of uit"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Surfen op een website met een niet-gekoppelde account"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Deze waarschuwing wordt weergegeven in de popup wanneer u een gekoppelde web3 site doorzoekt, maar het momenteel geselecteerde account niet verbonden is."
+  },
+  "allowOriginSpendToken": {
+    "message": "Staat u $1 toe om uw $2 uit te geven?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Sta deze site toe:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Sta deze externe uitbreiding toe:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Sta $1 toe om tot het volgende bedrag op te nemen en uit te geven:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
   "amount": {
     "message": "Bedrag"
+  },
+  "amountWithColon": {
+    "message": "Bedrag:"
   },
   "appDescription": {
     "message": "Ethereum Browser-extensie",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Goedkeuren"
+    "message": "Uitgavenlimiet goedkeuren"
+  },
+  "approveSpendLimit": {
+    "message": "Uitgavenlimiet van $1 goedkeuren",
+    "description": "The token symbol that is being approved"
+  },
+  "approved": {
+    "message": "Goedgekeurd"
+  },
+  "asset": {
+    "message": "Bezit"
+  },
+  "assets": {
+    "message": "Activa"
   },
   "attemptingConnect": {
     "message": "Poging om verbinding te maken met blockchain."
   },
+  "attemptToCancel": {
+    "message": "Attempt to Cancel?"
+  },
+  "attemptToCancelDescription": {
+    "message": "Deze poging indienen garandeert niet dat je originele transactie ongedaan word gemaakt. Als het ongedaan maken succesvol is, zal de bovenstaande transactievergoeding worden berekend."
+  },
   "attributions": {
     "message": "Bevoegdheden"
+  },
+  "autoLockTimeLimit": {
+    "message": "Automatische vergrendelingstimer (minuten)"
+  },
+  "autoLockTimeLimitDescription": {
+    "message": "Stel de rusttijd in minuten in voordat Brave wordt vergrendeld."
+  },
+  "average": {
+    "message": "Gemiddeld"
   },
   "back": {
     "message": "Terug"
   },
+  "backToAll": {
+    "message": "Back to All"
+  },
+  "backupApprovalNotice": {
+    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+  },
+  "backupApprovalInfo": {
+    "message": "Deze geheime code is vereist om je wallet te herstellen als je je apparaat kwijtraakt, je wachtwoord vergeet, Brave opnieuw moet installeren of je wallet op een ander apparaat wilt openen."
+  },
+  "backupNow": {
+    "message": "Backup nu"
+  },
   "balance": {
     "message": "Balans:"
+  },
+  "balanceOutdated": {
+    "message": "Balance may be outdated"
+  },
+  "basic": {
+    "message": "Basic"
+  },
+  "blockExplorerUrl": {
+    "message": "Block Explorer"
+  },
+  "blockExplorerView": {
+    "message": "Bekijk account op $1",
+    "description": "$1 replaced by URL for custom block explorer"
   },
   "blockiesIdenticon": {
     "message": "Gebruik Blockies Identicon"
   },
+  "nonceField": {
+    "message": "Transactie-nonce aanpassen"
+  },
+  "nonceFieldHeading": {
+    "message": "Aangepaste nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "Zet dit aan om de nonce (transactienummer) op bevestigingsschermen te wijzigen. Dit is een geavanceerde functie, gebruik deze voorzichtig."
+  },
+  "browserNotSupported": {
+    "message": "Your Browser is not supported..."
+  },
   "builtInCalifornia": {
-    "message": "Brave is ontworpen en gebouwd in Californië."
+    "message": "Brave is ontwikkeld en gemaakt in Californië."
+  },
+  "buyWithWyre": {
+    "message": "Koop ETH met Wyre"
+  },
+  "buyWithWyreDescription": {
+    "message": "Met Wyre kunt u met een debetkaart direct ETH op uw Brave-account storten."
   },
   "buyCoinSwitch": {
     "message": "Koop op CoinSwitch"
@@ -52,14 +319,101 @@
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitch is de one-stop-bestemming om meer dan 300 cryptocurrencies tegen de beste prijs in te wisselen."
   },
+  "bytes": {
+    "message": "Bytes"
+  },
+  "off": {
+    "message": "Uit"
+  },
+  "ok": {
+    "message": "Ok"
+  },
+  "on": {
+    "message": "Aan"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "Block Explorer URL (optional)"
+  },
   "cancel": {
     "message": "Annuleer"
+  },
+  "cancelAttempt": {
+    "message": "Annuleringspoging"
+  },
+  "cancellationGasFee": {
+    "message": "Cancellation Gas Fee"
+  },
+  "cancelled": {
+    "message": "Geannuleerd"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Sluit"
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "U moet Brave op Google Chrome gebruiken om verbinding te maken met uw hardware-portemonnee."
   },
   "confirm": {
     "message": "Bevestigen"
   },
+  "confirmed": {
+    "message": "Bevestigd"
+  },
   "confirmPassword": {
-    "message": "bevestig wachtwoord"
+    "message": "Wachtwoord bevestigen"
+  },
+  "confirmSecretBackupPhrase": {
+    "message": "Confirm your Secret Backup Phrase"
+  },
+  "congratulations": {
+    "message": "Gefeliciteerd"
+  },
+  "connectAccountOrCreate": {
+    "message": "Maak verbinding met een account of maak een nieuw account aan"
+  },
+  "connectHardwareWallet": {
+    "message": "Verbind Hardware Wallet"
+  },
+  "connect": {
+    "message": "Verbinding maken"
+  },
+  "connectingTo": {
+    "message": "Verbinden met $1"
+  },
+  "connectingToKovan": {
+    "message": "Connecting to Kovan Test Network"
+  },
+  "connectingToMainnet": {
+    "message": "Verbinden met het Main Ethereum Netwerk"
+  },
+  "connectingToRopsten": {
+    "message": "Verbinden met het Ropsten Test Netwerk"
+  },
+  "connectingToRinkeby": {
+    "message": "Bezig met verbinden naar het Rinkeby Test Netwerk"
+  },
+  "connectingToLocalhost": {
+    "message": "Verbinden met Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Verbind naar het Goerli Test Netwerk"
+  },
+  "contacts": {
+    "message": "Contactpersonen"
+  },
+  "contactsSettingsDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "contactUs": {
+    "message": "Neem contact met ons op!"
+  },
+  "continueToWyre": {
+    "message": "Continue to Wyre"
   },
   "continueToCoinSwitch": {
     "message": "Ga verder naar CoinSwitch"
@@ -69,6 +423,15 @@
   },
   "copiedExclamation": {
     "message": "Gekopieerde!"
+  },
+  "copyAddress": {
+    "message": "Copy address to clipboard"
+  },
+  "copyTransactionId": {
+    "message": "Kopieer Transaction ID"
+  },
+  "copiedTransactionId": {
+    "message": "Copied Transaction ID"
   },
   "copyToClipboard": {
     "message": "Kopieer naar klembord"
@@ -82,11 +445,38 @@
   "createAccount": {
     "message": "Account aanmaken"
   },
+  "createAWallet": {
+    "message": "Wallet aanmaken"
+  },
+  "createPassword": {
+    "message": "Maak wachtwoord aan"
+  },
+  "currencyConversion": {
+    "message": "Valuta Conversie"
+  },
+  "currentExtension": {
+    "message": "Huidige uitbreidingspagina"
+  },
+  "currentLanguage": {
+    "message": "Huidige Taal"
+  },
   "customGas": {
     "message": "Pas Gas aan"
   },
+  "customGasSubTitle": {
+    "message": "Het verhogen van de vergoeding kan de verwerkingstijd verminderen, maar dat is niet gegarandeerd."
+  },
+  "customToken": {
+    "message": "Custom Token"
+  },
   "customRPC": {
     "message": "Aangepaste RPC"
+  },
+  "customSpendLimit": {
+    "message": "Aangepast bestedingslimiet"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Een gedeelte van uw accountgegevens is tijdens een eerdere installatie van Brave geback-upt. Dit kan onder andere uw instellingen, contactpersonen en tokens zijn. Wilt u deze gegevens nu herstellen?"
   },
   "decimalsMustZerotoTen": {
     "message": "Decimalen moeten minimaal 0 en niet meer dan 36 zijn."
@@ -97,11 +487,20 @@
   "defaultNetwork": {
     "message": "Het standaardnetwerk voor Ether-transacties is Main Net."
   },
+  "delete": {
+    "message": "Verwijder"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
+  },
   "deposit": {
     "message": "Storting"
   },
   "depositEther": {
     "message": "Stort Ether"
+  },
+  "details": {
+    "message": "Details"
   },
   "directDepositEther": {
     "message": "Directe Ether storten"
@@ -112,23 +511,149 @@
   "done": {
     "message": "Gedaan"
   },
+  "dontShowThisAgain": {
+    "message": "Laat dit niet meer zien"
+  },
+  "downloadGoogleChrome": {
+    "message": "Download Brave Software Brave"
+  },
+  "downloadSecretBackup": {
+    "message": "Download deze Geheime Backup Phrase en bewaar het veilig op een versleutelde harde schijf of opslagmedium."
+  },
   "downloadStateLogs": {
     "message": "Staatslogboeken downloaden"
+  },
+  "dontHaveAHardwareWallet": {
+    "message": "Heb je geen hardware wallet?"
+  },
+  "dropped": {
+    "message": "Uitgevallen"
   },
   "edit": {
     "message": "Bewerk"
   },
+  "editContact": {
+    "message": "Edit Contact"
+  },
+  "editPermission": {
+    "message": "Toestemming bewerken"
+  },
+  "endOfFlowMessage1": {
+    "message": "Je hebt de test gehaald - houd je seedphrase veilig, het is jouw verantwoordelijkeheid."
+  },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Sla een backup op op meerder plaatsen."
+  },
+  "endOfFlowMessage4": {
+    "message": "Deel nooit een phrase met iemand."
+  },
+  "endOfFlowMessage5": {
+    "message": "Pas op voor phishing! Brave zal nooit spontaan om je seed phrase vragen."
+  },
+  "endOfFlowMessage6": {
+    "message": "Als je jouw seed phrase opnieuw wilt opslaan, kun je het vinden in Instellingen -> Beveiliging."
+  },
+  "endOfFlowMessage7": {
+    "message": "Mocht u ooit vragen hebben of iets verkeerds zien, stuur dan een e-mail naar support@brave.com."
+  },
+  "endOfFlowMessage8": {
+    "message": "Dapper kan uw sleutelzin niet herstellen."
+  },
+  "endOfFlowMessage9": {
+    "message": "Meer Leren"
+  },
+  "endOfFlowMessage10": {
+    "message": "Gereed"
+  },
+  "externalExtension": {
+    "message": "Externe uitbreiding"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" zal dit tabblad sluiten en u direct terugsturen naar $2",
+    "description": "Return the user to the site that initiated onboarding"
+  },
+  "ensRegistrationError": {
+    "message": "Fout in de ENS naam registratie"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Vul een alias in"
+  },
+  "enterMaxSpendLimit": {
+    "message": "Maximale uitgavenlimiet invoeren"
+  },
   "enterPassword": {
     "message": "Voer wachtwoord in"
   },
+  "enterPasswordContinue": {
+    "message": "Vul het wachtwoord in om verder te gaan"
+  },
+  "errorCode": {
+    "message": "Code: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Foutinformatie",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Bericht: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Code: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave is een fout tegengekomen",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Probeer het opnieuw door de pagina te herladen, of neem contact op met onze klantenservice op support@brave.com.",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Probeer het opnieuw door de popup te sluiten en te heropenen, of neem contact op met onze klantenservice op support@brave.com.",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Stapel:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
+  },
   "etherscanView": {
     "message": "Bekijk account op Etherscan"
+  },
+  "estimatedProcessingTimes": {
+    "message": "Estimated Processing Times"
+  },
+  "expandView": {
+    "message": "Uitgebreide weergave"
   },
   "exportPrivateKey": {
     "message": "Exporteer privésleutel"
   },
   "failed": {
     "message": "mislukt"
+  },
+  "failureMessage": {
+    "message": "Er is iets misgegaan en we hebben de actie niet kunnen voltooien"
+  },
+  "fast": {
+    "message": "Fast"
+  },
+  "faster": {
+    "message": "Sneller"
+  },
+  "feeAssociatedRequest": {
+    "message": "Aan deze aanvraag zijn kosten verbonden."
   },
   "fiat": {
     "message": "FIAT",
@@ -138,17 +663,59 @@
     "message": "Bestandsimport werkt niet? Klik hier!",
     "description": "Helps user import their account from a JSON file"
   },
+  "forgetDevice": {
+    "message": "Dit apparaat vergeten"
+  },
   "from": {
     "message": "Van"
+  },
+  "fromAddress": {
+    "message": "Van: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Functie: Goedkeuren"
+  },
+  "functionType": {
+    "message": "Functie Type"
   },
   "gasLimit": {
     "message": "Gaslimiet"
   },
+  "gasLimitInfoModalContent": {
+    "message": "Gas limiet is de maximum hoeveelheid gaseenheden de je bereid bent uit te geven."
+  },
   "gasLimitTooLow": {
     "message": "De gaslimiet moet minstens 21000 zijn"
   },
+  "gasUsed": {
+    "message": "Gas Gebruikt"
+  },
   "gasPrice": {
     "message": "Gasprijs (GWEI)"
+  },
+  "gasPriceExtremelyLow": {
+    "message": "Gas Price Extremely Low"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+  },
+  "gasPriceNoDenom": {
+    "message": "Gas Prijs"
+  },
+  "gdprMessage": {
+    "message": "Deze gegevens zijn geaggregeerd en dus anoniem conform de Algemene verordening gegevensbescherming (EU) 2016/679. Voor meer informatie met betrekking tot onze privacypraktijken, zie onze $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Privacybeleid hier",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
+  "general": {
+    "message": "Algemeen"
+  },
+  "generalSettingsDescription": {
+    "message": "Valuta conversie, primaire valuta, taal, blockies identicon"
   },
   "getEther": {
     "message": "Krijg Ether"
@@ -157,15 +724,49 @@
     "message": "Haal Ether uit een kraan voor de $1",
     "description": "Displays network name for Ether faucet"
   },
+  "getHelp": {
+    "message": "Verkrijg hulp."
+  },
+  "getStarted": {
+    "message": "Aan de slag"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "Hardware"
+  },
+  "hardwareWalletConnected": {
+    "message": "Hardware wallet verbonden"
+  },
+  "hardwareWallets": {
+    "message": "Verbind met een hardware wallet"
+  },
+  "hardwareWalletsMsg": {
+    "message": "Selecteer een hardware portemonnee die u wilt gebruiken met Brave"
+  },
+  "havingTroubleConnecting": {
+    "message": "Problemen met de verbinding?"
+  },
   "here": {
     "message": "hier",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hexData": {
+    "message": "Hexadecimale Gegevens"
+  },
   "hide": {
     "message": "Verbergen"
   },
+  "hideTokenSymbol": {
+    "message": "$1 verbergen",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "Token verbergen?"
+  },
+  "history": {
+    "message": "Geschiedenis"
   },
   "import": {
     "message": "Importeren",
@@ -175,14 +776,32 @@
     "message": "Account importeren"
   },
   "importAccountMsg": {
-    "message": " Geïmporteerde accounts worden niet gekoppeld aan de seedphrase van uw oorspronkelijk gemaakte Brave-account. Meer informatie over geïmporteerde accounts"
+    "message": "Geïmporteerde accounts zullen niet worden gekoppeld aan de oorspronkelijk aangemaakte sleutelzin voor uw Brave-account. Meer informatie over geïmporteerde accounts"
+  },
+  "importAccountSeedPhrase": {
+    "message": "Importeer een account met een sleutelzin"
+  },
+  "importWallet": {
+    "message": "Portemonnee importeren"
+  },
+  "importYourExisting": {
+    "message": "Importeer uw bestaande portemonnee met behulp van een sleutelzin van 24 woorden."
   },
   "imported": {
     "message": "geïmporteerde",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
   "infoHelp": {
     "message": "Info en hulp"
+  },
+  "initialTransactionConfirmed": {
+    "message": "Je initiële transactie werd bevestigd door het netwerk. Klik OK om terug te gaan."
+  },
+  "insufficientBalance": {
+    "message": "Onvoldoende fondsen."
   },
   "insufficientFunds": {
     "message": "Onvoldoende fondsen."
@@ -196,6 +815,18 @@
   "invalidAddressRecipient": {
     "message": "Het adres van de ontvanger is ongeldig"
   },
+  "knownAddressRecipient": {
+    "message": "Bekend contract adres."
+  },
+  "knownTokenWarning": {
+    "message": "Deze actie zal tokens bewerken die al in uw portemonnee staan, wat gebruikt kan worden om u te phishen. Geef alleen goedkeuring als u zeker weet dat u de inhoud van deze tokens wilt wijzigen."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Een token hergebruikt hier een symbool van een ander token die u in het oog houdt, dit kan verwarrend of bedrieglijk zijn."
+  },
+  "invalidAddressRecipientNotEthNetwork": {
+    "message": "Not ETH network, set to lowercase"
+  },
   "invalidInput": {
     "message": "Ongeldige invoer."
   },
@@ -203,7 +834,22 @@
     "message": "Ongeldige RPC-URI"
   },
   "invalidBlockExplorerURL": {
-    "message": "Ongeldige Block Explorer URI"
+    "message": "Ongeldige Blokkering Explorer-URL"
+  },
+  "invalidSeedPhrase": {
+    "message": "Ongeldige seed phrase"
+  },
+  "ipfsGateway": {
+    "message": "IPFS-gateway"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Voer de URL van de IPFS CID-gateway in die gebruikt moet worden voor de ENS-contentresolutie."
+  },
+  "invalidIpfsGateway": {
+    "message": "Ongeldige IPFS-gateway: de waarde moet een geldige URL zijn"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Verboden IPFS Gateway: Voer een CID-gateway in"
   },
   "jsonFile": {
     "message": "JSON-bestand",
@@ -212,8 +858,29 @@
   "kovan": {
     "message": "Kovan-testnetwerk"
   },
+  "max": {
+    "message": "Max"
+  },
+  "lastConnected": {
+    "message": "Laatst verbonden"
+  },
+  "learnMore": {
+    "message": "Meer Leren"
+  },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "letsGoSetUp": {
+    "message": "Ja, laten we het opzetten!"
+  },
   "likeToAddTokens": {
     "message": "Wil je deze tokens toevoegen?"
+  },
+  "links": {
+    "message": "Links"
+  },
+  "liveGasPricePredictions": {
+    "message": "Actuele Gas Prijs Voorspellingen"
   },
   "loading": {
     "message": "Bezig met laden..."
@@ -221,29 +888,62 @@
   "loadingTokens": {
     "message": "Tokens laden ..."
   },
-  "unlock": {
-    "message": "Log in"
+  "loadMore": {
+    "message": "Meer Laden"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
   },
   "lock": {
-    "message": "Uitloggen"
+    "message": "Vergrendelen"
+  },
+  "lockTimeTooGreat": {
+    "message": "Vergrendelingstijd is te lang"
   },
   "mainnet": {
     "message": "Main Netwerk"
   },
+  "memorizePhrase": {
+    "message": "Onthoud deze phrase."
+  },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "Bericht"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "U hebt nu nog meer controle over uw accountaansluitingen in Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "De verbindingsstatusknop geeft aan of de website die u bezoekt verbonden is met uw op dat moment geselecteerde account."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Klik erop om uw gekoppelde accounts te beheren."
   },
   "metamaskDescription": {
     "message": "Brave is een veilige identiteitskluis voor Ethereum."
   },
+  "metamaskVersion": {
+    "message": "Brave-versie"
+  },
+  "mobileSyncText": {
+    "message": "Voer uw wachtwoord in om te bevestigen dat jij het bent!"
+  },
   "myAccounts": {
     "message": "Mijn accounts"
+  },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "Al uw door Brave gemaakte accounts worden automatisch toegevoegd aan dit gedeelte."
   },
   "mustSelectOne": {
     "message": "Moet ten minste één token selecteren."
   },
   "needEtherInWallet": {
-    "message": "Om te communiceren met gedecentraliseerde applicaties met Brave, heb je Ether nodig in je portemonnee."
+    "message": "Om met decentrale toepassingen te kunnen communiceren met behulp van Brave, hebt u Ether nodig in uw portemonnee."
   },
   "needImportFile": {
     "message": "U moet een bestand selecteren om te importeren.",
@@ -252,33 +952,162 @@
   "negativeETH": {
     "message": "Kan geen negatieve hoeveelheden ETH verzenden."
   },
+  "networkName": {
+    "message": "Netwerk Naam"
+  },
   "networks": {
     "message": "netwerken"
   },
+  "networkSettingsDescription": {
+    "message": "Add and edit custom RPC networks"
+  },
+  "nevermind": {
+    "message": "Laat maar"
+  },
   "newAccount": {
     "message": "Nieuw account"
+  },
+  "newAccountDetectedDialogMessage": {
+    "message": "New address detected! Click here to add to your address book."
+  },
+  "newAccountNumberName": {
+    "message": "Account $1",
+    "description": "Default name of next account to be created on create account screen"
+  },
+  "newContact": {
+    "message": "New Contact"
   },
   "newContract": {
     "message": "Nieuw contract"
   },
   "newPassword": {
-    "message": "Nieuw wachtwoord (min 8 tekens)"
+    "message": "Nieuw wachtwoord (min. 8 tekens)"
+  },
+  "newNetwork": {
+    "message": "Nieuw Netwerk"
+  },
+  "newToMetaMask": {
+    "message": "Nieuw bij Brave?"
+  },
+  "noAlreadyHaveSeed": {
+    "message": "No, I already have a seed phrase"
+  },
+  "protectYourKeys": {
+    "message": "Bescherm Jouw Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "Wees voorzichtig met uw sleutelzin - er zijn meldingen geweest van websites die Brave proberen te imiteren. Brave zal u nooit om uw sleutelzin vragen!"
+  },
+  "protectYourKeysMessage2": {
+    "message": "Houd uw zin veilig. Als u iets vreemds ziet, of als u niet zeker bent van een website, stuur dan een e-mail naar support@brave.com."
+  },
+  "rpcUrl": {
+    "message": "Nieuwe RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "Maak alleen verbinding met sites die u vertrouwt."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Een kwaadwillende Ethereum netwerkprovider kan liegen over de staat van de blockchain en uw netwerkactiviteit vastleggen. Voeg alleen eigen netwerken toe die u vertrouwt."
+  },
+  "optionalChainId": {
+    "message": "ChainID (optioneel)"
+  },
+  "optionalSymbol": {
+    "message": "Symbool (optioneel)"
+  },
+  "newTotal": {
+    "message": "New Total"
+  },
+  "newTransactionFee": {
+    "message": "Nieuwe Transactie Vergoeding"
   },
   "next": {
     "message": "volgende"
   },
+  "nextNonceWarning": {
+    "message": "Nonce is hoger dan de voorgestelde nonce van $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Er is geen adres ingesteld voor deze naam."
   },
+  "noConversionRateAvailable": {
+    "message": "Geen Wisselkoers Beschikbaar"
+  },
   "noTransactions": {
     "message": "Geen transacties"
+  },
+  "noThanks": {
+    "message": "Nee, bedankt"
+  },
+  "notCurrentAccount": {
+    "message": "Is dit de juiste account? Het is anders dan het account dat u momenteel hebt geselecteerd in uw portemonnee."
+  },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam niet gevonden"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Oorsprong"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "participateInMetaMetrics": {
+    "message": "Neem deel in MetaMetrics"
+  },
+  "participateInMetaMetricsDescription": {
+    "message": "Doe mee aan MetaMetrics om ons te helpen Brave nog beter te maken"
+  },
+  "password": {
+    "message": "Wachtwoord"
+  },
+  "passwordsDontMatch": {
+    "message": "Wachtwoorden komen niet overeen"
+  },
+  "passwordNotLongEnough": {
+    "message": "Wachtwoord niet lang genoeg"
   },
   "pastePrivateKey": {
     "message": "Plak hier uw privésleutelstring:",
     "description": "For importing an account from a private key"
   },
+  "pending": {
+    "message": "In afwachting"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Je hebt deze machtiging goedgekeurd"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "U hebt deze toestemming niet goedgekeurd"
+  },
   "personalAddressDetected": {
     "message": "Persoonlijk adres gedetecteerd. Voer het tokencontractadres in."
+  },
+  "plusXMore": {
+    "message": "+ $1 meer",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Vorige"
+  },
+  "primaryCurrencySetting": {
+    "message": "Primaire Betaaleenheid"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
   },
   "privacyMsg": {
     "message": "Privacybeleid"
@@ -293,29 +1122,105 @@
   "privateNetwork": {
     "message": "Prive netwerk"
   },
+  "proposedApprovalLimit": {
+    "message": "Voorgestelde goedkeuringslimiet"
+  },
+  "queue": {
+    "message": "Queue"
+  },
+  "queued": {
+    "message": "In de wachtrij"
+  },
   "readdToken": {
     "message": "U kunt dit token in de toekomst weer toevoegen door naar \"Token toevoegen\" te gaan in het menu met accountopties."
+  },
+  "recents": {
+    "message": "Recentelijk"
+  },
+  "receive": {
+    "message": "Te ontvangen"
   },
   "recipientAddress": {
     "message": "Geadresseerde adres"
   },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
+  },
+  "rejectAll": {
+    "message": "Reject All"
+  },
+  "rejectTxsN": {
+    "message": "Weiger $1 transacties"
+  },
+  "rejectTxsDescription": {
+    "message": "You are about to batch reject $1 transactions."
+  },
   "rejected": {
     "message": "Verworpen"
+  },
+  "reset": {
+    "message": "Reset"
   },
   "resetAccount": {
     "message": "Account opnieuw instellen"
   },
+  "resetAccountDescription": {
+    "message": "Door je account te resetten wordt je transactiegeschiedenis gewist. De saldi op je rekening worden hierdoor niet gewijzigd en je hoeft je seed phrase niet opnieuw in te voeren."
+  },
+  "deleteNetwork": {
+    "message": "Verwijder Netwerk?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
+  "remindMeLater": {
+    "message": "Help me later herrineren"
+  },
   "restoreFromSeed": {
     "message": "Herstel vanuit back-up woorden"
+  },
+  "restoreAccountWithSeed": {
+    "message": "Herstel je Account met een Seed Phrase"
+  },
+  "restoreWalletPreferences": {
+    "message": "Er is een reservekopie gevonden van je gegevens uit $1. Wil je je wallet-voorkeuren herstellen?",
+    "description": "$1 is the date at which the data was backed up"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "verzoeken wachten op bevestiging"
   },
   "required": {
     "message": "Verplicht"
   },
+  "restore": {
+    "message": "Herstel"
+  },
   "revealSeedWords": {
-    "message": "Onthul back-up woorden"
+    "message": "Sleutelzin onthullen"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
+  },
+  "revealSeedWordsDescription": {
+    "message": "Asl je ooit van browser of computer veranderd, zul je deze seed phrase nodig hebben om toegang te hebben tot je accounts. Bewaar ze ergens veilig en geheim."
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "DO NOT share this phrase with anyone!"
   },
   "revealSeedWordsWarning": {
     "message": "Zorg dat je back-up woorden niet op een openbare plaats bekijkt! Deze woorden kunnen worden gebruikt om al uw accounts opnieuw te genereren (en dus uw account te stelen)."
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeAccount": {
+    "message": "Remove account"
+  },
+  "removeAccountDescription": {
+    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+  },
+  "readyToConnect": {
+    "message": "Ready to Connect?"
   },
   "rinkeby": {
     "message": "Rinkeby testnetwerk"
@@ -323,26 +1228,92 @@
   "ropsten": {
     "message": "Ropsten testnetwerk"
   },
+  "goerli": {
+    "message": "Goerli Test Network"
+  },
   "save": {
     "message": "Opslaan"
+  },
+  "slow": {
+    "message": "Traag"
+  },
+  "slower": {
+    "message": "Slower"
+  },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
+  "scanInstructions": {
+    "message": "Plaats de QR code voor jouw camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
   },
   "search": {
     "message": "Zoeken"
   },
+  "searchResults": {
+    "message": "Zoek Resultaten"
+  },
+  "secretBackupPhrase": {
+    "message": "Secret Backup Phrase"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "Jouw geheime backup phrase maakt het makkelijk om een backup en herstel van je account mogelijk te maken."
+  },
+  "secretBackupPhraseWarning": {
+    "message": "WAARSCHUWING: Onthul nooit jouw backup phrase. Iedereen met deze phrase kan jouw Ether voor altijd overnemen."
+  },
   "secretPhrase": {
-    "message": "Voer hier je geheime vierentwintigwoordfrase in om je kluis te herstellen."
+    "message": "Voer hier uw geheime zin van 24 woorden in om uw kluis te herstellen."
+  },
+  "securityAndPrivacy": {
+    "message": "Security & Privacy"
+  },
+  "securitySettingsDescription": {
+    "message": "Privacy instellingen en wallet seed phrase"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "Scheid elk woord door een enkele spatie"
+  },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Sleutelzin plakken van klembord"
+  },
+  "showSeedPhrase": {
+    "message": "Sleutelzin weergeven"
   },
   "seedPhraseReq": {
-    "message": "Back-up woorden zijn 12 woorden lang"
+    "message": "Seed phrases bestaan uit 12, 15, 18, 21 of 24 woorden"
+  },
+  "selectingAllWillAllow": {
+    "message": "Door alles te selecteren kan deze site al uw lopende accounts bekijken. Zorg ervoor dat u deze site vertrouwt."
+  },
+  "selectAccounts": {
+    "message": "Selecteer account(s)"
+  },
+  "selectAll": {
+    "message": "Alles selecteren"
   },
   "selectCurrency": {
     "message": "selecteer valuta"
   },
+  "selectEachPhrase": {
+    "message": "Selecteer elk zinsdeel om er zeker van te zijn dat het correct is."
+  },
+  "selectLocale": {
+    "message": "Select Locale"
+  },
   "selectType": {
     "message": "Selecteer type"
   },
+  "buy": {
+    "message": "Kopen"
+  },
   "send": {
     "message": "Sturen"
+  },
+  "sendAmount": {
+    "message": "Send Amount"
   },
   "sendETH": {
     "message": "Verzend ETH"
@@ -350,11 +1321,66 @@
   "sendTokens": {
     "message": "Stuur tokens"
   },
+  "sentEther": {
+    "message": "sent ether"
+  },
+  "sentTokens": {
+    "message": "sent tokens"
+  },
+  "sendSpecifiedTokens": {
+    "message": "Stuur $1",
+    "description": "Symbol of the specified token"
+  },
+  "separateEachWord": {
+    "message": "Separate each word with a single space"
+  },
+  "searchTokens": {
+    "message": "Zoek Tokens"
+  },
+  "searchAccounts": {
+    "message": "Accounts zoeken"
+  },
+  "noAccountsFound": {
+    "message": "Geen accounts gevonden voor de betreffende zoekopdracht"
+  },
+  "selectAnAccount": {
+    "message": "Selecteer een Account"
+  },
+  "selectAnAccountHelp": {
+    "message": "Selecteer het account dat u wilt bekijken in Brave"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
+  "selectHdPath": {
+    "message": "Selecteer HD Pad"
+  },
+  "selectPathHelp": {
+    "message": "Als je jouw bestaande Ledger accounts hieronder niet ziet, probeer dan te wisselen naar \"Legacy (MEW / MyCrypto)\""
+  },
   "settings": {
     "message": "instellingen"
   },
+  "showAdvancedGasInline": {
+    "message": "Advanced gas controls"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "Selecteer dit om de gasprijs en limiet bedieningselementen direct te tonen op zend en bevestig schermen."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Toon Conversie op Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Selecteer dit om fiat conversie te tonen op Testnets"
+  },
   "showPrivateKeys": {
     "message": "Privésleutels weergeven"
+  },
+  "showHexData": {
+    "message": "Toon Hexadecimale Gegevens"
+  },
+  "showHexDataDescription": {
+    "message": "Select this to show the hex data field on the send screen"
   },
   "sign": {
     "message": "Teken"
@@ -362,11 +1388,48 @@
   "signatureRequest": {
     "message": "Ondertekeningsverzoek"
   },
+  "signatureRequest1": {
+    "message": "Bericht"
+  },
+  "signed": {
+    "message": "Signed"
+  },
   "signNotice": {
     "message": "Het ondertekenen van dit bericht kan hebben \ngevaarlijke bijwerkingen. Meld alleen berichten van \nsites die u volledig vertrouwt met uw volledige account.\n Deze gevaarlijke methode wordt in een toekomstige versie verwijderd."
   },
   "sigRequest": {
     "message": "Ondertekeningsverzoek"
+  },
+  "somethingWentWrong": {
+    "message": "Oeps! Er ging iets mis."
+  },
+  "speedUp": {
+    "message": "Versnel"
+  },
+  "speedUpCancellation": {
+    "message": "Ongedaan maken versnellen"
+  },
+  "speedUpTransaction": {
+    "message": "Speed up this transaction"
+  },
+  "spendLimitPermission": {
+    "message": "Uitgavenlimiet toestemming"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Bestedingslimiet aangevraagd door $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Uitgavenlimiet te hoog"
+  },
+  "spendLimitInvalid": {
+    "message": "Uitgavenlimiet ongeldig; moet een positief getal zijn"
+  },
+  "switchNetworks": {
+    "message": "Switch Networks"
+  },
+  "stateLogFileName": {
+    "message": "Brave-statuslogboeken"
   },
   "stateLogs": {
     "message": "Staatslogboeken"
@@ -374,11 +1437,71 @@
   "stateLogsDescription": {
     "message": "Staatslogboeken bevatten uw openbare accountadressen en verzonden transacties."
   },
+  "stateLogError": {
+    "message": "Fout bij het ophalen van de status logbestanden."
+  },
+  "statusConnected": {
+    "message": "Verbonden"
+  },
+  "statusNotConnected": {
+    "message": "Niet verbonden"
+  },
+  "step1HardwareWallet": {
+    "message": "1. Verbind Hardware Wallet"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
+  },
+  "step2HardwareWallet": {
+    "message": "2. Select an Account"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. Begin met het gebruik van web3 sites en meer!"
+  },
+  "step3HardwareWalletMsg": {
+    "message": "Gebruik uw hardwareaccount zoals u dat zou doen met een Ethereum-account. Maak verbinding met websites, stuur ETH, koop en bewaar ERC20-tokens en niet-fungibele tokens zoals CryptoKitties."
+  },
+  "storePhrase": {
+    "message": "Sla deze phrase op in een wachtwoord manager zoals 1Password."
+  },
+  "submit": {
+    "message": "voorleggen"
+  },
+  "submitted": {
+    "message": "Submitted"
+  },
   "supportCenter": {
     "message": "Bezoek ons ​​ondersteuningscentrum"
   },
+  "symbol": {
+    "message": "Symbool"
+  },
   "symbolBetweenZeroTwelve": {
     "message": "Symbool moet 11 tekens of minder zijn."
+  },
+  "syncWithMobile": {
+    "message": "Synchroniseer met mobiel"
+  },
+  "syncWithMobileTitle": {
+    "message": "Synchroniseer met mobile"
+  },
+  "syncWithMobileDesc": {
+    "message": "Je kunt je accounts en informatie synchroniseren met je mobiele apparaat. Open de mobiele app Brave, ga naar 'Instellingen' en tik op 'Synchroniseren vanuit browserextensie'."
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "Als u de Brave Mobile app voor de eerste keer opent, hoeft u alleen maar de stappen op uw telefoon te volgen."
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "Scan deze code met uw mobiele Brave-app"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "Make sure nobody else is looking at your screen when you scan this code"
+  },
+  "syncWithMobileComplete": {
+    "message": "Uw gegevens zijn met succes gesynchroniseerd. Veel plezier met de mobiele app van Brave!"
   },
   "terms": {
     "message": "Gebruiksvoorwaarden"
@@ -386,21 +1509,116 @@
   "testFaucet": {
     "message": "Test de kraan"
   },
+  "thisWillCreate": {
+    "message": "Dit zal een nieuwe wallet en seed phrase creëren"
+  },
+  "tips": {
+    "message": "Fooien"
+  },
   "to": {
     "message": "Naar"
+  },
+  "toAddress": {
+    "message": "Naar: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Om:"
+  },
+  "token": {
+    "message": "Token"
   },
   "tokenAlreadyAdded": {
     "message": "Token is al toegevoegd."
   },
+  "tokenContractAddress": {
+    "message": "Token Contract Address"
+  },
+  "tokenOptions": {
+    "message": "Token-opties"
+  },
+  "tokenSymbol": {
+    "message": "Token Symbol"
+  },
   "total": {
     "message": "Totaal"
+  },
+  "transaction": {
+    "message": "transactie"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmed at $2."
+  },
+  "transactionCreated": {
+    "message": "Transaction created with a value of $1 at $2."
+  },
+  "transactionDropped": {
+    "message": "Transaction verloren op $2."
+  },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transactie opnieuw ingediend met gas vergoeding toegenomen naar $1 op $2"
+  },
+  "transactionUpdated": {
+    "message": "Transactie bijgewerkt op $2."
+  },
+  "transactionErrored": {
+    "message": "Transactie ondervond een probleem."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transactie annuleringspoging met gas vergoeding van $1 op $2"
+  },
+  "transactionCancelSuccess": {
+    "message": "Transaction successfully cancelled at $2"
+  },
+  "transactionError": {
+    "message": "Transaction Error. Exception thrown in contract code."
+  },
+  "transactionErrorNoContract": {
+    "message": "Aan het proberen een functie aan te roepen op een adres zonder contract."
+  },
+  "transactionFee": {
+    "message": "Transactie Vergoeding"
+  },
+  "transactionTime": {
+    "message": "Transactie Tijd"
+  },
+  "showTransactionTimeDescription": {
+    "message": "Selecteer dit om de geschatte transactietijd weer te geven in het tabblad activiteit terwijl u zich op het Ethereum-netwerk bevindt. Opmerking: schattingen zijn benaderingen op basis van de netwerkomstandigheden."
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
+  "transferBetweenAccounts": {
+    "message": "Verplaats tussen mijn accounts"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
   },
   "troubleTokenBalances": {
     "message": "We hadden problemen bij het laden van uw tokenbalansen. Je kunt ze bekijken",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Vertrouwt u deze site? Door deze toestemming te geven, laat u $1 toe om $2 van uw geld op te nemen en de transacties voor u te automatiseren.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
+  "tryAgain": {
+    "message": "Probeer opnieuw"
+  },
   "typePassword": {
-    "message": "Typ uw wachtwoord"
+    "message": "Voer uw Brave-wachtwoord in"
+  },
+  "unapproved": {
+    "message": "Unapproved"
+  },
+  "alertDisableTooltip": {
+    "message": "Dit kan gewijzigd worden in \"Instellingen > Waarschuwingen\"."
+  },
+  "units": {
+    "message": "eenheden"
   },
   "unknown": {
     "message": "Onbekend"
@@ -408,20 +1626,90 @@
   "unknownNetwork": {
     "message": "Onbekend privénetwerk"
   },
+  "unknownQrCode": {
+    "message": "Fout: We konden deze QR code niet identificeren"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "Oeps! Er ging iets mis...."
+  },
+  "unknownCameraError": {
+    "message": "Er was een probleem tijdens het verkrijgen van toegang tot jouw camera. Probeer het opnieuw..."
+  },
+  "unlimited": {
+    "message": "Onbeperkt"
+  },
+  "unlock": {
+    "message": "Ontsluit"
+  },
+  "unlockMessage": {
+    "message": "The decentralized web awaits"
+  },
+  "updatedWithDate": {
+    "message": "Updated $1"
+  },
   "urlErrorMsg": {
-    "message": "Voor URI's is het juiste HTTP / HTTPS-voorvoegsel vereist."
+    "message": "Voor URL's is het juiste HTTP/HTTPS-voorvoegsel vereist."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL is al aanwezig in de bestaande lijst met netwerken"
   },
   "usedByClients": {
     "message": "Gebruikt door verschillende klanten"
   },
+  "usePhishingDetection": {
+    "message": "Phishing-detectie gebruiken"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Geef een waarschuwing weer voor phishingdomeinen die gericht zijn op Ethereum-gebruikers."
+  },
+  "userName": {
+    "message": "Gebruikersnaam"
+  },
   "viewAccount": {
     "message": "Bekijk account"
+  },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "View at $1"
+  },
+  "viewOnEtherscan": {
+    "message": "Bekijk op Etherscan"
+  },
+  "retryTransaction": {
+    "message": "Transactie opnieuw proberen"
   },
   "visitWebSite": {
     "message": "Bezoek onze website"
   },
+  "walletSeed": {
+    "message": "Seed phrase"
+  },
+  "welcomeBack": {
+    "message": "Welkom Terug!"
+  },
   "welcome": {
     "message": "Welkom bij Brave"
+  },
+  "whatsThis": {
+    "message": "Wat is dit?"
+  },
+  "writePhrase": {
+    "message": "Schrijf deze zin op een stuk papier en bewaar het op een veilig plaats. Als je het nog veiliger wilt, schrijf het dan op meerder stukken papier en bewaar ze op 2 - 3 verschillende locaties."
+  },
+  "xOfY": {
+    "message": "$1 van de $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "Je moet toegang tot de camera geven als je deze optie wilt gebruiken."
   },
   "yourSigRequested": {
     "message": "Uw handtekening wordt aangevraagd"
@@ -429,8 +1717,74 @@
   "youSign": {
     "message": "U ondertekent"
   },
+  "yourPrivateSeedPhrase": {
+    "message": "Jouw prive seed phrase"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Nul gas prijs bij hogere snelheid"
+  },
+  "decryptRequest": {
+    "message": "Verzoek decoderen"
+  },
+  "decrypt": {
+    "message": "Decoderen"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 wil graag dit bericht lezen om uw actie af te ronden",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Bericht decoderen"
+  },
+  "decryptCopy": {
+    "message": "Gecodeerd bericht kopiëren"
+  },
+  "decryptInlineError": {
+    "message": "Dit bericht kan niet worden gedecrypteerd vanwege fout: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Verlenen"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Vraag een publieke encryptiesleutel aan"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 wil uw publieke encryptiesleutel. Door toestemming te geven, zal deze site in staat zijn om versleutelde berichten aan u te sturen.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Crypto-Portemonnees Geheime Back-up Zin"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave-instellingen"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Met Crypto Wallets kunt u werken met cryptocurrency en aanverwante zaken in Brave. Crypto Wallets ondersteunt Ethereum tokens zoals ETH en BAT, maar ook collectibles, en stelt u in staat om te werken met Ðapps en andere slimme contracten. Dit alles is bedoeld voor mensen die bekend zijn met Ethereum en andere blockchain-systemen of die het graag willen leren."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Gebruik Crypto Wallets alleen als je accepteert dat jij persoonlijk verantwoordelijk bent voor alle risico's die verbonden zijn aan dit gebruik, en dat Brave Software geen verantwoordelijkheid of aansprakelijkheid draagt voor eventuele verliezen, inclusief incidentele of indirecte schade die je zou kunnen lijden als gevolg van dit gebruik."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Dit alles staat volledig los van"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Dus als je je favoriete sites wilt ondersteunen, ga dan daarheen."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Crypto Wallets"
+  },
+  "disclosureConfirm": {
+    "message": "Ik begrijp het"
+  },
   "ledgerCreateSubText": {
     "message": "Verbind je Ledger hardware-wallet om met dApps te communiceren  en overschrijvingen te doen naar andere verbonden wallets."
+  },
+  "metamaskImportSubText": {
+    "message": "Opmerking: Als u importeert uit een Metamask-portemonnee, voer dan 12 woorden in in plaats van 24."
   },
   "newLocalWallet": {
     "message": "Nieuwe Lokale Wallet"
@@ -438,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Creëer een nieuwe Brave local wallet om toegang te krijgen tot dApps en om crypto en collectibles veilig op te slaan. Verhandel tokens anoniem zonder trading fees."
   },
+  "passWarningOne": {
+    "message": "Dit wachtwoord beschermt uw persoonlijke sleutel. Niemand kan het resetten als u het vergeet, zelfs Brave niet!"
+  },
+  "providerErrorMessage": {
+    "message": "Deze portemonnee is niet uw standaard Ethereum Dapp provider."
+  },
   "trezorCreateSubText": {
     "message": "Verbind je Trezor hardware-wallet om met dApps te communiceren  en overschrijvingen te doen naar andere verbonden wallets."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Welkom bij Brave Crypto Wallets"
   }
 }

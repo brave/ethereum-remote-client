@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "私は$1を読み、同意します",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "許可されたアカウントのアドレスを表示（必須）",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "接続したサイト"
+  },
+  "connectedSitesDescription": {
+    "message": "$1はこれらのサイトに接続されています。彼らはあなたのアカウントアドレスを見ることができます。",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1はどのサイトにも接続されていません。",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "このサイトに接続しているアカウントが1つあります。"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "このサイトに接続されている$1のアカウントがあります。",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Braveはこのサイトに接続されていません。web3サイトに接続するには、そのサイトの接続ボタンを見つけてください。"
+  },
+  "currentAccountNotConnected": {
+    "message": "現在のアカウントが接続されていません"
+  },
+  "switchToThisAccount": {
+    "message": "このアカウントに切り替える"
+  },
+  "disconnectThisAccount": {
+    "message": "このアカウントの接続を解除"
+  },
+  "permissions": {
+    "message": "権限"
+  },
+  "showPermissions": {
+    "message": "強化を表示"
+  },
+  "authorizedPermissions": {
+    "message": "以下の権限を承認しました"
+  },
+  "connectManually": {
+    "message": "現在のサイトに手動で接続"
+  },
+  "disconnect": {
+    "message": "接続を切断する"
+  },
+  "disconnectAllAccounts": {
+    "message": "すべてのアカウントの接続を解除"
+  },
+  "disconnectPrompt": {
+    "message": " $1の接続を解除"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "本当に切断してよろしいですか？ サイトの機能が失われる可能性があります。"
+  },
+  "dismiss": {
+    "message": "Dismiss"
+  },
+  "showIncomingTransactions": {
+    "message": "入っているトランザクションを表示"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Etherscanを使用してトランザクションリストにある受信トランザクションを表示するには、これを選択します"
+  },
   "chartOnlyAvailableEth": {
     "message": "チャートはEthereumネットワークでのみ利用可能です。"
+  },
+  "connecting": {
+    "message": "Connecting..."
+  },
+  "connectWithMetaMask": {
+    "message": " Braveで接続"
+  },
+  "connectTo": {
+    "message": "$1に接続",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "すべての$1に接続",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "アカウント",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "$1に接続",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1のアカウント",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "コントラクトへのアクセス"
@@ -8,11 +105,18 @@
   "reject": {
     "message": "拒否"
   },
+  "about": {
+    "message": "About"
+  },
   "aboutSettingsDescription": {
-    "message": "バージョンやサポート、問合せ先など"
+    "message": "バージョン、サポートセンター、連絡先情報"
   },
   "acceleratingATransaction": {
     "message": "*より高いガス価格を使用すると、ネットワークでより速く処理され、トランザクションを高速化できる可能性が高くなりますが、常に保証されるとは限りません。"
+  },
+  "accessAndSpendNotice": {
+    "message": "$1がこの最大金額までアクセスして使うことができます",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "カメラにアクセスしています..."
@@ -21,7 +125,7 @@
     "message": "アカウント"
   },
   "accountDetails": {
-    "message": "アカウント詳細"
+    "message": "アカウントの詳細"
   },
   "accountName": {
     "message": "アカウント名"
@@ -31,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "アカウントを選択してください。"
+  },
+  "active": {
+    "message": "有効"
+  },
+  "activity": {
+    "message": "アクティビティ"
   },
   "activityLog": {
     "message": "アクティビティログ"
@@ -45,7 +155,7 @@
     "message": "詳細"
   },
   "advancedSettingsDescription": {
-    "message": "開発者向け機能では、状態ログのダウンロード、アカウントリセットし、テストネットやカスタムRPCの設定が可能です。"
+    "message": "デベロッパー機能へのアクセス、状態ログのダウンロード、アカウントのリセット、テストネットのセットアップ、カスタムRPC"
   },
   "advancedOptions": {
     "message": "詳細設定"
@@ -69,26 +179,62 @@
     "message": "推奨トークンを追加"
   },
   "addAcquiredTokens": {
-    "message": "Braveで獲得したトークンを追加する"
+    "message": "Braveを使用して取得したトークンを追加"
+  },
+  "alerts": {
+    "message": "アラート"
+  },
+  "alertsSettingsDescription": {
+    "message": "各アラートを有効または無効にする"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "接続されていないアカウントが選択された状態で、Webサイトを閲覧"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "このアラートは、接続されているWeb3サイトを閲覧しているが、現在選択されているアカウントが接続されていない場合にポップアップで表示されます。"
+  },
+  "allowOriginSpendToken": {
+    "message": "$1が$2を使うことを許可しますか？",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "このサイトに許可する："
+  },
+  "allowExternalExtensionTo": {
+    "message": "この外部拡張機能に許可："
+  },
+  "allowWithdrawAndSpend": {
+    "message": "$1が最大で次の金額まで引き出して使えるようにします：",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "金額"
+  },
+  "amountWithColon": {
+    "message": "金額："
   },
   "appDescription": {
     "message": "Ethereumのブラウザ・エクステンション",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "承認する"
+    "message": "支出制限を承認"
+  },
+  "approveSpendLimit": {
+    "message": "$1の支出制限を承認",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "承認済み"
   },
   "asset": {
+    "message": "アセット"
+  },
+  "assets": {
     "message": "アセット"
   },
   "attemptingConnect": {
@@ -104,10 +250,10 @@
     "message": "属性"
   },
   "autoLockTimeLimit": {
-    "message": "自動ログアウト(分)"
+    "message": "自動ロックタイマー（分）"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Braveが自動的にログアウトするまでのアイドル時間を分単位で設定します。"
+    "message": "Braveがロックされるまでのアイドル時間を分単位で設定します。"
   },
   "average": {
     "message": "平均"
@@ -115,11 +261,57 @@
   "back": {
     "message": "戻る"
   },
+  "backToAll": {
+    "message": "Back to All"
+  },
+  "backupApprovalNotice": {
+    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+  },
+  "backupApprovalInfo": {
+    "message": "このシークレットコードは、デバイスを紛失した場合、パスワードを忘れた場合、Braveを再インストールする必要がある場合、または別のデバイスでウォレットにアクセスしたい場合に、ウォレットを復元するために必要になります。"
+  },
+  "backupNow": {
+    "message": "Backup now"
+  },
   "balance": {
     "message": "残高:"
   },
+  "balanceOutdated": {
+    "message": "Balance may be outdated"
+  },
+  "basic": {
+    "message": "Basic"
+  },
+  "blockExplorerUrl": {
+    "message": "Block Explorer"
+  },
+  "blockExplorerView": {
+    "message": "View account at $1",
+    "description": "$1 replaced by URL for custom block explorer"
+  },
   "blockiesIdenticon": {
     "message": "Blockies Identicon を使用"
+  },
+  "nonceField": {
+    "message": "トランザクションノナンスをカスタマイズ"
+  },
+  "nonceFieldHeading": {
+    "message": "カスタムノンス"
+  },
+  "nonceFieldDescription": {
+    "message": "これをオンにすると、確認画面のナンス（取引番号）が変更されます。これは高度な機能ですので、慎重に使用してください。"
+  },
+  "browserNotSupported": {
+    "message": "Your Browser is not supported..."
+  },
+  "builtInCalifornia": {
+    "message": "Braveはカリフォルニアで設計、および構築されています。"
+  },
+  "buyWithWyre": {
+    "message": "Buy ETH with Wyre"
+  },
+  "buyWithWyreDescription": {
+    "message": "Wyreでは、デビットカードを使用してETHをBraveアカウントに直接入金することができます。"
   },
   "buyCoinSwitch": {
     "message": "CoinSwitchのサイトで購入"
@@ -127,14 +319,101 @@
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitchは、最高のレートで300以上の暗号化交換を行うワンストップの宛先です。"
   },
+  "bytes": {
+    "message": "Bytes"
+  },
+  "off": {
+    "message": "Off"
+  },
+  "ok": {
+    "message": "Ok"
+  },
+  "on": {
+    "message": "On"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "Block Explorer URL (optional)"
+  },
   "cancel": {
     "message": "キャンセル"
+  },
+  "cancelAttempt": {
+    "message": "Cancel Attempt"
+  },
+  "cancellationGasFee": {
+    "message": "Cancellation Gas Fee"
+  },
+  "cancelled": {
+    "message": "Cancelled"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "ハードウェアウォレットに接続するには、Google ChromeでBraveを使用する必要があります。"
   },
   "confirm": {
     "message": "確認"
   },
+  "confirmed": {
+    "message": "Confirmed"
+  },
   "confirmPassword": {
-    "message": "パスワードの確認"
+    "message": "パスワードを確認"
+  },
+  "confirmSecretBackupPhrase": {
+    "message": "Confirm your Secret Backup Phrase"
+  },
+  "congratulations": {
+    "message": "Congratulations"
+  },
+  "connectAccountOrCreate": {
+    "message": "アカウントを接続するか、新しいアカウントを作成してください"
+  },
+  "connectHardwareWallet": {
+    "message": "Connect Hardware Wallet"
+  },
+  "connect": {
+    "message": "Connect"
+  },
+  "connectingTo": {
+    "message": "Connecting to $1"
+  },
+  "connectingToKovan": {
+    "message": "Connecting to Kovan Test Network"
+  },
+  "connectingToMainnet": {
+    "message": "Connecting to Main Ethereum Network"
+  },
+  "connectingToRopsten": {
+    "message": "Connecting to Ropsten Test Network"
+  },
+  "connectingToRinkeby": {
+    "message": "Connecting to Rinkeby Test Network"
+  },
+  "connectingToLocalhost": {
+    "message": "Connecting to Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Connecting to Goerli Test Network"
+  },
+  "contacts": {
+    "message": "連絡先"
+  },
+  "contactsSettingsDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "contactUs": {
+    "message": "ご連絡ください！"
+  },
+  "continueToWyre": {
+    "message": "Continue to Wyre"
   },
   "continueToCoinSwitch": {
     "message": "CoinSwitchを開く"
@@ -144,6 +423,15 @@
   },
   "copiedExclamation": {
     "message": "コピー完了!"
+  },
+  "copyAddress": {
+    "message": "Copy address to clipboard"
+  },
+  "copyTransactionId": {
+    "message": "Copy Transaction ID"
+  },
+  "copiedTransactionId": {
+    "message": "Copied Transaction ID"
   },
   "copyToClipboard": {
     "message": "クリップボードへコピー"
@@ -157,8 +445,26 @@
   "createAccount": {
     "message": "アカウント作成"
   },
+  "createAWallet": {
+    "message": "Create a Wallet"
+  },
+  "createPassword": {
+    "message": "Create Password"
+  },
+  "currencyConversion": {
+    "message": "Currency Conversion"
+  },
+  "currentExtension": {
+    "message": "現在の拡張ページ"
+  },
+  "currentLanguage": {
+    "message": "Current Language"
+  },
   "customGas": {
-    "message": "ガスのカスタマイズ"
+    "message": "Gasの設定"
+  },
+  "customGasSubTitle": {
+    "message": "Increasing fee may decrease processing times, but it is not guaranteed."
   },
   "customToken": {
     "message": "カスタムトークン"
@@ -166,11 +472,26 @@
   "customRPC": {
     "message": "カスタムRPC"
   },
+  "customSpendLimit": {
+    "message": "カスタム支出制限"
+  },
+  "dataBackupFoundInfo": {
+    "message": "アカウントのデータの一部は、以前のBraveのインストール中にバックアップされました。これには設定、連絡先、トークンが含まれる場合があります。 今すぐこのデータを復元しますか？"
+  },
+  "decimalsMustZerotoTen": {
+    "message": "Decimals must be at least 0, and not over 36."
+  },
   "decimal": {
     "message": "小数点桁数"
   },
   "defaultNetwork": {
     "message": "デフォルトのEther送受信ネットワークはメインネットです。"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
   },
   "deposit": {
     "message": "振込"
@@ -190,23 +511,149 @@
   "done": {
     "message": "完了"
   },
+  "dontShowThisAgain": {
+    "message": "再度表示しない"
+  },
+  "downloadGoogleChrome": {
+    "message": "Download Brave Software Brave"
+  },
+  "downloadSecretBackup": {
+    "message": "Download this Secret Backup Phrase and keep it stored safely on an external encrypted hard drive or storage medium."
+  },
+  "downloadStateLogs": {
+    "message": "Download State Logs"
+  },
+  "dontHaveAHardwareWallet": {
+    "message": "Don’t have a hardware wallet?"
+  },
+  "dropped": {
+    "message": "Dropped"
+  },
   "edit": {
     "message": "編集"
   },
+  "editContact": {
+    "message": "Edit Contact"
+  },
+  "editPermission": {
+    "message": "許可を編集"
+  },
+  "endOfFlowMessage1": {
+    "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
+  },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Save a backup in multiple places."
+  },
+  "endOfFlowMessage4": {
+    "message": "Never share the phrase with anyone."
+  },
+  "endOfFlowMessage5": {
+    "message": "フィッシングに注意してください！Braveが自発的にシードフレーズを要求することは決してありません。"
+  },
+  "endOfFlowMessage6": {
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+  },
+  "endOfFlowMessage7": {
+    "message": "ご質問がある場合、または不審な点がある場合は、support@brave.comまでメールでご連絡ください。"
+  },
+  "endOfFlowMessage8": {
+    "message": "Braveはあなたのシードフレーズを回復できません。"
+  },
+  "endOfFlowMessage9": {
+    "message": "Learn more."
+  },
   "endOfFlowMessage10": {
-    "message": "全て完了"
+    "message": "すべて完了"
+  },
+  "externalExtension": {
+    "message": "外部拡張機能"
+  },
+  "onboardingReturnNotice": {
+    "message": "「$1」はこのタブを閉じて$2に戻ります",
+    "description": "Return the user to the site that initiated onboarding"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
+  },
+  "enterMaxSpendLimit": {
+    "message": "最大支出制限を入力"
   },
   "enterPassword": {
     "message": "パスワードを入力"
   },
+  "enterPasswordContinue": {
+    "message": "Enter password to continue"
+  },
+  "errorCode": {
+    "message": "コード： $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "エラーの詳細",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "メッセージ: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "コード: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Braveにエラーが発生しました",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "ページをリロードして再試行するか、サポート（support@brave.com）に連絡してください",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "ポップアップを閉じて再度開くか、サポート（support@brave.com）に連絡して再試行してください",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "スタック：\n",
+    "description": "Title for error stack, which is displayed for debugging purposes"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
+  },
   "etherscanView": {
     "message": "Etherscanでアカウントを確認"
+  },
+  "estimatedProcessingTimes": {
+    "message": "Estimated Processing Times"
+  },
+  "expandView": {
+    "message": "ビューを拡大"
   },
   "exportPrivateKey": {
     "message": "秘密鍵のエクスポート"
   },
   "failed": {
     "message": "失敗"
+  },
+  "failureMessage": {
+    "message": "エラーが発生し、アクションを完了できませんでした"
+  },
+  "fast": {
+    "message": "Fast"
+  },
+  "faster": {
+    "message": "Faster"
+  },
+  "feeAssociatedRequest": {
+    "message": "このリクエストには料金がかかります。"
   },
   "fiat": {
     "message": "法定通貨",
@@ -216,17 +663,59 @@
     "message": "ファイルがインポートされなければ、ここをクリック!",
     "description": "Helps user import their account from a JSON file"
   },
+  "forgetDevice": {
+    "message": "Forget this device"
+  },
   "from": {
     "message": "送信元"
+  },
+  "fromAddress": {
+    "message": "送信元： $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "機能： 承認する"
+  },
+  "functionType": {
+    "message": "Function Type"
   },
   "gasLimit": {
     "message": "ガスリミット"
   },
+  "gasLimitInfoModalContent": {
+    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+  },
   "gasLimitTooLow": {
     "message": "ガスリミットは最低21000です。"
   },
+  "gasUsed": {
+    "message": "Gas Used"
+  },
   "gasPrice": {
     "message": "ガスプライス (GWEI)"
+  },
+  "gasPriceExtremelyLow": {
+    "message": "Gas Price Extremely Low"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+  },
+  "gasPriceNoDenom": {
+    "message": "Gas Price"
+  },
+  "gdprMessage": {
+    "message": "このデータは集約されているため、EU一般データ保護規則2016/679のために匿名となります。当社のプライバシー慣行に関する詳細については$1をご覧ください。",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "プライバシーポリシーはこちらです",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
+  "general": {
+    "message": "General"
+  },
+  "generalSettingsDescription": {
+    "message": "Currency conversion, primary currency, language, blockies identicon"
   },
   "getEther": {
     "message": "Etherを取得する"
@@ -235,15 +724,49 @@
     "message": "フォーセットで $1のEtherを得ることができます。",
     "description": "Displays network name for Ether faucet"
   },
+  "getHelp": {
+    "message": "Get Help."
+  },
+  "getStarted": {
+    "message": "Get Started"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "ハードウェア"
+  },
+  "hardwareWalletConnected": {
+    "message": "Hardware wallet connected"
+  },
+  "hardwareWallets": {
+    "message": "Connect a hardware wallet"
+  },
+  "hardwareWalletsMsg": {
+    "message": "Braveで、使用したいハードウェアウォレットを選択してください"
+  },
+  "havingTroubleConnecting": {
+    "message": "Having trouble connecting?"
+  },
   "here": {
     "message": "ここ",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hexData": {
+    "message": "Hex Data"
+  },
   "hide": {
     "message": "隠す"
   },
+  "hideTokenSymbol": {
+    "message": "$1を隠す",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "トークンを隠しますか?"
+  },
+  "history": {
+    "message": "History"
   },
   "import": {
     "message": "追加",
@@ -253,23 +776,80 @@
     "message": "アカウントのインポート"
   },
   "importAccountMsg": {
-    "message": "追加したアカウントはBraveのアカウントパスフレーズとは関連付けられません。インポートしたアカウントについての詳細は"
+    "message": "インポートされたアカウントは、最初に作成したBraveアカウントのシードフレーズに関連付けることはできません。インポートされたアカウントの詳細を確認してください"
+  },
+  "importAccountSeedPhrase": {
+    "message": "シードフレーズを含むアカウントをインポート"
+  },
+  "importWallet": {
+    "message": "ウォレットをインポート"
+  },
+  "importYourExisting": {
+    "message": "24単語のシードフレーズを使用して、既存のウォレットをインポートします"
   },
   "imported": {
     "message": "インポート完了",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
   "infoHelp": {
     "message": "情報とヘルプ"
+  },
+  "initialTransactionConfirmed": {
+    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+  },
+  "insufficientBalance": {
+    "message": "Insufficient balance."
   },
   "insufficientFunds": {
     "message": "残高不足"
   },
+  "insufficientTokens": {
+    "message": "Insufficient tokens."
+  },
   "invalidAddress": {
     "message": "アドレスが無効です。"
   },
+  "invalidAddressRecipient": {
+    "message": "Recipient address is invalid"
+  },
+  "knownAddressRecipient": {
+    "message": "Known contract address."
+  },
+  "knownTokenWarning": {
+    "message": "このアクションは、ウォレットにすでにリストされているトークンを編集します。これはフィッシングにも使用されます。これらのトークンが表すものを確かに変更するつもりの場合にのみ承認してください。"
+  },
+  "reusedTokenNameWarning": {
+    "message": "ここでのトークンは、あなたが見ている別のトークンからのシンボルを再利用しています。これは混乱を招いたり、詐欺的なものになる可能性があります。"
+  },
+  "invalidAddressRecipientNotEthNetwork": {
+    "message": "Not ETH network, set to lowercase"
+  },
   "invalidInput": {
     "message": "インプットが無効です。"
+  },
+  "invalidRPC": {
+    "message": "Invalid RPC URL"
+  },
+  "invalidBlockExplorerURL": {
+    "message": "ブロックエクスプローラーのURLが無効です"
+  },
+  "invalidSeedPhrase": {
+    "message": "Invalid seed phrase"
+  },
+  "ipfsGateway": {
+    "message": "IPFSゲートウェイ"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ENSコンテンツの解決に使用する、、IPFSC IDゲートウェイのURLを入力してください。"
+  },
+  "invalidIpfsGateway": {
+    "message": "無効なIPFSゲートウェイ：値は有効なURLである必要があります"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "禁じられたIPFSゲートウェイ：CIDゲートウェイを指定してください"
   },
   "jsonFile": {
     "message": "JSONファイル",
@@ -281,8 +861,17 @@
   "max": {
     "message": "最大"
   },
+  "lastConnected": {
+    "message": "最後の接続"
+  },
   "learnMore": {
     "message": "詳細"
+  },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "letsGoSetUp": {
+    "message": "Yes, let’s get set up!"
   },
   "likeToAddTokens": {
     "message": "トークンを追加しますか?"
@@ -290,71 +879,235 @@
   "links": {
     "message": "リンク"
   },
+  "liveGasPricePredictions": {
+    "message": "Live Gas Price Predictions"
+  },
   "loading": {
     "message": "ロード中..."
   },
   "loadingTokens": {
     "message": "トークンをロード中..."
   },
-  "unlock": {
-    "message": "ログイン"
+  "loadMore": {
+    "message": "Load More"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
   },
   "lock": {
-    "message": "ログアウト"
+    "message": "ロック"
+  },
+  "lockTimeTooGreat": {
+    "message": "ロック時間が長すぎます"
   },
   "mainnet": {
     "message": "Ethereumメインネットワーク"
   },
+  "memorizePhrase": {
+    "message": "Memorize this phrase."
+  },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "メッセージ"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Braveでのアカウントの接続を、より細かく制御できるようになりました。"
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "接続ステータスボタンは、アクセスしているウェブサイトが現在選択されているアカウントに接続されているかどうかを示しています。"
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "クリックすると、接続されているアカウントを管理できます。"
+  },
+  "metamaskDescription": {
+    "message": "Connecting you to Ethereum and the Decentralized Web."
+  },
+  "metamaskVersion": {
+    "message": "Brave のバージョン"
+  },
+  "mobileSyncText": {
+    "message": "Please enter your password to confirm it's you!"
+  },
   "myAccounts": {
     "message": "マイアカウント"
+  },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "Braveで作成したアカウントはすべて、自動的にこのセクションに追加されます。"
   },
   "mustSelectOne": {
     "message": "一つ以上のトークンを選択してください。"
   },
   "needEtherInWallet": {
-    "message": "Braveで分散型アプリケーションを使用するためには、このウォレットにEtherが必要です。"
+    "message": "Braveを使用して分散型アプリケーションとインタラクトするには、ウォレットにEtherが必要です。"
   },
   "needImportFile": {
     "message": "インポートするファイルを選択してください。",
     "description": "User is important an account and needs to add a file to continue"
   },
+  "negativeETH": {
+    "message": "Can not send negative amounts of ETH."
+  },
+  "networkName": {
+    "message": "Network Name"
+  },
   "networks": {
     "message": "ネットワーク"
   },
+  "networkSettingsDescription": {
+    "message": "Add and edit custom RPC networks"
+  },
+  "nevermind": {
+    "message": "Nevermind"
+  },
   "newAccount": {
     "message": "新規アカウント"
+  },
+  "newAccountDetectedDialogMessage": {
+    "message": "New address detected! Click here to add to your address book."
   },
   "newAccountNumberName": {
     "message": "アカウント $1",
     "description": "Default name of next account to be created on create account screen"
   },
+  "newContact": {
+    "message": "New Contact"
+  },
   "newContract": {
     "message": "新規コントラクト"
   },
   "newPassword": {
-    "message": "新規パスワード(最低8文字)"
+    "message": "新しいパスワード（最小8文字）"
+  },
+  "newNetwork": {
+    "message": "New Network"
+  },
+  "newToMetaMask": {
+    "message": "Braveを利用し始めたばかりですか？"
   },
   "noAlreadyHaveSeed": {
     "message": "すでにシードを持っています"
   },
+  "protectYourKeys": {
+    "message": "Protect Your Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "シードフレーズに注意してください — Braveを模倣しようとするWebサイトの報告があります。Braveがあなたのシードフレーズを要求することは決してありません！"
+  },
+  "protectYourKeysMessage2": {
+    "message": "フレーズは安全に保管してください。不審な点がある場合、またはWebサイトについて不明な点がある場合は、support@brave.comまでメールでご連絡ください。"
+  },
+  "rpcUrl": {
+    "message": "New RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "信頼できるサイトにのみ接続してください。"
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "悪意のあるイーサリアムネットワークプロバイダーは、ブロックチェーンの状態について嘘を言い、ああたのネットワークでのアクティビティを記録する可能性があります。信頼できるカスタムネットワークのみを追加するようにしてください。"
+  },
+  "optionalChainId": {
+    "message": "ChainID (optional)"
+  },
+  "optionalSymbol": {
+    "message": "Symbol (optional)"
+  },
+  "newTotal": {
+    "message": "New Total"
+  },
+  "newTransactionFee": {
+    "message": "New Transaction Fee"
+  },
   "next": {
     "message": "次へ"
+  },
+  "nextNonceWarning": {
+    "message": "ノンスが、$1の提案されたノンスよりも高くなっています",
+    "description": "The next nonce according to Brave's internal logic"
   },
   "noAddressForName": {
     "message": "この名前にはアドレスが設定されていません。"
   },
+  "noConversionRateAvailable": {
+    "message": "No Conversion Rate Available"
+  },
   "noTransactions": {
     "message": "トランザクションがありません。"
+  },
+  "noThanks": {
+    "message": "スキップ"
+  },
+  "notCurrentAccount": {
+    "message": "これは正しいアカウントですか？ ウォレットで現在選択されているアカウントとは異なります"
+  },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam not found"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Origin"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "participateInMetaMetrics": {
+    "message": "Participate in MetaMetrics"
+  },
+  "participateInMetaMetricsDescription": {
+    "message": "MetaMetricsに参加し、 Braveの改善にご協力ください"
   },
   "password": {
     "message": "パスワード"
   },
+  "passwordsDontMatch": {
+    "message": "Passwords Don't Match"
+  },
+  "passwordNotLongEnough": {
+    "message": "Password not long enough"
+  },
   "pastePrivateKey": {
     "message": "秘密鍵をここにペーストして下さい:",
     "description": "For importing an account from a private key"
+  },
+  "pending": {
+    "message": "保留中"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "この許可を承認しました"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "この許可を承認していません"
+  },
+  "personalAddressDetected": {
+    "message": "Personal address detected. Input the token contract address."
+  },
+  "plusXMore": {
+    "message": " $1以上",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Prev"
+  },
+  "primaryCurrencySetting": {
+    "message": "Primary Currency"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
   },
   "privacyMsg": {
     "message": "プライバシーポリシー"
@@ -369,26 +1122,105 @@
   "privateNetwork": {
     "message": "プライベート・ネットワーク"
   },
+  "proposedApprovalLimit": {
+    "message": "提案された承認の制限"
+  },
+  "queue": {
+    "message": "Queue"
+  },
+  "queued": {
+    "message": "キューに入れられた"
+  },
   "readdToken": {
     "message": "アカウントのオプションメニューから「トークンを追加」すれば、将来このトークンを追加し直すことができます。"
+  },
+  "recents": {
+    "message": "Recents"
+  },
+  "receive": {
+    "message": "受取"
   },
   "recipientAddress": {
     "message": "受取人アドレス"
   },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
+  },
+  "rejectAll": {
+    "message": "Reject All"
+  },
+  "rejectTxsN": {
+    "message": "Reject $1 transactions"
+  },
+  "rejectTxsDescription": {
+    "message": "You are about to batch reject $1 transactions."
+  },
   "rejected": {
     "message": "拒否されました"
+  },
+  "reset": {
+    "message": "Reset"
   },
   "resetAccount": {
     "message": "アカウントをリセット"
   },
+  "resetAccountDescription": {
+    "message": "アカウントをリセットすると、取引の履歴がクリアされます。これによりアカウントの残高が変更されたり、シードフレーズを再入力したりする必要はありません。"
+  },
+  "deleteNetwork": {
+    "message": "Delete Network?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
+  },
+  "remindMeLater": {
+    "message": "Remind me later"
+  },
   "restoreFromSeed": {
     "message": "パスフレーズから復元する"
+  },
+  "restoreAccountWithSeed": {
+    "message": "Restore your Account with Seed Phrase"
+  },
+  "restoreWalletPreferences": {
+    "message": "$1からのデータのバックアップが見つかりました。 ウォレットの設定を復元しますか？",
+    "description": "$1 is the date at which the data was backed up"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "requests waiting to be acknowledged"
   },
   "required": {
     "message": "必要です。"
   },
+  "restore": {
+    "message": "Restore"
+  },
   "revealSeedWords": {
-    "message": "パスフレーズを表示"
+    "message": "シードフレーズを明らかにする"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
+  },
+  "revealSeedWordsDescription": {
+    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "DO NOT share this phrase with anyone!"
+  },
+  "revealSeedWordsWarning": {
+    "message": "These words can be used to steal all your accounts."
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeAccount": {
+    "message": "Remove account"
+  },
+  "removeAccountDescription": {
+    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+  },
+  "readyToConnect": {
+    "message": "Ready to Connect?"
   },
   "rinkeby": {
     "message": "Rinkebyテストネットワーク"
@@ -396,8 +1228,26 @@
   "ropsten": {
     "message": "Ropstenテストネットワーク"
   },
+  "goerli": {
+    "message": "Goerli Test Network"
+  },
   "save": {
     "message": "保存"
+  },
+  "slow": {
+    "message": "Slow"
+  },
+  "slower": {
+    "message": "Slower"
+  },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
+  "scanInstructions": {
+    "message": "Place the QR code in front of your camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
   },
   "search": {
     "message": "検索"
@@ -405,14 +1255,65 @@
   "searchResults": {
     "message": "検索結果"
   },
+  "secretBackupPhrase": {
+    "message": "Secret Backup Phrase"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+  },
+  "secretBackupPhraseWarning": {
+    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+  },
+  "secretPhrase": {
+    "message": "ボルトを復元するには、ここに秘密の24単語のフレーズを入力してください。"
+  },
+  "securityAndPrivacy": {
+    "message": "Security & Privacy"
+  },
+  "securitySettingsDescription": {
+    "message": "Privacy settings and wallet seed phrase"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "Separate each word with a single space"
+  },
+  "seedPhrasePlaceholderPaste": {
+    "message": "クリップボードからシードフレーズを貼り付ける"
+  },
+  "showSeedPhrase": {
+    "message": "シードフレーズを表示"
+  },
+  "seedPhraseReq": {
+    "message": "シードフレーズには、12、15、18、21、24単語が含まれます"
+  },
+  "selectingAllWillAllow": {
+    "message": "すべてを選択すると、このサイトで現在のすべてのアカウントを表示するこっとができます。このサイトを信頼していることを確認してください。"
+  },
+  "selectAccounts": {
+    "message": "アカウントを選択"
+  },
+  "selectAll": {
+    "message": "すべて選択する"
+  },
   "selectCurrency": {
     "message": "通貨を選択"
+  },
+  "selectEachPhrase": {
+    "message": "Please select each phrase in order to make sure it is correct."
+  },
+  "selectLocale": {
+    "message": "Select Locale"
   },
   "selectType": {
     "message": "キーの種類"
   },
+  "buy": {
+    "message": "購入"
+  },
   "send": {
     "message": "送信"
+  },
+  "sendAmount": {
+    "message": "Send Amount"
   },
   "sendETH": {
     "message": "ETHの送信"
@@ -420,14 +1321,66 @@
   "sendTokens": {
     "message": "トークンを送信"
   },
+  "sentEther": {
+    "message": "sent ether"
+  },
+  "sentTokens": {
+    "message": "sent tokens"
+  },
+  "sendSpecifiedTokens": {
+    "message": "$1を送信",
+    "description": "Symbol of the specified token"
+  },
+  "separateEachWord": {
+    "message": "Separate each word with a single space"
+  },
   "searchTokens": {
     "message": "トークンの検索"
+  },
+  "searchAccounts": {
+    "message": "アカウントを検索"
+  },
+  "noAccountsFound": {
+    "message": "指定された検索クエリのアカウントが見つかりません"
+  },
+  "selectAnAccount": {
+    "message": "Select an Account"
+  },
+  "selectAnAccountHelp": {
+    "message": " Braveで表示するアカウントを選択"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
+  "selectHdPath": {
+    "message": "Select HD Path"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
   },
   "settings": {
     "message": "設定"
   },
+  "showAdvancedGasInline": {
+    "message": "Advanced gas controls"
+  },
+  "showAdvancedGasInlineDescription": {
+    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Show Conversion on Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Select this to show fiat conversion on Testnets"
+  },
   "showPrivateKeys": {
     "message": "秘密鍵を表示"
+  },
+  "showHexData": {
+    "message": "Show Hex Data"
+  },
+  "showHexDataDescription": {
+    "message": "Select this to show the hex data field on the send screen"
   },
   "sign": {
     "message": "署名"
@@ -435,11 +1388,120 @@
   "signatureRequest": {
     "message": "署名リクエスト"
   },
+  "signatureRequest1": {
+    "message": "メッセージ"
+  },
+  "signed": {
+    "message": "Signed"
+  },
   "signNotice": {
     "message": "このメッセージへの署名は危険となる可能性があります。\n完全に信頼するサイトからのメッセージのみ、\nあなたのアカウントで署名して下さい。今後のバージョンでは、\nこの危険なメソッドは削除される予定です。"
   },
   "sigRequest": {
     "message": "署名リクエスト"
+  },
+  "somethingWentWrong": {
+    "message": "Oops! Something went wrong."
+  },
+  "speedUp": {
+    "message": "Speed Up"
+  },
+  "speedUpCancellation": {
+    "message": "Speed up this cancellation"
+  },
+  "speedUpTransaction": {
+    "message": "Speed up this transaction"
+  },
+  "spendLimitPermission": {
+    "message": "支出制限の許可"
+  },
+  "spendLimitRequestedBy": {
+    "message": "$1によって要求された支出制限",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "支出制限が大きすぎます"
+  },
+  "spendLimitInvalid": {
+    "message": "利用限度額が無効です。利用限度額は正の数である必要があります"
+  },
+  "switchNetworks": {
+    "message": "Switch Networks"
+  },
+  "stateLogFileName": {
+    "message": "Brave ステートログ"
+  },
+  "stateLogs": {
+    "message": "State Logs"
+  },
+  "stateLogsDescription": {
+    "message": "State logs contain your public account addresses and sent transactions."
+  },
+  "stateLogError": {
+    "message": "Error in retrieving state logs."
+  },
+  "statusConnected": {
+    "message": "接続済み"
+  },
+  "statusNotConnected": {
+    "message": "未接続"
+  },
+  "step1HardwareWallet": {
+    "message": "1. Connect Hardware Wallet"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
+  },
+  "step2HardwareWallet": {
+    "message": "2. Select an Account"
+  },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. web3サイトなどを使い始めよう！"
+  },
+  "step3HardwareWalletMsg": {
+    "message": "他のイーサリアムアカウントと同じように、ハードウェアアカウントを使用します。web3サイトに接続し、ETHを送信し、ERC20トークンとCryptoKittiesのような代替不可能なトークンを購入して保存します。"
+  },
+  "storePhrase": {
+    "message": "Store this phrase in a password manager like 1Password."
+  },
+  "submit": {
+    "message": "送信"
+  },
+  "submitted": {
+    "message": "Submitted"
+  },
+  "supportCenter": {
+    "message": "Visit our Support Center"
+  },
+  "symbol": {
+    "message": "Symbol"
+  },
+  "symbolBetweenZeroTwelve": {
+    "message": "記号は11文字未満である必要があります。"
+  },
+  "syncWithMobile": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileTitle": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileDesc": {
+    "message": "アカウントと情報をモバイルデバイスと同期することができます。Braveのモバイルアプリを開き、「設定」に移動し、「ブラウザ拡張機能から同期」をタップしてください"
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "Brave モバイルアプリを初めて開く場合は、スマートフォンの手順に従ってください。"
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "Braveモバイルアプリでこのコードをスキャン"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "Make sure nobody else is looking at your screen when you scan this code"
+  },
+  "syncWithMobileComplete": {
+    "message": "データが正常に同期されました。Braveモバイルアプリをお楽しみください！"
   },
   "terms": {
     "message": "利用規約"
@@ -447,11 +1509,33 @@
   "testFaucet": {
     "message": "Faucetをテスト"
   },
+  "thisWillCreate": {
+    "message": "This will create a new wallet and seed phrase"
+  },
+  "tips": {
+    "message": "Tips"
+  },
   "to": {
     "message": "送信先"
   },
+  "toAddress": {
+    "message": " 以下へ：$1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "へ："
+  },
   "token": {
     "message": "トークン"
+  },
+  "tokenAlreadyAdded": {
+    "message": "Token has already been added."
+  },
+  "tokenContractAddress": {
+    "message": "Token Contract Address"
+  },
+  "tokenOptions": {
+    "message": "トークンオプション"
   },
   "tokenSymbol": {
     "message": "トークンシンボル"
@@ -459,12 +1543,82 @@
   "total": {
     "message": "合計"
   },
+  "transaction": {
+    "message": "transaction"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmed at $2."
+  },
+  "transactionCreated": {
+    "message": "Transaction created with a value of $1 at $2."
+  },
+  "transactionDropped": {
+    "message": "Transaction dropped at $2."
+  },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+  },
+  "transactionUpdated": {
+    "message": "Transaction updated at $2."
+  },
+  "transactionErrored": {
+    "message": "Transaction encountered an error."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transaction cancel attempted with gas fee of $1 at $2"
+  },
+  "transactionCancelSuccess": {
+    "message": "Transaction successfully cancelled at $2"
+  },
+  "transactionError": {
+    "message": "Transaction Error. Exception thrown in contract code."
+  },
+  "transactionErrorNoContract": {
+    "message": "Trying to call a function on a non-contract address."
+  },
+  "transactionFee": {
+    "message": "Transaction Fee"
+  },
+  "transactionTime": {
+    "message": "Transaction Time"
+  },
+  "showTransactionTimeDescription": {
+    "message": "これを選択すると、メインイーサリアムネットワーク上で保留中のトランザクション時間の予測が、「アクティビティ」のタブに表示されます。 注意：予測は、ネットワークの状態に基づく概算です。"
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
+  "transferBetweenAccounts": {
+    "message": "Transfer between my accounts"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
+  },
   "troubleTokenBalances": {
     "message": "トークン残高を取得できません。こちらでご確認ください。",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "このサイトを信頼しますか？ この権限を付与することで、$1が$2を引き出し、取引を自動化することができます。",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
+  "tryAgain": {
+    "message": "Try again"
+  },
   "typePassword": {
-    "message": "パスワードの入力"
+    "message": "Braveのパスワードを入力してください"
+  },
+  "unapproved": {
+    "message": "Unapproved"
+  },
+  "alertDisableTooltip": {
+    "message": "これは「設定>アラート」で変更することができます"
+  },
+  "units": {
+    "message": "units"
   },
   "unknown": {
     "message": "不明"
@@ -472,32 +1626,165 @@
   "unknownNetwork": {
     "message": "不明なプライベートネットワーク"
   },
+  "unknownQrCode": {
+    "message": "Error: We couldn't identify that QR code"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "Ooops! Something went wrong...."
+  },
+  "unknownCameraError": {
+    "message": "There was an error while trying to access your camera. Please try again..."
+  },
+  "unlimited": {
+    "message": "無制限"
+  },
+  "unlock": {
+    "message": "Unlock"
+  },
+  "unlockMessage": {
+    "message": "The decentralized web awaits"
+  },
+  "updatedWithDate": {
+    "message": "Updated $1"
+  },
+  "urlErrorMsg": {
+    "message": "URLには、適切なHTTP/HTTPSのプレフィックスが必要です。"
+  },
+  "urlExistsErrorMsg": {
+    "message": "URLは既存のネットワークリストにすでに存在します"
+  },
   "usedByClients": {
     "message": "様々なクライアントによって使用されています。"
+  },
+  "usePhishingDetection": {
+    "message": "フィッシング検出を使用"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "イーサリアムユーザーを標的とする、フィッシングドメインに警告を表示する"
+  },
+  "userName": {
+    "message": "Username"
   },
   "viewAccount": {
     "message": "アカウントを見る"
   },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "View at $1"
+  },
   "viewOnEtherscan": {
     "message": "Etherscan で見る"
   },
+  "retryTransaction": {
+    "message": "トランザクションを再試行"
+  },
+  "visitWebSite": {
+    "message": "Visit our web site"
+  },
   "walletSeed": {
-    "message": "ウォレットのパスフレーズ"
+    "message": "シードフレーズ"
   },
   "welcomeBack": {
     "message": "おかえりなさい!"
   },
   "welcome": {
-    "message": "Brave ベータ版へようこそ!"
+    "message": "Brave へようこそ"
+  },
+  "whatsThis": {
+    "message": "この機能について"
+  },
+  "writePhrase": {
+    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+  },
+  "xOfY": {
+    "message": "$2の$1 ",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "You need to allow camera access to use this feature."
   },
   "yourSigRequested": {
-    "message": "あなたの署名がリクエストされています。"
+    "message": "署名がリクエストされています。"
   },
   "youSign": {
     "message": "署名しています。"
   },
+  "yourPrivateSeedPhrase": {
+    "message": "Your private seed phrase"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Zero gas price on speed up"
+  },
+  "decryptRequest": {
+    "message": "復号化要求"
+  },
+  "decrypt": {
+    "message": "復号化"
+  },
+  "decryptMessageNotice": {
+    "message": "$1は、このメッセージを読んでアクションを完了しようとしています",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "メッセージを復号化"
+  },
+  "decryptCopy": {
+    "message": "暗号化されたメッセージをコピー"
+  },
+  "decryptInlineError": {
+    "message": "エラーのため、このメッセージを復号化できません：$1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "提供"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "暗号化公開鍵をリクエスト"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1は公開暗号化キーを要求します。同意することにより、このサイトはあなたへの暗号化されたメッセージを作成することができます。",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "暗号ウォレットシークレットバックアップフレーズ"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Braveの設定"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto（クリプト）ウォレットを使用すると、Braveで暗号通貨と関連するアセットを扱うことができます。Cryptoウォレットは、コレクティブルズはもちろんのこと、ETHやBATのようなEthereumトークンに対応し、Ðappsやその他のスマートコントラクトを扱うことができます。これはすべて、Ethereumやその他のブロックチェーンシステムに精通している方々、または学ぶことを楽しみにしている方々を対象としています。"
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "この使用に関連するすべてのリスクの責任はあなた自身にあり、Brave Softwareがこの使用の結果として被る可能性のある偶発的、または結果的損失を含むいかなる損失についても責任または義務を負わないことを受け入れる場合にのみ、クリプトウォレットを使用してください。"
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "これは全て別です"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "サポートするサイトを自分で選ぶことももちろん可能です。"
+  },
+  "cryptoWalletsTitle": {
+    "message": "仮想通貨ウォレット"
+  },
+  "disclosureConfirm": {
+    "message": "了解しました"
+  },
   "ledgerCreateSubText": {
     "message": "Ledgerハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"
+  },
+  "metamaskImportSubText": {
+    "message": "注：Metamaskウォレットからインポートする場合は、24単語ではなく12単語を入力してください。"
   },
   "newLocalWallet": {
     "message": "新しいローカルウォレット"
@@ -505,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Braveローカルウォレットを新しく作成してdAppsにアクセスし、仮想通貨やコレクションを安全に保管しましょう。トークンを手数料なしで匿名で取引できます。"
   },
+  "passWarningOne": {
+    "message": "このパスワードはプライベートキーを保護します。忘れれてしまうと、 Braveすらもリセットすることはできません！"
+  },
+  "providerErrorMessage": {
+    "message": "このウォレットは、デフォルトのイーサリアムDappプロバイダーではありません。"
+  },
   "trezorCreateSubText": {
     "message": "Trezorハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"
+  },
+  "welcomeCryptoWallets": {
+    "message": " Brave クリプトウォレットへようこそ"
   }
 }

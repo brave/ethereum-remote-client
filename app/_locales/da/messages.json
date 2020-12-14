@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Jeg har læst og accepterer $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Se adresserne på dine tilladte konti (påkrævet)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Forbundne websteder"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 er forbundet til disse websteder. De kan se din kontoadresse.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 er ikke forbundet til nogen side.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Du har 1 konto tilsluttet dette websted."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Du har $1 konti tilknyttet dette websted.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave har ikke forbindelse til dette websted. For at oprette forbindelse til et web3-websted skal du finde forbindelsesknappen på deres websted."
+  },
+  "currentAccountNotConnected": {
+    "message": "Din nuværende konto er ikke forbundet"
+  },
+  "switchToThisAccount": {
+    "message": "Skift til denne konto"
+  },
+  "disconnectThisAccount": {
+    "message": "Frakobl denne konto"
+  },
+  "permissions": {
+    "message": "Tilladelser"
+  },
+  "showPermissions": {
+    "message": "Vis tilladelser"
+  },
+  "authorizedPermissions": {
+    "message": "Du har godkendt følgende tilladelser"
+  },
+  "connectManually": {
+    "message": "Opret manuelt forbindelse til det aktuelle websted"
+  },
+  "disconnect": {
+    "message": "Afbryd"
+  },
+  "disconnectAllAccounts": {
+    "message": "Frakobl alle konti"
+  },
+  "disconnectPrompt": {
+    "message": "Afbryd $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Er du sikker på at du vil fjerne forbindelsen? Du kan miste sidefunktionalitet."
+  },
+  "dismiss": {
+    "message": "Luk"
+  },
+  "showIncomingTransactions": {
+    "message": "Vis indgående transaktioner"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Vælg dette for at bruge Etherscan til at vise indgående transaktioner på transaktionslisten"
+  },
   "chartOnlyAvailableEth": {
     "message": "Skema kun tilgængeligt på Ethereum-netværk."
+  },
+  "connecting": {
+    "message": "Opretter forbindelse..."
+  },
+  "connectWithMetaMask": {
+    "message": "Forbind til Brave"
+  },
+  "connectTo": {
+    "message": "Opret forbindelse til $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Opret forbindelse til alle dine $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "konti",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Opret forbindelse til $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 konti",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Kontraktinteraktion"
@@ -17,6 +114,10 @@
   "acceleratingATransaction": {
     "message": "* At gøre din transaktion hurtigere ved at bruge en højere Gas-priser, øger dennes chancer for at blive behandlet af netværket hurtigere, men det er ikke altid garanteret."
   },
+  "accessAndSpendNotice": {
+    "message": "$1 kan få adgang til og bruge op til dette maksimale beløb",
+    "description": "$1 is the url of the site requesting ability to spend"
+  },
   "accessingYourCamera": {
     "message": "Tilgår din kamera..."
   },
@@ -24,7 +125,7 @@
     "message": "Konto"
   },
   "accountDetails": {
-    "message": "Kontooplysninger"
+    "message": "Kontodetaljer"
   },
   "accountName": {
     "message": "Kontonavn"
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "Du skal vælge en konto!"
+  },
+  "active": {
+    "message": "Aktiv"
+  },
+  "activity": {
+    "message": "Aktivitet"
   },
   "activityLog": {
     "message": "aktivitetslog"
@@ -48,7 +155,7 @@
     "message": "Avanceret"
   },
   "advancedSettingsDescription": {
-    "message": "Få adgang til udviklerfunktioner, hent tilstandslogs, nulstil konto, opsæt testnetværk og brugerdefineret RPC"
+    "message": "Få adgang til udviklerfunktioner, download tilstandslogfiler, nulstil konto, opsæt testnet og tilpasset RPC"
   },
   "advancedOptions": {
     "message": "Avancerede Valgmuligheder"
@@ -72,27 +179,63 @@
     "message": "Tilføj foreslåede tokens"
   },
   "addAcquiredTokens": {
-    "message": "Tilføj de tokens du har erhvervet ved hjælp af Brave"
+    "message": "Tilføj de tokens, du har erhvervet ved brug af Brave"
+  },
+  "alerts": {
+    "message": "Advarsler"
+  },
+  "alertsSettingsDescription": {
+    "message": "Aktiver eller deaktiver hver alarm"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Browser et websted med en ikke-tilknyttet konto valgt"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Denne advarsel vises i pop op, når du browser et tilsluttet web3-sted, men den aktuelt valgte konto er ikke forbundet."
+  },
+  "allowOriginSpendToken": {
+    "message": "Tillad $1 at bruge dine $2?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Tillad denne side at:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Tillad denne eksterne udvidelse til:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Tillad $1 at udbetale og bruge op til det følgende beløb:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Beløb"
+  },
+  "amountWithColon": {
+    "message": "Beløb:"
   },
   "appDescription": {
     "message": "En Ethereum-pung i din browser",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Godkend"
+    "message": "Godkend forbrugsgrænse"
+  },
+  "approveSpendLimit": {
+    "message": "Godkend forbrugsgrænse på $1",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Godkendt"
   },
   "asset": {
     "message": "Aktiv"
+  },
+  "assets": {
+    "message": "Aktiver"
   },
   "attemptingConnect": {
     "message": "Forsøger at oprette forbindelse til blokkæden."
@@ -107,10 +250,10 @@
     "message": "Tilskrivninger"
   },
   "autoLockTimeLimit": {
-    "message": "Timer for automatisk udlogning (minutter)"
+    "message": "Auto-Lås Timer (minutter)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Indstil den passive tid i minutter, før Brave automatisk logger dig ud"
+    "message": "Indstil inaktiv tid i minutter, før Brave bliver låst."
   },
   "average": {
     "message": "Gennemsnit"
@@ -125,10 +268,10 @@
     "message": "Sikkerhedskopiér din Hemmelige Gendannelseskode for at holde din tegnebog og dine penge sikre."
   },
   "backupApprovalInfo": {
-    "message": "Den hemmelige kode er påkrævet for at gendanne din pung, hvis du mister din enhed, glemmer dit kodeord, er nødt til at geninstallere Brave eller ønsker adgang til din pung fra en anden enhed."
+    "message": "Denne hemmelige kode er påkrævet for at gendanne din tegnebog, hvis du mister din enhed, glemmer din adgangskode, skal geninstallere Brave eller ønsker at få adgang til din tegnebog på en anden enhed."
   },
   "backupNow": {
-    "message": "Backup nu"
+    "message": "Backup nu\n"
   },
   "balance": {
     "message": "Saldo"
@@ -149,6 +292,15 @@
   "blockiesIdenticon": {
     "message": "Brug Blockies Identicon"
   },
+  "nonceField": {
+    "message": "Tilpas engangskode for transaktion"
+  },
+  "nonceFieldHeading": {
+    "message": "Brugerdefineret Nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "Slå dette til for at ændre nonce (transaktionsnummer) på bekræftelsesskærmene. Dette er en avanceret funktion, brug forsigtigt."
+  },
   "browserNotSupported": {
     "message": "Din browser er ikke understøttet..."
   },
@@ -159,7 +311,7 @@
     "message": "Køb ETH med Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lader dig bruge et kreditkort til at indbetale ETH på din Brave-konto."
+    "message": "Wyre lader dig bruge et debetkort til at indbetale ETH på din Brave konto."
   },
   "buyCoinSwitch": {
     "message": "Køb på CoinSwitch"
@@ -204,7 +356,7 @@
     "message": "Luk"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Du skal bruge Brave i Google Chrome for at forbinde med din Hardware Wallet."
+    "message": "Du skal bruge Brave på Google Chrome for at oprette forbindelse til din hardware-tegnebog."
   },
   "confirm": {
     "message": "Bekræft"
@@ -213,13 +365,16 @@
     "message": "Bekræftet"
   },
   "confirmPassword": {
-    "message": "Bekræft adgangskode"
+    "message": "Bekræft kodeord"
   },
   "confirmSecretBackupPhrase": {
     "message": "Bekræft din hemmelige backup-sætning"
   },
   "congratulations": {
     "message": "Tillykke"
+  },
+  "connectAccountOrCreate": {
+    "message": "Opret forbindelse til en konto, eller opret en ny"
   },
   "connectHardwareWallet": {
     "message": "Forbind Hardwarepung"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Opretter forbindelse til Goerli Testnetværk"
+  },
+  "contacts": {
+    "message": "Kontakter"
+  },
+  "contactsSettingsDescription": {
+    "message": "Tilføj, rediger, fjern og administrer dine kontakter"
+  },
+  "contactUs": {
+    "message": "Kontakt os!"
   },
   "continueToWyre": {
     "message": "Fortsæt til Wyre"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "Valutakonvertering"
   },
+  "currentExtension": {
+    "message": "Aktuel udvidelsesside"
+  },
   "currentLanguage": {
     "message": "Nuværende sprog"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "Tilpasset RPC"
+  },
+  "customSpendLimit": {
+    "message": "Brugerdefineret forbrugsgrænse"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Nogle af dine kontodata blev sikkerhedskopieret under en tidligere installation af Brave. Dette kan omfatte dine indstillinger, kontakter og tokens. Vil du gendanne disse data nu?"
   },
   "decimalsMustZerotoTen": {
     "message": "Decimaler skal være mindst 0 og højst 36."
@@ -338,6 +511,9 @@
   "done": {
     "message": "Færdig"
   },
+  "dontShowThisAgain": {
+    "message": "Vis ikke dette igen"
+  },
   "downloadGoogleChrome": {
     "message": "Hent Google Chrome"
   },
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "Redigér Kontakt"
   },
+  "editPermission": {
+    "message": "Rediger tilladelse"
+  },
   "endOfFlowMessage1": {
     "message": "Du bestod testen - pas godt på din seed-sætning, det er dit ansvar!"
   },
@@ -372,22 +551,29 @@
     "message": "Del aldrig frasen med nogen."
   },
   "endOfFlowMessage5": {
-    "message": "Vær varsom med phishing! Brave vil aldrig spontant bede om din seedfrase."
+    "message": "Vær forsigtig med phishing! Brave vil aldrig spontant bede om din seed-sætning."
   },
   "endOfFlowMessage6": {
     "message": "Hvis du får brug for at lave en backup af din seedfrase igen, kan du finde det under Indstillinger -> Sikkerhed."
   },
   "endOfFlowMessage7": {
-    "message": "Hvis du har spørgsmål eller bemærker noget mistænkeligt, send en mail til support@brave.com."
+    "message": "Hvis du nogensinde har spørgsmål eller ser noget fishy, ​​e-mail support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave kan ikke gendanne din seed-sætning. Få mere at vide."
+    "message": "Brave kan ikke gendanne din seed-sætning."
   },
   "endOfFlowMessage9": {
     "message": "Lær mere. "
   },
   "endOfFlowMessage10": {
     "message": "Helt klar"
+  },
+  "externalExtension": {
+    "message": "Ekstern udvidelse"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" vil lukke denne fane og vende tilbage til $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Fejl i ENS-navneregistrering"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "Indtast et alias"
   },
+  "enterMaxSpendLimit": {
+    "message": "Indtast maks. Forbrugsgrænse"
+  },
   "enterPassword": {
     "message": "Indtast kodeord"
   },
   "enterPasswordContinue": {
     "message": "Indtast adgangskode for at fortsætte"
+  },
+  "errorCode": {
+    "message": "Kode: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Fejloplysninger",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Besked: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Kode: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave løb ind i et problem",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Prøv igen ved at genindlæse siden, eller kontakt support på support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Prøv igen ved at lukke og åbne pop op igen, eller kontakt support på support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Stack:\n",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Offentlig Ethereum-adresse"
@@ -414,7 +635,7 @@
     "message": "Estimerede behandlingstider"
   },
   "expandView": {
-    "message": "Udvis Visning"
+    "message": "Udvid visning"
   },
   "exportPrivateKey": {
     "message": "Eksporter privat nøgle"
@@ -422,11 +643,21 @@
   "failed": {
     "message": "Mislykkedes"
   },
+  "failureMessage": {
+    "message": "Noget gik galt, og vi kunne ikke gennemføre handlingen"
+  },
   "fast": {
     "message": "Hurtig"
   },
   "faster": {
     "message": "Hurtigere"
+  },
+  "feeAssociatedRequest": {
+    "message": "Et gebyr er forbundet med denne anmodning."
+  },
+  "fiat": {
+    "message": "Fiat",
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "Virker filimportering ikke? Klik her!",
@@ -437,6 +668,13 @@
   },
   "from": {
     "message": "Fra"
+  },
+  "fromAddress": {
+    "message": "Fra: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Funktion: Godkend"
   },
   "functionType": {
     "message": "Funktionstype"
@@ -465,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Brændstofpris"
   },
+  "gdprMessage": {
+    "message": "Disse data er aggregeret og er derfor anonyme med henblik på den generelle databeskyttelsesforordning (EU) 2016/679. For mere information om vores fortrolighedspraksis, se vores $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Politik for beskyttelse af persondata her",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Generelt"
   },
@@ -487,6 +733,9 @@
   "happyToSeeYou": {
     "message": "Vi er glade for at se dig."
   },
+  "hardware": {
+    "message": "Hardware"
+  },
   "hardwareWalletConnected": {
     "message": "Hardware-tegnebog tilsluttet"
   },
@@ -494,7 +743,7 @@
     "message": "Tilslut en hardware-tegnebog"
   },
   "hardwareWalletsMsg": {
-    "message": "Vælg en hardware-pung du vil bruge med Brave"
+    "message": "Vælg en hardware-wallet, som du vil bruge med Brave"
   },
   "havingTroubleConnecting": {
     "message": "Har du problemer med at oprette forbindelse?"
@@ -508,6 +757,10 @@
   },
   "hide": {
     "message": "Skjul"
+  },
+  "hideTokenSymbol": {
+    "message": "Skjul $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "Skjul Token?"
@@ -523,16 +776,16 @@
     "message": "Importer konto"
   },
   "importAccountMsg": {
-    "message": "Importerede konti vil ikke blive forbundet med din oprindeligt oprettede seed-sætning for din Brave-konto. Få mere at vide om importerede konti"
+    "message": "Importerede konti tilknyttes ikke din oprindelige oprettede Brave-konto seed-sætning. Lær mere om importerede konti"
   },
   "importAccountSeedPhrase": {
-    "message": "Importér en Konto med Seedfrase"
+    "message": "Importer en konto med seed-phrase"
   },
   "importWallet": {
-    "message": "Importér pung"
+    "message": "Importér wallet"
   },
   "importYourExisting": {
-    "message": "Importér din eksisterende pung med en 24-ords seedfrase"
+    "message": "Importer din eksisterende tegnebog ved hjælp af en sætning på 24 ord"
   },
   "imported": {
     "message": "Importeret",
@@ -565,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Kendte kontaktadresser."
   },
+  "knownTokenWarning": {
+    "message": "Denne handling redigerer tokens, der allerede er anført i din tegnebog, hvilket kan bruges til phishing mod dig. Godkend kun, hvis du er sikker på, at du ønsker at ændre, hvad disse tokens repræsenterer."
+  },
+  "reusedTokenNameWarning": {
+    "message": "En token her genbruger et symbol fra en anden token, du holder øje med, det kan være forvirrende eller vildledende."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ikke ETH-netværk, sat til små bogstaver"
   },
@@ -575,10 +834,22 @@
     "message": "Ugyldig RPC-webadresse"
   },
   "invalidBlockExplorerURL": {
-    "message": "Ugyldig Block Explorer-webadresse"
+    "message": "Ugyldig Block Explorer URL\n"
   },
   "invalidSeedPhrase": {
     "message": "Ugyldig backupsætning"
+  },
+  "ipfsGateway": {
+    "message": "IPFS Gateway"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Indtast URL'en for IPFS CID-gatewayen, der skal bruges til ENS content resolution."
+  },
+  "invalidIpfsGateway": {
+    "message": "Ugyldig IPFS-gateway: Værdien skal være en gyldig URL"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Forbudt IPF-GATEWAY: Angiv venligst en CID-gateway"
   },
   "jsonFile": {
     "message": "JSON-fil",
@@ -589,6 +860,9 @@
   },
   "max": {
     "message": "Maks"
+  },
+  "lastConnected": {
+    "message": "Sidste forbindelse"
   },
   "learnMore": {
     "message": "Lær mere"
@@ -602,6 +876,9 @@
   "likeToAddTokens": {
     "message": "Ønsker du at tilføje disse tokens?"
   },
+  "links": {
+    "message": "Links"
+  },
   "liveGasPricePredictions": {
     "message": "Live forudsigelser af brændstofpriser"
   },
@@ -614,8 +891,14 @@
   "loadMore": {
     "message": "Indlæs Mere"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "Log ud"
+    "message": "Lås"
+  },
+  "lockTimeTooGreat": {
+    "message": "Låsetid er for stor"
   },
   "mainnet": {
     "message": "Hovednetværk for Ethereum"
@@ -629,8 +912,20 @@
   "message": {
     "message": "Besked"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Du har nu mere kontrol over dine kontoforbindelser i Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Knappen Forbindelsesstatus viser, om det websted, du besøger, har forbindelse til din aktuelt valgte konto."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Klik på den for at administrere dine tilsluttede konti."
+  },
   "metamaskDescription": {
     "message": "Som forbinder dig til Ethereum og de decentraliserede internet."
+  },
+  "metamaskVersion": {
+    "message": "Brave Version"
   },
   "mobileSyncText": {
     "message": "Indtast din adgangskode for at bekræfte, at det er dig!"
@@ -642,13 +937,13 @@
     "message": "Mine Pungkonti"
   },
   "myWalletAccountsDescription": {
-    "message": "Alle dine Brave-oprettede konti føjes automatisk til dette afsnit."
+    "message": "Alle dine Brave oprettede konti føjes automatisk til dette afsnit."
   },
   "mustSelectOne": {
     "message": "Skal vælge mindst 1 token."
   },
   "needEtherInWallet": {
-    "message": "Du skal have Ether i din tegnebog for at interagere med decentraliserede applikationer, der bruger Brave."
+    "message": "For at interagere med decentrale applikationer ved hjælp af Brave skal du bruge Ether i din tegnebog."
   },
   "needImportFile": {
     "message": "Du skal vælge en fil, der skal importeres.",
@@ -692,7 +987,7 @@
     "message": "Nyt Netværk"
   },
   "newToMetaMask": {
-    "message": "Ny på Brave?"
+    "message": "Ny til Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Nej, jeg har allerede en seedfrase"
@@ -701,13 +996,19 @@
     "message": "Beskyt dine nøgler!"
   },
   "protectYourKeysMessage1": {
-    "message": "Vær forsigtig med din backupsætning - der har været rapporter om websteder, der forsøger at efterligne Brave. Brave vil aldrig bede om din backupsætning!"
+    "message": "Vær forsigtig med din seed-sætning - der har været rapporter om websteder, der forsøger at efterligne Brave. Brave vil aldrig bede om din seed-sætning!"
   },
   "protectYourKeysMessage2": {
-    "message": "Opbevar din frase et sikkert sted. Hvis du ser noget mistænkeligt, eller du er usikker på hjemmesiden, skriv en email til support@brave.com"
+    "message": "Hold din sætning sikker. Hvis du ser noget fishy, ​​eller hvis du er usikker på et websted, skal du e-maile support@brave.com"
   },
   "rpcUrl": {
     "message": "Ny RPC-URL"
+  },
+  "onlyConnectTrust": {
+    "message": "Forbind kun med websteder, du stoler på."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "En ondsindet Ethereum-netværksleverandør kan lyve om tilstanden af din blockchain og optage din netværksaktivitet. Tilføj kun brugerdefinerede netværk, som du stoler på."
   },
   "optionalChainId": {
     "message": "KædeID (valgfrit)"
@@ -724,6 +1025,10 @@
   "next": {
     "message": "Næste"
   },
+  "nextNonceWarning": {
+    "message": "Nonce er højere end foreslået nonce på $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Ingen adresse indstillet for dette navn."
   },
@@ -732,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Du har ingen transaktioner"
+  },
+  "noThanks": {
+    "message": "Nej tak"
+  },
+  "notCurrentAccount": {
+    "message": "Er dette den rigtige konto? Den adskiller sig fra den aktuelt valgte konto i din tegnebog"
   },
   "notEnoughGas": {
     "message": "Ikke nok gas"
@@ -747,6 +1058,9 @@
   },
   "orderOneHere": {
     "message": "Bestil en Trezor eller Ledger og frys dine midler ned"
+  },
+  "origin": {
+    "message": "Origin"
   },
   "parameters": {
     "message": "Parametre"
@@ -771,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "afventer"
+    "message": "Afventer "
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Du har godkendt denne tilladelse"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Du har ikke godkendt denne tilladelse"
   },
   "personalAddressDetected": {
     "message": "Personlig adresse opdaget. Indtast polet kontrakt adressen."
+  },
+  "plusXMore": {
+    "message": "+ $1 mere",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Forrige"
@@ -798,14 +1122,23 @@
   "privateNetwork": {
     "message": "Privat netværk"
   },
+  "proposedApprovalLimit": {
+    "message": "Foreslået godkendelsesgrænse"
+  },
   "queue": {
     "message": "Kø"
+  },
+  "queued": {
+    "message": "I kø"
   },
   "readdToken": {
     "message": "Du kan tilføje denne token i fremtiden, ved at gå til \"Tilføj token\" under dine valgmenuen for dine konti."
   },
   "recents": {
     "message": "Seneste"
+  },
+  "receive": {
+    "message": "Modtag"
   },
   "recipientAddress": {
     "message": "Modtagerens adresse"
@@ -832,7 +1165,7 @@
     "message": "Nulstil Konto"
   },
   "resetAccountDescription": {
-    "message": "Nulstilling af din konto vil rydde din transaktionshistorik."
+    "message": "Nulstilling af din konto rydder din transaktionshistorik. Dette ændrer ikke saldoen på dine konti og vil heller ikke kræve, at du genindtaster din seed-sætning."
   },
   "deleteNetwork": {
     "message": "Slet Netværk?"
@@ -849,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Gendan din konto med Seed-sætning"
   },
+  "restoreWalletPreferences": {
+    "message": "Der er fundet en sikkerhedskopi af dine data fra $1. Vil du gendanne dine tegnebogsindstillinger?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "forespørgsler der afventer anerkendelse"
   },
@@ -859,7 +1196,7 @@
     "message": "Gendan"
   },
   "revealSeedWords": {
-    "message": "Vis Seedord"
+    "message": "Afslør seed-sætning"
   },
   "revealSeedWordsTitle": {
     "message": "Backupsætning"
@@ -928,7 +1265,7 @@
     "message": "ADVARSEL: Afslør aldrig din backup-frase. Enhver med denne frase kan tage din Ether for altid."
   },
   "secretPhrase": {
-    "message": "Indtast din hemmelige tolv ord lange sætning for at gendanne din vault."
+    "message": "Indtast din hemmelige sætning på 24 ord her for at gendanne din boks."
   },
   "securityAndPrivacy": {
     "message": "Sikkerhed & Privatliv"
@@ -939,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Adskil hvert ord med et enkelt mellemrum"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Indsæt seed-sætning fra udklipsholderen"
+  },
+  "showSeedPhrase": {
+    "message": "Vis seed-phrase"
+  },
   "seedPhraseReq": {
-    "message": "Backupsætninger er 12 ord lange"
+    "message": "Seed-sætninger indeholder 12, 15, 18, 21 eller 24 ord"
+  },
+  "selectingAllWillAllow": {
+    "message": "Hvis du vælger alle, kan dette websted se alle dine aktuelle konti. Sørg for at have tillid til dette websted."
+  },
+  "selectAccounts": {
+    "message": "Vælg beløb"
+  },
+  "selectAll": {
+    "message": "Vælg alle"
   },
   "selectCurrency": {
     "message": "Vælg valuta"
@@ -949,10 +1301,16 @@
     "message": "Vælg venligst hver sætning, for at sikre at de er korrekte."
   },
   "selectLocale": {
-    "message": "Vælg Lokalitet"
+    "message": "Vælg Lokalitet\n"
   },
   "selectType": {
     "message": "Vælg type"
+  },
+  "buy": {
+    "message": "Køb"
+  },
+  "send": {
+    "message": "Send"
   },
   "sendAmount": {
     "message": "Send Beløb"
@@ -969,17 +1327,27 @@
   "sentTokens": {
     "message": "afsendte tokens"
   },
+  "sendSpecifiedTokens": {
+    "message": "Send $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Separer hvert ord med et enkelt mellemrum"
   },
   "searchTokens": {
     "message": "Søg efter tokens"
   },
+  "searchAccounts": {
+    "message": "Søg efter konti"
+  },
+  "noAccountsFound": {
+    "message": "Ingen konti fundet for den givne søgeforespørgsel"
+  },
   "selectAnAccount": {
     "message": "Vælg en Konto"
   },
   "selectAnAccountHelp": {
-    "message": "Vælg kontoen der skal vises i Brave"
+    "message": "Vælg den konto, der skal vises i Brave"
   },
   "selectAHigherGasFee": {
     "message": "Vælg et højere Gas-gebyr, for at gøre behandlingen af din transaktion hurtigere.*"
@@ -1020,6 +1388,9 @@
   "signatureRequest": {
     "message": "Signaturforespørgsel"
   },
+  "signatureRequest1": {
+    "message": "Besked"
+  },
   "signed": {
     "message": "Underskrevet"
   },
@@ -1041,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Gør denne transaktion hurtigere"
   },
+  "spendLimitPermission": {
+    "message": "Forbrugsgrænse-tilladelse"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Forbrugsgrænse anmodet af $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Forbrugsgrænsen er for stor"
+  },
+  "spendLimitInvalid": {
+    "message": "Forbrugsgrænse ugyldig; skal være et positivt tal"
+  },
   "switchNetworks": {
     "message": "Skift Netværk"
+  },
+  "stateLogFileName": {
+    "message": "Brave Tilstandslogfiler"
   },
   "stateLogs": {
     "message": "Tilstandslogs"
@@ -1052,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Fejl ved hentning af tilstandslogfiler."
+  },
+  "statusConnected": {
+    "message": "Tilsluttet"
+  },
+  "statusNotConnected": {
+    "message": "Ikke tilsluttet"
   },
   "step1HardwareWallet": {
     "message": "1. Tilslut hardware-tegnebog"
@@ -1066,13 +1459,16 @@
     "message": "Vælg den konto du ønsker at se. Du kan kun vælge én ad gangen."
   },
   "step3HardwareWallet": {
-    "message": "3. Begynd at bruge dApps og mere!"
+    "message": "3. Begynd at bruge web3-sider og meget mere!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Brug din hardwarekonto som du ville gøre med enhver Ethereum-konto. Log ind på dApps, send Eth, køb og opbevar ERC20-tokens og ikke-ombyttelige tokens som CryptoKitties."
+    "message": "Brug din hardwarekonto, som du ville med enhver Ethereum-konto. Opret forbindelse til web3-websteder, send ETH, køb og opbevar ERC20-tokens og non-fungible tokens som CryptoKitties."
   },
   "storePhrase": {
     "message": "Gem denne sætning i en adgangskodeadministrator som 1Password."
+  },
+  "submit": {
+    "message": "Indsend"
   },
   "submitted": {
     "message": "Indsendt"
@@ -1080,8 +1476,11 @@
   "supportCenter": {
     "message": "Besøg vores supportcenter"
   },
+  "symbol": {
+    "message": "Symbol"
+  },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbolet skal være mindst 11 tegn."
+    "message": "Symbol skal bestå af mindst 11 tegn."
   },
   "syncWithMobile": {
     "message": "Synkronisér med mobil"
@@ -1090,10 +1489,10 @@
     "message": "Synkroniser med mobil"
   },
   "syncWithMobileDesc": {
-    "message": "Du kan synkronisere dine konti og informationer med din mobilenhed. Åbn Brave-mobilappen, gå til \"Indstillinger\" og tryk på \"Synkroniser fra browserudvidelse\""
+    "message": "Du kan synkronisere dine konti og oplysninger med din mobile enhed. Åbn Brave-mobilappen, gå til \"Indstillinger\" og tryk på \"Synkroniser fra browserudvidelse\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Hvis du netop har åbnet Brave-mobilappen for første gang, skal du blot følge trinnene på din telefon."
+    "message": "Hvis du netop åbner Brave Mobile-appen for første gang, skal du blot følge trinene i din telefon."
   },
   "syncWithMobileScanThisCode": {
     "message": "Scan denne kode med din Brave-mobilapp"
@@ -1102,7 +1501,7 @@
     "message": "Sørg for at der ikke er nogen der kigger på din skærm, når du scanner denne kode"
   },
   "syncWithMobileComplete": {
-    "message": "Dine data er blevet synkroniseret korrekt. Nyd Brave-mobilappen!"
+    "message": "Dine data er blevet synkroniseret. Nyd Brave mobilappen!"
   },
   "terms": {
     "message": "Brugsbetingelser"
@@ -1119,14 +1518,30 @@
   "to": {
     "message": "Til"
   },
+  "toAddress": {
+    "message": "Til: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Til:"
+  },
+  "token": {
+    "message": "Token"
+  },
   "tokenAlreadyAdded": {
     "message": "Token er allerede blevet tilføjet."
   },
   "tokenContractAddress": {
     "message": "Polet Kontrakt Adresse"
   },
+  "tokenOptions": {
+    "message": "Token-muligheder"
+  },
   "tokenSymbol": {
     "message": "Token-symbol"
+  },
+  "total": {
+    "message": "Total"
   },
   "transaction": {
     "message": "transaktion"
@@ -1170,6 +1585,9 @@
   "transactionTime": {
     "message": "Transaktionstid"
   },
+  "showTransactionTimeDescription": {
+    "message": "Vælg dette for at få vist ventende estimater for transaktionstiden i aktivitetsfanen, mens du er på Main Ethereum Network. Bemærk: estimater er approksimeringer baseret på netværksforhold."
+  },
   "transfer": {
     "message": "Overfør"
   },
@@ -1183,14 +1601,21 @@
     "message": "Vi havde problemer med at indlæse dine tokenbalancer. Du kan se dem",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Stoler du på dette websted? Ved at give denne tilladelse tillader du $1 at debitere din $2 og automatisere transaktioner for dig.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Prøv igen"
   },
   "typePassword": {
-    "message": "Skriv din Brave-adgangskode"
+    "message": "Indtast din Brave-adgangskode"
   },
   "unapproved": {
     "message": "Ikke godkendt"
+  },
+  "alertDisableTooltip": {
+    "message": "Dette kan ændres i \"Indstillinger> Alarmer\""
   },
   "units": {
     "message": "enheder"
@@ -1210,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Der opstod en fejl da vi prøvede at tilgå dit kamera. Prøv venligst igen..."
   },
+  "unlimited": {
+    "message": "Ubegrænset"
+  },
   "unlock": {
     "message": "Lås op"
   },
@@ -1220,10 +1648,19 @@
     "message": "Opdaterede $1"
   },
   "urlErrorMsg": {
-    "message": "Links kræver det rette HTTP/HTTPS-præfix."
+    "message": "URL'er kræver passende HTTP-/HTTPS-præfiks"
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL er allerede tilstede på eksisterende liste over netværk"
   },
   "usedByClients": {
     "message": "Brugt af forskellige kunder"
+  },
+  "usePhishingDetection": {
+    "message": "Brug phishing-detektion"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Vis en advarsel for phishing-domæner, der er målrettet mod Ethereum-brugere"
   },
   "userName": {
     "message": "Brugernavn"
@@ -1243,11 +1680,14 @@
   "viewOnEtherscan": {
     "message": "Se på Etherscan"
   },
+  "retryTransaction": {
+    "message": "Forsøg transaktionen igen"
+  },
   "visitWebSite": {
     "message": "Besøg vores webside"
   },
   "walletSeed": {
-    "message": "Tegnebogs-seed"
+    "message": "Seed-sætning"
   },
   "welcomeBack": {
     "message": "Velkommen tilbage!"
@@ -1255,8 +1695,15 @@
   "welcome": {
     "message": "Velkommen til Brave"
   },
+  "whatsThis": {
+    "message": "Hvad er det?"
+  },
   "writePhrase": {
     "message": "Skriv denne sætning på et stykke papir, og opbevar den et sikkert sted. Hvis du vil have endnu mere sikkerhed, skal du skrive den ned på flere papirstykker og opbevare hver på 2 - 3 forskellige placeringer."
+  },
+  "xOfY": {
+    "message": "$1 af $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Ja, lad os prøve"
@@ -1276,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Nul brændstofpris på fremskynding"
   },
+  "decryptRequest": {
+    "message": "Dekrypteringsanmodning"
+  },
+  "decrypt": {
+    "message": "Dekrypter"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 vil gerne læse denne besked for at fuldføre din handling",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Dekrypter besked"
+  },
+  "decryptCopy": {
+    "message": "Kopier krypteret besked"
+  },
+  "decryptInlineError": {
+    "message": "Denne meddelelse kan ikke dekrypteres på grund af fejl: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Giv"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Anmod om offentlig krypteringsnøgle"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 vil gerne have din offentlige krypteringsnøgle. Ved samtykke vil dette websted kunne komponere krypterede meddelelser til dig.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Krypto-tegnebøger hemmelig backupsætning"
+  },
+  "braveRewards": {
+    "message": "Brave Belønninger"
+  },
+  "braveSettings": {
+    "message": "Brave-indstillinger"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallets giver dig mulighed for at arbejde med kryptovalutaer og relaterede aktiver i Brave. Crypto Wallets understøtter Ethereum-tokens som ETH og BAT samt samleobjekter og lader dig arbejde med Ðapps og andre smartkontrakter. Alt dette er beregnet til folk, der er fortrolige med Ethereum og andre blockchain-systemer - eller er glade for at lære."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Brug kun Krypto-tegnebøger hvis du er indforstået med, at du alene er ansvarlig for alle risici forbundet hermed, og at Brave Software ikke bærer nogen forpligtelse eller noget ansvar for eventuelle tab du måtte opleve som resultat af brug af Krypto-tegnebøger (herunder forbigående tab og følgetab). "
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Alt dette er helt separat fra "
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Så hvis du gerne ville støtte dine yndlingssider, skal du kigge derover i stedet. "
+  },
+  "cryptoWalletsTitle": {
+    "message": "Crypto-Tegnebøger"
+  },
+  "disclosureConfirm": {
+    "message": "Jeg forstår"
+  },
   "ledgerCreateSubText": {
     "message": "Forbind din Ledger hardwarepung for at interagere med dApps og foretag overførsler til andre forbundne punge."
+  },
+  "metamaskImportSubText": {
+    "message": "Bemærk: Hvis du importerer fra en Metamask-tegnebog, skal du indtaste 12 ord i stedet for 24."
   },
   "newLocalWallet": {
     "message": "Ny lokal pung"
@@ -1285,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Opret en ny lokal tegnebog fra Brave for at få adgang til dApps samt opbevare krypto og samlerobjekter sikkert. Handel med tokens anonymt uden handelsgebyrer."
   },
+  "passWarningOne": {
+    "message": "Denne adgangskode beskytter din private nøgle. Ingen kan nulstille den, hvis du glemmer den, ikke engang Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "Denne tegnebog er ikke din standard Ethereum Dapp-udbyder."
+  },
   "trezorCreateSubText": {
     "message": "Tilslut din hardware-tegnebog fra Trezor for at interagere med dApps og foretage overførsler til andre tilsluttede tegnebøger."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Velkommen til Brave Krypto-tegnebøger "
   }
 }

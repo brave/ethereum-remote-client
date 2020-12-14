@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "我已閱讀並同意 $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "查看您的允許帳戶之地址（必填）",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "已連結網站"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 已連結到這些網站。他們可查看您的帳戶地址。",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 未連結到任何網站。",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "您有 1 個帳戶已連結到本網站。"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "您有 $1 個帳戶已連結到本網站。",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave 沒有連結到這個網站。欲連結到一個 web3 網站，請在其網站上尋找連結按鈕。"
+  },
+  "currentAccountNotConnected": {
+    "message": "您當前的帳戶並未連結"
+  },
+  "switchToThisAccount": {
+    "message": "切換到這個帳戶"
+  },
+  "disconnectThisAccount": {
+    "message": "將本帳戶斷開連結"
+  },
+  "permissions": {
+    "message": "權限"
+  },
+  "showPermissions": {
+    "message": "顯示權限"
+  },
+  "authorizedPermissions": {
+    "message": "您已授權以下權限"
+  },
+  "connectManually": {
+    "message": "手動連結到當前網站"
+  },
+  "disconnect": {
+    "message": "解除連線"
+  },
+  "disconnectAllAccounts": {
+    "message": "將所有的帳戶斷開連結"
+  },
+  "disconnectPrompt": {
+    "message": "將 $1 斷開連結"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "您確定要斷開連結嗎？您可能會失去網站功能。"
+  },
+  "dismiss": {
+    "message": "關閉"
+  },
+  "showIncomingTransactions": {
+    "message": "顯示接收的交易"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "選擇本選項以使用 Etherscan 在交易清單中顯示接收的交易"
+  },
   "chartOnlyAvailableEth": {
     "message": "圖表僅適用於以太坊網路。"
+  },
+  "connecting": {
+    "message": "連線中..."
+  },
+  "connectWithMetaMask": {
+    "message": "與 Brave 連結"
+  },
+  "connectTo": {
+    "message": "連結到 $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "連結到您所有的 $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "帳戶",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "連結到 $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 個帳戶",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "合約互動"
@@ -12,10 +109,14 @@
     "message": "關於"
   },
   "aboutSettingsDescription": {
-    "message": "版本，支援中心，以及聯絡資訊。"
+    "message": "版本、支援中心和聯絡資訊"
   },
   "acceleratingATransaction": {
     "message": "* 提高交易費 Gas 價格將可加速處理時間，但不保證會有顯著效果"
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 可存取並支出最多至此金額上限",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "正在存取您的攝影鏡頭..."
@@ -24,7 +125,7 @@
     "message": "帳戶"
   },
   "accountDetails": {
-    "message": "帳戶詳情"
+    "message": "帳戶詳細資訊"
   },
   "accountName": {
     "message": "帳戶名稱"
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "必須先選擇一個帳戶!"
+  },
+  "active": {
+    "message": "管理中"
+  },
+  "activity": {
+    "message": "活動"
   },
   "activityLog": {
     "message": "活動紀錄"
@@ -48,7 +155,7 @@
     "message": "進階"
   },
   "advancedSettingsDescription": {
-    "message": "存取開發者功能，下載狀態日誌，重設帳號，設定測試網及自訂 PRC。"
+    "message": "存取開發人員功能、下載狀態日誌、重設帳戶、架設測試網及客製 RPC"
   },
   "advancedOptions": {
     "message": "進階選項"
@@ -72,26 +179,62 @@
     "message": "加入建議的代幣"
   },
   "addAcquiredTokens": {
-    "message": "將您已經擁有的代幣顯示於 Brave"
+    "message": "添加您用 Brave 取得的權杖"
+  },
+  "alerts": {
+    "message": "警訊"
+  },
+  "alertsSettingsDescription": {
+    "message": "啟用或停用每則通知"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "使用所選未連結帳戶瀏覽網站"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "當您瀏覽已連結的 Web3 網站，但當前選擇的帳戶未連結時，本警訊將會顯示於彈出視窗中。"
+  },
+  "allowOriginSpendToken": {
+    "message": "是否允許 $1 支出您的 $2？",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "允許本網站："
+  },
+  "allowExternalExtensionTo": {
+    "message": "允許本外部擴充功能："
+  },
+  "allowWithdrawAndSpend": {
+    "message": "允許 $1 提取並支出至多以下額度之金額：",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "數量"
+  },
+  "amountWithColon": {
+    "message": "金額："
   },
   "appDescription": {
     "message": "乙太坊瀏覽器擴充插件",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "批准"
+    "message": "批准開支限額"
+  },
+  "approveSpendLimit": {
+    "message": "批准 $1 開支限額",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "已批准"
   },
   "asset": {
+    "message": "資產"
+  },
+  "assets": {
     "message": "資產"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "來源"
   },
   "autoLockTimeLimit": {
-    "message": "自動登出計時器（分）"
+    "message": "自動鎖定計時器（分鐘）"
   },
   "autoLockTimeLimitDescription": {
-    "message": "設定閒置分鐘上限，時間到時 Brave 將自動登出"
+    "message": "設定 Brave 經過幾分鐘後自動鎖定的閒置時間。"
   },
   "average": {
     "message": "平均"
@@ -125,7 +268,7 @@
     "message": "備份你的秘密還原代碼，安全防護錢包與資金。"
   },
   "backupApprovalInfo": {
-    "message": "在裝置遺失、忘記密碼、需要重新安裝 Brave、或是想在另一裝置開啟錢包的情形下，你需要此秘密代碼來復原錢包。"
+    "message": "如果您遺失裝置、忘記密碼、必須重新安裝 Brave，或是想在其他裝置上存取您的錢包，則必須使用本秘密代碼才能復原錢包。"
   },
   "backupNow": {
     "message": "現在備份"
@@ -140,7 +283,7 @@
     "message": "基本"
   },
   "blockExplorerUrl": {
-    "message": "區塊鏈瀏覽器"
+    "message": "封鎖 Explorer"
   },
   "blockExplorerView": {
     "message": "在 $1 觀看帳號 ",
@@ -149,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "使用像素風格代表圖案"
   },
+  "nonceField": {
+    "message": "自訂交易 nonce"
+  },
+  "nonceFieldHeading": {
+    "message": "客製隨機數"
+  },
+  "nonceFieldDescription": {
+    "message": "開啟本選項以更改確認畫面上的隨機數（交易編號）。這是一項進階功能，請謹慎使用。"
+  },
   "browserNotSupported": {
     "message": "您的瀏覽器尚未支援..."
   },
   "builtInCalifornia": {
-    "message": "Brave 是在加州設計製造"
+    "message": "Brave 是在加州設計及架構的。"
   },
   "buyWithWyre": {
     "message": "用 Wyre 購買 ETH"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre 讓你使用信用卡在 Brave 帳號中直接存入 ETH。"
+    "message": "Wyre 讓您使用簽帳金融卡將 ETH 直接存入您的 Brave 帳戶。"
   },
   "buyCoinSwitch": {
     "message": "在CoinSwitch上购买"
@@ -173,11 +325,14 @@
   "off": {
     "message": "關"
   },
+  "ok": {
+    "message": "Ok"
+  },
   "on": {
     "message": "開啟"
   },
   "optionalBlockExplorerUrl": {
-    "message": "區塊鏈瀏覽器 URL（非必要）"
+    "message": "封鎖 Explorer URL（非必要）"
   },
   "cancel": {
     "message": "取消"
@@ -201,7 +356,7 @@
     "message": "關閉"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "您需要在 Google Chrome 瀏覽器使用 Brave 連結您的硬體錢包"
+    "message": "您必須在 Google Chrome 上使用 Brave 才能連結到您的硬體錢包。"
   },
   "confirm": {
     "message": "確認"
@@ -217,6 +372,9 @@
   },
   "congratulations": {
     "message": "恭喜"
+  },
+  "connectAccountOrCreate": {
+    "message": "連結帳戶或創建新帳戶"
   },
   "connectHardwareWallet": {
     "message": "連線硬體錢包"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "連接至 Goerli 測試網路"
+  },
+  "contacts": {
+    "message": "聯絡人"
+  },
+  "contactsSettingsDescription": {
+    "message": "新增、編輯、移除、並管理你的聯絡資訊"
+  },
+  "contactUs": {
+    "message": "聯絡我們！"
   },
   "continueToWyre": {
     "message": "繼續至 Wyre"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "轉換匯率"
   },
+  "currentExtension": {
+    "message": "當前擴充功能頁面"
+  },
   "currentLanguage": {
     "message": "當前語言"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "自訂 RPC"
+  },
+  "customSpendLimit": {
+    "message": "客製開支限額"
+  },
+  "dataBackupFoundInfo": {
+    "message": "先前的 Brave 安裝過程中備份了您部分的帳戶資料。這可能包括您的設定、聯絡人和權杖。您要現在還原這些資料嗎？"
   },
   "decimalsMustZerotoTen": {
     "message": "小數點後位數至少為0, 最多為36."
@@ -335,8 +511,11 @@
   "done": {
     "message": "完成"
   },
+  "dontShowThisAgain": {
+    "message": "不要再顯示本訊息"
+  },
   "downloadGoogleChrome": {
-    "message": "下載 Google Chrome 瀏覽器"
+    "message": "下載 Brave Software Brave 瀏覽器"
   },
   "downloadSecretBackup": {
     "message": "下載助憶詞文字檔案，並安全的保存在有加密功能的外接硬碟或其他儲存裝置。"
@@ -356,6 +535,9 @@
   "editContact": {
     "message": "編輯聯絡資訊"
   },
+  "editPermission": {
+    "message": "編輯權限"
+  },
   "endOfFlowMessage1": {
     "message": "你通過測試了—安全存放助記詞，這是你的責任！"
   },
@@ -369,22 +551,29 @@
     "message": "不要分享此助記祠給任何人"
   },
   "endOfFlowMessage5": {
-    "message": "小心網路釣魚！Brave 永遠不會主動詢問你的助記詞。"
+    "message": "當心網路釣魚！Brave 永遠不會主動詢問您的助記詞。"
   },
   "endOfFlowMessage6": {
     "message": "如你需要再次備份助記詞，可至設定 -> 安全。"
   },
   "endOfFlowMessage7": {
-    "message": "如你有任何問題或察覺有異，請寄信給 support@brave.com"
+    "message": "如果您有任何疑問或看到可疑之處，請來信至 support@brave.com。"
   },
   "endOfFlowMessage8": {
-    "message": "Brave 無法還原你的助記詞。暸解更多"
+    "message": "Brave 無法復原您的助記詞。"
   },
   "endOfFlowMessage9": {
     "message": "深入瞭解。"
   },
   "endOfFlowMessage10": {
     "message": "都完成了"
+  },
+  "externalExtension": {
+    "message": "外部擴充功能"
+  },
+  "onboardingReturnNotice": {
+    "message": "$1 將關閉本分頁並導回至 $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "ENS 名稱註冊錯誤"
@@ -395,11 +584,46 @@
   "enterAnAlias": {
     "message": "輸入化名"
   },
+  "enterMaxSpendLimit": {
+    "message": "輸入開支上限"
+  },
   "enterPassword": {
     "message": "請輸入密碼"
   },
   "enterPasswordContinue": {
     "message": "請輸入密碼"
+  },
+  "errorCode": {
+    "message": "代碼：$1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "錯誤詳細資訊",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "訊息：$1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "代碼：$1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave 發生錯誤",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "重新載入頁面以再試一次，或是透過 support@brave.com 與支援人員聯繫",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "關閉並重新打開彈出視窗以再試一次，或是透過 support@brave.com 與支援人員聯繫",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "堆疊：",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "以太坊公開位址"
@@ -411,7 +635,7 @@
     "message": "預估處理時間"
   },
   "expandView": {
-    "message": "展開畫面"
+    "message": "展開檢視"
   },
   "exportPrivateKey": {
     "message": "導出私鑰"
@@ -419,11 +643,17 @@
   "failed": {
     "message": "交易失败"
   },
+  "failureMessage": {
+    "message": "出了點問題，我們無法完成操作"
+  },
   "fast": {
     "message": "快"
   },
   "faster": {
     "message": "更快"
+  },
+  "feeAssociatedRequest": {
+    "message": "本請求有一筆相關費用。"
   },
   "fiat": {
     "message": "法定貨幣",
@@ -438,6 +668,13 @@
   },
   "from": {
     "message": "來源帳戶"
+  },
+  "fromAddress": {
+    "message": "從：$1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "功能：核准"
   },
   "functionType": {
     "message": "功能類型"
@@ -465,6 +702,14 @@
   },
   "gasPriceNoDenom": {
     "message": "Gas 價格"
+  },
+  "gdprMessage": {
+    "message": "本資料已經過匯總，因此採匿名以遵守一般資料保護規範 (EU) 2016/679。關於我們的隱私權措施的更多資訊，請參閱我們的 $1。",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "隱私權政策於此",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
   },
   "general": {
     "message": "一般"
@@ -498,7 +743,7 @@
     "message": "連線硬體錢包"
   },
   "hardwareWalletsMsg": {
-    "message": "選擇要連線到 Brave 的硬體錢包"
+    "message": "選擇您要使用 Brave 的硬體錢包"
   },
   "havingTroubleConnecting": {
     "message": "無法正確連線?"
@@ -512,6 +757,10 @@
   },
   "hide": {
     "message": "隱藏"
+  },
+  "hideTokenSymbol": {
+    "message": "隱藏 $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "隱藏代幣？"
@@ -527,16 +776,16 @@
     "message": "匯入帳戶"
   },
   "importAccountMsg": {
-    "message": " 匯入的帳戶與您原有 Brave 帳戶的助憶詞並無關聯。請查看與匯入帳戶相關的資料 "
+    "message": "導入的帳戶將不會與您最初創建的 Brave 帳戶助記詞相關聯。進一步了解導入帳戶"
   },
   "importAccountSeedPhrase": {
-    "message": "利用助憶詞還原"
+    "message": "以助記詞導入帳戶"
   },
   "importWallet": {
-    "message": "匯入錢包"
+    "message": "導入錢包"
   },
   "importYourExisting": {
-    "message": "使用 24 字的助記詞來匯入你現有的錢包"
+    "message": "使用 24 個單字的助記詞導入您的現有錢包"
   },
   "imported": {
     "message": "已匯入私鑰",
@@ -569,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "已知合約位址"
   },
+  "knownTokenWarning": {
+    "message": "本操作將會編輯已列在您的錢包內的權杖，其可用來對您進行網路釣魚。務必僅在您確定要更改這些權杖代表的內容時才批准之。"
+  },
+  "reusedTokenNameWarning": {
+    "message": "這裡有個權杖重複使用了您關注的另一個權杖中的一個符號，這可能會造成混淆或有欺騙性。"
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "非 ETH 網路，設定至小寫"
   },
@@ -579,10 +834,22 @@
     "message": "無效的 RPC URI"
   },
   "invalidBlockExplorerURL": {
-    "message": "無效的區塊鏈瀏覽器 URL"
+    "message": "無效的區塊瀏覽器網址"
   },
   "invalidSeedPhrase": {
     "message": "無效的助憶詞"
+  },
+  "ipfsGateway": {
+    "message": "IPFS 閘道器"
+  },
+  "ipfsGatewayDescription": {
+    "message": "輸入用於 ENS 內容解析的 IPFS CID 閘道器之網址。"
+  },
+  "invalidIpfsGateway": {
+    "message": "無效的 IPFS 閘道器：數值必須為有效的網址"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "禁止的 IPFS 閘道：請指定一個 CID 閘道"
   },
   "jsonFile": {
     "message": "JSON 格式檔案",
@@ -593,6 +860,9 @@
   },
   "max": {
     "message": "最大值"
+  },
+  "lastConnected": {
+    "message": "最後連結"
   },
   "learnMore": {
     "message": "了解更多"
@@ -621,8 +891,14 @@
   "loadMore": {
     "message": "載入更多"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
     "message": "鎖定"
+  },
+  "lockTimeTooGreat": {
+    "message": "鎖定時間太長"
   },
   "mainnet": {
     "message": "乙太坊 主網路"
@@ -635,6 +911,15 @@
   },
   "message": {
     "message": "訊息"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "您現在對於您在 Brave 中的帳戶連結有更多的控制。"
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "連結狀態按鈕會顯示您正在存取的網站是否已連結到您當前選擇的帳戶。"
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "點擊它以管理您的已連結帳戶。"
   },
   "metamaskDescription": {
     "message": "Brave 是乙太坊安全身份識別金庫"
@@ -652,13 +937,13 @@
     "message": "我的錢包帳號"
   },
   "myWalletAccountsDescription": {
-    "message": "所有你在 Brave 創建的帳號將自動新增到此區塊。"
+    "message": "您以 Brave 創建的所有帳戶都將自動添加到這個區塊。"
   },
   "mustSelectOne": {
     "message": "必須選擇至少 1 代幣"
   },
   "needEtherInWallet": {
-    "message": "要使用 Brave 存取去中心化應用服務時，您的錢包中需要有乙太幣。"
+    "message": "欲使用 Brave 與分散式應用程式進行互動，您的錢包內必須要有以太幣。"
   },
   "needImportFile": {
     "message": "您必須選擇一個檔案來匯入",
@@ -696,13 +981,13 @@
     "message": "建立新合約"
   },
   "newPassword": {
-    "message": "新密碼（至少8個字元）"
+    "message": "新密碼（最少 8 個字元）"
   },
   "newNetwork": {
     "message": "新增網路"
   },
   "newToMetaMask": {
-    "message": "新來到 Brave？"
+    "message": "初次使用 Brave 嗎？"
   },
   "noAlreadyHaveSeed": {
     "message": "不，我已經有助記詞"
@@ -711,13 +996,19 @@
     "message": "保護你的鑰匙！"
   },
   "protectYourKeysMessage1": {
-    "message": "小心保管你的註記詞—我們接到報告有網站嘗試模仿 Brave。Brave 永遠不會詢問你的助記詞！"
+    "message": "請謹慎使用您的助記詞——我們曾收到有網站試圖模仿 Brave 的回報。Brave 永遠不會詢問您的助記詞！"
   },
   "protectYourKeysMessage2": {
-    "message": "安全存放你的助記詞。如你察覺有異，或你對某網站起疑，請寄信給 support@brave.com"
+    "message": "安全收好您的助記詞。如果您看到可疑之處或對某一網站感到不確定，請來信至 support@brave.com"
   },
   "rpcUrl": {
-    "message": "新的 RPC URL"
+    "message": "新的 RPC URL\n"
+  },
+  "onlyConnectTrust": {
+    "message": "只與您信任的網站建立連結。"
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "惡意的以太坊網路供應商可能會謊報區塊鏈的狀態並且記錄您的網路活動。請只添加您信任的客製網路。"
   },
   "optionalChainId": {
     "message": "ChainID (可選)"
@@ -734,6 +1025,10 @@
   "next": {
     "message": "下一頁"
   },
+  "nextNonceWarning": {
+    "message": "隨機數高於建議的隨機數 $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "此 ENS 尚未指定位址。"
   },
@@ -743,6 +1038,12 @@
   "noTransactions": {
     "message": "尚未有交易"
   },
+  "noThanks": {
+    "message": "不用了，謝謝"
+  },
+  "notCurrentAccount": {
+    "message": "這是正確的帳戶嗎？它與您的錢包內當前選擇的帳戶不同"
+  },
   "notEnoughGas": {
     "message": "Gas 不夠"
   },
@@ -751,6 +1052,9 @@
   },
   "noWebcamFound": {
     "message": "無法搜尋到攝影鏡頭裝置。請再試一次"
+  },
+  "ofTextNofM": {
+    "message": "of"
   },
   "orderOneHere": {
     "message": "訂購 Trezor 或 Ledger 讓資產保存於硬體裝置。"
@@ -765,7 +1069,7 @@
     "message": "參與 MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "參與 MetaMetrics 來協助我們打造更好的 Brave"
+    "message": "參與 MetaMetrics 以幫助我們讓 Brave 變得更好"
   },
   "password": {
     "message": "密碼"
@@ -781,10 +1085,23 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "等待處理"
+    "message": "未定"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "您已批准本權限"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "您尚未批准本權限"
   },
   "personalAddressDetected": {
     "message": "偵測為個人位址，請輸入代幣合約位址"
+  },
+  "plusXMore": {
+    "message": "+ 額外 $1",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Prev"
   },
   "primaryCurrencySetting": {
     "message": "主要顯示"
@@ -805,14 +1122,23 @@
   "privateNetwork": {
     "message": "私有網路"
   },
+  "proposedApprovalLimit": {
+    "message": "建議的核准上限"
+  },
   "queue": {
     "message": "佇列"
+  },
+  "queued": {
+    "message": "已佇列"
   },
   "readdToken": {
     "message": "未來可以隨時重新加入此代幣"
   },
   "recents": {
     "message": "最近"
+  },
+  "receive": {
+    "message": "接收"
   },
   "recipientAddress": {
     "message": "接收位址"
@@ -839,7 +1165,7 @@
     "message": "重置帳戶"
   },
   "resetAccountDescription": {
-    "message": "重置帳戶將清除您的交易紀錄"
+    "message": "重設帳戶將清除您的交易記錄。這不會變更您帳戶中的餘額，也不會要求您重新輸入助記詞。"
   },
   "deleteNetwork": {
     "message": "刪除網路？"
@@ -856,14 +1182,21 @@
   "restoreAccountWithSeed": {
     "message": "透過助憶詞還原您的帳戶"
   },
+  "restoreWalletPreferences": {
+    "message": "系統找到了您的 $1 資料備份。您要還原您的錢包偏好選項嗎？",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "請求正在等待確認"
   },
   "required": {
     "message": "必填"
   },
+  "restore": {
+    "message": "Restore"
+  },
   "revealSeedWords": {
-    "message": "顯示助憶詞"
+    "message": "顯示助記詞"
   },
   "revealSeedWordsTitle": {
     "message": "助憶詞"
@@ -932,7 +1265,7 @@
     "message": "警告: 絕對不要洩漏您的助憶詞。任何人只要得知助憶詞代表他可以竊取您所有的乙太幣和代幣。"
   },
   "secretPhrase": {
-    "message": "輸入您的24個助憶詞以回復金庫"
+    "message": "在這裡輸入您的祕密 24 字詞組，以還原您的保存庫。"
   },
   "securityAndPrivacy": {
     "message": "安全＆隱私"
@@ -943,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "單詞之間請用空白分隔"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "從剪貼簿貼上助記詞"
+  },
+  "showSeedPhrase": {
+    "message": "顯示助記詞"
+  },
   "seedPhraseReq": {
-    "message": "助憶詞為 12 個詞語"
+    "message": "助記詞包含 12、15、18、21 或 24 個單字"
+  },
+  "selectingAllWillAllow": {
+    "message": "選擇全部將允許本網站查看您所有的當前帳戶。請確保您信任本網站。"
+  },
+  "selectAccounts": {
+    "message": "選取帳戶"
+  },
+  "selectAll": {
+    "message": "全選"
   },
   "selectCurrency": {
     "message": "選擇幣別"
@@ -957,6 +1305,9 @@
   },
   "selectType": {
     "message": "選擇類型"
+  },
+  "buy": {
+    "message": "購買"
   },
   "send": {
     "message": "發送"
@@ -976,17 +1327,33 @@
   "sentTokens": {
     "message": "發送代幣"
   },
+  "sendSpecifiedTokens": {
+    "message": "傳送 $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "單詞之間請以空白間隔"
   },
   "searchTokens": {
     "message": "搜尋代幣"
   },
+  "searchAccounts": {
+    "message": "搜尋帳戶"
+  },
+  "noAccountsFound": {
+    "message": "給定的搜尋找不到任何帳戶"
+  },
   "selectAnAccount": {
     "message": "選擇帳戶"
   },
+  "selectAnAccountHelp": {
+    "message": "選擇要在 Brave 中查看的帳戶"
+  },
   "selectAHigherGasFee": {
     "message": "選擇更高的交易費可加速您的交易處理時間 *"
+  },
+  "selectHdPath": {
+    "message": "Select HD Path"
   },
   "selectPathHelp": {
     "message": "若看不到您已經擁有的 Ledger 帳戶，請嘗試切換路徑為 \"Legacy (MEW / MyCrypto)\""
@@ -1021,6 +1388,9 @@
   "signatureRequest": {
     "message": "請求簽署"
   },
+  "signatureRequest1": {
+    "message": "訊息"
+  },
   "signed": {
     "message": "已簽署"
   },
@@ -1042,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "加速這筆交易"
   },
+  "spendLimitPermission": {
+    "message": "開支限額權限"
+  },
+  "spendLimitRequestedBy": {
+    "message": "$1 要求的開支限額",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "開支限額太高"
+  },
+  "spendLimitInvalid": {
+    "message": "無效的開支限額；必須為正數"
+  },
   "switchNetworks": {
     "message": "切換網路"
+  },
+  "stateLogFileName": {
+    "message": "Brave 狀態日誌"
   },
   "stateLogs": {
     "message": "狀態紀錄"
@@ -1053,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "在取得狀態紀錄時發生錯誤."
+  },
+  "statusConnected": {
+    "message": "已連線"
+  },
+  "statusNotConnected": {
+    "message": "未連線"
   },
   "step1HardwareWallet": {
     "message": "1. 連線硬體錢包"
@@ -1067,13 +1459,16 @@
     "message": "選擇想要檢視的帳戶。一次只能選擇一個帳戶。"
   },
   "step3HardwareWallet": {
-    "message": "3. 開始使用！"
+    "message": "3. 開始使用 web3 網站等等！"
   },
   "step3HardwareWalletMsg": {
-    "message": "使用您硬體錢包中的帳戶，與去中心化應用服務交易乙太幣、ERC20代幣、或迷戀貓等數位資產。"
+    "message": "使用您的硬體帳戶就像使用您任何的以太坊帳戶一樣。連結到 web3 網站、傳送 ETH、購買並存放 ERC20 權杖以及不可替代的權杖（如 CryptoKitties）。"
   },
   "storePhrase": {
     "message": "您可以用密碼管理系統例如 1Password 等軟體儲存助憶詞。"
+  },
+  "submit": {
+    "message": "送出"
   },
   "submitted": {
     "message": "已送出"
@@ -1085,7 +1480,7 @@
     "message": "符號"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "符號不得超過11個字符。"
+    "message": "符號不得超過 11 個字元。"
   },
   "syncWithMobile": {
     "message": "和移動裝置同步"
@@ -1094,19 +1489,19 @@
     "message": "和移動裝置同步"
   },
   "syncWithMobileDesc": {
-    "message": "你可以用移動裝置同步帳號與資訊。開啟 Brave 移動 app，至「設定」並點擊「自瀏覽器擴充功能同步」"
+    "message": "您可將帳戶和資訊與您的行動裝置同步。打開 Brave 行動應用程式，前往「設定」，然後點擊「從瀏覽器擴充功能同步」"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "如你是第一次開啟 Brave 移動 app，只要跟著手機上的指示操作即可。"
+    "message": "如果您是第一次打開 Brave 行動應用程式，請按照手機上的步驟進行操作。"
   },
   "syncWithMobileScanThisCode": {
-    "message": "用你的 Brave 移動 app 掃描此代碼"
+    "message": "用您的 Brave 行動應用程式掃描本代碼"
   },
   "syncWithMobileBeCareful": {
     "message": "掃描代碼時確保沒有其他人在看你的螢幕"
   },
   "syncWithMobileComplete": {
-    "message": "你的資料已成功同步。開始活用 Brave 移動 app！"
+    "message": "您的資料已成功同步。盡情體驗 Brave 行動應用程式！"
   },
   "terms": {
     "message": "使用條款"
@@ -1123,6 +1518,13 @@
   "to": {
     "message": "目的帳戶"
   },
+  "toAddress": {
+    "message": "接受者：$1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "至："
+  },
   "token": {
     "message": "代碼"
   },
@@ -1131,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "代幣合同位址"
+  },
+  "tokenOptions": {
+    "message": "權杖選項"
   },
   "tokenSymbol": {
     "message": "代幣代號"
@@ -1180,6 +1585,9 @@
   "transactionTime": {
     "message": "交易時間"
   },
+  "showTransactionTimeDescription": {
+    "message": "選擇本選項以在以太坊主網路上的「活動」分頁中顯示估計的等候交易時間。注意：估算值是根據網路條件取得之約略值。"
+  },
   "transfer": {
     "message": "交易"
   },
@@ -1193,14 +1601,21 @@
     "message": "無法取得代幣餘額。您k可以到這裡查看 ",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "您信任這個網站嗎？授予本權限即表示您允許 $1 提取您的 $2 並且自動為您進行交易。",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "再試一次"
   },
   "typePassword": {
-    "message": "請輸入密碼"
+    "message": "輸入您的 Brave 密碼"
   },
   "unapproved": {
     "message": "未批准"
+  },
+  "alertDisableTooltip": {
+    "message": "其可在「設定 > 警訊」中更改"
   },
   "units": {
     "message": "單位"
@@ -1220,8 +1635,11 @@
   "unknownCameraError": {
     "message": "無法存取攝影鏡頭。請再試一次..."
   },
+  "unlimited": {
+    "message": "無限制"
+  },
   "unlock": {
-    "message": "解鎖"
+    "message": "Unlock"
   },
   "unlockMessage": {
     "message": "去中心化網路世界等待著您"
@@ -1230,10 +1648,19 @@
     "message": "更新時間 $1"
   },
   "urlErrorMsg": {
-    "message": "URIs 需要加入適當的 HTTP/HTTPS 前綴字"
+    "message": "網址需要適當的 HTTP / HTTPS 前綴。"
+  },
+  "urlExistsErrorMsg": {
+    "message": "網址已存在於現有的網路清單中"
   },
   "usedByClients": {
     "message": "可用於各種不同的客戶端"
+  },
+  "usePhishingDetection": {
+    "message": "使用網路釣魚偵測"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "顯示針對以太坊使用者的網路釣魚網域之警告"
   },
   "userName": {
     "message": "使用者名稱"
@@ -1253,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "在 Etherscan 上瀏覽"
   },
+  "retryTransaction": {
+    "message": "重試交易"
+  },
   "visitWebSite": {
     "message": "造訪我們的網站"
   },
   "walletSeed": {
-    "message": "助憶詞"
+    "message": "助記詞"
   },
   "welcomeBack": {
     "message": "歡迎回來!"
   },
   "welcome": {
-    "message": "歡迎來到 Brave"
+    "message": "歡迎使用 Brave"
+  },
+  "whatsThis": {
+    "message": "這是什麼？"
   },
   "writePhrase": {
     "message": "將助憶詞寫在紙上，並保存在安全的場所。若想要更安全，將助憶詞分別寫在不同紙張上並存放在不同的地方。"
+  },
+  "xOfY": {
+    "message": "$2 的 $1",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "了解，試試看"
@@ -1286,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "加速的 Gas 價格為 0"
   },
+  "decryptRequest": {
+    "message": "解密請求"
+  },
+  "decrypt": {
+    "message": "解密"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 希望讀取本訊息以完成您的操作",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "解密郵件"
+  },
+  "decryptCopy": {
+    "message": "複製加密的郵件"
+  },
+  "decryptInlineError": {
+    "message": "無法解密本訊息，原因為以下錯誤：$1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "提供"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "請求加密公鑰"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 想要索取您的公共加密金鑰。如果同意，本網站將能夠編寫加密的訊息給您。",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Crypto Wallets 秘密備份短語"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave 設定"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallets 讓您使用 Brave 的加密貨幣和相關資產。Crypto Wallets 支援 ETH 和 BAT 等以太坊權杖及收藏品，而且讓您使用 Ðapps 和其他智能合約。這一切都是專門提供給熟悉以太坊和其他區塊鏈系統的人——或是樂於學習它們的人。"
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "僅當您接受獨自承單與所有使用的風險時才使用加密錢包，且 Brave Software 對因使用此軟體而可能造成的任何損失（包含任何直接或間接的損失）不負任何責任。"
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "這些全部都完全分離與"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "所以如果您想支持您最愛的網站，請到那裡。"
+  },
+  "cryptoWalletsTitle": {
+    "message": "加密錢包"
+  },
+  "disclosureConfirm": {
+    "message": "我了解"
+  },
   "ledgerCreateSubText": {
     "message": "將您的 Ledger 硬體錢包連線並與其他 dApp 互動並轉帳到其他已連線的錢包。"
+  },
+  "metamaskImportSubText": {
+    "message": "注意事項：若從 Metamask 錢包匯入，請輸入 12 個字，而不是 24 個字。"
   },
   "newLocalWallet": {
     "message": "新本機錢包"
@@ -1295,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "建立新的 Brave 本機錢包以存取 dApp 並安全地儲存加密貨幣與其他收藏。不需交易手續費地匿名交易代幣。"
   },
+  "passWarningOne": {
+    "message": "此密碼可保護您的私密金鑰。如果您忘記密碼，沒有人可以重設密碼，即使是 Brave 也不能！"
+  },
+  "providerErrorMessage": {
+    "message": "本錢包並不是您預設的以太坊 Dapp 供應商。"
+  },
   "trezorCreateSubText": {
     "message": "將您的 Trezor 硬體錢包連線並與其他 dApp 互動並轉帳到其他已連線的錢包。"
+  },
+  "welcomeCryptoWallets": {
+    "message": "歡迎使用 Brave 加密錢包"
   }
 }

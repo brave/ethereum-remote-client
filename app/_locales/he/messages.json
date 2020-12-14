@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "קראתי ואני מסכימ/ה ל - $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "הצגת כתובות חשבונותיך המותרים (נדרש)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "אתרים מחוברים"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 מחובר לאתרים אלה. הם יכולים לראות את כתובת החשבון שלך.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 אינו מחובר לאף אתר.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "יש לך חשבון 1 המחובר לאתר זה."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "יש לך $1 חשבונות המחוברים לאתר זה.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave אינו מחובר לאתר זה. כדי להתחבר לאתר web3, יש למצוא את כפתור ההתחברות באתר שלהם."
+  },
+  "currentAccountNotConnected": {
+    "message": "חשבונך הנוכחי אינו מחובר"
+  },
+  "switchToThisAccount": {
+    "message": "עבור לחשבון זה"
+  },
+  "disconnectThisAccount": {
+    "message": "נתק חשבון זה"
+  },
+  "permissions": {
+    "message": "הרשאות"
+  },
+  "showPermissions": {
+    "message": "הצג הרשאות"
+  },
+  "authorizedPermissions": {
+    "message": "אישרת את ההרשאות הבאות"
+  },
+  "connectManually": {
+    "message": "התחבר ידנית לאתר הנוכחי"
+  },
+  "disconnect": {
+    "message": "התנתקות"
+  },
+  "disconnectAllAccounts": {
+    "message": "נתק את כל החשבונות"
+  },
+  "disconnectPrompt": {
+    "message": "נתק $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "האם הנך בטוח/ה שברצונך להתנתק? הנך עלול/ה לאבד את הפונקציונליות של האתר."
+  },
+  "dismiss": {
+    "message": "סגור"
+  },
+  "showIncomingTransactions": {
+    "message": "הצג עסקאות נכנסות"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "יש לבחור באפשרות זו כדי להשתמש ב- Etherscan כדי להציג עסקאות נכנסות ברשימת העסקאות"
+  },
   "chartOnlyAvailableEth": {
     "message": "טבלה זמינה רק ברשתות אתריום."
+  },
+  "connecting": {
+    "message": "מתחבר..."
+  },
+  "connectWithMetaMask": {
+    "message": "התחבר ל-Brave"
+  },
+  "connectTo": {
+    "message": "התחבר ל- $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "התחבר/י לכל  ה- $1 שלך",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "חשבונות",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "התחבר ל- $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 חשבונות ",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "אינטראקציית חוזה"
@@ -12,10 +109,14 @@
     "message": "מידע כללי"
   },
   "aboutSettingsDescription": {
-    "message": "גרסה, מרכז תמיכה ופרטי יצירת קשר."
+    "message": "גרסה, מרכז תמיכה ופרטי קשר"
   },
   "acceleratingATransaction": {
     "message": "* האצת עסקה על ידי שימוש במחיר דלק גבוה יותר מגדילה את סיכוייה לעבור עיבוד מהיר יותר ע\"י הרשת, אך זה לא תמיד מובטח."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 יכול לגשת ולהוציא סכום מקסימלי זה",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "ניגש למצלמה שלך ..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "עליך לבחור חשבון!"
   },
+  "active": {
+    "message": "פעיל"
+  },
+  "activity": {
+    "message": "פעילות"
+  },
   "activityLog": {
     "message": "יומן פעילות"
   },
@@ -48,7 +155,7 @@
     "message": "מתקדם"
   },
   "advancedSettingsDescription": {
-    "message": "קבלת גישה לפיצ'רים למפתחים, הורדת יומני מצב, איפוס חשבון, הגדרת testnets ו-RPC מותאם אישית."
+    "message": "גש/י לתכונות של מפתחים, הורד/י יומני מצב, אפס/י חשבון, הגדר/י רשתות בדיקה ו- RPC מותאם אישית"
   },
   "advancedOptions": {
     "message": "אפשרויות מתקדמות"
@@ -72,27 +179,63 @@
     "message": "הוסף/י אסימונים מוצעים"
   },
   "addAcquiredTokens": {
-    "message": "הוספת הטוקנים שהשגת באמצעות Brave"
+    "message": "הוספ/י את הטוקנים שרכשת באמצעות Brave"
+  },
+  "alerts": {
+    "message": "התראות"
+  },
+  "alertsSettingsDescription": {
+    "message": "הפעל או השבת כל אחת מההתראות"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "נבחרה גלישה באתר עם חשבון לא מחובר"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "התראה זו מוצגת בחלון הקופץ כאשר הנך גולש/ת באתר Web3 מחובר, אך החשבון שנבחר כרגע אינו מחובר."
+  },
+  "allowOriginSpendToken": {
+    "message": "לאפשר ל- $1 להוציא את ה- $2 שלך?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "אפשר לאתר זה:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "אפשר סיומת חיצונית זו ל:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "אפשר ל- $1 למשוך ולהוציא עד לסכום הבא:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "כמות"
+  },
+  "amountWithColon": {
+    "message": "סכום:"
   },
   "appDescription": {
     "message": "ארנק אתריום בדפדפן שלך",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "אישור"
+    "message": "אשר את מגבלת ההוצאה"
+  },
+  "approveSpendLimit": {
+    "message": "אשר את מגבלת ההוצאה בסך $1",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "אושר"
   },
   "asset": {
     "message": "נכס"
+  },
+  "assets": {
+    "message": "נכסים"
   },
   "attemptingConnect": {
     "message": "מנסה להתחבר לבלוקצ'יין."
@@ -107,10 +250,10 @@
     "message": "תכונות"
   },
   "autoLockTimeLimit": {
-    "message": "טיימר התנתקות אוטומטית (דקות)"
+    "message": "טיימר נעילה אוטומטית (דקות)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "הגדר/י את זמן היעדר הפעילות בדקות לפני ש-Brave יתנתק אוטומטית."
+    "message": "הגדר את זמן חוסר הפעילות בדקות לפני ש-Brave יינעל."
   },
   "average": {
     "message": "ממוצע"
@@ -125,7 +268,7 @@
     "message": "גבה/י את קוד השחזור הסודי שלך כדי לשמור את בטיחות הארנק והכספים שלך."
   },
   "backupApprovalInfo": {
-    "message": "קוד סודי זה נדרש כדי לשחזר את הארנק שלך במקרה שתאבד/י את מכשירך, תשכח/י את הססמה, תצטרכ/י להתקין מחדש את Brave או שתרצה/י לגשת לארנק שלך במכשיר אחר."
+    "message": "קוד סודי זה נדרש כדי לשחזר את הארנק שלך במקרה שאיבדת את המכשיר, שכחת את הסיסמה שלך, נדרשת להתקין מחדש את Brave או אם ברצונך לגשת לארנק שלך ממכשיר אחר."
   },
   "backupNow": {
     "message": "צור גיבוי כעת"
@@ -149,6 +292,15 @@
   "blockiesIdenticon": {
     "message": "השתמש ב- Blockies Identicon"
   },
+  "nonceField": {
+    "message": "התאם אישית את nonce העסקה"
+  },
+  "nonceFieldHeading": {
+    "message": "Nonce מותאם אישית"
+  },
+  "nonceFieldDescription": {
+    "message": "יש להפעיל אפשרות זו כדי לשנות את ה- nonce (מספר העסקה) במסכי האישור. זו תכונה מתקדמת, יש להשתמש בה בזהירות."
+  },
   "browserNotSupported": {
     "message": "הדפדפן שלך אינו נתמך..."
   },
@@ -159,7 +311,7 @@
     "message": "רכישת את'ר עם Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre מאפשרת לך להשתמש בכרטיס אשראי כדי להפקיד ETH ישירות בחשבון ה-Brave שלך."
+    "message": "Wyre מאפשרת לך להשתמש בכרטיס חיוב כדי להפקיד ETH ישירות לחשבון Brave שלך."
   },
   "buyCoinSwitch": {
     "message": "רכישה ב-CoinSwitch"
@@ -204,7 +356,7 @@
     "message": "סגירה"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "עליך להשתמש ב-Brave בגוגל כרום כדי להתחבר לארנק החומרה שלך."
+    "message": "עליך להשתמש ב- Brave ב- Google Chrome כדי להתחבר לארנק החומרה שלך."
   },
   "confirm": {
     "message": "אישור"
@@ -213,13 +365,16 @@
     "message": "אושר"
   },
   "confirmPassword": {
-    "message": "נא לאשר סיסמה"
+    "message": "אשר סיסמה"
   },
   "confirmSecretBackupPhrase": {
     "message": "אשר/י את צירוף הגיבוי הסודי שלך"
   },
   "congratulations": {
     "message": "מזל טוב"
+  },
+  "connectAccountOrCreate": {
+    "message": "חבר חשבון או צור חדש"
   },
   "connectHardwareWallet": {
     "message": "חבר ארנק חומרה"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "מתחבר ל-Goerli Test Network"
+  },
+  "contacts": {
+    "message": "אנשי קשר"
+  },
+  "contactsSettingsDescription": {
+    "message": "הוספה, עריכה, הסרה וניהול אנשי הקשר שלך"
+  },
+  "contactUs": {
+    "message": "צרו עמנו קשר!"
   },
   "continueToWyre": {
     "message": "המשך ל-Wyre"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "המרת מטבע"
   },
+  "currentExtension": {
+    "message": "דף הרחבה נוכחי"
+  },
   "currentLanguage": {
     "message": "שפה נוכחית"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC מותאם אישית"
+  },
+  "customSpendLimit": {
+    "message": "מגבלת הוצאה מותאמת אישית"
+  },
+  "dataBackupFoundInfo": {
+    "message": "חלק מנתוני החשבון שלך גובו במהלך התקנה קודמת של Brave. זה יכול לכלול את ההגדרות, אנשי הקשר והטוקנים שלך. האם ברצונך לשחזר נתונים אלה כעת?"
   },
   "decimalsMustZerotoTen": {
     "message": "מספרים עשרוניים חייבים להיות לפחות 0 ולא מעל 36."
@@ -338,6 +511,9 @@
   "done": {
     "message": "סיום"
   },
+  "dontShowThisAgain": {
+    "message": "אל תציג זאת שוב"
+  },
   "downloadGoogleChrome": {
     "message": "הורד/י את גוגל כרום"
   },
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "ערוך איש קשר"
   },
+  "editPermission": {
+    "message": "ערוך הרשאה"
+  },
   "endOfFlowMessage1": {
     "message": "עברת את הבחינה - יש לשמור את ה-seedphrase שלך במקום בטוח, זה באחריותך!"
   },
@@ -372,22 +551,29 @@
     "message": "לעולם אל תשתפ/י את הצירוף עם אף אחד."
   },
   "endOfFlowMessage5": {
-    "message": "היזהר/י מהתחזות! Brave לעולם לא יבקש באופן ספונטני את צירוף הגרעין שלך."
+    "message": "יש להיזהר מפישינג! Brave לעולם לא יבקש באופן ספונטני את צירוף הגרעין שלך."
   },
   "endOfFlowMessage6": {
     "message": "אם עליך לגבות את צירוף הגרעין שלך שוב, תוכל/י למצוא זאת בהגדרות -> אבטחה."
   },
   "endOfFlowMessage7": {
-    "message": "אם יש לך שאלות או שנתקלת במשהו חשוד, שלח/י מייל ל- support@brave.com."
+    "message": "אם יש לך שאלות או שהנך רואה משהו חשוד, יש לשלוח מייל אל support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave לא הצליח לשחזר את ה-seedphrase שלך. למד/י עוד."
+    "message": "Brave אינו יכול לשחזר את צירוף הגרעין שלך."
   },
   "endOfFlowMessage9": {
     "message": "למד עוד."
   },
   "endOfFlowMessage10": {
     "message": "הכל בוצע"
+  },
+  "externalExtension": {
+    "message": "הרחבה חיצונית"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" יסגור לשונית זו ויחזור ל- $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "שגיאה ברישום שם ENS"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "יש להזין כינוי"
   },
+  "enterMaxSpendLimit": {
+    "message": "יש להזין את מגבלת ההוצאה המקסימלית"
+  },
   "enterPassword": {
     "message": "יש להזין ססמה"
   },
   "enterPasswordContinue": {
     "message": "יש להזין ססמה כדי להמשיך"
+  },
+  "errorCode": {
+    "message": "קוד: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "פרטי שגיאה",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "הודעה: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "קוד: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave נתקל בשגיאה",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "יש לנסות שוב על ידי טעינת הדף מחדש, או ליצור קשר עם התמיכה בכתובת support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "יש לנסות שוב על ידי סגירה ופתיחה מחדש של החלון הקופץ, או לפנהותלתמיכה בכתובת support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "מחסנית:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "כתובת אתריום ציבורית"
@@ -422,11 +643,17 @@
   "failed": {
     "message": "נכשל"
   },
+  "failureMessage": {
+    "message": "משהו השתבש ולא הצלחנו להשלים את הפעולה"
+  },
   "fast": {
     "message": "מהיר"
   },
   "faster": {
     "message": "מהר יותר"
+  },
+  "feeAssociatedRequest": {
+    "message": "בקשה זו כרוכה בתשלום."
   },
   "fiat": {
     "message": "פיאט",
@@ -441,6 +668,13 @@
   },
   "from": {
     "message": "מאת"
+  },
+  "fromAddress": {
+    "message": "מ: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "פונקציה: אשר"
   },
   "functionType": {
     "message": "סוג פונקציה"
@@ -468,6 +702,14 @@
   },
   "gasPriceNoDenom": {
     "message": "מחיר הדלק"
+  },
+  "gdprMessage": {
+    "message": "נתונים אלה מצטברים ולכן הם אנונימיים למטרות התקנה הכללית להגנת נתונים (EU) 2016/679. למידע נוסף בנוגע לנוהלי הפרטיות שלנו, נא לעיין ב-$1 שלנו.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "מדיניות פרטיות כאן",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
   },
   "general": {
     "message": "כללי"
@@ -501,7 +743,7 @@
     "message": "חבר ארנק חומרה"
   },
   "hardwareWalletsMsg": {
-    "message": "בחר/י ארנק חומרה שבו תרצה להשתמש עם Brave"
+    "message": "יש לבחור ארנק חומרה שברצונך להשתמש בו עם Brave"
   },
   "havingTroubleConnecting": {
     "message": "חווה קשיים בהתחברות?"
@@ -515,6 +757,10 @@
   },
   "hide": {
     "message": "הסתר"
+  },
+  "hideTokenSymbol": {
+    "message": "הסתר $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "להסתיר טוקן?"
@@ -530,16 +776,16 @@
     "message": "יבא חשבון"
   },
   "importAccountMsg": {
-    "message": "חשבונות מיובאים לא ישויכו לצירוף הגרעין (seed) שנוצר במקור עבור חשבון ה-Brave שלך. למד/י עוד על חשבונות מיובאים"
+    "message": "חשבונות מיובאים לא ישויכו לצירוף הגרעין של חשבון Brave שנוצר במקור. למד/י עוד אודות חשבונות מיובאים"
   },
   "importAccountSeedPhrase": {
-    "message": "יבא חשבון באמצעות Seed Phrase"
+    "message": "ייבא חשבון עם צירוף גרעין"
   },
   "importWallet": {
     "message": "ייבא ארנק"
   },
   "importYourExisting": {
-    "message": "יבא/י את הארנק הקיים שלך באמצעות seed phrase בן 24 מילים"
+    "message": "ייבא את הארנק הקיים שלך באמצעות צירוף גרעין של 24 מילים"
   },
   "imported": {
     "message": "מיובאות",
@@ -572,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "כתובת חוזה ידועה."
   },
+  "knownTokenWarning": {
+    "message": "פעולה זו תערוך טוקנים שכבר רשומים בארנק שלך, מה שיכול לשמש לביצוע פישינג נגדך. יש לאשר רק אם הנך בטוח/ה שהנך מתכוונ/ת לשנות את מה שטוקנים אלה מייצגים."
+  },
+  "reusedTokenNameWarning": {
+    "message": "טוקן כאן עושה שימוש חוזר בסמל מטוקן אחר שהנך צופה בו, זה יכול להיות מבלבל או מטעה."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "לא רשת ETH, מוגדר במצב אותיות קטנות"
   },
@@ -582,10 +834,22 @@
     "message": "כתובת URL לא חוקית של RPC"
   },
   "invalidBlockExplorerURL": {
-    "message": "כתובת URL לא חוקית של Block Explorer"
+    "message": "כתובת סייר בלוקים בלתי חוקית"
   },
   "invalidSeedPhrase": {
     "message": "seed phrase לא חוקי"
+  },
+  "ipfsGateway": {
+    "message": "שער IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "הזן את כתובת ה- URL של שער ה- IPFS CID לשימוש ברזולוציית תוכן ENS."
+  },
+  "invalidIpfsGateway": {
+    "message": "שער IPFS לא חוקי: על הערך להיות כתובת URL חוקית"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "שער IPFS אסור: נא לציין שער CID"
   },
   "jsonFile": {
     "message": "קובץ JSON",
@@ -596,6 +860,9 @@
   },
   "max": {
     "message": "מקסימום"
+  },
+  "lastConnected": {
+    "message": "התחבר לאחרונה"
   },
   "learnMore": {
     "message": "למדו עוד"
@@ -624,8 +891,14 @@
   "loadMore": {
     "message": "טען עוד"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "התנתקות"
+    "message": "נעל"
+  },
+  "lockTimeTooGreat": {
+    "message": "זמן הנעילה גדול מדי"
   },
   "mainnet": {
     "message": "רשת אתריום ראשית"
@@ -639,11 +912,20 @@
   "message": {
     "message": "הודעה"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "כעת יש לך שליטה רבה יותר על חיבורי חשבונך ב- Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "כפתור מצב החיבור מראה אם האתר שהנך מבקר/ת בו מחובר לחשבונך שנבחר כרגע."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "לחצ/י על זה כדי לנהל את החשבונות המחוברים שלך."
+  },
   "metamaskDescription": {
     "message": "מחבר אותך לאתריום ולרשת המבוזרת."
   },
   "metamaskVersion": {
-    "message": "גרסת Brave"
+    "message": "גרסת Brave "
   },
   "mobileSyncText": {
     "message": "נא להזין את הססמה שלך כדי לאשר שזה/זו אכן את/ה!"
@@ -655,13 +937,13 @@
     "message": "חשבונות הארנק שלי"
   },
   "myWalletAccountsDescription": {
-    "message": "כל חשבונותיך שנוצרו ב-Brave יתווספו אוטומטית לחלק זה."
+    "message": "כל חשבונות Brave שלך שנוצרו יתווספו אוטומטית לסעיף זה."
   },
   "mustSelectOne": {
     "message": "חובה לבחור לפחות אסימון אחד."
   },
   "needEtherInWallet": {
-    "message": "כדי לתקשר עם אפליקציות מבוזרות באמצעות Brave, צריך להיות לך את'ר בארנק."
+    "message": "כדי לקיים אינטראקציה עם יישומים מבוזרים באמצעות Brave, דרוש לך Ether בארנק שלך."
   },
   "needImportFile": {
     "message": "יש לבחור קובץ לייצוא.",
@@ -699,13 +981,13 @@
     "message": "חוזה חדש"
   },
   "newPassword": {
-    "message": "ססמה חדשה (לפחות 8 תווים)"
+    "message": "סיסמה חדשה (מינימום 8 תווים)"
   },
   "newNetwork": {
     "message": "רשת חדשה"
   },
   "newToMetaMask": {
-    "message": "חדש/ה ב- Brave?"
+    "message": "חדש ב-Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "לא, כבר יש לי צירוף גרעין"
@@ -714,13 +996,19 @@
     "message": "הגנ/י על המפתחות שלך!"
   },
   "protectYourKeysMessage1": {
-    "message": "יש לנקוט זהירות בנוגע לצירוף הגרעין שלך - היו דיווחים על אתרים שמנסים להתחזות ל-Brave .Brave לעולם לא תבקש את צירוף הגרעין שלך!"
+    "message": "יש להיזהר עם צירוף הגרעין שלך - היו דיווחים על אתרי אינטרנט שמנסים להתחזות ל- Brave. Brave לעולם לא יבקש את צירוף הגרעין שלך!"
   },
   "protectYourKeysMessage2": {
-    "message": "יש לשמור את ה-seedphrase שלך במקום בטוח. אם את/ה רואה משהו חשוד, או שאינך בטוח/ה בנוע לאתר, שלח/י אימייל לכתובת support@brave.com"
+    "message": "שמור על הצירוף שלך מאובטח. אם הנך רואה משהו חשוד, או שאינך בטוח/ה לגבי אתר אינטרנט, יש לשלוח דוא\"ל אל support@brave.com"
   },
   "rpcUrl": {
     "message": "כתובת URL חדשה של RPC"
+  },
+  "onlyConnectTrust": {
+    "message": "התחבר/י רק לאתרים שהנך בוטח/ת בהם."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "ספק רשת אתריום זדוני יכול לשקר לגבי מצב הבלוקצ'יין ולתעד את פעילות הרשת שלך. יש להוסיף רק רשתות מותאמות אישית שהנך בוטח/ת בהן."
   },
   "optionalChainId": {
     "message": "ChainID (אופציונלי)"
@@ -737,6 +1025,10 @@
   "next": {
     "message": "הבא"
   },
+  "nextNonceWarning": {
+    "message": "Nonce גבוה מה- nonce המוצע של $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "לא הוגדרה כתובת עבור שם זה."
   },
@@ -745,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "אין לך עסקאות"
+  },
+  "noThanks": {
+    "message": "לא, תודה"
+  },
+  "notCurrentAccount": {
+    "message": "האם זהו החשבון הנכון? זה שונה מהחשבון שנבחר כרגע בארנק שלך"
   },
   "notEnoughGas": {
     "message": "אין מספיק דלק"
@@ -771,7 +1069,7 @@
     "message": "קח/י חלק ב- MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "קח/י חלק ב-MetaMetrics כדי לעזור לנו לשפר את Brave"
+    "message": "קח/י חלק ב- MetaMetrics כדי לעזור לנו לשפר את Brave "
   },
   "password": {
     "message": "סיסמה"
@@ -789,8 +1087,18 @@
   "pending": {
     "message": "בהמתנה"
   },
+  "permissionCheckedIconDescription": {
+    "message": "אישרת הרשאה זו"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "לא אישרת הרשאה זו"
+  },
   "personalAddressDetected": {
     "message": "זוהתה כתובת אישית. יש להזין את כתובת חוזה הטוקן."
+  },
+  "plusXMore": {
+    "message": "+ $1 נוסף",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "הקודם"
@@ -814,14 +1122,23 @@
   "privateNetwork": {
     "message": "רשת פרטית"
   },
+  "proposedApprovalLimit": {
+    "message": "מגבלת אישור מוצעת"
+  },
   "queue": {
     "message": "תור"
+  },
+  "queued": {
+    "message": "בתור"
   },
   "readdToken": {
     "message": "באפשרותך להוסיף טוקן זה בחזרה בעתיד על ידי מעבר אל \"הוסף טוקן\" בתפריט אפשרויות החשבונות שלך."
   },
   "recents": {
     "message": "אחרונים"
+  },
+  "receive": {
+    "message": "קבל"
   },
   "recipientAddress": {
     "message": "כתובת הנמען"
@@ -848,7 +1165,7 @@
     "message": "אפס חשבון"
   },
   "resetAccountDescription": {
-    "message": "איפוס חשבונך ינקה את היסטוריית העסקאות שלך."
+    "message": "איפוס חשבונך ינקה את היסטוריית העסקאות שלך. זה לא ישנה את היתרות בחשבונות שלך ולא ידרוש ממך להזין מחדש את צירוף הגרעין שלך."
   },
   "deleteNetwork": {
     "message": "למחוק את הרשת?"
@@ -865,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "שחזר את חשבונך באמצעות צירוף הגרעין"
   },
+  "restoreWalletPreferences": {
+    "message": "נמצא גיבוי של הנתונים שלך מ- $1. האם ברצונך לשחזר את העדפות הארנק שלך?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "בקשות הממתינות לאישור"
   },
@@ -875,7 +1196,7 @@
     "message": "שחזר"
   },
   "revealSeedWords": {
-    "message": "גלה מילות Seed"
+    "message": "חשוף צירוף גרעין"
   },
   "revealSeedWordsTitle": {
     "message": "צירוף גרעין (Seed Phrase)"
@@ -903,6 +1224,9 @@
   },
   "rinkeby": {
     "message": "רשת בדיקה Rinkeby "
+  },
+  "ropsten": {
+    "message": "Ropsten Test Network"
   },
   "goerli": {
     "message": "רשת בדיקה Goerli "
@@ -941,7 +1265,7 @@
     "message": "אזהרה: לעולם אין לחשוף את צירוף הגיבוי שלך. כל מי שברשותו צירוף זה יכול לקחת את האת'ר שלך לצמיתות."
   },
   "secretPhrase": {
-    "message": "הזנ/י את הצירוף הסודי שלך של שתים-עשרה המילים כאן כדי לשחזר את הכספת שלך."
+    "message": "יש להזין כאן את הצירוף בן 24 המילים הסודי שלך כדי לשחזר את הכספת שלך."
   },
   "securityAndPrivacy": {
     "message": "אבטחה ופרטיות"
@@ -952,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "הפרד/י בין המילים ברווח אחד"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "הדבק צירוף גקעין מהלוח"
+  },
+  "showSeedPhrase": {
+    "message": "הראה צירוף גרעין"
+  },
   "seedPhraseReq": {
-    "message": "צירופי גרעין מורכבים מ-12 מילים"
+    "message": "צירופי גרעין מכילים 12, 15, 18, 21 או 24 מילים"
+  },
+  "selectingAllWillAllow": {
+    "message": "בחירה בכול תאפשר לאתר זה להציג את כל החשבונות הנוכחיים שלך. יש לוודא שהנך בוטח/ת באתר זה."
+  },
+  "selectAccounts": {
+    "message": "בחר חשבונות"
+  },
+  "selectAll": {
+    "message": "בחר הכל"
   },
   "selectCurrency": {
     "message": "בחר מטבע"
@@ -966,6 +1305,9 @@
   },
   "selectType": {
     "message": "בחר/י סוג"
+  },
+  "buy": {
+    "message": "רכישה"
   },
   "send": {
     "message": "שלח"
@@ -985,11 +1327,21 @@
   "sentTokens": {
     "message": "טוקנים שנשלחו"
   },
+  "sendSpecifiedTokens": {
+    "message": "שלח $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "יש להפריד כל מילה עם רווח יחיד"
   },
   "searchTokens": {
     "message": "חיפוש טוקנים"
+  },
+  "searchAccounts": {
+    "message": "חפש חשבונות"
+  },
+  "noAccountsFound": {
+    "message": "לא נמצאו חשבונות עבור שאילתת החיפוש הנתונה"
   },
   "selectAnAccount": {
     "message": "בחר חשבון"
@@ -1036,6 +1388,9 @@
   "signatureRequest": {
     "message": "בקשת חתימה"
   },
+  "signatureRequest1": {
+    "message": "הודעה"
+  },
   "signed": {
     "message": "חתום"
   },
@@ -1057,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "האץ עסקה זו"
   },
+  "spendLimitPermission": {
+    "message": "הרשאת מגבלת הוצאה"
+  },
+  "spendLimitRequestedBy": {
+    "message": "בקשה להגבלת ההוצאה על ידי $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "מגבלת ההוצאה גדולה מדי"
+  },
+  "spendLimitInvalid": {
+    "message": "מגבלת ההוצאה לא חוקית; חייבת להיות מספר חיובי"
+  },
   "switchNetworks": {
     "message": "החלף רשתות"
+  },
+  "stateLogFileName": {
+    "message": "יומני מצב Brave"
   },
   "stateLogs": {
     "message": "יומני מצב"
@@ -1068,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "שגיאה באחזור יומני המצב."
+  },
+  "statusConnected": {
+    "message": "מחובר"
+  },
+  "statusNotConnected": {
+    "message": "לא מחובר"
   },
   "step1HardwareWallet": {
     "message": "1. חבר/י ארנק חומרה"
@@ -1082,13 +1459,16 @@
     "message": "בחר/י את החשבון שברצונך להציג. באפשרותך לבחור רק אחד בכל פעם."
   },
   "step3HardwareWallet": {
-    "message": "3. התחל/י להשתמש ב- dApps ועוד!"
+    "message": "3. התחל להשתמש באתרי web3 ועוד!"
   },
   "step3HardwareWalletMsg": {
-    "message": "השתמש/י בחשבון החומרה שלך כי שהיית משתמש/ת בכל חשבון אתריום"
+    "message": "השתמש/י בחשבון החומרה שלך כמו בכל חשבון Ethereum. התחבר/י לאתרי web3, שלח/י ETH, קנה/י ואחסנ/י טוקני ERC20 וטוקנים שאינם ברי-חליפין כמו CryptoKitties."
   },
   "storePhrase": {
     "message": "אחסנ/י צירוף זה במנהל ססמאות כמו 1Password."
+  },
+  "submit": {
+    "message": "שלח"
   },
   "submitted": {
     "message": "הוגש"
@@ -1100,7 +1480,7 @@
     "message": "סמל"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "הסמל חייב להיות 11 תווים או פחות."
+    "message": "הסמל חייב להכיל 11 תווים או פחות."
   },
   "syncWithMobile": {
     "message": "סנכרן עם הנייד"
@@ -1109,19 +1489,19 @@
     "message": "סנכרן עם הנייד"
   },
   "syncWithMobileDesc": {
-    "message": "באפשרותך לסנכרן את החשבונות והמידע שלך עם המכשיר הנייד שלך. יש לפתוח את האפליקציה לנייד של Brave, לעבור אל \"הגדרות\" וללחוץ על \"סנכרון מהרחבה לדפדפן\""
+    "message": "באפשרותך לסנכרן את החשבונות והמידע שלך עם המכשיר הנייד שלך. יש לפתוח את אפליקציית Brave לנייד, לעבור אל \"הגדרות\" וללחוץ על \"סנכרן מהרחבת דפדפן\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "אם את/ה פותח/ת  את אפליקציית Brave Mobile בפעם הראשונה, פשוט בצע/י את השלבים בטלפון שלך."
+    "message": "אם הנך פותח/ת את אפליקציית Brave Mobile בפעם הראשונה, פשוט פעל/י על פי השלבים בטלפון שלך."
   },
   "syncWithMobileScanThisCode": {
-    "message": "יש לסרוק קוד QR זה באמצעות אפליקציית Brave לטלפון נייד"
+    "message": "יש לסרוק קוד זה באמצעות אפליקציית Brave לנייד "
   },
   "syncWithMobileBeCareful": {
     "message": "ודא/י כי איש אינו מסתכל על המסך שלך בזמן סריקת קוד זה"
   },
   "syncWithMobileComplete": {
-    "message": "הנתונים שלך סונכרנו בהצלחה. תיהנה/י מאפליקציית Brave לטלפונים ניידים! "
+    "message": "הנתונים שלך סונכרנו בהצלחה. תיהנה/י מאפליקציית Brave  לנייד!"
   },
   "terms": {
     "message": "תנאי שימוש"
@@ -1138,6 +1518,13 @@
   "to": {
     "message": "אל"
   },
+  "toAddress": {
+    "message": "אל: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "ל:"
+  },
   "token": {
     "message": "טוקן"
   },
@@ -1146,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "כתובת חוזה טוקן"
+  },
+  "tokenOptions": {
+    "message": "אפשרויות טוקן"
   },
   "tokenSymbol": {
     "message": "סמל טוקן"
@@ -1195,6 +1585,9 @@
   "transactionTime": {
     "message": "זמן העסקה"
   },
+  "showTransactionTimeDescription": {
+    "message": "יש לבחור באפשרות זו כדי להציג אומדני זמן עסקה בהמתנה בלשונית הפעילות בזמן שהנך ברשת אתריום הראשית. יש לשים לב כי האומדנים הם קירוב בהתבסס על תנאי הרשת."
+  },
   "transfer": {
     "message": "העברה"
   },
@@ -1208,14 +1601,21 @@
     "message": "לא הצלחנו לטעון את יתרות הטוקנים שלך. באפשרותך להציג אותן",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "האם הנך בוטח/ת באתר זה? על ידי מתן הרשאה זו, הנך מאפשר/ת ל- $1 למשוך את ה- $2 שלך ולבצע אוטומציה של העסקאות עבורך.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "ניסיון חוזר"
   },
   "typePassword": {
-    "message": "נא להקליד את סיסמת Brave שלך"
+    "message": "יש להקליד את סיסמת Brave שלך"
   },
   "unapproved": {
     "message": "לא אושר"
+  },
+  "alertDisableTooltip": {
+    "message": "ניתן לשנות זאת דרך \"הגדרות > התראות \""
   },
   "units": {
     "message": "יחידות"
@@ -1235,6 +1635,9 @@
   "unknownCameraError": {
     "message": "אירעה שגיאה במהלך הניסיון לקבל גישה למצלמה שלך. נא לנסות שוב..."
   },
+  "unlimited": {
+    "message": "ללא הגבלה"
+  },
   "unlock": {
     "message": "בטל נעילה"
   },
@@ -1245,10 +1648,19 @@
     "message": "עודכן $1"
   },
   "urlErrorMsg": {
-    "message": "כתובות URI דורשות את קידומת HTTP/HTTPS המתאימה."
+    "message": "כתובות אתרים דורשות קידומת HTTP / HTTPS המתאימה."
+  },
+  "urlExistsErrorMsg": {
+    "message": "הכתובת כבר קיימת ברשימת הרשתות הקיימת"
   },
   "usedByClients": {
     "message": "בשימוש על ידי מגוון לקוחות שונים"
+  },
+  "usePhishingDetection": {
+    "message": "השתמש בזיהוי פישינג"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "הצג אזהרה עבור תחומי פישינג המכוונים למשתמשי Ethereum"
   },
   "userName": {
     "message": "שם משתמש"
@@ -1268,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "הצג ב-Etherscan"
   },
+  "retryTransaction": {
+    "message": "נסה שוב לבצע עסקה"
+  },
   "visitWebSite": {
     "message": "בקר/י באתר שלנו"
   },
   "walletSeed": {
-    "message": "גרעין (Seed) ארנק"
+    "message": "צירוף גרעין"
   },
   "welcomeBack": {
     "message": "ברוך שובך!"
   },
   "welcome": {
-    "message": "ברוכים הבאים ל- Brave"
+    "message": "‏ברוכים הבאים ל-Brave"
+  },
+  "whatsThis": {
+    "message": "מה זה?"
   },
   "writePhrase": {
     "message": "יש לכתוב צירוף זה על פיסת נייר ולשמור במקום מאובטח. אם הנך מעוניינ/ת ביותר אבטחה, רשמ/י אותו על גבי מספר פיסות נייר ואחסני כל אחת מהן ב- 2-3 מקומות שונים."
+  },
+  "xOfY": {
+    "message": "$1 מתוך $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "כן, בוא ננסה"
@@ -1301,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "מחיר גז אפס על האצה"
   },
+  "decryptRequest": {
+    "message": "פענח בקשה"
+  },
+  "decrypt": {
+    "message": "פענח"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 רוצה לקרוא את ההודעה הזו כדי להשלים את הפעולה שלך",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "פענח הודעה"
+  },
+  "decryptCopy": {
+    "message": "העתק הודעה מוצפנת"
+  },
+  "decryptInlineError": {
+    "message": "לא ניתן לפענח הודעה זו בגלל שגיאה: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "ספק"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "בקש מפתח הצפנה ציבורי"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 מעוניין במפתח ההצפנה הציבורי שלך. בהסכמתך, אתר זה יוכל לשלוח לך הודעות מוצפנות.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "צירוף גיבוי סודי של ארנקי הקריפטו"
+  },
+  "braveRewards": {
+    "message": "תגמולי Brave"
+  },
+  "braveSettings": {
+    "message": "הגדרות Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "ארנקי Crypto מאפשרים לך לעבוד עם מטבעות קריפטוגרפיים ונכסים קשורים ב- Brave. ארנקי Crypto תומכים בטוקני אתריום כמו ETH ו- BAT, כמו גם בפריטי אוספים, ומאפשרים לך לעבוד עם Ðapps וחוזים חכמים אחרים. כל זה מיועד לאנשים שמכירים את אתריום ומערכות בלוקצ'יין אחרות - או שנלהבים ללמוד."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "השתמש/י בארנקי קריפטו רק אם את/ה מסכימ/ה לכך שאת/ה בלבד אחראי/ת לכל סיכון הקשור בשימוש זה, וכי Brave Software אינה נושאת בכל אחריות להפסד כלשהו לרבות הפסדים אקראיים או הפסדים מהם הנך עלול/ה לסבול כתוצאה משימוש זה."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "כל זה נפרד לחלוטין מ-"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "אז אם חיפשת לתמוך באתרים המועדפים עליך, המשכ/י לשם במקום זאת."
+  },
+  "cryptoWalletsTitle": {
+    "message": "ארנקי קריפטו"
+  },
+  "disclosureConfirm": {
+    "message": "אני מבינ/ה"
+  },
   "ledgerCreateSubText": {
     "message": "חבר/י את ארנק החומרה Ledger שלך כדי לתקשר עם dApps ולבצע העברות לארנקים מחוברים אחרים."
+  },
+  "metamaskImportSubText": {
+    "message": "הערה: בייבוא מארנק Metamask, יש להזין 12 מילים במקום 24."
   },
   "newLocalWallet": {
     "message": "ארנק מקומי חדש"
@@ -1310,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "פתח/י ארנק Brave מקומי חדש כדי לקבל גישה ל-dApps ולאחסון מאובטח של מטבעות מבוזרים ופריטים לאספנים. החליפו אסימונים באנונימיות ללא דמי מסחר."
   },
+  "passWarningOne": {
+    "message": "סיסמה זו מגנה על המפתח הפרטי שלך. אף אחד אינו יכול לאפס אותה אם שכחת אותה, גם לא Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "ארנק זה אינו ספק ברירת המחדל שלך של Ethereum Dapp."
+  },
   "trezorCreateSubText": {
     "message": "חבר/י את ארנק החומרה Trezor שלך כדי לתקשר עם dApps ולבצע העברות לארנקים מחוברים אחרים."
+  },
+  "welcomeCryptoWallets": {
+    "message": "ברוכים הבאים לארנקי קריפטו Brave"
   }
 }

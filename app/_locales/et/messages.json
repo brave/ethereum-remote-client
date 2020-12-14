@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Olen lugenud ja nõustun 1 dollariga",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Vaadake oma lubatud kontode aadresse (kohustuslik)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Ühendatud saidid"
+  },
+  "connectedSitesDescription": {
+    "message": "Nende saitidega on ühendatud $ 1. Nad saavad vaadata teie konto aadressi.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$ 1 pole ühegi saidiga ühendatud.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Teil on selle saidiga ühendatud 1 konto."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Teil on selle saidiga ühendatud $ 1 kontot.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave pole selle saidiga ühendatud. Veebisaidiga3 ühenduse loomiseks leidke nende saidilt ühendusnupp."
+  },
+  "currentAccountNotConnected": {
+    "message": "Teie praegune konto pole ühendatud"
+  },
+  "switchToThisAccount": {
+    "message": "Lülitu sellele kontole"
+  },
+  "disconnectThisAccount": {
+    "message": "Ühendage see konto lahti"
+  },
+  "permissions": {
+    "message": "Load"
+  },
+  "showPermissions": {
+    "message": "Kuva load"
+  },
+  "authorizedPermissions": {
+    "message": "Olete volitanud järgmised õigused"
+  },
+  "connectManually": {
+    "message": "Ühendage praeguse saidiga käsitsi"
+  },
+  "disconnect": {
+    "message": "Katkesta ühendus"
+  },
+  "disconnectAllAccounts": {
+    "message": "Ühendage kõik kontod lahti"
+  },
+  "disconnectPrompt": {
+    "message": "Ühendage $ 1 lahti"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Kas soovite kindlasti ühenduse katkestada? Võite kaotada saidi funktsionaalsuse."
+  },
+  "dismiss": {
+    "message": "Loobu"
+  },
+  "showIncomingTransactions": {
+    "message": "Kuva sissetulevad tehingud"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Valige see, et kasutada Etherscanit sissetulevate tehingute kuvamiseks tehingute loendis"
+  },
   "chartOnlyAvailableEth": {
     "message": "Tabel on saadaval vaid Ethereumi võrkudes."
+  },
+  "connecting": {
+    "message": "Ühendamine..."
+  },
+  "connectWithMetaMask": {
+    "message": "Võtke ühendust vapraga"
+  },
+  "connectTo": {
+    "message": "Ühendage teenusega $ 1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Looge ühendus kõigi oma $ 1-ga",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "kontod",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Ühendage teenusega $ 1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$ 1 kontot",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Lepingu suhtlus"
@@ -16,6 +113,10 @@
   },
   "acceleratingATransaction": {
     "message": "* Tehingu kiirendamine kõrgemate gaasihindadega suurendab võimalust kiiremaks võrgus töötlemiseks, kuid see ei ole alati tagatud."
+  },
+  "accessAndSpendNotice": {
+    "message": "1 USD võib sellele maksimaalsele summale juurde pääseda ja seda kulutada",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Kaamerale ligipääs..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "Peate valima konto!"
   },
+  "active": {
+    "message": "Aktiivne"
+  },
+  "activity": {
+    "message": "Tegevus"
+  },
   "activityLog": {
     "message": "tegevuste logi"
   },
@@ -48,7 +155,7 @@
     "message": "Täpsemad"
   },
   "advancedSettingsDescription": {
-    "message": "Juurdepääs arendaja funktsioonidele, olekulogide allalaadimine, konto lähtestamine, testvõrkude ja kohandatud RPC-de seadistamine"
+    "message": "Juurdepääs arendaja funktsioonidele, laadige alla olekulogid, lähtestage konto, seadistage testvõrgud ja kohandatud RPC"
   },
   "advancedOptions": {
     "message": "Täpsemad suvandid"
@@ -72,27 +179,63 @@
     "message": "Lisa soovitatud lube"
   },
   "addAcquiredTokens": {
-    "message": "Lisage load, mis olete Braveiga saanud"
+    "message": "Lisage Brave&#39;i abil omandatud märgid"
+  },
+  "alerts": {
+    "message": "Hoiatused"
+  },
+  "alertsSettingsDescription": {
+    "message": "Iga märguande lubamine või keelamine"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Ühendamata kontoga valitud veebisaidi sirvimine"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "See hoiatus kuvatakse hüpikaknas, kui sirvite ühendatud veebisaiti, kuid praegu valitud konto pole ühendatud."
+  },
+  "allowOriginSpendToken": {
+    "message": "Kas lubate 1 dollaril teie 2 dollarit kulutada?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Luba sellel saidil:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Lubage sellel välisel laiendusel:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Lubage 1 dollaril raha välja võtta ja kulutada kuni järgmine summa:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Summa"
+  },
+  "amountWithColon": {
+    "message": "Summa:"
   },
   "appDescription": {
     "message": "Ethereumi rahakott teie lehitsejas",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Kinnita"
+    "message": "Kinnitage kulupiirang"
+  },
+  "approveSpendLimit": {
+    "message": "Kinnitage 1 euro suurune kulupiirang",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
-    "message": "Kinnitatud"
+    "message": "Kinnitatud\n"
   },
   "asset": {
     "message": "Vara"
+  },
+  "assets": {
+    "message": "Varad"
   },
   "attemptingConnect": {
     "message": "Plokiahelaga ühenduse loomise katse."
@@ -107,10 +250,10 @@
     "message": "Omistamised"
   },
   "autoLockTimeLimit": {
-    "message": "Automaatse väljalogimise taimer (minutites)"
+    "message": "Automaatse lukustuse taimer (minutit)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Seadistage jõudeolek minutites, enne kui Brave automaatselt välja logib"
+    "message": "Määrake tühikäigu aeg minutites, enne kui vapper lukustub."
   },
   "average": {
     "message": "Keskmine"
@@ -125,7 +268,7 @@
     "message": "Varundage oma salajane taastamisvõti, et oma rahakott ja vahendid turvalisena hoida."
   },
   "backupApprovalInfo": {
-    "message": "See salakood on vajalik teie rahakoti taastamiseks, kui kaotate oma seadme, unustate parooli, peate Bravei uuesti alla laadima, või kui soovite avada oma rahakoti mõnel teisel seadmel."
+    "message": "See salakood on vajalik rahakoti taastamiseks juhul, kui kaotate seadme, unustate parooli, peate Brave&#39;i uuesti installima või soovite oma rahakotile juurde pääseda mõnes teises seadmes."
   },
   "backupNow": {
     "message": "Varunda kohe"
@@ -149,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "Kasuta Blockies Identiconi"
   },
+  "nonceField": {
+    "message": "Tehingu nonce kohandamine"
+  },
+  "nonceFieldHeading": {
+    "message": "Kohandatud Nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "Lülitage see sisse, et kinnitusekraanidel muuta nonce (tehingu numbrit). See on täiustatud funktsioon, kasutage ettevaatlikult."
+  },
   "browserNotSupported": {
     "message": "Teie lehitsejat ei toetata..."
   },
   "builtInCalifornia": {
-    "message": "Brave on projekteeritud ja loodud Californias."
+    "message": "Brave on kavandatud ja ehitatud Californias."
   },
   "buyWithWyre": {
     "message": "Ostke ETH-d Wyre'iga"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre võimaldab kasutada krediitkaarti, et teha ETH sissemakse otse Bravei kontole."
+    "message": "Wyre võimaldab teil deebetkaardi abil ETH otse oma Brave&#39;i kontole kanda."
   },
   "buyCoinSwitch": {
     "message": "Osta CoinSwitchil"
@@ -204,7 +356,7 @@
     "message": "Sule"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Riistvararahakoti ühendamiseks peate kasutama Bravei Google Chrome'is."
+    "message": "Riistvarakotiga ühenduse loomiseks peate Google Chrome&#39;is kasutama Brave&#39;i."
   },
   "confirm": {
     "message": "Kinnita"
@@ -213,13 +365,16 @@
     "message": "Kinnitatud"
   },
   "confirmPassword": {
-    "message": "Kinnitage parool"
+    "message": "Kinnita salasõna"
   },
   "confirmSecretBackupPhrase": {
     "message": "Kinnitage oma salajane varundamisfraas"
   },
   "congratulations": {
     "message": "Palju õnne!"
+  },
+  "connectAccountOrCreate": {
+    "message": "Ühendage konto või looge uus"
   },
   "connectHardwareWallet": {
     "message": "Ühendage riistvara rahakott"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Ühendamine Goerli testvõrguga"
+  },
+  "contacts": {
+    "message": "Kontaktid"
+  },
+  "contactsSettingsDescription": {
+    "message": "Lisage, muutke, eemaldage ja hallake oma kontakte."
+  },
+  "contactUs": {
+    "message": "Võta meiega ühendust!"
   },
   "continueToWyre": {
     "message": "Ava Wyre"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "Valuuta teisendamine"
   },
+  "currentExtension": {
+    "message": "Praegune laienduste leht"
+  },
   "currentLanguage": {
     "message": "Praegune keel"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "Kohandatud RPC"
+  },
+  "customSpendLimit": {
+    "message": "Kohandatud kulupiirang"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Osa teie konto andmetest varundati Brave&#39;i eelmise installimise ajal. See võib hõlmata teie seadeid, kontakte ja märke. Kas soovite need andmed nüüd taastada?"
   },
   "decimalsMustZerotoTen": {
     "message": "Kümnendkohad peavad olema vähemalt 0 ja mitte üle 36."
@@ -338,6 +511,9 @@
   "done": {
     "message": "Valmis"
   },
+  "dontShowThisAgain": {
+    "message": "Ära seda enam näita"
+  },
   "downloadGoogleChrome": {
     "message": "Laadige alla Google Chrome"
   },
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "Muuda kontakti"
   },
+  "editPermission": {
+    "message": "Redigeeri luba"
+  },
   "endOfFlowMessage1": {
     "message": "Läbisite kontrolli – hoidke seemnefraasi turvaliselt, see on teie vastutusel!"
   },
@@ -372,22 +551,29 @@
     "message": "Ärge jagage fraasi mitte kellegagi."
   },
   "endOfFlowMessage5": {
-    "message": "Olge ettevaatlik andmepüügi osas! Brave ei küsi kunagi spontaanselt teie seemnefraasi."
+    "message": "Olge andmepüügiga ettevaatlik! Vaprad ei küsi kunagi spontaanselt teie seemnefraasi."
   },
   "endOfFlowMessage6": {
     "message": "Kui peate oma seemnefraasi uuesti varundama, leiate selle valikust Settings (Seaded) -> Security (Turvalisus)."
   },
   "endOfFlowMessage7": {
-    "message": "Kui teil on küsimusi või näete midagi kahtlast, kirjutage meile support@brave.com."
+    "message": "Kui teil on kunagi küsimusi või näete midagi kahtlast, saatke e-kiri aadressile support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave ei saa teie seemnefraasi taastada. Lisateave."
+    "message": "Vapper ei saa teie sisefraasi taastada."
   },
   "endOfFlowMessage9": {
     "message": "Lisateave."
   },
   "endOfFlowMessage10": {
     "message": "Valmis"
+  },
+  "externalExtension": {
+    "message": "Väline pikendus"
+  },
+  "onboardingReturnNotice": {
+    "message": "&quot;$ 1&quot; sulgeb selle vahelehe ja suunab tagasi lehele $ 2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Tõrge ENS-i nime registreerimisel"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "Sisestage alias"
   },
+  "enterMaxSpendLimit": {
+    "message": "Sisestage maksimaalne kulupiirang"
+  },
   "enterPassword": {
     "message": "Sisestage parool"
   },
   "enterPasswordContinue": {
     "message": "Jätkamiseks sisestage parool"
+  },
+  "errorCode": {
+    "message": "Kood: $ 1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Veadetailid",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Sõnum: $ 1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Kood: $ 1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Vapral tekkis viga",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Proovige uuesti lehe uuesti laadimisega või võtke ühendust toega aadressil support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Proovige uuesti, hüpiku sulgemisel ja uuesti avamisel või võtke ühendust toega aadressil support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Virn:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Ethereumi avalik aadress"
@@ -422,11 +643,21 @@
   "failed": {
     "message": "Nurjus"
   },
+  "failureMessage": {
+    "message": "Midagi läks valesti ja me ei suutnud toimingut lõpule viia"
+  },
   "fast": {
     "message": "Kiire"
   },
   "faster": {
     "message": "Kiiremini"
+  },
+  "feeAssociatedRequest": {
+    "message": "Selle taotlusega on seotud tasu."
+  },
+  "fiat": {
+    "message": "Fiat",
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "Faili importimine ei toimi? Klõpsake siia!",
@@ -437,6 +668,13 @@
   },
   "from": {
     "message": "Saatja"
+  },
+  "fromAddress": {
+    "message": "Alates: $ 1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Funktsioon: kinnita"
   },
   "functionType": {
     "message": "Funktsiooni tüüp"
@@ -465,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Gaasi hind"
   },
+  "gdprMessage": {
+    "message": "Need andmed on koondatud ja seetõttu on need isikuandmete kaitse üldmääruse (EL) 2016/679 tähenduses anonüümsed. Lisateavet meie privaatsuspõhimõtete kohta leiate meie $ 1-st.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Privaatsuspoliitika siin",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Üldine teave"
   },
@@ -488,7 +734,7 @@
     "message": "Meil on hea meel teid näha."
   },
   "hardware": {
-    "message": "riistvara"
+    "message": "Riistvara"
   },
   "hardwareWalletConnected": {
     "message": "Riistvara rahakott on ühendatud"
@@ -497,7 +743,7 @@
     "message": "Ühendage riistvara rahakott"
   },
   "hardwareWalletsMsg": {
-    "message": "Valige riistvara rahakott, mida soovite Braveis kasutada"
+    "message": "Valige riistvarakott, mida soovite koos Brave&#39;iga kasutada"
   },
   "havingTroubleConnecting": {
     "message": "Kas ühendamisel esineb probleeme?"
@@ -511,6 +757,10 @@
   },
   "hide": {
     "message": "Peida"
+  },
+  "hideTokenSymbol": {
+    "message": "Peida $ 1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "Peida luba?"
@@ -526,16 +776,16 @@
     "message": "Impordi konto"
   },
   "importAccountMsg": {
-    "message": "Imporditud kontosid ei seostata teie ainulaadse Bravei konto seemnefraasiga. Lugege imporditud kontode kohta lähemalt"
+    "message": "Imporditud kontosid ei seostata teie algselt loodud Brave&#39;i konto sisefraasiga. Lisateave imporditud kontode kohta"
   },
   "importAccountSeedPhrase": {
-    "message": "Impordi seemnefraasiga konto"
+    "message": "Importige konto koos fraasiga"
   },
   "importWallet": {
     "message": "Importige rahakott"
   },
   "importYourExisting": {
-    "message": "Importige 24-sõnalise seemnefraasi abil olemasolev rahakott"
+    "message": "Importige oma olemasolev rahakott, kasutades 24-sõnalist fraasi"
   },
   "imported": {
     "message": "Imporditud",
@@ -568,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Teadaolev lepinguaadress."
   },
+  "knownTokenWarning": {
+    "message": "Selle toiminguga muudetakse teie rahakotis juba loetletud märke, mida saab teie andmepüügiks kasutada. Kinnitage see ainult siis, kui olete kindel, et soovite muuta, mida need märgid tähistavad."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Siin olev luba kasutab taaskord mõne teise vaadatava sümboli sümbolit, see võib olla segane või petlik."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Kehtetu ETH-võrk, kasutage väiketähti"
   },
@@ -578,10 +834,22 @@
     "message": "Vale RPC URL"
   },
   "invalidBlockExplorerURL": {
-    "message": "Vale Block Explorer URL"
+    "message": "Vale Block Exploreri URL"
   },
   "invalidSeedPhrase": {
     "message": "Vigane seemnefraas"
+  },
+  "ipfsGateway": {
+    "message": "IPFS-i lüüs"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Sisestage IPS-i CID-lüüsi URL, mida kasutatakse ENS-i sisu eraldamiseks."
+  },
+  "invalidIpfsGateway": {
+    "message": "Kehtetu IPFS-i lüüs: väärtus peab olema kehtiv URL"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Keelatud IPFS-i lüüs: palun määrake CID-lüüs"
   },
   "jsonFile": {
     "message": "JSON-laiendiga fail",
@@ -589,6 +857,12 @@
   },
   "kovan": {
     "message": "Kovani testvõrk"
+  },
+  "max": {
+    "message": "Max"
+  },
+  "lastConnected": {
+    "message": "Viimati ühendatud"
   },
   "learnMore": {
     "message": "Lisateave"
@@ -617,8 +891,14 @@
   "loadMore": {
     "message": "Laadi rohkem"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "Logi välja"
+    "message": "Lukusta"
+  },
+  "lockTimeTooGreat": {
+    "message": "Lukustusaeg on liiga pikk"
   },
   "mainnet": {
     "message": "Ethereumi põhivõrk"
@@ -632,11 +912,20 @@
   "message": {
     "message": "Sõnum"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Nüüd saate Brave&#39;is oma kontoühenduste üle rohkem kontrollida."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Ühenduse oleku nupp näitab, kas külastatav veebisait on ühendatud teie praegu valitud kontoga."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Klõpsake sellel ühendatud kontode haldamiseks."
+  },
   "metamaskDescription": {
     "message": "Teid ühendatakse Ethereumi ja detsentraliseeritud võrguga."
   },
   "metamaskVersion": {
-    "message": "Bravei versioon"
+    "message": "Vapper versioon"
   },
   "mobileSyncText": {
     "message": "Sisestage parool, et saaksime teid tuvastada!"
@@ -648,13 +937,13 @@
     "message": "Minu rahakotikontod"
   },
   "myWalletAccountsDescription": {
-    "message": "Sellesse jaotisesse lisatakse automaatselt kõik teie Bravei kontod."
+    "message": "Kõik teie Brave&#39;i loodud kontod lisatakse automaatselt sellesse jaotisesse."
   },
   "mustSelectOne": {
     "message": "Peate valima vähemalt 1 loa."
   },
   "needEtherInWallet": {
-    "message": "Selleks, et suhelda Bravei abil detsentraliseeritud rakendustega, peab teil rahakotis eetrit olema."
+    "message": "Brave&#39;i abil detsentraliseeritud rakendustega suhtlemiseks vajate rahakotti Eetrit."
   },
   "needImportFile": {
     "message": "Peate importimiseks faili valima.",
@@ -692,13 +981,13 @@
     "message": "Uus kontakt"
   },
   "newPassword": {
-    "message": "Uus parool (vähemalt 8 tähemärki)"
+    "message": "Uus parool (min. 8 tähemärki)"
   },
   "newNetwork": {
     "message": "Uus võrk"
   },
   "newToMetaMask": {
-    "message": "Pole Bravei varem kasutanud?"
+    "message": "Kas olete uus julge?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ei, mul on juba seemnefraas"
@@ -707,13 +996,19 @@
     "message": "Kaitske oma võtmeid!"
   },
   "protectYourKeysMessage1": {
-    "message": "Kaitske oma seemnefraasi. Meid on teavitatud veebilehtedest, mis püüavad Bravei jäljendada. Brave ei küsi teilt kunagi teie seemnefraasi!"
+    "message": "Ole ettevaatlik oma põhifraasiga - on teatatud veebisaitidest, mis üritavad Brave&#39;i jäljendada. Vaprad ei küsi kunagi sinu seemnefraasi!"
   },
   "protectYourKeysMessage2": {
-    "message": "Kaitske oma seemnefraasi. Kui näete midagi kahtlast või pole veebilehe ehtsuses kindel, saatke e-kiri aadressile support@brave.com"
+    "message": "Hoidke oma fraas ohutu. Kui näete midagi kahtlast või kui te pole veebisaidi osas kindel, saatke e-kiri aadressile support@brave.com"
   },
   "rpcUrl": {
     "message": "Uus RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "Ühendage ainult saitidega, mida usaldate."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Pahatahtlik Ethereumi võrguteenuse pakkuja võib plokiahela oleku kohta valetada ja teie võrgutegevust salvestada. Lisage ainult usaldusväärseid kohandatud võrke."
   },
   "optionalChainId": {
     "message": "ChainID (valikuline)"
@@ -730,6 +1025,10 @@
   "next": {
     "message": "Edasi"
   },
+  "nextNonceWarning": {
+    "message": "Nonce on suurem kui soovitatud nonce $ 1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Sellele nimele pole registreeritud ühtegi aadressi."
   },
@@ -738,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Teil ei ole tehinguid"
+  },
+  "noThanks": {
+    "message": "Tänan, ei"
+  },
+  "notCurrentAccount": {
+    "message": "Kas see on õige konto? See erineb teie rahakotis praegu valitud kontost"
   },
   "notEnoughGas": {
     "message": "Ei ole piisavalt gaasi"
@@ -764,7 +1069,7 @@
     "message": "Osalege MetaMetricsis"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Osalege MetaMetricsis, et aidata meil Bravei paremaks teha"
+    "message": "Osalege MetaMetricsis, et aidata meil Julget paremaks muuta"
   },
   "password": {
     "message": "Parool"
@@ -780,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "ootel"
+    "message": "Ootel"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Olete selle loa heaks kiitnud"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Te pole seda luba kinnitanud"
   },
   "personalAddressDetected": {
     "message": "Leiti isiklik aadress. Sisestage loa kontaktaadress."
+  },
+  "plusXMore": {
+    "message": "+ Veel 1 $",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Eelm"
@@ -807,14 +1122,23 @@
   "privateNetwork": {
     "message": "Privaatvõrk"
   },
+  "proposedApprovalLimit": {
+    "message": "Kavandatud heakskiidupiirang"
+  },
   "queue": {
     "message": "Järjekord"
+  },
+  "queued": {
+    "message": "Järjekorras"
   },
   "readdToken": {
     "message": "Saate selle loa tulevikus tagasi lisada, kui lähete oma kontovalikute menüüs vahelehele „Lisa luba“."
   },
   "recents": {
     "message": "Hiljutised"
+  },
+  "receive": {
+    "message": "Võta vastu"
   },
   "recipientAddress": {
     "message": "Saaja aadress"
@@ -841,7 +1165,7 @@
     "message": "Lähtesta konto"
   },
   "resetAccountDescription": {
-    "message": "Konto lähtestamine tühjendab tehingute ajaloo."
+    "message": "Konto lähtestamine kustutab teie tehingute ajaloo. See ei muuda teie kontode saldosid ega nõua algse fraasi uuesti sisestamist."
   },
   "deleteNetwork": {
     "message": "Võrk kustutada?"
@@ -858,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Taastage konto seemnefraasi abil"
   },
+  "restoreWalletPreferences": {
+    "message": "Leiti teie andmete varukoopia alates $ 1. Kas soovite oma rahakoti eelistused taastada?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "kinnitust ootavad taotlused"
   },
@@ -868,7 +1196,7 @@
     "message": "Taasta"
   },
   "revealSeedWords": {
-    "message": "Kuva seemnesõnu"
+    "message": "Näita seemnefraasi"
   },
   "revealSeedWordsTitle": {
     "message": "Seemnefraas"
@@ -937,7 +1265,7 @@
     "message": "HOIATUS! Ärge avaldage kunagi oma varundusfraasi. Selle fraasiga on võimalik teie eeter igaveseks ära võtta."
   },
   "secretPhrase": {
-    "message": "Sisestage hoidla taastamiseks oma salajane 24-sõnaline fraas."
+    "message": "Hoidla taastamiseks sisestage siia oma salajane 24-sõnaline fraas."
   },
   "securityAndPrivacy": {
     "message": "Turvalisus ja privaatsus"
@@ -948,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Eraldage iga sõna ühe tühikuga"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Kleebi seemnefraas lõikelauale"
+  },
+  "showSeedPhrase": {
+    "message": "Kuva seemnefraas"
+  },
   "seedPhraseReq": {
-    "message": "Seemnefraasid on 12 sõna pikad"
+    "message": "Seemnefraasid sisaldavad 12, 15, 18, 21 või 24 sõna"
+  },
+  "selectingAllWillAllow": {
+    "message": "Kõigi valimine võimaldab sellel saidil vaadata kõiki teie praeguseid kontosid. Veenduge, et usaldaksite seda saiti."
+  },
+  "selectAccounts": {
+    "message": "Valige konto (d)"
+  },
+  "selectAll": {
+    "message": "Valige kõik"
   },
   "selectCurrency": {
     "message": "Valitud valuuta"
@@ -962,6 +1305,9 @@
   },
   "selectType": {
     "message": "Valige tüüp"
+  },
+  "buy": {
+    "message": "Osta"
   },
   "send": {
     "message": "Saada"
@@ -981,17 +1327,27 @@
   "sentTokens": {
     "message": "saadetud load"
   },
+  "sendSpecifiedTokens": {
+    "message": "Saada $ 1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Eraldage iga sõna ühe tühikuga"
   },
   "searchTokens": {
     "message": "Lubade otsimine"
   },
+  "searchAccounts": {
+    "message": "Kontode otsimine"
+  },
+  "noAccountsFound": {
+    "message": "Antud otsingupäringu jaoks ei leitud ühtegi kontot"
+  },
   "selectAnAccount": {
     "message": "Valige konto"
   },
   "selectAnAccountHelp": {
-    "message": "Valige konto, mida Braveis vaadata"
+    "message": "Valige Brave&#39;is kuvamiseks konto"
   },
   "selectAHigherGasFee": {
     "message": "Valige suurem gaasihind, et kiirendada tehingu töötlemist.*"
@@ -1032,6 +1388,9 @@
   "signatureRequest": {
     "message": "Allkirja taotlus"
   },
+  "signatureRequest1": {
+    "message": "Sõnum"
+  },
   "signed": {
     "message": "Allkirjastatud"
   },
@@ -1053,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Kiirenda seda tehingut"
   },
+  "spendLimitPermission": {
+    "message": "Kuluta limiidi luba"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Kulutuslimiiti taotleb $ 1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Kulude limiit on liiga suur"
+  },
+  "spendLimitInvalid": {
+    "message": "Kulude limiit on kehtetu; peab olema positiivne arv"
+  },
   "switchNetworks": {
     "message": "Vaheta võrku"
+  },
+  "stateLogFileName": {
+    "message": "Vaprad olekulogid"
   },
   "stateLogs": {
     "message": "Olekulogid"
@@ -1064,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Olekulogide saamisel ilmnes tõrge."
+  },
+  "statusConnected": {
+    "message": "Ühendatud"
+  },
+  "statusNotConnected": {
+    "message": "Ühendus puudub"
   },
   "step1HardwareWallet": {
     "message": "1. Ühendage riistvara rahakott"
@@ -1078,13 +1459,16 @@
     "message": "Valige konto, mida soovite vaadata. Korraga saab valida ühe."
   },
   "step3HardwareWallet": {
-    "message": "3. Hakake kasutama dAppse ja muud!"
+    "message": "3. Hakake kasutama veebi 3 saite ja palju muud!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Kasutage oma riistvarakontot nagu mis tahes teist Ethereumi kontot. Logige dAppsi, saatke Eth-d, ostke ja hoiustage ERC20 lube ning asendamatuid lube nagu CryptoKitties."
+    "message": "Kasutage oma riistvarakontot nagu iga Ethereumi kontoga. Looge ühendus Web3 saitidega, saatke ETH, ostke ja salvestage ERC20 märke ja mittesõlmitavaid märke, nagu CryptoKitties."
   },
   "storePhrase": {
     "message": "Salvestage see fraas paroolihaldurisse, nagu 1Password."
+  },
+  "submit": {
+    "message": "Esita"
   },
   "submitted": {
     "message": "Edastatud"
@@ -1096,7 +1480,7 @@
     "message": "Sümbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Sümbol peab olema 11 tähemärki või vähem."
+    "message": "Sümbol peab olema kuni 11 tähemärki."
   },
   "syncWithMobile": {
     "message": "Mobiiliga sünkroonimine"
@@ -1105,19 +1489,19 @@
     "message": "Mobiiliga sünkroonimine"
   },
   "syncWithMobileDesc": {
-    "message": "Saate sünkroonida oma kontod ja teabe oma mobiiliseadmega. Avage Bravei mobiilirakendus, avage \"Settings\" (Seaded) ja puudutage valikut \"Sync from Browser Extension\" (Sünkroonimine lehitseja laiendusest)"
+    "message": "Saate oma kontosid ja teavet oma mobiilseadmega sünkroonida. Avage mobiilirakendus Brave, minge jaotisse &quot;Seaded&quot; ja puudutage nuppu &quot;Sünkrooni brauserilaiendist&quot;"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Järgige Bravei mobiilirakenduse esmakordsel avamisel telefonis esitatud samme."
+    "message": "Kui avate rakenduse Brave Mobile lihtsalt esimest korda, järgige lihtsalt oma telefoni juhiseid."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Skanneerige see kood Bravei mobiilirakendusega"
+    "message": "Skannige see kood oma Brave&#39;i mobiilirakendusega"
   },
   "syncWithMobileBeCareful": {
     "message": "Veenduge, et keegi teine ei vaata selle koodi skannimisel teie ekraani"
   },
   "syncWithMobileComplete": {
-    "message": "Teie andmed on edukalt sünkroonitud. Nautige Bravei mobiilirakendust!"
+    "message": "Teie andmed on edukalt sünkroonitud. Nautige Brave&#39;i mobiilirakendust!"
   },
   "terms": {
     "message": "Teenusetingimused"
@@ -1134,6 +1518,13 @@
   "to": {
     "message": "Saaja"
   },
+  "toAddress": {
+    "message": "Saaja: $ 1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Saaja:"
+  },
   "token": {
     "message": "Luba"
   },
@@ -1142,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "Loa lepinguaadress"
+  },
+  "tokenOptions": {
+    "message": "Märgi valikud"
   },
   "tokenSymbol": {
     "message": "Tokeni sümbol"
@@ -1191,6 +1585,9 @@
   "transactionTime": {
     "message": "Tehingu aeg"
   },
+  "showTransactionTimeDescription": {
+    "message": "Valige see, kui soovite Ethernumi põhivõrgus olles vahekaardil aktiivsus ootel olevaid tehinguaja hinnanguid kuvada. Märkus: hinnangud on ligikaudsed, mis põhinevad võrgutingimustel."
+  },
   "transfer": {
     "message": "Ülekandmine"
   },
@@ -1204,14 +1601,21 @@
     "message": "Teie loasaldode laadimisega oli probleem. Saate neid vaadata",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Kas usaldate seda saiti? Selle loa andmisega lubate 1 dollaril oma 2 dollarit tagasi võtta ja tehingud teie eest automatiseerida.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Proovi uuesti"
   },
   "typePassword": {
-    "message": "Sisestage oma Bravei parool"
+    "message": "Sisestage oma julge parool"
   },
   "unapproved": {
     "message": "Kinnitamata"
+  },
+  "alertDisableTooltip": {
+    "message": "Seda saab muuta jaotises „Seaded&gt; Märguanded“"
   },
   "units": {
     "message": "ühikud"
@@ -1231,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Kaamerale ligipääsemisel ilmnes tõrge. Proovige uuesti..."
   },
+  "unlimited": {
+    "message": "Piiramatu"
+  },
   "unlock": {
     "message": "Ava lukk"
   },
@@ -1241,10 +1648,19 @@
     "message": "Värskendatud $1"
   },
   "urlErrorMsg": {
-    "message": "URI-d nõuavad sobivat HTTP/HTTPS-i prefiksit."
+    "message": "URL-id nõuavad asjakohast HTTP / HTTPS-i eesliidet."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL on juba olemas olemasolevas võrkude loendis"
   },
   "usedByClients": {
     "message": "Kasutavad erinevad kliendid"
+  },
+  "usePhishingDetection": {
+    "message": "Kasutage andmepüügi tuvastamist"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Näidake Ethereumi kasutajaid sihtivate andmepüügidomeenide eest hoiatust"
   },
   "userName": {
     "message": "Kasutajanimi"
@@ -1264,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "Kuva Etherscanil"
   },
+  "retryTransaction": {
+    "message": "Proovige tehingut uuesti"
+  },
   "visitWebSite": {
     "message": "Külastage meie veebilehte"
   },
   "walletSeed": {
-    "message": "Rahakoti seeme"
+    "message": "Seemne fraas"
   },
   "welcomeBack": {
     "message": "Tere tulemast tagasi!"
   },
   "welcome": {
-    "message": "Tere tulemast Bravei"
+    "message": "Tere tulemast Brave'i"
+  },
+  "whatsThis": {
+    "message": "Mis see on?"
   },
   "writePhrase": {
     "message": "Kirjutage see fraas paberile ja hoidke seda turvalises kohas. Veel suurema turvalisuse tagamiseks kirjutage see mitmele paberile ja hoidke neid 2–3 erinevas kohas."
+  },
+  "xOfY": {
+    "message": "1 dollar 2 dollarist",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Jah, proovime"
@@ -1297,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Null gaasihind kiirendamisel"
   },
+  "decryptRequest": {
+    "message": "Krüpteeri taotlus"
+  },
+  "decrypt": {
+    "message": "Dekrüpteeri"
+  },
+  "decryptMessageNotice": {
+    "message": "$ 1 soovib teie toimingu lõpuleviimiseks seda sõnumit lugeda",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Sõnumi dekrüpteerimine"
+  },
+  "decryptCopy": {
+    "message": "Kopeeri krüptitud kiri"
+  },
+  "decryptInlineError": {
+    "message": "Seda kirja ei saa dekrüpteerida vea tõttu: $ 1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Pakkuda"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Taotle krüptimise avalikku võtit"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$ 1 sooviks teie avalikku krüptovõtit. Nõusolekuga saab see sait teile krüpteeritud kirju koostada.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Krüpto-rahakottide salajane varunduslause"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Julged seaded"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Krüpto-rahakotid võimaldavad teil Brave&#39;is töötada krüptoraha ja sellega seotud varadega. Krüpto-rahakotid toetavad Ethereumi märke nagu ETH ja BAT, samuti kollektsiooni ja võimaldavad teil töötada rakenduste ja muude nutikate lepingutega. Kõik see on mõeldud inimestele, kes tunnevad Ethereumi ja muid plokiahelasüsteeme - või on õppimisest põnevil."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Kasutage krüptorahakotti ainult siis, kui tunnistate, et ainult  teie vastutate selle kasutamisega seotud ohtude eest ja Brave Software ei vastuta kahjude, sealhulgas juhuslike või kaudsete kahjude eest, mis võivad selle kasutamise tagajärjel tekkida."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Kõik see on täiesti eraldiseisev"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Nii et kui otsite oma lemmiklehte, mida toetada, siis minge parem sinna."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Krüptorahakotid"
+  },
+  "disclosureConfirm": {
+    "message": "Mõistan"
+  },
   "ledgerCreateSubText": {
     "message": "Ühendage oma Ledgeri riistvara rahakott, et suhelda dAppsiga ja teha tehinguid teistele ühendatud rahakottidele."
+  },
+  "metamaskImportSubText": {
+    "message": "Märkus. Kui impordite Metamaski rahakotist, sisestage 24 sõna asemel 12 sõna."
   },
   "newLocalWallet": {
     "message": "Uus kohalik rahakott"
@@ -1306,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Loo uus Brave'i kohalik rahakott, et pääseda ligi dAppsile ja hoiustada krüptovaluutat ning sissenõutavaid summasid turvaliselt. Kauple anonüümselt tokenitega ilma mingite kauplemistasudeta."
   },
+  "passWarningOne": {
+    "message": "See parool kaitseb teie privaatvõtit. Keegi ei saa seda lähtestada, kui see ununeb, isegi mitte Vapper!"
+  },
+  "providerErrorMessage": {
+    "message": "See rahakott ei ole teie Ethereumi rakenduste vaikepakkuja."
+  },
   "trezorCreateSubText": {
     "message": "Ühendage oma Trezori riistvara rahakott, et suhelda dAppsiga ja teha tehinguid teistele ühendatud rahakottidele."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Tere tulemast Brave Crypto Walletsisse"
   }
 }

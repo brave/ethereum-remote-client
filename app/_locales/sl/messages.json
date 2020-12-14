@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Prebral sem in se strinjam z $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Ogled naslovov dovoljenih računov (obvezno)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Povezana spletna mesta"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 je povezan s temi spletnimi mesti. Lahko si ogledajo naslov vašega računa.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 ni povezan z nobenim spletnim mestom.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Na to spletno mesto imate povezan 1 račun."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Na to spletno mesto imate povezanih $1 računov.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave ni povezan s tem spletnim mestom. Če se želite povezati s spletnim mestom 3, poiščite gumb za povezavo na njihovem spletnem mestu."
+  },
+  "currentAccountNotConnected": {
+    "message": "Vaš trenutni račun ni povezan"
+  },
+  "switchToThisAccount": {
+    "message": "Preklopite na ta račun"
+  },
+  "disconnectThisAccount": {
+    "message": "Prekinite povezavo s tem računom"
+  },
+  "permissions": {
+    "message": "Dovoljenja"
+  },
+  "showPermissions": {
+    "message": "Pokaži dovoljenja"
+  },
+  "authorizedPermissions": {
+    "message": "Pooblastili ste naslednja dovoljenja"
+  },
+  "connectManually": {
+    "message": "Ročno se povežite s trenutno stranjo"
+  },
+  "disconnect": {
+    "message": "Prekini povezavo"
+  },
+  "disconnectAllAccounts": {
+    "message": "Odklopite vse račune"
+  },
+  "disconnectPrompt": {
+    "message": "Odklopite $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Ali ste prepričani, da želite prekiniti povezavo? Funkcijo spletnega mesta lahko izgubite."
+  },
+  "dismiss": {
+    "message": "Opusti"
+  },
+  "showIncomingTransactions": {
+    "message": "Prikaži dohodne transakcije"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Izberite to možnost, če želite uporabiti Etherscan za prikaz dohodnih transakcij na seznamu transakcij"
+  },
   "chartOnlyAvailableEth": {
     "message": "Grafikon na voljo le v glavnih omrežjih."
+  },
+  "connecting": {
+    "message": "Povezovanje ..."
+  },
+  "connectWithMetaMask": {
+    "message": "Povežite se z Brave"
+  },
+  "connectTo": {
+    "message": "Povežite se z $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Povežite se z vsemi svojimi $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "računi",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Povežite se z $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "računov $1",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Interakcija s pogodbo"
@@ -12,10 +109,14 @@
     "message": "O možnostih"
   },
   "aboutSettingsDescription": {
-    "message": "Različica, center za podporo in podatki za stik"
+    "message": "Različica, center za podporo in kontaktni podatki"
   },
   "acceleratingATransaction": {
     "message": "* Pospešitev transakcije z višjo gas ceno poveča njene možnosti za hitrejšo obdelavo v omrežju, vendar ni vedno zagotovljena."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 lahko dostopa in porabi do tega najvišjega zneska",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Dostopanje do vaše kamere ..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "Izbrati morate račun!"
   },
+  "active": {
+    "message": "Aktivno"
+  },
+  "activity": {
+    "message": "Dejavnost"
+  },
   "activityLog": {
     "message": "dnevnik dejavnosti"
   },
@@ -48,7 +155,7 @@
     "message": "Napredno"
   },
   "advancedSettingsDescription": {
-    "message": "Dostopite do funkcij razvijalca, prenesite dnevnike držav, ponastavite račun, nastavite testne mreže in RPC po meri"
+    "message": "Dostopajte do funkcij razvijalcev, prenašajte državne dnevnike, ponastavite račun, nastavite testne mreže in RPC po meri"
   },
   "advancedOptions": {
     "message": "Napredne možnosti"
@@ -72,26 +179,62 @@
     "message": "Dodaj priporočene žetone"
   },
   "addAcquiredTokens": {
-    "message": "Dodaj žetone pridobljene z Brave"
+    "message": "Dodajte žetone, ki ste jih pridobili z Brave"
+  },
+  "alerts": {
+    "message": "Opozorila"
+  },
+  "alertsSettingsDescription": {
+    "message": "Omogočite ali onemogočite vsako opozorilo"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Brskanje po spletnem mestu z izbranim nepovezanim računom"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "To opozorilo se prikaže v pojavnem oknu, ko brskate po povezanem spletnem mestu Web3, vendar trenutno izbrani račun ni povezan."
+  },
+  "allowOriginSpendToken": {
+    "message": "Dovolite, da $1 porabi $2?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Dovoli tej spletni strani:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Dovoli tej zunanji razširitvi:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Omogočite dvig $1 in zapravite do naslednjega zneska:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Znesek"
+  },
+  "amountWithColon": {
+    "message": "Znesek:"
   },
   "appDescription": {
     "message": "Denarnica za Ethereum v brskalniku",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Potrdi"
+    "message": "Odobrite omejitev porabe"
+  },
+  "approveSpendLimit": {
+    "message": "Odobrite omejitev porabe v višini $1",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Potrjeno"
   },
   "asset": {
+    "message": "Sredstva"
+  },
+  "assets": {
     "message": "Sredstva"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "Dodelitve"
   },
   "autoLockTimeLimit": {
-    "message": "Časovnik za samodejno odjavo (minute)"
+    "message": "Časovnik samodejnega zaklepanja (minute)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Nastavite, po koliko minutah mirovanja naj se Brave samodejno odjavi"
+    "message": "Nastavite čas mirovanja v minutah, preden se Brave zaklene."
   },
   "average": {
     "message": "Povprečje"
@@ -125,7 +268,7 @@
     "message": "Varnostno kopirajte kodo Secret Recovery, da ohranite denarnico in sredstva varna."
   },
   "backupApprovalInfo": {
-    "message": "Ta skrivna koda je potrebna za obnovitev denarnice, če izgubite napravo, pozabite geslo, ponovno namestite Brave ali želite dostopati do denarnice v drugi napravi."
+    "message": "Ta skrivna koda je potrebna za obnovitev denarnice, če izgubite napravo, pozabite geslo, morate znova namestiti Brave ali želite dostopati do denarnice v drugi napravi."
   },
   "backupNow": {
     "message": "Varnostno kopiraj zdaj"
@@ -149,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "Uporabi identifikacijo Blockies"
   },
+  "nonceField": {
+    "message": "Prilagodite transakcijo nonce"
+  },
+  "nonceFieldHeading": {
+    "message": "Nonce po meri"
+  },
+  "nonceFieldDescription": {
+    "message": "Vklopite to možnost, da spremenite nonce (številko transakcije) na potrditvenih zaslonih. To je napredna funkcija, uporabljajte previdno."
+  },
   "browserNotSupported": {
     "message": "Vaš brskalnik ni podptrt ..."
   },
   "builtInCalifornia": {
-    "message": "Brave je zasnovan in ustvarjen v Kaliforniji."
+    "message": "Brave je zasnovan in izdelan v Kaliforniji."
   },
   "buyWithWyre": {
     "message": "Kupi ETH z Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre vam omogoča, da s kreditno kartico nakažete ETH neposredno na svoj račun Brave."
+    "message": "Wyre vam omogoča, da z debetno kartico položite ETH kar na svoj račun Brave."
   },
   "buyCoinSwitch": {
     "message": "Kupi na CoinSwitch"
@@ -204,7 +356,7 @@
     "message": "Zapri"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Za uporabo strojne denarnice potrebujete Google Chrome."
+    "message": "Če se želite povezati s svojo strojno denarnico, morate uporabiti Brave v Google Chromu."
   },
   "confirm": {
     "message": "Potrdi"
@@ -220,6 +372,9 @@
   },
   "congratulations": {
     "message": "Čestitamo"
+  },
+  "connectAccountOrCreate": {
+    "message": "Povežite račun ali ustvarite novega"
   },
   "connectHardwareWallet": {
     "message": "Poveži strojno denarnico"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Povezovanje na testno omrežje Goerli"
+  },
+  "contacts": {
+    "message": "Stiki"
+  },
+  "contactsSettingsDescription": {
+    "message": "Dodajte, urejajte, odstranjujte in upravljajte svoje stike"
+  },
+  "contactUs": {
+    "message": "Kontaktiraj nas!"
   },
   "continueToWyre": {
     "message": "Nadaljuj na Wyre"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "Pretvorba valute"
   },
+  "currentExtension": {
+    "message": "Trenutna razširitvena stran"
+  },
   "currentLanguage": {
     "message": "Trenutni jezik"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC po meri"
+  },
+  "customSpendLimit": {
+    "message": "Omejitev porabe po meri"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Nekateri podatki vašega računa so bili med prejšnjo namestitvijo Brave varnostno kopirani. To lahko vključuje vaše nastavitve, stike in žetone. Bi radi obnovili te podatke zdaj?"
   },
   "decimalsMustZerotoTen": {
     "message": "Decimalk mora biti med 0 in 36."
@@ -338,8 +511,11 @@
   "done": {
     "message": "Končano"
   },
+  "dontShowThisAgain": {
+    "message": "Ne pokaži več tega"
+  },
   "downloadGoogleChrome": {
-    "message": "Prenesi Google Chrome"
+    "message": "Prenesi Brave Software Brave"
   },
   "downloadSecretBackup": {
     "message": " Prenesite to skrivno geslo za varnostno kopiranje in jo varno hranite na šifriranem zunanjem trdem disku ali mediju za shranjevanje podatkov."
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "Uredi stik"
   },
+  "editPermission": {
+    "message": "Dovoljenje za urejanje"
+  },
   "endOfFlowMessage1": {
     "message": "Opravili ste test - vaše geslo seed phrase je vaša odgovornost - skrbno pazite nanj!"
   },
@@ -372,22 +551,29 @@
     "message": "Nikoli nikomur ne razkrijte svojega gesla seed phrase."
   },
   "endOfFlowMessage5": {
-    "message": "Pazite na lažno predstavljanje! Brave nikoli ne bo spontano zaprosil za vaše geslo seed phrase."
+    "message": "Bodite previdni pri lažnem predstavljanju! Pogumen nikoli ne bo spontano prosil za vašo besedno zvezo."
   },
   "endOfFlowMessage6": {
     "message": "Če morate ponovno varnostno kopirati vaše geslo seed phrase, ga najdete v Nastavitve -> Varnost."
   },
   "endOfFlowMessage7": {
-    "message": "Če imate kakršna koli vprašanja ali opazite kaj sumljivega, nam pišite na support@brave.com."
+    "message": "Če imate kdaj vprašanja ali vidite kaj sumljivega, pišite na support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave ne more obnoviti vašega gesla seed phrase. Več informacij."
+    "message": "Brave ne more obnoviti vaše besedne zveze rezervne kopije."
   },
   "endOfFlowMessage9": {
     "message": "Več o tem"
   },
   "endOfFlowMessage10": {
     "message": "Končano"
+  },
+  "externalExtension": {
+    "message": "Zunanja razširitev"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" bo zaprl ta zavihek in se vrnil na $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Napaka pri registraciji imena ENS"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "Vnesite vzdevek"
   },
+  "enterMaxSpendLimit": {
+    "message": "Vnesite omejitev največje porabe"
+  },
   "enterPassword": {
     "message": "Vnesite geslo"
   },
   "enterPasswordContinue": {
     "message": "Za nadaljevanje vnesite geslo"
+  },
+  "errorCode": {
+    "message": "Koda: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Podrobnosti o napaki",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Sporočilo: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Koda: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave je naletel na napako",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Poskusite znova tako, da ponovno naložite stran ali se obrnete na podporo na support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Poskusite znova tako, da zaprete in znova odprete pojavno okno ali pa se obrnite na podporo na support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Sklad:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Javni naslov Ethereum"
@@ -422,11 +643,17 @@
   "failed": {
     "message": "Ni uspelo"
   },
+  "failureMessage": {
+    "message": "Nekaj je šlo narobe in nismo mogli dokončati akcije"
+  },
   "fast": {
     "message": "Hiter"
   },
   "faster": {
     "message": "Hitrejši"
+  },
+  "feeAssociatedRequest": {
+    "message": "S to zahtevo je povezana pristojbina."
   },
   "fiat": {
     "message": "Klasične",
@@ -442,8 +669,18 @@
   "from": {
     "message": "Od"
   },
+  "fromAddress": {
+    "message": "Od: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Funkcija: odobri"
+  },
   "functionType": {
     "message": "Vrsta funkcije"
+  },
+  "gasLimit": {
+    "message": "Gas Limit"
   },
   "gasLimitInfoModalContent": {
     "message": "Omejitev plina je največja količina enot plina, ki ste jo pripravljeni porabiti."
@@ -466,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Gas price"
   },
+  "gdprMessage": {
+    "message": "Ti podatki so združeni in so zato anonimni za namene Splošne uredbe o varstvu podatkov (EU) 2016/679. Za več informacij v zvezi z našo prakso zasebnosti si oglejte $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Politika zasebnosti tukaj",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Splošno"
   },
@@ -479,6 +724,9 @@
     "message": "Pridobite Ether iz fauceta za $1",
     "description": "Displays network name for Ether faucet"
   },
+  "getHelp": {
+    "message": "Get Help."
+  },
   "getStarted": {
     "message": "Začnite"
   },
@@ -486,7 +734,7 @@
     "message": "Veseli nas, da ste nas spet obiskali."
   },
   "hardware": {
-    "message": "strojna"
+    "message": "Strojna oprema"
   },
   "hardwareWalletConnected": {
     "message": "Strojna denarnica povezana"
@@ -495,7 +743,7 @@
     "message": "Poveži strojno denarnico"
   },
   "hardwareWalletsMsg": {
-    "message": "Izberite vrsto strojne denarnice"
+    "message": "Izberite strojno denarnico, ki jo želite uporabljati z Brave"
   },
   "havingTroubleConnecting": {
     "message": "Imate težave?"
@@ -504,8 +752,15 @@
     "message": "tukaj",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hexData": {
+    "message": "Hex Data"
+  },
   "hide": {
     "message": "Skrij"
+  },
+  "hideTokenSymbol": {
+    "message": "Skrij $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "Skrijem žeton?"
@@ -521,16 +776,16 @@
     "message": "Uvoz računa"
   },
   "importAccountMsg": {
-    "message": " Uvoženi računa ne bodo povezani s prvotnim seed phase. Preberite več o uvoženih računih "
+    "message": "Uvoženi računi ne bodo povezani s prvotno ustvarjeno besedno zvezo računa Brave. Preberite več o uvoženih računih"
   },
   "importAccountSeedPhrase": {
-    "message": "Uvoz računa z geslom seed phrase"
+    "message": "Uvozite račun z besedno zvezo rezervne kopije"
   },
   "importWallet": {
     "message": "Uvozi denarnico"
   },
   "importYourExisting": {
-    "message": "Uvozite svojo obstoječo denarnico s pomočjo 24-besednega gesla seed phrase"
+    "message": "Uvozite svojo obstoječo denarnico z uporabo 24-besedne rezervne kopije besedne zveze"
   },
   "imported": {
     "message": "Uvoženo",
@@ -563,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Znan naslov pogodbe."
   },
+  "knownTokenWarning": {
+    "message": "S tem dejanjem boste uredili žetone, ki so že navedeni v vaši denarnici in jih lahko uporabite za lažno predstavljanje. Odobrite samo, če ste prepričani, da želite spremeniti, kaj ti žetoni predstavljajo."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Žeton tukaj ponovno uporabi simbol drugega žetona, ki si ga ogledate, kar je lahko zmedeno ali zavajajoče."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ni omrežja ETH, nastavljene so male črke"
   },
@@ -573,10 +834,22 @@
     "message": "Neveljaven RPC URL"
   },
   "invalidBlockExplorerURL": {
-    "message": "Neveljaven Block Explorer URL"
+    "message": "Neveljaven URL raziskovalca blokov"
   },
   "invalidSeedPhrase": {
     "message": "Neveljavna seed phrase"
+  },
+  "ipfsGateway": {
+    "message": "Prehod IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Vnesite URL prehoda IPFS CID, ki ga želite uporabiti za ločevanje vsebine ENS."
+  },
+  "invalidIpfsGateway": {
+    "message": "Neveljaven prehod IPFS: Vrednost mora biti veljaven URL"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Prepovedani prehod IPFS: Navedite prehod CID"
   },
   "jsonFile": {
     "message": "Datoteka JSON",
@@ -584,6 +857,12 @@
   },
   "kovan": {
     "message": "Testno omrežje Kovan"
+  },
+  "max": {
+    "message": "Max"
+  },
+  "lastConnected": {
+    "message": "Zadnja povezava"
   },
   "learnMore": {
     "message": "Preberite več"
@@ -612,8 +891,14 @@
   "loadMore": {
     "message": "Naloži več"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "Odjava"
+    "message": "Zakleni"
+  },
+  "lockTimeTooGreat": {
+    "message": "Čas zaklepanja je prevelik"
   },
   "mainnet": {
     "message": "Glavno omrežje"
@@ -627,11 +912,20 @@
   "message": {
     "message": "Sporočilo"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Zdaj imate več nadzora nad povezavami z računom v Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Gumb stanja povezave prikazuje, ali je spletno mesto, ki ga obiskujete, povezano s trenutno izbranim računom."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Kliknite ga za upravljanje povezanih računov."
+  },
   "metamaskDescription": {
     "message": "Brave je varen identitetni sklad za Ethereum."
   },
   "metamaskVersion": {
-    "message": "Različica"
+    "message": "Različica Brave"
   },
   "mobileSyncText": {
     "message": "Vnesite geslo in potrdite, da ste to vi."
@@ -643,13 +937,13 @@
     "message": "Moji računi Denarnice"
   },
   "myWalletAccountsDescription": {
-    "message": "Vsi vaši računi, ustvarjeni v Braveu, bodo samodejno dodani v ta razdelek."
+    "message": "Vsi vaši ustvarjeni računi Brave bodo samodejno dodani v ta razdelek."
   },
   "mustSelectOne": {
     "message": "Izbran mora biti vsaj 1 žeton."
   },
   "needEtherInWallet": {
-    "message": "Za interakcijo z decentraliziranimi aplikacijami boste v svoji denarnici potrebovali Eter."
+    "message": "Za interakcijo z decentraliziranimi aplikacijami z Brave potrebujete Ether v denarnici."
   },
   "needImportFile": {
     "message": "Za uvoz morate izbrati datoteko.",
@@ -687,7 +981,7 @@
     "message": "Nova pogodba"
   },
   "newPassword": {
-    "message": "Novo geslo (min 8 znakov)"
+    "message": "Novo geslo (najmanj 8 znakov)"
   },
   "newNetwork": {
     "message": "Novo omrežje"
@@ -702,13 +996,19 @@
     "message": "Varujte svoje ključe!"
   },
   "protectYourKeysMessage1": {
-    "message": "Bodite previdni  in svoj seed phrase skrbno varujte - obstajajo poročila o spletnih mestih, ki poskušajo posnemati Brave. Brave nikoli ne bo zahteval vašega gesla seed phrase!"
+    "message": "Bodite previdni pri besedni zvezi - poročali so o spletnih mestih, ki poskušajo posnemati Brave. Brave nikoli ne bo vprašal za vašo rezervno kopijo besedne zveze!"
   },
   "protectYourKeysMessage2": {
-    "message": "Hranite svoj seed phrase. Če opazite sumljivo delovanje ali niste prepričani ali je določeno spletno mesto varno, nam pišite na support@brave.com"
+    "message": "Naj bo vaša fraza na varnem. Če opazite kaj sumljivega ali niste prepričani glede spletnega mesta, pišite na support@brave.com"
   },
   "rpcUrl": {
     "message": "Nov URL RPC"
+  },
+  "onlyConnectTrust": {
+    "message": "Povežite se samo s spletnimi mesti, ki jim zaupate."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Zlonamerni ponudnik omrežja Ethereum lahko laže o stanju verige blokov in beleži vaše omrežne aktivnosti. Dodajte samo omrežja po meri, ki jim zaupate."
   },
   "optionalChainId": {
     "message": "ChainID (nezahtevano)"
@@ -725,6 +1025,10 @@
   "next": {
     "message": "Naprej"
   },
+  "nextNonceWarning": {
+    "message": "Nonce je višji od predlaganega nonceta v višini $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Za to ime ni naslovov."
   },
@@ -733,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Nimate transakcij"
+  },
+  "noThanks": {
+    "message": "Ne, hvala"
+  },
+  "notCurrentAccount": {
+    "message": "Je to pravilen račun? Razlikuje se od trenutno izbranega računa v vaši denarnici"
   },
   "notEnoughGas": {
     "message": "Ni dovolj plina"
@@ -759,7 +1069,7 @@
     "message": "Sodelujte v MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Sodelujte v MetaMetrics in nam pomagajte izboljšati Brave"
+    "message": "Sodelujte v MetaMetrics, da nam pomagate izboljšati Brave"
   },
   "password": {
     "message": "Geslo"
@@ -775,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "v obdelavi"
+    "message": "Na čakanju"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "To dovoljenje ste odobrili"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Niste odobrili tega dovoljenja"
   },
   "personalAddressDetected": {
     "message": "Zaznan je osebni naslov. Vnesite naslov pogodbe žetona."
+  },
+  "plusXMore": {
+    "message": "+ dodatnih $1 ",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Prej"
@@ -802,14 +1122,23 @@
   "privateNetwork": {
     "message": "Zasebno omrežje"
   },
+  "proposedApprovalLimit": {
+    "message": "Predlagana meja odobritve"
+  },
   "queue": {
     "message": "Čakalna vrsta"
+  },
+  "queued": {
+    "message": "V čakalni vrsti"
   },
   "readdToken": {
     "message": "Ta žeton lahko dodate tudi kasneje z uporabo gumba “Dodaj žeton” v možnostih vašega računa."
   },
   "recents": {
     "message": "Nedavno"
+  },
+  "receive": {
+    "message": "Prejmi"
   },
   "recipientAddress": {
     "message": "Prejemnikov naslov"
@@ -836,7 +1165,7 @@
     "message": "Ponastavi račun"
   },
   "resetAccountDescription": {
-    "message": "Ponastavljanje računa bo izbrisalo zgodovino transakcij."
+    "message": "Ponastavitev računa bo izbrisala zgodovino transakcij. To ne bo spremenilo stanja na vaših računih ali zahtevalo, da znova vnesete svojo začetno rezervno kopijo besedne zveze."
   },
   "deleteNetwork": {
     "message": "Izbrišem to omrežje?"
@@ -853,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Obnovi račun z seed phrase"
   },
+  "restoreWalletPreferences": {
+    "message": "Najdena je bila varnostna kopija vaših podatkov iz $1. Bi radi obnovili nastavitve denarnice?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "zahteve, ki čakajo na potrditev"
   },
@@ -863,7 +1196,10 @@
     "message": "Obnovi"
   },
   "revealSeedWords": {
-    "message": "Razkrij seed words"
+    "message": "Razkrij besedno zvezo"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
   },
   "revealSeedWordsDescription": {
     "message": "Če želite zamenjati brskalnik ali računalnik, potrebujete vaš seed phase za dostop do računa. Shranite ga na varno skrito mesto."
@@ -929,7 +1265,7 @@
     "message": "OPOZORILO: Nikoli nikomur ne razkrijte varnostne kopije. Kdorkoli lahko tem geslom vedno prevzame vaš Ether."
   },
   "secretPhrase": {
-    "message": "Vnesite vaših 24 besed za obnovitev vaših računov."
+    "message": "Sem vnesite svojo skrivno besedno zvezo s 24 besedami, da obnovite svoj trezor."
   },
   "securityAndPrivacy": {
     "message": "Varnost in zasebnost"
@@ -940,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Vsako besedo ločite z enim presledkom"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Prilepite besedno zvezo iz odložišča"
+  },
+  "showSeedPhrase": {
+    "message": "Pokaži besedno zvezo"
+  },
   "seedPhraseReq": {
-    "message": "Seed phrase mora biti dolg 12 besed"
+    "message": "Besedne zveze vsebujejo 12, 15, 18, 21 ali 24 besed"
+  },
+  "selectingAllWillAllow": {
+    "message": "Če izberete vse, bo to spletno mesto omogočilo ogled vseh vaših trenutnih računov. Prepričajte se, da zaupate tej spletni strani."
+  },
+  "selectAccounts": {
+    "message": "Izberite račun(e)"
+  },
+  "selectAll": {
+    "message": "Izberi vse"
   },
   "selectCurrency": {
     "message": "Izberi valuto"
@@ -954,6 +1305,9 @@
   },
   "selectType": {
     "message": "Izberi vrsto"
+  },
+  "buy": {
+    "message": "Kupi"
   },
   "send": {
     "message": "Pošlji"
@@ -973,17 +1327,27 @@
   "sentTokens": {
     "message": "poslani žetoni"
   },
+  "sendSpecifiedTokens": {
+    "message": "Pošlji $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Vsako besedo ločite z enim presledkom"
   },
   "searchTokens": {
     "message": "Iskanje žetonov"
   },
+  "searchAccounts": {
+    "message": "Išči po računih"
+  },
+  "noAccountsFound": {
+    "message": "Za dano iskalno poizvedbo ni bilo mogoče najti nobenega računa"
+  },
   "selectAnAccount": {
     "message": "Izberi račun"
   },
   "selectAnAccountHelp": {
-    "message": "Izberi račun za prikaz v Brave"
+    "message": "Izberite račun za ogled v Brave"
   },
   "selectAHigherGasFee": {
     "message": "Izberite višji gas fee, da pospešite obdelavo vaše transakcije.*"
@@ -1024,6 +1388,9 @@
   "signatureRequest": {
     "message": "Zahteva za podpis"
   },
+  "signatureRequest1": {
+    "message": "Sporočilo"
+  },
   "signed": {
     "message": "Podpisano"
   },
@@ -1045,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Pospešite transakcijo"
   },
+  "spendLimitPermission": {
+    "message": "Dovoljenje za omejitev porabe"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Omejitev porabe zahteva $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Omejitev porabe je prevelika"
+  },
+  "spendLimitInvalid": {
+    "message": "Neveljavna meja porabe; mora biti pozitivno število"
+  },
   "switchNetworks": {
     "message": "Preklop omrežja"
+  },
+  "stateLogFileName": {
+    "message": "Državni dnevniki Brave"
   },
   "stateLogs": {
     "message": "State dnevniki"
@@ -1056,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Napaka pri pridobivanju state dnevnikov."
+  },
+  "statusConnected": {
+    "message": "Povezano"
+  },
+  "statusNotConnected": {
+    "message": "Povezava ni vzpostavljena"
   },
   "step1HardwareWallet": {
     "message": "1. Povežite strojno denarnico"
@@ -1070,13 +1459,16 @@
     "message": "Izberite račun, ki ga želute uporabiti. Trenutno lahko izberete le en račun na enkrat."
   },
   "step3HardwareWallet": {
-    "message": "3. Začnite uporabljati dApps in več!"
+    "message": "3. Začnite uporabljati spletne strani web3 in še več!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Uporabite strojno denarnico kot katerikoli drug Ethereum račun. Prijavite se v dApps, pošljite Ether in ERC20 žetone in žetone kot CryptoKitties."
+    "message": "Uporabite svoj račun strojne opreme, kot bi ga uporabili za kateri koli račun Ethereum. Povežite se s spletnimi mesti 3, pošljite ETH, kupite in shranite žetone ERC20 in nezamenljive žetone, kot je CryptoKitties."
   },
   "storePhrase": {
     "message": "To geslo shranite v upravitelja gesel, kot je 1Password."
+  },
+  "submit": {
+    "message": "Potrdi"
   },
   "submitted": {
     "message": "Potrjeno"
@@ -1088,7 +1480,7 @@
     "message": "Simbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Simbol mora biti največ 11 znakov ali manj."
+    "message": "Simbol mora imeti največ 11 znakov."
   },
   "syncWithMobile": {
     "message": "Sinhroniziraj z mobilnimi telefonom"
@@ -1097,19 +1489,19 @@
     "message": "Sinhroniziraj z mobilnimi telefonom"
   },
   "syncWithMobileDesc": {
-    "message": "Račune in podatke lahko sinhronizirate s svojo mobilno napravo. Odprite mobilno aplikacijo Brave, pojdite na \"Nastavitve\" in tapnite \"Sinhroniziraj z razširitvijo brskalnika\""
+    "message": "Račune in podatke lahko sinhronizirate z mobilno napravo. Odprite mobilno aplikacijo Brave, pojdite na »Nastavitve« in tapnite »Sinhronizacija iz razširitve brskalnika«"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Če ste sedaj prvič odprli aplikacijo Brave Mobile, samo sledite korakom v telefonu."
+    "message": "Če aplikacijo Brave Mobile odprete prvič, sledite navodilom v telefonu."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Skenirajte to kodo z mobilno aplikacijo Brave"
+    "message": "Optično preberite to kodo z mobilno aplikacijo Brave"
   },
   "syncWithMobileBeCareful": {
     "message": "Ko skenirate to kodo, naj nihče ne kuka na vaš zaslon"
   },
   "syncWithMobileComplete": {
-    "message": "Vaši podatki so uspešno sinhronizirani. Uživajte v mobilni aplikaciji Brave!"
+    "message": "Vaši podatki so bili uspešno sinhronizirani. Uživajte v mobilni aplikaciji Brave!"
   },
   "terms": {
     "message": "Pogoji uporabe"
@@ -1126,6 +1518,13 @@
   "to": {
     "message": "Za"
   },
+  "toAddress": {
+    "message": "Do: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Za:"
+  },
   "token": {
     "message": "Žeton"
   },
@@ -1134,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "Naslov pogodbe žetona"
+  },
+  "tokenOptions": {
+    "message": "Možnosti žetonov"
   },
   "tokenSymbol": {
     "message": "Simbol žetona"
@@ -1183,6 +1585,9 @@
   "transactionTime": {
     "message": "Transakcijski čas"
   },
+  "showTransactionTimeDescription": {
+    "message": "Izberite to možnost, če želite prikazati ocene časa transakcije v teku na zavihku aktivnosti, medtem ko ste v glavnem omrežju Ethereum. Opomba: ocene so približki, ki temeljijo na omrežnih pogojih."
+  },
   "transfer": {
     "message": "Prenesi"
   },
@@ -1196,14 +1601,21 @@
     "message": "Če imate težave pri ogledu zneskov žetonov si jih lahko ogledate ",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Ali zaupate tej spletni strani? Z odobritvijo tega dovoljenja dovolite $1, da dvigne $2 in avtomatizira transakcije namesto vas.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Poskusi znova"
   },
   "typePassword": {
-    "message": "Vnesite vaše Brave geslo"
+    "message": "Vnesite svoje Brave geslo "
   },
   "unapproved": {
     "message": "Neodobreno"
+  },
+  "alertDisableTooltip": {
+    "message": "To lahko spremenite v &quot;Nastavitve&gt; Opozorila&quot;"
   },
   "units": {
     "message": "enote"
@@ -1223,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Pri dostopanju do vaše kamere je prišlo do napake. Poskusite znova kasneje ..."
   },
+  "unlimited": {
+    "message": "Neomejeno"
+  },
   "unlock": {
     "message": "Odkleni"
   },
@@ -1233,10 +1648,19 @@
     "message": "Posodobljeno $1"
   },
   "urlErrorMsg": {
-    "message": "URI zahtevajo ustrezno HTTP/HTTPS predpono."
+    "message": "URL-ji zahtevajo ustrezno predpono HTTP/HTTPS."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL je že prisoten na obstoječem seznamu omrežij"
   },
   "usedByClients": {
     "message": "Uporabljen s strani večih različnih odjemalcev"
+  },
+  "usePhishingDetection": {
+    "message": "Uporabite zaznavanje lažnega predstavljanja"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Prikažite opozorilo za lažne domene, ki ciljajo na uporabnike Ethereuma"
   },
   "userName": {
     "message": "Uporabniško ime"
@@ -1256,17 +1680,30 @@
   "viewOnEtherscan": {
     "message": "Poglej na Etherscan"
   },
+  "retryTransaction": {
+    "message": "Ponovni poskus transakcije"
+  },
   "visitWebSite": {
     "message": "Obiščite našo spletno stran"
+  },
+  "walletSeed": {
+    "message": "Besedna zveza"
   },
   "welcomeBack": {
     "message": "Dobrodošli nazaj!"
   },
   "welcome": {
-    "message": "Dobrodošli v Brave"
+    "message": "Dobrodošli v Chromu"
+  },
+  "whatsThis": {
+    "message": "Kaj je to?"
   },
   "writePhrase": {
     "message": "To frazo napišite na papir in shranite na varnem mestu. Če želite še večjo varnost, si jo zapišite na več kosov papirja in shranite na dveh ali treh različnih lokacijah."
+  },
+  "xOfY": {
+    "message": "$1 od $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Pa poskusimo"
@@ -1286,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Ničelni gas price na pospešitvi"
   },
+  "decryptRequest": {
+    "message": "Zahteva za dešifriranje"
+  },
+  "decrypt": {
+    "message": "Dešifriraj"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 želi prebrati to sporočilo, da dokonča vaše dejanje",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Dešifriraj sporočilo"
+  },
+  "decryptCopy": {
+    "message": "Kopirajte šifrirano sporočilo"
+  },
+  "decryptInlineError": {
+    "message": "Tega sporočila zaradi napake ni mogoče dešifrirati: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Zagotovite"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Zahtevajte javni ključ za šifriranje"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 želi vaš javni šifrirni ključ. S privolitvijo vam bo to spletno mesto lahko sestavljalo šifrirana sporočila.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Varnostna kopija skrivnega gesla kripto denarnice"
+  },
+  "braveRewards": {
+    "message": "Storitev Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave nastavitve"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Kripto denarnice vam omogočajo delo s kriptovalutami in povezanimi sredstvi v podjetju Brave. Crypto Wallets podpira žetone Ethereum, kot sta ETH in BAT, pa tudi zbirateljske predmete in vam omogoča delo z Ðapps in drugimi pametnimi pogodbami. Vse to je namenjeno ljudem, ki poznajo Ethereum in druge blockchain sisteme - ali pa se veselijo učenja."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Kripto denarnice uporabljajte samo, če sprejemate, da ste izključno sami odgovorni za vsa tveganja, povezana s tovrstno uporabo, in da podejetje Brave Software ne prevzema pravne ali škodne odgovornosti za morebite izgube, vključno z naključnimi in posledičnimi izgubami, do katerih pride pri uporabi."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Vse to je povsem ločeno od"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Če želite podpreti svoja priljubljena spletna mesta, pojdite raje tja."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Kripto denarnice"
+  },
+  "disclosureConfirm": {
+    "message": "Razumem"
+  },
   "ledgerCreateSubText": {
     "message": "Povežite svojo denarnico za strojno opremo Ledger, da boste komunicirali z dApps in prenašali v druge povezane denarnice."
+  },
+  "metamaskImportSubText": {
+    "message": "Opomba: Če uvozite iz denarnice Metamask, namesto 24 vnesite 12 besed."
   },
   "newLocalWallet": {
     "message": "Nova lokalna denarnica"
@@ -1295,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Ustvarite novo lokalno denarnico Brave za dostop do dApps ter varno shranjevanje kriptovalut in zbirateljskih predmetov. Trgujte z žetoni anonimno  in brez provizij."
   },
+  "passWarningOne": {
+    "message": "To geslo ščiti vaš zasebni ključ. Če ga pozabite, ga nihče ne more ponastaviti, niti Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "Ta denarnica ni vaš privzeti ponudnik Ethereum Dapp."
+  },
   "trezorCreateSubText": {
     "message": "Povežite svojo denarnico za strojno opremo Trezor, da boste komunicirali z dApps in prenašali v druge povezane denarnice."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Dobrodošli v kripto denarnicah Brave"
   }
 }

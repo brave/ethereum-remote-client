@@ -1,9 +1,125 @@
 {
+  "acceptTermsOfUse": {
+    "message": "ฉันได้อ่านและยอมรับใน $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "ดูที่อยู่ของบัญชีที่คุณอนุญาต (บังคับ)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "ไซต์ที่เชื่อมต่อ"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 ได้รับการเชื่อมต่อกับไซต์เหล่านี้ ไซต์เหล่านี้จะดูที่อยู่บัญชีของคุณได้",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 ไม่ได้เชื่อมต่อกับเว็บใดเลย",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "คุณมี 1 บัญชีที่เชื่อมต่อกับไซต์นี้"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "คุณมี $1 บัญชีที่เชื่อมต่อกับเว็บนี้",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave ไม่ได้เชื่อมต่อไซต์นี้ ค้นหาปุ่มเชื่อมต่อบนไซต์นั้นๆ เพื่อเชื่อมต่อไปยังไซต์ web3"
+  },
+  "currentAccountNotConnected": {
+    "message": "บัญชีปัจจุบันของคุณยังไม่มีการเชื่อมต่อ"
+  },
+  "switchToThisAccount": {
+    "message": "สลับเป็นบัญชีนี้"
+  },
+  "disconnectThisAccount": {
+    "message": "ยกเลิกการเชื่อมต่อบัญชีนี้"
+  },
+  "permissions": {
+    "message": "การอนุญาต"
+  },
+  "showPermissions": {
+    "message": "แสดงสิทธิ"
+  },
+  "authorizedPermissions": {
+    "message": "คุณได้ให้สิทธิดังต่อไปนี้"
+  },
+  "connectManually": {
+    "message": "เชื่อมต่อไซต์ปัจจุบันด้วยตนเอง"
+  },
+  "disconnect": {
+    "message": "ยกเลิกการเชื่อมต่อ"
+  },
+  "disconnectAllAccounts": {
+    "message": "ยกเลิกการเชื่อมต่อบัญชีทั้งหมด"
+  },
+  "disconnectPrompt": {
+    "message": "ยกเลิกการเชื่อมต่อ $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ คุณอาจสูญเสียฟังก์ชันการทำงานบนไซต์"
+  },
+  "dismiss": {
+    "message": "ปิด"
+  },
+  "showIncomingTransactions": {
+    "message": "แสดงธุรกรรมที่กำลังจะถึง"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "เลือกรายการนี้เพื่อใช้ Etherscan ในการแสดงธุรกรรมที่ใกล้จะถึงในรายการธุรกรรม"
+  },
+  "chartOnlyAvailableEth": {
+    "message": "Chart only available on Ethereum networks."
+  },
+  "connecting": {
+    "message": "กำลังเชื่อมต่อ..."
+  },
+  "connectWithMetaMask": {
+    "message": "เชื่อมต่อด้วย Brave"
+  },
+  "connectTo": {
+    "message": "เชื่อมต่อ $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "เชื่อมต่อ $1 ทั้งหมดของคุณ",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "บัญชี",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "เชื่อมต่อ $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 บัญชี",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
+  },
+  "contractInteraction": {
+    "message": "Contract Interaction"
+  },
   "reject": {
     "message": "ปฏิเสธ"
   },
   "about": {
     "message": "เกี่ยวกับ"
+  },
+  "aboutSettingsDescription": {
+    "message": "เวอร์ชัน ศูนย์ช่วยเหลือ และข้อมูลที่ติดต่อ"
+  },
+  "acceleratingATransaction": {
+    "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 สามารถเข้าถึงและใช้เงินได้ถึงจำนวนสูงสุดนี้",
+    "description": "$1 is the url of the site requesting ability to spend"
+  },
+  "accessingYourCamera": {
+    "message": "Accessing your camera..."
   },
   "account": {
     "message": "บัญชี"
@@ -14,46 +130,188 @@
   "accountName": {
     "message": "ชื่อบัญชี"
   },
+  "accountOptions": {
+    "message": "Account Options"
+  },
+  "accountSelectionRequired": {
+    "message": "You need to select an account!"
+  },
+  "active": {
+    "message": "ใช้งานอยู่"
+  },
+  "activity": {
+    "message": "กิจกรรม"
+  },
+  "activityLog": {
+    "message": "activity log"
+  },
+  "addNetwork": {
+    "message": "Add Network"
+  },
+  "addRecipient": {
+    "message": "Add Recipient"
+  },
+  "advanced": {
+    "message": "Advanced"
+  },
+  "advancedSettingsDescription": {
+    "message": "เข้าถึงฟีเจอร์สำหรับนักพัฒนา ดาวน์โหลดล็อกสถานะ รีเซ็ตบัญชี ตั้งค่า Testnet และ RPC แบบกำหนดเอง"
+  },
+  "advancedOptions": {
+    "message": "Advanced Options"
+  },
+  "addToAddressBook": {
+    "message": "Add to address book"
+  },
+  "addToAddressBookModalPlaceholder": {
+    "message": "e.g. John D."
+  },
+  "addAlias": {
+    "message": "Add alias"
+  },
   "addToken": {
     "message": "เพิ่มโทเค็น"
   },
   "addTokens": {
     "message": "เพิ่มหลายโทเค็น"
   },
+  "addSuggestedTokens": {
+    "message": "Add Suggested Tokens"
+  },
+  "addAcquiredTokens": {
+    "message": "เพิ่มโทเคนที่คุณได้รับโดยใช้ Brave"
+  },
+  "alerts": {
+    "message": "การแจ้งเตือน"
+  },
+  "alertsSettingsDescription": {
+    "message": "เปิดหรือปิดใช้งานการแจ้งเตือนแต่ละรายการ"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "กำลังสืบค้นเว็บไซต์ด้วยบัญชีที่ไม่มีการเชื่อมต่อที่เลือกไว้"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "การแจ้งเตือนนี้จะแสดงในป๊อปอัพเมื่อคุณสืบค้นข้อมูลบนไซต์ Web3 ที่เชื่อมต่อ แต่บัญชีที่เลือกในขณะนี้ยังไม่มีการเชื่อมต่อ"
+  },
+  "allowOriginSpendToken": {
+    "message": "อนุญาตให้ $1 ใช้เงิน $2 ของคุณ",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "อนุญาตให้ไซต์นี้:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "อนุญาตส่วนขยายภายนอกนี้ถึง:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "อนุญาตให้ $1 ถอนเงินและใช้เงินได้ตามจำนวนสูงสุดต่อไปนี้:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
   "amount": {
     "message": "จำนวน"
+  },
+  "amountWithColon": {
+    "message": "จำนวน:"
   },
   "appDescription": {
     "message": "ส่วนขยายเบราว์เซอร์สำหรับอีเธอเรียม",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "อนุมัติ"
+    "message": "อนุมัติขีดจำกัดการใช้เงิน"
+  },
+  "approveSpendLimit": {
+    "message": "อนุมัติขีดจำกัดการใช้เงิน $1",
+    "description": "The token symbol that is being approved"
+  },
+  "approved": {
+    "message": "Approved"
+  },
+  "asset": {
+    "message": "Asset"
+  },
+  "assets": {
+    "message": "แอสเซท"
   },
   "attemptingConnect": {
     "message": "กำลังเชื่อมต่อกับบล็อกเชน"
   },
+  "attemptToCancel": {
+    "message": "Attempt to Cancel?"
+  },
+  "attemptToCancelDescription": {
+    "message": "Submitting this attempt does not guarantee your original transaction will be cancelled. If the cancellation attempt is successful, you will be charged the transaction fee above."
+  },
   "attributions": {
     "message": "อ้างถึง"
+  },
+  "autoLockTimeLimit": {
+    "message": "ตัวจับเวลาล็อคอัตโนมัติ (นาที)"
+  },
+  "autoLockTimeLimitDescription": {
+    "message": "ตั้งค่าระยะเวลาที่ไม่ได้ใช้งาน (เป็นนาที) ก่อนที่ Brave จะถูกล็อค"
+  },
+  "average": {
+    "message": "Average"
   },
   "back": {
     "message": "กลับ"
   },
+  "backToAll": {
+    "message": "Back to All"
+  },
   "backupApprovalNotice": {
     "message": "แบ็คอัพโค้ดกู้คืนลับของคุณเพื่อรักษา Wallet และเงินให้ปลอดภัย"
+  },
+  "backupApprovalInfo": {
+    "message": "ต้องระบุรหัสลับนี้เพื่อกู้คืน Wallet ในกรณีที่คุณทำอุปกรณ์สูญหาย ลืมรหัสผ่าน ติดตั้ง Brave ใหม่ หรือต้องการเข้าถึง Wallet ผ่านอุปกรณ์อื่น"
+  },
+  "backupNow": {
+    "message": "Backup now"
   },
   "balance": {
     "message": "ยอดคงเหลือ:"
   },
+  "balanceOutdated": {
+    "message": "Balance may be outdated"
+  },
+  "basic": {
+    "message": "Basic"
+  },
+  "blockExplorerUrl": {
+    "message": "Block Explorer"
+  },
+  "blockExplorerView": {
+    "message": "View account at $1",
+    "description": "$1 replaced by URL for custom block explorer"
+  },
   "blockiesIdenticon": {
     "message": "ใช้งาน Blockies Identicon"
   },
+  "nonceField": {
+    "message": "ปรับแต่งค่า Nonce ของธุรกรรม"
+  },
+  "nonceFieldHeading": {
+    "message": "ค่า Nonce ที่กำหนดเอง"
+  },
+  "nonceFieldDescription": {
+    "message": "เปิดฟีเจอร์นี้เพื่อเปลี่ยนค่า Nonce (หมายเลขธุรกรรม) ในหน้าจอยืนยัน ฟีเจอร์นี้เป็นฟีเจอร์ขั้นสูง โปรดใช้ด้วยความระมัดระวัง"
+  },
+  "browserNotSupported": {
+    "message": "Your Browser is not supported..."
+  },
   "builtInCalifornia": {
-    "message": "Brave ออกแบบและพัฒนาที่แคลิฟอร์เนีย"
+    "message": "Brave ได้รับการออกแบบและสร้างขึ้นในแคลิฟอร์เนีย"
+  },
+  "buyWithWyre": {
+    "message": "Buy ETH with Wyre"
+  },
+  "buyWithWyreDescription": {
+    "message": "Wyre จะทำให้คุณใช้บัตรเครดิตเพื่อฝากเงิน ETH ไปยังบัญชี Brave ได้โดยตรง"
   },
   "buyCoinSwitch": {
     "message": "ซื้อด้วย CoinSwitch"
@@ -61,20 +319,50 @@
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitch เป็นจุดหมายปลายทางแบบครบวงจรในการแลกเปลี่ยนสกุลเงินมากกว่า 300 ครั้งในอัตราที่ดีที่สุด"
   },
+  "bytes": {
+    "message": "Bytes"
+  },
+  "off": {
+    "message": "Off"
+  },
+  "ok": {
+    "message": "Ok"
+  },
   "on": {
     "message": "เปิด"
+  },
+  "optionalBlockExplorerUrl": {
+    "message": "Block Explorer URL (optional)"
   },
   "cancel": {
     "message": "ยกเลิก"
   },
+  "cancelAttempt": {
+    "message": "Cancel Attempt"
+  },
   "cancellationGasFee": {
     "message": "ค่าธรรมเนียม Gas การยกเลิก"
   },
+  "cancelled": {
+    "message": "Cancelled"
+  },
+  "chainId": {
+    "message": "Chain ID"
+  },
+  "clickToRevealSeed": {
+    "message": "Click here to reveal secret words"
+  },
+  "close": {
+    "message": "Close"
+  },
   "chromeRequiredForHardwareWallets": {
-    "message": "คุณต้องใช้ Brave บน Google Chrome เพื่อเชื่อมต่อกับ Hardware Wallet ของคุณ"
+    "message": "คุณต้องใช้ Brave บน Google Chrome เพื่อให้เชื่อมต่อ Hardware Wallet ได้"
   },
   "confirm": {
     "message": "ยืนยัน"
+  },
+  "confirmed": {
+    "message": "Confirmed"
   },
   "confirmPassword": {
     "message": "ยืนยันรหัสผ่าน"
@@ -85,14 +373,44 @@
   "congratulations": {
     "message": "ยินดีด้วย"
   },
+  "connectAccountOrCreate": {
+    "message": "เชื่อมต่อบัญชีหรือสร้างใหม่"
+  },
+  "connectHardwareWallet": {
+    "message": "Connect Hardware Wallet"
+  },
+  "connect": {
+    "message": "Connect"
+  },
   "connectingTo": {
     "message": "เชื่อมต่อกับ $1"
+  },
+  "connectingToKovan": {
+    "message": "Connecting to Kovan Test Network"
   },
   "connectingToMainnet": {
     "message": "เชื่อมต่อกับเครือข่าย Ethereum หลัก"
   },
   "connectingToRopsten": {
     "message": "เชื่อมต่อกับเครือข่ายทดสอบ Ropsten"
+  },
+  "connectingToRinkeby": {
+    "message": "Connecting to Rinkeby Test Network"
+  },
+  "connectingToLocalhost": {
+    "message": "Connecting to Localhost 8545"
+  },
+  "connectingToGoerli": {
+    "message": "Connecting to Goerli Test Network"
+  },
+  "contacts": {
+    "message": "ข้อมูลที่ติดต่อ"
+  },
+  "contactsSettingsDescription": {
+    "message": "Add, edit, remove, and manage your contacts"
+  },
+  "contactUs": {
+    "message": "ติดต่อเรา"
   },
   "continueToWyre": {
     "message": "ไปที่ Wyre"
@@ -105,6 +423,15 @@
   },
   "copiedExclamation": {
     "message": "คัดลอกแล้ว!"
+  },
+  "copyAddress": {
+    "message": "Copy address to clipboard"
+  },
+  "copyTransactionId": {
+    "message": "Copy Transaction ID"
+  },
+  "copiedTransactionId": {
+    "message": "Copied Transaction ID"
   },
   "copyToClipboard": {
     "message": "คัดลอกไปคลิปบอร์ด"
@@ -121,8 +448,17 @@
   "createAWallet": {
     "message": "สร้าง Wallet"
   },
+  "createPassword": {
+    "message": "Create Password"
+  },
   "currencyConversion": {
     "message": "การแปลงสกุลเงิน"
+  },
+  "currentExtension": {
+    "message": "หน้าส่วนขยายปัจจุบัน"
+  },
+  "currentLanguage": {
+    "message": "Current Language"
   },
   "customGas": {
     "message": "กำหนดค่าแก็สเอง"
@@ -130,8 +466,17 @@
   "customGasSubTitle": {
     "message": "การเพิ่มค่าธรรมเนียมอาจลดเวลาดำเนินการ แต่ก็ไม่แน่เสมอไป"
   },
+  "customToken": {
+    "message": "Custom Token"
+  },
   "customRPC": {
     "message": "กำหนดค่า RPC เอง"
+  },
+  "customSpendLimit": {
+    "message": "ขีดจำกัดการใช้เงินที่กำหนดเอง"
+  },
+  "dataBackupFoundInfo": {
+    "message": "ข้อมูลบัญชีบางส่วนได้รับการสำรองข้อมูลในระหว่างการติดต่อ Brave ก่อนหน้านี้ ซึ่งอาจรวมถึงการตั้งค่า ข้อมูลที่ติดต่อ และโทเค็นของคุณ คุณต้องการกู้คืนข้อมูลนี้เลยหรือไม่"
   },
   "decimalsMustZerotoTen": {
     "message": "จำนวนต้องมากกว่า 0 และไม่เกิน 36"
@@ -144,6 +489,9 @@
   },
   "delete": {
     "message": "ลบ"
+  },
+  "deleteAccount": {
+    "message": "Delete Account"
   },
   "deposit": {
     "message": "ฝาก"
@@ -163,6 +511,12 @@
   "done": {
     "message": "เสร็จสิ้น"
   },
+  "dontShowThisAgain": {
+    "message": "ไม่ต้องแสดงสิ่งนี้อีก"
+  },
+  "downloadGoogleChrome": {
+    "message": "Download Brave Software Brave"
+  },
   "downloadSecretBackup": {
     "message": "ดาวน์โหลด Phrase แบ็คอัพลับนี้และเก็บรักษาไว้ให้ปลอดภัยในฮาร์ดดิสก์หรืออุปกรณ์เก็บข้อมูลภายนอกที่มีการเข้ารหัส"
   },
@@ -172,26 +526,113 @@
   "dontHaveAHardwareWallet": {
     "message": "ไม่มี Hardware Wallet ใช่ไหม"
   },
+  "dropped": {
+    "message": "Dropped"
+  },
   "edit": {
     "message": "แก้ไข"
   },
   "editContact": {
     "message": "แก้ไขผู้ติดต่อ"
   },
+  "editPermission": {
+    "message": "แก้ไขสิทธิ"
+  },
   "endOfFlowMessage1": {
     "message": "คุณผ่านการทดสอบแล้ว กรุณารับผิดชอบในการรักษา Seed Phrase ให้ปลอดภัย"
   },
+  "endOfFlowMessage2": {
+    "message": "Tips on storing it safely"
+  },
+  "endOfFlowMessage3": {
+    "message": "Save a backup in multiple places."
+  },
+  "endOfFlowMessage4": {
+    "message": "Never share the phrase with anyone."
+  },
   "endOfFlowMessage5": {
-    "message": "โปรดระวังฟิชชิ่ง Brave จะไม่ขอ Seed Phrase ของคุณโดยไม่มีการแจ้งล่วงหน้าเลย"
+    "message": "ระวังการฉ้อฉลในรูปแบบฟิชชิ่ง! Brave จะไม่ขอรหัส Seed จากคุณโดยเด็ดขาด"
+  },
+  "endOfFlowMessage6": {
+    "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
+  },
+  "endOfFlowMessage7": {
+    "message": "หากคุณมีข้อสงสัยหรือพบเห็นสิ่งที่น่าสงสัย โปรดส่งอีเมลมาที่ support@brave.com"
+  },
+  "endOfFlowMessage8": {
+    "message": "Brave ไม่สามารถกู้คืนรหัส Seed ของคุณได้"
   },
   "endOfFlowMessage9": {
     "message": "เรียนรู้เพิ่มเติม"
   },
+  "endOfFlowMessage10": {
+    "message": "All Done"
+  },
+  "externalExtension": {
+    "message": "ส่วนขยายภายนอก"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" จะปิดแท็บนี้และนำทางกลับไปยัง $2",
+    "description": "Return the user to the site that initiated onboarding"
+  },
+  "ensRegistrationError": {
+    "message": "Error in ENS name registration"
+  },
+  "ensNotFoundOnCurrentNetwork": {
+    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+  },
+  "enterAnAlias": {
+    "message": "Enter an alias"
+  },
+  "enterMaxSpendLimit": {
+    "message": "ระบุขีดจำกัดการใช้เงินสูงสุด"
+  },
   "enterPassword": {
     "message": "ใส่รหัสผ่าน"
   },
+  "enterPasswordContinue": {
+    "message": "Enter password to continue"
+  },
+  "errorCode": {
+    "message": "โค้ด: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "รายละเอียดความผิดพลาด",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "ข้อความ: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "โค้ด: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave เกิดข้อผิดพลาด",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "ลองใหม่อีกครั้งโดยโหลดหน้านี้ใหม่ หรือติดต่อฝ่ายสนับสนุนที่ support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "ลองอีกครั้งโดยการปิดแล้วเปิดป๊อปอัพใหม่ หรือติดต่อฝ่ายสนับสนุนที่ support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Stack:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
+  },
+  "ethereumPublicAddress": {
+    "message": "Ethereum Public Address"
+  },
   "etherscanView": {
     "message": "ดูบัญชีบน Etherscan"
+  },
+  "estimatedProcessingTimes": {
+    "message": "Estimated Processing Times"
   },
   "expandView": {
     "message": "ขยายมุมมอง"
@@ -202,11 +643,17 @@
   "failed": {
     "message": "ล้มเหลว"
   },
+  "failureMessage": {
+    "message": "เกิดข้อผิดพลาดบางอย่าง ทำให้เราไม่สามารถดำเนินการให้เสร็จสมบูรณ์"
+  },
   "fast": {
     "message": "เร็ว"
   },
   "faster": {
     "message": "เร็วขึ้น"
+  },
+  "feeAssociatedRequest": {
+    "message": "ค่าธรรมเนียมจะสัมพันธ์กับคำขอนี้"
   },
   "fiat": {
     "message": "เงินตรา",
@@ -216,20 +663,59 @@
     "message": "นำเข้าไฟล์ไม่สำเหร็จ กดที่นี่!",
     "description": "Helps user import their account from a JSON file"
   },
+  "forgetDevice": {
+    "message": "Forget this device"
+  },
   "from": {
     "message": "จาก"
+  },
+  "fromAddress": {
+    "message": "จาก: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "ฟังก์ชัน: อนุมัต"
+  },
+  "functionType": {
+    "message": "Function Type"
   },
   "gasLimit": {
     "message": "วงเงินแก็ส"
   },
+  "gasLimitInfoModalContent": {
+    "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
+  },
   "gasLimitTooLow": {
     "message": "วงเงินแก็สต้องอย่างน้อย 21000"
+  },
+  "gasUsed": {
+    "message": "Gas Used"
   },
   "gasPrice": {
     "message": "ราคาแก๊ส (GWEI)"
   },
+  "gasPriceExtremelyLow": {
+    "message": "Gas Price Extremely Low"
+  },
+  "gasPriceInfoModalContent": {
+    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+  },
+  "gasPriceNoDenom": {
+    "message": "Gas Price"
+  },
+  "gdprMessage": {
+    "message": "ข้อมูลนี้เป็นข้อมูลที่รวบรวมมา จึงเป็นแบบไม่ระบุชื่อเพื่อให้สอดคล้องกับกฏหมายคุ้มครองข้อมูลส่วนบุคคล (EU) 2016/679 สำหรับข้อมูลเพิ่มเติมเกี่ยวกับแนวทางปฏิบัติด้านความเป็นส่วนตัวของเรา โปรดดู $1",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "นโยบายความเป็นส่วนตัวที่นี่",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "ทั่วไป"
+  },
+  "generalSettingsDescription": {
+    "message": "Currency conversion, primary currency, language, blockies identicon"
   },
   "getEther": {
     "message": "รับอีเธอร์"
@@ -238,15 +724,49 @@
     "message": "รับอีเธอร์ที่ปล่อยจาก $1",
     "description": "Displays network name for Ether faucet"
   },
+  "getHelp": {
+    "message": "Get Help."
+  },
+  "getStarted": {
+    "message": "Get Started"
+  },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
+  "hardware": {
+    "message": "ฮาร์ดแวร์"
+  },
+  "hardwareWalletConnected": {
+    "message": "Hardware wallet connected"
+  },
+  "hardwareWallets": {
+    "message": "Connect a hardware wallet"
+  },
+  "hardwareWalletsMsg": {
+    "message": "เลือก Hardware Wallet ที่คุณต้องการใช้ร่วมกับ Brave"
+  },
+  "havingTroubleConnecting": {
+    "message": "Having trouble connecting?"
+  },
   "here": {
     "message": "ที่นี่",
     "description": "as in -click here- for more information (goes with troubleTokenBalances)"
   },
+  "hexData": {
+    "message": "Hex Data"
+  },
   "hide": {
     "message": "ซ่อน"
   },
+  "hideTokenSymbol": {
+    "message": "ซ่อน $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "ซ่อนโทเค็นหรือไม่?"
+  },
+  "history": {
+    "message": "History"
   },
   "import": {
     "message": "นำเข้า",
@@ -256,14 +776,32 @@
     "message": "นำเข้าบัญชี"
   },
   "importAccountMsg": {
-    "message": "บัญชีที่นำเข้าจะไม่ถูกรวมกับบัญชีที่สร้างด้วยคำเเริ่มต้นบนเมต้ามาร์สในตอนแรก เรียนรู้เพิ่มเติมเกี่ยวกับบัญชีที่นำเข้า"
+    "message": "บัญชีที่นำเข้าจะไม่เกี่ยวข้องกับ seedphrase บัญชี Brave ที่คุณสร้างไว้แต่ต้น เรียนรู้เพิ่มเติมเกี่ยวกับบัญชีที่นำเข้า"
+  },
+  "importAccountSeedPhrase": {
+    "message": "นำเข้าบัญชีด้วย seed phrase"
+  },
+  "importWallet": {
+    "message": "นำเข้า Wallet"
+  },
+  "importYourExisting": {
+    "message": "นำเข้า Wallet ที่คุณมีอยู่โดยใช้รหัส Seed แบบ 24 คำ"
   },
   "imported": {
     "message": "นำเข้าเรียบร้อย",
     "description": "status showing that an account has been fully loaded into the keyring"
   },
+  "importUsingSeed": {
+    "message": "Import using account seed phrase"
+  },
   "infoHelp": {
     "message": "ข้อมูลและความช่วยเหลือ"
+  },
+  "initialTransactionConfirmed": {
+    "message": "Your initial transaction was confirmed by the network. Click OK to go back."
+  },
+  "insufficientBalance": {
+    "message": "Insufficient balance."
   },
   "insufficientFunds": {
     "message": "เงินทุนไม่เพียงพอ"
@@ -277,6 +815,15 @@
   "invalidAddressRecipient": {
     "message": "แอดแดรสผู้รับไม่ถูกต้อง"
   },
+  "knownAddressRecipient": {
+    "message": "Known contract address."
+  },
+  "knownTokenWarning": {
+    "message": "การกระทำนี้จะแก้ไขโทเคนที่ลิสต์อยู่ในวอลเล็ตของคุณอยู่แล้ว ซึ่งสามารถนำไปใช้ในการหลอกลวงเอาข้อมูลของคุณได้ อนุมัติเฉพาะเมื่อคุณแน่ใจว่าคุณต้องการเปลี่ยนสิ่งที่โทเคนเหล่านี้แทนความหมาย"
+  },
+  "reusedTokenNameWarning": {
+    "message": "โทเคนนี้นำสัญลักษณ์จากโทเคนอื่นที่คุณดูมาใช้ใหม่ นี่อาจทำให้สับสนหรือหลอกลวงได้"
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ไม่ใช่เครือข่าย ETH ตั้งเป็นตัวพิมพ์เล็ก"
   },
@@ -287,7 +834,22 @@
     "message": "RPC URI ไม่ถูกต้อง"
   },
   "invalidBlockExplorerURL": {
-    "message": "Block Explorer URI ไม่ถูกต้อง"
+    "message": "URL ของ Block Explorer ไม่ถูกต้อง"
+  },
+  "invalidSeedPhrase": {
+    "message": "Invalid seed phrase"
+  },
+  "ipfsGateway": {
+    "message": "เกตเวย์ IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ระบุ URL ของเกตเวย์ IPFS CID สำหรับใช้กับฟังก์ชันแก้ไขเนื้อหา ENS"
+  },
+  "invalidIpfsGateway": {
+    "message": "เกตเวย์ IPFS ไม่ถูกต้อง: ค่านี้ต้องเป็น URL ที่ถูกต้อง"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "เกตเวย์ IPFS ที่ไม่อนุญาต: โปรดระบุเกตเวย์ CID"
   },
   "jsonFile": {
     "message": "ไฟล์ JSON",
@@ -296,11 +858,29 @@
   "kovan": {
     "message": "เครือข่ายทดสอบ Kovan"
   },
+  "max": {
+    "message": "Max"
+  },
+  "lastConnected": {
+    "message": "เชื่อมต่อครั้งล่าสุด"
+  },
   "learnMore": {
     "message": "เรียนรู้เพิ่มเติม"
   },
+  "ledgerAccountRestriction": {
+    "message": "You need to make use your last account before you can add a new one."
+  },
+  "letsGoSetUp": {
+    "message": "Yes, let’s get set up!"
+  },
   "likeToAddTokens": {
     "message": "คุณต้องการเพิ่มโทเค็นเหล่านี้หรือไม่?"
+  },
+  "links": {
+    "message": "Links"
+  },
+  "liveGasPricePredictions": {
+    "message": "Live Gas Price Predictions"
   },
   "loading": {
     "message": "กำลังโหลด..."
@@ -308,26 +888,62 @@
   "loadingTokens": {
     "message": "กำลังโหลดโทเค็น..."
   },
+  "loadMore": {
+    "message": "Load More"
+  },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "ออกจากระบบ"
+    "message": "ล็อค"
+  },
+  "lockTimeTooGreat": {
+    "message": "เวลาล็อคมีขนาดใหญ่เกินไป"
   },
   "mainnet": {
     "message": "เครือข่าย Main Net"
   },
+  "memorizePhrase": {
+    "message": "Memorize this phrase."
+  },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "ข้อความ"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "ตอนนี้คุณสามารถควบคุมการเชื่อมต่อบัญชีของคุณได้มากขึ้นใน Brave"
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "ปุ่มสถานะการเชื่อมต่อจะแสดงขึ้นหากเว็บไซต์ที่คุณเข้าชมถูกเชื่อมต่อไปยังบัญชีที่คุณเลือกไว้ในขณะนั้น"
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "คลิกเพื่อจัดการบัญชีที่คุณเชื่อมต่อไว้"
   },
   "metamaskDescription": {
     "message": "Brave คือที่เก็บตัวตนนิรภัยสำหรับอีเธอเรียม"
   },
+  "metamaskVersion": {
+    "message": "เวอร์ชัน Brave"
+  },
+  "mobileSyncText": {
+    "message": "Please enter your password to confirm it's you!"
+  },
   "myAccounts": {
     "message": "บัญชีของฉัน"
+  },
+  "myWalletAccounts": {
+    "message": "My Wallet Accounts"
+  },
+  "myWalletAccountsDescription": {
+    "message": "บัญชี Brave ทั้งหมดที่คุณสร้างไว้จะถูกเพิ่มลงในส่วนนี้โดยอัตโนมัติ"
   },
   "mustSelectOne": {
     "message": "ต้องเลือกอย่างน้อย 1 โทเค็น"
   },
   "needEtherInWallet": {
-    "message": "คุณจะต้องมีอีเธอร์ในกระเป๋าเงินของคุณในการใช้งานกับแอพพลิเคชันแบบกระจายด้วย Brave"
+    "message": "คุณจะต้องใช้ Ether ใน Wallet ของคุณเพื่อให้โต้ตอบกับแอพพลิเคชันแบบกระจายศูนย์ด้วย Brave ได้"
   },
   "needImportFile": {
     "message": "คุณต้องเลือกไฟล์ที่จะนำเข้า",
@@ -336,11 +952,17 @@
   "negativeETH": {
     "message": "ไม่สามารถส่งอีเธอร์เป็นจำนวนติดลบได้"
   },
+  "networkName": {
+    "message": "Network Name"
+  },
   "networks": {
     "message": "เครือข่าย"
   },
   "networkSettingsDescription": {
     "message": "เพิ่มและแก้ไขเครือข่าย RPC แบบกำหนดเอง"
+  },
+  "nevermind": {
+    "message": "Nevermind"
   },
   "newAccount": {
     "message": "บัญชีใหม่"
@@ -352,14 +974,50 @@
     "message": "บัญชี $1",
     "description": "Default name of next account to be created on create account screen"
   },
+  "newContact": {
+    "message": "New Contact"
+  },
   "newContract": {
     "message": "สร้างสัญญาใหม่"
   },
   "newPassword": {
-    "message": "รหัสผ่านใหม่(ขั้นต่ำ 8 ตัวอักษร)"
+    "message": "รหัสผ่านใหม่ (ขั้นต่ำ 8 ตัวอักษร)"
+  },
+  "newNetwork": {
+    "message": "New Network"
   },
   "newToMetaMask": {
-    "message": "เพิ่งเริ่มใช้ Brave?"
+    "message": "เพิ่งเริ่มใช้ Brave ใช่ไหม"
+  },
+  "noAlreadyHaveSeed": {
+    "message": "No, I already have a seed phrase"
+  },
+  "protectYourKeys": {
+    "message": "Protect Your Keys!"
+  },
+  "protectYourKeysMessage1": {
+    "message": "โปรดดูแลรหัส Seed ของคุณด้วยความระมัดระวัง เนื่องจากมีการรายงานเกี่ยวกับเว็บไซต์ที่พยายามเลียนแบบ Brave โดย Brave จะไม่ขอรหัส Seed ของคุณโดยเด็ดขาด"
+  },
+  "protectYourKeysMessage2": {
+    "message": "ดูแลรหัสของคุณให้ปลอดภัย หากพบเห็นสิ่งที่น่าสงสัยหรือไม่แน่ใจเกี่ยวกับเว็บไซต์ใดๆ โปรดส่งอีเมลมมาที่ support@brave.com"
+  },
+  "rpcUrl": {
+    "message": "New RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "เชื่อมต่อไซต์ที่คุณเชื่อถือเท่านั้น"
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "ผู้ให้บริการเครือข่าย Ethereum ที่ประสงค์ร้ายอาจโกหกเกี่ยวกับสถานะของบล็อกเชนและบันทึกกิจกรรมในเครือข่ายของคุณ โปรดเพิ่มเฉพาะเครือข่ายที่คุณเชื่อถือ"
+  },
+  "optionalChainId": {
+    "message": "ChainID (optional)"
+  },
+  "optionalSymbol": {
+    "message": "Symbol (optional)"
+  },
+  "newTotal": {
+    "message": "New Total"
   },
   "newTransactionFee": {
     "message": "ค่าธรรมเนียมธุรกรรมใหม่"
@@ -367,21 +1025,89 @@
   "next": {
     "message": "ถัดไป"
   },
+  "nextNonceWarning": {
+    "message": "ค่า Nonce ดังกล่าวสูงกว่าค่า Nonce $1 ที่แนะนำ",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "ยังไม่มีแอดแดรสไหนตั้งในชื่อนี้"
+  },
+  "noConversionRateAvailable": {
+    "message": "No Conversion Rate Available"
   },
   "noTransactions": {
     "message": "ยังไม่มีรายการธุรกรรม"
   },
+  "noThanks": {
+    "message": "ไม่ ขอบคุณ"
+  },
+  "notCurrentAccount": {
+    "message": "นี่เป็นบัญชีที่ถูกต้องหรือไม่ บัญชีนี้ต่างจากบัญชีที่เลือกไว้ใน Wallet ของคุณในขณะนี้"
+  },
+  "notEnoughGas": {
+    "message": "Not Enough Gas"
+  },
+  "noWebcamFoundTitle": {
+    "message": "Webcam not found"
+  },
+  "noWebcamFound": {
+    "message": "Your computer's webcam was not found. Please try again."
+  },
+  "ofTextNofM": {
+    "message": "of"
+  },
+  "orderOneHere": {
+    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+  },
+  "origin": {
+    "message": "Origin"
+  },
+  "parameters": {
+    "message": "Parameters"
+  },
+  "participateInMetaMetrics": {
+    "message": "Participate in MetaMetrics"
+  },
   "participateInMetaMetricsDescription": {
-    "message": "เข้าร่วมใน MetaMetrics เพื่อช่วยเราในการพัฒนา Brave"
+    "message": "เข้าร่วม MetaMetrics เพื่อช่วยให้เราปรับปรุง Brave ให้ดียิ่งขึ้นได้"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "passwordsDontMatch": {
+    "message": "Passwords Don't Match"
+  },
+  "passwordNotLongEnough": {
+    "message": "Password not long enough"
   },
   "pastePrivateKey": {
     "message": "วางคีย์ส่วนตัวของคุณที่นี่:",
     "description": "For importing an account from a private key"
   },
+  "pending": {
+    "message": "รอดำเนินการ"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "คุณได้อนุมัติสิทธินี้แล้ว"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "คุณยังไม่อนุมัติสิทธินี้"
+  },
   "personalAddressDetected": {
     "message": "ตรวจพบแอดแดรสส่วนตัวแล้ว ใส่แอดแดรสสัญญาโทเค็น"
+  },
+  "plusXMore": {
+    "message": "+ อีก $1",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Prev"
+  },
+  "primaryCurrencySetting": {
+    "message": "Primary Currency"
+  },
+  "primaryCurrencySettingDescription": {
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
   },
   "privacyMsg": {
     "message": "นโยบายสความเป็นส่วนตัว"
@@ -396,20 +1122,56 @@
   "privateNetwork": {
     "message": "เครือข่ายส่วนตัว"
   },
+  "proposedApprovalLimit": {
+    "message": "ขีดจำกัดการอนุมัติที่เสนอ"
+  },
+  "queue": {
+    "message": "Queue"
+  },
+  "queued": {
+    "message": "อยู่ในคิวแล้ว"
+  },
   "readdToken": {
     "message": "คุณสามารถเพิ่มโทเค็นนี้ในอนาคตได้โดยไปที่ “เพิ่มโทเค็น” ในเมนูตัวเลือกบัญชีของคุณ"
+  },
+  "recents": {
+    "message": "Recents"
+  },
+  "receive": {
+    "message": "รับ"
   },
   "recipientAddress": {
     "message": "แอดแดรสผู้รับ"
   },
+  "recipientAddressPlaceholder": {
+    "message": "Search, public address (0x), or ENS"
+  },
+  "rejectAll": {
+    "message": "Reject All"
+  },
+  "rejectTxsN": {
+    "message": "Reject $1 transactions"
+  },
+  "rejectTxsDescription": {
+    "message": "You are about to batch reject $1 transactions."
+  },
   "rejected": {
     "message": "ถูกปฏิเสธ"
+  },
+  "reset": {
+    "message": "Reset"
   },
   "resetAccount": {
     "message": "รีเซ็ตบัญชี"
   },
+  "resetAccountDescription": {
+    "message": "การรีเซ็ตบัญชีจะทำให้ประวัติธุรกรรมของคุณถูกล้าง ทั้งนี้ การดำเนินการนี้จะไม่ทำให้ยอดคงเหลือในบัญชีของคุณเปลี่ยนแปลงหรือบังคับให้คุณต้องป้อนรหัส Seed ใหม่อีกครั้ง"
+  },
   "deleteNetwork": {
     "message": "ลบเครือข่าย?"
+  },
+  "deleteNetworkDescription": {
+    "message": "Are you sure you want to delete this network?"
   },
   "remindMeLater": {
     "message": "เตือนฉันภายหลัง"
@@ -417,14 +1179,48 @@
   "restoreFromSeed": {
     "message": "กู้คืนจากกลุ่มคำชีด"
   },
+  "restoreAccountWithSeed": {
+    "message": "Restore your Account with Seed Phrase"
+  },
+  "restoreWalletPreferences": {
+    "message": "พบการสำรองข้อมูลจาก $1 คุณต้องการกู้คืนการตั้งค่า Wallet ของคุณหรือไม่",
+    "description": "$1 is the date at which the data was backed up"
+  },
+  "requestsAwaitingAcknowledgement": {
+    "message": "requests waiting to be acknowledged"
+  },
   "required": {
     "message": "จำเป็น"
   },
+  "restore": {
+    "message": "Restore"
+  },
   "revealSeedWords": {
-    "message": "เปิดเผยกลุ่มคำชีด"
+    "message": "แสดงรหัส Seed"
+  },
+  "revealSeedWordsTitle": {
+    "message": "Seed Phrase"
+  },
+  "revealSeedWordsDescription": {
+    "message": "If you ever change browsers or move computers, you will need this seed phrase to access your accounts. Save them somewhere safe and secret."
+  },
+  "revealSeedWordsWarningTitle": {
+    "message": "DO NOT share this phrase with anyone!"
   },
   "revealSeedWordsWarning": {
     "message": "อย่าเปิดเผยคำกลุ่มคำชีดของคุณในที่สาธารณะ! คำเหล่านี้สามารถใช้เพื่อขโมยบัญชีทั้งหมดของคุณ"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeAccount": {
+    "message": "Remove account"
+  },
+  "removeAccountDescription": {
+    "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
+  },
+  "readyToConnect": {
+    "message": "Ready to Connect?"
   },
   "rinkeby": {
     "message": "เครือข่ายทดสอบ Rinkeby"
@@ -432,26 +1228,86 @@
   "ropsten": {
     "message": "เครือข่ายทดสอบ Ropsten"
   },
+  "goerli": {
+    "message": "Goerli Test Network"
+  },
   "save": {
     "message": "บันทึก"
+  },
+  "slow": {
+    "message": "Slow"
   },
   "slower": {
     "message": "ช้าลง"
   },
+  "saveAsCsvFile": {
+    "message": "Save as CSV File"
+  },
+  "scanInstructions": {
+    "message": "Place the QR code in front of your camera"
+  },
+  "scanQrCode": {
+    "message": "Scan QR Code"
+  },
   "search": {
     "message": "ค้นหา"
   },
+  "searchResults": {
+    "message": "Search Results"
+  },
+  "secretBackupPhrase": {
+    "message": "Secret Backup Phrase"
+  },
+  "secretBackupPhraseDescription": {
+    "message": "Your secret backup phrase makes it easy to back up and restore your account."
+  },
+  "secretBackupPhraseWarning": {
+    "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
+  },
   "secretPhrase": {
-    "message": "ป้อนกลุ่มคำ24คำเพื่อกู้คืนตู้เซฟของคุณ"
+    "message": "ระบุรหัสลับแบบ 24 คำที่นี่เพื่อกู้คืนที่เก็บนิรภัยของคุณ"
+  },
+  "securityAndPrivacy": {
+    "message": "Security & Privacy"
+  },
+  "securitySettingsDescription": {
+    "message": "Privacy settings and wallet seed phrase"
+  },
+  "seedPhrasePlaceholder": {
+    "message": "Separate each word with a single space"
+  },
+  "seedPhrasePlaceholderPaste": {
+    "message": "วางรหัส Seed จากคลิปบอร์ด"
+  },
+  "showSeedPhrase": {
+    "message": "แสดงรหัส Seed"
   },
   "seedPhraseReq": {
-    "message": "กลุ่มคำชีดมีความยาว 12 คำ"
+    "message": "รหัส Seed จะประกอบด้วย 12, 15, 18, 21 หรือ 24 คำ"
+  },
+  "selectingAllWillAllow": {
+    "message": "การเลือกทั้งหมดจะทำให้ไซต์นี้สามารถดูบัญชีปัจจุบันทั้งหมดของคุณได้ ต้องแน่ใจว่าคุณเชื่อถือไซต์นี้ได้"
+  },
+  "selectAccounts": {
+    "message": "เลือกบัญชี"
+  },
+  "selectAll": {
+    "message": "เลือกทั้งหมด"
   },
   "selectCurrency": {
     "message": "เลือกสกุลเงิน"
   },
+  "selectEachPhrase": {
+    "message": "Please select each phrase in order to make sure it is correct."
+  },
+  "selectLocale": {
+    "message": "Select Locale"
+  },
   "selectType": {
     "message": "เลือกประเภท"
+  },
+  "buy": {
+    "message": "ซื้อ"
   },
   "send": {
     "message": "ส่ง"
@@ -465,11 +1321,42 @@
   "sendTokens": {
     "message": "ส่งโทเค็น"
   },
+  "sentEther": {
+    "message": "sent ether"
+  },
+  "sentTokens": {
+    "message": "sent tokens"
+  },
+  "sendSpecifiedTokens": {
+    "message": "ส่ง $1",
+    "description": "Symbol of the specified token"
+  },
+  "separateEachWord": {
+    "message": "Separate each word with a single space"
+  },
+  "searchTokens": {
+    "message": "Search Tokens"
+  },
+  "searchAccounts": {
+    "message": "ค้นหาบัญชี"
+  },
+  "noAccountsFound": {
+    "message": "ไม่พบบัญชีตามคิวรีการค้นหาที่ระบุ"
+  },
   "selectAnAccount": {
     "message": "เลือกบัญชี"
   },
+  "selectAnAccountHelp": {
+    "message": "เลือกบัญชีเพื่อดูใน Brave"
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
   "selectHdPath": {
     "message": "เลือกเส้นทาง HD"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
   },
   "settings": {
     "message": "การตั้งค่า"
@@ -477,14 +1364,32 @@
   "showAdvancedGasInline": {
     "message": "การควบคุม Gas ขั้นสูง"
   },
+  "showAdvancedGasInlineDescription": {
+    "message": "Select this to show gas price and limit controls directly on the send and confirm screens."
+  },
+  "showFiatConversionInTestnets": {
+    "message": "Show Conversion on Testnets"
+  },
+  "showFiatConversionInTestnetsDescription": {
+    "message": "Select this to show fiat conversion on Testnets"
+  },
   "showPrivateKeys": {
     "message": "แสดงคีย์ส่วนตัว"
+  },
+  "showHexData": {
+    "message": "Show Hex Data"
+  },
+  "showHexDataDescription": {
+    "message": "Select this to show the hex data field on the send screen"
   },
   "sign": {
     "message": "เซ็นชื่อ"
   },
   "signatureRequest": {
     "message": "ขอลายเซ็น"
+  },
+  "signatureRequest1": {
+    "message": "ข้อความ"
   },
   "signed": {
     "message": "ลงชื่อแล้ว"
@@ -495,8 +1400,36 @@
   "sigRequest": {
     "message": "ขอลายเซ็น"
   },
+  "somethingWentWrong": {
+    "message": "Oops! Something went wrong."
+  },
+  "speedUp": {
+    "message": "Speed Up"
+  },
+  "speedUpCancellation": {
+    "message": "Speed up this cancellation"
+  },
+  "speedUpTransaction": {
+    "message": "Speed up this transaction"
+  },
+  "spendLimitPermission": {
+    "message": "สิทธิเกี่ยวกับขีดจำกัดการใช้เงิน"
+  },
+  "spendLimitRequestedBy": {
+    "message": "ขีดจำกัดการใช้เงินตามคำขอของ $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "ขีดจำกัดการใช้เงินมีขนาดใหญ่เกินไป"
+  },
+  "spendLimitInvalid": {
+    "message": "ขีดจำกัดการจ่ายไม่ถูกต้อง ต้องเป็นจำนวนบวก"
+  },
   "switchNetworks": {
     "message": "เปลี่ยนเครือข่าย"
+  },
+  "stateLogFileName": {
+    "message": "ล็อกสถานะของ Brave"
   },
   "stateLogs": {
     "message": "บันทึกของสถานะ"
@@ -504,17 +1437,41 @@
   "stateLogsDescription": {
     "message": "บันทึกของสถานะประกอบด้วยแอดแดรสสาธารณะและธุรกรรมที่ส่ง"
   },
+  "stateLogError": {
+    "message": "Error in retrieving state logs."
+  },
+  "statusConnected": {
+    "message": "เชื่อมต่อแล้ว"
+  },
+  "statusNotConnected": {
+    "message": "ไม่ได้เชื่อมต่อ"
+  },
   "step1HardwareWallet": {
     "message": "1. เชื่อมต่อ Hardware Wallet"
+  },
+  "step1HardwareWalletMsg": {
+    "message": "Connect your hardware wallet directly to your computer."
   },
   "step2HardwareWallet": {
     "message": "2. เลือกบัญชี"
   },
+  "step2HardwareWalletMsg": {
+    "message": "Select the account you want to view. You can only choose one at a time."
+  },
+  "step3HardwareWallet": {
+    "message": "3. เริ่มใช้งานไซต์ web3 และอีกมากมาย"
+  },
   "step3HardwareWalletMsg": {
-    "message": "ใช้บัญชีฮาร์ดแวร์ของคุณเช่นเดียวกับการใช้กับบัญชี Ethereum ล็อกอินเข้าสู่ dApp ส่ง Eth ซื้อและเก็บโทเคน ERC20 และโทเคนแบบ Non-Fungible เช่น CryptoKitties"
+    "message": "ใช้งานบัญชีฮาร์ดแวร์ด้วยวิธีการเดียวกับที่คุณใช้งานบัญชี Ethereum เพียงเชื่อมต่อไซต์ web3 แล้วส่ง ETH จากนั้นให้ซื้อและจัดเก็บโทเค็น ERC20 รวมถึงโทเค็นที่ไม่สามารถแลกเปลี่ยนได้ เช่น CryptoKitties"
   },
   "storePhrase": {
     "message": "เก็บ Phrase นี้ในตัวจัดการรหัสผ่าน เช่น 1Password"
+  },
+  "submit": {
+    "message": "ตกลง"
+  },
+  "submitted": {
+    "message": "Submitted"
   },
   "supportCenter": {
     "message": "ไปที่ศูนย์สนับสนุนของเรา"
@@ -523,10 +1480,28 @@
     "message": "เครื่องหมาย"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "สัญลักษณ์จะต้องมีความยาว 11 ตัวอักษร"
+    "message": "ต้องมีอักขระไม่เกิน 11 ตัว"
+  },
+  "syncWithMobile": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileTitle": {
+    "message": "Sync with mobile"
+  },
+  "syncWithMobileDesc": {
+    "message": "คุณสามารถซิงค์บัญชีกับข้อมูลของคุณด้วยอุปกรณ์เคลื่อนที่ เพียงเปิดแอพ Brave บนมือถือ ไปที่ \"การตั้งค่า\" แล้วแตะ \"ซิงค์จากส่วนขยายในเบราว์เซอร์\""
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "หากคุณเพิ่งเปิดแอพ Brave บนมือถือเป็นครั้งแรก เพียงทำตามขั้นตอนในโทรศัพท์ของคุณ"
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "สแกนโค้ดนี้โดยใช้แอพ Brave บนมือถือของคุณ"
+  },
+  "syncWithMobileBeCareful": {
+    "message": "Make sure nobody else is looking at your screen when you scan this code"
   },
   "syncWithMobileComplete": {
-    "message": "ซิงค์ข้อมูลของคุณเรียบร้อยแล้ว ใช้แอพ Brave ให้สนุกนะ!"
+    "message": "ซิงค์ข้อมูลของคุณเรียบร้อยแล้ว เพลิดเพลินกับแอพ Brave บนมือถือได้เลย"
   },
   "terms": {
     "message": "ข้อตกลงในการใช้งาน"
@@ -537,11 +1512,30 @@
   "thisWillCreate": {
     "message": "สิ่งนี้จะสร้าง Wallet และ Seed Phrase ใหม่"
   },
+  "tips": {
+    "message": "Tips"
+  },
   "to": {
     "message": "ถึง"
   },
+  "toAddress": {
+    "message": "ไปยัง: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "ถึง:"
+  },
+  "token": {
+    "message": "Token"
+  },
   "tokenAlreadyAdded": {
     "message": "โทเคนได้ถูกเพิ่มไปแล้ว"
+  },
+  "tokenContractAddress": {
+    "message": "Token Contract Address"
+  },
+  "tokenOptions": {
+    "message": "ตัวเลือกโทเค็น"
   },
   "tokenSymbol": {
     "message": "สัญลักษณ์ประจำตัว"
@@ -549,21 +1543,82 @@
   "total": {
     "message": "รวม"
   },
+  "transaction": {
+    "message": "transaction"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmed at $2."
+  },
+  "transactionCreated": {
+    "message": "Transaction created with a value of $1 at $2."
+  },
   "transactionDropped": {
     "message": "ธุรกรรมถูกยกเลิกเมื่อ $2"
+  },
+  "transactionSubmitted": {
+    "message": "Transaction submitted with gas fee of $1 at $2."
+  },
+  "transactionResubmitted": {
+    "message": "Transaction resubmitted with gas fee increased to $1 at $2"
+  },
+  "transactionUpdated": {
+    "message": "Transaction updated at $2."
+  },
+  "transactionErrored": {
+    "message": "Transaction encountered an error."
+  },
+  "transactionCancelAttempted": {
+    "message": "Transaction cancel attempted with gas fee of $1 at $2"
   },
   "transactionCancelSuccess": {
     "message": "ยกเลิกธุรกรรมเรียบร้อยแล้วเมื่อ $2"
   },
+  "transactionError": {
+    "message": "Transaction Error. Exception thrown in contract code."
+  },
+  "transactionErrorNoContract": {
+    "message": "Trying to call a function on a non-contract address."
+  },
+  "transactionFee": {
+    "message": "Transaction Fee"
+  },
+  "transactionTime": {
+    "message": "Transaction Time"
+  },
+  "showTransactionTimeDescription": {
+    "message": "เลือกรายการนี้เพื่อแสดงระยะเวลารอการทำธุรกรรมโดยประมาณในแท็บกิจกรรมขณะที่คุณอยู่ในเครือข่าย Ethereum หลัก หมายเหตุ: ค่าโดยประมาณนี้เป็นการประมาณตามสภาวะของเครือข่าย"
+  },
+  "transfer": {
+    "message": "Transfer"
+  },
   "transferBetweenAccounts": {
     "message": "โอนระหว่างบัญชีของฉัน"
+  },
+  "transferFrom": {
+    "message": "Transfer From"
   },
   "troubleTokenBalances": {
     "message": "เรามีปัญหาในการโหลดยอดโทเค็นคงเหลือของคุณ คุณสามารถดูได้ที่นี่",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "คุณเชื่อถือไซต์นี้หรือไม่ การให้สิทธินี้จะถือว่าคุณอนุญาตให้ $1 ถอนเงิน $2 และทำธุรกรรมให้คุณโดยอัตโนมัติ",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
+  "tryAgain": {
+    "message": "Try again"
+  },
   "typePassword": {
-    "message": "พิมพ์รหัสผ่านของคุณ"
+    "message": "พิมพ์รหัสผ่าน Brave ของคุณ"
+  },
+  "unapproved": {
+    "message": "Unapproved"
+  },
+  "alertDisableTooltip": {
+    "message": "สามารถแก้ไขค่านี้ได้ใน \"การตั้งค่า > การแจ้งเตือน\""
+  },
+  "units": {
+    "message": "units"
   },
   "unknown": {
     "message": "ไม่รู้จัก"
@@ -571,26 +1626,90 @@
   "unknownNetwork": {
     "message": "ไม่รู้จักเครือข่ายส่วนตัว"
   },
+  "unknownQrCode": {
+    "message": "Error: We couldn't identify that QR code"
+  },
+  "unknownCameraErrorTitle": {
+    "message": "Ooops! Something went wrong...."
+  },
+  "unknownCameraError": {
+    "message": "There was an error while trying to access your camera. Please try again..."
+  },
+  "unlimited": {
+    "message": "ไม่จำกัด"
+  },
   "unlock": {
     "message": "ปลดล็อก"
+  },
+  "unlockMessage": {
+    "message": "The decentralized web awaits"
   },
   "updatedWithDate": {
     "message": "อัปเดต $1 แล้ว"
   },
   "urlErrorMsg": {
-    "message": "URI ต้องมีคำนำหน้าเป็น HTTP หรือ HTTPS"
+    "message": "URL ต้องมีคำนำหน้า HTTP/HTTPS ที่ถูกต้อง"
+  },
+  "urlExistsErrorMsg": {
+    "message": "มี URL นี้อยู่ในรายการที่มีอยู่ในเครือข่ายแล้ว"
   },
   "usedByClients": {
     "message": "ถูกใช้งานโดยหลายไคลเอนท์"
   },
+  "usePhishingDetection": {
+    "message": "ใช้ระบบป้องกันฟิชชิ่ง"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "แสดงคำเตือนเกี่ยวกับโดเมนฟิชชิ่งที่มีกลุ่มเป้าหมายเป็นผู้ใช้ Ethereum"
+  },
+  "userName": {
+    "message": "Username"
+  },
   "viewAccount": {
     "message": "ดูบัญชี"
+  },
+  "viewinExplorer": {
+    "message": "View in Explorer"
+  },
+  "viewContact": {
+    "message": "View Contact"
+  },
+  "viewOnCustomBlockExplorer": {
+    "message": "View at $1"
+  },
+  "viewOnEtherscan": {
+    "message": "View on Etherscan"
+  },
+  "retryTransaction": {
+    "message": "ลองทำธุรกรรมอีกครั้ง"
   },
   "visitWebSite": {
     "message": "เยี่ยมชมเว็บไซต์ของเรา"
   },
+  "walletSeed": {
+    "message": "รหัส Seed"
+  },
+  "welcomeBack": {
+    "message": "Welcome Back!"
+  },
   "welcome": {
-    "message": "ยินดีต้อนรับสู่ Brave เบต้า"
+    "message": "ยินดีต้อนรับสู่ Brave"
+  },
+  "whatsThis": {
+    "message": "นี่คืออะไร?"
+  },
+  "writePhrase": {
+    "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."
+  },
+  "xOfY": {
+    "message": "$1 จาก $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
+  },
+  "yesLetsTry": {
+    "message": "Yes, let's try"
+  },
+  "youNeedToAllowCameraAccess": {
+    "message": "You need to allow camera access to use this feature."
   },
   "yourSigRequested": {
     "message": "ลายเซ็นของคุณกำลังได้รับการร้องขอ"
@@ -598,8 +1717,74 @@
   "youSign": {
     "message": "คุณกำลังเซ็นชื่อ"
   },
+  "yourPrivateSeedPhrase": {
+    "message": "Your private seed phrase"
+  },
+  "zeroGasPriceOnSpeedUpError": {
+    "message": "Zero gas price on speed up"
+  },
+  "decryptRequest": {
+    "message": "ถอดรหัสลับของคำขอ"
+  },
+  "decrypt": {
+    "message": "ถอดรหัสลับ"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 ต้องการอ่านข้อความนี้เพื่อให้การดำเนินการของคุณเสร็จสมบูรณ์",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "ถอดรหัสลับของข้อความ"
+  },
+  "decryptCopy": {
+    "message": "คัดลอกข้อความที่ถูกเข้ารหัสลับ"
+  },
+  "decryptInlineError": {
+    "message": "ข้อความนี้ไม่สามารถถอดได้เนื่องจากความผิดพลาด: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "ระบุ"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "ขอคีย์การเข้ารหัสลับแบบสาธารณะ"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 ขอกุญแจเข้ารหัสสาธารณะของคุณ ด้วยการยินยอม เว็บนี้จะสามารถสร้างข้อความเข้ารหัสให้คุณได้",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "รหัสลับสำรองข้อมูล Wallet เงินคริปโต"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "การตั้งค่า Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallet ช่วยให้คุณดำเนินการกับสกุลเงินคริปโตและแอสเซทที่เกี่ยวข้องใน Brave ได้ Crypto Wallet รองรับโทเค็น Ethereum เช่น ETH และ BAT และยังสามารถเก็บไว้ได้ อีกทั้งยังทำให้คุณดำเนินการกับ Ðapp และสัญญาอัจฉริยะอื่นๆ ได้ ทั้งหมดนี้เหมาะสำหรับผู้ที่คุ้นเคยกับ Ethereum และระบบบล็อกเชนอื่นๆ อยู่แล้ว รวมไปถึงผู้ที่สนใจอยากเรียนรู้"
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "ใช้ Crypto Wallets เฉพาะเมื่อคุณยอมรับว่าคุณคนเดียวที่รับผิดชอบต่อความเสี่ยงทั้งหมดที่เกี่ยวข้องกับการใช้นี้และ Brave Software ไม่มีส่วนรับผิดชอบหรือความรับผิดใด ๆ ต่อการสูญเสียใด  ๆ รวมทั้งความสูญเสียแบบไม่ได้ตั้งใจหรือเป็นผลสืบเนื่องจากการใช้นี้"
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "ทั้งหมดนี้แยกออกอย่างสิ้นเชิงจาก"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "ดังนั้นหากคุณกำลังจะสนับสนุนเว็บโปรดของคุณ ให้ไปที่นั่นแทน"
+  },
+  "cryptoWalletsTitle": {
+    "message": "คริปโตวอลเล็ท"
+  },
+  "disclosureConfirm": {
+    "message": "ฉันเข้าใจ"
+  },
   "ledgerCreateSubText": {
     "message": "เชื่อมต่อ Ledger Hardware Wallet ของคุณเพื่อติดต่อสัมพันธ์กับ dApp และทำการโอนไปยัง Wallet อื่นๆ ที่เชื่อมต่อ"
+  },
+  "metamaskImportSubText": {
+    "message": "หมายเหตุ: หากนำเข้าจาก Metamask ให้ป้อนรหัสแบบ 12 คำแทน 24 คำ"
   },
   "newLocalWallet": {
     "message": "Local Wallet ใหม่"
@@ -607,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "สร้างกระเป๋าสตางค์ Brave ชุดใหม่สำหรับใช้ในพื้นที่เพื่อเข้าถึง dApps และจัดเก็บเงินดิจิทัลในรูปแบบที่เก็บได้อย่างปลอดภัย ทั้งยังซื้อขายโทเคนโดยไม่ระบุตัวตนได้แบบไม่มีค่าธรรมเนียมการซื้อขาย"
   },
+  "passWarningOne": {
+    "message": "รหัสผ่านนี้จะช่วยปกป้องคีย์ส่วนตัวของคุณ จะไม่มีบุคคลใดหรือแม้แต่ Brave ที่สามารถรีเซ็ตค่านี้ได้ในกรณีที่คุณลืม"
+  },
+  "providerErrorMessage": {
+    "message": "Wallet นี้ไม่ใช่ผู้ให้บริการ Ethereum Dapp ตามค่าเริ่มต้นของคุณ"
+  },
   "trezorCreateSubText": {
     "message": "เชื่อมต่อ Trezor Hardware Wallet ของคุณเพื่อติดต่อสัมพันธ์กับ dApp และทำการโอนไปยัง Wallet อื่นๆ ที่เชื่อมต่อ"
+  },
+  "welcomeCryptoWallets": {
+    "message": "ขอต้อนรับสู่ Brave Crypto Wallets"
   }
 }

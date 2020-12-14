@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Saya telah membaca dan bersetuju dengan $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Lihat alamat akaun yang telah dibenarkan (perlu)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Laman web bersambung"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 sedang bersambung ke laman ini. Mereka boleh melihat alamat akaun anda.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 tidak disambungkan ke mana-mana laman web.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Anda mempunyai 1 akaun bersambung ke laman ini."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Anda mempunyai akaun $1 yang bersambung kepada laman ini.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave tidak bersambung ke laman ini. Untuk bersambung ke sebuah laman web3, cari butang sambung di laman mereka."
+  },
+  "currentAccountNotConnected": {
+    "message": "Akaun semasa anda tidak disambungkan"
+  },
+  "switchToThisAccount": {
+    "message": "Bertukar ke akaun ini"
+  },
+  "disconnectThisAccount": {
+    "message": "Putuskan sambungan akaun ini"
+  },
+  "permissions": {
+    "message": "Kebenaran"
+  },
+  "showPermissions": {
+    "message": "Papar Kebenaran"
+  },
+  "authorizedPermissions": {
+    "message": "Anda telah memberi kebenaran berikut"
+  },
+  "connectManually": {
+    "message": "Sambung secara manual ke laman semasa"
+  },
+  "disconnect": {
+    "message": "Putuskan sambungan"
+  },
+  "disconnectAllAccounts": {
+    "message": "Putuskan sambungan semua akaun"
+  },
+  "disconnectPrompt": {
+    "message": "Putuskan sambungan $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Adakah anda pasti mahu memutuskan sambungan? Anda mungkin kehilangan fungsi laman web."
+  },
+  "dismiss": {
+    "message": "Singkirkan"
+  },
+  "showIncomingTransactions": {
+    "message": "Papar Transaksi Akan Datang"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Pilih ini untuk menggunakan Etherscan untuk memaparkan transaksi akan datang dalam senarai transaksi."
+  },
   "chartOnlyAvailableEth": {
     "message": "Carta hanya tersedia di rangkaian Ethereum."
+  },
+  "connecting": {
+    "message": "Menyambung..."
+  },
+  "connectWithMetaMask": {
+    "message": "Sambungkan Dengan Brave"
+  },
+  "connectTo": {
+    "message": "Sambung ke $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Sambungkan ke semua $1 anda",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "akaun",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Sambung ke $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 akaun",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Interaksi Kontrak"
@@ -12,10 +109,14 @@
     "message": "Mengenai"
   },
   "aboutSettingsDescription": {
-    "message": "Versi, pusat sokongan, dan maklumat perhubungan"
+    "message": "Maklumat versi, pusat bantuan, dan kenalan"
   },
   "acceleratingATransaction": {
     "message": "* Mempercepatkan transaksi menggunakan harga gas lebih tinggi akan meningkatkan peluang diproses oleh rangkaian lebih cepat, tetapi ini pun tidak sentiasa dijamin."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 boleh mengakses dan berbelanja sehingga jumlah maksima sekian",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Mengakses kamera anda..."
@@ -24,7 +125,7 @@
     "message": "Akaun"
   },
   "accountDetails": {
-    "message": "Butiran Akaun"
+    "message": "Butiran akaun"
   },
   "accountName": {
     "message": "Nama Akaun"
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "Anda perlu memilih akaun!"
+  },
+  "active": {
+    "message": "Aktif"
+  },
+  "activity": {
+    "message": "Aktiviti"
   },
   "activityLog": {
     "message": "log aktiviti"
@@ -48,7 +155,7 @@
     "message": "Lanjutan"
   },
   "advancedSettingsDescription": {
-    "message": "Akses ciri-ciri pembangun, muat turun Log Keadaan, Set Semula Akaun, sediakan jaringan ujian dan RPC tersuai"
+    "message": "Akses ciri-ciri pemaju, muat turun Log Negeri, Tetapkan Semua Akaun, tetapkan testnets dan RPC"
   },
   "advancedOptions": {
     "message": "Pilihan Lanjutan"
@@ -72,26 +179,62 @@
     "message": "Tambah Token yang Disyorkan"
   },
   "addAcquiredTokens": {
-    "message": "Tambah token yang anda peroleh menggunakan Brave"
+    "message": "Tambah token yang diperolehi menggunakan Brave"
+  },
+  "alerts": {
+    "message": "Pemberitahuan"
+  },
+  "alertsSettingsDescription": {
+    "message": "Aktifkan atau nyahaktifkan setiap amaran"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Layari laman web tanpa akaun bersambung telah dipilih"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Amaran ini ditunjukkan dalam pop timbul apabila anda melayari laman Web3 yang bersambung, tetapi akaun yang dipilih sekarang tidak disambungkan."
+  },
+  "allowOriginSpendToken": {
+    "message": "Benarkan $1 membelanjakan $2 anda?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Benarkan laman ini untuk:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Benarkan sambungan luaran ini untuk:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Benarkan $1 untuk mengeluarkan dan berbelanja sehingga jumlah berikut:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Jumlah"
+  },
+  "amountWithColon": {
+    "message": "Jumlah:"
   },
   "appDescription": {
     "message": "Dompat Ethereum di Pelayar anda",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Luluskan"
+    "message": "Had belanja yang diluluskan"
+  },
+  "approveSpendLimit": {
+    "message": "Had belanja $1 lulus",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Diluluskan"
   },
   "asset": {
+    "message": "Aset"
+  },
+  "assets": {
     "message": "Aset"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "Atribusi"
   },
   "autoLockTimeLimit": {
-    "message": "Pemasa Logout Automatik (minit)"
+    "message": "Pemasa Kunci Automatik (minit)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Tetapkan masa melahu dalam minit sebelum Brave log keluar secara automatik"
+    "message": "Tetapkan masa melahu segera sebelum Brave terkunci."
   },
   "average": {
     "message": "Purata"
@@ -125,7 +268,7 @@
     "message": "Sandarkan kod Pemulihan Rahsia anda untuk memastikan dompet dan dana anda sentiasa selamat."
   },
   "backupApprovalInfo": {
-    "message": "Kod rahsia ini diperlukan untuk memulihkan dompet anda sekiranya anda kehilangan peranti anda, terlupa kata laluan anda, perlu memasang semua Brave, atau mahu mengakses dompet anda menggunakan peranti lain."
+    "message": "Kod rahsia ini diperlukan untuk memulihkan dompet anda sekiranya anda kehilangan peranti anda, terlupa kata laluan anda, perlu memasang semula Brave, atau mahu mengakses semula dompet anda pada peranti yang lain."
   },
   "backupNow": {
     "message": "Buat sandaran sekarang"
@@ -149,6 +292,15 @@
   "blockiesIdenticon": {
     "message": "Gunakan Identicon Blockies"
   },
+  "nonceField": {
+    "message": "Tetapkan transaksi nonce"
+  },
+  "nonceFieldHeading": {
+    "message": "Tetapkan Nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "Hidupkan ini untuk menukar nonce (nombor transaksi) pada skrin pengesahan. Ini merupakan ciri lanjutan, guna dengan was-was."
+  },
   "browserNotSupported": {
     "message": "Pelayar anda tidak disokong..."
   },
@@ -159,7 +311,7 @@
     "message": "Beli ETH dengan Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre membolehkan anda menggunakan kad kredit untuk mendeposit ETH secara terus ke dalam akaun Brave anda."
+    "message": "Wyre membolehkan penggunaan kad debit untuk mendeposit ETH  terus ke akaun Brave anda."
   },
   "buyCoinSwitch": {
     "message": "Beli di CoinSwitch"
@@ -172,6 +324,9 @@
   },
   "off": {
     "message": "Matikan"
+  },
+  "ok": {
+    "message": "Ok"
   },
   "on": {
     "message": "Hidupkan"
@@ -201,7 +356,7 @@
     "message": "Tutup"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Anda perlu menggunakan Brave di Google Chrome untuk menyambung kepada Dompet Perkakasan anda."
+    "message": "Anda perlu menggunakan Brave di Google Chrome untuk menyambung ke Dompet Perkakasan anda."
   },
   "confirm": {
     "message": "Sahkan"
@@ -210,13 +365,16 @@
     "message": "Disahkan"
   },
   "confirmPassword": {
-    "message": "Sahkan Kata Laluan"
+    "message": "Sahkan kata laluan"
   },
   "confirmSecretBackupPhrase": {
     "message": "Sahkan Frasa Sandaran Rahsia anda"
   },
   "congratulations": {
     "message": "Tahniah"
+  },
+  "connectAccountOrCreate": {
+    "message": "Sambungkan akaun atau cipta akaun baru"
   },
   "connectHardwareWallet": {
     "message": "Sambungkan Dompet Perkakasan"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Menyambung kepada Rangkaian Ujian Goerli"
+  },
+  "contacts": {
+    "message": "Kenalan"
+  },
+  "contactsSettingsDescription": {
+    "message": "Tambah, edit, buang, dan uruskan kenalan anda"
+  },
+  "contactUs": {
+    "message": "Hubungi kami!"
   },
   "continueToWyre": {
     "message": "Teruskan ke Wyre"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "Penukaran Mata Wang"
   },
+  "currentExtension": {
+    "message": "Halaman sambungan semasa"
+  },
   "currentLanguage": {
     "message": "Bahasa Semasa"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC Tersuai"
+  },
+  "customSpendLimit": {
+    "message": "Tetapan Sendiri Had Belanja"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Sesetengah data akaun anda telah disandarkan semasa pemasangan Brave terdahulu. Sandaran ini mungkin termasuk tetapan, kenalan, dan token milik anda. Adakah anda mahu ambil semula data ini sekarang?"
   },
   "decimalsMustZerotoTen": {
     "message": "Perpuluhan mestilah sekurang-kurangnya 0, dan tidak melebihi 36."
@@ -317,6 +493,12 @@
   "deleteAccount": {
     "message": "Hapus Akaun"
   },
+  "deposit": {
+    "message": "Deposit"
+  },
+  "depositEther": {
+    "message": "Deposit Ether"
+  },
   "details": {
     "message": "Butiran"
   },
@@ -328,6 +510,9 @@
   },
   "done": {
     "message": "Selesai"
+  },
+  "dontShowThisAgain": {
+    "message": "Hentikan paparan ini"
   },
   "downloadGoogleChrome": {
     "message": "Muat Turun Google Chrome"
@@ -344,8 +529,14 @@
   "dropped": {
     "message": "Jatuh"
   },
+  "edit": {
+    "message": "Edit"
+  },
   "editContact": {
     "message": "Edit Kenalan"
+  },
+  "editPermission": {
+    "message": "Sunting Kebenaran"
   },
   "endOfFlowMessage1": {
     "message": "Anda telah lulus ujian - simpan frasa benih anda di tempat yang selamat, itu tanggungjawab anda!"
@@ -360,22 +551,29 @@
     "message": "Jangan sesekali kongsi frasa ini dengan sesiapa."
   },
   "endOfFlowMessage5": {
-    "message": "Berhati-hati dengan pemancingan data! Brave tidak akan sesekali meminta frasa benih anda secara tiba-tiba."
+    "message": "Awasi pemancingan data! Brave tidak akan meminta frasa rahsia anda secara spontan."
   },
   "endOfFlowMessage6": {
     "message": "Jika anda perlu membuat sandaran ungkapan benih anda sekali lagi, anda boleh lakukannya melalui Tetapan -> Keselamatan."
   },
   "endOfFlowMessage7": {
-    "message": "JIka anda mempunyai soalan atau melihat sesuatu yang mencurigakan, hantarkan e-mel ke support@brave.com."
+    "message": "Sekiranya anda mempunyai sebarang pertanyaan atau melihat sesuatu yang ganjil, e-mel kepada support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave tidak dapat memulihkan ungkapan benih anda. Ketahui lebih lanjut."
+    "message": "Brave tidak boleh dapatkan semula frasa rahsia anda."
   },
   "endOfFlowMessage9": {
     "message": "Ketahui lebih lanjut."
   },
   "endOfFlowMessage10": {
     "message": "Semua Selesai"
+  },
+  "externalExtension": {
+    "message": "Sambungan Luaran"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" akan menutup tab ini dan kembali ke $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Ralat dalam pendaftaran nama ENS"
@@ -386,11 +584,46 @@
   "enterAnAlias": {
     "message": "Masukkan alias"
   },
+  "enterMaxSpendLimit": {
+    "message": "Masukkan Had Belanja Maksima"
+  },
   "enterPassword": {
     "message": "Masukkan kata laluan"
   },
   "enterPasswordContinue": {
     "message": "Masukkan kata laluan untuk teruskan"
+  },
+  "errorCode": {
+    "message": "Kod: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Butiran Ralat",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Pesanan: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Kod: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave telah mengalami ralat",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Cuba lagi dengan memuat semula halaman, atau hubungi bantuan di support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Cuba lagi dengan menutup dan membuka semula pop timbul, atau hubungi bantuan di support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Timbunkan:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Alamat Awam Ethereum"
@@ -402,7 +635,7 @@
     "message": "Masa Pemprosesan yang Dijangka"
   },
   "expandView": {
-    "message": "Kembangkan Paparan"
+    "message": "Kembangkan paparan"
   },
   "exportPrivateKey": {
     "message": "Eksport Kekunci Persendirian"
@@ -410,11 +643,21 @@
   "failed": {
     "message": "Gagal"
   },
+  "failureMessage": {
+    "message": "Ralat telah berlaku, dan kami gagal meneruskan arahan"
+  },
   "fast": {
     "message": "Cepat"
   },
   "faster": {
     "message": "Lebih cepat"
+  },
+  "feeAssociatedRequest": {
+    "message": "Ada yuran yang berkait dengan permintaan ini."
+  },
+  "fiat": {
+    "message": "Fiat",
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "Pengimportan fail tidak berfungsi? Klik di sini!",
@@ -425,6 +668,13 @@
   },
   "from": {
     "message": "Daripada"
+  },
+  "fromAddress": {
+    "message": "Daripada: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Fungsi: Lulus"
   },
   "functionType": {
     "message": "Jenis Fungsi"
@@ -453,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Harga Gas"
   },
+  "gdprMessage": {
+    "message": "Data ini diagregatkan dan oleh itu tanpa nama untuk tujuan Peraturan Perlindungan Data Umum (EU) 2016/679. Untuk maklumat lanjut tentang amalan privasi kami, sila lihat $1 kami.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Polisi Privasi di sini",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Am"
   },
@@ -476,7 +734,7 @@
     "message": "Kami gembira bertemu anda."
   },
   "hardware": {
-    "message": "perkakasan"
+    "message": "Perkakasan"
   },
   "hardwareWalletConnected": {
     "message": "Dompet perkakasan disambungkan"
@@ -485,7 +743,7 @@
     "message": "Sambungkan dompet perkakasan"
   },
   "hardwareWalletsMsg": {
-    "message": "Pilih dompet perkakasan yang anda ingin gunakan dengan Brave"
+    "message": "Pilih dompet perkakasan yang anda mahu guna untuk Brave "
   },
   "havingTroubleConnecting": {
     "message": "Mengalami masalah untuk menyambungkan?"
@@ -500,26 +758,34 @@
   "hide": {
     "message": "Sembunyikan"
   },
+  "hideTokenSymbol": {
+    "message": "Sembunyikan $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "Sembunyikan Token?"
   },
   "history": {
     "message": "Sejarah"
   },
+  "import": {
+    "message": "Import",
+    "description": "Button to import an account from a selected file"
+  },
   "importAccount": {
     "message": "Import Akaun"
   },
   "importAccountMsg": {
-    "message": "Akaun yang diimport tidak akan dikaitkan dengan frasa benih akaun Brave asal yang anda cipta. Ketahui lebih lanjut tentang akaun import"
+    "message": "Akaun yang diimport tidak akan dikaitkan dengan frasa rahsia akaun Brave yang terdahulu dicipta. Ketahui lebih lanjut tentang akaun yang diimport"
   },
   "importAccountSeedPhrase": {
-    "message": "Import Akaun dengan Frasa Benih"
+    "message": "Import akaun dengan frasa rahsia"
   },
   "importWallet": {
-    "message": "Import Dompet"
+    "message": "Import dompet"
   },
   "importYourExisting": {
-    "message": "Import dompet sedia ada anda menggunakan frasa benih 24 perkataan"
+    "message": "Import dompet sedia ada anda dengan frasa 24 perkataan rahsia"
   },
   "imported": {
     "message": "Diimport",
@@ -552,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Alamat kontrak diketahui."
   },
+  "knownTokenWarning": {
+    "message": "Tindakan ini akan mengubah token yang telah disenaraikan dalam dompet anda, yang boleh digunakan untuk memancing anda. Hanya luluskan jika anda pasti bahawa anda maksudkan untuk mengubah apa yang diwakili oleh token ini."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Token di sini menggunakan semula simbol dari token lain yang anda lihat, ini boleh mengelirukan atau mempedayakan."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Bukan rangkaian ETH, tetapkan kepada huruf kecil"
   },
@@ -562,10 +834,22 @@
     "message": "URL RPC tidak sah"
   },
   "invalidBlockExplorerURL": {
-    "message": "URL Block Explorer tidak sah"
+    "message": "URL Sekat Explorer Tidak Sah"
   },
   "invalidSeedPhrase": {
     "message": "Ungkapan benih tidak sah"
+  },
+  "ipfsGateway": {
+    "message": "Gerbang IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Masukkan URL get laluan CID IPFS untuk mendapatkan resolusi perincian ENS."
+  },
+  "invalidIpfsGateway": {
+    "message": "Gerbang IPFS Tidak Sah: Nilai mestilah sebuah URL yang sah"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Get Laluan IPFS Dilarang: Sila nyatakan get laluan CID"
   },
   "jsonFile": {
     "message": "Fail JSON",
@@ -576,6 +860,9 @@
   },
   "max": {
     "message": "Maks"
+  },
+  "lastConnected": {
+    "message": "Terakhir Disambungkan"
   },
   "learnMore": {
     "message": "Maklumat lanjut"
@@ -604,8 +891,14 @@
   "loadMore": {
     "message": "Muat Lagi"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "Log keluar"
+    "message": "Kunci"
+  },
+  "lockTimeTooGreat": {
+    "message": "Masa kunci terlalu hebat"
   },
   "mainnet": {
     "message": "Rangkaian Ethereum Utama"
@@ -613,8 +906,20 @@
   "memorizePhrase": {
     "message": "Hafal ungkapan ini."
   },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "Mesej"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Kini anda mempunyai kawalan lebih ke atas penyambungan akaun anda dalam Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Butang status sambungan menunjukkan jika laman web yang anda kunjungi sedang bersambung dengan akaun pilihan semasa anda."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Klik untuk menguruskan akaun sambungan anda."
   },
   "metamaskDescription": {
     "message": "Menyambungkan anda kepada Ethereum dan Web Ternyahpusat."
@@ -632,13 +937,13 @@
     "message": "Akaun Dompet Saya"
   },
   "myWalletAccountsDescription": {
-    "message": "Semua akaun ciptaan Brave anda akan ditambahkan secara automatik kepada bahagian ini."
+    "message": "Semua akaun Brave anda akan ditambah secara automatik ke bahagian ini."
   },
   "mustSelectOne": {
     "message": "Mesti memilih sekurang-kurangnya 1 token."
   },
   "needEtherInWallet": {
-    "message": "Untuk berinteraksi dengan aplikasi ternyahpusat menggunakan Brave, anda memerlukan Ether di dalam dompet anda."
+    "message": "Untuk berinteraksi dengan aplikasi yang tidak berpusat menggunakan Brave, anda memerlukan Ether dalam dompet anda."
   },
   "needImportFile": {
     "message": "Anda mesti pilih fail untuk diimport.",
@@ -676,13 +981,13 @@
     "message": "Kontrak Baru"
   },
   "newPassword": {
-    "message": "Kata Laluan Baru (min 8 aks)"
+    "message": "Kata laluan baru (minima 8 aksara)"
   },
   "newNetwork": {
     "message": "Rangkaian Baru"
   },
   "newToMetaMask": {
-    "message": "Baru mengenali Brave?"
+    "message": "Baru dengan Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "Tidak, saya sudah pun memiliki frasa benih"
@@ -691,13 +996,19 @@
     "message": "Lindungi Kunci Anda!"
   },
   "protectYourKeysMessage1": {
-    "message": "Berhati-hati dengan ungkapan benih anda — terdapat laporan ada tapak web yang cuba meniru Brave. Brave tidak sekali-kali akan meminta ungkapan benih anda!"
+    "message": "Berhati-hati dengan frasa rahsia anda - laporan tentang laman web dikenalpasti telah meniru Brave. Brave tidak pernah meminta frasa rahsia anda!"
   },
   "protectYourKeysMessage2": {
-    "message": "Pastikan ungkapan anda selamat. Jika anda melihterlihat at sesuatu yang mencurigakan, atau anda tidak pasti mengenai tapak web tertentu, e-mel kepada support@brave.com"
+    "message": "Pastikan frasa rahsia anda selamat. Jika anda melihat sesuatu yang mencurigakan, atau ragu-ragu tentang satu laman web, e-mel kepada support@brave.com"
   },
   "rpcUrl": {
     "message": "URL RPC baru"
+  },
+  "onlyConnectTrust": {
+    "message": "Hanya bersambung dengan laman yang anda percayai."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Penyedia rangkaian Ethereum yang berbahaya boleh menipu tentang keadaan blok rantai dan rekod aktiviti rangkaian anda. Hanya tambah rangkaian yang anda percayai."
   },
   "optionalChainId": {
     "message": "ChainID (pilihan)"
@@ -714,6 +1025,10 @@
   "next": {
     "message": "Seterusnya"
   },
+  "nextNonceWarning": {
+    "message": "Nonce lebih tinggi daripada nonce yang dicadangkan sebanyak $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Tiada alamat yang ditetapkan untuk nama ini."
   },
@@ -722,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Anda tiada transaksi"
+  },
+  "noThanks": {
+    "message": "Tidak, Terima Kasih"
+  },
+  "notCurrentAccount": {
+    "message": "Adakah ini akaun yang betul? Akaun ini berbeza berbanding akaun dompet pilihan terdahulu."
   },
   "notEnoughGas": {
     "message": "Tidak Cukup Gas"
@@ -748,7 +1069,7 @@
     "message": "Sertai MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Sertai MetaMetrics untuk membantu kami menambah baik Brave"
+    "message": "Sertai MetaMetrics untuk membantu kami menjadikan Brave lebih baik"
   },
   "password": {
     "message": "Kata laluan"
@@ -764,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "menunggu"
+    "message": "Menunggu"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Anda telah memberi kebenaran ini"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Anda belum meluluskan kebenaran ini"
   },
   "personalAddressDetected": {
     "message": "Alamat peribadi dikesan. Masukkan alamat kontrak token."
+  },
+  "plusXMore": {
+    "message": "+$1 lagi",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Sebelumnya"
@@ -791,14 +1122,23 @@
   "privateNetwork": {
     "message": "Rangkaian Persendirian"
   },
+  "proposedApprovalLimit": {
+    "message": "Cadangan Had Kelulusan"
+  },
   "queue": {
     "message": "Baris Gilir"
+  },
+  "queued": {
+    "message": "Beratur"
   },
   "readdToken": {
     "message": "Anda boleh tambah token ini kembali pada masa depan dengan pergi ke \"Tambah token\" di dalam menu pilihan akaun anda."
   },
   "recents": {
     "message": "Baru-baru ini"
+  },
+  "receive": {
+    "message": "Terima"
   },
   "recipientAddress": {
     "message": "Alamat Penerima"
@@ -825,7 +1165,7 @@
     "message": "Tetapkan Semula Akaun"
   },
   "resetAccountDescription": {
-    "message": "Menetapkan semula akaun anda akan mengosongkan sejarah transaksi anda."
+    "message": "Penetapan semula akaun anda akan memadam sejarah transaksi anda. Aktiviti ini tidak akan mengubah baki dalam akaun anda atau memerlukan kemasukan semula frasa rahsia. "
   },
   "deleteNetwork": {
     "message": "Padamkan Rangkaian?"
@@ -842,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Pulihkan Akaun anda dengan Ungkapan Benih"
   },
+  "restoreWalletPreferences": {
+    "message": "Satu data sandaran milik anda dari $1 telah dijumpai. Adakah anda mahu ambil semula pilihan dompet anda?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "permintaan menunggu untuk diakui"
   },
@@ -852,7 +1196,7 @@
     "message": "Pulihkan"
   },
   "revealSeedWords": {
-    "message": "Dedahkan Ungkapan Benih"
+    "message": "Dedahkan Frasa Rahsia"
   },
   "revealSeedWordsTitle": {
     "message": "Frasa Benih"
@@ -921,7 +1265,7 @@
     "message": "AMARAN: Jangan sesekali dedahkan frasa sandaran anda. Sesiapa yang memperoleh frasa ini boleh mengambil Ether anda selama-lamanya."
   },
   "secretPhrase": {
-    "message": "Masukkan ungkapan rahsia dua belas perkataan di sini untuk memulihkan kekubah anda."
+    "message": "Masukkan frasa 24 perkataan rahsia anda di sini untuk memulihkan ruang simpan anda."
   },
   "securityAndPrivacy": {
     "message": "Keselamatan & Privasi"
@@ -932,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Pisahkan setiap perkataan dengan satu ruang"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Tampal frasa rahsia daripada papan klip"
+  },
+  "showSeedPhrase": {
+    "message": "Paparkan frasa rahsia"
+  },
   "seedPhraseReq": {
-    "message": "Frasa benih panjangnya 12 patah perkataan"
+    "message": "Frasa rahsia terkandung 12, 15, 18, 21, atau 24 perkataan"
+  },
+  "selectingAllWillAllow": {
+    "message": "Memilih semua akan membolehkan laman web ini melihat semua akaun semasa anda. Pastikan laman web ini dipercayai."
+  },
+  "selectAccounts": {
+    "message": "Pilih akaun"
+  },
+  "selectAll": {
+    "message": "Pilih semua"
   },
   "selectCurrency": {
     "message": "Pilih Mata Wang"
@@ -946,6 +1305,9 @@
   },
   "selectType": {
     "message": "Pilih Jenis"
+  },
+  "buy": {
+    "message": "Beli"
   },
   "send": {
     "message": "Hantar"
@@ -965,11 +1327,21 @@
   "sentTokens": {
     "message": "token dihantar"
   },
+  "sendSpecifiedTokens": {
+    "message": "Hantar $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Pisahkan setiap perkataan dengan ruang tunggal"
   },
   "searchTokens": {
     "message": "Cari Token"
+  },
+  "searchAccounts": {
+    "message": "Cari Akaun"
+  },
+  "noAccountsFound": {
+    "message": "Tiada akaun yang dijumpai untuk pertanyaan carian ini."
   },
   "selectAnAccount": {
     "message": "Pilih Akaun"
@@ -1016,6 +1388,9 @@
   "signatureRequest": {
     "message": "Permintaan Tandatangan"
   },
+  "signatureRequest1": {
+    "message": "Mesej"
+  },
   "signed": {
     "message": "Ditandatangani"
   },
@@ -1037,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Percepatkan transaksi ini"
   },
+  "spendLimitPermission": {
+    "message": "Kebenaran had belanja"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Had belanja yang diminta oleh $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Had belanja terlalu besar"
+  },
+  "spendLimitInvalid": {
+    "message": "Had belanja tidak sah; masukkan nombor positif sahaja"
+  },
   "switchNetworks": {
     "message": "Tukar Rangkaian"
+  },
+  "stateLogFileName": {
+    "message": "Log Negeri Brave"
   },
   "stateLogs": {
     "message": "Log Keadaan"
@@ -1048,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Ralat mendapatkan semula log keadaan."
+  },
+  "statusConnected": {
+    "message": "Disambungkan"
+  },
+  "statusNotConnected": {
+    "message": "Tidak bersambung"
   },
   "step1HardwareWallet": {
     "message": "1. Sambungkan Dompet Perkakasan"
@@ -1062,13 +1459,16 @@
     "message": "Pilih akaun yang anda mahu lihat. Anda hanya boleh memilih satu pada suatu masa."
   },
   "step3HardwareWallet": {
-    "message": "3. Mula menggunakan dApps dan banyak lagi!"
+    "message": "3. Mula layari laman web3 dan banyak lagi!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Gunakan akaun perkakasan anda sepertimana anda menggunakan akaun Ethereum. Log masuk ke dalam dApps, hantar Eth, beli dan simpan token ERC20 serta token Tidak Mudah Tukar seperti CryptoKitties."
+    "message": "Guna akaun perkakas anda sebagaimana anda guna akaun Ethereum. Berhubung ke laman web3, hantar ETH, beli dan simpan token ERC20 dan token tidak sama nilai seperti CryptoKitties."
   },
   "storePhrase": {
     "message": "Simpan ungkapan ini di dalam pengurus kata laluan seperti 1Password."
+  },
+  "submit": {
+    "message": "Serah"
   },
   "submitted": {
     "message": "Dihantar"
@@ -1080,7 +1480,7 @@
     "message": "Simbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Simbol mestilah 11 aksara atau kurang."
+    "message": "Simbol hendaklah 11 aksara atau kurang."
   },
   "syncWithMobile": {
     "message": "Segerakkan dengan telefon mudah alih"
@@ -1089,10 +1489,10 @@
     "message": "Segerakkan dengan mudah alih"
   },
   "syncWithMobileDesc": {
-    "message": "Anda boleh menyegerakkan akaun dan maklumat anda dengan peranti mudah alih anda. Buka ap mudah alih Brave, pergi ke \"Tetapan\" dan ketik \"Segerakkan daripada Sambungan Pelayar\""
+    "message": "Anda boleh menyegerakkan akaun dan maklumat dengan peranti mudah alih anda. Buka aplikasi mudah alih Brave, pergi ke \"Tetapan\" dan ketik pada \"Segerakkan daripada Sambungan Pelayar\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jika ini kali pertama anda membuka aplikasi mudah alih Brave, anda cuma perlu ikuti langkah-langkah di telefon anda."
+    "message": "Jika anda baru pertama kali membuka aplikasi Mudah Alih Brave, sila ikuti langkah-langkah yang terdapat pada telefon anda"
   },
   "syncWithMobileScanThisCode": {
     "message": "Imbas kod ini dengan aplikasi mudah alih Brave anda"
@@ -1101,7 +1501,7 @@
     "message": "Pastikan tiada orang lain melihat skrin anda ketika anda mengimbas kod ini"
   },
   "syncWithMobileComplete": {
-    "message": "Data anda berjaya disegerakkan. Nikmati aplikasi mudah alih Brave!"
+    "message": "Data anda telah berjaya disegerakkan. Bersenang-senang dengan aplikasi mudah alih Brave!"
   },
   "terms": {
     "message": "Syarat-syarat Penggunaan"
@@ -1118,11 +1518,24 @@
   "to": {
     "message": "Kepada"
   },
+  "toAddress": {
+    "message": "Kepada: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Kepada:"
+  },
+  "token": {
+    "message": "Token"
+  },
   "tokenAlreadyAdded": {
     "message": "Token telah pun ditambah."
   },
   "tokenContractAddress": {
     "message": "Alamat Kontrak Token"
+  },
+  "tokenOptions": {
+    "message": "Pilihan Token"
   },
   "tokenSymbol": {
     "message": "Simbol Token"
@@ -1172,6 +1585,9 @@
   "transactionTime": {
     "message": "Masa Transaksi"
   },
+  "showTransactionTimeDescription": {
+    "message": "Pilih ini untuk memaparkan anggaran masa transaksi tergendala dalam tab aktiviti semasa dalam Rangkaian Ethereum Utama. Nota: penganggaraan adalah berdasarkan keadaan rangkaian."
+  },
   "transfer": {
     "message": "Pindah"
   },
@@ -1185,6 +1601,10 @@
     "message": "Kami menghadapi masalah memuatkan baki token anda. Anda boleh melihatnya",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Adakah anda mempercayai laman web ini? Dengan memberi kebenaran, anda membolehkan $1 mengeluarkan $2 dan menjalankan transaksi secara automatik untuk anda.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Cuba lagi"
   },
@@ -1193,6 +1613,9 @@
   },
   "unapproved": {
     "message": "Belum Diluluskan"
+  },
+  "alertDisableTooltip": {
+    "message": "Ini boleh ditukar di \"Tetapan > Pemberitahuan\""
   },
   "units": {
     "message": "unit"
@@ -1212,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Terdapat ralat semasa cuba mengakses kamera anda. Sila cuba sekali lagi..."
   },
+  "unlimited": {
+    "message": "Tanpa Had"
+  },
   "unlock": {
     "message": "Buka kunci"
   },
@@ -1222,10 +1648,19 @@
     "message": "Dikemaskini $1"
   },
   "urlErrorMsg": {
-    "message": "URI memerlukan awalan HTTP/HTTPS yang sesuai."
+    "message": "URL memerlukan kata awalan HTTP/HTTPS yang sesuai."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL telah wujud dalam senarai rangkaian sedia ada"
   },
   "usedByClients": {
     "message": "Digunakan oleh pelbagai klien berbeza"
+  },
+  "usePhishingDetection": {
+    "message": "Guna Pengesanan Pemancingan Data"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Paparkan amaran bagi domain pemancingan data yang menyasarkan pengguna Ethereum"
   },
   "userName": {
     "message": "Nama pengguna"
@@ -1245,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "Lihat di Etherscan"
   },
+  "retryTransaction": {
+    "message": "Cuba Semula Transaksi"
+  },
   "visitWebSite": {
     "message": "Kunjungi laman web kami"
   },
   "walletSeed": {
-    "message": "Benih Dompet"
+    "message": "Frasa rahsia"
   },
   "welcomeBack": {
     "message": "Selamat Kembali!"
   },
   "welcome": {
-    "message": "Selamat datang ke Brave"
+    "message": "Selamat Datang ke Brave"
+  },
+  "whatsThis": {
+    "message": "Apakah ini?"
   },
   "writePhrase": {
     "message": "Tulis frasa ini di atas kertas dan simpan di tempat yang selamat. JIka anda mahu lebih selamat, tuliskannya di beberapa helai kertas dan simpan setiap satunya di 2 -3 lokasi berbeza."
+  },
+  "xOfY": {
+    "message": "$1 daripada $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Ya, mari cuba"
@@ -1278,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Sifar harga gas untuk pencepatan"
   },
+  "decryptRequest": {
+    "message": "Permintaan menyahsulit"
+  },
+  "decrypt": {
+    "message": "Menyahsulit"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 mahu membaca mesej ini untuk melengkapkan tindakan anda",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Nyahsulitkan mesej"
+  },
+  "decryptCopy": {
+    "message": "Salin mesej yang dienkripsi"
+  },
+  "decryptInlineError": {
+    "message": "Pesanan ini tidak boleh dinyahenkripsi oleh kerana ralat: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Sediakan"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Minta kekunci awam penyulitan."
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 mahukan kekunci awam penyulitan anda. Dengan bersetuju, laman ini boleh mencipta mesej tersulit anda.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Frasa Sandaran Rahsia Dompet Kripto"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Tetapan Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Dompet Kripto membolehkan anda menggunakan mata wang kripto dan aset-aset berkaitan dalam Brave. Dompet Kripto menyokong token seperti ETH dan BAT, juga barang terkumpul, dan membolehkan anda menggunakan Dapp dan lain-lain kontrak. Kefungsian ini untuk pengguna yang telah biasa menggunakan Ethereum dan lain-lain sistem rantai blok - atau bagi mereka yang ingin belajar."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Hanya guna Dompet Kripto sekiranya anda menerima bahawa anda sendiri bertanggungjawab ke atas segala risiko yang berkaitan dengan penggunaan ini, dan bahawa Perisian Brave tidak akan memikul tanggungjawab mahupun liabiliti ke atas sebarang kerugian ketika kerugian kebetulan atau akibat yang anda mungkin akan alami akibat penggunaan ini."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Kesemua ini berasingan sepenuhnya daripada"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Jadi sekiranya anda ingin menyokong laman-laman kegemaran anda, pergilah ke sana."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Dompet Crypto"
+  },
+  "disclosureConfirm": {
+    "message": "Saya faham"
+  },
   "ledgerCreateSubText": {
     "message": "Sambung dompet perkakasan Lejar anda untuk berinteraksi dengan dApp dan buat pindahan kepada dompet bersambung yang lain."
+  },
+  "metamaskImportSubText": {
+    "message": "Pemberitahuan: Sekiranya mengimport daripada dompet Metamask, masukkan 12 perkataan dan bukannya 24."
   },
   "newLocalWallet": {
     "message": "Dompet Tempatan Baru"
@@ -1287,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Cipta dompet tempatan Brave yang baru untuk mengakses dApps dan menyimpan kripto serta kolektibel secara selamat. Niagakan token secara tanpa nama tanpa yuran perdagangan."
   },
+  "passWarningOne": {
+    "message": "Kata laluan ini melindungi kekunci peribadi anda. Tiada sesiapa yang boleh menetapkan ia semula sekiranya anda terlupa, malah Brave pun tidak boleh!"
+  },
+  "providerErrorMessage": {
+    "message": "Dompet ini bukan penyedia Ethereum Dapp lalai anda."
+  },
   "trezorCreateSubText": {
     "message": "Sambungkan dompet perkakasan Trezor anda untuk berinteraksi dengan dApps dan membuat pemindahan kepada dompet lain yang telah disambungkan."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Selamat datang ke Dompet Kripto Brave"
   }
 }

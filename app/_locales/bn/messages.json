@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "আমি $1 টি পড়েছি এবং তাতে সম্মত হয়েছি",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "আপনার অনুমোদিত অ্যাকাউন্টগুলির ঠিকানাগুলি দেখুন (প্রয়োজনীয়)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "সংযুক্ত সাইটগুলি"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 এই সাইটগুলির সাথে সংযুক্ত রয়েছে। তারা আপনার অ্যাকাউন্টের ঠিকানা দেখতে পারে।",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 কোনও সাইটের সাথে সংযুক্ত নয়।",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "আপনার এই সাইটের সাথে 1 টি অ্যাকাউন্ট যুক্ত আছে।"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "আপনার এই সাইটটিতে $1 টি অ্যাকাউন্ট যুক্ত রয়েছে।",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave এই সাইটে সংযুক্ত নেই। একটি ওয়েব 3 সাইটে সংযোগ করতে, তাদের সাইটে সংযুক্ত বোতামটি সন্ধান করুন।"
+  },
+  "currentAccountNotConnected": {
+    "message": "আপনার বর্তমান অ্যাকাউন্ট সংযুক্ত নেই"
+  },
+  "switchToThisAccount": {
+    "message": "এই অ্যাকাউন্টে স্যুইচ করুন"
+  },
+  "disconnectThisAccount": {
+    "message": "এই অ্যাকাউন্টটি সংযোগ বিচ্ছিন্ন করুন"
+  },
+  "permissions": {
+    "message": "অনুমতি"
+  },
+  "showPermissions": {
+    "message": "অনুমতিগুলি দেখান"
+  },
+  "authorizedPermissions": {
+    "message": "আপনি নিম্নলিখিত অনুমতি অনুমোদিত করেছেন"
+  },
+  "connectManually": {
+    "message": "ম্যানুয়ালি বর্তমান সাইটে সংযোগ করুন"
+  },
+  "disconnect": {
+    "message": "সংযোগ বিচ্ছিন্ন করুন"
+  },
+  "disconnectAllAccounts": {
+    "message": "সমস্ত অ্যাকাউন্ট সংযোগ বিচ্ছিন্ন করুন"
+  },
+  "disconnectPrompt": {
+    "message": "$1 সংযোগ বিচ্ছিন্ন করুন"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "আপনি কি সংযোগ বিচ্ছিন্ন করার বিষয়ে নিশ্চিত? আপনি সাইটের কার্যকারিতা হারাতে পারেন।"
+  },
+  "dismiss": {
+    "message": "খারিজ"
+  },
+  "showIncomingTransactions": {
+    "message": "আগত লেনদেনগুলি দেখান"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "লেনদেনের তালিকায় আগত লেনদেনগুলি দেখানোর জন্য ইথারস্ক্যান ব্যবহার করতে এটি নির্বাচন করুন"
+  },
   "chartOnlyAvailableEth": {
     "message": "শুধুমাত্র Ethereum নেটওয়ার্কগুলিতে চার্ট উপলভ্য। "
+  },
+  "connecting": {
+    "message": "সংযুক্ত হচ্ছে..."
+  },
+  "connectWithMetaMask": {
+    "message": "Brave এর সঙ্গে সংযোগ করুন"
+  },
+  "connectTo": {
+    "message": "$1 সংযুক্ত হন",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "আপনার সমস্ত $1 এ সংযুক্ত হন",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "হিসাব",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "$1 এ সংযুক্ত হন",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 অ্যাকাউন্ট",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "কন্ট্র্যাক্ট বাক্যালাপ"
@@ -9,13 +106,17 @@
     "message": "প্রত্যাখ্যান"
   },
   "about": {
-    "message": "সম্পর্কে"
+    "message": "সম্পর্কিত"
   },
   "aboutSettingsDescription": {
-    "message": "সংস্করণ, সহায়তা কেন্দ্র, এবং যোগাযোগের তথ্য।"
+    "message": "সংস্করণ, সহায়তা কেন্দ্র এবং যোগাযোগের তথ্য"
   },
   "acceleratingATransaction": {
     "message": "* একটি উচ্চতর গ্যাসের মূল্য ব্যবহার করে একটি লেনদেনের গতি বৃদ্ধি নেটওয়ার্কের দ্বারা সেটির প্রক্রিয়াকরণ দ্রুততর হওয়ার সম্ভাবনা বৃদ্ধি করে, কিন্তু সবসময় সেটির নিশ্চয়তা দেওয়া যায় না।"
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 অ্যাক্সেস করতে এবং এই সর্বোচ্চ পরিমাণ পর্যন্ত ব্যয় করতে পারে",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "আপনার ক্যামেরা অ্যাক্সেস করছে..."
@@ -24,7 +125,7 @@
     "message": "অ্যাকাউন্ট"
   },
   "accountDetails": {
-    "message": "অ্যাকাউন্টের বিশদ"
+    "message": "বিস্তারিত হিসাব"
   },
   "accountName": {
     "message": "অ্যাকাউন্টের নাম"
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "আপনাকে একটি অ্যাকাউন্ট নির্বাচন করতে হবে!"
+  },
+  "active": {
+    "message": "সক্রিয়"
+  },
+  "activity": {
+    "message": "ক্রিয়াকলাপ"
   },
   "activityLog": {
     "message": "কার্যকলাপের লগ"
@@ -48,7 +155,7 @@
     "message": "উন্নত"
   },
   "advancedSettingsDescription": {
-    "message": "ডেভেলপারের বৈশিষ্ট্যগুলি অ্যাক্সেস করুন, স্টেট লগগুলি ডাউনলোড করুন, অ্যাকাউন্ট রিসেট করুন, টেস্টনেটস এবং কাস্টম RPC সেটআপ করুন।"
+    "message": "বিকাশকারী বৈশিষ্ট্যগুলি অ্যাক্সেস করুন, স্টেট লগগুলি ডাউনলোড করুন, অ্যাকাউন্ট পুনরায় সেট করুন, সেটআপ টেস্টনেট এবং কাস্টম আরপিসি করুন"
   },
   "advancedOptions": {
     "message": "উন্নত বিকল্পসমূহ"
@@ -72,26 +179,62 @@
     "message": "প্রস্তাবিত টোকেনগুলি যোগ করুন"
   },
   "addAcquiredTokens": {
-    "message": "Brave ব্যবহার করে আপনি যে টোকেনগুলি অর্জন করেছেন সেগুলি যোগ করুন"
+    "message": "সাহসী ব্যবহার করে আপনি অর্জন করেছেন টোকেনগুলি যুক্ত করুন"
+  },
+  "alerts": {
+    "message": "সতর্কতা"
+  },
+  "alertsSettingsDescription": {
+    "message": "প্রতিটি সতর্কতা সক্ষম বা অক্ষম করুন"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "একটি সংযোগযুক্ত অ্যাকাউন্ট নির্বাচন করে একটি ওয়েবসাইট ব্রাউজ করা"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "আপনি যখন কোনও সংযুক্ত ওয়েব 3 সাইট ব্রাউজ করছেন তখন এই সতর্কতাটি পপআপে প্রদর্শিত হয়, তবে বর্তমানে নির্বাচিত অ্যাকাউন্টটি সংযুক্ত নেই।"
+  },
+  "allowOriginSpendToken": {
+    "message": "$1 আপনার $2 ব্যয় করার অনুমতি দেবেন?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "এই সাইটটিকে এর অনুমতি দিন:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "এই বাহ্যিক এক্সটেনশানটিকে এতে মঞ্জুরি দিন:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "নীচের পরিমাণটি প্রত্যাহার করতে এবং ব্যয় করতে$1কে মঞ্জুরি দিন:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "পরিমান"
+  },
+  "amountWithColon": {
+    "message": "পরিমাণ:"
   },
   "appDescription": {
     "message": "আপনার ব্রাউজারে একটি Ethereum ওয়ালেট",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "অনুমোদন করুন"
+    "message": "ব্যয় সীমা অনুমোদন করুন"
+  },
+  "approveSpendLimit": {
+    "message": "$1 ব্যয়ের সীমা অনুমোদন করুন",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "অনুমোদিত"
   },
   "asset": {
+    "message": "সম্পদ"
+  },
+  "assets": {
     "message": "সম্পদ"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "গুণাবলী"
   },
   "autoLockTimeLimit": {
-    "message": "স্বয়ংক্রিয়-লগ আউট টাইমার (মিনিট)"
+    "message": "অটো-লক টাইমার (মিনিট)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Brave স্বয়ংক্রিয়ভাবে লগ আউট করার আগে নিষ্ক্রিয় থাকার সময় মিনিটে সেট করুন"
+    "message": "সাহসী লক হয়ে যাওয়ার কয়েক মিনিটের মধ্যে অলস সময়টি সেট করুন।"
   },
   "average": {
     "message": "গড়"
@@ -125,7 +268,7 @@
     "message": "আপনার ওয়ালেট এবং তহবিল সুরক্ষিত রাখতে আপনার গোপন পুনরুদ্ধারের কোড ব্যাক আপ করুন।"
   },
   "backupApprovalInfo": {
-    "message": "আপনি আপনার ডিভাইস হারিয়ে ফেললে, পাসওয়ার্ড ভুলে গেলে, Brave রিইনস্টল করতে হলে বা অন্য ডিভাইসে আপনার ওয়ালেট অ্যাক্সেস করার ক্ষেত্রে আপনার ওয়ালেট পুনরুদ্ধার করতে এই গোপন কোডটি প্রয়োজন।"
+    "message": "আপনি নিজের ডিভাইসটি হারাতে, আপনার পাসওয়ার্ড ভুলে যেতে, সাহসী পুনরায় ইনস্টল করতে হবে বা অন্য ডিভাইসে আপনার ওয়ালেট অ্যাক্সেস করতে চাইলে এই গোপন কোডটি আপনার ওয়ালেটটি পুনরুদ্ধার করার জন্য প্রয়োজনীয়।"
   },
   "backupNow": {
     "message": "এখনওই ব্যাকআপ নিন "
@@ -149,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "ব্লকিজ আইডেন্টিকন ব্যবহার করুন"
   },
+  "nonceField": {
+    "message": "লেনদেন নন কাস্টমাইজ করুন"
+  },
+  "nonceFieldHeading": {
+    "message": "কাস্টম ননস"
+  },
+  "nonceFieldDescription": {
+    "message": "নিশ্চিতকরণের স্ক্রিনগুলিতে ননস (লেনদেন নম্বর) পরিবর্তন করতে এটি চালু করুন। এটি একটি উন্নত বৈশিষ্ট্য, সতর্কতার সাথে ব্যবহার করুন।"
+  },
   "browserNotSupported": {
     "message": "আপনার ব্রাউজার সমর্থিত নয়..."
   },
   "builtInCalifornia": {
-    "message": "Brave ক্যালিফোর্নিয়াতে ডিজাইন করা এবং নির্মিত।"
+    "message": "Brave হল ডিজাইন এবং ক্যালিফোর্নিয়ায় নির্মিত হয়।"
   },
   "buyWithWyre": {
     "message": "Wyre দিয়ে ETH ক্রয় করুন"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre আপনার Brave অ্যাকাউন্টে সরাসরি ETH জমা করতে আপনাকে একটি ক্রেডিট কার্ড ব্যবহার করতে দেয়।"
+    "message": "ওয়াইর আপনাকে ঠিক আপনার Brave অ্যাকাউন্টে ETH জমা দেওয়ার জন্য একটি ডেবিট কার্ড ব্যবহার করতে দেয়।"
   },
   "buyCoinSwitch": {
     "message": "CoinSwitch এ ক্রয় করুন"
@@ -204,7 +356,7 @@
     "message": "বন্ধ করুন"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "আপনার হার্ডওয়্যার ওয়ালেটের সাথে সংযোগ করতে আপনাকে Google Chrome এ Brave ব্যবহার করতে হবে।  "
+    "message": "আপনার হার্ডওয়্যার ওয়ালেটে সংযোগ করার জন্য আপনাকে গুগল ক্রোমে Brave ব্যবহার করতে হবে।"
   },
   "confirm": {
     "message": "নিশ্চিত হন"
@@ -213,13 +365,16 @@
     "message": "নিশ্চিত করা হয়েছে"
   },
   "confirmPassword": {
-    "message": "পাসওয়ার্ড নিশ্চিত করুন"
+    "message": "পাসওয়ার্ড নিশ্চিত করুন"
   },
   "confirmSecretBackupPhrase": {
     "message": "আপনার গোপন ব্যাক আপ ফ্রেজ নিশ্চিত করুন"
   },
   "congratulations": {
     "message": "অভিনন্দন"
+  },
+  "connectAccountOrCreate": {
+    "message": "অ্যাকাউন্টটি সংযুক্ত করুন বা নতুন তৈরি করুন"
   },
   "connectHardwareWallet": {
     "message": "হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "গোয়েরলি টেস্ট নেটওয়ার্কের সাথে সংযোগ করা হচ্ছে"
+  },
+  "contacts": {
+    "message": "যোগাযোগ"
+  },
+  "contactsSettingsDescription": {
+    "message": "আপনার পরিচিতগুলি যোগ, সম্পাদনা, অপসারণ, এবং পরিচালনা করুন"
+  },
+  "contactUs": {
+    "message": "যোগাযোগ করুন!"
   },
   "continueToWyre": {
     "message": "Wyre এ অবিরত রাখুন"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "মুদ্রা বিনিময়"
   },
+  "currentExtension": {
+    "message": "বর্তমান এক্সটেনশন পৃষ্ঠা"
+  },
   "currentLanguage": {
     "message": "বর্তমান ভাষা"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "কাস্টম RPC"
+  },
+  "customSpendLimit": {
+    "message": "কাস্টম ব্যয় সীমা"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Brave ইনস্টল করার সময় আপনার অ্যাকাউন্টের কিছু ডেটা ব্যাক আপ করা হয়েছিল। এটিতে আপনার সেটিংস, পরিচিতি এবং টোকেন অন্তর্ভুক্ত থাকতে পারে। আপনি কি এখন এই ডেটা পুনরুদ্ধার করতে চান?"
   },
   "decimalsMustZerotoTen": {
     "message": "দশমিকগুলি অবশ্যই অন্তত 0 হতে হবে, এবং 36 এর উপর হবে না।"
@@ -338,6 +511,9 @@
   "done": {
     "message": "সম্পন্ন "
   },
+  "dontShowThisAgain": {
+    "message": "এটি আবার দেখাবেন না"
+  },
   "downloadGoogleChrome": {
     "message": "Google Chrome ডাউনলোড করুন"
   },
@@ -359,6 +535,9 @@
   "editContact": {
     "message": "পরিচিতি সম্পাদনা করুন"
   },
+  "editPermission": {
+    "message": "অনুমতি সম্পাদনা করুন"
+  },
   "endOfFlowMessage1": {
     "message": "আপনি টেস্টটি পাস করেছেন - আপনার সীডফ্রেজ নিরাপদে রাখুন, এটি আপনার দায়িত্ব!"
   },
@@ -372,22 +551,29 @@
     "message": "ফ্রেজটি কখনও কারোর সাথে শেয়ার করবেন না।"
   },
   "endOfFlowMessage5": {
-    "message": "ফিসিং থেকে সাবধান! Brave কখনই নিজের থেকে আপনার সীড ফ্রেজ জিজ্ঞাসা করবে না।"
+    "message": "ফিশিংয়ে সাবধান থাকুন! Brave কখনও স্বতঃস্ফূর্তভাবে আপনার বীজ বাক্যাংশ জিজ্ঞাসা করবে না।"
   },
   "endOfFlowMessage6": {
     "message": "আপনাকে আপনার সীড আবার ব্যাকআপ করতে হলে, আপনি সেটি সেটিংস -> নিরাপত্তায় পাবেন।"
   },
   "endOfFlowMessage7": {
-    "message": "আপনার কখনও কোনো প্রশ্ন থাকলে বা সন্দেহজনক কিছু দেখলে, support@brave.com ঠিকানায় ইমেল করুন।"
+    "message": "আপনার যদি কখনও প্রশ্ন থাকে বা ফিস কিছু দেখেন, email support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave আপনার সীডফ্রেজ পুনরুদ্ধার করতে পারবে না। আরও জানুন।"
+    "message": "Brave  আপনার সিডফ্রেজটি পুনরুদ্ধার করতে পারে না।"
   },
   "endOfFlowMessage9": {
     "message": "আরও জানুন।"
   },
   "endOfFlowMessage10": {
     "message": "সব সম্পন্ন হয়েছে"
+  },
+  "externalExtension": {
+    "message": "বাহ্যিক এক্সটেনশন"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" এই ট্যাবটি বন্ধ করবে এবং সরাসরি $2 এ ফিরে যাবে",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "ENS নাম নিবন্ধীকরণে ত্রুটি হয়েছে"
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "একটি উপনাম লিখুন"
   },
+  "enterMaxSpendLimit": {
+    "message": "সর্বাধিক ব্যয় সীমা প্রবেশ করান"
+  },
   "enterPassword": {
     "message": "পাসওয়ার্ড লিখুন"
   },
   "enterPasswordContinue": {
     "message": "অবিরত রাখতে পাসওয়ার্ড লিখুন"
+  },
+  "errorCode": {
+    "message": "কোড: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "ভুল তথ্য",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "বার্তা: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "কোড: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave একটি ত্রুটির সম্মুখীন হয়েছে",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "পৃষ্ঠাটি পুনরায় লোড করে আবার চেষ্টা করুন বা সমর্থন করুন support@brave.com এ সহায়তার সাথে যোগাযোগ করুন",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "পপআপ বন্ধ করে এবং পুনরায় চালু করে আবার চেষ্টা করুন, বা সমর্থন করুন support@brave.com এ সহায়তার সাথে যোগাযোগ করুন",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "স্ট্যাক:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Ethereum পাবলিক অ্যাড্রেস"
@@ -414,7 +635,7 @@
     "message": "আনুমানিক প্রক্রিয়াকরণের সময়"
   },
   "expandView": {
-    "message": "ভিউ সম্প্রসারিত করুন"
+    "message": "দর্শন প্রসারিত করুন"
   },
   "exportPrivateKey": {
     "message": "ব্যক্তিগত কী রপ্তানি করুন"
@@ -422,11 +643,17 @@
   "failed": {
     "message": "ব্যর্থ হয়েছে"
   },
+  "failureMessage": {
+    "message": "কিছু ভুল হয়েছে, এবং আমরা ক্রিয়াটি সম্পূর্ণ করতে পারিনি"
+  },
   "fast": {
     "message": "দ্রুত"
   },
   "faster": {
     "message": "দ্রুততর"
+  },
+  "feeAssociatedRequest": {
+    "message": "এই অনুরোধের সাথে একটি ফি জড়িত।"
   },
   "fiat": {
     "message": "ফিয়াট",
@@ -441,6 +668,13 @@
   },
   "from": {
     "message": "থেকে"
+  },
+  "fromAddress": {
+    "message": "থেকে: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "কার্য: অনুমোদন"
   },
   "functionType": {
     "message": "কার্যকারিতার ধরণ"
@@ -469,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "গ্যাসের মূল্য"
   },
+  "gdprMessage": {
+    "message": "এই ডেটা একত্রিত এবং সাধারণ তথ্য সুরক্ষা নিয়ন্ত্রণ (EU) 2016/679 এর উদ্দেশ্যে অজ্ঞাত। আমাদের গোপনীয়তা অনুশীলনের সাথে সম্পর্কিত আরও তথ্যের জন্য, দয়া করে আমাদের $1 দেখুন।",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "গোপনীয়তা নীতি এখানে",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "সাধারণ"
   },
@@ -492,7 +734,7 @@
     "message": "আপনাকে দেখে আমরা আনন্দিত।"
   },
   "hardware": {
-    "message": "হার্ডওয়্যার"
+    "message": "হার্ডওয়্যার"
   },
   "hardwareWalletConnected": {
     "message": "হার্ডওয়্যার ওয়ালেট সংযুক্ত করা হয়েছে"
@@ -501,7 +743,7 @@
     "message": "একটি হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন"
   },
   "hardwareWalletsMsg": {
-    "message": "আপনি Brave এর সাথে ব্যবহার করতে চান এমন একটি হার্ডওয়্যার ওয়ালেট নির্বাচন করুন"
+    "message": "আপনি সাহসের সাথে ব্যবহার করতে চান এমন একটি হার্ডওয়্যার ওয়ালেট নির্বাচন করুন"
   },
   "havingTroubleConnecting": {
     "message": "সংযোগ করতে সমস্যা হচ্ছে?"
@@ -515,6 +757,10 @@
   },
   "hide": {
     "message": "লুকান"
+  },
+  "hideTokenSymbol": {
+    "message": "$1লুকান",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "টোকেন লুকাবেন?"
@@ -530,16 +776,16 @@
     "message": "অ্যাকাউন্ট আমদানি করুন"
   },
   "importAccountMsg": {
-    "message": "আমদানি করা অ্যাকাউন্টগুলি আপনার গোড়ায় তৈরি করা Brave অ্যাকাউন্ট সীডফ্রেজের সাথে সংযুক্ত হবে না। আমদানি করা অ্যাকাউন্টগুলি সম্পর্কে আরও জানুন "
+    "message": "আমদানিকৃত অ্যাকাউন্টগুলি আপনার মূলত তৈরি Brave অ্যাকাউন্টের বীজফ্রেজের সাথে যুক্ত হবে না। আমদানি করা অ্যাকাউন্টগুলি সম্পর্কে আরও জানুন"
   },
   "importAccountSeedPhrase": {
-    "message": "সীড ফ্রেজ দিয়ে একটি অ্যাকাউন্ট আমদানি করুন"
+    "message": "বীজ বাক্যাংশ সহ একটি অ্যাকাউন্ট আমদানি করুন"
   },
   "importWallet": {
-    "message": "ওয়ালেট আমদানি করুন"
+    "message": "ওয়ালেট আমদানি করুন"
   },
   "importYourExisting": {
-    "message": "একটি 24 শব্দের সীড ফ্রেজ ব্যবহার করে আপনার বিদ্যমান ওয়ালেট আমদানি করুন"
+    "message": "24 শব্দের বীজ বাক্যাংশ ব্যবহার করে আপনার বিদ্যমান ওয়ালেটটি আমদানি করুন"
   },
   "imported": {
     "message": "আমদানিকৃত",
@@ -572,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "জানা পরিচিতির ঠিকানা৷"
   },
+  "knownTokenWarning": {
+    "message": "এই ক্রিয়াটি আপনার ওয়ালেটে ইতিমধ্যে তালিকাভুক্ত টোকেনগুলি সম্পাদনা করবে, যা আপনাকে ফিশ করতে ব্যবহৃত হতে পারে। কেবলমাত্র অনুমোদন করুন যদি আপনি নিশ্চিত হন যে এই টোকেনগুলি কী উপস্থাপন করে আপনি তার পরিবর্তিত করতে চাইছেন।"
+  },
+  "reusedTokenNameWarning": {
+    "message": "এখানে একটি টোকেন আপনি দেখছেন এমন অন্য টোকেনের প্রতীকটিকে পুনরায় ব্যবহার করেছে, এটি বিভ্রান্তিকর বা প্রতারক হতে পারে।"
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH নেটওয়ার্ক নয়, ছোটো হরফে সেট করা হয়েছে"
   },
@@ -582,10 +834,22 @@
     "message": "অবৈধ RPC URL"
   },
   "invalidBlockExplorerURL": {
-    "message": "অবৈধ Block Explorer URL"
+    "message": "অবৈধ ব্লক এক্সপ্লোরার URL"
   },
   "invalidSeedPhrase": {
     "message": "অবৈধ সীড ফ্রেজ"
+  },
+  "ipfsGateway": {
+    "message": "IPFS গেটওয়ে"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ENS বিষয়বস্তু রেজোলিউশনের জন্য ব্যবহার করতে IPFS CID গেটওয়ের URL লিখুন।"
+  },
+  "invalidIpfsGateway": {
+    "message": "অবৈধ IPFS গেটওয়ে: মানটি অবশ্যই একটি বৈধ URL হবে"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "নিষিদ্ধ IPFS গেটওয়ে: দয়া করে একটি CID গেটওয়ে নির্দিষ্ট করুন"
   },
   "jsonFile": {
     "message": "JSON ফাইল",
@@ -596,6 +860,9 @@
   },
   "max": {
     "message": "সর্বাধিক"
+  },
+  "lastConnected": {
+    "message": "সর্বশেষ সংযুক্ত"
   },
   "learnMore": {
     "message": "আরও জানুন"
@@ -628,7 +895,10 @@
     "message": "লোকালহোস্ট 8545"
   },
   "lock": {
-    "message": "লগ আউট করুন"
+    "message": "লক"
+  },
+  "lockTimeTooGreat": {
+    "message": "লক সময় খুব দুর্দান্ত"
   },
   "mainnet": {
     "message": "মূল Ethereum নেটওয়ার্ক"
@@ -641,6 +911,15 @@
   },
   "message": {
     "message": "বার্তা"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "সাহসী অ্যাকাউন্টে আপনার অ্যাকাউন্ট সংযোগগুলিতে এখন আপনার আরও নিয়ন্ত্রণ রয়েছে।"
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "আপনি যে ওয়েবসাইটটি পরিদর্শন করেছেন সেটি আপনার বর্তমানে নির্বাচিত অ্যাকাউন্টের সাথে সংযুক্ত কিনা তা সংযোগ স্থিতি বোতামটি দেখায়।"
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "আপনার সংযুক্ত অ্যাকাউন্টগুলি পরিচালনা করতে এটিতে ক্লিক করুন।"
   },
   "metamaskDescription": {
     "message": "আপনার Ethereum এবং ছড়িয়ে ছিটিয়ে থাকা ওয়েবের সাথে সংযোগ করছে। "
@@ -658,13 +937,13 @@
     "message": "আমার ওয়ালেট অ্যাকাউন্টগুলি"
   },
   "myWalletAccountsDescription": {
-    "message": "Brave এর তৈরি করা আপনার সমস্ত অ্যাকাউন্টগুলি স্বয়ংক্রিয়ভাবে এই বিভাগে যোগ হয়ে যাবে।"
+    "message": "আপনার Brave তৈরি করা সমস্ত অ্যাকাউন্ট স্বয়ংক্রিয়ভাবে এই বিভাগে যুক্ত হবে।"
   },
   "mustSelectOne": {
     "message": "অবশ্যই অন্তত 1টি টোকেন নির্বাচন করতে হবে।"
   },
   "needEtherInWallet": {
-    "message": "Brave ব্যবহার করে ছড়িয়ে ছিটিয়ে থাকা অ্যাপ্লিকেশনগুলির সাথে যোগাযোগ করতে, আপনার ওয়ালেটে ইথার লাগবে।"
+    "message": "Brave ব্যবহার করে বিকেন্দ্রীভূত অ্যাপ্লিকেশনগুলির সাথে ইন্টারেক্ট করার জন্য আপনার ওয়ালেটে ইথার প্রয়োজন হবে।"
   },
   "needImportFile": {
     "message": "আমদানি করার জন্য আপনাকে অবশ্যই একটি ফাইল নির্বাচন করতে হবে।",
@@ -702,7 +981,7 @@
     "message": "নতুন কন্ট্র্যাক্ট"
   },
   "newPassword": {
-    "message": "নতুন পাসওয়ার্ড (অন্তত 8 অক্ষরের)"
+    "message": "নতুন পাসওয়ার্ড (কমপক্ষে 8 টি অক্ষর)"
   },
   "newNetwork": {
     "message": "নতুন নেটওয়ার্ক"
@@ -717,13 +996,19 @@
     "message": "আপনার কীগুলি সুরক্ষিত করুন!"
   },
   "protectYourKeysMessage1": {
-    "message": "আপনার সীড ফ্রেজ বিষয়ে সাবধান থাকুন — এমন ওয়েবসাইটগুলির রিপোর্ট পাওয়া গেছে যেগুলি Brave কে অনুকরণ করার চেষ্টা করে। Brave কখনও আপনার সীড ফ্রেজ জিজ্ঞাসা করবে না।"
+    "message": "আপনার বীজ বাক্যাংশটি সম্পর্কে সতর্ক থাকুন - এমন ওয়েবসাইটগুলির প্রতিবেদন রয়েছে যা Brave নকল করার চেষ্টা করে। Brave কখনও আপনার বীজ বাক্যাংশ জিজ্ঞাসা করবে না!"
   },
   "protectYourKeysMessage2": {
-    "message": "আপনার ফ্রেজটিকে নিরাপদে রাখুন।সন্দেহজনক কিছু দেখলে, বা একটি ওয়েবসাইট সম্পর্কে নিশ্চিত না হলে, support@brave.com এ ইমেল করুন"
+    "message": "আপনার বাক্যাংশটি নিরাপদ রাখুন। আপনি যদি মজার কিছু দেখতে পান বা কোনও ওয়েবসাইট সম্পর্কে আপনি অনিশ্চিত হয়ে থাকেন, ইমেল support@brave.com"
   },
   "rpcUrl": {
     "message": "নতুন RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "শুধুমাত্র আপনার বিশ্বাস সাইটের সাথে সংযুক্ত হন।"
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "একটি দূষিত ইথেরিয়াম নেটওয়ার্ক সরবরাহকারী ব্লকচেইনের অবস্থা সম্পর্কে মিথ্যা বলতে এবং আপনার নেটওয়ার্ক ক্রিয়াকলাপ রেকর্ড করতে পারেন। আপনার বিশ্বাসযোগ্য কাস্টম নেটওয়ার্কগুলি কেবল যুক্ত করুন।"
   },
   "optionalChainId": {
     "message": "ChainID (ঐচ্ছিক)"
@@ -740,6 +1025,10 @@
   "next": {
     "message": "পরবর্তী"
   },
+  "nextNonceWarning": {
+    "message": "ননস $1 এর প্রস্তাবিত ননসের চেয়ে বেশি",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "এই নামের জন্য কোনো ঠিকানা সেট করা হয় নি।"
   },
@@ -748,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "আপনার কোনো লেনদেন নেই"
+  },
+  "noThanks": {
+    "message": "না থাক"
+  },
+  "notCurrentAccount": {
+    "message": "এটি কি সঠিক অ্যাকাউন্ট? এটি আপনার ওয়ালেটে বর্তমানে নির্বাচিত অ্যাকাউন্ট থেকে আলাদা"
   },
   "notEnoughGas": {
     "message": "পর্যাপ্ত গ্যাস নেই"
@@ -774,7 +1069,7 @@
     "message": "MetaMetrics এ অংশগ্রহণ করুন"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Brave কে আরও উন্নত করতে আমাদের সহায়তা করার জন্য MetaMetrics এ অংশগ্রহণ করুন"
+    "message": "সাহসকে আরও উন্নত করতে আমাদের সহায়তার জন্য মেটামেট্রিক্সে অংশ নিন"
   },
   "password": {
     "message": "পাসওয়ার্ড"
@@ -790,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "বাকি"
+    "message": "বিচারাধীন রয়েছে"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "আপনি এই অনুমতি অনুমোদন করেছেন"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "আপনি এই অনুমতি অনুমোদন করেন নি"
   },
   "personalAddressDetected": {
     "message": "ব্যক্তিগত ঠিকানা সনাক্তিকৃত হয়েছে। টোকেন কন্ট্র্যাক্ট অ্যাড্রেসটি লিখুন।"
+  },
+  "plusXMore": {
+    "message": "আরও + $1",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "পূর্ববর্তী"
@@ -817,14 +1122,23 @@
   "privateNetwork": {
     "message": "ব্যক্তিগত নেটওয়ার্ক"
   },
+  "proposedApprovalLimit": {
+    "message": "প্রস্তাবিত অনুমোদনের সীমা"
+  },
   "queue": {
     "message": "অপেক্ষমাণ"
+  },
+  "queued": {
+    "message": "সারিবদ্ধ"
   },
   "readdToken": {
     "message": "আপনি আপনার অ্যাকাউন্টস বিকল্পের মেনুতে \"টোকেনগুলি যোগ করুন\" এ গিয়ে ভবিষ্যতে আবার এই টোকেনটি যোগ করতে পারবেন। "
   },
   "recents": {
     "message": "সাম্প্রতিকগুলি"
+  },
+  "receive": {
+    "message": "পান"
   },
   "recipientAddress": {
     "message": "প্রাপকের ঠিকানা"
@@ -851,7 +1165,7 @@
     "message": "অ্যাকাউন্ট রিসেট করুন"
   },
   "resetAccountDescription": {
-    "message": "আপনার অ্যাকাউন্ট রিসেট করা আপনার লেনদেনের ইতিহাসকে মুছে পরিস্কার করবে।"
+    "message": "আপনার অ্যাকাউন্টটি পুনরায় সেট করা আপনার লেনদেনের ইতিহাস সাফ করবে। এটি আপনার অ্যাকাউন্টগুলিতে ভারসাম্যগুলি পরিবর্তন করবে না বা আপনার বীজ বাক্যাংশটি পুনরায় প্রবেশের প্রয়োজন হবে না।"
   },
   "deleteNetwork": {
     "message": "নেটওয়ার্ক মুছবেন?"
@@ -868,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "সীড ফ্রেজ দিয়ে আপনার অ্যাকাউন্ট রিস্টোর করুন"
   },
+  "restoreWalletPreferences": {
+    "message": "$1 থেকে আপনার ডেটা ব্যাকআপ পাওয়া গেছে। আপনি কি আপনার মানিব্যাগ পছন্দ পুনরুদ্ধার করতে চান?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "অনুরোধগুলি স্বীকৃতির জন্য অপেক্ষা করছে"
   },
@@ -878,7 +1196,7 @@
     "message": "পুনরুদ্ধার করুন"
   },
   "revealSeedWords": {
-    "message": "সীড শব্দগুলি প্রকাশ করুন"
+    "message": "বীজ বাক্যাংশ প্রকাশ করুন"
   },
   "revealSeedWordsTitle": {
     "message": "সীড ফ্রেজ"
@@ -947,7 +1265,7 @@
     "message": "সতর্কতা: কখনও আপনার ব্যাকআপ ফ্রেজ প্রকাশ করবেন না। এই ফ্রেজ পেয়ে গেলে যে কেউ আপনার ইথার চিরকালের জন্য নিয়ে নিতে পারবেন।"
   },
   "secretPhrase": {
-    "message": "আপনার ভল্ট রিস্টোর করতে এখানে আপনার গোপন বারো শব্দের ফ্রেজ লিখুন।"
+    "message": "আপনার ভল্ট পুনরুদ্ধার করতে এখানে আপনার গোপন 24 শব্দ বাক্য লিখুন।"
   },
   "securityAndPrivacy": {
     "message": "নিরাপত্তা এবং গোপনীয়তা"
@@ -958,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "প্রতিটি শব্দকে একটি স্পেস দিয়ে আলাদা করুন"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "ক্লিপবোর্ড থেকে বীজ বাক্যাংশ আটকান"
+  },
+  "showSeedPhrase": {
+    "message": "বীজ বাক্যাংশ দেখান"
+  },
   "seedPhraseReq": {
-    "message": "সীড ফ্রেজগুলি 12 শব্দের"
+    "message": "বীজ বাক্যাংশগুলিতে 12, 15, 18, 21 বা 24 শব্দ রয়েছে"
+  },
+  "selectingAllWillAllow": {
+    "message": "সমস্তটি নির্বাচন করা এই সাইটটিকে আপনার বর্তমান অ্যাকাউন্টগুলির সমস্ত দেখার অনুমতি দেবে। আপনি এই সাইটে বিশ্বাস করেন তা নিশ্চিত করুন।"
+  },
+  "selectAccounts": {
+    "message": "অ্যাকাউন্ট (গুলি) নির্বাচন করুন"
+  },
+  "selectAll": {
+    "message": "সকল বেছে নিন"
   },
   "selectCurrency": {
     "message": "কারেন্সি নির্বাচন করুন"
@@ -972,6 +1305,9 @@
   },
   "selectType": {
     "message": "ধরণ নির্বাচন করুন"
+  },
+  "buy": {
+    "message": "ক্রয় করুন"
   },
   "send": {
     "message": "পাঠান"
@@ -991,17 +1327,27 @@
   "sentTokens": {
     "message": "টোকেনগুলি পাঠান"
   },
+  "sendSpecifiedTokens": {
+    "message": "$1 প্রেরণ করুন",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "প্রতিটি শব্দকে একটি স্পেস দিয়ে আলাদা করুন"
   },
   "searchTokens": {
     "message": "টোকেনগুলি অনুসন্ধান করুন"
   },
+  "searchAccounts": {
+    "message": "অ্যাকাউন্ট অনুসন্ধান করুন"
+  },
+  "noAccountsFound": {
+    "message": "প্রদত্ত অনুসন্ধানের প্রশ্নের জন্য কোনও অ্যাকাউন্ট পাওয়া যায় নি"
+  },
   "selectAnAccount": {
     "message": "একটি অ্যাকাউন্ট নির্বাচন করুন"
   },
   "selectAnAccountHelp": {
-    "message": "Brave এ দেখতে অ্যাকাউন্টটি নির্বাচন করুন"
+    "message": "সাহসী দেখতে অ্যাকাউন্টটি নির্বাচন করুন"
   },
   "selectAHigherGasFee": {
     "message": "আপনার লেনদেনটি প্রক্রিয়াকরণ ত্বরান্বিত করতে একটি উচ্চতর গ্যাস ফী নির্বাচন করুন।*"
@@ -1042,6 +1388,9 @@
   "signatureRequest": {
     "message": "স্বাক্ষরের অনুরোধ"
   },
+  "signatureRequest1": {
+    "message": "বার্তা"
+  },
   "signed": {
     "message": "স্বাক্ষরিত"
   },
@@ -1063,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "এই লেনদেনটি দ্রুততর করুন "
   },
+  "spendLimitPermission": {
+    "message": "সীমা অনুমতি ব্যয় করুন"
+  },
+  "spendLimitRequestedBy": {
+    "message": "ব্যয় সীমাটি $1 দ্বারা অনুরোধ করা হয়েছে",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "ব্যয় সীমা খুব বড়"
+  },
+  "spendLimitInvalid": {
+    "message": "অবৈধ ব্যয় সীমা; অবশ্যই একটি ধনাত্মক শব্দ হতে হবে"
+  },
   "switchNetworks": {
     "message": "নেটওয়ার্কগুলি বদলান"
+  },
+  "stateLogFileName": {
+    "message": "সাহসী স্টেট লগস"
   },
   "stateLogs": {
     "message": "স্টেট লগসমূহ"
@@ -1074,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "স্টেট লগগুলি পুনরুদ্ধার করার ত্রুটি।"
+  },
+  "statusConnected": {
+    "message": "সংযুক্ত"
+  },
+  "statusNotConnected": {
+    "message": "সংযুক্ত নয়"
   },
   "step1HardwareWallet": {
     "message": "1. হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন"
@@ -1088,13 +1459,16 @@
     "message": "আপনি যে অ্যাকাউন্টটি দেখতে চান সেটি নির্বাচন করুন। আপনি একই সময়ে শুধুমাত্র একটিই বেছে নিতে পারবেন। "
   },
   "step3HardwareWallet": {
-    "message": "3. dApps এবং আরও ব্যবহার করে শুরু করুন!"
+    "message": "৩. ওয়েব 3 সাইট এবং আরও বেশি ব্যবহার শুরু করুন!"
   },
   "step3HardwareWalletMsg": {
-    "message": "আপনি কোনো Ethereum অ্যাকাউন্ট যেমন ব্যবহার করেন সেইভাবে আপনার হার্ডওয়্যার অ্যাকাউন্ট ব্যবহার করুন। dApps এ লগইন করুন, Eth পাঠান, ERC20 টোকেন এবং CryptoKitties এর মতো পরস্পর বিনিময়যোগ্য নয় এমন টোকেনগুলি ক্রয় ও সংরক্ষণ করুন।  "
+    "message": "আপনার হার্ডওয়ার অ্যাকাউন্টটি যেমন আপনার কোনও ইথেরিয়াম অ্যাকাউন্টের মতো ব্যবহার করুন। ওয়েব 3 সাইটগুলিতে সংযুক্ত করুন, ETH প্রেরণ করুন, ERC20 টোকেন এবং ক্রিপ্টোকিটিসের মতো অ-ছত্রাকযুক্ত টোকেনগুলি কিনুন এবং সঞ্চয় করুন।"
   },
   "storePhrase": {
     "message": "এই বাক্যাংশটি 1Password এর মতো একটি পাসওয়ার্ড পরিচালকে সংরক্ষণ করুন। "
+  },
+  "submit": {
+    "message": "জমা দিন"
   },
   "submitted": {
     "message": "জমা করা হয়েছে"
@@ -1115,19 +1489,19 @@
     "message": "মোবাইল দিয়ে সিঙ্ক করুন"
   },
   "syncWithMobileDesc": {
-    "message": "আপনি আপনার অ্যাকাউন্ট এবং তথ্য আপনার মোবাইল ডিভাইস দিয়ে সিঙ্ক করতে পারেন। Brave মোবাইল অ্যাপটি খুলুন, \"সেটিংস\" এ যান এবং \"ব্রাউজার এক্সটেনশন থেকে সিঙ্ক করুন\" এ ট্যাপ করুন "
+    "message": "আপনি আপনার মোবাইল ডিভাইসের সাথে আপনার অ্যাকাউন্ট এবং তথ্য সিঙ্ক করতে পারেন।Brave মোবাইল অ্যাপ্লিকেশনটি খুলুন, \"Settings\" এ যান এবং \"Sync from Browser Extension\" এ টেপ করুন।"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "আপনি প্রথমবারের জন্য Brave খোলার পরে, শুধু আপনার ফোনে পদক্ষেপগুলি অনুসরণ করুন। "
+    "message": "আপনি যদি প্রথমবারের মতো সাহসী মোবাইল অ্যাপটি খোলেন, কেবলমাত্র আপনার ফোনের পদক্ষেপগুলি অনুসরণ করুন।"
   },
   "syncWithMobileScanThisCode": {
-    "message": "আপনার Brave মোবাইল অ্যাপ দিয়ে এই কোডটি স্ক্যান করুন"
+    "message": "আপনার সাহসী মোবাইল অ্যাপ্লিকেশন দিয়ে এই কোডটি স্ক্যান করুন"
   },
   "syncWithMobileBeCareful": {
     "message": "এই কোডটি স্ক্যান করার সময় কেউ আপনার স্ক্রিনটি দেখছে না তা নিশ্চিত করুন"
   },
   "syncWithMobileComplete": {
-    "message": "আপনার ডেটা সফলভাবে সিঙ্ক করা হয়েছে। Brave মোবাইল অ্যাপ উপভোগ করুন!"
+    "message": "আপনার ডেটা সফলভাবে সিঙ্ক হয়েছে। সাহসী মোবাইল অ্যাপ্লিকেশন উপভোগ করুন!"
   },
   "terms": {
     "message": "ব্যবহারের শর্তাবলী"
@@ -1144,6 +1518,13 @@
   "to": {
     "message": "প্রতি"
   },
+  "toAddress": {
+    "message": "থেকে: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "প্রতি:"
+  },
   "token": {
     "message": "টোকেন"
   },
@@ -1152,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "টোকেন কন্ট্র্যাক্ট অ্যাড্রেস"
+  },
+  "tokenOptions": {
+    "message": "টোকেন বিকল্প"
   },
   "tokenSymbol": {
     "message": "টোকেনের প্রতীক"
@@ -1201,6 +1585,9 @@
   "transactionTime": {
     "message": "লেনদেনের সময়"
   },
+  "showTransactionTimeDescription": {
+    "message": "মূল ইথেরিয়াম নেটওয়ার্কে থাকাকালীন ক্রিয়াকলাপ ট্যাবে লেনদেনের সময় অনুমান প্রদর্শন করতে এটি নির্বাচন করুন। দ্রষ্টব্য: প্রাক্কলনগুলি নেটওয়ার্কের অবস্থার উপর ভিত্তি করে"
+  },
   "transfer": {
     "message": "ট্রান্সফার করুন"
   },
@@ -1214,14 +1601,21 @@
     "message": "আপনার টোকেন ব্যালেন্সগুলি লোড করতে আমাদের সমস্যা হয়েছিল। আপনি সেগুলি দেখতে পারেন",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "আপনি কি এই সাইটে বিশ্বাস করেন? এই অনুমতি প্রদান করে, আপনি $1কে আপনার $2টি প্রত্যাহার করার অনুমতি দিচ্ছেন এবং আপনার জন্য লেনদেন স্বয়ংক্রিয়ভাবে চালিয়ে যাবেন।",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "আবার করুন"
   },
   "typePassword": {
-    "message": "আপনার Brave পাসওয়ার্ড টাইপ করুন"
+    "message": "আপনার সাহসী পাসওয়ার্ড টাইপ করুন"
   },
   "unapproved": {
     "message": "অননুমোদিত"
+  },
+  "alertDisableTooltip": {
+    "message": "এটিতে পরিবর্তন করা যেতে পারে \"Settings > Alerts\""
   },
   "units": {
     "message": "ইউনিটসমূহ"
@@ -1241,6 +1635,9 @@
   "unknownCameraError": {
     "message": "আপনার ক্যামেরা অ্যাক্সেস করার চেষ্টা করার সময় একটি ত্রুটি হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন..."
   },
+  "unlimited": {
+    "message": "সীমাহীন"
+  },
   "unlock": {
     "message": "আনলক"
   },
@@ -1251,10 +1648,19 @@
     "message": "আপডেট করা $1"
   },
   "urlErrorMsg": {
-    "message": "URI গুলির যথাযথ HTTP/HTTPS প্রেফিক্সের প্রয়োজন।"
+    "message": "ইউআরএলগুলির জন্য উপযুক্ত HTTP / HTTPS উপসর্গের প্রয়োজন।"
+  },
+  "urlExistsErrorMsg": {
+    "message": "ইউআরএল ইতিমধ্যে বিদ্যমান নেটওয়ার্কের তালিকায় উপস্থিত রয়েছে"
   },
   "usedByClients": {
     "message": "বিভিন্ন ধরণের গ্রাহকদের দ্বারা ব্যবহৃত হয়"
+  },
+  "usePhishingDetection": {
+    "message": "ফিশিং সনাক্তকরণ ব্যবহার করুন"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "ইথেরিয়াম ব্যবহারকারীদের লক্ষ্য করে ফিশিং ডোমেনগুলির জন্য একটি সতর্কতা প্রদর্শন করুন"
   },
   "userName": {
     "message": "ইউজারনেম"
@@ -1274,11 +1680,14 @@
   "viewOnEtherscan": {
     "message": "Etherscan দেখুন"
   },
+  "retryTransaction": {
+    "message": "পুনরায় লেনদেনের চেষ্টা করুন"
+  },
   "visitWebSite": {
     "message": "আমাদের ওয়েবসাইট দেখুন"
   },
   "walletSeed": {
-    "message": "ওয়ালেট সীড"
+    "message": "বীজ বাক্যাংশ"
   },
   "welcomeBack": {
     "message": "পুনরায় স্বাগত!"
@@ -1286,8 +1695,15 @@
   "welcome": {
     "message": "Brave এ স্বাগতম"
   },
+  "whatsThis": {
+    "message": "এটি কী?"
+  },
   "writePhrase": {
     "message": "এই বাক্যাংশটি একটি কাগজের টুকরোর উপর লিখে একটি নিরাপদ স্থানে সংরক্ষণ করুন। আপনি আরও নিরাপত্তা চাইলে, সেটি একাধিক কাগজের টুকরোতে লিখে 2 - 3টি আলাদা আলাদা স্থানে সংরক্ষণ করুন।"
+  },
+  "xOfY": {
+    "message": "$2 এর $1",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "হ্যাঁ, চেষ্টা করা যাক"
@@ -1307,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "স্পীড আপ এ শূণ্য গ্যাসের মূল্য"
   },
+  "decryptRequest": {
+    "message": "অনুরোধ ডিক্রিপ্ট করুন"
+  },
+  "decrypt": {
+    "message": "ডিক্রিপ্ট"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 আপনার ক্রিয়াটি সম্পূর্ণ করতে এই বার্তাটি পড়তে চাই",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "ডিক্রিপ্ট বার্তা"
+  },
+  "decryptCopy": {
+    "message": "এনক্রিপ্ট করা বার্তা অনুলিপি করুন"
+  },
+  "decryptInlineError": {
+    "message": "এই বার্তাটি ত্রুটির কারণে ডিক্রিপ্ট করা যায় না: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "সরবরাহ করুন"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "এনক্রিপশন পাবলিক কী অনুরোধ"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 আপনার সর্বজনীন এনক্রিপশন কীটি চাইবে। সম্মতি দিয়ে, এই সাইটটি আপনাকে এনক্রিপ্ট করা বার্তাগুলি রচনা করতে সক্ষম করবে।",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "ক্রিপ্টো ওয়ালেটস সিক্রেট ব্যাকআপ ফ্রেস"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave Settings"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "ক্রিপ্টো ওয়ালেটস আপনাকে ক্রিপ্টোকারেন্সি এবং সাহসীতে সম্পর্কিত সম্পদের সাথে কাজ করতে দেয়। ক্রিপ্টো ওয়ালেটস ইথেরিয়াম টোকেনগুলির মতো ETH এবং BAT, পাশাপাশি সংগ্রহযোগ্যগুলি সমর্থন করে এবং আপনাকে অ্যাপস এবং অন্যান্য স্মার্ট চুক্তি সহ কাজ করতে দেয়। এই সমস্তগুলি এমন লোকদের জন্য যারা ইথেরিয়াম এবং অন্যান্য ব্লকচেইন সিস্টেমগুলির সাথে পরিচিত - বা শিখতে আগ্রহী"
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "যদি আপনি স্বীকার করেন যে এই ব্যবহারের সাথে যুক্ত সমস্ত ঝুঁকির জন্য আপনি একা দায়বদ্ধ তবেই কেবলমাত্র ক্রিপ্টো ওয়ালেটগুলি ব্যবহার করুন, এবং ওই ব্রেভ সফ্টওয়্যার এই প্রকার ব্যবহারের ফলে আপনি যে প্রাসঙ্গিক বা ফলস্বরূপ ক্ষতির সম্মুখীন হতে পারেন তার কোনও ক্ষতি বা দায়বদ্ধতা বহন করে না।"
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "এই সবগুলি এর থেকে সম্পূর্ণ পৃথক হয় "
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "সুতরাং আপনি যদি আপনার পছন্দের সাইটগুলি সমর্থনের সন্ধান করছেন, তবে তার পরিবর্তে ওই দিকে যান।"
+  },
+  "cryptoWalletsTitle": {
+    "message": "Crypto ওয়ালেটগুলি"
+  },
+  "disclosureConfirm": {
+    "message": "আমি বুঝেছি"
+  },
   "ledgerCreateSubText": {
     "message": "dApps এর সাথে যোগাযোগ করতে এবং অন্যান্য সংযুক্ত ওয়ালেটগুলিতে ট্রান্সফার করতে আপনার লেজর হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন।"
+  },
+  "metamaskImportSubText": {
+    "message": "দ্রষ্টব্য: যদি কোনও মেটামাস্ক ওয়ালেট থেকে আমদানি করা হয় তবে 24 এর পরিবর্তে 12 টি শব্দ লিখুন।"
   },
   "newLocalWallet": {
     "message": "নতুন স্থানীয় ওয়ালেট"
@@ -1316,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "dApps অ্যাক্সেস করতে এবং ক্রিপ্টো এবং মূল্যবান সামগ্রীগুলি নিরাপদে সংরক্ষণ করতে একটি নতুন Brave ওয়ালেট তৈরি করুন। কোনো ট্রেডিং ফী ছাড়া নাম প্রকাশ না করে টোকেনগুলি কেনাবেচা করুন।"
   },
+  "passWarningOne": {
+    "message": "এই পাসওয়ার্ডটি আপনার ব্যক্তিগত কী রক্ষা করে। আপনি যদি এটি ভুলে যান তবে কেউ তা পুনরায় সেট করতে পারবেন না, এমনকি সাহসীও নয়!"
+  },
+  "providerErrorMessage": {
+    "message": "এই মানিব্যাগটি আপনার ডিফল্ট ইথেরিয়াম ড্যাপ সরবরাহকারী নয়।"
+  },
   "trezorCreateSubText": {
     "message": "dApps এর সাথে যোগাযোগ করতে এবং অন্যান্য সংযুক্ত ওয়ালেটগুলিতে ট্রান্সফার করতে আপনার Trezor হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন।"
+  },
+  "welcomeCryptoWallets": {
+    "message": "ব্রেভ ক্রিপ্টো ওয়ালেটে স্বাগতম"
   }
 }

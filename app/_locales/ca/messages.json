@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "He llegit i estic d'acord amb $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Vegi les direccions dels seus comptes permesos (necessari)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Webs connectats"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 està connectat a aquests webs. Pot veure la sirecció del seu compte.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 no està connectat a cap web.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Té 1 compte connectat a aquest web."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Té comptes a $1 connectades a aquest web.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave no està connectat a aquest web. Per a connectar-se a un lloc Web3, trobi el botó de connexió al mateix web. "
+  },
+  "currentAccountNotConnected": {
+    "message": "El seu compte corrent no està connectat"
+  },
+  "switchToThisAccount": {
+    "message": "Canviar a aquest compte"
+  },
+  "disconnectThisAccount": {
+    "message": "Desconnectar aquest compte"
+  },
+  "permissions": {
+    "message": "Permisos"
+  },
+  "showPermissions": {
+    "message": "Mostrar permisos"
+  },
+  "authorizedPermissions": {
+    "message": "Ha autoritzat els següents permisos"
+  },
+  "connectManually": {
+    "message": "Connectar-se manualment al web actual"
+  },
+  "disconnect": {
+    "message": "Desconnectar"
+  },
+  "disconnectAllAccounts": {
+    "message": "Desconnectar tots els comptes"
+  },
+  "disconnectPrompt": {
+    "message": "Desconnectar $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Està segur que vol desconnectar? Pot perdre la funcionalitat del web."
+  },
+  "dismiss": {
+    "message": "Omet"
+  },
+  "showIncomingTransactions": {
+    "message": "Mostrar les transaccions entrants"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Seleccionar aquesta opció per a utilitzar l'Etherscan per a mostrar les transaccions entrants a la llista de transaccions"
+  },
   "chartOnlyAvailableEth": {
     "message": "Mostra només els disponibles a les xarxes Ethereum."
+  },
+  "connecting": {
+    "message": "S'està connectant..."
+  },
+  "connectWithMetaMask": {
+    "message": "Connectar amb Brave"
+  },
+  "connectTo": {
+    "message": "Connectar a $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Connecti amb tots els seus $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "Comptes",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Connectar amb $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 comptes",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Contractar Interacció"
@@ -12,10 +109,14 @@
     "message": "Informació"
   },
   "aboutSettingsDescription": {
-    "message": "Versió, centre de suport, i informació de contacte"
+    "message": "Versió, centre de suport, i informació de contacte."
   },
   "acceleratingATransaction": {
     "message": "* Accelerar una transacció utilitzant un preu de gas més alt augmenta les possibilitats de ser processat més ràpidament per la xarxa, però no sempre es pot garantir."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 pot accedir i gastar fins  a aquesta quantitat màxima",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Accedint a la teva càmera..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "Has de seleccionar un compte!"
   },
+  "active": {
+    "message": "Actiu"
+  },
+  "activity": {
+    "message": "Activitat"
+  },
   "activityLog": {
     "message": "registre d'activitat"
   },
@@ -48,7 +155,7 @@
     "message": "Configuració avançada"
   },
   "advancedSettingsDescription": {
-    "message": "Accedeix a característiques de desenvolupador, descarrega Registres d'Estat, Reinicia el Compte, instal·la testnets i personalitza RPC"
+    "message": "Accedeix a característiques de desenvolupador, descarrega Registres d'Estat, Reinicia el Compte, instal·la testnets i personalitza RPC."
   },
   "advancedOptions": {
     "message": "Opcions Avançades"
@@ -74,8 +181,37 @@
   "addAcquiredTokens": {
     "message": "Afegeix les fitxes que has adquirit fent servir Brave"
   },
+  "alerts": {
+    "message": "Alertes"
+  },
+  "alertsSettingsDescription": {
+    "message": "Activar o desactivar cada alerta"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Navegar per un lloc web amb un compte desconegut seleccionat"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Aquesta alerta apareix a la finestra emergent quan s'està navegant per un web Web3 connectat, però el compte actualment seleccionat no està connectat."
+  },
+  "allowOriginSpendToken": {
+    "message": "Permetre a $1 gastar els seus $2?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Permetre a aquest web a:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Permeti aquesta extensió externa a:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Permeti a $1 retirar i gastar fins a la següent quantitat:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
   "amount": {
     "message": "Quantitat"
+  },
+  "amountWithColon": {
+    "message": "Quantitat:"
   },
   "appDescription": {
     "message": "Un Moneder Ethereum al teu Navegador",
@@ -88,10 +224,17 @@
   "approve": {
     "message": "Aprovar"
   },
+  "approveSpendLimit": {
+    "message": "Aprovar el limit de despesa a $1",
+    "description": "The token symbol that is being approved"
+  },
   "approved": {
     "message": "Aprovat"
   },
   "asset": {
+    "message": "Actius"
+  },
+  "assets": {
     "message": "Actius"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "Atribucions"
   },
   "autoLockTimeLimit": {
-    "message": "Temporitzador de tancament de sessió automàtic (minuts)"
+    "message": "Temporalitzador de bloqueig automàtic (minuts)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Configura el temps de repòs com minuts abans que Brave tanqui la sessió automàticament"
+    "message": "Establir el temps d'inactivitat en minuts abans que Brave es tanqui."
   },
   "average": {
     "message": "Mitjana"
@@ -149,6 +292,15 @@
   "blockiesIdenticon": {
     "message": "Fer servir els Identicon Blockies"
   },
+  "nonceField": {
+    "message": "Personalitzar la transacció del nonce"
+  },
+  "nonceFieldHeading": {
+    "message": "Nonce personalitzat"
+  },
+  "nonceFieldDescription": {
+    "message": "Encengui això per a canviar el nonce (número de transacció) a les pantalles de confirmació. Aquesta és una característica avançada, utilitzi-la amb precaució."
+  },
   "browserNotSupported": {
     "message": "El teu navegador no és suportat..."
   },
@@ -166,6 +318,9 @@
   },
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitch és la destinació número 1 per a canviar més de 300 criptomonedes al millor preu."
+  },
+  "bytes": {
+    "message": "Bytes"
   },
   "off": {
     "message": "Desactivat"
@@ -201,7 +356,7 @@
     "message": "Tanca"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Necessites fer servir Brave amb Google Chrome per a connectar-te al teu Moneder Hardware."
+    "message": "Necessites fer servir Brave amb Brave Brave per a connectar-te al teu Moneder Hardware."
   },
   "confirm": {
     "message": "Confirma"
@@ -217,6 +372,9 @@
   },
   "congratulations": {
     "message": "Felicitats"
+  },
+  "connectAccountOrCreate": {
+    "message": "Connectar el compte o crear un de nou"
   },
   "connectHardwareWallet": {
     "message": "Connectar Moneder Hardaware"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Connectant a Xarxa de Prova Goerli"
+  },
+  "contacts": {
+    "message": "Contactes"
+  },
+  "contactsSettingsDescription": {
+    "message": "Afegeix, edita, elimina i gestiona els teus contactes"
+  },
+  "contactUs": {
+    "message": "Contacti'ns!"
   },
   "continueToWyre": {
     "message": "Continua a Wyre"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "Conversió de divisa"
   },
+  "currentExtension": {
+    "message": "Pàgina d'extensió actual"
+  },
   "currentLanguage": {
     "message": "Llengua Actual"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC a mida"
+  },
+  "customSpendLimit": {
+    "message": "Límit de despesa personalitzat"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Algunes dades del seu compte van ser recolzades durant una instal·lació anterior de Brave. Això podria incloure a la seva configuració, contactes i fitxes. Voldria restaurar aquestes dades ara?"
   },
   "decimalsMustZerotoTen": {
     "message": "Els decimals han de ser al menys 0, i no més de 36."
@@ -335,8 +511,11 @@
   "done": {
     "message": "Fet"
   },
+  "dontShowThisAgain": {
+    "message": "No mostris això una altra vegada"
+  },
   "downloadGoogleChrome": {
-    "message": "Descarrega Google Chrome"
+    "message": "Descarrega Brave Brave"
   },
   "downloadSecretBackup": {
     "message": "Descarrega aquesta Frase Secreta de Recuperació i guarda-la emmagatzemada de forma segura a un dispositiu d'emmagatzematge o disc dur extern encriptat."
@@ -355,6 +534,9 @@
   },
   "editContact": {
     "message": "Editar Contacte"
+  },
+  "editPermission": {
+    "message": "Editar el permís"
   },
   "endOfFlowMessage1": {
     "message": "Has passat el test - mantingues la teva seedphrase segura, és la teva responsabilitat!"
@@ -386,6 +568,13 @@
   "endOfFlowMessage10": {
     "message": "Tot fet"
   },
+  "externalExtension": {
+    "message": "Extensió Externa"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" tancarà aquesta pestanya y el dirigirà de tornada a $2",
+    "description": "Return the user to the site that initiated onboarding"
+  },
   "ensRegistrationError": {
     "message": "Error al registre de nom ENS"
   },
@@ -395,11 +584,46 @@
   "enterAnAlias": {
     "message": "Introdueix Àlies"
   },
+  "enterMaxSpendLimit": {
+    "message": "Introduir el límit de despesa màxim"
+  },
   "enterPassword": {
     "message": "Introdueix contrasenya"
   },
   "enterPasswordContinue": {
     "message": "Introdueix la contrasenya per continuar"
+  },
+  "errorCode": {
+    "message": "Codi: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Detalls d'error",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Missatge: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Codi: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave ha trobat un error",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Intenti de nou refrescant la pàgina, o contacti amb el suport a support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Intenti de nou tancant y reobrint el popup, o contacti amb el suport a support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Apilar:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Adreça Pública d'Ethereum"
@@ -419,11 +643,21 @@
   "failed": {
     "message": "Fallit"
   },
+  "failureMessage": {
+    "message": "Alguna cosa ha anat malament, i no hem pogut completar l'acció"
+  },
   "fast": {
     "message": "Ràpid"
   },
   "faster": {
     "message": "Més ràpid"
+  },
+  "feeAssociatedRequest": {
+    "message": "Una tarifa està associada a aquesta sol·licitud."
+  },
+  "fiat": {
+    "message": "Fiat",
+    "description": "Exchange type"
   },
   "fileImportFail": {
     "message": "La importació no funciona? Fes clic aquí!",
@@ -434,6 +668,13 @@
   },
   "from": {
     "message": "Des de"
+  },
+  "fromAddress": {
+    "message": "Des de: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Funció: Aprovar"
   },
   "functionType": {
     "message": "Tipus de Funció"
@@ -462,6 +703,17 @@
   "gasPriceNoDenom": {
     "message": "Preu del Gas"
   },
+  "gdprMessage": {
+    "message": "Aquestes dades s'agureguen i, per tant, anònims als efectes del Reglament General de Protecció de Dades (UE) 2016/679. Per a més informació en relació a les nostres pràctiques de privacitat, per favor, revisi el nostre $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Política de privacitat aquí",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
+  "general": {
+    "message": "General"
+  },
   "generalSettingsDescription": {
     "message": "Conversió de divises, divisa principal, idioma, icones d'identificació única"
   },
@@ -480,6 +732,9 @@
   },
   "happyToSeeYou": {
     "message": "Ens alegrem de veure't."
+  },
+  "hardware": {
+    "message": "hardware"
   },
   "hardwareWalletConnected": {
     "message": "Moneder hardware connectat"
@@ -502,6 +757,10 @@
   },
   "hide": {
     "message": "Amaga"
+  },
+  "hideTokenSymbol": {
+    "message": "Amagar $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "Amagar fitxa?"
@@ -526,7 +785,7 @@
     "message": "Importar Moneder"
   },
   "importYourExisting": {
-    "message": "Importa el teu moneder utilitzant la frase de recuperació de 24 paraules"
+    "message": "Importa el teu moneder utilitzant la frase de recuperació de 12 paraules"
   },
   "imported": {
     "message": "Importats",
@@ -559,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Adreça de contracte coneguda"
   },
+  "knownTokenWarning": {
+    "message": "Aquesta acció editarà les fitxes que ja estan a la seva cartera, que es poden utilitzar per a fer phishing. Només aprovi si està segur que vol canviar el que aquestes fitxes representen."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Una fitxa aquí reutilitza un símbol d'una altra fitxa que veu, això pot ser confòs o enganyós. "
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No hi ha xarxa ETH, posar en minúscules"
   },
@@ -569,10 +834,22 @@
     "message": "URL de RPC"
   },
   "invalidBlockExplorerURL": {
-    "message": "URL de Block Explorer"
+    "message": "URL de l'Explorador de bloqueig invàlid"
   },
   "invalidSeedPhrase": {
     "message": "Frase de recuperació no vàlida"
+  },
+  "ipfsGateway": {
+    "message": "Porta d'enllaç IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Introduir la URL de la porta d'enllaç del CID d'IPFS per a utilitzar la resol·lució del contingut d'ENS."
+  },
+  "invalidIpfsGateway": {
+    "message": "Passarel·la IPFS invàlida: El valor ha de ser una URL vàlida"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Prohibida l'entrada a l'IPFS: Si us plau, especifiqui una porta d'enllaç CID"
   },
   "jsonFile": {
     "message": "Arxiu JSON",
@@ -580,6 +857,12 @@
   },
   "kovan": {
     "message": "Xarxa de Prova Kovan"
+  },
+  "max": {
+    "message": "Max"
+  },
+  "lastConnected": {
+    "message": "Última connexió"
   },
   "learnMore": {
     "message": "Saber més"
@@ -612,7 +895,10 @@
     "message": "Host local 8545"
   },
   "lock": {
-    "message": "Tanca la sessió"
+    "message": "Bloqueig"
+  },
+  "lockTimeTooGreat": {
+    "message": "El temps de bloqueig és massa elevat"
   },
   "mainnet": {
     "message": "Xarxa Ethereum principal"
@@ -625,6 +911,15 @@
   },
   "message": {
     "message": "Missatge"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Ara té més control sobre les connexions del seu compte a Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "El botó d'estat de connexió mostra si el lloc web que està visitant està connectat al seu compte actualment seleccionat."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Faci clic al botó per a administrar tots els seus comptes conectats."
   },
   "metamaskDescription": {
     "message": "Conectant-te a Ethereum i la web descentralitzada."
@@ -709,6 +1004,12 @@
   "rpcUrl": {
     "message": "Nova URL de RPC"
   },
+  "onlyConnectTrust": {
+    "message": "Només connecti amb webs amb els quals confiï."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Un proveïdor de xarxa Ethereum maliciós pot mentir sobre l'estat de la cadena de bloqueig i registrar la seva activitat a la xarxa. Agregui només xarxes personalitzades en les quals confiï. "
+  },
   "optionalChainId": {
     "message": "Cadena ID (opcional)"
   },
@@ -724,6 +1025,10 @@
   "next": {
     "message": "Següent"
   },
+  "nextNonceWarning": {
+    "message": "El nonce és més alt que el nonce suggerit de $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "No existeix cap adreça amb aquest nom."
   },
@@ -732,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "No tens transaccions"
+  },
+  "noThanks": {
+    "message": "No, gràcies"
+  },
+  "notCurrentAccount": {
+    "message": "Aquest és el compte correcte? És diferent al compte seleccionat actualment a la seva cartera"
   },
   "notEnoughGas": {
     "message": "Gas Insuficient"
@@ -776,8 +1087,21 @@
   "pending": {
     "message": "pendent"
   },
+  "permissionCheckedIconDescription": {
+    "message": "Ha aprovat aquest permís"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "No ha aprovat aquest permís"
+  },
   "personalAddressDetected": {
     "message": "Adreça personal detectada. Introduir l'adreça del contracte de fitxa."
+  },
+  "plusXMore": {
+    "message": "+ $1 més",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
+  },
+  "prev": {
+    "message": "Prev"
   },
   "primaryCurrencySetting": {
     "message": "Divisa principal"
@@ -798,11 +1122,23 @@
   "privateNetwork": {
     "message": "Xarxa privada"
   },
+  "proposedApprovalLimit": {
+    "message": "Límit d'aprovació proposat"
+  },
   "queue": {
     "message": "Cua"
   },
+  "queued": {
+    "message": "Cua d'espera"
+  },
   "readdToken": {
     "message": "Pots tornar a afegir aquesta fitxa en el futur anant a \"Afegir fitxa\" al menu d'opcions dels teus comptes."
+  },
+  "recents": {
+    "message": "Recents"
+  },
+  "receive": {
+    "message": "Rep"
   },
   "recipientAddress": {
     "message": "Adreça del destinatari"
@@ -845,6 +1181,10 @@
   },
   "restoreAccountWithSeed": {
     "message": "Restaura el teu compte amb Frase de Recuperació"
+  },
+  "restoreWalletPreferences": {
+    "message": "S'ha trobat una còpia de seguretat de les seves dades de $1. Voldria restaurar les preferències de la seva cartera?",
+    "description": "$1 is the date at which the data was backed up"
   },
   "requestsAwaitingAcknowledgement": {
     "message": "peticions esperant ser reconegudes"
@@ -936,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Separa cada paraula amb un únic espai"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Enganxa la frase de seguretat al porta-retalls"
+  },
+  "showSeedPhrase": {
+    "message": "Mostra la frase de seguretat"
+  },
   "seedPhraseReq": {
     "message": "Les frases de recuperació tenen 12 paraules"
+  },
+  "selectingAllWillAllow": {
+    "message": "Seleccionar tot permetrà a aquest web veure tots els seus comptes actuals. Asseguris de confiar en aquest web."
+  },
+  "selectAccounts": {
+    "message": "Seleccioni els comptes"
+  },
+  "selectAll": {
+    "message": "Selecciona-ho tot"
   },
   "selectCurrency": {
     "message": "Selecciona divisa"
@@ -950,6 +1305,9 @@
   },
   "selectType": {
     "message": "Selecciona el tipus"
+  },
+  "buy": {
+    "message": "Compra"
   },
   "send": {
     "message": "Envia"
@@ -969,11 +1327,21 @@
   "sentTokens": {
     "message": "fitxes enviades"
   },
+  "sendSpecifiedTokens": {
+    "message": "Enviar $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Separa cada paraula amb un sol espai"
   },
   "searchTokens": {
     "message": "Tokens per cercar"
+  },
+  "searchAccounts": {
+    "message": "Cercar comptes"
+  },
+  "noAccountsFound": {
+    "message": "No s'han trobat comptes per a la consulta de búsqueda marcada"
   },
   "selectAnAccount": {
     "message": "Selecciona un Compte"
@@ -1020,6 +1388,9 @@
   "signatureRequest": {
     "message": "Sol·licitud de Signatura"
   },
+  "signatureRequest1": {
+    "message": "Missatge"
+  },
   "signed": {
     "message": "Signat"
   },
@@ -1041,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Accelerar aquesta transacció"
   },
+  "spendLimitPermission": {
+    "message": "Permís de límit de despesa"
+  },
+  "spendLimitRequestedBy": {
+    "message": "El límit de despesa sol·licitat per $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "El límit de despesa és massa elevat"
+  },
+  "spendLimitInvalid": {
+    "message": "Límit de despesa invàlid; ha de ser un nombre positiu"
+  },
   "switchNetworks": {
     "message": "Intercanviar Xarxes"
+  },
+  "stateLogFileName": {
+    "message": "Registres de l'Estat de Brave"
   },
   "stateLogs": {
     "message": "Registres d'estat"
@@ -1052,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Error al recuperar els registres d'estat."
+  },
+  "statusConnected": {
+    "message": "Connectat"
+  },
+  "statusNotConnected": {
+    "message": "No connectat"
   },
   "step1HardwareWallet": {
     "message": "1. Connectar Moneder Hardware"
@@ -1074,6 +1467,9 @@
   "storePhrase": {
     "message": "Guarda aquesta frase a un gestor de contrasenyes com Contrasenya 1"
   },
+  "submit": {
+    "message": "Envia"
+  },
   "submitted": {
     "message": "Enviat"
   },
@@ -1084,7 +1480,7 @@
     "message": "Símbol"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "El símbol ha de tenir com a mínim 11 caràcters."
+    "message": "El símbol ha de tenir entre 0 i 12 caràcters."
   },
   "syncWithMobile": {
     "message": "Sincronitza amb el mòbil"
@@ -1110,6 +1506,9 @@
   "terms": {
     "message": "Condicions d'ús"
   },
+  "testFaucet": {
+    "message": "Test Faucet"
+  },
   "thisWillCreate": {
     "message": "Això crearà un nou moneder i frase de recuperació"
   },
@@ -1119,14 +1518,30 @@
   "to": {
     "message": "A"
   },
+  "toAddress": {
+    "message": "Fins a: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "A:"
+  },
+  "token": {
+    "message": "Token"
+  },
   "tokenAlreadyAdded": {
     "message": "El token ja s'ha afegit."
   },
   "tokenContractAddress": {
     "message": "Adreça del contracte del token"
   },
+  "tokenOptions": {
+    "message": "Opcions de fitxes "
+  },
   "tokenSymbol": {
     "message": "Símbol de Fitxa"
+  },
+  "total": {
+    "message": "Total"
   },
   "transaction": {
     "message": "transacció"
@@ -1170,6 +1585,9 @@
   "transactionTime": {
     "message": "Temps de transacció"
   },
+  "showTransactionTimeDescription": {
+    "message": "Seleccioni aquesta opció per a mostrar les estimacions de temps de transacció pendents a la pestanya d'activitat mentre es troba la Xarxa Principar d'Ethereum. Nota: les estimacions són aproximacions basades a les condicions de la xarxa."
+  },
   "transfer": {
     "message": "Transferència"
   },
@@ -1183,6 +1601,10 @@
     "message": "Hem tingut problemes en carregar el teu saldo de fitxes. Els pots veure",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Confia en aquest web? Quan concedeix aquest permís, està permetent que $1 retiri els seus $2 i automatitzi les seves transaccions.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Torna-ho a provar"
   },
@@ -1191,6 +1613,9 @@
   },
   "unapproved": {
     "message": "Pendent d'aprovació"
+  },
+  "alertDisableTooltip": {
+    "message": "Això es pot canviar a \"Configuració > Alertes\""
   },
   "units": {
     "message": "unitats"
@@ -1210,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Hi ha hagut un error mentre intentaves accedir a la teva càmera"
   },
+  "unlimited": {
+    "message": "Il·limitat"
+  },
   "unlock": {
     "message": "Desbloqueja"
   },
@@ -1220,10 +1648,19 @@
     "message": "Actualitzat $1"
   },
   "urlErrorMsg": {
-    "message": "Els URIs requereixen el prefix HTTP/HTTPS  apropiat."
+    "message": "Les URLs necessiten el prefix HTTP/HTTPS apropiat."
+  },
+  "urlExistsErrorMsg": {
+    "message": "La URL ja existeix a la llista de xarxes"
   },
   "usedByClients": {
     "message": "Utilitzat per tot tipus de clients"
+  },
+  "usePhishingDetection": {
+    "message": "Utilitzar la detecció de Phising"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Mostrar una advertència per als dominis de phishing dirigits als usuaris d'Ethereum"
   },
   "userName": {
     "message": "Nom d'usuari"
@@ -1243,6 +1680,9 @@
   "viewOnEtherscan": {
     "message": "Veure a Etherscan"
   },
+  "retryTransaction": {
+    "message": "Reintentar la transacció"
+  },
   "visitWebSite": {
     "message": "Visita el nostre lloc web"
   },
@@ -1255,8 +1695,15 @@
   "welcome": {
     "message": "Benvingut a Brave"
   },
+  "whatsThis": {
+    "message": "Què és això?"
+  },
   "writePhrase": {
-    "message": "Escriu aquesta frase en un tros de paper i guarda'l en un lloc segur. Si vols més seguretat encara, escriu-la en diversos trossos de paper i guarda'ls cadascun a 2 - 3 llocs diferents."
+    "message": "Escriu aquesta frase en un tros de paper i guarda'l en un lloc segur. Si vols més seguretat encara, escriu-la en diversos trossos de paper i guarda'ls cadascun a 2 - 3 llocs diferents.\n"
+  },
+  "xOfY": {
+    "message": "$1 de $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Sí, provem"
@@ -1276,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Gas a cost zero accelerant-se"
   },
+  "decryptRequest": {
+    "message": "Sol·licitud de desencriptació"
+  },
+  "decrypt": {
+    "message": "Desencriptar"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 voldria llegir aquest missatge per a completar la seva acció",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Desencriptar el missatge"
+  },
+  "decryptCopy": {
+    "message": "Copiar el missatge encriptat"
+  },
+  "decryptInlineError": {
+    "message": "Aquest missatge no pot ser desencriptat per un error: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Proporcionar"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Sol·licitar el mot públic de xifrat"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "A $1 li agradaria tenir la seva clau d'encriptació pública. Al donar el seu consentiment, aquest web podrà redactar missatges encriptats per a vostè. ",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Frase secreta de recolzament de la cartera Crypto"
+  },
+  "braveRewards": {
+    "message": "Premis de Brave"
+  },
+  "braveSettings": {
+    "message": "Configuració de Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Les carteres Crypto li permeten treballar amb la criptografia i els actius relacionats a Brave. Les carteres Crypto suporten fitxes d'Ethereum com ETH i BAT, així com col·leccionables, i li permeten treballar amb Dapps i altres contractes intel·ligents. Tot això és per a persones familiaritzades amb l'Ethereum i altres sistemes de cadenes de bloqueig - o són entusiastes per aprendre'n."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Utilitzeu Crypto Moneders només si accepteu que sou l'únic responsable per a tots els riscos associats amb aquest ús, i que el Software de Brave no assumeix cap responsabilitat per a cap pèrdua incloses les accidentals o conseqüents que pugueu patir com a resultat del seu ús.  "
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Tot això està completament separat de"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Així, si estaveu buscant la manera de donar suport a les vostres llocs preferits, millor aneu-hi. "
+  },
+  "cryptoWalletsTitle": {
+    "message": "Moneders Crypto"
+  },
+  "disclosureConfirm": {
+    "message": "Ho entenc"
+  },
   "ledgerCreateSubText": {
     "message": "Connecta el teu moneder hardware Ledger per interactuar amb DApps i fer transferències a altres moneders connectats."
+  },
+  "metamaskImportSubText": {
+    "message": "Nota: Si s'importa una cartera de Metamask, introudiexi 12 paraules enlloc de 24."
   },
   "newLocalWallet": {
     "message": "Nova cartera local"
@@ -1285,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Creeu un nou moneder local de Brave per a tenir accés a dApps i emmagatzemar criptomonedes i col·leccionables de manera segura. Comercieu amb tokens de manera anònima sense taxes comercials."
   },
+  "passWarningOne": {
+    "message": "Aquesta contrasenya protegeix la seva clau privada. Ningú pot restablir-la si l'oblida, ni tan sols Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "Aquesta cartera no és el seu proveïdor predeterminat d'Ethereum Dapp."
+  },
   "trezorCreateSubText": {
     "message": "Connecta el teu moneder hardware Trezor per interactuar amb DApps i fer transferències a altres moneders connectats."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Benvinguts a Crypto Monedes Brave "
   }
 }

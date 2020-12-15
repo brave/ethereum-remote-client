@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "$1을(를) 읽었으며 이에 동의합니다",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "허용된 계정의 주소 보기(필수)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "연결된 사이트"
+  },
+  "connectedSitesDescription": {
+    "message": "$1이(가) 이 사이트에 연결되어 있습니다. 그들은 귀하의 계정 주소를 볼 수 있습니다.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1은(는) 어떤 사이트에도 연결되어 있지 않습니다.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "이 사이트에 1 계정이 연결되어 있습니다."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "이 사이트에 $1 계정이 연결되어 있습니다.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave가 이 사이트에 연결되어 있지 않습니다. web3 사이트에 연결하려면, 해당 사이트에서 연결 버튼을 찾으세요."
+  },
+  "currentAccountNotConnected": {
+    "message": "현재 계정이 연결되어 있지 않습니다"
+  },
+  "switchToThisAccount": {
+    "message": "이 계정으로 전환"
+  },
+  "disconnectThisAccount": {
+    "message": "이 계정 연결 해제"
+  },
+  "permissions": {
+    "message": "권한"
+  },
+  "showPermissions": {
+    "message": "권한 표시"
+  },
+  "authorizedPermissions": {
+    "message": "다음 권한을 승인했습니다"
+  },
+  "connectManually": {
+    "message": "현재 사이트에 수동으로 연결"
+  },
+  "disconnect": {
+    "message": "연결 해제"
+  },
+  "disconnectAllAccounts": {
+    "message": "모든 계정 연결 해제"
+  },
+  "disconnectPrompt": {
+    "message": "$1 연결 해제"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "연결을 끊으시겠습니까? 사이트 기능을 잃을 수 있습니다."
+  },
+  "dismiss": {
+    "message": "숨기기"
+  },
+  "showIncomingTransactions": {
+    "message": "수신 트랜잭션 표시"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Etherscan을 사용하여 트랜잭션 목록에 들어오는 트랜잭션을 표시하려면 선택하십시오"
+  },
   "chartOnlyAvailableEth": {
     "message": "이더리움 네트워크에서만 사용 가능한 차트."
+  },
+  "connecting": {
+    "message": "연결 중..."
+  },
+  "connectWithMetaMask": {
+    "message": "Brave와 연결하기"
+  },
+  "connectTo": {
+    "message": "$1에 연결하기",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "모든 $1에 연결",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "계정",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "$1에 연결하기",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 계정",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "계약 상호 작용"
@@ -12,10 +109,14 @@
     "message": "정보"
   },
   "aboutSettingsDescription": {
-    "message": "버전, 지원 센터, 그리고 연락처 정보"
+    "message": "버전, 지원 센터 및 연락처 정보"
   },
   "acceleratingATransaction": {
     "message": "* 더 높은 가스 요금을 사용하여 트랜잭션을 가속화하면 네트워크에 의해 더 빨리 처리될 가능성이 증가하지만 항상 빠른 처리가 보장되는 것은 아닙니다."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1은(는) 이 최대 금액에 액세스하여 지출할 수 있습니다",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "카메라에 접근 중..."
@@ -24,7 +125,7 @@
     "message": "계정"
   },
   "accountDetails": {
-    "message": "계정 상세보기"
+    "message": "계정 정보"
   },
   "accountName": {
     "message": "계정 이름"
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "계정을 선택하셔야 합니다!"
+  },
+  "active": {
+    "message": "활성"
+  },
+  "activity": {
+    "message": "활동"
   },
   "activityLog": {
     "message": "활동 로그"
@@ -48,7 +155,7 @@
     "message": "고급"
   },
   "advancedSettingsDescription": {
-    "message": "개발자 기능 사용, 상태 로그 다운로드, 계정 재설정, 테스트넷 및 사용자 정의 RPC 설정"
+    "message": "개발자 기능에 액세스, 상태 로그 다운로드, 계정 재설정, 테스트넷 및 사용자 지정 RPC 설정"
   },
   "advancedOptions": {
     "message": "고급 옵션"
@@ -72,26 +179,62 @@
     "message": "제안된 토큰 추가"
   },
   "addAcquiredTokens": {
-    "message": "메타마스크를 통해 획득한 토큰 추가"
+    "message": "Brave를 사용하여 획득한 토큰 추가"
+  },
+  "alerts": {
+    "message": "알림"
+  },
+  "alertsSettingsDescription": {
+    "message": "각 알림 활성화 또는 비활성화"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "연결되지 않은 계정을 선택한 상태에서 웹사이트 탐색"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "이 알림은 연결된 Web3 사이트를 탐색할 때 팝업에 표시되지만 현재 선택한 계정이 연결되어 있지 않습니다."
+  },
+  "allowOriginSpendToken": {
+    "message": "$1이(가) 귀하의 $2을(를) 지출하도록 허용할까요?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "이 사이트에서 다음을 허용:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "이 외부 확장 프로그램을 다음으로 허용:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "$1이(가) 다음 금액까지 인출하고 지출할 수 있습니다:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "수량"
+  },
+  "amountWithColon": {
+    "message": "금액:"
   },
   "appDescription": {
     "message": "이더리움 브라우저 확장 프로그램",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "메타마스크",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "수락"
+    "message": "지출 한도 승인"
+  },
+  "approveSpendLimit": {
+    "message": "$1 지출 한도 승인",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "수락"
   },
   "asset": {
+    "message": "자산"
+  },
+  "assets": {
     "message": "자산"
   },
   "attemptingConnect": {
@@ -107,10 +250,10 @@
     "message": "속성"
   },
   "autoLockTimeLimit": {
-    "message": "자동 로그아웃 타이머 (분)"
+    "message": "자동 잠금 타이머(분)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Brave가 자동으로 로그아웃되기 전 유휴 시간을 분 단위로 설정하세요"
+    "message": "Brave가 잠기기 전에 유휴 시간을 분 단위로 설정하세요."
   },
   "average": {
     "message": "평균"
@@ -125,7 +268,7 @@
     "message": "비밀 복구 코드를 백업하여 월렛과 자금을 안전하게 유지하세요."
   },
   "backupApprovalInfo": {
-    "message": "이 비밀 코드는 기기를 분실해서 월렛을 복구해야 하거나, 비밀번호를 잊어버리거나, Brave를 재설치해야 하거나, 다른 기기에서 월렛에 접속하고 싶은 경우에  필요합니다."
+    "message": "이 비밀 코드는 기기 분실, 비밀번호 분실, Brave 재설치 또는 다른 기기에서 지갑 액세스를 원하는 경우 지갑을 복구하는 데 필요합니다."
   },
   "backupNow": {
     "message": "지금 백업하기"
@@ -135,6 +278,9 @@
   },
   "balanceOutdated": {
     "message": "잔액이 오래된 정보일 수 있습니다"
+  },
+  "basic": {
+    "message": "Basic"
   },
   "blockExplorerUrl": {
     "message": "익스플로러 차단"
@@ -146,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "Blockies 아이덴티콘 사용"
   },
+  "nonceField": {
+    "message": "트랜잭션 논스 사용자 지정"
+  },
+  "nonceFieldHeading": {
+    "message": "사용자 지정 논스"
+  },
+  "nonceFieldDescription": {
+    "message": "확인 화면에서 논스(트랜잭션 번호)를 변경하려면 이 옵션을 켜세요. 이것은 고급 기능이므로 신중하게 사용하세요."
+  },
   "browserNotSupported": {
     "message": "브라우저를 지원하지 않습니다..."
   },
   "builtInCalifornia": {
-    "message": "메타마스크는 캘리포니아에서 디자인되고 만들어졌습니다."
+    "message": "Brave는 캘리포니아에서 설계 및 제작되었습니다."
   },
   "buyWithWyre": {
     "message": "Wyre로 ETH 구매"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre는 신용 카드를 사용하여 ETH을 바로 Brave 계정에 입금할 수 있게 해줍니다."
+    "message": "Wyre에서는 직불 카드를 사용하여 ETH를 Brave 계정에 바로 입금할 수 있습니다."
   },
   "buyCoinSwitch": {
     "message": "코인 스위치 구입"
@@ -201,7 +356,7 @@
     "message": "닫기"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "하드웨어 지갑을 연결하기 위해서는 구글 크롬에서 메타마스크를 사용하셔야 합니다."
+    "message": "하드웨어 지갑에 연결하려면 Google Chrome에서 Brave를 사용해야 합니다."
   },
   "confirm": {
     "message": "승인"
@@ -217,6 +372,9 @@
   },
   "congratulations": {
     "message": "축하합니다."
+  },
+  "connectAccountOrCreate": {
+    "message": "계정 연결 또는 새로 만들기"
   },
   "connectHardwareWallet": {
     "message": "하드웨어 지갑 연결"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Goerli 테스트 네트워크에 연결하는 중"
+  },
+  "contacts": {
+    "message": "연락처"
+  },
+  "contactsSettingsDescription": {
+    "message": "계정을 추가, 수정, 제거 및 관리하세요"
+  },
+  "contactUs": {
+    "message": "연락하세요!"
   },
   "continueToWyre": {
     "message": "Wyre로 계속 진행"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "통화 변환"
   },
+  "currentExtension": {
+    "message": "현재 확장 페이지"
+  },
   "currentLanguage": {
     "message": "현재 언어"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "사용자 정의 RPC"
+  },
+  "customSpendLimit": {
+    "message": "사용자 지정 지출 한도"
+  },
+  "dataBackupFoundInfo": {
+    "message": "귀하의 계정 데이터 중 일부는 이전에 Brave를 설치하는 동안 백업되었습니다. 여기에는 설정, 연락처 및 토큰이 포함될 수 있습니다. 지금 이 데이터를 복원하시겠습니까?"
   },
   "decimalsMustZerotoTen": {
     "message": "소수점은 0 이상이고 36 이하여야 합니다."
@@ -335,6 +511,9 @@
   "done": {
     "message": "완료"
   },
+  "dontShowThisAgain": {
+    "message": "다시 표시하지 않음"
+  },
   "downloadGoogleChrome": {
     "message": "구글 크롬 다운로드"
   },
@@ -356,6 +535,9 @@
   "editContact": {
     "message": "연락처 수정"
   },
+  "editPermission": {
+    "message": "권한 편집"
+  },
   "endOfFlowMessage1": {
     "message": "인증을 통과했습니다 - 시드 구문을 안전하게 보관하세요. 그것은 당신의 의무입니다."
   },
@@ -369,22 +551,29 @@
     "message": "누구와도 시드 구문을 공유하지마세요."
   },
   "endOfFlowMessage5": {
-    "message": "피싱에 주의하세요! 메타마스크는 절대 갑작스럽게 당신의 시드 구문을 묻지 않습니다."
+    "message": "피싱에 주의하세요! Brave는 귀하의 시드 문구를 자발적으로 요청하지 않습니다."
   },
   "endOfFlowMessage6": {
     "message": "만약 시드 구문을 다시 백업해야한다면, 설정 -> 보안에서 확인할 수 있습니다. "
   },
   "endOfFlowMessage7": {
-    "message": "만약 질문이 있거나 피싱을 목격했다면 support@brave.com으로 메일을 보내주세요."
+    "message": "질문이 있거나 수상한 것을 본 경우 support@brave.com으로 이메일을 보내주세요."
   },
   "endOfFlowMessage8": {
-    "message": "메타마스크는 당신의 시드 구문을 복원해줄 수 없습니다. 더 알아보기."
+    "message": "Brave는 귀하의 시드 문구를 복구할 수 없습니다."
   },
   "endOfFlowMessage9": {
     "message": "더 알아보기."
   },
   "endOfFlowMessage10": {
     "message": "모두 완료"
+  },
+  "externalExtension": {
+    "message": "외부 확장"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\"은(는) 이 탭을 닫고 $2로 돌아갑니다",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "ENS 이름 등록 오류"
@@ -395,11 +584,46 @@
   "enterAnAlias": {
     "message": "가명을 입력하세요"
   },
+  "enterMaxSpendLimit": {
+    "message": "최대 지출 한도 입력"
+  },
   "enterPassword": {
     "message": "비밀번호를 입력해주세요"
   },
   "enterPasswordContinue": {
     "message": "계속하기 위해 비밀번호 입력"
+  },
+  "errorCode": {
+    "message": "코드: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "오류 정보",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "메시지: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "코드: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave에 오류가 발생했습니다",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "페이지를 새로 고침하여 다시 시도하거나 support@brave.com으로 지원팀에 문의하세요",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "팝업을 닫았다가 다시 열어 다시 시도하거나 support@brave.com으로 지원팀에 문의하세요",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "스택:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "이더리움 공개 주소"
@@ -411,7 +635,7 @@
     "message": "예상 처리 시간"
   },
   "expandView": {
-    "message": "큰 화면으로 보기"
+    "message": "뷰 확장"
   },
   "exportPrivateKey": {
     "message": "개인키 내보내기"
@@ -419,11 +643,17 @@
   "failed": {
     "message": "실패"
   },
+  "failureMessage": {
+    "message": "문제가 발생하여 작업을 완료할 수 없습니다"
+  },
   "fast": {
     "message": "빠름"
   },
   "faster": {
     "message": "빨라짐"
+  },
+  "feeAssociatedRequest": {
+    "message": "이 요청과 관련하여 수수료가 부과됩니다."
   },
   "fiat": {
     "message": "FIAT",
@@ -438,6 +668,13 @@
   },
   "from": {
     "message": "보내는 이"
+  },
+  "fromAddress": {
+    "message": "발신: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "기능: 승인"
   },
   "functionType": {
     "message": "함수 유형"
@@ -466,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "가스 가격"
   },
+  "gdprMessage": {
+    "message": "이 데이터는 집계되므로 일반 데이터 보호 규정 (EU) 2016/679의 목적에 따라 익명으로 처리됩니다. 개인 정보 보호 관행과 관련된 자세한 내용은 $1을(를) 참조하세요.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "여기 개인 정보 보호 정책",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "일반"
   },
@@ -485,6 +730,9 @@
   "getStarted": {
     "message": "시작하기"
   },
+  "happyToSeeYou": {
+    "message": "We’re happy to see you."
+  },
   "hardware": {
     "message": "하드웨어"
   },
@@ -495,7 +743,7 @@
     "message": "하드웨어 지갑 연결"
   },
   "hardwareWalletsMsg": {
-    "message": "메타마스크에서 사용할 하드웨어 지갑을 선택해주세요"
+    "message": "Brave와 함께 사용할 하드웨어 지갑을 선택하세요"
   },
   "havingTroubleConnecting": {
     "message": "연결에 문제가 있나요?"
@@ -509,6 +757,10 @@
   },
   "hide": {
     "message": "숨기기"
+  },
+  "hideTokenSymbol": {
+    "message": "$1 숨기기",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "토큰 숨기기?"
@@ -524,16 +776,16 @@
     "message": "계정 가져오기"
   },
   "importAccountMsg": {
-    "message": " 가져온 계정은 메타마스크에서 원래 생성된 계정의 시드구문과 연관성이 없습니다. 가져온 계정에 대해 더 배우기 "
+    "message": "가져온 계정은 원래 생성된 Brave 계정 시드 문구와 연결되지 않습니다. 가져온 계정에 대해 자세히 알아보세요"
   },
   "importAccountSeedPhrase": {
-    "message": "시드 구문으로 계정 가져오기"
+    "message": "시드 문구가 있는 계정 가져오기"
   },
   "importWallet": {
     "message": "지갑 가져오기"
   },
   "importYourExisting": {
-    "message": "24개 단어로 구성된 시드 구문으로 이미 만들어진 지갑을 가져오기"
+    "message": "24 단어 시드 문구를 사용하여 기존 지갑 가져오기"
   },
   "imported": {
     "message": "가져온 계정",
@@ -566,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "알려진 계약 주소."
   },
+  "knownTokenWarning": {
+    "message": "이 작업은 지갑에 이미 나열된 토큰을 편집하여 피싱에 사용할 수 있습니다. 이러한 토큰이 나타내는 내용을 변경하려는 것이 확실한 경우에만 승인하세요."
+  },
+  "reusedTokenNameWarning": {
+    "message": "여기에 있는 토큰은 사용자가 보는 다른 토큰의 기호를 재사용합니다. 이는 혼란스럽거나 기만적일 수 있습니다."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH 네트워크 아님, 소문자로 설정"
   },
@@ -576,10 +834,22 @@
     "message": "올바르지 않은 RPC URI"
   },
   "invalidBlockExplorerURL": {
-    "message": "올바르지 않은 Block Explorer URI"
+    "message": "잘못된 블록 탐색기 URL"
   },
   "invalidSeedPhrase": {
     "message": "잘못된 시드 구문"
+  },
+  "ipfsGateway": {
+    "message": "IPFS 게이트웨이"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ENS 콘텐츠 확인에 사용할 IPFS CID 게이트웨이의 URL을 입력합니다."
+  },
+  "invalidIpfsGateway": {
+    "message": "잘못된 IPFS 게이트웨이: 값은 유효한 URL이어야합니다"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "금지된 IPFS 게이트웨이: CID 게이트웨이를 지정하세요"
   },
   "jsonFile": {
     "message": "JSON 파일",
@@ -590,6 +860,9 @@
   },
   "max": {
     "message": "최대"
+  },
+  "lastConnected": {
+    "message": "마지막 연결"
   },
   "learnMore": {
     "message": "더 알아보기."
@@ -622,7 +895,10 @@
     "message": "로컬호스트 8545"
   },
   "lock": {
-    "message": "로그아웃"
+    "message": "잠금"
+  },
+  "lockTimeTooGreat": {
+    "message": "잠금 시간이 너무 깁니다"
   },
   "mainnet": {
     "message": "이더리움 메인넷"
@@ -636,11 +912,20 @@
   "message": {
     "message": "메시지"
   },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "이제 Brave에서 계정 연결을 더 많이 제어할 수 있습니다."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "연결 상태 버튼은 방문 중인 웹사이트가 현재 선택한 계정에 연결되어 있는지 표시합니다."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "연결된 계정을 관리하려면 클릭하세요."
+  },
   "metamaskDescription": {
     "message": "메타마스크는 이더리움을 위한 안전한 저장소입니다."
   },
   "metamaskVersion": {
-    "message": "메타마스크 버전"
+    "message": "Brave 버전"
   },
   "mobileSyncText": {
     "message": "본인 여부를 확인하기 위해 비밀번호를 입력해 주세요!"
@@ -652,13 +937,13 @@
     "message": "나의 월렛 계정"
   },
   "myWalletAccountsDescription": {
-    "message": "Brave가 생성한 모든 계정이 이 섹션에 자동으로 추가됩니다."
+    "message": "Brave에서 생성한 모든 계정이 이 섹션에 자동으로 추가됩니다."
   },
   "mustSelectOne": {
     "message": "적어도 하나의 토큰을 선택하세요."
   },
   "needEtherInWallet": {
-    "message": "메타마스크를 통한 dApp을 이용하기 위해서는 지갑에 이더가 있어야 합니다."
+    "message": "Brave를 사용하여 분산형 애플리케이션과 상호 작용하려면 지갑에 Ether가 필요합니다."
   },
   "needImportFile": {
     "message": "가져올 파일을 선택해주세요.",
@@ -696,13 +981,13 @@
     "message": "새 컨트랙트"
   },
   "newPassword": {
-    "message": "새 비밀번호 (최소 8자 이상)"
+    "message": "새 비밀번호(최소 8자)"
   },
   "newNetwork": {
     "message": "새 네트워크"
   },
   "newToMetaMask": {
-    "message": "메타마스크를 처음 사용하시나요?"
+    "message": "Brave를 처음 사용하시나요?"
   },
   "noAlreadyHaveSeed": {
     "message": "아니요, 이미 시드 구문을 가지고 있습니다."
@@ -711,13 +996,19 @@
     "message": "키를 보호하세요!"
   },
   "protectYourKeysMessage1": {
-    "message": "시드 문구에 주의하세요 - Brave를 모방하려고 한 웹사이트들이 신고됐습니다. Brave는 절대로 시드 문구를 묻지 않습니다!"
+    "message": "시드 문구에 주의하세요 — Brave를 모방하려는 웹사이트에 대한 보고가 있었습니다. Brave는 절대 귀하의 시드 문구를 요구하지 않습니다!"
   },
   "protectYourKeysMessage2": {
-    "message": "시드 문구를 안전하게 유지하세요. 수상한 점을 발견하거나, 웹사이트에 확신이 들지 않으면 support@brave.com로 이메일을 보내 주세요"
+    "message": "문구를 안전하게 보관하세요. 수상한 것을 보거나 웹사이트에 대해 확신이 없는 경우 support@brave.com으로 이메일을 보내주세요"
   },
   "rpcUrl": {
     "message": "새로운 RPC URL"
+  },
+  "onlyConnectTrust": {
+    "message": "신뢰할 수 있는 사이트에만 연결하십시오."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "악의적인 Ethereum 네트워크 공급자는 블록 체인 상태에 대해 거짓말을 하고 귀하의 네트워크 활동을 기록할 수 있습니다. 신뢰할 수 있는 사용자 지정 네트워크만 추가하세요."
   },
   "optionalChainId": {
     "message": "ChainID (선택)"
@@ -734,6 +1025,10 @@
   "next": {
     "message": "다음"
   },
+  "nextNonceWarning": {
+    "message": "논스가 $1의 제안된 논스보다 높습니다",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "이 이름에 대해 주소가 설정되어 있지 않습니다."
   },
@@ -742,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "트랜잭션이 없습니다"
+  },
+  "noThanks": {
+    "message": "건너뛰기"
+  },
+  "notCurrentAccount": {
+    "message": "올바른 계정입니까? 지갑에서 현재 선택한 계정과 다릅니다."
   },
   "notEnoughGas": {
     "message": "가스가 충분하지 않습니다"
@@ -758,6 +1059,9 @@
   "orderOneHere": {
     "message": "Trezor 혹은 Ledger를 구입하고 자금을 콜드 스토리지에 저장합니다"
   },
+  "origin": {
+    "message": "Origin"
+  },
   "parameters": {
     "message": "매개변수"
   },
@@ -765,7 +1069,7 @@
     "message": "MetaMetrics 참여"
   },
   "participateInMetaMetricsDescription": {
-    "message": "메타마스크를 더 좋게 만들기 위해 MetaMetrics에 참여하세요."
+    "message": "Brave를 개선하는 데 도움이 되는 MetaMetrics에 참여하기"
   },
   "password": {
     "message": "비밀번호"
@@ -781,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "펜딩 중"
+    "message": "대기 중"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "이 권한을 승인했습니다"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "이 권한을 승인하지 않았습니다"
   },
   "personalAddressDetected": {
     "message": "개인 주소가 탐지됨. 토큰 컨트랙트 주소를 입력하세요."
+  },
+  "plusXMore": {
+    "message": "+ $1 더",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "이전"
@@ -808,14 +1122,23 @@
   "privateNetwork": {
     "message": "프라이빗 네트워크"
   },
+  "proposedApprovalLimit": {
+    "message": "제안된 승인 한도"
+  },
   "queue": {
     "message": "큐"
+  },
+  "queued": {
+    "message": "대기 중"
   },
   "readdToken": {
     "message": "옵션 메뉴에서 “토큰 추가”를 눌러서 추후에 다시 이 토큰을 추가하실 수 있습니다."
   },
   "recents": {
     "message": "최근"
+  },
+  "receive": {
+    "message": "받기"
   },
   "recipientAddress": {
     "message": "받는 주소"
@@ -842,7 +1165,7 @@
     "message": "계정 초기화"
   },
   "resetAccountDescription": {
-    "message": "계정을 초기화 하는 경우에 트랜잭션 기록이 삭제됩니다."
+    "message": "계정을 재설정하면 트랜잭션 내역이 삭제됩니다. 이것은 귀하의 계정 잔액을 변경하거나 귀하의 시드 문구를 다시 입력하도록 요구하지 않습니다."
   },
   "deleteNetwork": {
     "message": "네트워크를 삭제할까요?"
@@ -859,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "시드 구문으로 계정 복구하기"
   },
+  "restoreWalletPreferences": {
+    "message": "$1의 데이터 백업이 발견되었습니다. 지갑 환경 설정을 복원하시겠습니까?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "요청이 인정되기까지 대기중"
   },
@@ -869,7 +1196,7 @@
     "message": "복구"
   },
   "revealSeedWords": {
-    "message": "시드 단어 보이기"
+    "message": "시드 문구 공개"
   },
   "revealSeedWordsTitle": {
     "message": "시드 단어"
@@ -938,7 +1265,7 @@
     "message": "경고: 백업 구문을 절대 공개하지 마세요. 이 구문을 가진 누군가 당신의 이더를 영원히 가지고 갈 수 있습니다."
   },
   "secretPhrase": {
-    "message": "24개 단어로 구성된 비밀 구문을 입력하여 저장소를 복구하세요."
+    "message": "금고를 복원하려면 여기에 비밀의 24 단어 문구를 입력하세요."
   },
   "securityAndPrivacy": {
     "message": "보안 및 개인 정보 보호"
@@ -949,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "각 단어를 스페이스로 구분해주세요"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "클립 보드에서 시드 문구 붙여넣기"
+  },
+  "showSeedPhrase": {
+    "message": "시드 문구 표시"
+  },
   "seedPhraseReq": {
-    "message": "시드 구문은 12개의 단어입니다"
+    "message": "시드 문구에는 12, 15, 18, 21 또는 24 단어가 포함됩니다"
+  },
+  "selectingAllWillAllow": {
+    "message": "모두 선택하면 이 사이트에서 현재 계정을 모두 볼 수 있습니다. 이 사이트를 신뢰하는지 확인하세요."
+  },
+  "selectAccounts": {
+    "message": "계정 선택"
+  },
+  "selectAll": {
+    "message": "모두 선택"
   },
   "selectCurrency": {
     "message": "통화 선택"
@@ -963,6 +1305,9 @@
   },
   "selectType": {
     "message": "형식 선택"
+  },
+  "buy": {
+    "message": "구매"
   },
   "send": {
     "message": "전송"
@@ -982,17 +1327,27 @@
   "sentTokens": {
     "message": "전송된 토큰"
   },
+  "sendSpecifiedTokens": {
+    "message": "$1 보내기",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "각 단어는 공백 한칸으로 분리합니다"
   },
   "searchTokens": {
     "message": "토큰 검색"
   },
+  "searchAccounts": {
+    "message": "계정 검색"
+  },
+  "noAccountsFound": {
+    "message": "주어진 검색어에 대한 계정이 없습니다"
+  },
   "selectAnAccount": {
     "message": "계정 선택"
   },
   "selectAnAccountHelp": {
-    "message": "메타마스크에서 보기 위한 계정 선택"
+    "message": "Brave에서 볼 계정을 선택하세요"
   },
   "selectAHigherGasFee": {
     "message": "트랜잭션 처리를 가속하기 위해 더 높은 가스 요금을 선택하세요.*"
@@ -1033,6 +1388,9 @@
   "signatureRequest": {
     "message": "서명 요청"
   },
+  "signatureRequest1": {
+    "message": "메시지"
+  },
   "signed": {
     "message": "서명됨"
   },
@@ -1054,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "트랜잭션 속도 향상"
   },
+  "spendLimitPermission": {
+    "message": "지출 한도 권한"
+  },
+  "spendLimitRequestedBy": {
+    "message": "$1에서 요청한 지출 한도",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "지출 한도가 너무 큽니다"
+  },
+  "spendLimitInvalid": {
+    "message": "지출 한도가 잘못되었습니다. 양수이어야 합니다"
+  },
   "switchNetworks": {
     "message": "네트워크 변경"
+  },
+  "stateLogFileName": {
+    "message": "Brave 상태 로그"
   },
   "stateLogs": {
     "message": "상태 로그"
@@ -1065,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "상태 로그 받기 실패."
+  },
+  "statusConnected": {
+    "message": "연결됨"
+  },
+  "statusNotConnected": {
+    "message": "연결되지 않음"
   },
   "step1HardwareWallet": {
     "message": "1. 하드웨어 지갑 연결"
@@ -1079,13 +1459,16 @@
     "message": "보고 싶은 계정을 선택합니다. 한 번에 하나의 계정만 선택할 수 있습니다."
   },
   "step3HardwareWallet": {
-    "message": "3. dApps을 사용하거나 다른 것을 합니다!"
+    "message": "3. web3 사이트 등을 사용하십시오!"
   },
   "step3HardwareWalletMsg": {
-    "message": "다른 이더리움 계정을 사용하듯 하드웨어 계정을 사용합니다. dApps을 로그인하거나, 이더를 보내거나, ERC20 토큰 혹은 대체 가능하지 않은 토큰 (예를 들어 CryptoKitties)을 사거나 저장하거나 합니다."
+    "message": "Ethereum 계정에서와 같이 하드웨어 계정을 사용하세요. web3 사이트에 연결하고, ETH를 보내고, ERC20 토큰 및 CryptoKitties와 같은 대체 불가능한 토큰을 구매 및 저장하세요."
   },
   "storePhrase": {
     "message": "이 구문을 1Password같은 암호 관리자에 저장하세요."
+  },
+  "submit": {
+    "message": "제출"
   },
   "submitted": {
     "message": "제출됨"
@@ -1097,7 +1480,7 @@
     "message": "기호"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "심볼은 0에서 12개 사이의 문자여야 합니다."
+    "message": "기호는 11자 이하여야 합니다."
   },
   "syncWithMobile": {
     "message": "모바일로 동기화"
@@ -1106,10 +1489,10 @@
     "message": "모바일과 동기화"
   },
   "syncWithMobileDesc": {
-    "message": "모바일 기기와 계정 및 정보를 동기화할 수 있습니다. Brave 모바일 앱을 열고, \"설정\"으로 간 다음 \"브라우저 확장 프로그램에서 동기화\"를 누르세요"
+    "message": "계정과 정보를 모바일 장치와 동기화할 수 있습니다. Brave 모바일 앱을 열고 \"설정\"으로 이동한 다음, \"브라우저 확장에서 동기화\"를 탭하세요."
   },
   "syncWithMobileDescNewUsers": {
-    "message": "처음으로 Brave 모바일 앱을 여시는 경우, 전화에 나온 과정을 따르세요."
+    "message": "Brave 모바일 앱을 처음으로 여는 경우 휴대폰의 단계를 따르세요."
   },
   "syncWithMobileScanThisCode": {
     "message": "Brave 모바일 앱으로 이 코드를 스캔하세요"
@@ -1118,7 +1501,7 @@
     "message": "이 코드를 스캔할 때 귀하의 화면을 보는 사람이 없는 것을 확인하세요"
   },
   "syncWithMobileComplete": {
-    "message": "데이터가 성공적으로 동기화됐습니다. Brave 모바일 앱을 즐겁게 사용하세요!"
+    "message": "데이터가 성공적으로 동기화되었습니다. Brave 모바일 앱을 즐기세요!"
   },
   "terms": {
     "message": "사용 지침"
@@ -1135,6 +1518,13 @@
   "to": {
     "message": "받는이"
   },
+  "toAddress": {
+    "message": "수신: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "수신:"
+  },
   "token": {
     "message": "토큰"
   },
@@ -1143,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "토큰 컨트랙트 주소"
+  },
+  "tokenOptions": {
+    "message": "토큰 옵션"
   },
   "tokenSymbol": {
     "message": "토큰 기호"
@@ -1192,6 +1585,9 @@
   "transactionTime": {
     "message": "트랜잭션 시간"
   },
+  "showTransactionTimeDescription": {
+    "message": "메인 Ethereum 네트워크에 있는 동안 활동 탭에 보류 중인 트랜잭션 시간 추정치를 표시하려면 선택합니다. 참고: 예상치는 네트워크 상태를 기반으로 한 근사치입니다."
+  },
   "transfer": {
     "message": "전송"
   },
@@ -1205,14 +1601,21 @@
     "message": "토큰 잔액을 가져오는 데에 문제가 생겼습니다. 링크에서 상세내용을 볼 수 있습니다.",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "이 사이트를 신뢰하십니까? 이 권한을 부여하면 $1이(가) $2을(를) 인출하고 거래를 자동화할 수 있습니다.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "다시 시도하세요"
   },
   "typePassword": {
-    "message": "비밀번호를 입력하세요"
+    "message": "Brave 비밀번호를 입력하세요"
   },
   "unapproved": {
     "message": "허가 안 됨"
+  },
+  "alertDisableTooltip": {
+    "message": "\"설정 > 알림\"에서 변경할 수 있습니다"
   },
   "units": {
     "message": "단위"
@@ -1232,6 +1635,9 @@
   "unknownCameraError": {
     "message": "카메라에 접근하는 중 오류가 발생했습니다. 다시 시도해 주세요..."
   },
+  "unlimited": {
+    "message": "무제한"
+  },
   "unlock": {
     "message": "잠금 해제"
   },
@@ -1242,10 +1648,19 @@
     "message": "$1에 업데이트 됨"
   },
   "urlErrorMsg": {
-    "message": "URI는 HTTP/HTTPS로 시작해야 합니다."
+    "message": "URL에는 적절한 HTTP/HTTPS 접두사가 필요합니다."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL이 이미 기존 네트워크 목록에 있습니다"
   },
   "usedByClients": {
     "message": "다양한 클라이언트에서 사용되고 있습니다"
+  },
+  "usePhishingDetection": {
+    "message": "피싱 감지 사용"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Ethereum 사용자를 대상으로 하는 피싱 도메인에 대한 경고 표시"
   },
   "userName": {
     "message": "사용자이름"
@@ -1265,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "이더스캔에서 보기"
   },
+  "retryTransaction": {
+    "message": "트랜잭션 재시도"
+  },
   "visitWebSite": {
     "message": "웹사이트 방문"
   },
   "walletSeed": {
-    "message": "지갑 시드값"
+    "message": "시드 문구"
   },
   "welcomeBack": {
     "message": "환영합니다!"
   },
   "welcome": {
-    "message": "메타마스크 Beta에 오신 것을 환영합니다"
+    "message": "Brave에 오신 것을 환영합니다"
+  },
+  "whatsThis": {
+    "message": "이것은 무엇인가요?"
   },
   "writePhrase": {
     "message": "이 구문을 종이에 써서 안전한 장소에 보관하세요. 만약 당신이 더 높은 수준의 보안을 원한다면, 그것을 여러 장의 종이에 적어서 각각 2-3개의 다른 위치에 보관하세요."
+  },
+  "xOfY": {
+    "message": "$2 중 $1",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "네, 시도해보겠습니다."
@@ -1298,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "가속 시 가스 비용 없음"
   },
+  "decryptRequest": {
+    "message": "해독 요청"
+  },
+  "decrypt": {
+    "message": "해독"
+  },
+  "decryptMessageNotice": {
+    "message": "$1이(가) 이 메시지를 읽고 작업을 완료하려고 합니다",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "메시지 암호 해독"
+  },
+  "decryptCopy": {
+    "message": "암호화된 메시지 복사"
+  },
+  "decryptInlineError": {
+    "message": "이 메시지는 오류로 인해 해독할 수 없습니다: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "제공"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "암호화 공개 키 요청"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1에 공개 암호화 키가 필요합니다. 동의하면, 이 사이트는 암호화된 메시지를 작성할 수 있습니다.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "암호화 지갑 비밀 백업 문구"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave 설정"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "암호화 지갑을 사용하면 Brave에서 암호 화폐 및 관련 자산으로 작업할 수 있습니다. 암호화 지갑은 수집품뿐만 아니라 ETH 및 BAT와 같은 Ethereum 토큰을 지원하며 Ðapps 및 기타 스마트 계약으로 작업할 수 있습니다. 이 모든 것은 Ethereum 및 기타 블록 체인 시스템에 익숙하거나 — 배우고 싶은 사람들을 위한 것입니다."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "이 사용과 관련된 모든 위험에 대한 책임은 귀하에게 있으며 Brave 소프트웨어가 이 사용으로 인해 발생할 수 있는 우발적 또는 결과적 손실을 포함한 모든 손실에 대해 책임을지지 않음을 인정하는 경우에만 암호 지갑을 사용하세요."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "이 모든 것은 완전히 분리되어 있습니다"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "가장 좋아하는 사이트를 지원하고자 한다면, 대신 그쪽으로 가세요."
+  },
+  "cryptoWalletsTitle": {
+    "message": "암호화폐 월렛"
+  },
+  "disclosureConfirm": {
+    "message": "이해했습니다"
+  },
   "ledgerCreateSubText": {
     "message": "Ledger 하드웨어 월렛을 연결하여 dApps와 소통하고 다른 연결된 월렛으로 이체하세요."
+  },
+  "metamaskImportSubText": {
+    "message": "참고: 메타 마스크 지갑에서 가져오는 경우 24 단어 대신 12 단어를 입력하세요."
   },
   "newLocalWallet": {
     "message": "새로운 로컬 월렛"
@@ -1307,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "새로운 Brave 로컬 월렛을 만들어서 dApps를 이용하고 가상화폐 및 수집 대상을 안전하게 저장하세요. 거래 수수료 없이 익명으로 토큰을 거래하세요."
   },
+  "passWarningOne": {
+    "message": "이 비밀번호는 개인 키를 보호합니다. 잊어버리면 누구도 재설정할 수 없습니다. Brave도 못합니다!"
+  },
+  "providerErrorMessage": {
+    "message": "이 지갑은 기본 Ethereum Dapp 공급자가 아닙니다."
+  },
   "trezorCreateSubText": {
     "message": " Trezor 하드웨어 월렛을 연결하여 dApp과 소통하고 다른 연결된 월렛으로 이체하세요."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Brave 암호 지갑에 오신 것을 환영합니다"
   }
 }

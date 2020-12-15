@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "Olen lukenut ja hyväksyn $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Näytä sallittujen tilien osoitteet (vaaditaan)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Yhdistetyt sivustot"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 on yhdistetty näille sivustoille. Ne voivat nähdä tilisi osoitteen.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 ei ole yhdistetty mihinkään sivustoon.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Sinulla on 1 tähän sivustoon yhdistetty tili."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Sinulla on $1 tähän sivustoon yhdistettyä tiliä.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Bravea ei ole yhdistetty tähän sivustoon. Voit muodostaa yhteyden web3-sivustoon heidän sivustoltaan löytyvän yhteyspainikkeen kautta."
+  },
+  "currentAccountNotConnected": {
+    "message": "Nykyistä tiliäsi ei ole yhdistetty"
+  },
+  "switchToThisAccount": {
+    "message": "Vaihda tähän tiliin"
+  },
+  "disconnectThisAccount": {
+    "message": "Katkaiset yhteys tähän tiliin"
+  },
+  "permissions": {
+    "message": "Käyttöoikeudet"
+  },
+  "showPermissions": {
+    "message": "Näytä oikeudet"
+  },
+  "authorizedPermissions": {
+    "message": "Olet valtuuttanut seuraavat käyttöluvat"
+  },
+  "connectManually": {
+    "message": "Yhdistä nykyiseen sivuun manuaalisesti"
+  },
+  "disconnect": {
+    "message": "Katkaise yhteys"
+  },
+  "disconnectAllAccounts": {
+    "message": "Katkaise kaikkien tilien yhteys"
+  },
+  "disconnectPrompt": {
+    "message": "Katkaise $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "Haluatko varmasti katkaista yhteyden? Et välttämättä voi käyttää sivustoa enää tämän jälkeen."
+  },
+  "dismiss": {
+    "message": "Piilota"
+  },
+  "showIncomingTransactions": {
+    "message": "Näytä saapuvat maksusuoritukset"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Valitse tämä käyttääksesi Etherscania, jonka avulla voit näyttää saapuvat maksutoimitukset maksutoimituslistalla"
+  },
   "chartOnlyAvailableEth": {
     "message": "Kaavio saatavilla vain Ethereum-verkoissa."
+  },
+  "connecting": {
+    "message": "Yhdistetään…"
+  },
+  "connectWithMetaMask": {
+    "message": "Muodosta yhteys Braveen"
+  },
+  "connectTo": {
+    "message": "Muodosta $1 -sivustoon",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Yhdistä $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "tileihin",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Yhdistä $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 tiliä",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Sopimustoiminta"
@@ -16,6 +113,10 @@
   },
   "acceleratingATransaction": {
     "message": "* Tapahtuman nopeuttaminen käyttämällä korkeampaa gas-hintaa parantaa mahdollisuutta, että verkko käsittelee sen nopeammin, mutta tämä ei ole aina taattua."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 voi muodostaa yhteyden ja käyttää korkeintaan tämän sallitun maksimimäärän",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Muodostamme yhteyttä kameraasi..."
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "Sinun on valittava tili!"
   },
+  "active": {
+    "message": "Aktiivinen"
+  },
+  "activity": {
+    "message": "Toiminta"
+  },
   "activityLog": {
     "message": "toimintaloki"
   },
@@ -48,7 +155,7 @@
     "message": "Lisäasetukset"
   },
   "advancedSettingsDescription": {
-    "message": "Käytä kehittäjän ominaisuuksia, lataa tilalokeja, palauta tilit, asenna testiverkostoja ja muokattavia RPC:itä"
+    "message": "Hyödynnä kehittäjän ominaisuuksia, lataa tilalokeja, nollaa tili, asenna testiverkkoja ja räätälöity RPC"
   },
   "advancedOptions": {
     "message": "Tarkemmat vaihtoehdot"
@@ -72,27 +179,63 @@
     "message": "Lisää ehdotetut käyttötunnukset"
   },
   "addAcquiredTokens": {
-    "message": "Lisää Braveia käyttämällä hankkimasi tietueet"
+    "message": "Lisää Bravea käyttämällä hankkimasi käyttötunnukset"
+  },
+  "alerts": {
+    "message": "Hälytykset"
+  },
+  "alertsSettingsDescription": {
+    "message": "Ota jokainen hälytys erikseen käyttöön tai pois käytöstä"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Verkkosivuston selaaminen tilillä, jossa ei ole yhteyttä"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Tämä hälytys näytetään ponnahdusikkunana selatessasi yhdistettyä Web3-sivustoa ilman valitun tilin yhteyttä."
+  },
+  "allowOriginSpendToken": {
+    "message": "Saako $1 valtuudet $2-valuutan kulutukseen?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Myönnä tälle sivustolle seuraavat valtuudet:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Salli tämä ulkoinen laajennus seuraaville:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Salli $1 nosto ja kulutus seuraavaan rajaan saakka:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
     "message": "Summa"
+  },
+  "amountWithColon": {
+    "message": "Summa:"
   },
   "appDescription": {
     "message": "Ethereum-kukkaro selaimessasi",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Hyväksy"
+    "message": "Hyväksy kulutusraja"
+  },
+  "approveSpendLimit": {
+    "message": "Hyväksy $1-käyttöraja",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Hyväksytty"
   },
   "asset": {
     "message": "Omaisuuserä"
+  },
+  "assets": {
+    "message": "Omaisuudet"
   },
   "attemptingConnect": {
     "message": "Yritetään yhdistää lohkoketjuun."
@@ -107,10 +250,10 @@
     "message": "Attribuutiot"
   },
   "autoLockTimeLimit": {
-    "message": "Automaattisen uloskirjautumisen ajastin (minuuttia)"
+    "message": "Automaattilukituksen ajastin (minuuteissa)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Määritä, montako minuuttia Brave on ollut joutilaana ennen kuin sinut kirjataan automaattisesti ulos"
+    "message": "Aseta tyhjäkäyntiaika minuuteissa ennen kuin Brave lukitaan."
   },
   "average": {
     "message": "Keskiverto"
@@ -125,7 +268,7 @@
     "message": "Varmuuskopioi salainen palautuskoodisi pitääksesi kukkarosi ja varasi turvassa."
   },
   "backupApprovalInfo": {
-    "message": "Tämä salainen koodi vaaditaan kukkarosi palauttamiseen siinä tapauksessa, että kadotat laitteesi, unohdat salasanasi, joudut asentamaan Bravein uudestaan tai haluat käyttää lompakkoasi jollakin toisella laitteella."
+    "message": "Tätä salaista koodia tarvitaan lompakkosi palauttamiseen, jos kadotat laitteesi, unohdat salasanasi, joudut asentamaan Braven uudelleen tai tahdot avata lompakkosi toisella laitteella."
   },
   "backupNow": {
     "message": "Tee varmuuskopio nyt"
@@ -149,17 +292,26 @@
   "blockiesIdenticon": {
     "message": "Käytä Blockies Identiconia"
   },
+  "nonceField": {
+    "message": "Muokkaa maksusiirtolukemaa"
+  },
+  "nonceFieldHeading": {
+    "message": "Muokattava lukema"
+  },
+  "nonceFieldDescription": {
+    "message": "Aseta tämä päälle muuttaaksesi lukemaa (maksusuorituksen numero) vahvistusruudulla. Tämä on edistynyt ominaisuus, joten käytä sitä varoen."
+  },
   "browserNotSupported": {
     "message": "Selaintasi ei tueta..."
   },
   "builtInCalifornia": {
-    "message": "Brave on suunniteltu ja koottu Kaliforniassa."
+    "message": "Brave on suunniteltu ja luotu Kaliforniassa."
   },
   "buyWithWyre": {
     "message": "Osta ETH:ta Wyrella"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre antaa sinun käyttää luottokorttia, jotta voit tallettaa ETH:ta suoraan Brave-tilillesi."
+    "message": "Wyren avulla voit tallentaa ETHia pankkikortillasi suoraan Brave-tilillesi."
   },
   "buyCoinSwitch": {
     "message": "Osta CoinSwitchissa"
@@ -172,6 +324,9 @@
   },
   "off": {
     "message": "Päältä"
+  },
+  "ok": {
+    "message": "Ok"
   },
   "on": {
     "message": "Käytössä"
@@ -201,7 +356,7 @@
     "message": "Sulje"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Sinun tarvitsee käyttää Braveia Google Chromessa voidaksesi yhdistää laitteistokukkaroosi."
+    "message": "Sinun on käytettävä Bravea Google Chromella voidaksesi muodostaa yhteyden laitteistolompakkoosi."
   },
   "confirm": {
     "message": "Vahvista"
@@ -217,6 +372,9 @@
   },
   "congratulations": {
     "message": "Onneksi olkoon"
+  },
+  "connectAccountOrCreate": {
+    "message": "Yhdistä tili tai luo uusi"
   },
   "connectHardwareWallet": {
     "message": "Yhdistä laitteistokukkaro"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Yhdistetään Goerlin testiverkostoon"
+  },
+  "contacts": {
+    "message": "Yhteystiedot"
+  },
+  "contactsSettingsDescription": {
+    "message": "Lisää, muokkaa, poista ja hallitse kontaktejasi"
+  },
+  "contactUs": {
+    "message": "Ota meihin yhteyttä!"
   },
   "continueToWyre": {
     "message": "Jatka Wyreen"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "Valuuttamuunnin"
   },
+  "currentExtension": {
+    "message": "Nykyinen laajennussivu"
+  },
   "currentLanguage": {
     "message": "Nykyinen kieli"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "Mukautettu RPC"
+  },
+  "customSpendLimit": {
+    "message": "Muokattava kulutusraja"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Jotkin tilisi tiedot varmuuskopioitiin aiemmin asennetulla Braven versiolla. Niihin saattaa sisältyä asetustesi, yhteystietojesi ynnä käyttötunnustesi kaltaisia tietoja. Tahtoisitko palauttaa nämä tiedot saman tien?"
   },
   "decimalsMustZerotoTen": {
     "message": "Desimaalien on oltava vähintään 0 ja korkeintaan 36."
@@ -335,6 +511,9 @@
   "done": {
     "message": "Valmis"
   },
+  "dontShowThisAgain": {
+    "message": "Älä näytä tätä enää"
+  },
   "downloadGoogleChrome": {
     "message": "Lataa Google Chrome"
   },
@@ -356,6 +535,9 @@
   "editContact": {
     "message": "Muokkaa yhteystietoa"
   },
+  "editPermission": {
+    "message": "Muokkaa oikeutta"
+  },
   "endOfFlowMessage1": {
     "message": "Läpäisit kokeen – pidä salaustekstisi turvassa. Se on sinun vastuullasi!"
   },
@@ -369,22 +551,29 @@
     "message": "Älä koskaan luovuta lausetta kenellekään."
   },
   "endOfFlowMessage5": {
-    "message": "Varo tietojenkalastelua! Brave ei koskaan pyydä spontaanisti siemenlausettasi."
+    "message": "Varo tietojenkalasteluyrityksiä! Brave ei koskaan kysy juuritunnustasi varoittamatta."
   },
   "endOfFlowMessage6": {
     "message": "Jos tarvitse uuden varmuuskopion juurilauseestasi, niin se löytyy osiosta Asetukset -> Turvallisuus."
   },
   "endOfFlowMessage7": {
-    "message": "Jos sinulla on joskus jotakin kysyttävää tai jos näet jotakin epäilyttävää, lähetä sähköpostia osoitteeseen support@brave.com."
+    "message": "Jos sinulla on kysyttävää tai havaitset jotain epäilyttävää, lähetä sähköpostia osoitteeseen support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave ei pysty palauttamaan salaustekstiäsi. Lue lisää."
+    "message": "Brave ei voi palauttaa juuritunnustasi."
   },
   "endOfFlowMessage9": {
     "message": "Lue lisää."
   },
   "endOfFlowMessage10": {
     "message": "Valmista"
+  },
+  "externalExtension": {
+    "message": "Ulkoinen laajennus"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" sulkee tämän välilehden ja ohjaa sinut takaisin sivulle $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Virhe ENS-nimen rekisteröinnissä"
@@ -395,11 +584,46 @@
   "enterAnAlias": {
     "message": "Anna peitenimi"
   },
+  "enterMaxSpendLimit": {
+    "message": "Anna kulutuksen yläraja"
+  },
   "enterPassword": {
     "message": "Kirjoita salasana"
   },
   "enterPasswordContinue": {
     "message": "Syötä salasana voidaksesi jatkaa"
+  },
+  "errorCode": {
+    "message": "Koodi: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Virheen lisätiedot",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Viesti: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Koodi: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave kohtasi häiriön",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Yritä uudelleen virkistämällä sivu tai ota yhteyttä tukeen osoitteessa support@brave.com",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Kokeile sulkea ponnahdusikkuna ja avata se uudelleen, tai ota yhteyttä asiakastukeen osoitteessa support@brave.com",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Stack:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Ethereumin julkinen osoite"
@@ -411,7 +635,7 @@
     "message": "Arvioidut käsittelyajat"
   },
   "expandView": {
-    "message": "Laajenna näkymää"
+    "message": "Laajenna näkymä"
   },
   "exportPrivateKey": {
     "message": "Vie yksityinen avain"
@@ -419,11 +643,17 @@
   "failed": {
     "message": "Epäonnistui"
   },
+  "failureMessage": {
+    "message": "Jokin meni vikaan, emmekä kyenneet suorittamaan toimenpidettä"
+  },
   "fast": {
     "message": "Nopea"
   },
   "faster": {
     "message": "Nopeammin"
+  },
+  "feeAssociatedRequest": {
+    "message": "Tämä pyyntö on maksullinen."
   },
   "fiat": {
     "message": "Kiinteä",
@@ -438,6 +668,13 @@
   },
   "from": {
     "message": "Alkaen"
+  },
+  "fromAddress": {
+    "message": "Lähettäjä: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Toiminto: hyväksy"
   },
   "functionType": {
     "message": "Funktion tyyppi"
@@ -466,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "Bensan hinta"
   },
+  "gdprMessage": {
+    "message": "Nämä tiedot ovat aggregoituja ja siten EU:n yleisen tietosuoja-asetuksen [General Data Protection Regulation (EU) 2016/679] kannalta anonyymejä. Tietoturvakäytännöistämme voit lukea tarkemmin kohdasta $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Tietosuojakäytäntö täällä",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "Yleistä"
   },
@@ -489,7 +734,7 @@
     "message": "Meistä on mukava nähdä sinut."
   },
   "hardware": {
-    "message": "laitteisto"
+    "message": "Laitteisto"
   },
   "hardwareWalletConnected": {
     "message": "Laitteistokukkaro yhdistetty"
@@ -498,7 +743,7 @@
     "message": "Yhdistä kiinteän laitteiston lompakko"
   },
   "hardwareWalletsMsg": {
-    "message": "Valitse laitteistokukkaro, jota haluaisit käyttää Braveilla"
+    "message": "Valitse laitteistolompakko, jota tahtoisit käyttää Braven kanssa"
   },
   "havingTroubleConnecting": {
     "message": "Onko sinulla yhdistämisvaikeuksia?"
@@ -512,6 +757,10 @@
   },
   "hide": {
     "message": "Piilota"
+  },
+  "hideTokenSymbol": {
+    "message": "Piilota $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "Piilotetaanko tietue?"
@@ -527,16 +776,16 @@
     "message": "Tuo tili"
   },
   "importAccountMsg": {
-    "message": "Tuotuja tilejä ei liitetä alkuperäisen Brave-tilisi siemenlauseeseen. Lue lisää tuoduista tileistä"
+    "message": "Tuotuja tilejä ei yhdistetä alkuperäiseen Brave-tilin juuritunnukseen. Lue lisää tuoduista tileistä"
   },
   "importAccountSeedPhrase": {
-    "message": "Tuo tili siemenlauseella"
+    "message": "Tuo tili juuritunnuksella"
   },
   "importWallet": {
-    "message": "Tuo kukkaro"
+    "message": "Tuo lompakko"
   },
   "importYourExisting": {
-    "message": "Tuo nykyinen lompakkosi käyttäen 24 sanan \n siemenlausetta"
+    "message": "Tuo vanha lompakkosi käyttämällä 24-sanaista juuritunnusta"
   },
   "imported": {
     "message": "Tuotu",
@@ -569,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Tunnettu sopimusosoite."
   },
+  "knownTokenWarning": {
+    "message": "Tämä toimenpide muokkaa lompakkoosi jo listatut käyttötunnukset, joiden avulla tietojasi voidaan kalastella. Hyväksy ainoastaan, jos aiot varmasti muuttaa näiden tunnusten merkitystä."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Tämä käyttötunnus käyttää toisen seuraamasi tunnuksen kuvaketta, mikä voi aiheuttaa hämmennystä."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ei ole ETH-verkosto; vaihda pieniin kirjaimiin"
   },
@@ -579,10 +834,22 @@
     "message": "Virheellinen RPC:n URL-osoite"
   },
   "invalidBlockExplorerURL": {
-    "message": "Virheellinen Block Explorer URL-osoite"
+    "message": "Virheellinen Block Explorer URL"
   },
   "invalidSeedPhrase": {
     "message": "Virheellinen salausteksti"
+  },
+  "ipfsGateway": {
+    "message": "IPFS-portti"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Anna IPFS CID -porttisi URL-osoite ENS-sisällön selvitystä varten."
+  },
+  "invalidIpfsGateway": {
+    "message": "Virheellinen IPFS-portti: arvon on oltava käypä URL"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Kielletty IPFS-portti: anna CID-portti"
   },
   "jsonFile": {
     "message": "JSON-tiedosto",
@@ -593,6 +860,9 @@
   },
   "max": {
     "message": "Maks"
+  },
+  "lastConnected": {
+    "message": "Yhdistetty viimeksi"
   },
   "learnMore": {
     "message": "Lisätietoa"
@@ -625,7 +895,10 @@
     "message": "Paikallisjoukko 8545"
   },
   "lock": {
-    "message": "Kirjaudu ulos"
+    "message": "Lukitse"
+  },
+  "lockTimeTooGreat": {
+    "message": "Lukitusaika on liian suuri"
   },
   "mainnet": {
     "message": "Ethereumin pääverkko"
@@ -638,6 +911,15 @@
   },
   "message": {
     "message": "Viesti"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Pystyt nyt aiempaa laajemmin hallitsemaan tilisi yhteyksiä Bravessa."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "Yhteystilapainike näyttää, jos käyttämäsi verkkosivusto on yhdistetty valitulle tilillesi."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Klikkaa hallitaksesi yhdistettyjä tilejä."
   },
   "metamaskDescription": {
     "message": "Sinua yhdistetään Ethereumiin ja hajautettuun verkkoon."
@@ -655,13 +937,13 @@
     "message": "Omat kukkarotilini"
   },
   "myWalletAccountsDescription": {
-    "message": "Kaikki Braveilla luodut tilisi lisätään automaattisesti tähän osastoon."
+    "message": "Kaikki Bravessa luodut tilisi lisätään automaattisesti tähän osioon."
   },
   "mustSelectOne": {
     "message": "Valittava vähintään 1 poletti."
   },
   "needEtherInWallet": {
-    "message": "Ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa sinulla on oltava lompakossasi Ether."
+    "message": "Tarvitse Etherin lompakkoosi, jos tahdot käyttää Bravea hajautettujen sovellusten kanssa,"
   },
   "needImportFile": {
     "message": "Sinun tarvitsee valita tuotava tiedosto.",
@@ -705,7 +987,7 @@
     "message": "Uusi verkko"
   },
   "newToMetaMask": {
-    "message": "Onko Brave ennestään outo?"
+    "message": "Oletko uusi Braven käyttäjä?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ei, minulla on jo siemenlause."
@@ -714,13 +996,19 @@
     "message": "Suojele avaimiasi!"
   },
   "protectYourKeysMessage1": {
-    "message": "Ole varovainen salausavaimesi kanssa – joidenkin verkkosivustojen kerrotaan yrittäneen matkia Braveia. Brave ei koskaan kysy salausavaintasi!"
+    "message": "Ole varovainen käsitellessäsi juuritunnustasi — olemme saaneet ilmoituksia Bravea imitoivista verkkosivustoista. Brave ei koskaan pyydä juuritunnustasi!"
   },
   "protectYourKeysMessage2": {
-    "message": "Pidä lauseesi tallessa. Jos näet jotain epäilyttävää tai et ole varma jostain sivustosta, lähetä sähköpostia osoitteeseen support@brave.com"
+    "message": "Pidä tilisi suojattuna. Jos havaitset jotain epäilyttävää tai et ole varma jonkin verkkosivuston turvallisuudesta, lähetä sähköpostia osoitteeseen support@brave.com"
   },
   "rpcUrl": {
     "message": "Uusi RPC:n URL"
+  },
+  "onlyConnectTrust": {
+    "message": "Muodosta yhteys vain luotettaviin sivustoihin."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Valheellinen Ethereum-verkoston tarjoaja voi valehdella lohkoketjun tilasta ja tallentaa verkkotoimintaasi. Lisää siis ainoastaan luotettavia verkostoja."
   },
   "optionalChainId": {
     "message": "Ketjun tunnus (valinnainen)"
@@ -737,6 +1025,10 @@
   "next": {
     "message": "Seuraava"
   },
+  "nextNonceWarning": {
+    "message": "Nonssi on suurempi kuin suositeltu $1",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "Tälle nimelle ei ole määritetty osoitetta."
   },
@@ -745,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "Sinulla ei ole tapahtumia"
+  },
+  "noThanks": {
+    "message": "Ei kiitos"
+  },
+  "notCurrentAccount": {
+    "message": "Onko tämä varmasti oikea tili? Se on eri kuin lompakollasi tällä hetkellä valittu tili."
   },
   "notEnoughGas": {
     "message": "Liian vähän gasia"
@@ -771,7 +1069,7 @@
     "message": "Osallistu MetaMetricsiin"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Osallistu MetaMetricsiin auttaaksesi meitä tekemään Braveista paremman"
+    "message": "Osallistu MetaMetricsiin auttaaksesi meitä kehittämään Bravea"
   },
   "password": {
     "message": "Salasana"
@@ -787,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "odottaa"
+    "message": "Odottaa"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Olet valtuuttanut tämän käyttöluvan"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "Et ole hyväksynyt tätä valtuutusta"
   },
   "personalAddressDetected": {
     "message": "Henkilökohtainen osoite havaittu. Anna käyttötunnuksen yhteysosoite."
+  },
+  "plusXMore": {
+    "message": "+ $1 lisää",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Aiemp."
@@ -814,14 +1122,23 @@
   "privateNetwork": {
     "message": "Yksityinen verkko"
   },
+  "proposedApprovalLimit": {
+    "message": "Ehdotettu hyväksyntäraja"
+  },
   "queue": {
     "message": "Jono"
+  },
+  "queued": {
+    "message": "Jonossa"
   },
   "readdToken": {
     "message": "Voit lisätä tämän tietueen myöhemmin takaisin siirtymällä tilisi vaihtoehtovalikon kohtaan ”Lisää tietue”."
   },
   "recents": {
     "message": "Viimeaikaiset"
+  },
+  "receive": {
+    "message": "Vastaanota"
   },
   "recipientAddress": {
     "message": "Vastaanottajan osoite"
@@ -848,7 +1165,7 @@
     "message": "Nollaa tili"
   },
   "resetAccountDescription": {
-    "message": "Tilisi nollaaminen tyhjentää tapahtumahistoriasi."
+    "message": "Tilisi palauttaminen alkutilaan tyhjentää maksusiirtohistoriasi. Tämä ei aiheuta muutoksia tiliesi saldoihin tai vaadi sinua antamaan juuritunnustasi uudelleen."
   },
   "deleteNetwork": {
     "message": "Poistetaanko verkko?"
@@ -865,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Palauta tilisi käyttäen salaustekstiä (seed phrase)"
   },
+  "restoreWalletPreferences": {
+    "message": "$1 tehty tietojesi varmuuskopio on löytynyt. Tahtoisitko palauttaa lompakkosi suosikkiasetukset?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "vahvistusta odottavaa pyyntöä"
   },
@@ -875,7 +1196,7 @@
     "message": "Palauta"
   },
   "revealSeedWords": {
-    "message": "Paljasta salaussanat"
+    "message": "Paljasta juuritunnus"
   },
   "revealSeedWordsTitle": {
     "message": "Juurilause"
@@ -944,7 +1265,7 @@
     "message": "VAROITUS: älä koskaan kerro varmuuskopiolausettasi kenellekään. Kuka tahansa tämän lauseen omaava voi napata Etherisi pysyvästi."
   },
   "secretPhrase": {
-    "message": "Palauta holvisi syöttämällä tähän salainen kahdentoista sanan tekstisi."
+    "message": "Anna salainen 24-sanainen tunnuksesi tänne palauttaaksesi holvisi."
   },
   "securityAndPrivacy": {
     "message": "Turva & yksityisyys"
@@ -955,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Erota kukin sana yhdellä välilyönnillä"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Liitä juuritunnus leikepöydältä"
+  },
+  "showSeedPhrase": {
+    "message": "Näytä juuritunnus"
+  },
   "seedPhraseReq": {
-    "message": "Juurilauseet ovat 12 sanan pituisia"
+    "message": "Juuritunnuksessa on 12, 15, 18, 21 tai 24 sanaa"
+  },
+  "selectingAllWillAllow": {
+    "message": "Kaikkien valitseminen antaa sivustolle mahdollisuuden nähdä kaikki tämänhetkisen tilisi. Varmista, että kyseessä on luotettava sivusto."
+  },
+  "selectAccounts": {
+    "message": "Valitse tili(t)"
+  },
+  "selectAll": {
+    "message": "Valitse kaikki"
   },
   "selectCurrency": {
     "message": "Valitse valuutta"
@@ -969,6 +1305,9 @@
   },
   "selectType": {
     "message": "Valitse tyyppi"
+  },
+  "buy": {
+    "message": "Osta"
   },
   "send": {
     "message": "Lähetä"
@@ -988,17 +1327,27 @@
   "sentTokens": {
     "message": "lähetetyt poletit"
   },
+  "sendSpecifiedTokens": {
+    "message": "Lähetä $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Erottele sanat toisistaan yhdellä välilyönnillä"
   },
   "searchTokens": {
     "message": "Hae tietueita"
   },
+  "searchAccounts": {
+    "message": "Hae tilejä"
+  },
+  "noAccountsFound": {
+    "message": "Tehdyllä haulla ei löytynyt tilejä"
+  },
   "selectAnAccount": {
     "message": "Valitse tili"
   },
   "selectAnAccountHelp": {
-    "message": "Valitse Braveissa näytettävä tili"
+    "message": "Valitse Bravessa näytettävä tili"
   },
   "selectAHigherGasFee": {
     "message": "Valitse korkeampi bensataksa vauhdittaaksesi tapahtumasi käsittelyä.*"
@@ -1039,6 +1388,9 @@
   "signatureRequest": {
     "message": "Allekirjoitus pyydetään"
   },
+  "signatureRequest1": {
+    "message": "Viesti"
+  },
   "signed": {
     "message": "Allekirjoitettu"
   },
@@ -1060,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Nopeuta tätä maksusiirtoa"
   },
+  "spendLimitPermission": {
+    "message": "Kulutusrajan valtuudet"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Kohteen $1 pyytämä käyttörajoitus",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Kulutusraja on liian korkea"
+  },
+  "spendLimitInvalid": {
+    "message": "Käyttörajoitus ei kelpaa; sen on oltava positiivinen numero"
+  },
   "switchNetworks": {
     "message": "Vaihda verkostoa"
+  },
+  "stateLogFileName": {
+    "message": "Braven tilalokit"
   },
   "stateLogs": {
     "message": "Tilaloki"
@@ -1071,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Virhe tilalokien noutamisessa."
+  },
+  "statusConnected": {
+    "message": "Yhdistetty"
+  },
+  "statusNotConnected": {
+    "message": "Ei yhdistetty"
   },
   "step1HardwareWallet": {
     "message": "1. Yhdistä laitteistokukkaro"
@@ -1085,13 +1459,16 @@
     "message": "Valitse tarkasteltava tili. Voit valita vain yhden kerrallaan."
   },
   "step3HardwareWallet": {
-    "message": "3. Ota käyttöön dApps ja paljon muuta!"
+    "message": "3. Aloita web3-sivustojen käyttö sekä paljon muuta!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Käytä laitteistosi tiliä minkä tahansa Ethereum-tilin tavoin. Kirjaudu dAppsiin, lähettää ethereumeja, ostaa ja tallentaa ERC20-tunnuksia sekä CryptoKittiesin kaltaisia ei-korvattavia tunnuksia."
+    "message": "Käytä laitetiliäsi aivan kuin mitä tahansa Ethereum-tiliä. Yhdistä web3-sivuille, lähetä ETH:ia, osta ja talleta ERC20-poletteja sekä CryptoKittiesin kaltaisia ei-fungiibeleja poletteja."
   },
   "storePhrase": {
     "message": "Tallenna tämä teksti johonkin salasanojen hallintaohjelmaan (esim. 1Password)."
+  },
+  "submit": {
+    "message": "Lähetä"
   },
   "submitted": {
     "message": "Lähetetty"
@@ -1103,7 +1480,7 @@
     "message": "Symboli"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "Symbolin on oltava 11 merkkiä tai vähemmän."
+    "message": "Kuvakkeessa saa olla korkeintaan 11 merkkiä."
   },
   "syncWithMobile": {
     "message": "Synkronoi mobiililaitteelle"
@@ -1112,10 +1489,10 @@
     "message": "Synkronoi mobiililaitteen kanssa"
   },
   "syncWithMobileDesc": {
-    "message": "Voit synkronoida tilisi ja tietosi mobiililaitteidesi kesken. Avaa Bravein mobiilisovellus, siirry \"Asetukset\"-osioon ja napauta \"Synkronoi selainlaajennuksesta\" -vaihtoehtoa"
+    "message": "Voit synkronoida tilisi ja tietosi mobiililaitteesi välillä. Avaa Brave-mobiiliselain, siirry \"Asetuksiin\" ja napauta kohtaa \"Synkronoi selainlaajennuksesta\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jos avaat Bravein mobiilisovelluksen vasta ensimmäistä kertaa, noudata vain puhelimesi ilmoittamia vaiheita."
+    "message": "Noudata puhelimesi ohjeistuksia, jos avasit Brave Mobile -sovelluksen juuri ensimmäistä kertaa."
   },
   "syncWithMobileScanThisCode": {
     "message": "Lue tämä koodi Brave-mobiilisovelluksellasi"
@@ -1124,7 +1501,7 @@
     "message": "Varmista, ettei kukaan muu katsele näyttöäsi, kun skannaat koodin"
   },
   "syncWithMobileComplete": {
-    "message": "Tietojesi synkronoiminen onnistui. Nauti Brave-mobiilisovelluksesta!"
+    "message": "Tietosi on synkronoitu. Pidä hauskaa Brave-mobiilisovelluksen parissa!"
   },
   "terms": {
     "message": "Käyttöehdot"
@@ -1141,6 +1518,13 @@
   "to": {
     "message": "Kohde"
   },
+  "toAddress": {
+    "message": "Kohde: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Kohde:"
+  },
   "token": {
     "message": "Poletti"
   },
@@ -1149,6 +1533,9 @@
   },
   "tokenContractAddress": {
     "message": "Käyttötunnuksen yhteysosoite"
+  },
+  "tokenOptions": {
+    "message": "Käyttötunnusvaihtoehdot"
   },
   "tokenSymbol": {
     "message": "Tietuesymboli"
@@ -1198,6 +1585,9 @@
   "transactionTime": {
     "message": "Tapahtuman aika"
   },
+  "showTransactionTimeDescription": {
+    "message": "Valitse tämä näyttääksesi odottavan maksusiirtoajan arviot toimintavälilehdessä ollessasi Ethereumin pääverkostossa. Huom. Arviota perustuvat verkoston ehtoihin."
+  },
   "transfer": {
     "message": "Siirrä"
   },
@@ -1211,14 +1601,21 @@
     "message": "Kohtasimme ongelmia ladatessamme tietuesaldojasi. Voit katsella niitä kohteessa",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "Etkö luota tähän sivustoon? Jos myönnät tämän valtuuden, $1 voi nostaa $2-valuuttaasi ja automatisoida maksusiirtoja puolestasi.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Yritä uudelleen"
   },
   "typePassword": {
-    "message": "Kirjoita Brave-salasanasi"
+    "message": "Kirjoita Braven salasanasi"
   },
   "unapproved": {
     "message": "Ei hyväksytty"
+  },
+  "alertDisableTooltip": {
+    "message": "Tämä on muutettavissa \"Asetukset > Hälytykset\" -osiossa"
   },
   "units": {
     "message": "yksikköä"
@@ -1238,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Tapahtui virhe yritettäessä käyttää kameraasi. Ole hyvä ja yritä uudestaan..."
   },
+  "unlimited": {
+    "message": "Rajaton"
+  },
   "unlock": {
     "message": "Poista lukitus"
   },
@@ -1248,10 +1648,19 @@
     "message": "$1 päivitetty"
   },
   "urlErrorMsg": {
-    "message": "URI:t vaativat asianmukaisen HTTP/HTTPS-etuliitteen."
+    "message": "URL-osoitteet vaativat asianmukaisen HTTP/HTTPS-etuliitteen."
+  },
+  "urlExistsErrorMsg": {
+    "message": "URL on jo verkostolistalla"
   },
   "usedByClients": {
     "message": "Lukuisien eri asiakkaiden käyttämä"
+  },
+  "usePhishingDetection": {
+    "message": "Käytä kalasteluohjelmien havaitsemista"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Näyttää varoituksen Ethereum-käyttäjiin kohdennetuista, tietojenkalasteluun liittyvistä verkkotunnuksista"
   },
   "userName": {
     "message": "Käyttäjätunnus"
@@ -1271,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "Näytä Etherscanissa"
   },
+  "retryTransaction": {
+    "message": "Yritä maksusuoritusta uudelleen"
+  },
   "visitWebSite": {
     "message": "Vieraile verkkosivustollamme"
   },
   "walletSeed": {
-    "message": "Lompakon siemen"
+    "message": "Juuritunnus"
   },
   "welcomeBack": {
     "message": "Tervetuloa takaisin!"
   },
   "welcome": {
-    "message": "Tervetuloa Braveiin"
+    "message": "Tervetuloa Braveen"
+  },
+  "whatsThis": {
+    "message": "Mikä tämä on?"
   },
   "writePhrase": {
     "message": "Kirjoita tämä teksti paperille ja säilytä sitä turvallisessa paikassa. Jos haluat olla vielä paremmassa turvassa, kirjoita se ylös useille eri papereille ja talleta ne kahteen tai kolmeen eri paikkaan."
+  },
+  "xOfY": {
+    "message": "$1 / $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Kyllä, kokeillaan"
@@ -1304,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "Polttoaine ei maksa kiihdytyksen yhteydessä"
   },
+  "decryptRequest": {
+    "message": "Pura pyynnön salaus"
+  },
+  "decrypt": {
+    "message": "Pura salaus"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 tahtoisi lukea tämän viestin voidakseen viimeistellä toimenpiteesi",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Pura viestin salaus"
+  },
+  "decryptCopy": {
+    "message": "Kopioi salattu viesti"
+  },
+  "decryptInlineError": {
+    "message": "Tämän viestin salausta ei voida purkaa virheen vuoksi: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Anna"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Pyydä salauksen julkista avainta"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 tarvitsee julkisen salausavaimesi. Tämä sivu voi luoda sinulle salattuja viestejä, jos annat sille valtuudet siihen.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Kryptolompakoiden salainen varmuuslauseke"
+  },
+  "braveRewards": {
+    "message": "Brave Rewards"
+  },
+  "braveSettings": {
+    "message": "Brave-asetukset"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Kryptovaluuttalompakot mahdollistavat kryptovaluuttojen ynnä niihin liittyvän omaisuuden käyttämisen Bravessa. Kryptovaluuttalompakot tukevat ETHin ja BATin kaltaisia Ethereum-käyttötunnuksia sekä kerättäviä tunnuksia, minkä ansiosta voit käyttää Ðappseja ynnä muita vastaavia älysopimuksia. Nämä palvelut on tarkoitettu Ethereumiin sekä muihin lohkoketjuihin perehtyneille — ja niistä kiinnostuneille."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Käytä Crypto Walletsia ainoastaan, jos olet valmis itse kantamaan kaikki sen käyttöön liittyvät riskit. Sinun on myös tunnustettava, että Brave Software ei ole vastuussa sen käytöstä johtuvista tappioista, lompakon oheiskulut mukaan lukien."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Kaikki tämä on erillään tästä:"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Jos tahtoisit tukea suosikkisivustoasi, niin suosittelemme siirtymään siihen."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Kryptokukkarot"
+  },
+  "disclosureConfirm": {
+    "message": "Ymmärrän"
+  },
   "ledgerCreateSubText": {
     "message": "Yhdistä Ledger hardware -lompakkosi vuorovaikutukseen dAppsin kanssa ja tee  siirtoja muihin yhdistettyihin lompakoihin."
+  },
+  "metamaskImportSubText": {
+    "message": "Huomio: jos siirto tehdään Metamask-lompakosta, lisää 12 sanaa 24 sijaan."
   },
   "newLocalWallet": {
     "message": "Uusi paikallinen kukkaro"
@@ -1313,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Luo uusi paikallinen Brave-kukkaro voidaksesi käyttää dAppseja ja tallettaaksesi kryptovaluuttaa ja keräilykohteita turvallisesti. Käy anonyymisti kauppaa tokeneilla ilman kaupankäyntimaksuja."
   },
+  "passWarningOne": {
+    "message": "Tämä salasana suojaa yksityisavaintasi. Kukaan ei voi vaihtaa sitä, jos unohdat sen, Brave mukaan lukien!"
+  },
+  "providerErrorMessage": {
+    "message": "Tämä lompakko on nyt oletusarvoinen Ethereum Dapp -palveluntarjoajasi."
+  },
   "trezorCreateSubText": {
     "message": "Yhdistä Trezor-laitteistokukkarosi ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa ja tehdäksesi siirtoja muihin yhdistäneisiin kukkaroihin."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Tervetuloa Braven Crypto Walletsiin"
   }
 }

@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "He leído y acepto los $1",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "Ve las direcciones de tus cuentas permitidas (requerido)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "Sitios conectados"
+  },
+  "connectedSitesDescription": {
+    "message": "La cuenta $1 está conectada a estos sitios. Pueden ver la dirección de tu cuenta.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "La cuenta $1 no está conectada a ningún sitio.",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Tienes 1 cuenta conectada a este sitio."
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Tienes $1 cuentas conectadas a este sitio.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave no está conectado a este sitio. Para conectar a un sitio Web3, busca el botón de conexión en su sitio."
+  },
+  "currentAccountNotConnected": {
+    "message": "Tu cuenta actual no está conectada."
+  },
+  "switchToThisAccount": {
+    "message": "Cambiar a esta cuenta"
+  },
+  "disconnectThisAccount": {
+    "message": "Desconectar esta cuenta"
+  },
+  "permissions": {
+    "message": "Permisos"
+  },
+  "showPermissions": {
+    "message": "Mostrar permisos"
+  },
+  "authorizedPermissions": {
+    "message": "Has autorizado los siguientes permisos"
+  },
+  "connectManually": {
+    "message": "Conectarse manualmente al sitio actual"
+  },
+  "disconnect": {
+    "message": "Desconectar"
+  },
+  "disconnectAllAccounts": {
+    "message": "Desconectar todas las cuentas"
+  },
+  "disconnectPrompt": {
+    "message": "Desconectar $1"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "¿Confirmas que quieres desconectar? Puedes perder la funcionalidad del sitio."
+  },
+  "dismiss": {
+    "message": "Rechazar"
+  },
+  "showIncomingTransactions": {
+    "message": "Mostrar las transacciones entrantes"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Selecciona esta opción a fines de utilizar Etherscan para mostrar las transacciones entrantes en la lista de transacciones."
+  },
   "chartOnlyAvailableEth": {
     "message": "Chart está disponible únicamente en las redes de Ethereum."
+  },
+  "connecting": {
+    "message": "Conectando…"
+  },
+  "connectWithMetaMask": {
+    "message": "Conectar con Brave"
+  },
+  "connectTo": {
+    "message": "Conectar a $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "Conectar a todas tus $1",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "cuentas",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Conectar a $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 cuentas",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "Interacción contractual"
@@ -16,6 +113,10 @@
   },
   "acceleratingATransaction": {
     "message": "* Aumentar una transacción utilizando un precio de gas más alto aumenta sus posibilidades de ser procesada más rápido por la red, pero esto no siempre está garantizado."
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 puede acceder y gastar hasta esta cantidad máxima",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "Accediendo a la cámara…"
@@ -35,6 +136,12 @@
   "accountSelectionRequired": {
     "message": "¡Tienes que seleccionar una cuenta!"
   },
+  "active": {
+    "message": "Activo"
+  },
+  "activity": {
+    "message": "Actividad"
+  },
   "activityLog": {
     "message": "registro de actividad"
   },
@@ -48,7 +155,7 @@
     "message": "Avanzada"
   },
   "advancedSettingsDescription": {
-    "message": "Accede a las funciones de desarrollador, descarga los registros de estado, restablece la cuenta, y configura las redes Testnet y el RPC personalizado"
+    "message": "Accede a las funciones de desarrollador, descarga los registros de estado, restablece la cuenta, y configura las redes Testnet y el RPC personalizado."
   },
   "advancedOptions": {
     "message": "Opciones avanzadas"
@@ -74,25 +181,61 @@
   "addAcquiredTokens": {
     "message": "Agrega los tokens adquiridos con Brave"
   },
+  "alerts": {
+    "message": "Alertas"
+  },
+  "alertsSettingsDescription": {
+    "message": "Activa o desactiva cada alerta"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "Navegar por un sitio web con una cuenta desconectada seleccionada"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "Esta alerta aparece en la ventana emergente cuando se está navegando por un sitio Web3 conectado, pero la cuenta actualmente seleccionada no está conectada."
+  },
+  "allowOriginSpendToken": {
+    "message": "¿Permitir que $1 gaste tu $2?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "Permitir que este sitio:"
+  },
+  "allowExternalExtensionTo": {
+    "message": "Permitir que esta extensión externa:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "Permitir que $1 retire y gaste hasta la siguiente cantidad:",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
+  },
   "amount": {
     "message": "Monto"
+  },
+  "amountWithColon": {
+    "message": "Monto:"
   },
   "appDescription": {
     "message": "Una billetera de Ethereum en tu navegador",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "Brave",
+    "message": "Brave Software",
     "description": "The name of the application"
   },
   "approve": {
-    "message": "Aprobar"
+    "message": "Aprobar el límite de gasto"
+  },
+  "approveSpendLimit": {
+    "message": "Aprobar el límite de gasto de $1",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "Aprobados"
   },
   "asset": {
     "message": "Activo"
+  },
+  "assets": {
+    "message": "Activos"
   },
   "attemptingConnect": {
     "message": "Tratar de conectarse a blockchain."
@@ -107,10 +250,10 @@
     "message": "Atribuciones"
   },
   "autoLockTimeLimit": {
-    "message": "Temporizador de cierre de sesión automático (minutos)"
+    "message": "Temporizador de bloqueo automático (minutos)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Configura tu tiempo de inactividad en minutos para controlar cuándo Brave cerrará tu sesión de forma automática"
+    "message": "Configura tu tiempo de inactividad en minutos para controlar cuándo Brave se boqueará."
   },
   "average": {
     "message": "Promedio"
@@ -149,23 +292,35 @@
   "blockiesIdenticon": {
     "message": "Utilizar blockies identicon"
   },
+  "nonceField": {
+    "message": "Personalizar el nonce de la transacción"
+  },
+  "nonceFieldHeading": {
+    "message": "Nonce personalizado"
+  },
+  "nonceFieldDescription": {
+    "message": "Activa esto para cambiar el nonce (número de transacción) en las pantallas de confirmación. Esta es una función avanzada, por lo que debes utilizarla con precaución."
+  },
   "browserNotSupported": {
     "message": "Tu navegador no es compatible…"
   },
   "builtInCalifornia": {
-    "message": "Brave se diseñó y creó en California."
+    "message": "Brave se diseña y desarrolla en California."
   },
   "buyWithWyre": {
     "message": "Comprar ETH con Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre te permite utilizar una tarjeta de crédito para depositar ETH directamente en su cuenta de Brave."
+    "message": "Wyre te permite utilizar una tarjeta de débito para depositar ETH directamente en tu cuenta de Brave."
   },
   "buyCoinSwitch": {
     "message": "Comprar en CoinSwitch"
   },
   "buyCoinSwitchExplainer": {
     "message": "CoinSwitch es un destino integral para intercambiar más de 300 tipos de criptomonedas con la mejor tasa."
+  },
+  "bytes": {
+    "message": "Bytes"
   },
   "off": {
     "message": "Desactivado"
@@ -201,7 +356,7 @@
     "message": "Cerrar"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Debes utilizar Brave en Google Chrome para poder conectarte a tu billetera de hardware."
+    "message": "Debes utilizar Brave en Google Chrome para conectarte a tu billetera de hardware."
   },
   "confirm": {
     "message": "Confirmar"
@@ -210,13 +365,16 @@
     "message": "Confirmado"
   },
   "confirmPassword": {
-    "message": "Confirmar contraseña"
+    "message": "Confirmar la contraseña"
   },
   "confirmSecretBackupPhrase": {
     "message": "Confirma tu frase de copia de seguridad secreta"
   },
   "congratulations": {
     "message": "Felicitaciones"
+  },
+  "connectAccountOrCreate": {
+    "message": "Conectar la cuenta o crear una nueva"
   },
   "connectHardwareWallet": {
     "message": "Conectar billetera de hardware"
@@ -244,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "Conexión con la red de prueba Goerli"
+  },
+  "contacts": {
+    "message": "Contactos"
+  },
+  "contactsSettingsDescription": {
+    "message": "Agregar, editar, eliminar y administrar contactos"
+  },
+  "contactUs": {
+    "message": "¡Comunícate con nosotros!"
   },
   "continueToWyre": {
     "message": "Continuar a Wyre"
@@ -287,6 +454,9 @@
   "currencyConversion": {
     "message": "Conversión de moneda"
   },
+  "currentExtension": {
+    "message": "Página de extensión actual"
+  },
   "currentLanguage": {
     "message": "Idioma actual"
   },
@@ -301,6 +471,12 @@
   },
   "customRPC": {
     "message": "RPC personalizado"
+  },
+  "customSpendLimit": {
+    "message": "Límite de gasto personalizado"
+  },
+  "dataBackupFoundInfo": {
+    "message": "Se realizó una copia de seguridad de algunos de los datos de tu cuenta durante una instalación anterior de Brave. Esto podría incluir tu configuración, contactos y tokens. ¿Quieres restaurar estos datos ahora?"
   },
   "decimalsMustZerotoTen": {
     "message": "Los decimales deben ser mayores a 0 y menores a 36."
@@ -335,6 +511,9 @@
   "done": {
     "message": "Listo"
   },
+  "dontShowThisAgain": {
+    "message": "No mostrar esto de nuevo"
+  },
   "downloadGoogleChrome": {
     "message": "Descargar Google Chrome"
   },
@@ -356,6 +535,9 @@
   "editContact": {
     "message": "Editar contacto"
   },
+  "editPermission": {
+    "message": "Permiso de edición"
+  },
   "endOfFlowMessage1": {
     "message": "Pasaste la prueba. Es responsabilidad tuya mantener la frase de inicialización segura."
   },
@@ -369,7 +551,7 @@
     "message": "Nunca compartas tu frase con nadie."
   },
   "endOfFlowMessage5": {
-    "message": "¡Cuidado con las suplantaciones de identidad! Brave no te pedirá nunca tu frase de inicialización de forma espontánea."
+    "message": "¡Ten cuidado con el phishing! Brave nunca te solicitará tu frase de inicialización de forma espontánea."
   },
   "endOfFlowMessage6": {
     "message": "Si necesitas otra copia de seguridad de tu frase de inicialización, puedes encontrarla en Configuración -> Seguridad."
@@ -378,13 +560,20 @@
     "message": "Si tienes preguntas o ves algo sospechoso, envía un correo electrónico a support@brave.com."
   },
   "endOfFlowMessage8": {
-    "message": "Brave no puede recuperar tu frase de inicialización. Obtén más información."
+    "message": "Brave no puede recuperar tu frase de inicialización."
   },
   "endOfFlowMessage9": {
     "message": "Más información."
   },
   "endOfFlowMessage10": {
     "message": "Todo listo"
+  },
+  "externalExtension": {
+    "message": "Extensión externa"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" cerrará esta pestaña y dirigirá de vuelta a $2",
+    "description": "Return the user to the site that initiated onboarding"
   },
   "ensRegistrationError": {
     "message": "Error en el registro de nombres de ENS"
@@ -395,11 +584,46 @@
   "enterAnAlias": {
     "message": "Ingresa un alias"
   },
+  "enterMaxSpendLimit": {
+    "message": "Introduce el límite de gasto máximo"
+  },
   "enterPassword": {
     "message": "Ingresa la contraseña"
   },
   "enterPasswordContinue": {
     "message": "Ingresa tu contraseña para continuar"
+  },
+  "errorCode": {
+    "message": "Código: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "Detalles del error",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "Mensaje: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "Código: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave encontró un error",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "Inténtalo de nuevo al recargar la página o comunícate con el servicio de soporte técnico al escribir a support@brave.com.",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "Inténtalo de nuevo al cerrar y reabrir la ventana emergente, o comunícate con el servicio de soporte técnico al escribir a support@brave.com.",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "Pila:",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Dirección pública de Ethereum"
@@ -411,7 +635,7 @@
     "message": "Tiempo estimado de procesamiento"
   },
   "expandView": {
-    "message": "Expandir vista"
+    "message": "Ampliar la vista"
   },
   "exportPrivateKey": {
     "message": "Exportar clave privada"
@@ -419,11 +643,17 @@
   "failed": {
     "message": "Error"
   },
+  "failureMessage": {
+    "message": "Algo salió mal, por lo que no pudimos completar la acción."
+  },
   "fast": {
     "message": "Rápido"
   },
   "faster": {
     "message": "Más rápido"
+  },
+  "feeAssociatedRequest": {
+    "message": "Esta solicitud está asociada a una tarifa."
   },
   "fiat": {
     "message": "Dinero fiduciario",
@@ -438,6 +668,13 @@
   },
   "from": {
     "message": "De"
+  },
+  "fromAddress": {
+    "message": "De: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "Función: Aprobar"
   },
   "functionType": {
     "message": "Tipo de función"
@@ -466,6 +703,17 @@
   "gasPriceNoDenom": {
     "message": "Precio del gas"
   },
+  "gdprMessage": {
+    "message": "Estos datos son agregados y, por lo tanto, anónimos a los efectos del Reglamento General de Protección de Datos (UE) 2016/679. Para obtener más información en relación con nuestras prácticas de privacidad, consulta nuestra $1.",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "Política de privacidad aquí",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
+  "general": {
+    "message": "General"
+  },
   "generalSettingsDescription": {
     "message": "Conversión de moneda, moneda principal, idioma, blockies identicon"
   },
@@ -485,6 +733,9 @@
   "happyToSeeYou": {
     "message": "Estamos encantados de verte."
   },
+  "hardware": {
+    "message": "Hardware"
+  },
   "hardwareWalletConnected": {
     "message": "Billetera de hardware conectada"
   },
@@ -492,7 +743,7 @@
     "message": "Conectar una billetera de hardware"
   },
   "hardwareWalletsMsg": {
-    "message": "Selecciona la billetera de hardware que te gustaría utilizar con Brave"
+    "message": "Selecciona una billetera de hardware que te gustaría utilizar con Brave."
   },
   "havingTroubleConnecting": {
     "message": "¿Problemas de conexión?"
@@ -506,6 +757,10 @@
   },
   "hide": {
     "message": "Ocultar"
+  },
+  "hideTokenSymbol": {
+    "message": "Ocultar $1",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
     "message": "¿Ocultar token?"
@@ -563,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "Dirección de contrato conocida."
   },
+  "knownTokenWarning": {
+    "message": "Esta acción editará los tokens que ya figuran en tu billetera, que se pueden utilizar para hacer phishing. Aprueba esto únicamente si confirmas que quieres cambiar lo que estos tokens representan."
+  },
+  "reusedTokenNameWarning": {
+    "message": "Un token aquí reutiliza un símbolo de otro token que ves, por lo que esto puede ser confuso o engañoso."
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No existe la red ETH, utilice minúsculas"
   },
@@ -573,10 +834,22 @@
     "message": "RPC de URL no válido"
   },
   "invalidBlockExplorerURL": {
-    "message": "Block Explorer de URL no válido"
+    "message": "URL del explorador de bloques no válida"
   },
   "invalidSeedPhrase": {
     "message": "Frase de inicialización no válida"
+  },
+  "ipfsGateway": {
+    "message": "Puerta de enlace a IPFS"
+  },
+  "ipfsGatewayDescription": {
+    "message": "Introduce la URL de la puerta de enlace de CID a IPFS que se usará para la resolución del contenido de ENS."
+  },
+  "invalidIpfsGateway": {
+    "message": "Puerta de enlace a IPFS no válida: el valor debe ser una URL válida."
+  },
+  "forbiddenIpfsGateway": {
+    "message": "Puerta de enlace a IPFS prohibida: especifica una puerta de enlace de CID."
   },
   "jsonFile": {
     "message": "Archivo JSON",
@@ -587,6 +860,9 @@
   },
   "max": {
     "message": "Máx."
+  },
+  "lastConnected": {
+    "message": "Última conexión"
   },
   "learnMore": {
     "message": "Más información"
@@ -615,8 +891,14 @@
   "loadMore": {
     "message": "Cargar más"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "Cerrar sesión"
+    "message": "Bloqueo"
+  },
+  "lockTimeTooGreat": {
+    "message": "El tiempo de bloqueo es demasiado grande."
   },
   "mainnet": {
     "message": "Red principal de Ethereum"
@@ -624,8 +906,20 @@
   "memorizePhrase": {
     "message": "Memoriza esta frase."
   },
+  "memo": {
+    "message": "memo"
+  },
   "message": {
     "message": "Mensaje"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "Ahora tienes más control sobre las conexiones de tu cuenta en Brave."
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "El botón de estado de conexión muestra si el sitio web que estás visitando está conectado a tu cuenta actualmente seleccionada."
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "Haz clic en él para administrar tus cuentas conectadas."
   },
   "metamaskDescription": {
     "message": "Te estamos conectando a Ethereum y a la web descentralizada."
@@ -687,13 +981,13 @@
     "message": "Nuevo contrato"
   },
   "newPassword": {
-    "message": "Nueva contraseña (mín. 8 caracteres)"
+    "message": "Contraseña nueva (mín. 8 caracteres)"
   },
   "newNetwork": {
     "message": "Nueva red"
   },
   "newToMetaMask": {
-    "message": "¿Nuevo en Brave?"
+    "message": "¿Es tu primera vez en Brave?"
   },
   "noAlreadyHaveSeed": {
     "message": "No, ya tengo una frase de inicialización"
@@ -702,13 +996,19 @@
     "message": "¡Protege tus claves!"
   },
   "protectYourKeysMessage1": {
-    "message": "Ten cuidado con tu frase de inicialización: hay informes sobre sitios web que intentan hacerse pasar por Brave. ¡Brave no te pedirá nunca tu frase de inicialización!"
+    "message": "Ten cuidado con tu frase de inicialización: ha habido informes de sitios web que intentan imitar a Brave. ¡Brave nunca solicitará tu frase de inicialización!"
   },
   "protectYourKeysMessage2": {
-    "message": "Mantén tu frase segura. Si notas algo raro o si no está seguro sobre si usar algún sitio web en específico, envíanos un correo electrónico a support@brave.com"
+    "message": "Mantén tu frase segura. Si notas algo raro o desconfías de un sitio web, envíanos un correo electrónico a support@brave.com."
   },
   "rpcUrl": {
     "message": "Nueva URL de RPC"
+  },
+  "onlyConnectTrust": {
+    "message": "Conecta únicamente con sitios en los que confíes."
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "Un proveedor de red Ethereum malicioso puede mentir sobre el estado de la cadena de bloques y registrar tu actividad en la red. Agrega únicamente redes personalizadas en las que confíes."
   },
   "optionalChainId": {
     "message": "ID de cadena (opcional)"
@@ -725,6 +1025,10 @@
   "next": {
     "message": "Siguiente"
   },
+  "nextNonceWarning": {
+    "message": "El nonce es más alto que el nonce sugerido de $1.",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "No se ha establecido ninguna dirección para este nombre."
   },
@@ -733,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "No tienes transacciones"
+  },
+  "noThanks": {
+    "message": "No, gracias"
+  },
+  "notCurrentAccount": {
+    "message": "¿Esta es la cuenta correcta? Es diferente a la cuenta actualmente seleccionada en tu billetera."
   },
   "notEnoughGas": {
     "message": "No tienes suficiente gas"
@@ -775,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "pendiente"
+    "message": "Pendiente"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "Has aprobado este permiso."
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "No has aprobado este permiso."
   },
   "personalAddressDetected": {
     "message": "Dirección personal detectada. Ingresa la dirección de contrato del token."
+  },
+  "plusXMore": {
+    "message": "+ $1 más",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "Ant"
@@ -802,14 +1122,23 @@
   "privateNetwork": {
     "message": "Red privada"
   },
+  "proposedApprovalLimit": {
+    "message": "Límite de aprobación propuesto"
+  },
   "queue": {
     "message": "Cola"
+  },
+  "queued": {
+    "message": "En cola"
   },
   "readdToken": {
     "message": "Puedes volver a agregar este token a través de la opción \"Agregar token\" en el menú de opciones de tus cuentas."
   },
   "recents": {
     "message": "Recientes"
+  },
+  "receive": {
+    "message": "Recibir"
   },
   "recipientAddress": {
     "message": "Dirección del destinatario"
@@ -836,7 +1165,7 @@
     "message": "Restablecer cuenta"
   },
   "resetAccountDescription": {
-    "message": "Si restableces tu cuenta, se eliminará el historial de transacciones."
+    "message": "Si restableces tu cuenta, se eliminará el historial de transacciones. Esto no cambiará los saldos de tus cuentas ni requerirá que introduzcas tu frase de inicialización nuevamente."
   },
   "deleteNetwork": {
     "message": "¿Eliminar red?"
@@ -853,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "Restaura tu cuenta con la frase de inicialización"
   },
+  "restoreWalletPreferences": {
+    "message": "Se ha encontrado una copia de seguridad de tus datos del $1. ¿Quieres restaurar las preferencias de tu billetera?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "solicitudes pendientes de reconocimiento"
   },
@@ -863,7 +1196,7 @@
     "message": "Restaurar"
   },
   "revealSeedWords": {
-    "message": "Mostrar las palabras de inicialización"
+    "message": "Revelar la frase de inicialización"
   },
   "revealSeedWordsTitle": {
     "message": "Frase de inicialización"
@@ -932,7 +1265,7 @@
     "message": "ADVERTENCIA: Nunca reveles tu frase de copia de seguridad. Cualquier persona que tenga acceso a esta frase puede llevarse tus Ethers permanentemente."
   },
   "secretPhrase": {
-    "message": "Ingresa tu frase secreta de 24 palabras para restaurar tu almacén."
+    "message": "Introduce aquí tu frase secreta de 24 palabras para restaurar tu bóveda."
   },
   "securityAndPrivacy": {
     "message": "Seguridad y privacidad"
@@ -943,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "Separa cada palabra con un solo espacio"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Pegar la frase de inicialización del portapapeles"
+  },
+  "showSeedPhrase": {
+    "message": "Mostrar la frase de inicialización"
+  },
   "seedPhraseReq": {
-    "message": "Las frases de inicialización tienen una longitud de 12 palabras"
+    "message": "Las frases de inicialización contienen 12, 15, 18, 21 o 24 palabras."
+  },
+  "selectingAllWillAllow": {
+    "message": "Si seleccionas todo, este sitio podrá ver todas tus cuentas actuales. Asegúrate de confiar en este sitio."
+  },
+  "selectAccounts": {
+    "message": "Selecciona la(s) cuenta(s)"
+  },
+  "selectAll": {
+    "message": "Seleccionar todo"
   },
   "selectCurrency": {
     "message": "Seleccionar moneda"
@@ -957,6 +1305,9 @@
   },
   "selectType": {
     "message": "Seleccionar tipo"
+  },
+  "buy": {
+    "message": "Comprar"
   },
   "send": {
     "message": "Enviar"
@@ -976,17 +1327,27 @@
   "sentTokens": {
     "message": "tokens enviados"
   },
+  "sendSpecifiedTokens": {
+    "message": "Enviar $1",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "Separa cada palabra con un solo espacio"
   },
   "searchTokens": {
     "message": "Buscar tokens"
   },
+  "searchAccounts": {
+    "message": "Buscar cuentas"
+  },
+  "noAccountsFound": {
+    "message": "No se han encontrado cuentas para la consulta de búsqueda proporcionada."
+  },
   "selectAnAccount": {
     "message": "Selecciona una cuenta"
   },
   "selectAnAccountHelp": {
-    "message": "Selecciona la cuenta que deseas ver en Brave"
+    "message": "Selecciona la cuenta para ver en Brave"
   },
   "selectAHigherGasFee": {
     "message": "Selecciona una tasa de gas más alta para acelerar el procesamiento de tu transacción.*"
@@ -1027,6 +1388,9 @@
   "signatureRequest": {
     "message": "Solicitud de firma"
   },
+  "signatureRequest1": {
+    "message": "Mensaje"
+  },
   "signed": {
     "message": "Firmado"
   },
@@ -1048,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "Acelerar esta transacción"
   },
+  "spendLimitPermission": {
+    "message": "Permiso de límite de gasto"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Límite de gasto solicitado por $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "El límite de gasto es demasiado grande."
+  },
+  "spendLimitInvalid": {
+    "message": "El límite de gasto no es válido; debe ser un número positivo."
+  },
   "switchNetworks": {
     "message": "Cambiar redes"
+  },
+  "stateLogFileName": {
+    "message": "Registros de estado de Brave"
   },
   "stateLogs": {
     "message": "Registros de estado"
@@ -1059,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "Error al recuperar los registros de estado."
+  },
+  "statusConnected": {
+    "message": "Conectado"
+  },
+  "statusNotConnected": {
+    "message": "No conectado"
   },
   "step1HardwareWallet": {
     "message": "1. Conecta la billetera de hardware"
@@ -1073,13 +1459,16 @@
     "message": "Selecciona la cuenta que deseas ver. Solo puedes seleccionar una a la vez."
   },
   "step3HardwareWallet": {
-    "message": "3. ¡Comienza a utilizar dApps y más!"
+    "message": "3. ¡Empieza a utilizar los sitios Web3 y más!"
   },
   "step3HardwareWalletMsg": {
-    "message": "Utiliza tu cuenta de hardware como si fuera una cuenta de Ethereum. Inicia sesión en dApps, envía ETH, compra y almacena tokens ERC20 y tokens no fungibles como CryptoKitties."
+    "message": "Utiliza tu cuenta de hardware como si fuera una cuenta de Ethereum. Conéctate a sitios Web3, envía ETH, compra y almacena tokens ERC20 y tokens no fungibles como CryptoKitties."
   },
   "storePhrase": {
     "message": "Almacena esta frase en un administrador de contraseñas como 1Password."
+  },
+  "submit": {
+    "message": "Enviar"
   },
   "submitted": {
     "message": "Enviado"
@@ -1100,13 +1489,13 @@
     "message": "Sincronizar con un dispositivo móvil"
   },
   "syncWithMobileDesc": {
-    "message": "Puedes sincronizar tus cuentas e información con tu dispositivo móvil. Abre la aplicación de Brave para dispositivos móviles, dirígete a \"Configuración\" y selecciona \"Sincronizar desde una extensión del navegador\""
+    "message": "Puedes sincronizar tus cuentas e información con tu dispositivo móvil. Abre la aplicación Brave para dispositivos móviles, ve a \"Configuración\" y toca en \"Sincronizar desde una extensión del navegador\"."
   },
   "syncWithMobileDescNewUsers": {
     "message": "Si estás abriendo la aplicación de Brave para dispositivos móviles por primera vez, sigue los pasos indicados en tu teléfono."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Escanea este código con la aplicación móvil de Brave"
+    "message": "Escanea este código con tu aplicación móvil de Brave"
   },
   "syncWithMobileBeCareful": {
     "message": "Asegúrate de que nadie esté mirando tu pantalla cuando escanees este código"
@@ -1124,10 +1513,20 @@
     "message": "Esto creará una billetera y una frase de inicialización nuevas"
   },
   "tips": {
-    "message": "Consejos"
+    "message": "Propinas"
   },
   "to": {
     "message": "A"
+  },
+  "toAddress": {
+    "message": "Para: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "Para:"
+  },
+  "token": {
+    "message": "Token"
   },
   "tokenAlreadyAdded": {
     "message": "El token ya se ha agregado."
@@ -1135,8 +1534,14 @@
   "tokenContractAddress": {
     "message": "Dirección de contrato del token"
   },
+  "tokenOptions": {
+    "message": "Opciones de token"
+  },
   "tokenSymbol": {
     "message": "Símbolo del token"
+  },
+  "total": {
+    "message": "Total"
   },
   "transaction": {
     "message": "transacción"
@@ -1180,6 +1585,9 @@
   "transactionTime": {
     "message": "Tiempo de transacción"
   },
+  "showTransactionTimeDescription": {
+    "message": "Selecciona esta opción para mostrar las estimaciones de tiempo de transacción pendientes en la pestaña de actividad mientras te encuentres en la red principal de Ethereum. Nota: las estimaciones son aproximaciones basadas en las condiciones de la red."
+  },
   "transfer": {
     "message": "Transferir"
   },
@@ -1193,14 +1601,21 @@
     "message": "Hubo un problema al cargar tus saldos de tokens. Puedes verlos",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "¿Confías en este sitio? Al conceder este permiso, permites que $1 retire tus $2 y automatice las transacciones por ti.",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
     "message": "Reintentar"
   },
   "typePassword": {
-    "message": "Ingresa tu contraseña de Brave"
+    "message": "Escribe tu contraseña de Brave"
   },
   "unapproved": {
     "message": "Sin autorización"
+  },
+  "alertDisableTooltip": {
+    "message": "Esto se puede cambiar en \"Configuración > Alertas\""
   },
   "units": {
     "message": "unidades"
@@ -1220,6 +1635,9 @@
   "unknownCameraError": {
     "message": "Hubo un error al intentar acceder a tu cámara. Vuelve a intentarlo…"
   },
+  "unlimited": {
+    "message": "Sin límites"
+  },
   "unlock": {
     "message": "Desbloquear"
   },
@@ -1230,10 +1648,19 @@
     "message": "Actualización: $1"
   },
   "urlErrorMsg": {
-    "message": "Los URI deben tener el prefijo HTTP/HTTPS apropiado."
+    "message": "Las URL deben tener el prefijo HTTP/HTTPS apropiado."
+  },
+  "urlExistsErrorMsg": {
+    "message": "La URL ya está presente en la lista de redes existente."
   },
   "usedByClients": {
     "message": "Utilizado por una gran variedad de clientes distintos"
+  },
+  "usePhishingDetection": {
+    "message": "Utilizar la detección de phishing"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Mostrar una advertencia para los dominios de phishing dirigidos a los usuarios de Ethereum"
   },
   "userName": {
     "message": "Nombre de usuario"
@@ -1253,20 +1680,30 @@
   "viewOnEtherscan": {
     "message": "Ver en Etherscan"
   },
+  "retryTransaction": {
+    "message": "Reintentar la transacción"
+  },
   "visitWebSite": {
     "message": "Visita nuestro sitio web"
   },
   "walletSeed": {
-    "message": "Inicialización de la billetera"
+    "message": "Frase de inicialización"
   },
   "welcomeBack": {
     "message": "¡Hola de nuevo!"
   },
   "welcome": {
-    "message": "Bienvenido a Brave"
+    "message": "Te damos la bienvenida a Brave"
+  },
+  "whatsThis": {
+    "message": "¿Qué es esto?"
   },
   "writePhrase": {
     "message": "Escribe esta frase en un papel y guárdalo en un lugar seguro. Si deseas una seguridad incluso mejor, escríbela en varios trozos de papel y guárdalos en dos o tres lugares distintos."
+  },
+  "xOfY": {
+    "message": "$1 de $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Sí, intentémoslo"
@@ -1286,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "El precio del gas es cero en aceleración"
   },
+  "decryptRequest": {
+    "message": "Descifrar la solicitud"
+  },
+  "decrypt": {
+    "message": "Descifrar"
+  },
+  "decryptMessageNotice": {
+    "message": "$1 desea leer este mensaje para completar tu acción.",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "Descifrar el mensaje"
+  },
+  "decryptCopy": {
+    "message": "Copiar el mensaje cifrado"
+  },
+  "decryptInlineError": {
+    "message": "Este mensaje no se puede descifrar debido a un error: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "Proporcionar"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "Solicitar la clave pública de cifrado"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 desea conocer tu clave de cifrado pública. Al dar tu consentimiento, este sitio podrá redactar mensajes cifrados para ti.",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "Frase de copia de seguridad secreta de Crypto Wallets"
+  },
+  "braveRewards": {
+    "message": "Recompensas Brave"
+  },
+  "braveSettings": {
+    "message": "Configuración de Brave"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallets te permite trabajar con criptomonedas y activos relacionados en Brave. Crypto Wallets admite tokens de Ethereum como ETH y BAT, además de coleccionables, y te permite trabajar con aplicaciones descentralizadas y otros contratos inteligentes. Todo esto está destinado a personas que están familiarizadas con Ethereum y otros sistemas de cadena de bloques, o que sientan curiosidad por aprender."
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Usa Crypto Wallets únicamente si aceptas que solo tú eres responsable de todos los riesgos asociados con dicho uso y que Brave Software no tiene ninguna responsabilidad ni obligación por cualquier pérdida, incluidas las pérdidas incidentales o consecuentes que puedas sufrir como resultado de dicho uso."
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "Todo esto está completamente separado de"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "Por lo tanto, dirígete allí si buscabas apoyar tus sitios favoritos."
+  },
+  "cryptoWalletsTitle": {
+    "message": "Billeteras de criptomonedas"
+  },
+  "disclosureConfirm": {
+    "message": "Lo comprendo"
+  },
   "ledgerCreateSubText": {
     "message": "Conecta tu billetera de hardware Ledger para interactuar con dApps y hacer transferencias a otras billeteras conectadas."
+  },
+  "metamaskImportSubText": {
+    "message": "Nota: si importas de una billetera de Metamask, introduce 12 palabras en lugar de 24."
   },
   "newLocalWallet": {
     "message": "Nueva billetera local"
@@ -1295,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "Crea una nueva billetera local de Brave para acceder a aplicaciones descentralizadas (dApps) y guardar criptomonedas y coleccionables de manera segura. Compra y vende tokens de forma anónima sin ninguna comisión."
   },
+  "passWarningOne": {
+    "message": "Esta contraseña protege tu clave privada. Nadie puede restablecerla si la olvidas, ¡ni siquiera Brave!"
+  },
+  "providerErrorMessage": {
+    "message": "Esta billetera no es tu proveedor predeterminado de aplicación descentralizada de Ethereum."
+  },
   "trezorCreateSubText": {
     "message": "Conecta tu billetera de hardware Trezor para interactuar con dApps y hacer transferencias a otras billeteras conectadas."
+  },
+  "welcomeCryptoWallets": {
+    "message": "Te damos la bienvenida a Crypto Wallets de Brave"
   }
 }

@@ -1,6 +1,103 @@
 {
+  "acceptTermsOfUse": {
+    "message": "አንብቤ በ $1 ተስማምቻለሁ",
+    "description": "$1 is the `terms` message"
+  },
+  "eth_accounts": {
+    "message": "የተፈቀዱ መለያዎችዎን አድራሻዎች ይመልከቱ (ያስፈልጋል)",
+    "description": "The description for the `eth_accounts` permission"
+  },
+  "connectedSites": {
+    "message": "የተገናኙ ጣቢያዎች"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 ከእነዚህ ጣቢያዎች ጋር ተገናኝቷል። የእርስዎን የመለያ አድራሻ ማየት ይችላሉ።",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 ከማንኛውም ጣቢያዎች ጋር አልተያያዘም።",
+    "description": "$1 is the account name"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "ከዚህ ጣቢያ ጋር የተገናኘ 1 መለያ አለዎት።"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "ከዚህ ጣቢያ ጋር የተገናኙ $1 መለያዎች አለዎት።",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "Brave ከዚህ ጣቢያ ጋር አልተገናኘም። ከ web3 ጣቢያ ጋር ለመገናኘት በጣቢያቸው ላይ ያለውን የግንኙነት ቁልፍ ያግኙ።"
+  },
+  "currentAccountNotConnected": {
+    "message": "የአሁኑ መለያዎ አልተያያዘም"
+  },
+  "switchToThisAccount": {
+    "message": "ወደዚህ መለያ ይቀይሩ"
+  },
+  "disconnectThisAccount": {
+    "message": "ይህን መለያ ከግንኙነት ያቋርጡ"
+  },
+  "permissions": {
+    "message": "ፍቃዶች"
+  },
+  "showPermissions": {
+    "message": "ፈቃዶችን አሳይ"
+  },
+  "authorizedPermissions": {
+    "message": "የሚከተሉትን ፈቃዶች ፈቅደዋል"
+  },
+  "connectManually": {
+    "message": "አሁን ካለው ጣቢያ ጋር በእጅ ያገናኙ"
+  },
+  "disconnect": {
+    "message": "ግንኙነት አቋርጥ"
+  },
+  "disconnectAllAccounts": {
+    "message": "ሁሉንም መለያዎች ግንኙነት ያቋርጡ"
+  },
+  "disconnectPrompt": {
+    "message": "$1 ከግንኙነት አቋርጥ"
+  },
+  "disconnectAllAccountsConfirmationDescription": {
+    "message": "እርግጠኛ ነዎት ግንኙነቱን ማቋረጥ ይፈልጋሉ? የ ጣቢያ ተግባር ሊያጡ ይችላሉ።"
+  },
+  "dismiss": {
+    "message": "አሰናብት"
+  },
+  "showIncomingTransactions": {
+    "message": "ገቢ የሚሆኑ ግብይቶች አሳይ"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Etherscan ን ለመጠቀም በ ግብይቶች ዝርዝር ውስጥ የሚገቡ ግብይቶች ን ለማሳየት ይህንን ይምረጡ"
+  },
   "chartOnlyAvailableEth": {
     "message": "ቻርት የሚገኘው በ Ethereum አውታረ መረቦች ላይ ብቻ ነው።"
+  },
+  "connecting": {
+    "message": "በመገናኘት ላይ..."
+  },
+  "connectWithMetaMask": {
+    "message": "ከ Brave ጋር ይገናኙ"
+  },
+  "connectTo": {
+    "message": "ከ $1ጋር ይገናኙ",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to Brave"
+  },
+  "connectToAll": {
+    "message": "ከሁሉም የእርስዎ $1 ጋር ይገናኙ",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "መለያዎች",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "ከ $1ጋር ይገናኙ",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 መለያዎች",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
     "message": "የግንኙነት ተግባቦት"
@@ -16,6 +113,10 @@
   },
   "acceleratingATransaction": {
     "message": "* ከፍተኛ የነዳጅ ዋጋን በመጠቀም ግብይትን ማፋጠን በአውታረ መረቡ በፍጥነት እንዲከወን የማድረግ ዕድልን ይጨምራል፤ ነገር ግን ሁልጊዜም የተረጋገጠ አይደለም።"
+  },
+  "accessAndSpendNotice": {
+    "message": "$1 እስከዚህ ከፍተኛ መጠን ድረስ ሊያደርስ እና ሊያጠፋ ይችላል",
+    "description": "$1 is the url of the site requesting ability to spend"
   },
   "accessingYourCamera": {
     "message": "ወደ ካሜራዎ መድረስ..."
@@ -34,6 +135,12 @@
   },
   "accountSelectionRequired": {
     "message": "መለያ መምረጥ ይኖርብዎታል!"
+  },
+  "active": {
+    "message": "ገባሪ"
+  },
+  "activity": {
+    "message": "እንቅስቃሴ"
   },
   "activityLog": {
     "message": "የእንቅስቃሴ ምዝግብ ማስታወሻ"
@@ -63,7 +170,7 @@
     "message": "ተለዋጭ ስም አክል"
   },
   "addToken": {
-    "message": "ተለዋጭ ስም አክል"
+    "message": "ማስመሰያ አክል"
   },
   "addTokens": {
     "message": "ተለዋጭ ስሞችን አክል"
@@ -72,10 +179,39 @@
     "message": "የተጠቆሙ ተለዋጭ ስሞችን አክል"
   },
   "addAcquiredTokens": {
-    "message": "Brave በመጠቀም የገዟቸውን ተለዋጭ ስሞች ያክሉ"
+    "message": "Brave በመጠቀም የገዟቸውን ማስመሰያዎች ያክሉ"
+  },
+  "alerts": {
+    "message": "ማንቂያዎች"
+  },
+  "alertsSettingsDescription": {
+    "message": "እያንዳንዱን ማስጠንቀቂያ አንቃ ወይም አስተካክል"
+  },
+  "alertSettingsUnconnectedAccount": {
+    "message": "ያልተገናኘ መለያ በተመረጠ ድር ጣቢያ ማሰስ"
+  },
+  "alertSettingsUnconnectedAccountDescription": {
+    "message": "የተገናኘ የድር 3 ጣቢያ ሲያስሱ ይህ ማስጠንቀቂያ ብቅ ባዩ ውስጥ ይታያል ፣ ግን በአሁኑ ጊዜ የተመረጠው መለያ አልተገናኘም።"
+  },
+  "allowOriginSpendToken": {
+    "message": "$1 የእርስዎን $2 እንዲያወጣ ይፍቀዱለት?",
+    "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
+  },
+  "allowThisSiteTo": {
+    "message": "ይህ ጣቢያ የሚከተሉትን እንዲያደርግ ይፍቀዱለት፥"
+  },
+  "allowExternalExtensionTo": {
+    "message": "ይህ ውጫዊ ቅጥያ የሚከተሉትን ፍቀድ:"
+  },
+  "allowWithdrawAndSpend": {
+    "message": "$1 እንዲወጣ ይፍቀዱ እና እስከሚቀጥለው መጠን ያወጡ፥",
+    "description": "The url of the site that requested permission to 'withdraw and spend'"
   },
   "amount": {
-    "message": "ሰርዝ "
+    "message": "መጠን"
+  },
+  "amountWithColon": {
+    "message": "መጠን፥"
   },
   "appDescription": {
     "message": "በማሰሺያዎ ውስጥ የ Ethereum ቋት",
@@ -86,13 +222,20 @@
     "description": "The name of the application"
   },
   "approve": {
-    "message": "ፍቀድ"
+    "message": "የወጪ ወሰን ያጽድቁ"
+  },
+  "approveSpendLimit": {
+    "message": "የ $1 የወጪ ወሰን ያጽድቁ",
+    "description": "The token symbol that is being approved"
   },
   "approved": {
     "message": "የተፈቀደ"
   },
   "asset": {
     "message": "ሐብት"
+  },
+  "assets": {
+    "message": "ንብረቶች"
   },
   "attemptingConnect": {
     "message": "ከ blockchain ጋር ለመገናኘት መሞከር።"
@@ -107,10 +250,10 @@
     "message": "አይነታ"
   },
   "autoLockTimeLimit": {
-    "message": "በራስ ሰር ዘግቶ መውጫ ሰዓት ቆጣሪ (ደቂቃ)"
+    "message": "ራስ-ቆልፍ ሰዓት ቆጣሪ (ደቂቃዎች)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Brave በራስ ሰር መንገድ ዘግቶ ከመውጣቱ በፊት የቦዘነ ጊዜን በደቂቃዎች ሙላ"
+    "message": "Brave ከመቆለፉ በፊት የስራ ፈት ጊዜውን በደቂቃዎች ውስጥ ያዘጋጁ።"
   },
   "average": {
     "message": "አማካይ"
@@ -128,7 +271,7 @@
     "message": "መሳሪያዎ ቢጠፋ፣ የይለፍ ቃልዎን ቢረሱ፣ Brave እንደገና መጫን ቢያስፈልግዎ ወይም በሌላ መሳሪያ ወደ ቋትዎ ለመድረስ ቢፈልጉ ይህ ሚስጥራዊ ኮድ ቋትዎን መልሶ ለማግኘት ያስፈልጋል።"
   },
   "backupNow": {
-    "message": "አሁን መጠባበቂያ ያዝ"
+    "message": "አሁን ምትክ አዘጋጅ"
   },
   "balance": {
     "message": "ቀሪ ሂሳብ"
@@ -148,6 +291,15 @@
   },
   "blockiesIdenticon": {
     "message": "Blockies Identicon ተጠቀም"
+  },
+  "nonceField": {
+    "message": "የ ግብይት አልባነትን ያብጁ"
+  },
+  "nonceFieldHeading": {
+    "message": "ብጁ Nonce"
+  },
+  "nonceFieldDescription": {
+    "message": "በማረጋገጫ ማያ ገጾች ላይ ያለውን ቁጥር (የ ግብይት ቁጥር) ለመቀየር ይህንን ያብሩ። ይህ የላቀ ባህሪ ነው ፣ በጥንቃቄ ይጠቀሙ።"
   },
   "browserNotSupported": {
     "message": "ማሰሺያዎት አልተደገፈም..."
@@ -183,7 +335,7 @@
     "message": "ኤክስፕሎረር URL አግድ (አማራጭ)"
   },
   "cancel": {
-    "message": "ሰርዝ"
+    "message": "አቋርጥ"
   },
   "cancelAttempt": {
     "message": "ሙከራን ሰርዝ"
@@ -204,22 +356,25 @@
     "message": "ዝጋ"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "ከሃርድዌርዎ ቋት ጋር ለመገናኘት Brave በ Google Chrome ላይ መጠቀም አለብዎት።"
+    "message": "ከሃርድዌርዎ ቋት ጋር ለመገናኘት Brave በ Brave Brave ላይ መጠቀም አለብዎት።"
   },
   "confirm": {
     "message": "አረጋግጥ"
   },
   "confirmed": {
-    "message": "ተረጋግጧል"
+    "message": "ተረጋገጠ"
   },
   "confirmPassword": {
-    "message": "የይለፍ ቃል ያረጋግጡ"
+    "message": "የይለፍ ቃል አረጋግጥ"
   },
   "confirmSecretBackupPhrase": {
     "message": "ሚስጥራዊ የመጠባበቂያ ምዕራፍዎን ያረጋግጡ"
   },
   "congratulations": {
     "message": "እንኳን ደስ አለዎት"
+  },
+  "connectAccountOrCreate": {
+    "message": "መለያ ያገናኙ ወይም አዲስ ይፍጠሩ"
   },
   "connectHardwareWallet": {
     "message": "ከሃርድዌር ቋት ጋር ይገናኙ"
@@ -247,6 +402,15 @@
   },
   "connectingToGoerli": {
     "message": "ከ Goerli የሙከራ አውታረ መረብ ጋር መገናኘት"
+  },
+  "contacts": {
+    "message": "እውቂያዎች"
+  },
+  "contactsSettingsDescription": {
+    "message": "ዕውቂያዎችዎን ያክሉ፣ ያርትዑ፣ ያስወግዱና ያስተዳድሩ"
+  },
+  "contactUs": {
+    "message": "ያግኙን!"
   },
   "continueToWyre": {
     "message": "ወደ Wyre ይቀጥሉ"
@@ -290,6 +454,9 @@
   "currencyConversion": {
     "message": "የገንዘብ ልወጣ"
   },
+  "currentExtension": {
+    "message": "የአሁኑ የቅጥያ ገጽ"
+  },
   "currentLanguage": {
     "message": "ወቅታዊ ቋንቋ"
   },
@@ -304,6 +471,12 @@
   },
   "customRPC": {
     "message": "ብጁ RPC"
+  },
+  "customSpendLimit": {
+    "message": "ብጁ የወጪ ገደብ"
+  },
+  "dataBackupFoundInfo": {
+    "message": "በቀድሞው Brave በሚጫንበት ወቅት አንዳንድ የመለያዎ መረጃዎች ምትኬ ተቀምጧል። ይህ የእርስዎን ቅንብሮች ፣ ዕውቂያዎች እና ማስመሰያዎች ሊያካትት ይችላል። ይህን ውሂብ አሁን ወደነበረበት መመለስ ይፈልጋሉ?"
   },
   "decimalsMustZerotoTen": {
     "message": "አስርዮሽ ቢያንስ 0 ቢበዛ ደግሞ 36 መሆን አለባቸው።"
@@ -336,10 +509,13 @@
     "message": "ቀደም ሲል የተወሰነ Ether ካለዎት፣ በአዲሱ ቋትዎ Ether ለማግኘት ፈጣኑ መንገድ ቀጥተኛ ተቀማጭ ነው።"
   },
   "done": {
-    "message": "ተጠናቅቋል"
+    "message": "ተከናውኗል"
+  },
+  "dontShowThisAgain": {
+    "message": "ይህንን እንደገና አታሳይ"
   },
   "downloadGoogleChrome": {
-    "message": "Google Chrome አውርድ"
+    "message": "Brave Brave አውርድ"
   },
   "downloadSecretBackup": {
     "message": "ይህን ሚስጥራዊ መጠባበቂያ ሐረግ በማውረድ በተመሰጠረ ውጫዊ ሃርድ ድራይቭ ወይም የማከማቻ መሳሪያ ላይ ያስቀምጡት።"
@@ -358,6 +534,9 @@
   },
   "editContact": {
     "message": "ዕውቂያን አርትዕ"
+  },
+  "editPermission": {
+    "message": "ፈቃድ አርትዕ"
   },
   "endOfFlowMessage1": {
     "message": "ፈተናውን አልፈዋል - የዘር ሐረግዎን ደህንነቱ በተጠበቀ መንገድ ያስቀምጡ፣ የእርስዎ ሃላፊነት ነው! "
@@ -389,6 +568,13 @@
   "endOfFlowMessage10": {
     "message": "ሁሉም ተጠናቅቋል"
   },
+  "externalExtension": {
+    "message": "ውጫዊ ማራዘሚያ"
+  },
+  "onboardingReturnNotice": {
+    "message": "\"$1\" ይህንን ትር ይዘጋና በቀጥታ ወደ $2 ይመለሳል",
+    "description": "Return the user to the site that initiated onboarding"
+  },
   "ensRegistrationError": {
     "message": "በ ENS የስም ምዝገባ ላይ የተፈጠረ ስህተት"
   },
@@ -398,11 +584,46 @@
   "enterAnAlias": {
     "message": "ተለዋጭ ስም ያስገቡ"
   },
+  "enterMaxSpendLimit": {
+    "message": "ከፍተኛውን የወጪ ገደብን ያስገቡ"
+  },
   "enterPassword": {
     "message": "የይለፍ ቃል ያስገቡ"
   },
   "enterPasswordContinue": {
     "message": "ለመቀጠል የይለፍ ቃል ያስገቡ"
+  },
+  "errorCode": {
+    "message": "ኮድ: $1",
+    "description": "Displayed error code for debugging purposes. $1 is the error code"
+  },
+  "errorDetails": {
+    "message": "የስህተት ዝርዝሮች",
+    "description": "Title for collapsible section that displays error details for debugging purposes"
+  },
+  "errorMessage": {
+    "message": "መልእክት: $1",
+    "description": "Displayed error message for debugging purposes. $1 is the error message"
+  },
+  "errorName": {
+    "message": "ኮድ: $1",
+    "description": "Displayed error name for debugging purposes. $1 is the error name"
+  },
+  "errorPageTitle": {
+    "message": "Brave ስህተት አጋጥሞታል",
+    "description": "Title of generic error page"
+  },
+  "errorPageMessage": {
+    "message": "ገጹን እንደገና በመጫን እንደገና ይሞክሩ ወይም ድጋፍን በ support@brave.com ያነጋግሩ",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+  },
+  "errorPagePopupMessage": {
+    "message": "ብቅ-ባይውን በመዝጋት እና እንደገና በመክፈት እንደገና ይሞክሩ ወይም ድጋፍን በ support@brave.com ያነጋግሩ",
+    "description": "Message displayed on generic error page in the popup UI"
+  },
+  "errorStack": {
+    "message": "ቁልል፥",
+    "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
     "message": "Ethereum ሕዝባዊ አድራሻ"
@@ -422,11 +643,17 @@
   "failed": {
     "message": "አልተሳካም"
   },
+  "failureMessage": {
+    "message": "የሆነ ነገር ተሳስቷል ፣ እናም እርምጃውን ማጠናቀቅ አልቻልንም"
+  },
   "fast": {
     "message": "ፈጣን"
   },
   "faster": {
     "message": "በፍጥነት"
+  },
+  "feeAssociatedRequest": {
+    "message": "ክፍያ ከዚህ ጥያቄ ጋር ተያይዟል።"
   },
   "fiat": {
     "message": "ፊያት",
@@ -441,6 +668,13 @@
   },
   "from": {
     "message": "ከ"
+  },
+  "fromAddress": {
+    "message": "ከ: $1",
+    "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
+  },
+  "functionApprove": {
+    "message": "ተግባር፥ ማጽደቅ"
   },
   "functionType": {
     "message": "የተግባር ዓይነት"
@@ -469,6 +703,14 @@
   "gasPriceNoDenom": {
     "message": "የነዳጅ ዋጋ"
   },
+  "gdprMessage": {
+    "message": "ይህ መረጃ ተደምሮ ስለነበረ ለአጠቃላይ የመረጃ ጥበቃ ደንብ (EU) 2016/679 ዓላማዎች የማይታወቅ ነው። ከግላዊነት ልምዶቻችን ጋር በተያያዘ ተጨማሪ መረጃ ለማግኘት እባክዎ የእኛን $1ይመልከቱ።",
+    "description": "$1 refers to the gdprMessagePrivacyPolicy message, the translation of which is meant to be used exclusively in the context of gdprMessage"
+  },
+  "gdprMessagePrivacyPolicy": {
+    "message": "የግላዊነት ፖሊሲ እዚህ",
+    "description": "this translation is intended to be exclusively used as the replacement for the $1 in the gdprMessage translation"
+  },
   "general": {
     "message": "አጠቃላይ"
   },
@@ -486,7 +728,7 @@
     "message": "እገዛ ያግኙ።"
   },
   "getStarted": {
-    "message": "አስጀማሪ መመሪያ"
+    "message": "ይጀምሩ"
   },
   "happyToSeeYou": {
     "message": "እርስዎን በማየታችን ደስተኛ ነን።"
@@ -498,7 +740,7 @@
     "message": "የሃርድዌር ቋት ተገናኝቷል"
   },
   "hardwareWallets": {
-    "message": "ከሃርድዌር ቋት ጋር ይገናኙ"
+    "message": "ከ ሃርድዌር ቋት ጋር ይገናኙ"
   },
   "hardwareWalletsMsg": {
     "message": "ከ Brave ጋር ሊጠቀሙበት የሚፈልጉትን የሃርድዌር ቋት ይምረጡ"
@@ -516,6 +758,10 @@
   "hide": {
     "message": "ደብቅ"
   },
+  "hideTokenSymbol": {
+    "message": "$1 ን ደብቅ",
+    "description": "$1 is the symbol for a token (e.g. 'DAI')"
+  },
   "hideTokenPrompt": {
     "message": "ተለዋጭ ስም ይደበቅ?"
   },
@@ -523,7 +769,7 @@
     "message": "ታሪክ"
   },
   "import": {
-    "message": "ከውጭ አስመጣ",
+    "message": "ያስመጡ",
     "description": "Button to import an account from a selected file"
   },
   "importAccount": {
@@ -558,7 +804,7 @@
     "message": "በቂ ያልሆነ ቀሪ ሂሳብ"
   },
   "insufficientFunds": {
-    "message": "በቂ ያልሆነ ተቀማጭ"
+    "message": "በቂ ያልሆነ ተቀማጭ።"
   },
   "insufficientTokens": {
     "message": "በቂ ያልሆኑ ተለዋጭ ስሞች።"
@@ -572,6 +818,12 @@
   "knownAddressRecipient": {
     "message": "የሚታወቅ የግንኙነት አድራሻ።"
   },
+  "knownTokenWarning": {
+    "message": "ይህ እርምጃ ቀደም ሲል በኪስ ቦርሳዎ ውስጥ የተዘረዘሩትን ማስመሰያዎች ያስተካክላል ፣ ይህም እርስዎን ለማስገር ሊያገለግል ይችላል። እነዚህ ማስመሰያዎች የሚወክሉትን ለመለወጥ እንደፈለጉ እርግጠኛ ከሆኑ ብቻ ያጽድቁ."
+  },
+  "reusedTokenNameWarning": {
+    "message": "እዚህ ላይ አንድ ማስመሰያ እርስዎ ከሚመለከቷት ሌላ ማስመሰያ አንድ ምልክት እንደገና ይጠቀማል ፣ ይህ ግራ የሚያጋባ ወይም አሳሳች ሊሆን ይችላል።"
+  },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH አውታረ መረብ አይደለም፣ ወደ ትናንሽ ፊደላት ቀይር"
   },
@@ -582,10 +834,22 @@
     "message": "ልክ ያልሆነ RPC ዩአርኤል"
   },
   "invalidBlockExplorerURL": {
-    "message": "ልክ ያልሆነ Block Explorer ዩአርኤል"
+    "message": "ልክ ያልሆነ የማገጃ አሳሽ URL"
   },
   "invalidSeedPhrase": {
     "message": "የተሳሳተ የዘር ሐረግ"
+  },
+  "ipfsGateway": {
+    "message": "የ IPFS ጌትዌይ"
+  },
+  "ipfsGatewayDescription": {
+    "message": "ለ ENS የ ይዘት ጥራት ለመጠቀም የ IPFS CID መተላለፊያውን URL ያስገቡ።"
+  },
+  "invalidIpfsGateway": {
+    "message": "ልክ ያልሆነ የ IPFS ጌትዌይ-እሴቱ ትክክለኛ URL መሆን አለበት"
+  },
+  "forbiddenIpfsGateway": {
+    "message": "የተከለከለ የ IPFS ጌትዌይ፥ እባክዎን የ CID ፍኖት ይጥቀሱ"
   },
   "jsonFile": {
     "message": "JSON ፋይል",
@@ -596,6 +860,9 @@
   },
   "max": {
     "message": "ከፍተኛ"
+  },
+  "lastConnected": {
+    "message": "ለመጨረሻ ጊዜ ተገናኝቷል"
   },
   "learnMore": {
     "message": "የበለጠ ይወቁ"
@@ -624,8 +891,14 @@
   "loadMore": {
     "message": "ተጨማሪ ጫን"
   },
+  "localhost": {
+    "message": "Localhost 8545"
+  },
   "lock": {
-    "message": "ዘግተህ ውጣ"
+    "message": "ቆልፍ"
+  },
+  "lockTimeTooGreat": {
+    "message": "የመቆለፊያ ጊዜ በጣም ጥሩ ነው"
   },
   "mainnet": {
     "message": "ዋነኛ የ Ethereum አውታረ መረብ "
@@ -638,6 +911,15 @@
   },
   "message": {
     "message": "መልዕክት"
+  },
+  "metaMaskConnectStatusParagraphOne": {
+    "message": "አሁን በ Brave ውስጥ ባሉ የመለያ ግንኙነቶችዎ ላይ የበለጠ ቁጥጥር አለዎት።"
+  },
+  "metaMaskConnectStatusParagraphTwo": {
+    "message": "የግንኙነት ሁኔታ አዝራር እርስዎ እየጎበኟቸው ያለው ድር ጣቢያ አሁን ከተመረጠው መለያዎ ጋር ግንኙነት ያለው መሆኑን ያሳያል።"
+  },
+  "metaMaskConnectStatusParagraphThree": {
+    "message": "የተገናኙትን መለያዎችዎን ለማስተዳደር ጠቅ ያድርጉት።"
   },
   "metamaskDescription": {
     "message": "ከ Ethereum እና ያልተማከለ መረብ ጋር እርስዎን ማገናኘት።"
@@ -722,6 +1004,12 @@
   "rpcUrl": {
     "message": "አዲስ የ RPC URL"
   },
+  "onlyConnectTrust": {
+    "message": "ከሚያምኗቸው ጣቢያዎች ጋር ብቻ ይገናኙ።"
+  },
+  "onlyAddTrustedNetworks": {
+    "message": "አንድ ተንኮል-አዘል የ Ethereum ኔትዎርክ አቅራቢ ስለ ማገጃው ሁኔታ ሊዋሽ እና የኔትዎርክ እንቅስቃሴዎን ሊቀዳ ይችላል። የሚያምኗቸውን ብጁ ኔትዎርኮችን ብቻ ያክሉ።"
+  },
   "optionalChainId": {
     "message": "የሰንሰለት መለያ ቁጥር (አማራጭ)"
   },
@@ -737,6 +1025,10 @@
   "next": {
     "message": "ቀጣይ"
   },
+  "nextNonceWarning": {
+    "message": "Nonce ከተጠቆመው የ nonce $1 መጠን ከፍ ያለ ነው",
+    "description": "The next nonce according to Brave's internal logic"
+  },
   "noAddressForName": {
     "message": "በዚህ ስም የተሞላ አድራሻ የለም።"
   },
@@ -745,6 +1037,12 @@
   },
   "noTransactions": {
     "message": "ግብይቶች የሉዎትም"
+  },
+  "noThanks": {
+    "message": "አይ፣ አመሰግናለሁ"
+  },
+  "notCurrentAccount": {
+    "message": "ይህ ትክክለኛ መለያ ነው? በዋሌትዎ ውስጥ አሁን ከተመረጠው መለያ የተለየ ነው"
   },
   "notEnoughGas": {
     "message": "በቂ ነዳጅ የለም"
@@ -787,10 +1085,20 @@
     "description": "For importing an account from a private key"
   },
   "pending": {
-    "message": "በእንጥልጥል ላይ ያለ"
+    "message": "በመጠበቅ ላይ"
+  },
+  "permissionCheckedIconDescription": {
+    "message": "ይህንን ፈቃድ አፅድቀዋል"
+  },
+  "permissionUncheckedIconDescription": {
+    "message": "ይህንን ፈቃድ አላጸደቁም"
   },
   "personalAddressDetected": {
     "message": "የግል አድራሻ ተገኝቷል። የተለዋጭ ስም የመገኛ አድራሻን ያስገቡ።"
+  },
+  "plusXMore": {
+    "message": "+ $1 ተጨማሪ",
+    "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
     "message": "የቀደመ"
@@ -814,14 +1122,23 @@
   "privateNetwork": {
     "message": "የግል አውታረ መረብ"
   },
+  "proposedApprovalLimit": {
+    "message": "የቀረበው የማጽደቅ ገደብ"
+  },
   "queue": {
     "message": "ወረፋ"
+  },
+  "queued": {
+    "message": "ተሰልፏል"
   },
   "readdToken": {
     "message": "በመለያ አማራጮችዎ ምናሌ ውስጥ ወደ “ተለዋጭ ስም አክል” በመግባት ለወደፊቱ ይህን ተለዋጭ ስም መልሰው ማከል ይችላሉ።"
   },
   "recents": {
     "message": "የቅርብ ጊዜያት"
+  },
+  "receive": {
+    "message": "ተቀበል"
   },
   "recipientAddress": {
     "message": "የተቀባይ አድራሻ"
@@ -865,6 +1182,10 @@
   "restoreAccountWithSeed": {
     "message": "መለያዎን በዘር ሐረግ ወደነበረበት ይመልሱ"
   },
+  "restoreWalletPreferences": {
+    "message": "ከ $1 የመረጃዎ ምትኬ ተገኝቷል። የኪስ ቦርሳ ምርጫዎችዎን ወደነበሩበት መመለስ ይፈልጋሉ?",
+    "description": "$1 is the date at which the data was backed up"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "ማረጋገጫ የሚጠባበቁ ጥያቄዎች"
   },
@@ -878,7 +1199,7 @@
     "message": "የዘር ቃላትን ይግለጹ"
   },
   "revealSeedWordsTitle": {
-    "message": "የዘር ሐረግ"
+    "message": "የቋት ዘር"
   },
   "revealSeedWordsDescription": {
     "message": "ማሰሺያዎችን ከቀየሩ ወይም ኮምፒዩተሮቸን ከአንድ ቦታ ወደ ሌላ ቦታ ካንቀሳቀሱ፣ ወደ መለያዎችዎ ለመድረስ ይህ የዘር ሐረግ ያስፈልግዎታል። ደህንነቱና ሚስጥራዊነቱ በተጠበቀ ቦታ ያስቀምጧቸው።"
@@ -944,7 +1265,7 @@
     "message": "ማስጠንቀቂያ፡ የመጠባበቂያ ምዕራፍዎን በጭራሽ አይግለጹ። ይህን ሐረገ የያዘ ማንኛውም ሰው የእርስዎን Ether እስከወዲያኛው ሊወስደው ይችላል።"
   },
   "secretPhrase": {
-    "message": "ካዝናዎን ወደነበረበት ለመመለስ ሚስጥራዊ ባለ አስራ ሁለት ቃል ሐረግዎን ያስገቡ።"
+    "message": "ካዝናዎን ወደነበረበት ለመመለስ ሚስጥራዊ ባለ 24 ቃል ሐረግዎን ያስገቡ።"
   },
   "securityAndPrivacy": {
     "message": "ደህንነት እና ግላዊነት"
@@ -955,8 +1276,23 @@
   "seedPhrasePlaceholder": {
     "message": "እያንዳንዱን ቃል በነጠላ ክፍት ቦታ ይለያዩ"
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "የዘር ሐረግን ከቅንጥብ ሰሌዳ ላይ ይለጥፉ"
+  },
+  "showSeedPhrase": {
+    "message": "የዘር ሐረግ አሳይ"
+  },
   "seedPhraseReq": {
-    "message": "የዘር ሐረጋት የ 12 ቃላት ርዝመት አላቸው"
+    "message": "የዘር ሐረጋት የ 12, 15, 18, 21, or 24 ቃላት ርዝመት አላቸው"
+  },
+  "selectingAllWillAllow": {
+    "message": "ሁሉንም መምረጥ ይህ ጣቢያ ሁሉንም የአሁኑ መለያዎችዎን እንዲመለከት ያስችለዋል። ይህንን ጣቢያ ያምኑት እንደሆነ ያረጋግጡ።"
+  },
+  "selectAccounts": {
+    "message": "መለያ(ዎች) ምረጥ"
+  },
+  "selectAll": {
+    "message": "ሁሉንም ይመርጣል"
   },
   "selectCurrency": {
     "message": "የገንዘብ ዓይነት ይምረጡ"
@@ -969,6 +1305,9 @@
   },
   "selectType": {
     "message": "ዓይነት ይምረጡ"
+  },
+  "buy": {
+    "message": "ይግዙ"
   },
   "send": {
     "message": "ላክ"
@@ -988,11 +1327,21 @@
   "sentTokens": {
     "message": "የተላኩ ተለዋጭ ስሞች"
   },
+  "sendSpecifiedTokens": {
+    "message": "$1 ይላኩ",
+    "description": "Symbol of the specified token"
+  },
   "separateEachWord": {
     "message": "እያንዳንዱን ቃል በነጠላ ክፍት ቦታ ይለያዩ"
   },
   "searchTokens": {
     "message": "ተለዋጭ ስሞችን ፈልግ"
+  },
+  "searchAccounts": {
+    "message": "መለያዎችን ይፈልጉ"
+  },
+  "noAccountsFound": {
+    "message": "ለተሰጠው የፍለጋ መጠይቅ ምንም መለያዎች አልተገኙም"
   },
   "selectAnAccount": {
     "message": "መለያ ይምረጡ"
@@ -1039,6 +1388,9 @@
   "signatureRequest": {
     "message": "የፊርማ ጥያቄ"
   },
+  "signatureRequest1": {
+    "message": "መልዕክት"
+  },
   "signed": {
     "message": "ተፈርሟል"
   },
@@ -1060,8 +1412,24 @@
   "speedUpTransaction": {
     "message": "ይህን ግብይት አፋጥን"
   },
+  "spendLimitPermission": {
+    "message": "የወጪ ገደብ ፍቃድ"
+  },
+  "spendLimitRequestedBy": {
+    "message": "የወጪ ገደብ በ $1 ተጠይቋል",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "የወጪ ገደብ በጣም ትልቅ ነው"
+  },
+  "spendLimitInvalid": {
+    "message": "የወጪ ገደብ ልክ ያልሆነ; አዎንታዊ ቁጥር መሆን አለበት"
+  },
   "switchNetworks": {
     "message": "አውታረ መረቦችን ቀያይር"
+  },
+  "stateLogFileName": {
+    "message": "የ Brave የስቴት መዛግብት"
   },
   "stateLogs": {
     "message": "የስቴት መዛግብት"
@@ -1071,6 +1439,12 @@
   },
   "stateLogError": {
     "message": "የስቴት መዛግብትን መልሶ በማግኘት ሒደት የተፈጠረ ስህተት።"
+  },
+  "statusConnected": {
+    "message": "ተያይዟል"
+  },
+  "statusNotConnected": {
+    "message": "አልተገናኘም"
   },
   "step1HardwareWallet": {
     "message": "1. ከሃርድዌር ቋት ጋር ይገናኙ"
@@ -1085,13 +1459,16 @@
     "message": "ለማየት የሚፈልጉትን መለያ ይምረጡ። በአንድ ጊዜ መምረጥ የሚችሉት አንድ ብቻ ነው።"
   },
   "step3HardwareWallet": {
-    "message": "3. dApps እና ሌሎችን መጠቀም ይጀምሩ!"
+    "message": "3. የ web3 ጣቢያ እና ሌሎችን መጠቀም ይጀምሩ!"
   },
   "step3HardwareWalletMsg": {
-    "message": "የሐርድዌር መለያዎን ከየትኛውም የ Ethereum መለያ ጋር በሚጠቀሙት መንገድ ይጠቀሙ። ወደ dApps በመለያ ይግቡ፣ Eth ይላኩ፣ የ ERC20 ተለዋጭ ስሞችና እንደ CryptoKitties ያሉ የማይለወጡ ተለዋጭ ስሞችን ይግዙና ያከማቹ።"
+    "message": "የሃርድዌር መለያዎን እንደማንኛውም የ Ethereum መለያ ይጠቀሙ። ከ web3 ጣቢያዎች ጋር ይገናኙ ፣ ETH ይላኩ ፣ እንደ ‹CryptoKitties› ያሉ ERC20 ቶከኖችን እና ፈንጂ ያልሆኑ ቶከኖችን ይግዙ እና ያከማቹ።"
   },
   "storePhrase": {
     "message": "ይህን ሐረግ እንደ 1Password ባለ የይለፍ ቃል አስተዳዳሪ ውስጥ ያስቀምጡ።"
+  },
+  "submit": {
+    "message": "አስገባ"
   },
   "submitted": {
     "message": "የቀረበ"
@@ -1103,7 +1480,7 @@
     "message": "ምልክት"
   },
   "symbolBetweenZeroTwelve": {
-    "message": "ምልክቱ 11 ቁምፊዎች ወይም ከዚያ ያነሰ መሆን አለበት።"
+    "message": "ምልክቱ 11 ወይም ከዚያ ያነሰ ቁምፊዎች መያዝ አለበት።"
   },
   "syncWithMobile": {
     "message": "ከሞባይል ጋር አሳምር"
@@ -1139,16 +1516,26 @@
     "message": "መረጃዎች"
   },
   "to": {
-    "message": "ለ"
+    "message": "ወደ"
+  },
+  "toAddress": {
+    "message": "ወደ: $1",
+    "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toWithColon": {
+    "message": "ለ፥"
   },
   "token": {
     "message": "ተለዋጭ ስም"
   },
   "tokenAlreadyAdded": {
-    "message": "ተለዋጭ ስም ቀደም ሲል ታክሏል።"
+    "message": "ማስመሰያ ቀደም ሲል ታክሏል።"
   },
   "tokenContractAddress": {
     "message": "የተለዋጭ ስም የግንኙነት አድራሻ"
+  },
+  "tokenOptions": {
+    "message": "የ ማስመሰያ አማራጮች"
   },
   "tokenSymbol": {
     "message": "የተለዋጭ ስም ምልክት"
@@ -1198,6 +1585,9 @@
   "transactionTime": {
     "message": "የግብይት ጊዜ"
   },
+  "showTransactionTimeDescription": {
+    "message": "በዋናው Ethereum ኔትዎርክ ላይ እያሉ በእንቅስቃሴ ትር ውስጥ በመጠባበቅ ላይ ያሉ የ ግብይት ጊዜ ግምቶችን ለማሳየት ይህንን ይምረጡ። ማሳሰቢያ-ግምቶች በኔትዎርክ ሁኔታዎች ላይ ተመስርተው ግምታዊ ግምቶች ናቸው።"
+  },
   "transfer": {
     "message": "ያስተላልፉ"
   },
@@ -1211,8 +1601,12 @@
     "message": "የተለዋጭ ስም ቀሪ ሂሳብዎን ስንጭን ችግር አጋጥሞናል። ማየት ይችላሉ",
     "description": "Followed by a link (here) to view token balances"
   },
+  "trustSiteApprovePermission": {
+    "message": "ይህንን ጣቢያ ያምኑታል? ይህንን ፈቃድ በመስጠት $1 የእርስዎን $2 እንዲያወጣ እና ግብይቶች በራስ-ሰር እንዲያደርግ እየፈቀዱለት ነው።",
+    "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "tryAgain": {
-    "message": "እንደገና ሞክር"
+    "message": "እንደገና ይሞክሩ"
   },
   "typePassword": {
     "message": "የ Brave የይለፍ ቃልዎን ይጻፉ"
@@ -1220,8 +1614,11 @@
   "unapproved": {
     "message": "ያልተፈቀደ"
   },
+  "alertDisableTooltip": {
+    "message": "ይህ በ \"ቅንብሮች > ማንቂያዎች\" ውስጥ ሊለወጥ ይችላል"
+  },
   "units": {
-    "message": "መለኪያዎች"
+    "message": "አሃዶች"
   },
   "unknown": {
     "message": "ያልታወቀ"
@@ -1238,6 +1635,9 @@
   "unknownCameraError": {
     "message": "ወደ ስልክዎ ለመድረስ ሲሞከር የተፈጠረ ስህተት አለ። እባክዎ እንደገና ይሞክሩ..."
   },
+  "unlimited": {
+    "message": "ያልተገደበ"
+  },
   "unlock": {
     "message": "ክፈት"
   },
@@ -1248,10 +1648,19 @@
     "message": "የዘመነ $1"
   },
   "urlErrorMsg": {
-    "message": "URIs አግባብነት ያለው የ HTTP/HTTPS ቅድመ ቅጥያ ይፈልጋል።"
+    "message": "URL ተገቢውን የ HTTP/HTTPS ቅድመ-ቅጥያ ይፈልጋሉ።"
+  },
+  "urlExistsErrorMsg": {
+    "message": "በነባር የአውታረ መረብ ዝርዝር ውስጥ URL አስቀድሞ አለ"
   },
   "usedByClients": {
     "message": "በተለያዩ ደንበኞች ጥቅም ላይ የዋለ ነው"
+  },
+  "usePhishingDetection": {
+    "message": "የአስጋሪ ምርመራን ይጠቀሙ"
+  },
+  "usePhishingDetectionDescription": {
+    "message": "Ethereum ተጠቃሚዎችን ዒላማ ለማድረግ የማስገር ጎራዎች ማስጠንቀቂያ ያሳዩ"
   },
   "userName": {
     "message": "የተጣቃሚ ስም"
@@ -1271,6 +1680,9 @@
   "viewOnEtherscan": {
     "message": "በ Etherscan ላይ ይመልከቱ"
   },
+  "retryTransaction": {
+    "message": "ግብይት ን እንደገና ይሞክሩ"
+  },
   "visitWebSite": {
     "message": "ድረ ገጻችንን ይጎብኙ"
   },
@@ -1278,13 +1690,20 @@
     "message": "የቋት ዘር"
   },
   "welcomeBack": {
-    "message": "እንኳን በደህና ተመለሱ"
+    "message": "እንኳን በደህና ተመለሱ!"
   },
   "welcome": {
     "message": "ወደ Brave እንኳን ደህና መጡ"
   },
+  "whatsThis": {
+    "message": "ይህ ምንድን ነው?"
+  },
   "writePhrase": {
     "message": "ይህን ሐረግ በቁራጭ ወረቀት ላይ ይጻፉና ደህንነቱ በተጠበቀ ቦታ ያስቀምጡት። የበለጠ ደህንነት ካስፈለገዎ፣ በተለያዩ ቁርጥራጭ ወረቀቶች ላይ ይጻፉትና እያንዳንዳንቸውን በ2-3 የተለያዩ ቦታዎች ያስቀምጡት።"
+  },
+  "xOfY": {
+    "message": "$1 ከ $2",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "አዎ፣ እንሞክር"
@@ -1304,8 +1723,68 @@
   "zeroGasPriceOnSpeedUpError": {
     "message": "በስፒድ አፕ ላይ ዜሮ የነዳጅ ዋጋ"
   },
+  "decryptRequest": {
+    "message": "ዲክሪፕት ጥያቄ"
+  },
+  "decrypt": {
+    "message": "ዲክሪፕት"
+  },
+  "decryptMessageNotice": {
+    "message": "እርምጃዎን ለማጠናቀቅ $1 ይህንን መልእክት ለማንበብ ይፈልጋል",
+    "description": "$1 is the web3 site name"
+  },
+  "decryptMetamask": {
+    "message": "ዲክሪፕት መልእክት"
+  },
+  "decryptCopy": {
+    "message": "ዲክሪፕት የተደረገ መልእክት ይቅዱ"
+  },
+  "decryptInlineError": {
+    "message": "ይህ መልዕክት በስህተት ምክንያት ዲክሪፕት ሊደረግ አይችልም: $1",
+    "description": "$1 is error message"
+  },
+  "provide": {
+    "message": "ያቅርቡ"
+  },
+  "encryptionPublicKeyRequest": {
+    "message": "የኢንክሪፕሽን ይፋዊ ቁልፍን ይጠይቁ"
+  },
+  "encryptionPublicKeyNotice": {
+    "message": "$1 ይፋዊ የኢንክሪፕሽን ቁልፍን ይፈልጋል። ፍቃድ በመስጠት፣ ይህ ጣቢያ ኢንክሪፕት የተደረጉ መልዕክቶችን ለእርስዎ ማሰባሰብ ይችላል።",
+    "description": "$1 is the web3 site name"
+  },
+  "backupPhraseFileName": {
+    "message": "የ Crypto Wallets ምስጢራዊ የመጠባበቂያ ሐረግ"
+  },
+  "braveRewards": {
+    "message": "ናይ Brave ሽልማታት"
+  },
+  "braveSettings": {
+    "message": "Brave ቅንብሮች"
+  },
+  "cryptoWalletsDisclosureOne": {
+    "message": "Crypto Wallets በ Brave ውስጥ ካሉ ምስጠራ እና ተያያዥ ሀብቶች ጋር እንዲሰሩ ያስችልዎታል። Crypto Wallets እንደ ETH እና BAT ያሉ እንዲሁም እንደ ሰብሳቢዎች ያሉ የ Ethereum ማስመሰያዎች ይደግፋል እንዲሁም ከ Ðapps እና ከሌሎች ዘመናዊ ኮንትራቶች ጋር አብረው እንዲሰሩ ያስችልዎታል። ይህ ሁሉ ማለት Ethereum ን እና ሌሎች የማገጃ ስርዓቶችን ለሚያውቁ ሰዎች ነው — ወይም ለመማር ፍላጎት ላላቸው ሰዎች።"
+  },
+  "cryptoWalletsDisclosureTwo": {
+    "message": "Crypto ዋሌቶችን መጠቀም የሚችሉት ከዚህ አጠቃቀም ጋር ለተያያዙ ስጋቶች በሙሉ ሃላፊነቱ የእርስዎ ብቻ መሆኑንና በዚህ አጠቃቀም ምክንያት ወይም ከእርሱ ጋር በተያያዘ ለሚደርስብዎ ማንኛውም ሃላፊነት ወይም ተጠያቂነት የ Brave ሶፍትዌር ምንም ዓይነት ሃላፊነት እንደሌለበት ከተቀበሉ ብቻ ነው።"
+  },
+  "cryptoWalletsDisclosureThree": {
+    "message": "ይህ ሁሉ ሙሉ በሙሉ የተጠነጠለ ነው"
+  },
+  "cryptoWalletsDisclosureFour": {
+    "message": "ስለዚህ፣ ተወዳጅ ገጾችዎን ለመደገፍ ፈልገው ከነበረ፣ ከዚህ ይልቅ ወደዚያ ይሂዱ።"
+  },
+  "cryptoWalletsTitle": {
+    "message": "Crypto ዋሌቶች"
+  },
+  "disclosureConfirm": {
+    "message": "ገብቶኛል"
+  },
   "ledgerCreateSubText": {
     "message": "የ Ledger ሃርድዌር ቋትዎን ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
+  },
+  "metamaskImportSubText": {
+    "message": "ማስታወሻ፥ ከሜታስክ ዋሌት የሚያስመጡ ከሆነ፣ ከ 24 ይልቅ 12 ቃላትን ያስገቡ።"
   },
   "newLocalWallet": {
     "message": "አዲስ ከባቢያዊ ቋት"
@@ -1313,7 +1792,16 @@
   "newLocalWalletSubText": {
     "message": "ወደ dApps ለመድረስና crypto እና ተሰብሳቢዎችን በአስተማማኝ መንገድ ለማስቀመጥ አዲስ የ Brave አካባባቢ ዋሌትን ይፍጠሩ። ተለዋጭ ስሞችን ስም ሳይገለጽና የንግድ ክፍያዎችን ሳይከፍሉ ይገበያዩ።"
   },
+  "passWarningOne": {
+    "message": "ይህ የይለፍ ቃል የግል ቁልፍዎን ይጠብቃል። ቢረሱት ማንም ሊያስተካክለው አይችልም ፣ Brave ም እንኳን አይችልም!"
+  },
+  "providerErrorMessage": {
+    "message": "ይህ ዋሌት የእርስዎ ነባሪ Ethereum Dapp አቅራቢ አይደለም።"
+  },
   "trezorCreateSubText": {
     "message": "የ Trezor ሃርድዌር ቋትዎ ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
+  },
+  "welcomeCryptoWallets": {
+    "message": "ወደ Brave Crypto ዋሌቶች እንኳን በደህና መጡ"
   }
 }

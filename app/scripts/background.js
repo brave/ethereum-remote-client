@@ -250,17 +250,10 @@ function setupController (initState, initLangCode) {
     getIpfsGateway: controller.preferencesController.getIpfsGateway.bind(controller.preferencesController),
     provider: controller.provider,
   })
-
-  // setup state persistence
-  pump(
-    asStream(controller.store),
-    debounce(1000),
-    storeTransform(versionifyData),
-    createStreamSink(persistData),
-    (error) => {
-      log.error('MetaMask - Persistence pipeline failed', error)
-    },
-  )
+  onControllerInit(controller)
+  controller.on('controllerInitialized', () => {
+    onControllerInit(controller)
+  })
 
   /**
    * Assigns the given state to the versioned object (with metadata), and returns that.
@@ -287,6 +280,19 @@ function setupController (initState, initLangCode) {
         log.error('error setting state in local store:', err)
       }
     }
+  }
+
+  function onControllerInit (controller) {
+    // setup state persistence
+    pump(
+      asStream(controller.store),
+      debounce(1000),
+      storeTransform(versionifyData),
+      createStreamSink(persistData),
+      (error) => {
+        log.error('MetaMask - Persistence pipeline failed', error)
+      },
+    )
   }
 
   //

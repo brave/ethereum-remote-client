@@ -70,7 +70,7 @@ export default class PreferencesController {
     this.diagnostics = opts.diagnostics
     this.network = opts.network
     this.store = new ObservableStore(initState)
-    this.store.setMaxListeners(12)
+    this.store.setMaxListeners(24)
     this.openPopup = opts.openPopup
     this._subscribeProviderType()
 

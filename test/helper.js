@@ -47,7 +47,9 @@ global.log = log
 //
 
 // dom
-const jsdom = new JSDOM()
+const jsdom = new JSDOM({
+  url: 'http://localhost',
+})
 global.window = jsdom.window
 
 // required by `trezor-connect/node_modules/whatwg-fetch`
@@ -75,9 +77,6 @@ const { Headers, Request, Response } = fetch
 Object.assign(window, { fetch, Headers, Request, Response })
 
 require('abortcontroller-polyfill/dist/polyfill-patch-fetch')
-
-// localStorage
-window.localStorage = {}
 
 // override metamask-logo
 window.requestAnimationFrame = () => {}

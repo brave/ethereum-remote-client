@@ -785,7 +785,7 @@
     "message": "Import wallet"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 24 word seed phrase"
+    "message": "Import your existing wallet using a 12 or 24 word seed phrase"
   },
   "imported": {
     "message": "Imported",
@@ -1288,7 +1288,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "Enter your secret 24 word phrase here to restore your vault."
+    "message": "Enter your secret 12 or 24 word phrase to restore your vault."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1810,7 +1810,7 @@
     "message": "Connect your Ledger hardware wallet to interact with dApps and make transfers to other connected wallets."
   },
   "metamaskImportSubText": {
-    "message": "Note: If importing from a Metamask wallet, enter 12 words instead of 24."
+    "message": "Note: If importing from Crypto Wallets Version 1.0.26 or earlier, your secret phrase is 24 words instead of 12."
   },
   "newLocalWallet": {
     "message": "New Local Wallet"

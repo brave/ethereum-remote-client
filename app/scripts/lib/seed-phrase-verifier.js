@@ -1,5 +1,7 @@
-import KeyringController from '@brave/eth-keyring-controller'
+import KeyringController from 'eth-keyring-controller'
 import log from 'loglevel'
+
+const BraveKeyringController = require('@brave/eth-keyring-controller')
 
 const seedPhraseVerifier = {
 
@@ -20,8 +22,13 @@ const seedPhraseVerifier = {
     if (!createdAccounts || createdAccounts.length < 1) {
       throw new Error('No created accounts defined.')
     }
-
-    const keyringController = new KeyringController({})
+    const mnemonicLength = seedWords.split(' ').length
+    let keyringController
+    if (mnemonicLength === 24) {
+      keyringController = new BraveKeyringController({})
+    } else {
+      keyringController = new KeyringController({})
+    }
     const Keyring = keyringController.getKeyringClassForType('HD Key Tree')
     const opts = {
       mnemonic: seedWords,

@@ -42,7 +42,7 @@ const _defaultNetworksData = [
     rpcUrl: 'https://api.infura.io/v1/jsonrpc/kovan',
     chainId: '42',
     ticker: 'ETH',
-    blockExplorerUrl: 'https://etherscan.io',
+    blockExplorerUrl: 'https://kovan.etherscan.io',
   },
   {
     labelKey: 'localhost',

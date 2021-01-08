@@ -1,32 +1,28 @@
 .welcome-container {
-  background: #d5d9dc;
+  background: $brave-main-background;
   width: 100%;
   height: 100vh;
 
   .content {
     width: 930px;
-    margin: 40px auto;
-    background: white;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 8px;
+    margin: 30px auto;
+    background: $brave-main-background;
   }
 
   .welcome-title span {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 44px;
-    letter-spacing: -0.13px;
-    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    font-family: 'Poppins';
   }
 }
 
 #app-content {
-  background: #d5d9dc;
+  background: $brave-main-background;
 }
 
 .first-time-flow {
-  background-color: #d5d9dc;
+  background: $brave-main-background;
 
   button {
     border-radius: 30px;
@@ -35,7 +31,7 @@
 
 .first-time-flow__wrapper,
 .end-of-flow {
-  background: #fff;
+  background: $brave-card-background;
   border-radius: 8px;
   margin-top: 40px;
 }

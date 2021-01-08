@@ -20,6 +20,10 @@
     white-space: nowrap;
     text-align: center;
     margin-bottom: 4px;
+
+    @media (prefers-color-scheme: dark) {
+      color: $brave-dark-text;
+    }
   }
 
   &__address {
@@ -40,10 +44,17 @@
 
     &:hover {
       background-color: $Grey-000;
+      @media (prefers-color-scheme: dark) {
+        background-color: $brave-dark-menu-active-background;
+        color: $brave-dark-text;
+      }
     }
 
     &:active {
       background-color: #d9d7da;
+      @media (prefers-color-scheme: dark) {
+        background-color: $brave-dark-menu-active-background;
+      }
     }
   }
 }

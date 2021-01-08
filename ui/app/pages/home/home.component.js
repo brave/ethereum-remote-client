@@ -116,10 +116,12 @@ export default class Home extends PureComponent {
       isPopup,
     } = this.props
 
+    const inDevelopment = process.env.METAMASK_DEBUG
+
     return (
       <MultipleNotifications>
         {
-          shouldShowSeedPhraseReminder && !isPopup
+          shouldShowSeedPhraseReminder && !inDevelopment && !isPopup
             ? (
               <HomeNotification
                 descriptionText={t('backupApprovalNotice')}

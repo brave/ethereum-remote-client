@@ -54,3 +54,7 @@ div.settings-page__content__tabs > div > div:nth-child(7):not(.address-book__vie
 div.menu.account-menu > div:nth-child(10):not(.address-book__view-contact__group) {
   display: none;
 }
+
+div.app-header {
+  background: inherit;
+}

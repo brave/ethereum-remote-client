@@ -1,0 +1,22 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export default function CreateWalletIcon({ className, color, size }) {
+  return (
+    <svg className={className} width={size} height={size} fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.75 15.75C21.75 16.164 21.414 16.5 21 16.5H18.75V18.75C18.75 19.164 18.414 19.5 18 19.5C17.586 19.5 17.25 19.164 17.25 18.75V16.5H15C14.586 16.5 14.25 16.164 14.25 15.75C14.25 15.336 14.586 15 15 15H17.25V12.75C17.25 12.336 17.586 12 18 12C18.414 12 18.75 12.336 18.75 12.75V15H21C21.414 15 21.75 15.336 21.75 15.75ZM5.93624 12C5.93624 11.586 6.26774 11.25 6.68249 11.25H6.68999C7.10399 11.25 7.43999 11.586 7.43999 12C7.43999 12.414 7.10399 12.75 6.68999 12.75C6.27599 12.75 5.93624 12.414 5.93624 12ZM3.75 13.5H8.25V10.5H3.75V13.5ZM19.8218 4.5H5.67825C4.61475 4.5 3.75 5.38725 3.75 6.477V9H3C2.586 9 2.25 9.336 2.25 9.75V14.25C2.25 14.664 2.586 15 3 15H3.75V17.523C3.75 18.6128 4.61475 19.5 5.67825 19.5H12C12.414 19.5 12.75 19.164 12.75 18.75C12.75 18.336 12.414 18 12 18H5.67825C5.4465 18 5.25 17.781 5.25 17.523V15H9C9.414 15 9.75 14.664 9.75 14.25V9.75C9.75 9.336 9.414 9 9 9H5.25V6.477C5.25 6.219 5.4465 6 5.67825 6H19.8218C20.0535 6 20.25 6.219 20.25 6.477V9.75C20.25 10.164 20.586 10.5 21 10.5C21.414 10.5 21.75 10.164 21.75 9.75V6.477C21.75 5.38725 20.8853 4.5 19.8218 4.5Z" fill={color}/>
+    </svg>
+  )
+}
+
+CreateWalletIcon.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+  size: PropTypes.number,
+}
+
+CreateWalletIcon.defaultProps = {
+  className: undefined,
+  color: 'white',
+  size: 24,
+}

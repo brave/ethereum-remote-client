@@ -1,0 +1,143 @@
+.bitgo-modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  overflow: hidden;
+  background: rgba(169, 169, 169, 0.5);
+
+  a {
+    color: $brave-link;
+  }
+
+  .__modal {
+    max-width: 620px;
+    position: relative;
+    margin: 15vh auto;
+    background: $brave-card-background;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 20px 0px;
+  }
+
+  .__close {
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .close-dark {
+    display: none;
+  }
+
+  .__content {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .__header {
+    font-weight: bold;
+    font-size: 21px;
+  }
+
+  .__button-container {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+
+    button {
+      color: $brave-white;
+      background: $brave-link;
+      border-radius: 24px;
+      border-width: 0px;
+      height: 48px;
+      width: 150px;
+      font-size: 14px;
+    }
+  }
+
+  .__bitgo {
+    font-family: 'Muli';
+    font-size: 16px;
+    line-height: 20px;
+    color: $brave-text;
+
+    h3 {
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+
+    .__wallets-area {
+      margin-top: 30px;
+      max-height: 30vh;
+    }
+  }
+}
+
+.__wallets-area {
+  border: 1px solid $brave-border;
+  max-height: 40vh;
+  overflow-y: scroll;
+
+  .__bitgo-wallet-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid $brave-border;
+
+    display: flex;
+    align-items: center;
+
+    .__asset-icon {
+      display: flex;
+      img {
+        width: 24px;
+        margin: 0px 8px;
+      }
+    }
+
+    .__asset-name {
+      flex: 1 1 auto;
+      font-size: 14px;
+    }
+
+    .__asset-generate {
+      flex: 1 1 auto;
+      text-align: right;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bitgo-modal {
+    .__modal {
+      background: $brave-dark-card-background;
+    }
+
+    .__bitgo {
+      color: $brave-dark-text;
+    }
+
+    .close-dark {
+      display: block;
+    }
+
+    .close-light {
+      display: none;
+    }
+  }
+
+  .__wallets-area {
+    border-color: $brave-dark-border;
+
+    .__bitgo-wallet-item {
+      border-color: $brave-dark-border;
+    }
+  }
+}
+

@@ -111,3 +111,5 @@ export {
   CONNECTED_ROUTE,
   CONNECTED_ACCOUNTS_ROUTE,
 }
+
+export * from './brave-routes'

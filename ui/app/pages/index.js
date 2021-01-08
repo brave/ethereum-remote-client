@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
-import { HashRouter } from 'react-router-dom'
+//import { HashRouter } from 'react-router-dom'
+import DebugRouter from '../components/app/debug-router'
 import Routes from './routes'
 import { I18nProvider, LegacyI18nProvider } from '../contexts/i18n'
 import { MetaMetricsProvider, LegacyMetaMetricsProvider } from '../contexts/metametrics'
@@ -11,7 +12,7 @@ const Index = (props) => {
 
   return (
     <Provider store={store}>
-      <HashRouter hashType="noslash">
+      <DebugRouter hashType="noslash">
         <MetaMetricsProvider>
           <LegacyMetaMetricsProvider>
             <I18nProvider>
@@ -21,7 +22,7 @@ const Index = (props) => {
             </I18nProvider>
           </LegacyMetaMetricsProvider>
         </MetaMetricsProvider>
-      </HashRouter>
+      </DebugRouter>
     </Provider>
   )
 }

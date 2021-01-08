@@ -8,6 +8,7 @@ import gasReducer from './gas/gas.duck'
 import { unconnectedAccount } from './alerts'
 import historyReducer from './history/history'
 import { ALERT_TYPES } from '../../../app/scripts/controllers/alert'
+import braveReducer from '../../../brave/ui/app/ducks/brave/brave'
 
 export default combineReducers({
   [ALERT_TYPES.unconnectedAccount]: unconnectedAccount,
@@ -19,4 +20,5 @@ export default combineReducers({
   confirmTransaction: confirmTransactionReducer,
   gas: gasReducer,
   localeMessages: localeMessagesReducer,
+  brave: braveReducer,
 })

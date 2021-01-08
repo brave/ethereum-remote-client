@@ -9,6 +9,7 @@ import { getOnboardingInitiator } from '../../../../selectors'
 const mapStateToProps = (state) => {
   return {
     onboardingInitiator: getOnboardingInitiator(state),
+    homeRedirectRoute: state.metamask.homeRedirectRoute,
   }
 }
 

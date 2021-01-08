@@ -18,7 +18,9 @@ import {
   INITIALIZE_END_OF_FLOW_ROUTE,
   INITIALIZE_METAMETRICS_OPT_IN_ROUTE,
   INITIALIZE_BACKUP_SEED_PHRASE_ROUTE,
+  BRAVE_BITGO_INITIALIZE_ROUTE,
 } from '../../helpers/constants/routes'
+import BitGoChoose from './bitgo-choose'
 
 export default class FirstTimeFlow extends PureComponent {
   static propTypes = {
@@ -101,6 +103,11 @@ export default class FirstTimeFlow extends PureComponent {
     const { seedPhrase, isImportedKeyring } = this.state
     const { verifySeedPhrase } = this.props
 
+    console.log('[first-time-flow]', 'main route', JSON.stringify({
+      seedPhrase,
+      isImportedKeyring,
+    }, null, 2))
+
     return (
       <div className="first-time-flow">
         <Switch>
@@ -132,6 +139,14 @@ export default class FirstTimeFlow extends PureComponent {
                 isImportedKeyring={isImportedKeyring}
                 onCreateNewAccount={this.handleCreateNewAccount}
                 onCreateNewAccountFromSeed={this.handleImportWithSeedPhrase}
+              />
+            )}
+          />
+          <Route
+            path={BRAVE_BITGO_INITIALIZE_ROUTE}
+            render={(routeProps) => (
+              <BitGoChoose
+                { ...routeProps }
               />
             )}
           />

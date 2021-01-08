@@ -13,7 +13,12 @@ module.exports = function (api) {
           },
         },
       ],
-      '@babel/preset-react',
+      [
+        '@babel/preset-react',
+        {
+          'throwIfNamespace': false,
+        },
+      ],
     ],
     plugins: [
       '@babel/plugin-transform-runtime',
@@ -21,6 +26,7 @@ module.exports = function (api) {
       '@babel/plugin-proposal-object-rest-spread',
       '@babel/plugin-proposal-optional-chaining',
       '@babel/plugin-proposal-nullish-coalescing-operator',
+      'react-html-attrs',
     ],
   }
 }

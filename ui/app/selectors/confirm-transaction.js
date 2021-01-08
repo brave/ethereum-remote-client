@@ -124,6 +124,15 @@ export const unconfirmedTransactionsCountSelector = createSelector(
 
 export const currentCurrencySelector = (state) => state.metamask.currentCurrency
 export const conversionRateSelector = (state) => state.metamask.conversionRate
+export const getAllConversionRates = (state) => state.metamask.conversionRates
+
+export const getCurrentConversionRate = (currency) => {
+  return createSelector(
+    currentCurrencySelector,
+    (state) => state.metamask.conversionRates[currency.toUpperCase()],
+    (currentCurrency, rates) => rates[currentCurrency.toUpperCase()],
+  )
+}
 
 export const txDataSelector = (state) => state.confirmTransaction.txData
 const tokenDataSelector = (state) => state.confirmTransaction.tokenData

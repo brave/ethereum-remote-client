@@ -20,12 +20,30 @@
     margin-top: 5px;
     font-size: 2rem;
     font-weight: 800;
-    color: $tundora;
+    color: $brave-text;
+  }
+
+  &__subtitle {
+    color: $brave-subtext;
   }
 
   &__form {
     width: 100%;
     margin: 56px 0 8px;
+  }
+
+  .unlock-submit {
+    background-color: $brave-brand-color;
+    color: $brave-white;
+    margin-top: 20px;
+    height: 60px;
+    font-weight: 400;
+    box-shadow: none;
+    border-radius: 4px;
+  }
+
+  .unlock-submit[disabled] {
+    background-color: rgba($brave-brand-color, 0.34);
   }
 
   &__links {
@@ -42,6 +60,33 @@
 
     &--use-classic {
       margin-top: 10px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .unlock-page {
+    &__container {
+      background: $brave-dark-card-background;
+    }
+
+    &__title {
+      color: $brave-dark-text;
+    }
+
+    &__subtitle {
+      color: $brave-dark-subtext;
+    }
+
+    .MuiInput-underline:before,
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+      border-bottom-color: $brave-dark-border;
+    }
+
+    &__links {
+      div {
+        color: #00a8ee;
+      }
     }
   }
 }

@@ -62,10 +62,11 @@ import contractMap from 'eth-contract-metadata'
 
 import {
   AddressBookController,
-  CurrencyRateController,
+  //CurrencyRateController,
 } from '@metamask/controllers'
 import PhishingController from './controllers/phishing-controller'
-
+import { BitGoController } from './controllers/bitgo'
+import CurrencyRateController from './controllers/currency-rates'
 import backgroundMetaMetricsEvent from './lib/background-metametrics'
 
 export default class MetamaskController extends EventEmitter {
@@ -267,7 +268,11 @@ export default class MetamaskController extends EventEmitter {
     this.decryptMessageManager = new DecryptMessageManager()
     this.encryptionPublicKeyManager = new EncryptionPublicKeyManager()
     this.typedMessageManager = new TypedMessageManager({ networkController: this.networkController })
-
+    this.bitGoController = new BitGoController({
+      ...this.opts,
+      initState: initState.BitGoController,
+      keyringController: this.keyringController,
+    })
 
     this.store.updateStructure({
       AppStateController: this.appStateController.store,
@@ -283,6 +288,7 @@ export default class MetamaskController extends EventEmitter {
       IncomingTransactionsController: this.incomingTransactionsController.store,
       PermissionsController: this.permissionsController.permissions,
       PermissionsMetadata: this.permissionsController.store,
+      BitGoController: this.bitGoController.store,
     })
 
     this.memStore = new ComposableObservableStore(null, {
@@ -308,6 +314,7 @@ export default class MetamaskController extends EventEmitter {
       PermissionsMetadata: this.permissionsController.store,
       // ENS Controller
       EnsController: this.ensController.store,
+      BitGoController: this.bitGoController.store,
     })
     this.memStore.subscribe(this.sendUpdate.bind(this))
 
@@ -322,6 +329,12 @@ export default class MetamaskController extends EventEmitter {
     if (chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
       chrome.braveWallet.ready() // eslint-disable-line no-undef
     }
+
+    chrome.braveWallet.getProjectID((projectId) => { // eslint-disable-line no-undef
+      if (this.keyringController.password) {
+        this.bitGoController.unlockAndSetKey(this.keyringController.password)
+      }
+    })
   }
 
   /**
@@ -551,7 +564,18 @@ export default class MetamaskController extends EventEmitter {
       removePermittedAccount: nodeify(permissionsController.removePermittedAccount, permissionsController),
       requestAccountsPermissionWithId: nodeify(permissionsController.requestAccountsPermissionWithId, permissionsController),
 
+      // Brave
       setHardwareConnect: nodeify(this.preferencesController.setHardwareConnect, this.preferencesController),
+      setBatTokenAdded: nodeify(this.preferencesController.setBatTokenAdded, this.preferencesController),
+      setRewardsDisclosureAccepted: nodeify(this.preferencesController.setRewardsDisclosureAccepted, this.preferencesController),
+      setHomeRedirectRoute: nodeify(this.preferencesController.setHomeRedirectRoute, this.preferencesController),
+
+      //// BitGo
+      createBitGoWallet: nodeify(this.bitGoController.createWallet, this.bitGoController),
+      getBitGoWalletBalance: nodeify(this.bitGoController.getBalance, this.bitGoController),
+      getBitGoWalletTransfers: nodeify(this.bitGoController.getTransfers, this.bitGoController),
+      sendBitGoTransaction: nodeify(this.bitGoController.sendTx, this.bitGoController),
+      unlockAndSetKey: nodeify(this.bitGoController.unlockAndSetKey, this.bitGoController),
     }
   }
 

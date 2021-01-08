@@ -37,6 +37,9 @@
 
   &__main-view &__tab--active {
     color: $Blue-500;
+    @media (prefers-color-scheme: dark) {
+      color: $white;
+    }
   }
 
   &__connect-status-text {

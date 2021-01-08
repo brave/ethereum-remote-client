@@ -27,11 +27,13 @@ import NetworkDropdown from '../../components/app/dropdowns/network-dropdown'
 import AccountMenu from '../../components/app/account-menu'
 import { Modal } from '../../components/app/modals'
 import Alert from '../../components/ui/alert'
-import AppHeader from '../../components/app/app-header'
+import AppHeader from '../../../../brave/ui/app/components/app/app-header'
 import UnlockPage from '../unlock-page'
 import Alerts from '../../components/app/alerts'
 import Asset from '../asset'
 import BraveNavigation from '../../components/app/navigation'
+import Welcome from '../welcome'
+import BraveProviderWallet from '../provider-wallet'
 
 import {
   ADD_TOKEN_ROUTE,
@@ -51,6 +53,8 @@ import {
   SEND_ROUTE,
   SETTINGS_ROUTE,
   UNLOCK_ROUTE,
+  BRAVE_CONNECT_WALLETS_ROUTE,
+  BRAVE_BITGO_WALLET_INDEX,
 } from '../../helpers/constants/routes'
 
 import { ENVIRONMENT_TYPE_NOTIFICATION, ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
@@ -148,6 +152,9 @@ export default class Routes extends Component {
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={`${CONNECT_ROUTE}/:id`} component={PermissionsConnect} />
         <Authenticated path={`${ASSET_ROUTE}/:asset`} component={Asset} />
+        <Authenticated path={BRAVE_CONNECT_WALLETS_ROUTE} component={Welcome} />
+        <Authenticated path={BRAVE_BITGO_WALLET_INDEX} component={BraveProviderWallet} />
+
         <Authenticated path={DEFAULT_ROUTE} component={Home} />
       </Switch>
     )

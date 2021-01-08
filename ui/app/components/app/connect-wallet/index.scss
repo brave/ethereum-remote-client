@@ -1,50 +1,99 @@
 .connect-wallet-container {
-  width: 100%;
-  border: 1px solid rgb(218, 220, 232);
-  border-radius: 12px;
-  padding: 20px 35px;
-  text-align: left;
-  margin-top: 20px;
+  background-color: $brave-card-background;
+  border-radius: 4px;
+  margin: 20px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 
-  .wallet-title span {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    color: rgb(59, 62, 79);
-  }
+  .wallet-desc {
+    flex: 1 1 auto;
+    max-width: 75%;
 
-  .wallet-sub-text span {
-    display: block;
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 5px;
-    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    div {
+      text-align: left;
+    }
+
+    .wallet-title span {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 600;
+      font-family: 'Poppins';
+      img {
+        width: 100px;
+      }
+    }
+
+    .wallet-sub-text span {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 18px;
+
+      margin-top: 5px;
+    }
   }
 
   .controls {
-    float: right;
-    margin-top: 23px;
+    flex: 0 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .create, .restore {
+      font-size: 14px;
+      line-height: 21px;
+      color: $brave-text;
+      font-family: 'Poppins';
+    }
+
+    .create {
+      background-color: inherit;
+      border: 1px solid $brave-border;
+      border-radius: 24px;
+      cursor: pointer;
+
+      .create-icon path {
+        fill: $brave-icon;
+      }
+    }
+
+    .restore {
+      cursor: pointer;
+      margin: 10px 15px 0px 0px;
+    }
+  }
+}
+
+.app-header {
+
+  &--back-drop {
+
+    &::after {
+      height: 0px;
+      background: inherit;
+    }
   }
 
-  .create {
-    width: 85px;
-    height: 32px;
-    border: 1px solid rgb(194, 196, 207);
-    border-radius: 100px;
-    margin-right: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: rgb(59, 62, 79);
-    cursor: pointer;
-  }
+  @media screen and (min-width: 576px) {
+    height: 75px;
+    justify-content: center;
 
-  .restore {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  .hardware-img {
-    width: 100px;
+    &--back-drop {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background: inherit;
+        bottom: -32px;
+      }
+    }
   }
 }

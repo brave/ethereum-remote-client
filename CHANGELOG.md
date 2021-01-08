@@ -1,6 +1,13 @@
 # Changelog
 
-## Remote Component([0.1.81])(https://github.com/brave/ethereum-remote-client/releases/tag/0.1.81)), Browser Component: `1.0.24`(26-Nov-2020)
+## Remote Component([0.1.84](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.84)), Browser Component: `1.0.25`(08-Jan-2021)
+
+
+- [brave-browser#12959](https://github.com/brave/brave-browser/issues/12959) - Implemented warning message when a user tries to send a token to its own contract address
+- [brave-browser#13296](https://github.com/brave/brave-browser/issues/13296) - Updated phishing detection for missing links from Phishfort 
+- [brave-browser#6298](https://github.com/brave/brave-browser/issues/6298) - Fixed missing translation on backup phrase page 
+
+## Remote Component([0.1.81](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.81)), Browser Component: `1.0.24`(26-Nov-2020)
 
 - [brave-browser#11696](https://github.com/brave/brave-browser/issues/11696) - Added in-browser-action UI to inform when Crypto Wallet is not the default web3 provider
 - [brave-browser#8281](https://github.com/brave/brave-browser/issues/8281) - Fixed "Failed to parse SourceMap" warning when devtools is opened

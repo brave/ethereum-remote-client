@@ -62,7 +62,7 @@ export default class PreferencesController {
 
       // ENS decentralized website resolution
       ipfsGateway: 'dweb.link',
-
+      batTokenAdded: {},
       hardwareConnect: false,
     }, opts.initState)
 
@@ -376,7 +376,7 @@ export default class PreferencesController {
     const address = normalizeAddress(_address)
     this._updateTokens(address)
 
-    const { identities, tokens } = this.store.getState()
+    const { identities, tokens, batTokenAdded } = this.store.getState()
     const selectedIdentity = identities[address]
     if (!selectedIdentity) {
       throw new Error(`Identity for '${address} not found`)
@@ -384,12 +384,16 @@ export default class PreferencesController {
 
     selectedIdentity.lastSelected = Date.now()
     this.store.updateState({ identities, selectedAddress: address })
-    this._ensureBatTokenAdded(address)
+
+    if (!(address in batTokenAdded)) {
+      this._addBatToken(address)
+    }
+
     return Promise.resolve(tokens)
   }
 
-  _ensureBatTokenAdded (address) {
-    const tokens = this.store.getState().tokens
+  _addBatToken (address) {
+    const { tokens, batTokenAdded } = this.store.getState()
     const assetImages = this.getAssetImages()
     const { accountTokens } = this._getTokenRelatedStates()
 
@@ -425,7 +429,15 @@ export default class PreferencesController {
       tokens.push(BATToken)
     }
 
-    this.store.updateState({ accountTokens, tokens, assetImages })
+    this.store.updateState({
+      accountTokens,
+      tokens,
+      assetImages,
+      batTokenAdded: {
+        ...batTokenAdded,
+        [address]: true,
+      },
+    })
   }
 
   /**

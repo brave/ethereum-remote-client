@@ -142,6 +142,14 @@ describe('preferences controller', function () {
   })
 
   describe('addToken', function () {
+    beforeEach(function () {
+      sinon.spy(preferencesController, '_addBatToken')
+    })
+
+    afterEach(function () {
+      preferencesController._addBatToken.restore()
+    })
+
     it('should add that token to its state', async function () {
       const address = '0xabcdef1234567'
       const symbol = 'ABBR'
@@ -198,6 +206,32 @@ describe('preferences controller', function () {
       await preferencesController.setSelectedAddress('0xda22le')
       await preferencesController.addToken(address, symbol, decimals)
       assert.equal(preferencesController.getTokens().length, 2, 'one token added for 2nd address')
+    })
+
+    it('does not allow bat token to be added more than once per selected address', async function () {
+      preferencesController.setAddresses([ '0x7e57e2' ])
+
+      await preferencesController.setSelectedAddress('0x7e57e2')
+      await preferencesController.setSelectedAddress('0x7e57e2')
+      assert(preferencesController._addBatToken.calledOnce)
+      assert.deepEqual(preferencesController.store.getState().batTokenAdded, {
+        '0x7e57e2': true,
+      })
+    })
+
+    it('adds bat token per each selected address', async function () {
+      preferencesController.setAddresses([
+        '0x7e57e2',
+        '0xda22le',
+      ])
+
+      await preferencesController.setSelectedAddress('0x7e57e2')
+      await preferencesController.setSelectedAddress('0xda22le')
+      assert(preferencesController._addBatToken.calledTwice)
+      assert.deepEqual(preferencesController.store.getState().batTokenAdded, {
+        '0x7e57e2': true,
+        '0xda22le': true,
+      })
     })
 
     it('should add token per account', async function () {

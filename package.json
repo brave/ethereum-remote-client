@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@brave/eth-keyring-controller": "^5.4.2",
+    "@brave/eth-keyring-controller": "^5.4.3",
     "@download/blockies": "^1.0.3",
     "@formatjs/intl-relativetimeformat": "^5.2.6",
     "@fortawesome/fontawesome-free": "^5.13.0",

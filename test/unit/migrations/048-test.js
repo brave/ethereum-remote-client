@@ -20,9 +20,9 @@ describe('migration #48', function () {
     // code stub to simulate flag
     window.chrome = {
       ipcRenderer: true,
-      ipfs: { getIPFSEnabled: () => { } }
+      ipfs: { getIPFSEnabled: () => { } },
     }
-    
+
     const oldStorage = {
       meta: {},
       data: {

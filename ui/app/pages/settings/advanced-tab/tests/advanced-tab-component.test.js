@@ -4,6 +4,7 @@ import sinon from 'sinon'
 import { shallow } from 'enzyme'
 import AdvancedTab from '../advanced-tab.component'
 import TextField from '../../../../components/ui/text-field'
+import { getIPFSEnabledFlag } from '../../../../../../app/scripts/lib/util'
 
 describe('AdvancedTab Component', function () {
   it('should update autoLockTimeLimit', function () {
@@ -31,4 +32,44 @@ describe('AdvancedTab Component', function () {
     autoTimeout.find('.settings-tab__rpc-save-button').simulate('click')
     assert.equal(setAutoLockTimeLimitSpy.args[0][0], 1440)
   })
+
+  it('simulate IpfsEnabledFlag enabled', async function () {
+    // code stub to simulate flag
+    window.chrome = {
+      ipfs: {
+        getIPFSEnabled: (cb) => {
+          return cb(true)
+        },
+      },
+    }
+
+    const isBraveIpfs = await getIPFSEnabledFlag()
+    assert.equal(isBraveIpfs, true)
+  })
+  it('simulate IpfsEnabledFlag disabled', async function () {
+    // code stub to simulate flag
+    window.chrome = {
+      ipfs: {
+        getIPFSEnabled: (cb) => {
+          return cb(false)
+        },
+      },
+    }
+
+    const isBraveIpfs = await getIPFSEnabledFlag()
+    assert.equal(isBraveIpfs, false)
+  })
+
+  it('simulate IpfsEnabledFlag not present', async function () {
+    // code stub to simulate flag
+    window.chrome = {
+      ipfs: {
+        getIPFSEnabled: undefined,
+      },
+    }
+
+    const isBraveIpfs = await getIPFSEnabledFlag()
+    assert.equal(isBraveIpfs, false)
+  })
+
 })

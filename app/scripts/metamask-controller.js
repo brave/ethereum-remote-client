@@ -67,6 +67,7 @@ import {
 import PhishingController from './controllers/phishing-controller'
 
 import backgroundMetaMetricsEvent from './lib/background-metametrics'
+import { getIPFSEnabledFlag } from './lib/util'
 
 export default class MetamaskController extends EventEmitter {
 
@@ -324,7 +325,7 @@ export default class MetamaskController extends EventEmitter {
     }
 
     // if it is Brave Browser and chrome.ipfs flag is available then use native Brave ipfs
-    this.getIPFSEnabledFlag().then((isBraveIpfs) => {
+    getIPFSEnabledFlag().then((isBraveIpfs) => {
       if (isBraveIpfs) {
         this.setIpfsGateway('ipfs://<cid>')
       }
@@ -1973,26 +1974,6 @@ export default class MetamaskController extends EventEmitter {
       cb(err)
       return
     }
-  }
-
-  /**
-   * Returns the result of chrome.ipfs.getIPFSEnabled flag
-   */
-  async getIPFSEnabledFlag () {
-    return new Promise((resolve, reject) => {
-      try {
-        const fnIpfsEnabled = window?.chrome?.ipfs?.getIPFSEnabled
-        if (typeof fnIpfsEnabled === 'function') {
-          fnIpfsEnabled((boolVal) => {
-            resolve(boolVal)
-          })
-        } else {
-          resolve(false)
-        }
-      } catch (error) {
-        reject(error)
-      }
-    })
   }
 
   /**

@@ -71,6 +71,26 @@ const getPlatform = (_) => {
 }
 
 /**
+ * Returns the result of chrome.ipfs.getIPFSEnabled flag
+ */
+const getIPFSEnabledFlag = async () => {
+  return new Promise((resolve, reject) => {
+    try {
+      const fnIpfsEnabled = window?.chrome?.ipfs?.getIPFSEnabled
+      if (typeof fnIpfsEnabled === 'function') {
+        fnIpfsEnabled((boolVal) => {
+          resolve(boolVal)
+        })
+      } else {
+        resolve(false)
+      }
+    } catch (error) {
+      reject(error)
+    }
+  })
+}
+
+/**
  * Checks whether a given balance of ETH, represented as a hex string, is sufficient to pay a value plus a gas fee
  *
  * @param {Object} txParams - Contains data about a transaction
@@ -158,4 +178,5 @@ export {
   bnToHex,
   BnMultiplyByFraction,
   checkForError,
+  getIPFSEnabledFlag,
 }

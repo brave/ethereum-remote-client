@@ -322,6 +322,13 @@ export default class MetamaskController extends EventEmitter {
     if (chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
       chrome.braveWallet.ready() // eslint-disable-line no-undef
     }
+
+    // if it is Brave Browser and chrome.ipfs flag is available then use native Brave ipfs
+    this.getIPFSEnabledFlag().then((isBraveIpfs) => {
+      if (isBraveIpfs) {
+        this.setIpfsGateway('ipfs://<cid>')
+      }
+    })
   }
 
   /**
@@ -1966,6 +1973,26 @@ export default class MetamaskController extends EventEmitter {
       cb(err)
       return
     }
+  }
+
+  /**
+   * Returns the result of chrome.ipfs.getIPFSEnabled flag
+   */
+  async getIPFSEnabledFlag () {
+    return new Promise((resolve, reject) => {
+      try {
+        const fnIpfsEnabled = window?.chrome?.ipfs?.getIPFSEnabled
+        if (typeof fnIpfsEnabled === 'function') {
+          fnIpfsEnabled((boolVal) => {
+            resolve(boolVal)
+          })
+        } else {
+          resolve(false)
+        }
+      } catch (error) {
+        reject(error)
+      }
+    })
   }
 
   /**

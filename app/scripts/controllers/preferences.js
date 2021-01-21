@@ -61,7 +61,7 @@ export default class PreferencesController {
       metaMetricsSendCount: 0,
 
       // ENS decentralized website resolution
-      ipfsGateway: 'ipfs://<cid>',
+      ipfsGateway: 'dweb.link',
       batTokenAdded: {},
       hardwareConnect: false,
     }, opts.initState)

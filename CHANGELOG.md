@@ -6,6 +6,8 @@
 - [brave-browser#12959](https://github.com/brave/brave-browser/issues/12959) - Implemented warning message when a user tries to send a token to its own contract address
 - [brave-browser#13296](https://github.com/brave/brave-browser/issues/13296) - Updated phishing detection for missing links from Phishfort 
 - [brave-browser#6298](https://github.com/brave/brave-browser/issues/6298) - Fixed missing translation on backup phrase page 
+- [brave-browser#13438](https://github.com/brave/brave-browser/issues/13438)  - Fixed high memory usage for Crypto Wallets once wallet is created 
+- [brave-browser#13642](https://github.com/brave/brave-browser/issues/13642) - Updated Crypto Wallets icon 
 
 ## Remote Component([0.1.81](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.81)), Browser Component: `1.0.24`(26-Nov-2020)
 

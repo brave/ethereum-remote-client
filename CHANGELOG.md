@@ -1,6 +1,6 @@
 # Changelog
 
-## Remote Component([0.1.84](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.84)), Browser Component: `1.0.25`(08-Jan-2021)
+## Remote Component([0.1.85](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.85)), Browser Component: `1.0.25`(26-Jan-2021)
 
 
 - [brave-browser#12959](https://github.com/brave/brave-browser/issues/12959) - Implemented warning message when a user tries to send a token to its own contract address

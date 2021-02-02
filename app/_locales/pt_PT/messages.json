@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Rede não ETH, definida para minúsculas"
   },
-  "invalidInput": {
-    "message": "Entrada não válida."
-  },
   "invalidRPC": {
     "message": "URL RPC não válido"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "A malicious Ethereum network provider can lie about the state of the blockchain and record your network activity. Only add custom networks you trust."
-  },
-  "optionalChainId": {
-    "message": "ChainID (opcional)"
   },
   "optionalSymbol": {
     "message": "Símbolo (opcional)"

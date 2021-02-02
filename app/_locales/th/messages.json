@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ไม่ใช่เครือข่าย ETH ตั้งเป็นตัวพิมพ์เล็ก"
   },
-  "invalidInput": {
-    "message": "อินพุทไม่ถูกต้อง"
-  },
   "invalidRPC": {
     "message": "RPC URI ไม่ถูกต้อง"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "ผู้ให้บริการเครือข่าย Ethereum ที่ประสงค์ร้ายอาจโกหกเกี่ยวกับสถานะของบล็อกเชนและบันทึกกิจกรรมในเครือข่ายของคุณ โปรดเพิ่มเฉพาะเครือข่ายที่คุณเชื่อถือ"
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"

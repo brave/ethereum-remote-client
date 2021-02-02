@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ikke ETH-netværk, sat til små bogstaver"
   },
-  "invalidInput": {
-    "message": "Ugyldigt input."
-  },
   "invalidRPC": {
     "message": "Ugyldig RPC-webadresse"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "En ondsindet Ethereum-netværksleverandør kan lyve om tilstanden af din blockchain og optage din netværksaktivitet. Tilføj kun brugerdefinerede netværk, som du stoler på."
-  },
-  "optionalChainId": {
-    "message": "KædeID (valgfrit)"
   },
   "optionalSymbol": {
     "message": "Symbol (valgfrit)"

@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ni omrežja ETH, nastavljene so male črke"
   },
-  "invalidInput": {
-    "message": "Neveljaven vnos."
-  },
   "invalidRPC": {
     "message": "Neveljaven RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Zlonamerni ponudnik omrežja Ethereum lahko laže o stanju verige blokov in beleži vaše omrežne aktivnosti. Dodajte samo omrežja po meri, ki jim zaupate."
-  },
-  "optionalChainId": {
-    "message": "ChainID (nezahtevano)"
   },
   "optionalSymbol": {
     "message": "Simbol (nezahtevano)"

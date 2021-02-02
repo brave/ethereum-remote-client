@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Nem ETH hálózat, állítsa kisbetűre"
   },
-  "invalidInput": {
-    "message": "Érvénytelen bevitel."
-  },
   "invalidRPC": {
     "message": "Helytelen RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Egy rosszindulatú Ethereum hálózati szolgáltató hazudhat a blokklánc állapotáról, és rögzítheti a hálózati tevékenységét. Csak olyan egyéni hálózatokat adjon hozzá, amelyekben megbízik."
-  },
-  "optionalChainId": {
-    "message": "ChainID (nem kötelező)"
   },
   "optionalSymbol": {
     "message": "Szimbólum (opcionális)"

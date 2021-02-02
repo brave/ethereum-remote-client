@@ -47,7 +47,6 @@ import getRestrictedMethods from './controllers/permissions/restrictedMethods'
 import nodeify from './lib/nodeify'
 import accountImporter from './account-import-strategies'
 import getBuyEthUrl from './lib/buy-eth-url'
-import selectChainId from './lib/select-chain-id'
 import { Mutex } from 'await-semaphore'
 import { version } from '../manifest/_base.json'
 import ethUtil from 'ethereumjs-util'
@@ -378,14 +377,16 @@ export default class MetamaskController extends EventEmitter {
     }
 
     function updatePublicConfigStore (memState) {
-      publicConfigStore.putState(selectPublicState(memState))
+      if (memState.network !== 'loading') {
+        publicConfigStore.putState(selectPublicState(memState))
+      }
     }
 
-    function selectPublicState ({ isUnlocked, network, provider }) {
+    function selectPublicState ({ isUnlocked, network }) {
       return {
         isUnlocked,
-        networkVersion: network,
-        chainId: selectChainId({ network, provider }),
+        chainId: network,
+        networkVersion: Number.parseInt(network, 16).toString(),
       }
     }
     return publicConfigStore
@@ -1841,7 +1842,7 @@ export default class MetamaskController extends EventEmitter {
    * @param {Function} cb - A callback function returning currency info.
    */
   setCurrentCurrency (currencyCode, cb) {
-    const { ticker } = this.networkController.getNetworkConfig()
+    const { ticker } = this.networkController.getProviderConfig()
     try {
       const currencyState = {
         nativeCurrency: ticker,
@@ -1874,7 +1875,6 @@ export default class MetamaskController extends EventEmitter {
     }
   }
 
-  // network
   /**
    * A method for selecting a custom URL for an ethereum RPC provider and updating it
    * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
@@ -1883,7 +1883,6 @@ export default class MetamaskController extends EventEmitter {
    * @param {string} nickname - Optional nickname of the selected network.
    * @returns {Promise<String>} - The RPC Target URL confirmed.
    */
-
   async updateAndSetCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname, rpcPrefs) {
     await this.preferencesController.updateRpc({ rpcUrl, chainId, ticker, nickname, rpcPrefs })
     this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
@@ -1893,31 +1892,31 @@ export default class MetamaskController extends EventEmitter {
 
   /**
    * A method for selecting a custom URL for an ethereum RPC provider.
-   * @param {string} rpcTarget - A URL for a valid Ethereum RPC API.
+   * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
    * @param {string} chainId - The chainId of the selected network.
    * @param {string} ticker - The ticker symbol of the selected network.
    * @param {string} nickname - Optional nickname of the selected network.
    * @returns {Promise<String>} - The RPC Target URL confirmed.
    */
-  async setCustomRpc (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
+  async setCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
     const frequentRpcListDetail = this.preferencesController.getFrequentRpcListDetail()
-    const rpcSettings = frequentRpcListDetail.find((rpc) => rpcTarget === rpc.rpcUrl)
+    const rpcSettings = frequentRpcListDetail.find((rpc) => rpcUrl === rpc.rpcUrl)
 
     if (rpcSettings) {
       this.networkController.setRpcTarget(rpcSettings.rpcUrl, rpcSettings.chainId, rpcSettings.ticker, rpcSettings.nickname, rpcPrefs)
     } else {
-      this.networkController.setRpcTarget(rpcTarget, chainId, ticker, nickname, rpcPrefs)
-      await this.preferencesController.addToFrequentRpcList(rpcTarget, chainId, ticker, nickname, rpcPrefs)
+      this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+      await this.preferencesController.addToFrequentRpcList(rpcUrl, chainId, ticker, nickname, rpcPrefs)
     }
-    return rpcTarget
+    return rpcUrl
   }
 
   /**
    * A method for deleting a selected custom URL.
-   * @param {string} rpcTarget - A RPC URL to delete.
+   * @param {string} rpcUrl - A RPC URL to delete.
    */
-  async delCustomRpc (rpcTarget) {
-    await this.preferencesController.removeFromFrequentRpcList(rpcTarget)
+  async delCustomRpc (rpcUrl) {
+    await this.preferencesController.removeFromFrequentRpcList(rpcUrl)
   }
 
   /**

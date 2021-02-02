@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "شبکه ETH نه، به حروف کوچک تنظیم کنید"
   },
-  "invalidInput": {
-    "message": "ورودی نامعتبر."
-  },
   "invalidRPC": {
     "message": "RPC URL نا معتبر"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "یک ارائه‌دهنده مخرب شبکه Ethereum می‌تواند در مورد وضعیت زنجیره بلوکی دروغ بگوید و فعالیت شبکه شما را ثبت کند. فقط شبکه‌های سفارشی مورداعتمادتان را اضافه کنید."
-  },
-  "optionalChainId": {
-    "message": "آی دی زنجیره (انتخابی)"
   },
   "optionalSymbol": {
     "message": "سمبول (انتخابی)"

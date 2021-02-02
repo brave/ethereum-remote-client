@@ -325,9 +325,6 @@
   "invalidAddressRecipient": {
     "message": "Moun ki resevwa adrès la pa valab"
   },
-  "invalidInput": {
-    "message": "Sa ou rantre a pa valab"
-  },
   "invalidRPC": {
     "message": "RPC URI pa valab"
   },

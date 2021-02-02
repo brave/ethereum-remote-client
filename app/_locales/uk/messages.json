@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Не є мережею ETH, налаштуйте нижній регістр"
   },
-  "invalidInput": {
-    "message": "Неприпустимий ввід."
-  },
   "invalidRPC": {
     "message": "Недійсний RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Зловмисний провайдер мережі Ethereum може брехати про стан блокчейну та фіксувати вашу мережеву активність. Додавайте лише власні мережі, яким ви довіряєте."
-  },
-  "optionalChainId": {
-    "message": "ChainID (необов’язково)"
   },
   "optionalSymbol": {
     "message": "Символ (не обов'язково)"

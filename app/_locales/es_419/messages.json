@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No existe la red ETH, utilice minúsculas"
   },
-  "invalidInput": {
-    "message": "Ingreso no válido."
-  },
   "invalidRPC": {
     "message": "RPC de URL no válido"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un proveedor de red Ethereum malicioso puede mentir sobre el estado de la cadena de bloques y registrar tu actividad en la red. Agrega únicamente redes personalizadas en las que confíes."
-  },
-  "optionalChainId": {
-    "message": "ID de cadena (opcional)"
   },
   "optionalSymbol": {
     "message": "Símbolo (opcional)"

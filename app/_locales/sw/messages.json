@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Kwa mtandao wa ETH, weka herufi ndogo"
   },
-  "invalidInput": {
-    "message": "Maandii si sahihi."
-  },
   "invalidRPC": {
     "message": "RPC URL batili"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Mtoa huduma mbaya wa mtandao wa Ethereum anaweza kusema uongo kuhusu hali ya blockchain na kurekodi shughuli zako za mtandao. Ongeza tu mitandao maalum unayoamini."
-  },
-  "optionalChainId": {
-    "message": "Utambulisho wa Mnyororo (hiari)"
   },
   "optionalSymbol": {
     "message": "Ishara (hiari)"

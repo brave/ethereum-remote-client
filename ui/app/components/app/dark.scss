@@ -352,4 +352,13 @@
       background: #b92534;
     }
   }
+
+  .selected-account {
+    &__clickable {
+      &:hover {
+        color: "#fff";
+        background-color: #282828;
+      }
+    }
+  }
 }

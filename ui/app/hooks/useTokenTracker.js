@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import TokenTracker from '@metamask/eth-token-tracker'
+import TokenTracker from '@brave/eth-token-tracker'
 import { useSelector } from 'react-redux'
 import { getCurrentNetwork, getSelectedAddress } from '../selectors'
 

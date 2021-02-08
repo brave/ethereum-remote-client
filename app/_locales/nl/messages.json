@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Ongeldige invoer."
-  },
   "invalidRPC": {
     "message": "Ongeldige RPC-URI"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Een kwaadwillende Ethereum netwerkprovider kan liegen over de staat van de blockchain en uw netwerkactiviteit vastleggen. Voeg alleen eigen netwerken toe die u vertrouwt."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optioneel)"
   },
   "optionalSymbol": {
     "message": "Symbool (optioneel)"

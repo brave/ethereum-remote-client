@@ -14,7 +14,7 @@ import { ENVIRONMENT_TYPE_POPUP } from '../app/scripts/lib/enums'
 import { fetchLocale, loadRelativeTimeFormatLocaleData } from './app/helpers/utils/i18n-helper'
 import switchDirection from './app/helpers/utils/switch-direction'
 import { getPermittedAccountsForCurrentTab, getSelectedAddress } from './app/selectors'
-import { ALERT_STATE } from './app/ducks/alerts/unconnected-account'
+import { ALERT_STATE } from './app/ducks/alerts'
 import {
   getUnconnectedAccountAlertEnabledness,
   getUnconnectedAccountAlertShown,
@@ -87,7 +87,9 @@ async function startApp (metamaskState, backgroundConnection, opts) {
       permittedAccountsForCurrentTab.length > 0 &&
       !permittedAccountsForCurrentTab.includes(selectedAddress)
     ) {
-      draftInitialState[ALERT_TYPES.unconnectedAccount] = { state: ALERT_STATE.OPEN }
+      draftInitialState[ALERT_TYPES.unconnectedAccount] = {
+        state: ALERT_STATE.OPEN,
+      }
       actions.setUnconnectedAccountAlertShown(origin)
     }
   }

@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ei ole ETH-verkosto; vaihda pieniin kirjaimiin"
   },
-  "invalidInput": {
-    "message": "Virheellinen syötetty arvo."
-  },
   "invalidRPC": {
     "message": "Virheellinen RPC:n URL-osoite"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Valheellinen Ethereum-verkoston tarjoaja voi valehdella lohkoketjun tilasta ja tallentaa verkkotoimintaasi. Lisää siis ainoastaan luotettavia verkostoja."
-  },
-  "optionalChainId": {
-    "message": "Ketjun tunnus (valinnainen)"
   },
   "optionalSymbol": {
     "message": "Symboli (valinnainen)"

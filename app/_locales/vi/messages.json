@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Thông tin nhập vào không hợp lệ"
-  },
   "invalidRPC": {
     "message": "Invalid RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Một nhà cung cấp mạng Ethereum độc hại có thể nói dối về trạng thái của blockchain và ghi lại hoạt động mạng của bạn. Chỉ thêm các mạng tùy chỉnh mà bạn tin tưởng."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"

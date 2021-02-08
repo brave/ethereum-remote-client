@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "لا تجعلها شبكة ETH، قم بتعيين الأحرف صغيرة"
   },
-  "invalidInput": {
-    "message": "مدخل غير صحيح."
-  },
   "invalidRPC": {
     "message": "رابط آر بي سي غير صحيح"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "يمكن لمزود شبكة إيثريوم خبيث أن يكذب بشأن حالة سلسلة الكتل ويسجل نشاط الشبكة الخاص بك. أضف فقط الشبكات المخصصة التي تثق بها."
-  },
-  "optionalChainId": {
-    "message": "هوية ChainID (اختياري)"
   },
   "optionalSymbol": {
     "message": "الرمز (اختياري)"

@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Неверный ввод."
-  },
   "invalidRPC": {
     "message": "Неверный RPC URI"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Вредоносный поставщик сети Ethereum может лгать о состоянии блокчейна и записывать вашу сетевую активность. Добавляйте только те пользовательские сети, которым доверяете."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"

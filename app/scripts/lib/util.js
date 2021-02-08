@@ -150,6 +150,21 @@ function checkForError () {
   return new Error(lastError.message)
 }
 
+/**
+ * Checks whether the given value is a 0x-prefixed, non-zero, non-zero-padded,
+ * hexadecimal string.
+ *
+ * @param {any} value - The value to check.
+ * @returns {boolean} True if the value is a correctly formatted hex string,
+ * false otherwise.
+ */
+function isPrefixedFormattedHexString (value) {
+  if (typeof value !== 'string') {
+    return false
+  }
+  return (/^0x[1-9a-f]+[0-9a-f]*$/ui).test(value)
+}
+
 export {
   getPlatform,
   getEnvironmentType,
@@ -158,4 +173,5 @@ export {
   bnToHex,
   BnMultiplyByFraction,
   checkForError,
+  isPrefixedFormattedHexString,
 }

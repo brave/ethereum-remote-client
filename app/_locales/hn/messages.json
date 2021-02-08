@@ -202,9 +202,6 @@
   "invalidAddressRecipient": {
     "message": "प्राप्तकर्ता का पता अमान्य है"
   },
-  "invalidInput": {
-    "message": "अमान्य इनपुट।"
-  },
   "invalidRPC": {
     "message": "अमान्य RPC कै URI"
   },

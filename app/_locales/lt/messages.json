@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ne ETH tinklas, nustatykite į mažąsias raides"
   },
-  "invalidInput": {
-    "message": "Netinkama įvestis."
-  },
   "invalidRPC": {
     "message": "Netinkamas RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Kenkėjiškas „Ethereum“ tinklo paslaugų teikėjas gali meluoti apie blokų grandinės būseną ir įrašyti jūsų tinklo veiklą. Įtraukite tik tinkintus tinklus, kuriais pasitikite."
-  },
-  "optionalChainId": {
-    "message": "Grandinės ID (nebūtinas)"
   },
   "optionalSymbol": {
     "message": "Simbolis (nebūtinas)"

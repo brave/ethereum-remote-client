@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Neplatný vstup."
-  },
   "invalidRPC": {
     "message": "Neplatné RPC URI"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Škodlivý poskytovatel sítě Ethereum může lhát o stavu blockchainu a zaznamenávat vaši aktivitu v síti. Přidávejte pouze vlastní sítě, kterým důvěřujete."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"

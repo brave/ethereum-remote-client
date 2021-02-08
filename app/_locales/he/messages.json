@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "לא רשת ETH, מוגדר במצב אותיות קטנות"
   },
-  "invalidInput": {
-    "message": "קלט לא תקין."
-  },
   "invalidRPC": {
     "message": "כתובת URL לא חוקית של RPC"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "ספק רשת אתריום זדוני יכול לשקר לגבי מצב הבלוקצ'יין ולתעד את פעילות הרשת שלך. יש להוסיף רק רשתות מותאמות אישית שהנך בוטח/ת בהן."
-  },
-  "optionalChainId": {
-    "message": "ChainID (אופציונלי)"
   },
   "optionalSymbol": {
     "message": "סמל (אופציונלי)"

@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ne mreža ETH, postavite na mala slova"
   },
-  "invalidInput": {
-    "message": "Nevaljani upis."
-  },
   "invalidRPC": {
     "message": "Nevaljani URL RPC-a"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Zlonamjerni pružatelj mreže Ethereum može lagati o stanju podatkovnog lanca i bilježiti vaše mrežne aktivnosti. Dodajte samo prilagođene mreže u koje imate povjerenja."
-  },
-  "optionalChainId": {
-    "message": "Identifikacijska oznaka bloka (neobavezno)"
   },
   "optionalSymbol": {
     "message": "Simbol (neobavezno)"

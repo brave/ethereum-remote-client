@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Nav ETH tīkls, iestatīti mazie burti"
   },
-  "invalidInput": {
-    "message": "Nederīga ievadītā vērtība."
-  },
   "invalidRPC": {
     "message": "Nederīgs RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Ļaunprātīgs Ethereum tīkla nodrošinātājs var melot par blokķēdes stāvokli un reģistrēt jūsu tīkla darbību. Pievienojiet tikai uzticamus tīklus."
-  },
-  "optionalChainId": {
-    "message": "ChainID (neobligāti)"
   },
   "optionalSymbol": {
     "message": "Simbols (neobligāti)"

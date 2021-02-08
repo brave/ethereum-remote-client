@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Geçersiz giriş."
-  },
   "invalidRPC": {
     "message": "Geçersiz RPC URI"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Kötü amaçlı bşr Ethereum ağ sunucusu, blok zincirinin durumu hakkında yalan söyleyebilir ve ağ faaliyetinizi kaydedebilir. Sadece güvendiğiniz özel ağları ekleyin."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"

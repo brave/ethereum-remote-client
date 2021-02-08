@@ -827,9 +827,6 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH নেটওয়ার্ক নয়, ছোটো হরফে সেট করা হয়েছে"
   },
-  "invalidInput": {
-    "message": "অবৈধ ইনপুট"
-  },
   "invalidRPC": {
     "message": "অবৈধ RPC URL"
   },
@@ -1009,9 +1006,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "একটি দূষিত ইথেরিয়াম নেটওয়ার্ক সরবরাহকারী ব্লকচেইনের অবস্থা সম্পর্কে মিথ্যা বলতে এবং আপনার নেটওয়ার্ক ক্রিয়াকলাপ রেকর্ড করতে পারেন। আপনার বিশ্বাসযোগ্য কাস্টম নেটওয়ার্কগুলি কেবল যুক্ত করুন।"
-  },
-  "optionalChainId": {
-    "message": "ChainID (ঐচ্ছিক)"
   },
   "optionalSymbol": {
     "message": "প্রতীক (ঐচ্ছিক)"

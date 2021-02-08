@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import TokenTracker from '@metamask/eth-token-tracker'
+import TokenTracker from '@brave/eth-token-tracker'
 import { useSelector } from 'react-redux'
 import { getCurrentNetwork, getSelectedAddress } from '../selectors'
-
+import log from 'loglevel'
 
 export function useTokenTracker (tokens) {
   const network = useSelector(getCurrentNetwork)
@@ -12,6 +12,7 @@ export function useTokenTracker (tokens) {
   const [tokensWithBalances, setTokensWithBalances] = useState([])
   const [error, setError] = useState(null)
   const tokenTracker = useRef(null)
+  const accountTrackerStarted = useRef(false)
 
   const updateBalances = useCallback((tokensWithBalances) => {
     setTokensWithBalances(tokensWithBalances)
@@ -42,10 +43,30 @@ export function useTokenTracker (tokens) {
       tokens: tokenList,
       pollingInterval: (16 * 1000),
     })
+    accountTrackerStarted.current = true
 
     tokenTracker.current.on('update', updateBalances)
     tokenTracker.current.on('error', showError)
     tokenTracker.current.updateBalances()
+
+    window.addEventListener('focus', () => {
+      if (tokenTracker.current) {
+        log.debug('Enabling tokenTracker because tab is focused')
+        if (!accountTrackerStarted.current) {
+          accountTrackerStarted.current = true
+          tokenTracker.current.start()
+        }
+      }
+    })
+    window.addEventListener('blur', () => {
+      if (tokenTracker.current) {
+        log.debug('Disabling tokenTracker because tab is blured')
+        if (accountTrackerStarted.current) {
+          accountTrackerStarted.current = false
+          tokenTracker.current.stop()
+        }
+      }
+    })
   }, [updateBalances, showError, teardownTracker])
 
   // Effect to remove the tracker when the component is removed from DOM
@@ -81,7 +102,9 @@ export function useTokenTracker (tokens) {
       updateBalances([])
     }
 
-    buildTracker(userAddress, tokens)
+    if (!tokenTracker.current) {
+      buildTracker(userAddress, tokens)
+    }
   }, [userAddress, teardownTracker, network, tokens, updateBalances, buildTracker])
 
   return { loading, tokensWithBalances, error }

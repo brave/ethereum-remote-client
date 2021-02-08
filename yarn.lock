@@ -1095,6 +1095,19 @@
     obs-store "^4.0.3"
     promise-filter "1.1.0"
 
+"@brave/eth-token-tracker@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@brave/eth-token-tracker/-/eth-token-tracker-3.1.0.tgz#fa4a4c1b7711c15dc20906ebb5b0dfbabf09acd3"
+  integrity sha512-MK6CyzkZYcSu/FAIoyPDVu+H3I5ozjJ/dGcnk4V/XU4MOMfb7gaSb0qHLlKX9cI6Kg2aQhe5Yx0yqD6KZaLFhg==
+  dependencies:
+    deep-equal "^1.1.0"
+    eth-block-tracker "^4.4.2"
+    ethjs "^0.3.6"
+    ethjs-contract "^0.2.1"
+    ethjs-query "^0.3.7"
+    human-standard-token-abi "^1.0.2"
+    safe-event-emitter "^1.0.1"
+
 "@chromaui/localtunnel@1.10.1":
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/@chromaui/localtunnel/-/localtunnel-1.10.1.tgz#34da7dab7055a16b1b9034a9eb7e3054ebec4b98"
@@ -1458,19 +1471,6 @@
     ethereumjs-util "^5.1.5"
     events "^2.0.0"
     hdkey "0.8.0"
-
-"@metamask/eth-token-tracker@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@metamask/eth-token-tracker/-/eth-token-tracker-3.0.0.tgz#16ad4820abd6603d745c8cdaf7c5a9ae60e6db02"
-  integrity sha512-UxYkmEMrUYb8wzsqEY8x6QeiW2955guR/aaalqfElI2rlDyvKJ1lIaAiT7y642vcqoyIGhqYG2aejeHDpifMbA==
-  dependencies:
-    deep-equal "^1.1.0"
-    eth-block-tracker "^4.4.2"
-    ethjs "^0.3.6"
-    ethjs-contract "^0.2.1"
-    ethjs-query "^0.3.7"
-    human-standard-token-abi "^1.0.2"
-    safe-event-emitter "^1.0.1"
 
 "@metamask/etherscan-link@^1.1.0":
   version "1.1.0"
@@ -15623,7 +15623,7 @@ logalot@^2.0.0:
     figures "^1.3.5"
     squeak "^1.0.0"
 
-loglevel@^1.4.1, loglevel@^1.5.0:
+loglevel@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.0.tgz#ae0caa561111498c5ba13723d6fb631d24003934"
   integrity sha1-rgyqVhERSYxboTcj1vtjHSQAOTQ=
@@ -15632,6 +15632,11 @@ loglevel@^1.6.7:
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.8.tgz#8a25fb75d092230ecd4457270d80b54e28011171"
   integrity sha512-bsU7+gc9AJ2SqpzxwU3+1fedl8zAntbtC5XYlt3s2j1hJcn2PsXSmgN8TaLG/J1/2mod4+cE/3vNL70/c1RNCA==
+
+loglevel@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.7.1.tgz#005fde2f5e6e47068f935ff28573e125ef72f197"
+  integrity sha512-Hesni4s5UkWkwCGJMQGAh71PaLUmKFM60dHvq0zi/vDhhrzuk+4GgNbTXJ12YYQJn6ZKBDNIjYcuQGKudvqrIw==
 
 long@^4.0.0:
   version "4.0.0"

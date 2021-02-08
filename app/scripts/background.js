@@ -294,6 +294,9 @@ function setupController (initState, initLangCode) {
   //
   extension.runtime.onConnect.addListener(connectRemote)
   extension.runtime.onConnectExternal.addListener(connectExternal)
+  extension.tabs.onActivated.addListener(onTabActivated)
+  extension.tabs.onUpdated.addListener(onTabUpdated)
+  extension.windows.onFocusChanged.addListener(onWindowFocusChanged)
 
   const metamaskInternalProcessHash = {
     [ENVIRONMENT_TYPE_POPUP]: true,
@@ -337,9 +340,11 @@ function setupController (initState, initLangCode) {
 
       if (processName === ENVIRONMENT_TYPE_POPUP) {
         popupIsOpen = true
+        controller.isClientActivated = true
 
         endOfStream(portStream, () => {
           popupIsOpen = false
+          controller.isClientActivated = false
           controller.isClientOpen = isClientOpenStatus()
         })
       }
@@ -382,6 +387,40 @@ function setupController (initState, initLangCode) {
   function connectExternal (remotePort) {
     const portStream = new PortStream(remotePort)
     controller.setupUntrustedCommunication(portStream, remotePort.sender)
+  }
+
+  function onTabActivated (activeInfo) {
+    const activated = Object.keys(openMetamaskTabsIDs).includes(activeInfo.tabId.toString())
+    if (controller.isClientActivated !== activated) {
+      controller.isClientActivated = activated
+    }
+  }
+
+  function onTabUpdated (_tabId, _changeInfo, tab) {
+    if (tab.active) {
+      const activated = Object.keys(openMetamaskTabsIDs).includes(tab.id.toString())
+      if (controller.isClientActivated !== activated) {
+        controller.isClientActivated = activated
+      }
+    }
+  }
+
+  function onWindowFocusChanged (windowId) {
+    if (windowId === extension.windows.WINDOW_ID_NONE) {
+      if (controller.isClientActivated) {
+        controller.isClientActivated = false
+      }
+      return
+    }
+    extension.tabs.query({
+      active: true,
+      windowId,
+    }, (tabs) => {
+      const activated = Boolean(tabs.find((tab) => openMetamaskTabsIDs[tab.id]))
+      if (controller.isClientActivated !== activated) {
+        controller.isClientActivated = activated
+      }
+    })
   }
 
   //

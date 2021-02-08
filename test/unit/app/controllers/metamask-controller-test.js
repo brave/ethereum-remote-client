@@ -301,6 +301,29 @@ describe('MetaMaskController', function () {
     })
   })
 
+
+  describe('#isClientActivated', function () {
+    it('should stop account tracker', async function () {
+      let stopped = false
+      sinon.stub(metamaskController.accountTracker, 'stop').callsFake(() => {
+        stopped = true
+      })
+
+      metamaskController.isClientActivated = false
+      assert(stopped)
+    })
+
+    it('should start account tracker', async function () {
+      let stopped = true
+      sinon.stub(metamaskController.accountTracker, 'start').callsFake(() => {
+        stopped = false
+      })
+
+      metamaskController.isClientActivated = true
+      assert(!stopped)
+    })
+  })
+
   describe('#getApi', function () {
     it('getState', function (done) {
       let state

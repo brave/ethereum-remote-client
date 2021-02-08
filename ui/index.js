@@ -20,7 +20,7 @@ import {
   getUnconnectedAccountAlertShown,
 } from './app/ducks/metamask/metamask'
 
-log.setLevel(global.METAMASK_DEBUG ? 'debug' : 'warn')
+log.setDefaultLevel(global.METAMASK_DEBUG ? 'debug' : 'warn')
 
 export default function launchMetamaskUi (opts, cb) {
   const { backgroundConnection } = opts

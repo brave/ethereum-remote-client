@@ -2068,6 +2068,25 @@ export default class MetamaskController extends EventEmitter {
     this.detectTokensController.isOpen = open
   }
 
+  get isClientActivated () {
+    return this._isClientActivated
+  }
+
+  set isClientActivated (activated) {
+    // Make sure this is a real update
+    if (this._isClientActivated === activated) {
+      return
+    }
+    this._isClientActivated = activated
+    if (activated) {
+      log.trace('Starting account tracker because client is active')
+      this.accountTracker.start()
+    } else {
+      log.trace('Stopping account tracker because client is not active')
+      this.accountTracker.stop()
+    }
+  }
+
   /**
   * Creates RPC engine middleware for processing eth_signTypedData requests
   *

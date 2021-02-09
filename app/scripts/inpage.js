@@ -32,7 +32,7 @@ cleanContextForImports()
 
 import log from 'loglevel'
 import LocalMessageDuplexStream from 'post-message-stream'
-import { initProvider } from '@metamask/inpage-provider'
+import { initializeProvider } from '@metamask/inpage-provider'
 
 restoreContextAfterImports()
 
@@ -48,6 +48,8 @@ const metamaskStream = new LocalMessageDuplexStream({
   target: 'contentscript',
 })
 
-initProvider({
+initializeProvider({
   connectionStream: metamaskStream,
+  logger: log,
+  shouldShimWeb3: true,
 })

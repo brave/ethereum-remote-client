@@ -12,6 +12,8 @@ const path = require('path')
 const inpageContent = fs.readFileSync(path.join(__dirname, '..', '..', 'dist', 'chrome', 'inpage.js'), 'utf8')
 const inpageSuffix = '//# sourceURL=' + extension.runtime.getURL('inpage.js') + '\n'
 const inpageBundle = inpageContent + inpageSuffix
+const contentscript = 'contentscript'
+const inpage = 'inpage'
 
 // Eventually this streaming injection could be replaced with:
 // https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction
@@ -22,7 +24,7 @@ const inpageBundle = inpageContent + inpageSuffix
 
 if (shouldInjectProvider()) {
   injectScript(inpageBundle)
-  start()
+  setupStreams()
 }
 
 /**
@@ -44,15 +46,6 @@ function injectScript (content) {
 }
 
 /**
- * Sets up the stream communication and submits site metadata
- *
- */
-async function start () {
-  await setupStreams()
-  await domIsReady()
-}
-
-/**
  * Sets up two-way communication streams between the
  * browser extension and local per-page browser context.
  *
@@ -60,10 +53,10 @@ async function start () {
 async function setupStreams () {
   // the transport-specific streams for communication between inpage and background
   const pageStream = new LocalMessageDuplexStream({
-    name: 'contentscript',
-    target: 'inpage',
+    name: contentscript,
+    target: inpage,
   })
-  const extensionPort = extension.runtime.connect({ name: 'contentscript' })
+  const extensionPort = extension.runtime.connect({ name: contentscript })
   const extensionStream = new PortStream(extensionPort)
 
   // create and connect channel muxers
@@ -83,12 +76,14 @@ async function setupStreams () {
     extensionMux,
     extensionStream,
     extensionMux,
-    (err) => logStreamDisconnectWarning('MetaMask Background Multiplex', err),
+    (err) => {
+      logStreamDisconnectWarning('MetaMask Background Multiplex', err)
+      notifyInpageOfStreamFailure()
+    }
   )
 
   // forward communication across inpage-background for these channels only
   forwardTrafficBetweenMuxers('provider', pageMux, extensionMux)
-  forwardTrafficBetweenMuxers('publicConfig', pageMux, extensionMux)
 
   // connect "phishing" channel to warning system
   const phishingStream = extensionMux.createStream('phishing')
@@ -102,7 +97,11 @@ function forwardTrafficBetweenMuxers (channelName, muxA, muxB) {
     channelA,
     channelB,
     channelA,
-    (err) => logStreamDisconnectWarning(`MetaMask muxed traffic for channel "${channelName}" failed.`, err),
+    (err) => 
+     console.debug(
+       `MetaMask muxed traffic for channel "${channelName}" failed.`,
+       err
+     ),
   )
 }
 
@@ -113,11 +112,31 @@ function forwardTrafficBetweenMuxers (channelName, muxA, muxB) {
  * @param {Error} err - Stream connection error
  */
 function logStreamDisconnectWarning (remoteLabel, err) {
-  let warningMsg = `MetamaskContentscript - lost connection to ${remoteLabel}`
-  if (err) {
-    warningMsg += '\n' + err.stack
-  }
-  console.warn(warningMsg)
+  console.debug(
+    `MetaMask Contentscript: Lost connection to "${remoteLabel}".`,
+    err)
+}
+
+/**
+ * This function must ONLY be called in pump destruction/close callbacks.
+ * Notifies the inpage context that streams have failed, via window.postMessage.
+ * Relies on obj-multiplex and post-message-stream implementation details.
+ */
+function notifyInpageOfStreamFailure() {
+  window.postMessage(
+    {
+      target: inpage, // the post-message-stream "target"
+      data: {
+        // this object gets passed to obj-multiplex
+        name: 'provider', // the obj-multiplex channel name
+        data: {
+          jsonrpc: '2.0',
+          method: 'METAMASK_STREAM_FAILURE',
+        },
+      },
+    },
+    window.location.origin,
+  )
 }
 
 /**
@@ -220,16 +239,4 @@ function redirectToPhishingWarning () {
     hostname: window.location.hostname,
     href: window.location.href,
   })}`
-}
-
-/**
- * Returns a promise that resolves when the DOM is loaded (does not wait for images to load)
- */
-async function domIsReady () {
-  // already loaded
-  if (['interactive', 'complete'].includes(document.readyState)) {
-    return
-  }
-  // wait for load
-  return new Promise((resolve) => window.addEventListener('DOMContentLoaded', resolve, { once: true }))
 }

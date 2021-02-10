@@ -14,6 +14,7 @@ const inpageSuffix = '//# sourceURL=' + extension.runtime.getURL('inpage.js') + 
 const inpageBundle = inpageContent + inpageSuffix
 const contentscript = 'contentscript'
 const inpage = 'inpage'
+const provider = 'provider'
 
 // Eventually this streaming injection could be replaced with:
 // https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction
@@ -83,7 +84,7 @@ async function setupStreams () {
   )
 
   // forward communication across inpage-background for these channels only
-  forwardTrafficBetweenMuxers('provider', pageMux, extensionMux)
+  forwardTrafficBetweenMuxers(provider, pageMux, extensionMux)
 
   // connect "phishing" channel to warning system
   const phishingStream = extensionMux.createStream('phishing')
@@ -128,7 +129,7 @@ function notifyInpageOfStreamFailure() {
       target: inpage, // the post-message-stream "target"
       data: {
         // this object gets passed to obj-multiplex
-        name: 'provider', // the obj-multiplex channel name
+        name: provider, // the obj-multiplex channel name
         data: {
           jsonrpc: '2.0',
           method: 'METAMASK_STREAM_FAILURE',

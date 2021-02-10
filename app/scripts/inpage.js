@@ -50,6 +50,7 @@ const metamaskStream = new LocalMessageDuplexStream({
 
 initializeProvider({
   connectionStream: metamaskStream,
+  jsonRpcStreamName: 'provider'
   logger: log,
   shouldShimWeb3: true,
 })

@@ -13,7 +13,7 @@ import ObservableStore from 'obs-store'
 import ComposableObservableStore from './lib/ComposableObservableStore'
 import asStream from 'obs-store/lib/asStream'
 import AccountTracker from './lib/account-tracker'
-import RpcEngine from 'json-rpc-engine'
+import { JsonRpcEngine } from 'json-rpc-engine'
 import { debounce } from 'lodash'
 import createEngineStream from 'json-rpc-middleware-stream/engineStream'
 import createFilterMiddleware from 'eth-json-rpc-filters'
@@ -1582,7 +1582,7 @@ export default class MetamaskController extends EventEmitter {
    **/
   setupProviderEngine ({ origin, location, extensionId, tabId, isInternal = false }) {
     // setup json rpc engine stack
-    const engine = new RpcEngine()
+    const engine = new JsonRpcEngine()
     const provider = this.provider
     const blockTracker = this.blockTracker
 

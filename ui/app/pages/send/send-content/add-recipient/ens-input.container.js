@@ -11,7 +11,7 @@ export default connect(
   (state) => {
     const selectedAddress = getSendTo(state)
     return {
-      network: getCurrentNetwork(state),
+      network: parseInt(getCurrentNetwork(state)).toString(),
       selectedAddress,
       selectedName: getSendToNickname(state),
       contact: getAddressBookEntry(state, selectedAddress),

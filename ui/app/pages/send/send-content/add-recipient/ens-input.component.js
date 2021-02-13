@@ -7,6 +7,8 @@ import { ellipsify } from '../../send.utils'
 import { debounce } from 'lodash'
 import copyToClipboard from 'copy-to-clipboard/index'
 import ENS from 'ethjs-ens'
+import Eth from 'ethjs-query'
+import Resolution from '@unstoppabledomains/resolution'
 import networkMap from 'ethereum-ens-network-map'
 import log from 'loglevel'
 
@@ -46,6 +48,11 @@ export default class EnsInput extends Component {
     const networkHasEnsSupport = getNetworkEnsSupport(network)
     this.setState({ ensResolution: ZERO_ADDRESS })
 
+    // Resolution for Crypto Name Service from Unstoppable Domains.
+    if (getNetworkCnsSupport(network)) {
+      this.cns = Resolution.fromEthersProvider(new Eth(global.ethereumProvider))
+    }
+
     if (networkHasEnsSupport) {
       const provider = global.ethereumProvider
       this.ens = new ENS({ provider, network })
@@ -65,6 +72,7 @@ export default class EnsInput extends Component {
 
     if (prevProps.network !== network) {
       const provider = global.ethereumProvider
+      this.cns = Resolution.fromEthersProvider(new Eth(provider))
       this.ens = new ENS({ provider, network })
       this.onChange({ target: { value: input } })
     }
@@ -76,6 +84,20 @@ export default class EnsInput extends Component {
     onReset()
     updateEnsResolution('')
     updateEnsResolutionError('')
+  }
+
+  lookupCnsName = (recipient) => {
+    recipient = recipient.trim()
+
+    log.info(`Attempting to resolve Unstoppable Domains: ${recipient}`)
+    this.cns.addr(recipient, 'ETH')
+      .then((address) => {
+        this.props.updateEnsResolution(address)
+      })
+      .catch((error) => {
+        log.error(error)
+        this.props.updateEnsResolutionError(error.message)
+      })
   }
 
   lookupEnsName = (recipient) => {
@@ -116,6 +138,11 @@ export default class EnsInput extends Component {
     const networkHasEnsSupport = getNetworkEnsSupport(network)
 
     this.setState({ input }, () => onChange(input))
+
+    if (getNetworkCnsSupport(network) && this.cns.isSupportedDomain(input)) {
+      this.lookupCnsName(input)
+      return
+    }
 
     // Empty ENS state if input is empty
     // maybe scan ENS
@@ -274,4 +301,8 @@ export default class EnsInput extends Component {
 
 function getNetworkEnsSupport (network) {
   return Boolean(networkMap[network])
+}
+
+function getNetworkCnsSupport (network) {
+  return network === '1' || network === '4'
 }

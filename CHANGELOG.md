@@ -1,5 +1,12 @@
 # Changelog
 
+
+## Remote Component([0.1.87](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.87)), Browser Component: `1.0.26`(12-Feb-2021)
+
+ - [brave-browser#14070](https://github.com/brave/brave-browser/issues/14070) - Fixed wallet extension description from appearing as "MSG_appDescription"
+ - [brave-browser#14004](https://github.com/brave/brave-browser/issues/14004) - Fixed text visibility for custom network warning in dark theme
+ - [brave-browser#13777](https://github.com/brave/brave-browser/issues/13777) - Fixed Ethereum JSON RPC API calls for token list  
+
 ## Remote Component([0.1.85](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.85)), Browser Component: `1.0.25`(26-Jan-2021)
 
 

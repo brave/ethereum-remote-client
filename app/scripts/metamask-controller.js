@@ -25,7 +25,7 @@ import createTabIdMiddleware from './lib/createTabIdMiddleware'
 import createOnboardingMiddleware from './lib/createOnboardingMiddleware'
 import providerAsMiddleware from 'eth-json-rpc-middleware/providerAsMiddleware'
 import { setupMultiplex } from './lib/stream-utils.js'
-import KeyringController from '@brave/eth-keyring-controller'
+import KeyringController from 'eth-keyring-controller'
 import EnsController from './controllers/ens'
 import NetworkController from './controllers/network'
 import PreferencesController from './controllers/preferences'
@@ -66,6 +66,8 @@ import {
 import PhishingController from './controllers/phishing-controller'
 
 import backgroundMetaMetricsEvent from './lib/background-metametrics'
+
+const BraveKeyringController = require('@brave/eth-keyring-controller')
 
 export default class MetamaskController extends EventEmitter {
 
@@ -187,32 +189,6 @@ export default class MetamaskController extends EventEmitter {
       this.accountTracker._updateAccounts()
     })
 
-    const additionalKeyrings = [TrezorKeyring, LedgerBridgeKeyring]
-    this.keyringController = new KeyringController({
-      keyringTypes: additionalKeyrings,
-      initState: initState.KeyringController,
-      getNetwork: this.networkController.getNetworkState.bind(this.networkController),
-      encryptor: opts.encryptor || undefined,
-    })
-    this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))
-    this.keyringController.on('unlock', () => this.emit('unlock'))
-
-    this.permissionsController = new PermissionsController({
-      getKeyringAccounts: this.keyringController.getAccounts.bind(this.keyringController),
-      getRestrictedMethods,
-      getUnlockPromise: this.appStateController.getUnlockPromise.bind(this.appStateController),
-      notifyDomain: this.notifyConnections.bind(this),
-      notifyAllDomains: this.notifyAllConnections.bind(this),
-      preferences: this.preferencesController.store,
-      showPermissionRequest: opts.showPermissionRequest,
-    }, initState.PermissionsController, initState.PermissionsMetadata)
-
-    this.detectTokensController = new DetectTokensController({
-      preferences: this.preferencesController,
-      network: this.networkController,
-      keyringMemStore: this.keyringController.memStore,
-    })
-
     this.addressBookController = new AddressBookController(undefined, initState.AddressBookController)
 
     this.alertController = new AlertController({
@@ -220,96 +196,24 @@ export default class MetamaskController extends EventEmitter {
       preferencesStore: this.preferencesController.store,
     })
 
-    this.txController = new TransactionController({
-      initState: initState.TransactionController || initState.TransactionManager,
-      getPermittedAccounts: this.permissionsController.getAccounts.bind(this.permissionsController),
-      networkStore: this.networkController.networkStore,
-      preferencesStore: this.preferencesController.store,
-      txHistoryLimit: 40,
-      getNetwork: this.networkController.getNetworkState.bind(this),
-      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
-      provider: this.provider,
-      blockTracker: this.blockTracker,
-    })
-    this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
+    const additionalKeyrings = [TrezorKeyring, LedgerBridgeKeyring]
+    const initKeyringState = initState.KeyringController
+    this.keyringOpts = {
+      keyringTypes: additionalKeyrings,
+      initState: initKeyringState,
+      getNetwork: this.networkController.getNetworkState.bind(this.networkController),
+      encryptor: opts.encryptor || undefined,
+    }
 
-    this.txController.on(`tx:status-update`, async (txId, status) => {
-      if (status === 'confirmed' || status === 'failed') {
-        const txMeta = this.txController.txStateManager.getTx(txId)
-        this.platform.showTransactionNotification(txMeta)
-
-        const { txReceipt } = txMeta
-        if (txReceipt && txReceipt.status === '0x0') {
-          this.sendBackgroundMetaMetrics({
-            action: 'Transactions',
-            name: 'On Chain Failure',
-            customVariables: { errorMessage: txMeta.simulationFails?.reason },
-          })
-        }
-      }
-    })
-
-    this.networkController.on('networkDidChange', () => {
-      this.setCurrentCurrency(
-        this.currencyRateController.state.currentCurrency,
-        (error) => {
-          if (error) {
-            throw error
-          }
-        },
-      )
-    })
-
-    this.networkController.lookupNetwork()
-    this.messageManager = new MessageManager()
-    this.personalMessageManager = new PersonalMessageManager()
-    this.decryptMessageManager = new DecryptMessageManager()
-    this.encryptionPublicKeyManager = new EncryptionPublicKeyManager()
-    this.typedMessageManager = new TypedMessageManager({ networkController: this.networkController })
-
-
-    this.store.updateStructure({
-      AppStateController: this.appStateController.store,
-      TransactionController: this.txController.store,
-      KeyringController: this.keyringController.store,
-      PreferencesController: this.preferencesController.store,
-      AddressBookController: this.addressBookController,
-      CurrencyController: this.currencyRateController,
-      NetworkController: this.networkController.store,
-      CachedBalancesController: this.cachedBalancesController.store,
-      AlertController: this.alertController.store,
-      OnboardingController: this.onboardingController.store,
-      IncomingTransactionsController: this.incomingTransactionsController.store,
-      PermissionsController: this.permissionsController.permissions,
-      PermissionsMetadata: this.permissionsController.store,
-    })
-
-    this.memStore = new ComposableObservableStore(null, {
-      AppStateController: this.appStateController.store,
-      NetworkController: this.networkController.store,
-      AccountTracker: this.accountTracker.store,
-      TxController: this.txController.memStore,
-      CachedBalancesController: this.cachedBalancesController.store,
-      TokenRatesController: this.tokenRatesController.store,
-      MessageManager: this.messageManager.memStore,
-      PersonalMessageManager: this.personalMessageManager.memStore,
-      DecryptMessageManager: this.decryptMessageManager.memStore,
-      EncryptionPublicKeyManager: this.encryptionPublicKeyManager.memStore,
-      TypesMessageManager: this.typedMessageManager.memStore,
-      KeyringController: this.keyringController.memStore,
-      PreferencesController: this.preferencesController.store,
-      AddressBookController: this.addressBookController,
-      CurrencyController: this.currencyRateController,
-      AlertController: this.alertController.store,
-      OnboardingController: this.onboardingController.store,
-      IncomingTransactionsController: this.incomingTransactionsController.store,
-      PermissionsController: this.permissionsController.permissions,
-      PermissionsMetadata: this.permissionsController.store,
-      // ENS Controller
-      EnsController: this.ensController.store,
-    })
-    this.memStore.subscribe(this.sendUpdate.bind(this))
-
+    if (initKeyringState && initKeyringState.argonParams) {
+      log.info('MetaMaskController - initializing legacy Brave keyring')
+      this.keyringController =
+        new BraveKeyringController(this.keyringOpts)
+    } else {
+      // Default to metamask keyring type until restore vault is called
+      this.keyringController = new KeyringController(this.keyringOpts)
+    }
+    this._onKeyringControllerInit()
     const password = process.env.CONF?.password
     if (
       password && !this.isUnlocked() &&
@@ -318,7 +222,7 @@ export default class MetamaskController extends EventEmitter {
       this.submitPassword(password)
     }
 
-    if (chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
+    if (typeof chrome !== 'undefined' && chrome.braveWallet.hasOwnProperty('ready')) { // eslint-disable-line no-undef
       chrome.braveWallet.ready() // eslint-disable-line no-undef
     }
   }
@@ -605,6 +509,7 @@ export default class MetamaskController extends EventEmitter {
     try {
       let accounts, lastBalance
 
+      await this._maybeSwitchKeyringController(seed)
       const keyringController = this.keyringController
 
       // clear known identities
@@ -676,7 +581,7 @@ export default class MetamaskController extends EventEmitter {
     })
   }
 
-  getCurrentNetwork = () => {
+  getCurrentNetwork () {
     return this.networkController.store.getState().network
   }
 
@@ -1782,6 +1687,157 @@ export default class MetamaskController extends EventEmitter {
   //=============================================================================
 
   /**
+   * Switches the keyring controller to Brave's legacy one if using
+   * a 24-word seed phrase.
+   * @param {string} seedWords
+   */
+  async _maybeSwitchKeyringController (seedWords) {
+    if (!seedWords) {
+      log.info('MetaMaskController - missing seed words')
+      return
+    }
+    let switched = false
+    const hasBraveKeyring = this.hasBraveKeyring()
+
+    if (seedWords.split(' ').length === 24) {
+      // creating a legacy brave account
+      if (!hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new BraveKeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Brave keyring')
+        switched = true
+      }
+    } else {
+      // creating a metamask-style account
+      if (hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new KeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Metamask keyring')
+        switched = true
+      }
+    }
+    if (switched) {
+      await this._onKeyringControllerInit()
+    }
+    return switched
+  }
+
+  async _onKeyringControllerInit () {
+    const opts = this.opts
+    const initState = opts.initState || {}
+
+    this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))
+    this.keyringController.on('unlock', () => this.emit('unlock'))
+
+    this.permissionsController = new PermissionsController({
+      getKeyringAccounts: this.keyringController.getAccounts.bind(this.keyringController),
+      getRestrictedMethods,
+      getUnlockPromise: this.appStateController.getUnlockPromise.bind(this.appStateController),
+      notifyDomain: this.notifyConnections.bind(this),
+      notifyAllDomains: this.notifyAllConnections.bind(this),
+      preferences: this.preferencesController.store,
+      showPermissionRequest: opts.showPermissionRequest,
+    }, initState.PermissionsController, initState.PermissionsMetadata)
+
+    this.detectTokensController = new DetectTokensController({
+      preferences: this.preferencesController,
+      network: this.networkController,
+      keyringMemStore: this.keyringController.memStore,
+    })
+
+    this.txController = new TransactionController({
+      initState: initState.TransactionController || initState.TransactionManager,
+      getPermittedAccounts: this.permissionsController.getAccounts.bind(this.permissionsController),
+      networkStore: this.networkController.networkStore,
+      preferencesStore: this.preferencesController.store,
+      txHistoryLimit: 40,
+      getNetwork: this.networkController.getNetworkState.bind(this),
+      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
+      provider: this.provider,
+      blockTracker: this.blockTracker,
+    })
+    this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
+
+    this.txController.on('tx:status-updatei', async (txId, status) => {
+      if (status === 'confirmed' || status === 'failed') {
+        const txMeta = this.txController.txStateManager.getTx(txId)
+        this.platform.showTransactionNotification(txMeta)
+
+        const { txReceipt } = txMeta
+        if (txReceipt && txReceipt.status === '0x0') {
+          this.sendBackgroundMetaMetrics({
+            action: 'Transactions',
+            name: 'On Chain Failure',
+            customVariables: { errorMessage: txMeta.simulationFails?.reason },
+          })
+        }
+      }
+    })
+
+    this.networkController.on('networkDidChange', () => {
+      this.setCurrentCurrency(
+        this.currencyRateController.state.currentCurrency,
+        (error) => {
+          if (error) {
+            throw error
+          }
+        },
+      )
+    })
+
+    this.networkController.lookupNetwork()
+    this.messageManager = new MessageManager()
+    this.personalMessageManager = new PersonalMessageManager()
+    this.decryptMessageManager = new DecryptMessageManager()
+    this.encryptionPublicKeyManager = new EncryptionPublicKeyManager()
+    this.typedMessageManager = new TypedMessageManager({ networkController: this.networkController })
+
+    this.store.updateStructure({
+      AppStateController: this.appStateController.store,
+      TransactionController: this.txController.store,
+      KeyringController: this.keyringController.store,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      NetworkController: this.networkController.store,
+      CachedBalancesController: this.cachedBalancesController.store,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+    })
+
+    this.memStore = new ComposableObservableStore(null, {
+      AppStateController: this.appStateController.store,
+      NetworkController: this.networkController.store,
+      AccountTracker: this.accountTracker.store,
+      TxController: this.txController.memStore,
+      CachedBalancesController: this.cachedBalancesController.store,
+      TokenRatesController: this.tokenRatesController.store,
+      MessageManager: this.messageManager.memStore,
+      PersonalMessageManager: this.personalMessageManager.memStore,
+      DecryptMessageManager: this.decryptMessageManager.memStore,
+      EncryptionPublicKeyManager: this.encryptionPublicKeyManager.memStore,
+      TypesMessageManager: this.typedMessageManager.memStore,
+      KeyringController: this.keyringController.memStore,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+      // ENS Controller
+      EnsController: this.ensController.store,
+    })
+
+    this.memStore.subscribe(this.sendUpdate.bind(this))
+    this.emit('controllerInitialized')
+  }
+
+  /**
    * Returns the nonce that will be associated with a transaction once approved
    * @param {string} address - The hex string address for the transaction
    * @returns {Promise<number>}
@@ -2040,6 +2096,19 @@ export default class MetamaskController extends EventEmitter {
     } catch (err) {
       cb(err)
       return
+    }
+  }
+
+  /**
+   * A method for checking if the current keyringController is the Brave
+   * legacy kind (24 words)
+   */
+  hasBraveKeyring () {
+    try {
+      return !!this.keyringController.store.getState().argonParams
+    } catch (err) {
+      log.error(err)
+      return false
     }
   }
 

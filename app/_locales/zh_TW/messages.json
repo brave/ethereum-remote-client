@@ -283,7 +283,7 @@
     "message": "基本"
   },
   "blockExplorerUrl": {
-    "message": "封鎖 Explorer"
+    "message": "區塊鏈瀏覽器連結"
   },
   "blockExplorerView": {
     "message": "在 $1 觀看帳號 ",
@@ -332,7 +332,7 @@
     "message": "開啟"
   },
   "optionalBlockExplorerUrl": {
-    "message": "封鎖 Explorer URL（非必要）"
+    "message": "區塊鏈瀏覽器連結（非必要）"
   },
   "cancel": {
     "message": "取消"

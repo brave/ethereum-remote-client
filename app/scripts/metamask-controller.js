@@ -40,6 +40,7 @@ import EncryptionPublicKeyManager from './lib/encryption-public-key-manager'
 import PersonalMessageManager from './lib/personal-message-manager'
 import TypedMessageManager from './lib/typed-message-manager'
 import TransactionController from './controllers/transactions'
+import SwapsController from './controllers/swaps'
 import TokenRatesController from './controllers/token-rates'
 import DetectTokensController from './controllers/detect-tokens'
 import { PermissionsController } from './controllers/permissions'
@@ -330,6 +331,7 @@ export default class MetamaskController extends EventEmitter {
     const permissionsController = this.permissionsController
     const preferencesController = this.preferencesController
     const txController = this.txController
+    const swapsController = this.swapsController
 
     return {
       // etc
@@ -416,6 +418,12 @@ export default class MetamaskController extends EventEmitter {
       estimateGas: nodeify(this.estimateGas, this),
       getPendingNonce: nodeify(this.getPendingNonce, this),
       getNextNonce: nodeify(this.getNextNonce, this),
+
+      // swapsController
+      wrapETH: nodeify(swapsController.wrapETH, swapsController),
+      quote: nodeify(swapsController.quote, swapsController),
+      approveTokenAllowance: nodeify(swapsController.approveTokenAllowance, swapsController),
+      fillOrder: nodeify(swapsController.fillOrder, swapsController),
 
       // messageManager
       signMessage: nodeify(this.signMessage, this),
@@ -1758,7 +1766,7 @@ export default class MetamaskController extends EventEmitter {
     })
     this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
 
-    this.txController.on('tx:status-updatei', async (txId, status) => {
+    this.txController.on('tx:status-update', async (txId, status) => {
       if (status === 'confirmed' || status === 'failed') {
         const txMeta = this.txController.txStateManager.getTx(txId)
         this.platform.showTransactionNotification(txMeta)
@@ -1773,6 +1781,16 @@ export default class MetamaskController extends EventEmitter {
         }
       }
     })
+
+    this.swapsController = new SwapsController({
+      provider: this.provider,
+      buyToken: opts.buyToken,
+      sellToken: opts.sellToken,
+      from: opts.taker,
+      slippagePercentage: opts.slippagePercentage,
+      sellAmount: opts.sellAmount,
+      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
+    }) 
 
     this.networkController.on('networkDidChange', () => {
       this.setCurrentCurrency(
@@ -1795,6 +1813,8 @@ export default class MetamaskController extends EventEmitter {
     this.store.updateStructure({
       AppStateController: this.appStateController.store,
       TransactionController: this.txController.store,
+      // TODO: handle this store properly
+      SwapsController: this.swapsController.store,
       KeyringController: this.keyringController.store,
       PreferencesController: this.preferencesController.store,
       AddressBookController: this.addressBookController,
@@ -1813,6 +1833,8 @@ export default class MetamaskController extends EventEmitter {
       NetworkController: this.networkController.store,
       AccountTracker: this.accountTracker.store,
       TxController: this.txController.memStore,
+      // TODO: handle this store properly
+      SwapsController: this.swapsController.store,
       CachedBalancesController: this.cachedBalancesController.store,
       TokenRatesController: this.tokenRatesController.store,
       MessageManager: this.messageManager.memStore,

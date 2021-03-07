@@ -7,7 +7,6 @@ import EthTx from 'ethereumjs-tx'
 import nock from 'nock'
 import { createTestProviderTools, getTestAccounts } from '../../../stub/provider'
 import { ethers } from 'ethers'
-import {providers, Contract, utils} from 'ethers'
 import abi from 'human-standard-token-abi';
 const buyToken = 'BAT'
 const sellToken = 'ETH'
@@ -20,7 +19,7 @@ describe("Swaps Controller", function() {
     beforeEach(function () {
 
         const url = "http://localhost:7545";
-        const provider = new providers.JsonRpcProvider(url);
+        const provider = new ethers.providers.JsonRpcProvider(url);
 
         
         from = (getTestAccounts()[0]).address

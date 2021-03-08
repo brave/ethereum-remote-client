@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.88](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.88)), Browser Component: `1.0.27`(08-Mar-2021)
+
+ - [brave-browser#14349](https://github.com/brave/brave-browser/issues/14349) - Added support for "Crypto Name Service" (CNS) from Unstoppable Domains
+ - [brave-browser#13245](https://github.com/brave/brave-browser/issues/13245) - Changed key derivation method to use 12-word BIP39 format similar to MetaMask
 
 ## Remote Component([0.1.87](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.87)), Browser Component: `1.0.26`(12-Feb-2021)
 

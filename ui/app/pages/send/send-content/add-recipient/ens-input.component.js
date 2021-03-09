@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { isValidDomainName, isValidAddress, isValidAddressHead } from '../../../../helpers/utils/util'
-import { ellipsify } from '../../send.utils'
+import { ellipsify } from '../../swap.utils'
 
 import { debounce } from 'lodash'
 import copyToClipboard from 'copy-to-clipboard/index'

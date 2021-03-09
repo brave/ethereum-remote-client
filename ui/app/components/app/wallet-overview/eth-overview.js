@@ -119,7 +119,10 @@ const EthOverview = ({ className }) => {
             icon={<Interaction color="#037DD6" size={20} />}
             onClick={() => {
               swapEvent()
-              history.push(SWAP_ROUTE)
+              // history.push(SWAP_ROUTE)
+              //  TODO: Figure out why this isn working with the SWAP_ROUTE constant
+              history.push("/swap")
+
             }}
             data-testid="eth-overview-swap"
           >

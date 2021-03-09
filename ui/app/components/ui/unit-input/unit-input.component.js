@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { removeLeadingZeroes } from '../../../pages/send/send.utils'
+import { removeLeadingZeroes } from '../../../pages/send/swap.utils'
 
 /**
  * Component that attaches a suffix or unit of measurement trailing user input, ex. 'ETH'. Also

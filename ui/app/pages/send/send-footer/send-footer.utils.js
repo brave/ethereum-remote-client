@@ -1,6 +1,6 @@
 import ethAbi from 'ethereumjs-abi'
 import ethUtil from 'ethereumjs-util'
-import { TOKEN_TRANSFER_FUNCTION_SIGNATURE } from '../send.constants'
+import { TOKEN_TRANSFER_FUNCTION_SIGNATURE } from '../swap.constants'
 
 export function addHexPrefixToObjectValues (obj) {
   return Object.keys(obj).reduce((newObj, key) => {

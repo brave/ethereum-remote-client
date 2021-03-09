@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useCallback } from 'react'
 import { showModal } from '../store/actions'
-import { isBalanceSufficient } from '../pages/send/send.utils'
+import { isBalanceSufficient } from '../pages/send/swap.utils'
 import { getHexGasTotal, increaseLastGasPrice } from '../helpers/utils/confirm-tx.util'
 import { getConversionRate, getSelectedAccount } from '../selectors'
 

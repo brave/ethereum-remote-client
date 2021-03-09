@@ -22,7 +22,7 @@ import {
 import {
   isBalanceSufficient,
   calcGasTotal,
-} from '../../send.utils.js'
+} from '../../swap.utils.js'
 import { calcMaxAmount } from '../send-amount-row/amount-max-button/amount-max-button.utils'
 import {
   showGasButtonGroup,

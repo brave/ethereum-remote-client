@@ -5,11 +5,15 @@ import DepositEtherModal from './deposit-ether-modal.component'
 function mapStateToProps (state) {
   return {
     network: state.metamask.network,
+    address: state.metamask.selectedAddress,
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
+    toWyre: (address) => {
+      dispatch(buyEth({ service: 'wyre', address }))
+    },
     hideModal: () => {
       dispatch(hideModal())
     },

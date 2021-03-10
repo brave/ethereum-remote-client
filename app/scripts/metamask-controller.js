@@ -2201,25 +2201,597 @@
    /**
    * Creates RPC engine middleware for processing eth_signTypedData requests
    *
-   * @param {Object} req - request object
-   * @param {Object} res - response object
-   * @param {Function} - next
-   * @param {Function} - end
+   * @param {string} origin - The connection's origin string.
+   * @param {string} id - The connection's id, as returned from addConnection.
    */
- 
-   /**
-    * Adds a domain to the PhishingController safelist
-    * @param {string} hostname - the domain to safelist
-    */
-   safelistPhishingDomain (hostname) {
-     return this.phishingController.bypass(hostname)
-   }
- 
-   /**
-    * Locks MetaMask
-    */
-   setLocked () {
-     return this.keyringController.setLocked()
-   }
- }
- 
+  removeConnection (origin, id) {
+
+    const connections = this.connections[origin]
+    if (!connections) {
+      return
+    }
+
+    delete connections[id]
+
+    if (Object.keys(connections).length === 0) {
+      delete this.connections[origin]
+    }
+  }
+
+  /**
+   * Causes the RPC engines associated with the connections to the given origin
+   * to emit a notification event with the given payload.
+   * Does nothing if the extension is locked or the origin is unknown.
+   *
+   * @param {string} origin - The connection's origin string.
+   * @param {any} payload - The event payload.
+   */
+  notifyConnections (origin, payload) {
+
+    const connections = this.connections[origin]
+    if (!this.isUnlocked() || !connections) {
+      return
+    }
+
+    Object.values(connections).forEach((conn) => {
+      conn.engine && conn.engine.emit('notification', payload)
+    })
+  }
+
+  /**
+   * Causes the RPC engines associated with all connections to emit a
+   * notification event with the given payload.
+   * Does nothing if the extension is locked.
+   *
+   * @param {any} payload - The event payload.
+   */
+  notifyAllConnections (payload) {
+
+    if (!this.isUnlocked()) {
+      return
+    }
+
+    Object.values(this.connections).forEach((origin) => {
+      Object.values(origin).forEach((conn) => {
+        conn.engine && conn.engine.emit('notification', payload)
+      })
+    })
+  }
+
+  // handlers
+
+  /**
+   * Handle a KeyringController update
+   * @param {Object} state - the KC state
+   * @returns {Promise<void>}
+   * @private
+   */
+  async _onKeyringControllerUpdate (state) {
+    const { keyrings } = state
+    const addresses = keyrings.reduce((acc, { accounts }) => acc.concat(accounts), [])
+
+    if (!addresses.length) {
+      return
+    }
+
+    // Ensure preferences + identities controller know about all addresses
+    this.preferencesController.syncAddresses(addresses)
+    this.accountTracker.syncWithAddresses(addresses)
+  }
+
+  // misc
+
+  /**
+   * A method for emitting the full MetaMask state to all registered listeners.
+   * @private
+   */
+  privateSendUpdate () {
+    this.emit('update', this.getState())
+  }
+
+  /**
+   * @returns {boolean} Whether the extension is unlocked.
+   */
+  isUnlocked () {
+    return this.keyringController.memStore.getState().isUnlocked
+  }
+
+  //=============================================================================
+  // MISCELLANEOUS
+  //=============================================================================
+
+  /**
+   * Switches the keyring controller to Brave's legacy one if using
+   * a 24-word seed phrase.
+   * @param {string} seedWords
+   */
+  async _maybeSwitchKeyringController (seedWords) {
+    if (!seedWords) {
+      log.info('MetaMaskController - missing seed words')
+      return
+    }
+    let switched = false
+    const hasBraveKeyring = this.hasBraveKeyring()
+
+    if (seedWords.split(' ').length === 24) {
+      // creating a legacy brave account
+      if (!hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new BraveKeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Brave keyring')
+        switched = true
+      }
+    } else {
+      // creating a metamask-style account
+      if (hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new KeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Metamask keyring')
+        switched = true
+      }
+    }
+    if (switched) {
+      await this._onKeyringControllerInit()
+    }
+    return switched
+  }
+
+  async _onKeyringControllerInit () {
+    const opts = this.opts
+    const initState = opts.initState || {}
+
+    this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))
+    this.keyringController.on('unlock', () => this.emit('unlock'))
+
+    this.permissionsController = new PermissionsController({
+      getKeyringAccounts: this.keyringController.getAccounts.bind(this.keyringController),
+      getRestrictedMethods,
+      getUnlockPromise: this.appStateController.getUnlockPromise.bind(this.appStateController),
+      notifyDomain: this.notifyConnections.bind(this),
+      notifyAllDomains: this.notifyAllConnections.bind(this),
+      preferences: this.preferencesController.store,
+      showPermissionRequest: opts.showPermissionRequest,
+    }, initState.PermissionsController, initState.PermissionsMetadata)
+
+    this.detectTokensController = new DetectTokensController({
+      preferences: this.preferencesController,
+      network: this.networkController,
+      keyringMemStore: this.keyringController.memStore,
+    })
+
+    this.txController = new TransactionController({
+      initState: initState.TransactionController || initState.TransactionManager,
+      getPermittedAccounts: this.permissionsController.getAccounts.bind(this.permissionsController),
+      networkStore: this.networkController.networkStore,
+      preferencesStore: this.preferencesController.store,
+      txHistoryLimit: 40,
+      getNetwork: this.networkController.getNetworkState.bind(this),
+      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
+      provider: this.provider,
+      blockTracker: this.blockTracker,
+    })
+    this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
+
+    this.txController.on('tx:status-updatei', async (txId, status) => {
+      if (status === 'confirmed' || status === 'failed') {
+        const txMeta = this.txController.txStateManager.getTx(txId)
+        this.platform.showTransactionNotification(txMeta)
+
+        const { txReceipt } = txMeta
+        if (txReceipt && txReceipt.status === '0x0') {
+          this.sendBackgroundMetaMetrics({
+            action: 'Transactions',
+            name: 'On Chain Failure',
+            customVariables: { errorMessage: txMeta.simulationFails?.reason },
+          })
+        }
+      }
+    })
+
+    this.networkController.on('networkDidChange', () => {
+      this.setCurrentCurrency(
+        this.currencyRateController.state.currentCurrency,
+        (error) => {
+          if (error) {
+            throw error
+          }
+        },
+      )
+    })
+
+    this.networkController.lookupNetwork()
+    this.messageManager = new MessageManager()
+    this.personalMessageManager = new PersonalMessageManager()
+    this.decryptMessageManager = new DecryptMessageManager()
+    this.encryptionPublicKeyManager = new EncryptionPublicKeyManager()
+    this.typedMessageManager = new TypedMessageManager({ networkController: this.networkController })
+
+    this.store.updateStructure({
+      AppStateController: this.appStateController.store,
+      TransactionController: this.txController.store,
+      KeyringController: this.keyringController.store,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      NetworkController: this.networkController.store,
+      CachedBalancesController: this.cachedBalancesController.store,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+    })
+
+    this.memStore = new ComposableObservableStore(null, {
+      AppStateController: this.appStateController.store,
+      NetworkController: this.networkController.store,
+      AccountTracker: this.accountTracker.store,
+      TxController: this.txController.memStore,
+      CachedBalancesController: this.cachedBalancesController.store,
+      TokenRatesController: this.tokenRatesController.store,
+      MessageManager: this.messageManager.memStore,
+      PersonalMessageManager: this.personalMessageManager.memStore,
+      DecryptMessageManager: this.decryptMessageManager.memStore,
+      EncryptionPublicKeyManager: this.encryptionPublicKeyManager.memStore,
+      TypesMessageManager: this.typedMessageManager.memStore,
+      KeyringController: this.keyringController.memStore,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+      // ENS Controller
+      EnsController: this.ensController.store,
+    })
+
+    this.memStore.subscribe(this.sendUpdate.bind(this))
+    this.emit('controllerInitialized')
+  }
+
+  /**
+   * Returns the nonce that will be associated with a transaction once approved
+   * @param {string} address - The hex string address for the transaction
+   * @returns {Promise<number>}
+   */
+  async getPendingNonce (address) {
+    const { nonceDetails, releaseLock } = await this.txController.nonceTracker.getNonceLock(address)
+    const pendingNonce = nonceDetails.params.highestSuggested
+
+    releaseLock()
+    return pendingNonce
+  }
+
+  /**
+   * Returns the next nonce according to the nonce-tracker
+   * @param {string} address - The hex string address for the transaction
+   * @returns {Promise<number>}
+   */
+  async getNextNonce (address) {
+    let nonceLock
+    try {
+      nonceLock = await this.txController.nonceTracker.getNonceLock(address)
+    } finally {
+      nonceLock.releaseLock()
+    }
+    return nonceLock.nextNonce
+  }
+
+  async sendBackgroundMetaMetrics ({ action, name, customVariables } = {}) {
+
+    if (!action || !name) {
+      throw new Error('Must provide action and name.')
+    }
+
+    const metamaskState = await this.getState()
+    const version = this.platform.getVersion()
+    backgroundMetaMetricsEvent(
+      metamaskState,
+      version,
+      {
+        customVariables,
+        eventOpts: {
+          action,
+          name,
+        },
+      },
+    )
+  }
+
+  //=============================================================================
+  // CONFIG
+  //=============================================================================
+
+  // Log blocks
+
+  /**
+   * A method for setting the user's preferred display currency.
+   * @param {string} currencyCode - The code of the preferred currency.
+   * @param {Function} cb - A callback function returning currency info.
+   */
+  setCurrentCurrency (currencyCode, cb) {
+    const { ticker } = this.networkController.getProviderConfig()
+    try {
+      const currencyState = {
+        nativeCurrency: ticker,
+        currentCurrency: currencyCode,
+      }
+      this.currencyRateController.update(currencyState)
+      this.currencyRateController.configure(currencyState)
+      cb(null, this.currencyRateController.state)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * A method for forwarding the user to the easiest way to obtain ether,
+   * or the network "gas" currency, for the current selected network.
+   *
+   * @param {string} address - The address to fund.
+   * @param {string} amount - The amount of ether desired, as a base 10 string.
+   */
+  buyEth (address, amount) {
+    if (!amount) {
+      amount = '5'
+    }
+    const network = this.networkController.getNetworkState()
+    const url = getBuyEthUrl({ network, address, amount })
+    if (url) {
+      this.platform.openTab({ url })
+    }
+  }
+
+  /**
+   * A method for selecting a custom URL for an ethereum RPC provider and updating it
+   * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
+   * @param {string} chainId - The chainId of the selected network.
+   * @param {string} ticker - The ticker symbol of the selected network.
+   * @param {string} nickname - Optional nickname of the selected network.
+   * @returns {Promise<String>} - The RPC Target URL confirmed.
+   */
+  async updateAndSetCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname, rpcPrefs) {
+    await this.preferencesController.updateRpc({ rpcUrl, chainId, ticker, nickname, rpcPrefs })
+    this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+    return rpcUrl
+  }
+
+
+  /**
+   * A method for selecting a custom URL for an ethereum RPC provider.
+   * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
+   * @param {string} chainId - The chainId of the selected network.
+   * @param {string} ticker - The ticker symbol of the selected network.
+   * @param {string} nickname - Optional nickname of the selected network.
+   * @returns {Promise<String>} - The RPC Target URL confirmed.
+   */
+  async setCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
+    const frequentRpcListDetail = this.preferencesController.getFrequentRpcListDetail()
+    const rpcSettings = frequentRpcListDetail.find((rpc) => rpcUrl === rpc.rpcUrl)
+
+    if (rpcSettings) {
+      this.networkController.setRpcTarget(rpcSettings.rpcUrl, rpcSettings.chainId, rpcSettings.ticker, rpcSettings.nickname, rpcPrefs)
+    } else {
+      this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+      await this.preferencesController.addToFrequentRpcList(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+    }
+    return rpcUrl
+  }
+
+  /**
+   * A method for deleting a selected custom URL.
+   * @param {string} rpcUrl - A RPC URL to delete.
+   */
+  async delCustomRpc (rpcUrl) {
+    await this.preferencesController.removeFromFrequentRpcList(rpcUrl)
+  }
+
+  /**
+   * Sets whether or not to use the blockie identicon format.
+   * @param {boolean} val - True for bockie, false for jazzicon.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setUseBlockie (val, cb) {
+    try {
+      this.preferencesController.setUseBlockie(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not to use the nonce field.
+   * @param {boolean} val - True for nonce field, false for not nonce field.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setUseNonceField (val, cb) {
+    try {
+      this.preferencesController.setUseNonceField(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not to use phishing detection.
+   * @param {boolean} val
+   * @param {Function} cb
+   */
+  setUsePhishDetect (val, cb) {
+    try {
+      this.preferencesController.setUsePhishDetect(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets the IPFS gateway to use for ENS content resolution.
+   * @param {string} val - the host of the gateway to set
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setIpfsGateway (val, cb) {
+    try {
+      this.preferencesController.setIpfsGateway(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not the user will have usage data tracked with MetaMetrics
+   * @param {boolean} bool - True for users that wish to opt-in, false for users that wish to remain out.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setParticipateInMetaMetrics (bool, cb) {
+    try {
+      const metaMetricsId = this.preferencesController.setParticipateInMetaMetrics(bool)
+      cb(null, metaMetricsId)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  setMetaMetricsSendCount (val, cb) {
+    try {
+      this.preferencesController.setMetaMetricsSendCount(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets the type of first time flow the user wishes to follow: create or import
+   * @param {string} type - Indicates the type of first time flow the user wishes to follow
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setFirstTimeFlowType (type, cb) {
+    try {
+      this.preferencesController.setFirstTimeFlowType(type)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+
+  /**
+   * A method for setting a user's current locale, affecting the language rendered.
+   * @param {string} key - Locale identifier.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setCurrentLocale (key, cb) {
+    try {
+      const direction = this.preferencesController.setCurrentLocale(key)
+      cb(null, direction)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * A method for checking if the current keyringController is the Brave
+   * legacy kind (24 words)
+   */
+  hasBraveKeyring () {
+    try {
+      return !!this.keyringController.store.getState().argonParams
+    } catch (err) {
+      log.error(err)
+      return false
+    }
+  }
+
+  /**
+   * A method for initializing storage the first time.
+   * @param {Object} initState - The default state to initialize with.
+   * @private
+   */
+  recordFirstTimeInfo (initState) {
+    if (!('firstTimeInfo' in initState)) {
+      initState.firstTimeInfo = {
+        version,
+        date: Date.now(),
+      }
+    }
+  }
+
+  // TODO: Replace isClientOpen methods with `controllerConnectionChanged` events.
+  /**
+   * A method for recording whether the MetaMask user interface is open or not.
+   * @private
+   * @param {boolean} open
+   */
+  set isClientOpen (open) {
+    this._isClientOpen = open
+    this.detectTokensController.isOpen = open
+  }
+
+  get isClientActivated () {
+    return this._isClientActivated
+  }
+
+  set isClientActivated (activated) {
+    // Make sure this is a real update
+    if (this._isClientActivated === activated) {
+      return
+    }
+    this._isClientActivated = activated
+    if (activated) {
+      log.trace('Starting account tracker because client is active')
+      this.accountTracker.start()
+    } else {
+      log.trace('Stopping account tracker because client is not active')
+      this.accountTracker.stop()
+    }
+  }
+
+  /**
+  * Creates RPC engine middleware for processing eth_signTypedData requests
+  *
+  * @param {Object} req - request object
+  * @param {Object} res - response object
+  * @param {Function} - next
+  * @param {Function} - end
+  */
+
+  /**
+   * Adds a domain to the PhishingController safelist
+   * @param {string} hostname - the domain to safelist
+   */
+  safelistPhishingDomain (hostname) {
+    return this.phishingController.bypass(hostname)
+  }
+
+  /**
+   * Locks MetaMask
+   */
+  setLocked () {
+    return this.keyringController.setLocked()
+  }
+}

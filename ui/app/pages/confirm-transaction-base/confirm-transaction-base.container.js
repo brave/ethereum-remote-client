@@ -23,9 +23,9 @@ import {
   GAS_LIMIT_TOO_LOW_ERROR_KEY,
 } from '../../helpers/constants/error-keys'
 import { getHexGasTotal } from '../../helpers/utils/confirm-tx.util'
-import { isBalanceSufficient, calcGasTotal } from '../send/swap.utils'
+import { isBalanceSufficient, calcGasTotal } from '../send/send.utils'
 import { conversionGreaterThan } from '../../helpers/utils/conversion-util'
-import { MIN_GAS_LIMIT_DEC } from '../send/swap.constants'
+import { MIN_GAS_LIMIT_DEC } from '../send/send.constants'
 import { checksumAddress, shortenAddress, valuesFor } from '../../helpers/utils/util'
 import {
   getAdvancedInlineGasShown,

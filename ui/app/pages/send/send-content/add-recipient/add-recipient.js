@@ -3,7 +3,7 @@ import {
   INVALID_RECIPIENT_ADDRESS_ERROR,
   KNOWN_RECIPIENT_ADDRESS_ERROR,
   INVALID_RECIPIENT_ADDRESS_NOT_ETH_NETWORK_ERROR,
-} from '../../swap.constants'
+} from '../../send.constants'
 
 import { isValidAddress, isEthNetwork, checkExistingAddresses } from '../../../../helpers/utils/util'
 import ethUtil from 'ethereumjs-util'

@@ -17,7 +17,7 @@ import {
 } from '../helpers/utils/formatters'
 import {
   calcGasTotal,
-} from '../pages/send/swap.utils'
+} from '../pages/send/send.utils'
 import { addHexPrefix } from 'ethereumjs-util'
 
 import { GAS_ESTIMATE_TYPES } from '../helpers/constants/common'

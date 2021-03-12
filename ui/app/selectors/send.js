@@ -6,7 +6,7 @@ import {
   getTargetAccount,
   getAveragePriceEstimateInHexWEI,
 } from '.'
-import { calcGasTotal } from '../pages/send/swap.utils'
+import { calcGasTotal } from '../pages/send/send.utils'
 
 export function getBlockGasLimit (state) {
   return state.metamask.currentBlockGasLimit

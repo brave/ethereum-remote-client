@@ -10,7 +10,7 @@ import {
   getSendMaxModeState,
   sendAmountIsInError,
 } from '../../../../selectors'
-import { getAmountErrorObject, getGasFeeErrorObject } from '../../swap.utils'
+import { getAmountErrorObject, getGasFeeErrorObject } from '../../send.utils'
 import {
   setMaxModeTo,
   updateSendAmount,

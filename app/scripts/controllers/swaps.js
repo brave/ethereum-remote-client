@@ -16,17 +16,6 @@ const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 
 const { abi: WETH_ABI } = require('./swap-utils/IWETH.json')
 
-
-// Takes a buy and sell token , returns the quote , then executes the transaction.
-// TODO: Refresh quotes
-// TODO: Observable Store
-
-
-// this.provider = opts.provider
-// this.getPermittedAccounts = opts.getPermittedAccounts
-// this.blockTracker = opts.blockTracker
-// this.signEthTx = opts.signTransaction
-
 export default class SwapsController {
   constructor (opts) {
     // this.opts = opts

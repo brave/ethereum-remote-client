@@ -669,6 +669,9 @@
   "from": {
     "message": "From"
   },
+  "fromAmount": {
+    "message": "From Amount"
+  },
   "fromAddress": {
     "message": "From: $1",
     "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
@@ -1343,6 +1346,12 @@
   },
   "sendTokens": {
     "message": "Send Tokens"
+  },
+  "swap": {
+    "message": "Swap"
+  },
+  "swapTokens": {
+    "message": "Swap Tokens"
   },
   "sentEther": {
     "message": "sent ether"

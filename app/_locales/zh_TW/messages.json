@@ -283,7 +283,7 @@
     "message": "基本"
   },
   "blockExplorerUrl": {
-    "message": "封鎖 Explorer"
+    "message": "區塊鏈瀏覽器連結"
   },
   "blockExplorerView": {
     "message": "在 $1 觀看帳號 ",
@@ -332,7 +332,7 @@
     "message": "開啟"
   },
   "optionalBlockExplorerUrl": {
-    "message": "封鎖 Explorer URL（非必要）"
+    "message": "區塊鏈瀏覽器連結（非必要）"
   },
   "cancel": {
     "message": "取消"
@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "非 ETH 網路，設定至小寫"
   },
+  "invalidInput": {
+    "message": "輸入錯誤。"
+  },
   "invalidRPC": {
     "message": "無效的 RPC URI"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "惡意的以太坊網路供應商可能會謊報區塊鏈的狀態並且記錄您的網路活動。請只添加您信任的客製網路。"
+  },
+  "optionalChainId": {
+    "message": "ChainID (可選)"
   },
   "optionalSymbol": {
     "message": "Symbol (可選)"

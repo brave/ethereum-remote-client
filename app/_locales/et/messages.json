@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Kehtetu ETH-võrk, kasutage väiketähti"
   },
+  "invalidInput": {
+    "message": "Vigane sisend."
+  },
   "invalidRPC": {
     "message": "Vale RPC URL"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Pahatahtlik Ethereumi võrguteenuse pakkuja võib plokiahela oleku kohta valetada ja teie võrgutegevust salvestada. Lisage ainult usaldusväärseid kohandatud võrke."
+  },
+  "optionalChainId": {
+    "message": "ChainID (valikuline)"
   },
   "optionalSymbol": {
     "message": "Sümbol (valikuline)"

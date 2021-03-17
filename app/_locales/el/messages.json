@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Δίκτυο μη ETH, ρυθμίστε σε μικρούς χαρακτήρες"
   },
+  "invalidInput": {
+    "message": "Μη έγκυρη είσοδος."
+  },
   "invalidRPC": {
     "message": "Μη έγκυρο RPC URL"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Ένας κακόβουλος πάροχος δικτύου Ethereum μπορεί να λέει ψέματα σχετικά με την κατάσταση του blockchain και να καταγράψει τη δραστηριότητα του δικτύου σας. Προσθέστε μόνο προσαρμοσμένα δίκτυα που εμπιστεύεστε."
+  },
+  "optionalChainId": {
+    "message": "Ταυτότητα Αλυσίδας (προαιρετικό)"
   },
   "optionalSymbol": {
     "message": "Σύμβολο (προαιρετικό)"

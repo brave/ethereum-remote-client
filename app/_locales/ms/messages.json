@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Bukan rangkaian ETH, tetapkan kepada huruf kecil"
   },
+  "invalidInput": {
+    "message": "Input tidak sah."
+  },
   "invalidRPC": {
     "message": "URL RPC tidak sah"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Penyedia rangkaian Ethereum yang berbahaya boleh menipu tentang keadaan blok rantai dan rekod aktiviti rangkaian anda. Hanya tambah rangkaian yang anda percayai."
+  },
+  "optionalChainId": {
+    "message": "ChainID (pilihan)"
   },
   "optionalSymbol": {
     "message": "Simbol (pilihan)"

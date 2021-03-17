@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ईटीएच नेटवर्क नहीं, लोअरकेस में सेट करें"
   },
+  "invalidInput": {
+    "message": "अमान्य इनपुट।"
+  },
   "invalidRPC": {
     "message": "अमान्य RPC URL"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "एक गलत Ethereum नेटवर्क प्रदाता ब्लॉकचेन की स्थिति के बारे में झूठ बोल सकता है और आपकी नेटवर्क गतिविधि को रिकॉर्ड कर सकता है। केवल उन कस्टम नेटवर्क को जोड़ें जिन पर आप भरोसा करते हैं।"
+  },
+  "optionalChainId": {
+    "message": "चैनआईडी (वैकल्पिक)"
   },
   "optionalSymbol": {
     "message": "सिम्बल (वैकल्पिक)"

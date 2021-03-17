@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH አውታረ መረብ አይደለም፣ ወደ ትናንሽ ፊደላት ቀይር"
   },
+  "invalidInput": {
+    "message": "ልክ ያልሆነ ግቤት።"
+  },
   "invalidRPC": {
     "message": "ልክ ያልሆነ RPC ዩአርኤል"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "አንድ ተንኮል-አዘል የ Ethereum ኔትዎርክ አቅራቢ ስለ ማገጃው ሁኔታ ሊዋሽ እና የኔትዎርክ እንቅስቃሴዎን ሊቀዳ ይችላል። የሚያምኗቸውን ብጁ ኔትዎርኮችን ብቻ ያክሉ።"
+  },
+  "optionalChainId": {
+    "message": "የሰንሰለት መለያ ቁጥር (አማራጭ)"
   },
   "optionalSymbol": {
     "message": "ምልክት (አማራጭ)"

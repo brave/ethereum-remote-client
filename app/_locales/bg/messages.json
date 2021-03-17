@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Не е ETH мрежа, задаване на малки букви"
   },
+  "invalidInput": {
+    "message": "Невалидно въвеждане."
+  },
   "invalidRPC": {
     "message": "Невалиден RPC URL адрес"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Злонамерен доставчик на мрежа Ethereum може да лъже за състоянието на блокчейна и да записва вашата мрежова активност. Добавяйте само персонализирани мрежи, на които имате доверие."
+  },
+  "optionalChainId": {
+    "message": "ChainID (по избор)"
   },
   "optionalSymbol": {
     "message": "Символ (по избор)"

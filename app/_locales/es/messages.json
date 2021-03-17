@@ -19,7 +19,7 @@
     "description": "$1 is the account name"
   },
   "connectedAccountsDescriptionSingular": {
-    "message": "Tiene una cuenta vinculada a este sitio.\n"
+    "message": "Tienes 1 cuenta vinculada a este sitio."
   },
   "connectedAccountsDescriptionPlural": {
     "message": "Tiene $1 cuenta vinculada a este sitio.\n",
@@ -29,13 +29,13 @@
     "message": "Brave no está vinculado a este sitio. Para conectarse a un sitio web, encuentre el botón de conexión en su sitio.\n"
   },
   "currentAccountNotConnected": {
-    "message": "Su cuenta corriente no está conectada\n"
+    "message": "Tu cuenta actual no está conectada"
   },
   "switchToThisAccount": {
     "message": "Cambiar a esta cuenta"
   },
   "disconnectThisAccount": {
-    "message": "Desconecte esta cuenta\n"
+    "message": "Desconectar esta cuenta"
   },
   "permissions": {
     "message": "Permisos"
@@ -56,7 +56,7 @@
     "message": "Desconecte todas las cuentas\n"
   },
   "disconnectPrompt": {
-    "message": "Desconectar $1\n"
+    "message": "Desconectar $1"
   },
   "disconnectAllAccountsConfirmationDescription": {
     "message": "¿Está seguro de que quiere desconectar? Puede perder la capacidad de funcionamiento del sitio.\n"
@@ -77,7 +77,7 @@
     "message": "Conectándose..."
   },
   "connectWithMetaMask": {
-    "message": "Conectar con Brave\n"
+    "message": "Conectar con Brave"
   },
   "connectTo": {
     "message": "Conectar con $1",
@@ -92,11 +92,11 @@
     "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
   },
   "connectToMultiple": {
-    "message": "Conectar con $1\n",
+    "message": "Conectar con $1",
     "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
   },
   "connectToMultipleNumberOfAccounts": {
-    "message": "$1 cuentas \n",
+    "message": "$1 cuentas",
     "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
   },
   "contractInteraction": {
@@ -140,7 +140,7 @@
     "message": "Activo"
   },
   "activity": {
-    "message": "Actividad\n"
+    "message": "Actividad"
   },
   "activityLog": {
     "message": "registro de actividades"
@@ -179,10 +179,10 @@
     "message": "Agregar tokens propuestos"
   },
   "addAcquiredTokens": {
-    "message": "Añada las fichas que ha adquirido mediante Brave"
+    "message": "Añade los tokens que has adquirido utilizando Brave"
   },
   "alerts": {
-    "message": "Alertas\n"
+    "message": "Alertas"
   },
   "alertsSettingsDescription": {
     "message": "Activar o desactivar cada alerta\n"
@@ -235,7 +235,7 @@
     "message": "Activo"
   },
   "assets": {
-    "message": "Activos\n"
+    "message": "Activos"
   },
   "attemptingConnect": {
     "message": "Intentando conectar a la Blockchain"
@@ -305,13 +305,13 @@
     "message": "Tu navegador no está admitido..."
   },
   "builtInCalifornia": {
-    "message": "Brave fue diseñado y desarrollado en California."
+    "message": "Brave ha sido diseñado y desarrollado en California."
   },
   "buyWithWyre": {
     "message": "Compra ETH con Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre le permite usar una tarjeta de débito para depositar ETH directamente en su cuenta Brave."
+    "message": "Wyre te permite usar una tarjeta de débito para depositar ETH directamente en tu cuenta de MetaMask."
   },
   "buyCoinSwitch": {
     "message": "Comprar en CoinSwitch"
@@ -356,7 +356,7 @@
     "message": "Cerrar"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Tiene que usar Brave en Google Chrome para conectarse a su cartera electrónica."
+    "message": "Tienes que usar MetaMask en Brave para poder conectar con tu Monedero Físico."
   },
   "confirm": {
     "message": "Confirmar"
@@ -404,7 +404,7 @@
     "message": "Conectando al Test de Red Goerli"
   },
   "contacts": {
-    "message": "Contactos\n"
+    "message": "Contactos"
   },
   "contactsSettingsDescription": {
     "message": "Añadir, editar, eliminar y gestionar tus contactos"
@@ -594,23 +594,23 @@
     "message": "Introducir contraseña para seguir"
   },
   "errorCode": {
-    "message": "Código: $1\n",
+    "message": "Código: $1",
     "description": "Displayed error code for debugging purposes. $1 is the error code"
   },
   "errorDetails": {
-    "message": "Detalles del error\n",
+    "message": "Detalles del error",
     "description": "Title for collapsible section that displays error details for debugging purposes"
   },
   "errorMessage": {
-    "message": "Mensaje: $1\n",
+    "message": "Mensaje: $1",
     "description": "Displayed error message for debugging purposes. $1 is the error message"
   },
   "errorName": {
-    "message": "Código: $1\n",
+    "message": "Código: $1",
     "description": "Displayed error name for debugging purposes. $1 is the error name"
   },
   "errorPageTitle": {
-    "message": "Brave encontró un error\n",
+    "message": "Brave ha encontrado un error",
     "description": "Title of generic error page"
   },
   "errorPageMessage": {
@@ -670,11 +670,11 @@
     "message": "De:"
   },
   "fromAddress": {
-    "message": "Desde: $1\n",
+    "message": "De: $1",
     "description": "$1 is the address to include in the From label. It is typically shortened first using shortenAddress"
   },
   "functionApprove": {
-    "message": "Función: Aprobar\n"
+    "message": "Función: aprobar"
   },
   "functionType": {
     "message": "Tipo de función"
@@ -759,7 +759,7 @@
     "message": "Ocultar"
   },
   "hideTokenSymbol": {
-    "message": "Esconder $1",
+    "message": "Ocultar $1",
     "description": "$1 is the symbol for a token (e.g. 'DAI')"
   },
   "hideTokenPrompt": {
@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No es una red ETH, convertirlo a minúscula"
   },
+  "invalidInput": {
+    "message": "Entrada inválida"
+  },
   "invalidRPC": {
     "message": "Invalida URL del RPC"
   },
@@ -859,7 +862,7 @@
     "message": "Max"
   },
   "lastConnected": {
-    "message": "Última conexión\n"
+    "message": "Última conexión"
   },
   "learnMore": {
     "message": "Más información"
@@ -892,7 +895,7 @@
     "message": "Localhost 8545"
   },
   "lock": {
-    "message": "Bloquear\n"
+    "message": "Bloquear"
   },
   "lockTimeTooGreat": {
     "message": "El tiempo de bloqueo es excesivo"
@@ -993,7 +996,7 @@
     "message": "¡Protege Tus Claves!"
   },
   "protectYourKeysMessage1": {
-    "message": "Tenga cuidado con su frase de recuperación: ha habido denuncias de sitios web que intentan imitar a Brave. ¡Brave nunca le pedirá su frase de recuperación!\n"
+    "message": "Ten cuidado con tu frase de recuperación — ha habido avisos de sitios web que intentan imitar a MetaMask. ¡MetaMask nunca te pedirá tu frase de recuperación!"
   },
   "protectYourKeysMessage2": {
     "message": "Mantenga su frase a salvo. Si ve algo sospechoso, o no está seguro de un sitio web, envíe un correo electrónico a support@brave.com\n"
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un proveedor de red Ethereum malicioso puede mentir sobre el estado de la cadena de bloques y registrar su actividad en la red. Añada únicamente redes personalizadas en las que confíe.\n"
+  },
+  "optionalChainId": {
+    "message": "ChainID (opcional)"
   },
   "optionalSymbol": {
     "message": "Símbolo (opcional)"
@@ -1085,13 +1091,13 @@
     "message": "Usted concedió este permiso"
   },
   "permissionUncheckedIconDescription": {
-    "message": "No ha aprobado este permiso\n"
+    "message": "No has aprobado este permiso"
   },
   "personalAddressDetected": {
     "message": "Dirección personal detectada. Ingresa la dirección del contrato del token"
   },
   "plusXMore": {
-    "message": "+ $1 más\n",
+    "message": "+ $1 más",
     "description": "$1 is a number of additional but unshown items in a list- this message will be shown in place of those items"
   },
   "prev": {
@@ -1259,7 +1265,7 @@
     "message": "ADVERTENCIA: Nunca reveles tu frase de respaldo. Cualquiera con esta frase puede tomar tu Éter para siempre."
   },
   "secretPhrase": {
-    "message": "Introduzca su frase secreta de 24 palabras aquí para restaurar su depósito.\n"
+    "message": "Introduce tu frase secreta de 24 palabras aquí para restaurar tu depósito."
   },
   "securityAndPrivacy": {
     "message": "Seguridad & Privacidad"
@@ -1322,7 +1328,7 @@
     "message": "se mandaron tokens"
   },
   "sendSpecifiedTokens": {
-    "message": "Enviar $1\n",
+    "message": "Enviar $1",
     "description": "Symbol of the specified token"
   },
   "separateEachWord": {
@@ -1423,7 +1429,7 @@
     "message": "Cambiar de Red"
   },
   "stateLogFileName": {
-    "message": "Registros de estado de Brave\n"
+    "message": "Registros de estado de Brave"
   },
   "stateLogs": {
     "message": "Registros de Estado"
@@ -1453,7 +1459,7 @@
     "message": "Seleccione la cuenta que quieres ver. Sólo se puede eligir una a la vez."
   },
   "step3HardwareWallet": {
-    "message": "3. ¡Empiece a usar los sitios web y mucho más!\n"
+    "message": "3. ¡Empieza a utilizar los sitios web y mucho más!"
   },
   "step3HardwareWalletMsg": {
     "message": "Use su cuenta electrónica como lo haría con cualquier cuenta de Ethereum. Conéctese a sitios web, envíe ETH, compre y almacene fichas ERC20 y fichas no fungibles como CryptoKitties.\n"
@@ -1495,7 +1501,7 @@
     "message": "Asegúrate de que nadie más esté mirando tu pantalla cuando escanees este código."
   },
   "syncWithMobileComplete": {
-    "message": "Sus datos se han sincronizado correctamente. ¡Disfrute de la aplicación Brave para móvil!"
+    "message": "Tus datos han sido sincronizado correctamente. ¡Disfruta de la aplicación Brave para móvil!"
   },
   "terms": {
     "message": "Condiciones de Uso"
@@ -1517,7 +1523,7 @@
     "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
   },
   "toWithColon": {
-    "message": "Para:\n"
+    "message": "Para:"
   },
   "token": {
     "message": "Token"
@@ -1718,7 +1724,7 @@
     "message": "No hubo precio de gas al agilizar"
   },
   "decryptRequest": {
-    "message": "Solicitud de descifrado\n"
+    "message": "Solicitud de descifrado"
   },
   "decrypt": {
     "message": "Descifrar"
@@ -1734,11 +1740,11 @@
     "message": "Copiar el mensaje cifrado"
   },
   "decryptInlineError": {
-    "message": "Este mensaje no se puede descifrar debido a un error: $1\n",
+    "message": "Este mensaje no se ha podido descifrar debido a un error: $1",
     "description": "$1 is error message"
   },
   "provide": {
-    "message": "Proporcionar\n"
+    "message": "Proporcionar"
   },
   "encryptionPublicKeyRequest": {
     "message": "Solicitar clave pública de cifrado"
@@ -1754,7 +1760,7 @@
     "message": "Brave Rewards"
   },
   "braveSettings": {
-    "message": "Ajustes de Brave\n"
+    "message": "Ajustes de Brave"
   },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets le permite trabajar con las criptodivisas y los activos relacionados en Brave. Crypto Wallets admite fichas de Ethereum como ETH y BAT, así como piezas de colección, y le permite trabajar con Ðapps y otros contratos inteligentes. Todo esto es para personas que están familiarizadas con el Ethereum y otros sistemas de cadenas de bloques, o que tienen ganas de aprender.\n"

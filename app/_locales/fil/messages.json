@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Hindi ito isang ETH network, i-set sa lowercase"
   },
+  "invalidInput": {
+    "message": "Hindi valid ang input."
+  },
   "invalidRPC": {
     "message": "Hindi valid ang RPC URL"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Maaaring magsinungaling ang isang nakakapinsalang provider ng Ethereum network tungkol sa status ng blockchain at itala ang aktibidad ng iyong network. Idagdag lang ang mga custom na network na pinagkakatiwalaan mo."
+  },
+  "optionalChainId": {
+    "message": "ChainID (opsyonal)"
   },
   "optionalSymbol": {
     "message": "Simbolo (opsyonal)"

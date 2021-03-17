@@ -827,6 +827,9 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "非 ETH 网络，设置为小写"
   },
+  "invalidInput": {
+    "message": "无效输入."
+  },
   "invalidRPC": {
     "message": "无效 RPC URI"
   },
@@ -1006,6 +1009,9 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "恶意的以太坊网络提供商可能会谎报区块链的状态并记录您的网络活动。请只添加您信任的自定义网络。"
+  },
+  "optionalChainId": {
+    "message": "ChainID（选填）"
   },
   "optionalSymbol": {
     "message": "符号（选填）"

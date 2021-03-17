@@ -249,6 +249,7 @@ function setupController (initState, initLangCode) {
     getCurrentNetwork: controller.getCurrentNetwork,
     getIpfsGateway: controller.preferencesController.getIpfsGateway.bind(controller.preferencesController),
     provider: controller.provider,
+    hasNativeIPFSSupport: controller.preferencesController.hasNativeIPFSSupport.bind(controller.preferencesController),
   })
   onControllerInit(controller)
   controller.on('controllerInitialized', () => {

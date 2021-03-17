@@ -165,6 +165,16 @@ function isPrefixedFormattedHexString (value) {
   return (/^0x[1-9a-f]+[0-9a-f]*$/ui).test(value)
 }
 
+const hasNativeIPFSSupport = async () => {
+  return new Promise((resolve) => {
+    if (!window.chrome || !window.chrome.ipfs) {
+      resolve(false)
+      return
+    }
+    window.chrome.ipfs.getIPFSEnabled(resolve)
+  })
+}
+
 export {
   getPlatform,
   getEnvironmentType,
@@ -174,4 +184,5 @@ export {
   BnMultiplyByFraction,
   checkForError,
   isPrefixedFormattedHexString,
+  hasNativeIPFSSupport,
 }

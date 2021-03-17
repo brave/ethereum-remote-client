@@ -22,6 +22,7 @@ export const mapStateToProps = (state) => {
       advancedInlineGas,
     } = {},
     useNonceField,
+    hasNativeIPFSSupport,
     ipfsGateway,
   } = metamask
   const { showFiatInTestnets, autoLockTimeLimit } = getPreferences(state)
@@ -34,6 +35,7 @@ export const mapStateToProps = (state) => {
     showFiatInTestnets,
     autoLockTimeLimit,
     useNonceField,
+    hasNativeIPFSSupport,
     ipfsGateway,
   }
 }

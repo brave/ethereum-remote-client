@@ -2,7 +2,7 @@ import ObservableStore from 'obs-store'
 import { addInternalMethodPrefix } from './permissions'
 import { normalize as normalizeAddress } from 'eth-sig-util'
 import { isValidAddress, sha3, bufferToHex } from 'ethereumjs-util'
-import { isPrefixedFormattedHexString } from '../lib/util'
+import { isPrefixedFormattedHexString, hasNativeIPFSSupport } from '../lib/util'
 
 export default class PreferencesController {
 
@@ -60,7 +60,7 @@ export default class PreferencesController {
       completedOnboarding: false,
       metaMetricsId: null,
       metaMetricsSendCount: 0,
-
+      hasNativeIPFSSupport: false,
       // ENS decentralized website resolution
       ipfsGateway: 'dweb.link',
       batTokenAdded: {},
@@ -77,6 +77,10 @@ export default class PreferencesController {
     global.setPreference = (key, value) => {
       return this.setFeatureFlag(key, value)
     }
+
+    hasNativeIPFSSupport().then((value) => {
+      this.setPreference('shouldShowIPFSSection', value)
+    })
   }
   // PUBLIC METHODS
 
@@ -673,6 +677,14 @@ export default class PreferencesController {
   completeOnboarding () {
     this.store.updateState({ completedOnboarding: true })
     return Promise.resolve(true)
+  }
+
+  /**
+  * A getter for the `hasNativeIPFSSupport` property
+  * @returns {boolean} - True if browser supports IPFS natively, otherwise false
+  */
+  hasNativeIPFSSupport () {
+    return this.store.getState().hasNativeIPFSSupport
   }
 
   /**

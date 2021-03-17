@@ -27,6 +27,7 @@ export default class AdvancedTab extends PureComponent {
     transactionTime: PropTypes.bool,
     showFiatInTestnets: PropTypes.bool,
     autoLockTimeLimit: PropTypes.number,
+    hasNativeIPFSSupport: PropTypes.bool,
     setAutoLockTimeLimit: PropTypes.func.isRequired,
     setShowFiatConversionOnTestnetsPreference: PropTypes.func.isRequired,
     setIpfsGateway: PropTypes.func.isRequired,
@@ -385,7 +386,10 @@ export default class AdvancedTab extends PureComponent {
   renderIpfsGatewayControl () {
     const { t } = this.context
     const { ipfsGatewayError } = this.state
-
+    const { hasNativeIPFSSupport } = this.props
+    if (!hasNativeIPFSSupport) {
+      return ''
+    }
     return (
       <div className="settings-page__content-row" data-testid="advanced-setting-ipfs-gateway">
         <div className="settings-page__content-item">

@@ -4,7 +4,7 @@ import resolveEnsToIpfsContentId from './resolver.js'
 
 const supportedTopLevelDomains = ['eth']
 
-export default function setupEnsIpfsResolver ({ provider, getCurrentNetwork, getIpfsGateway }) {
+export default function setupEnsIpfsResolver ({ provider, getCurrentNetwork, getIpfsGateway, hasNativeIPFSSupport }) {
 
   // install listener
   const urlPatterns = supportedTopLevelDomains.map((tld) => `*://*.${tld}/*`)
@@ -45,7 +45,9 @@ export default function setupEnsIpfsResolver ({ provider, getCurrentNetwork, get
     try {
       const { type, hash } = await resolveEnsToIpfsContentId({ provider, name })
       if (type === 'ipfs-ns' || type === 'ipns-ns') {
-        const resolvedUrl = `https://${hash}.${type.slice(0, 4)}.${ipfsGateway}${path}${search || ''}${fragment || ''}`
+        const scheme = hasNativeIPFSSupport ? `.${type.slice(0, 4)}` : 'https'
+        const gateway = hasNativeIPFSSupport ? '' : `.${type.slice(0, 4)}.${ipfsGateway}`
+        const resolvedUrl = `${scheme}://${hash}${gateway}${path}${search || ''}${fragment || ''}`
         try {
           // check if ipfs gateway has result
           const response = await window.fetch(resolvedUrl, { method: 'HEAD' })

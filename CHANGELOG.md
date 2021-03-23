@@ -1,5 +1,12 @@
 # Changelog
 
+## Remote Component([0.1.89](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.89)), Browser Component: `1.0.28`(23-Mar-2021)
+
+ - [brave-browser#14701](https://github.com/brave/brave-browser/issues/14701) - Added back the ability to buy Crypto using Wyre
+ - [brave-browser#14566](https://github.com/brave/brave-browser/issues/14566) - Fixed missing deposit transactions from activity list 
+ - [brave-browser#14565](https://github.com/brave/brave-browser/issues/14565) - Fixed missing Test faucet option from deposit Ether page
+ - [brave-browser#13689](https://github.com/brave/brave-browser/issues/13689) - Moved Crypto Wallet's IPFS setting into browser IPFS setting 
+
 ## Remote Component([0.1.88](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.88)), Browser Component: `1.0.27`(08-Mar-2021)
 
  - [brave-browser#14349](https://github.com/brave/brave-browser/issues/14349) - Added support for "Crypto Name Service" (CNS) from Unstoppable Domains

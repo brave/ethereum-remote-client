@@ -1790,7 +1790,7 @@ export default class MetamaskController extends EventEmitter {
       slippagePercentage: opts.slippagePercentage,
       sellAmount: opts.sellAmount,
       signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
-    }) 
+    })
 
     this.networkController.on('networkDidChange', () => {
       this.setCurrentCurrency(

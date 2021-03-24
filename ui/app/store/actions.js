@@ -743,6 +743,12 @@ export function clearSend () {
   }
 }
 
+export function clearSwap () {
+  return {
+    type: actionConstants.CLEAR_SWAP,
+  }
+}
+
 export function updateSendEnsResolution (ensResolution) {
   return {
     type: actionConstants.UPDATE_SEND_ENS_RESOLUTION,

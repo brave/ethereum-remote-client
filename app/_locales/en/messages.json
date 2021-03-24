@@ -1338,6 +1338,9 @@
   "send": {
     "message": "Send"
   },
+  "swap": {
+    "message": "Swap"
+  },
   "sendAmount": {
     "message": "Send Amount"
   },

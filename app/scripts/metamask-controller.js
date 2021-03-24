@@ -2537,20 +2537,981 @@
    * @param {Function} - next
    * @param {Function} - end
    */
- 
-   /**
-    * Adds a domain to the PhishingController safelist
-    * @param {string} hostname - the domain to safelist
-    */
-   safelistPhishingDomain (hostname) {
-     return this.phishingController.bypass(hostname)
-   }
- 
-   /**
-    * Locks MetaMask
-    */
-   setLocked () {
-     return this.keyringController.setLocked()
-   }
- }
- 
+  newUnsignedTypedMessage (msgParams, req, version) {
+    const promise = this.typedMessageManager.addUnapprovedMessageAsync(msgParams, req, version)
+    this.sendUpdate()
+    this.opts.showUnconfirmedMessage()
+    return promise
+  }
+
+  /**
+   * The method for a user approving a call to eth_signTypedData, per EIP 712.
+   * Triggers the callback in newUnsignedTypedMessage.
+   *
+   * @param  {Object} msgParams - The params passed to eth_signTypedData.
+   * @returns {Object} - Full state update.
+   */
+  async signTypedMessage (msgParams) {
+    log.info('MetaMaskController - eth_signTypedData')
+    const msgId = msgParams.metamaskId
+    const version = msgParams.version
+    try {
+      const cleanMsgParams = await this.typedMessageManager.approveMessage(msgParams)
+
+      // For some reason every version after V1 used stringified params.
+      if (version !== 'V1') {
+        // But we don't have to require that. We can stop suggesting it now:
+        if (typeof cleanMsgParams.data === 'string') {
+          cleanMsgParams.data = JSON.parse(cleanMsgParams.data)
+        }
+      }
+
+      const signature = await this.keyringController.signTypedMessage(cleanMsgParams, { version })
+      this.typedMessageManager.setMsgStatusSigned(msgId, signature)
+      return this.getState()
+    } catch (error) {
+      log.info('MetaMaskController - eth_signTypedData failed.', error)
+      this.typedMessageManager.errorMessage(msgId, error)
+    }
+  }
+
+  /**
+   * Used to cancel a eth_signTypedData type message.
+   * @param {string} msgId - The ID of the message to cancel.
+   * @param {Function} cb - The callback function called with a full state update.
+   */
+  cancelTypedMessage (msgId, cb) {
+    const messageManager = this.typedMessageManager
+    messageManager.rejectMsg(msgId)
+    if (cb && typeof cb === 'function') {
+      cb(null, this.getState())
+      return
+    }
+  }
+
+  //=============================================================================
+  // END (VAULT / KEYRING RELATED METHODS)
+  //=============================================================================
+
+  /**
+   * Allows a user to attempt to cancel a previously submitted transaction by creating a new
+   * transaction.
+   * @param {number} originalTxId - the id of the txMeta that you want to attempt to cancel
+   * @param {string} [customGasPrice] - the hex value to use for the cancel transaction
+   * @returns {Object} - MetaMask state
+   */
+  async createCancelTransaction (originalTxId, customGasPrice) {
+    try {
+      await this.txController.createCancelTransaction(originalTxId, customGasPrice)
+      const state = await this.getState()
+      return state
+    } catch (error) {
+      throw error
+    }
+  }
+
+  async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
+    await this.txController.createSpeedUpTransaction(originalTxId, customGasPrice, customGasLimit)
+    const state = await this.getState()
+    return state
+  }
+
+  estimateGas (estimateGasParams) {
+    return new Promise((resolve, reject) => {
+      return this.txController.txGasUtil.query.estimateGas(estimateGasParams, (err, res) => {
+        if (err) {
+          return reject(err)
+        }
+
+        return resolve(res)
+      })
+    })
+  }
+
+  //=============================================================================
+  // PASSWORD MANAGEMENT
+  //=============================================================================
+
+  /**
+   * Allows a user to begin the seed phrase recovery process.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  markPasswordForgotten (cb) {
+    this.preferencesController.setPasswordForgotten(true)
+    this.sendUpdate()
+    cb()
+  }
+
+  /**
+   * Allows a user to end the seed phrase recovery process.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  unMarkPasswordForgotten (cb) {
+    this.preferencesController.setPasswordForgotten(false)
+    this.sendUpdate()
+    cb()
+  }
+
+  //=============================================================================
+  // SETUP
+  //=============================================================================
+
+  /**
+   * A runtime.MessageSender object, as provided by the browser:
+   * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
+   * @typedef {Object} MessageSender
+   */
+
+  /**
+   * Used to create a multiplexed stream for connecting to an untrusted context
+   * like a Dapp or other extension.
+   * @param {*} connectionStream - The Duplex stream to connect to.
+   * @param {MessageSender} sender - The sender of the messages on this stream
+   */
+  setupUntrustedCommunication (connectionStream, sender) {
+    const { usePhishDetect } = this.preferencesController.store.getState()
+    const hostname = (new URL(sender.url)).hostname
+    // Check if new connection is blocked if phishing detection is on
+    if (usePhishDetect && this.phishingController.test(hostname)) {
+      log.debug('MetaMask - sending phishing warning for', hostname)
+      this.sendPhishingWarning(connectionStream, hostname)
+      return
+    }
+
+    // setup multiplexing
+    const mux = setupMultiplex(connectionStream)
+
+    // messages between inpage and background
+    this.setupProviderConnection(mux.createStream('provider'), sender)
+    this.setupPublicConfig(mux.createStream('publicConfig'))
+  }
+
+  /**
+   * Used to create a multiplexed stream for connecting to a trusted context,
+   * like our own user interfaces, which have the provider APIs, but also
+   * receive the exported API from this controller, which includes trusted
+   * functions, like the ability to approve transactions or sign messages.
+   *
+   * @param {*} connectionStream - The duplex stream to connect to.
+   * @param {MessageSender} sender - The sender of the messages on this stream
+   */
+  setupTrustedCommunication (connectionStream, sender) {
+    // setup multiplexing
+    const mux = setupMultiplex(connectionStream)
+    // connect features
+    this.setupControllerConnection(mux.createStream('controller'))
+    this.setupProviderConnection(mux.createStream('provider'), sender, true)
+  }
+
+  /**
+   * Called when we detect a suspicious domain. Requests the browser redirects
+   * to our anti-phishing page.
+   *
+   * @private
+   * @param {*} connectionStream - The duplex stream to the per-page script,
+   * for sending the reload attempt to.
+   * @param {string} hostname - The hostname that triggered the suspicion.
+   */
+  sendPhishingWarning (connectionStream, hostname) {
+    const mux = setupMultiplex(connectionStream)
+    const phishingStream = mux.createStream('phishing')
+    phishingStream.write({ hostname })
+  }
+
+  /**
+   * A method for providing our API over a stream using Dnode.
+   * @param {*} outStream - The stream to provide our API over.
+   */
+  setupControllerConnection (outStream) {
+    const api = this.getApi()
+    const dnode = Dnode(api)
+    // report new active controller connection
+    this.activeControllerConnections++
+    this.emit('controllerConnectionChanged', this.activeControllerConnections)
+    // connect dnode api to remote connection
+    pump(
+      outStream,
+      dnode,
+      outStream,
+      (err) => {
+        // report new active controller connection
+        this.activeControllerConnections--
+        this.emit('controllerConnectionChanged', this.activeControllerConnections)
+        // report any error
+        if (err) {
+          log.error(err)
+        }
+      },
+    )
+    dnode.on('remote', (remote) => {
+      // push updates to popup
+      const sendUpdate = (update) => remote.sendUpdate(update)
+      this.on('update', sendUpdate)
+      // remove update listener once the connection ends
+      dnode.on('end', () => this.removeListener('update', sendUpdate))
+    })
+  }
+
+  /**
+   * A method for serving our ethereum provider over a given stream.
+   * @param {*} outStream - The stream to provide over.
+   * @param {MessageSender} sender - The sender of the messages on this stream
+   * @param {boolean} isInternal - True if this is a connection with an internal process
+   */
+  setupProviderConnection (outStream, sender, isInternal) {
+    const origin = isInternal
+      ? 'metamask'
+      : (new URL(sender.url)).origin
+    let extensionId
+    if (sender.id !== extension.runtime.id) {
+      extensionId = sender.id
+    }
+    let tabId
+    if (sender.tab && sender.tab.id) {
+      tabId = sender.tab.id
+    }
+
+    const engine = this.setupProviderEngine({ origin, location: sender.url, extensionId, tabId, isInternal })
+
+    // setup connection
+    const providerStream = createEngineStream({ engine })
+
+    const connectionId = this.addConnection(origin, { engine })
+
+    pump(
+      outStream,
+      providerStream,
+      outStream,
+      (err) => {
+        // handle any middleware cleanup
+        engine._middleware.forEach((mid) => {
+          if (mid.destroy && typeof mid.destroy === 'function') {
+            mid.destroy()
+          }
+        })
+        connectionId && this.removeConnection(origin, connectionId)
+        if (err) {
+          log.error(err)
+        }
+      },
+    )
+  }
+
+  /**
+   * A method for creating a provider that is safely restricted for the requesting domain.
+   * @param {Object} options - Provider engine options
+   * @param {string} options.origin - The origin of the sender
+   * @param {string} options.location - The full URL of the sender
+   * @param {extensionId} [options.extensionId] - The extension ID of the sender, if the sender is an external extension
+   * @param {tabId} [options.tabId] - The tab ID of the sender - if the sender is within a tab
+   * @param {boolean} [options.isInternal] - True if called for a connection to an internal process
+   **/
+  setupProviderEngine ({ origin, location, extensionId, tabId, isInternal = false }) {
+    // setup json rpc engine stack
+    const engine = new RpcEngine()
+    const provider = this.provider
+    const blockTracker = this.blockTracker
+
+    // create filter polyfill middleware
+    const filterMiddleware = createFilterMiddleware({ provider, blockTracker })
+
+    // create subscription polyfill middleware
+    const subscriptionManager = createSubscriptionManager({ provider, blockTracker })
+    subscriptionManager.events.on('notification', (message) => engine.emit('notification', message))
+
+    // append origin to each request
+    engine.push(createOriginMiddleware({ origin }))
+    // append tabId to each request if it exists
+    if (tabId) {
+      engine.push(createTabIdMiddleware({ tabId }))
+    }
+    // logging
+    engine.push(createLoggerMiddleware({ origin }))
+    engine.push(createOnboardingMiddleware({
+      location,
+      registerOnboarding: this.onboardingController.registerOnboarding,
+    }))
+    engine.push(createMethodMiddleware({
+      origin,
+      sendMetrics: this.sendBackgroundMetaMetrics.bind(this),
+    }))
+    // filter and subscription polyfills
+    engine.push(filterMiddleware)
+    engine.push(subscriptionManager.middleware)
+    if (!isInternal) {
+      // permissions
+      engine.push(this.permissionsController.createMiddleware({ origin, extensionId }))
+    }
+    // watch asset
+    engine.push(this.preferencesController.requestWatchAsset.bind(this.preferencesController))
+    // forward to metamask primary provider
+    engine.push(providerAsMiddleware(provider))
+    return engine
+  }
+
+  /**
+   * A method for providing our public config info over a stream.
+   * This includes info we like to be synchronous if possible, like
+   * the current selected account, and network ID.
+   *
+   * Since synchronous methods have been deprecated in web3,
+   * this is a good candidate for deprecation.
+   *
+   * @param {*} outStream - The stream to provide public config over.
+   */
+  setupPublicConfig (outStream) {
+    const configStore = this.createPublicConfigStore()
+    const configStream = asStream(configStore)
+
+    pump(
+      configStream,
+      outStream,
+      (err) => {
+        configStore.destroy()
+        configStream.destroy()
+        if (err) {
+          log.error(err)
+        }
+      },
+    )
+  }
+
+  /**
+   * Adds a reference to a connection by origin. Ignores the 'metamask' origin.
+   * Caller must ensure that the returned id is stored such that the reference
+   * can be deleted later.
+   *
+   * @param {string} origin - The connection's origin string.
+   * @param {Object} options - Data associated with the connection
+   * @param {Object} options.engine - The connection's JSON Rpc Engine
+   * @returns {string} - The connection's id (so that it can be deleted later)
+   */
+  addConnection (origin, { engine }) {
+
+    if (origin === 'metamask') {
+      return null
+    }
+
+    if (!this.connections[origin]) {
+      this.connections[origin] = {}
+    }
+
+    const id = nanoid()
+    this.connections[origin][id] = {
+      engine,
+    }
+
+    return id
+  }
+
+  /**
+   * Deletes a reference to a connection, by origin and id.
+   * Ignores unknown origins.
+   *
+   * @param {string} origin - The connection's origin string.
+   * @param {string} id - The connection's id, as returned from addConnection.
+   */
+  removeConnection (origin, id) {
+
+    const connections = this.connections[origin]
+    if (!connections) {
+      return
+    }
+
+    delete connections[id]
+
+    if (Object.keys(connections).length === 0) {
+      delete this.connections[origin]
+    }
+  }
+
+  /**
+   * Causes the RPC engines associated with the connections to the given origin
+   * to emit a notification event with the given payload.
+   * Does nothing if the extension is locked or the origin is unknown.
+   *
+   * @param {string} origin - The connection's origin string.
+   * @param {any} payload - The event payload.
+   */
+  notifyConnections (origin, payload) {
+
+    const connections = this.connections[origin]
+    if (!this.isUnlocked() || !connections) {
+      return
+    }
+
+    Object.values(connections).forEach((conn) => {
+      conn.engine && conn.engine.emit('notification', payload)
+    })
+  }
+
+  /**
+   * Causes the RPC engines associated with all connections to emit a
+   * notification event with the given payload.
+   * Does nothing if the extension is locked.
+   *
+   * @param {any} payload - The event payload.
+   */
+  notifyAllConnections (payload) {
+
+    if (!this.isUnlocked()) {
+      return
+    }
+
+    Object.values(this.connections).forEach((origin) => {
+      Object.values(origin).forEach((conn) => {
+        conn.engine && conn.engine.emit('notification', payload)
+      })
+    })
+  }
+
+  // handlers
+
+  /**
+   * Handle a KeyringController update
+   * @param {Object} state - the KC state
+   * @returns {Promise<void>}
+   * @private
+   */
+  async _onKeyringControllerUpdate (state) {
+    const { keyrings } = state
+    const addresses = keyrings.reduce((acc, { accounts }) => acc.concat(accounts), [])
+
+    if (!addresses.length) {
+      return
+    }
+
+    // Ensure preferences + identities controller know about all addresses
+    this.preferencesController.syncAddresses(addresses)
+    this.accountTracker.syncWithAddresses(addresses)
+  }
+
+  // misc
+
+  /**
+   * A method for emitting the full MetaMask state to all registered listeners.
+   * @private
+   */
+  privateSendUpdate () {
+    this.emit('update', this.getState())
+  }
+
+  /**
+   * @returns {boolean} Whether the extension is unlocked.
+   */
+  isUnlocked () {
+    return this.keyringController.memStore.getState().isUnlocked
+  }
+
+  //=============================================================================
+  // MISCELLANEOUS
+  //=============================================================================
+
+  /**
+   * Switches the keyring controller to Brave's legacy one if using
+   * a 24-word seed phrase.
+   * @param {string} seedWords
+   */
+  async _maybeSwitchKeyringController (seedWords) {
+    if (!seedWords) {
+      log.info('MetaMaskController - missing seed words')
+      return
+    }
+    let switched = false
+    const hasBraveKeyring = this.hasBraveKeyring()
+
+    if (seedWords.split(' ').length === 24) {
+      // creating a legacy brave account
+      if (!hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new BraveKeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Brave keyring')
+        switched = true
+      }
+    } else {
+      // creating a metamask-style account
+      if (hasBraveKeyring) {
+        this.keyringOpts.initState = {}
+        this.keyringController = new KeyringController(this.keyringOpts)
+        log.info('MetaMaskController - switched to Metamask keyring')
+        switched = true
+      }
+    }
+    if (switched) {
+      await this._onKeyringControllerInit()
+    }
+    return switched
+  }
+
+  async _onKeyringControllerInit () {
+    const opts = this.opts
+    const initState = opts.initState || {}
+
+    this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))
+    this.keyringController.on('unlock', () => this.emit('unlock'))
+
+    this.permissionsController = new PermissionsController({
+      getKeyringAccounts: this.keyringController.getAccounts.bind(this.keyringController),
+      getRestrictedMethods,
+      getUnlockPromise: this.appStateController.getUnlockPromise.bind(this.appStateController),
+      notifyDomain: this.notifyConnections.bind(this),
+      notifyAllDomains: this.notifyAllConnections.bind(this),
+      preferences: this.preferencesController.store,
+      showPermissionRequest: opts.showPermissionRequest,
+    }, initState.PermissionsController, initState.PermissionsMetadata)
+
+    this.detectTokensController = new DetectTokensController({
+      preferences: this.preferencesController,
+      network: this.networkController,
+      keyringMemStore: this.keyringController.memStore,
+    })
+
+    this.txController = new TransactionController({
+      initState: initState.TransactionController || initState.TransactionManager,
+      getPermittedAccounts: this.permissionsController.getAccounts.bind(this.permissionsController),
+      networkStore: this.networkController.networkStore,
+      preferencesStore: this.preferencesController.store,
+      txHistoryLimit: 40,
+      getNetwork: this.networkController.getNetworkState.bind(this),
+      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
+      provider: this.provider,
+      blockTracker: this.blockTracker,
+    })
+    this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
+
+    this.txController.on('tx:status-update', async (txId, status) => {
+      if (status === 'confirmed' || status === 'failed') {
+        const txMeta = this.txController.txStateManager.getTx(txId)
+        this.platform.showTransactionNotification(txMeta)
+
+        const { txReceipt } = txMeta
+        if (txReceipt && txReceipt.status === '0x0') {
+          this.sendBackgroundMetaMetrics({
+            action: 'Transactions',
+            name: 'On Chain Failure',
+            customVariables: { errorMessage: txMeta.simulationFails?.reason },
+          })
+        }
+      }
+    })
+
+    this.swapsController = new SwapsController({
+      provider: this.provider,
+      buyToken: opts.buyToken,
+      sellToken: opts.sellToken,
+      from: opts.taker,
+      slippagePercentage: opts.slippagePercentage,
+      sellAmount: opts.sellAmount,
+      signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
+    })
+
+    this.networkController.on('networkDidChange', () => {
+      this.setCurrentCurrency(
+        this.currencyRateController.state.currentCurrency,
+        (error) => {
+          if (error) {
+            throw error
+          }
+        },
+      )
+    })
+
+    this.networkController.lookupNetwork()
+    this.messageManager = new MessageManager()
+    this.personalMessageManager = new PersonalMessageManager()
+    this.decryptMessageManager = new DecryptMessageManager()
+    this.encryptionPublicKeyManager = new EncryptionPublicKeyManager()
+    this.typedMessageManager = new TypedMessageManager({ networkController: this.networkController })
+
+    this.store.updateStructure({
+      AppStateController: this.appStateController.store,
+      TransactionController: this.txController.store,
+      // TODO: handle this store properly
+      SwapsController: this.swapsController.store,
+      KeyringController: this.keyringController.store,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      NetworkController: this.networkController.store,
+      CachedBalancesController: this.cachedBalancesController.store,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+    })
+
+    this.memStore = new ComposableObservableStore(null, {
+      AppStateController: this.appStateController.store,
+      NetworkController: this.networkController.store,
+      AccountTracker: this.accountTracker.store,
+      TxController: this.txController.memStore,
+      // TODO: handle this store properly
+      SwapsController: this.swapsController.store,
+      CachedBalancesController: this.cachedBalancesController.store,
+      TokenRatesController: this.tokenRatesController.store,
+      MessageManager: this.messageManager.memStore,
+      PersonalMessageManager: this.personalMessageManager.memStore,
+      DecryptMessageManager: this.decryptMessageManager.memStore,
+      EncryptionPublicKeyManager: this.encryptionPublicKeyManager.memStore,
+      TypesMessageManager: this.typedMessageManager.memStore,
+      KeyringController: this.keyringController.memStore,
+      PreferencesController: this.preferencesController.store,
+      AddressBookController: this.addressBookController,
+      CurrencyController: this.currencyRateController,
+      AlertController: this.alertController.store,
+      OnboardingController: this.onboardingController.store,
+      IncomingTransactionsController: this.incomingTransactionsController.store,
+      PermissionsController: this.permissionsController.permissions,
+      PermissionsMetadata: this.permissionsController.store,
+      // ENS Controller
+      EnsController: this.ensController.store,
+    })
+
+    this.memStore.subscribe(this.sendUpdate.bind(this))
+    this.emit('controllerInitialized')
+  }
+
+  /**
+   * Returns the nonce that will be associated with a transaction once approved
+   * @param {string} address - The hex string address for the transaction
+   * @returns {Promise<number>}
+   */
+  async getPendingNonce (address) {
+    const { nonceDetails, releaseLock } = await this.txController.nonceTracker.getNonceLock(address)
+    const pendingNonce = nonceDetails.params.highestSuggested
+
+    releaseLock()
+    return pendingNonce
+  }
+
+  /**
+   * Returns the next nonce according to the nonce-tracker
+   * @param {string} address - The hex string address for the transaction
+   * @returns {Promise<number>}
+   */
+  async getNextNonce (address) {
+    let nonceLock
+    try {
+      nonceLock = await this.txController.nonceTracker.getNonceLock(address)
+    } finally {
+      nonceLock.releaseLock()
+    }
+    return nonceLock.nextNonce
+  }
+
+  async sendBackgroundMetaMetrics ({ action, name, customVariables } = {}) {
+
+    if (!action || !name) {
+      throw new Error('Must provide action and name.')
+    }
+
+    const metamaskState = await this.getState()
+    const version = this.platform.getVersion()
+    backgroundMetaMetricsEvent(
+      metamaskState,
+      version,
+      {
+        customVariables,
+        eventOpts: {
+          action,
+          name,
+        },
+      },
+    )
+  }
+
+  //=============================================================================
+  // CONFIG
+  //=============================================================================
+
+  // Log blocks
+
+  /**
+   * A method for setting the user's preferred display currency.
+   * @param {string} currencyCode - The code of the preferred currency.
+   * @param {Function} cb - A callback function returning currency info.
+   */
+  setCurrentCurrency (currencyCode, cb) {
+    const { ticker } = this.networkController.getProviderConfig()
+    try {
+      const currencyState = {
+        nativeCurrency: ticker,
+        currentCurrency: currencyCode,
+      }
+      this.currencyRateController.update(currencyState)
+      this.currencyRateController.configure(currencyState)
+      cb(null, this.currencyRateController.state)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * A method for forwarding the user to the easiest way to obtain ether,
+   * or the network "gas" currency, for the current selected network.
+   *
+   * @param {string} amount - The amount of ether desired, as a base 10 string.
+   */
+  buyEth (amount) {
+    if (!amount) {
+      amount = '5'
+    }
+    const network = this.networkController.getNetworkState()
+    const url = getBuyEthUrl({ network, amount })
+    if (url) {
+      this.platform.openTab({ url })
+    }
+  }
+
+  /**
+   * A method for selecting a custom URL for an ethereum RPC provider and updating it
+   * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
+   * @param {string} chainId - The chainId of the selected network.
+   * @param {string} ticker - The ticker symbol of the selected network.
+   * @param {string} nickname - Optional nickname of the selected network.
+   * @returns {Promise<String>} - The RPC Target URL confirmed.
+   */
+  async updateAndSetCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname, rpcPrefs) {
+    await this.preferencesController.updateRpc({ rpcUrl, chainId, ticker, nickname, rpcPrefs })
+    this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+    return rpcUrl
+  }
+
+
+  /**
+   * A method for selecting a custom URL for an ethereum RPC provider.
+   * @param {string} rpcUrl - A URL for a valid Ethereum RPC API.
+   * @param {string} chainId - The chainId of the selected network.
+   * @param {string} ticker - The ticker symbol of the selected network.
+   * @param {string} nickname - Optional nickname of the selected network.
+   * @returns {Promise<String>} - The RPC Target URL confirmed.
+   */
+  async setCustomRpc (rpcUrl, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
+    const frequentRpcListDetail = this.preferencesController.getFrequentRpcListDetail()
+    const rpcSettings = frequentRpcListDetail.find((rpc) => rpcUrl === rpc.rpcUrl)
+
+    if (rpcSettings) {
+      this.networkController.setRpcTarget(rpcSettings.rpcUrl, rpcSettings.chainId, rpcSettings.ticker, rpcSettings.nickname, rpcPrefs)
+    } else {
+      this.networkController.setRpcTarget(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+      await this.preferencesController.addToFrequentRpcList(rpcUrl, chainId, ticker, nickname, rpcPrefs)
+    }
+    return rpcUrl
+  }
+
+  /**
+   * A method for deleting a selected custom URL.
+   * @param {string} rpcUrl - A RPC URL to delete.
+   */
+  async delCustomRpc (rpcUrl) {
+    await this.preferencesController.removeFromFrequentRpcList(rpcUrl)
+  }
+
+  /**
+   * Sets whether or not to use the blockie identicon format.
+   * @param {boolean} val - True for bockie, false for jazzicon.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setUseBlockie (val, cb) {
+    try {
+      this.preferencesController.setUseBlockie(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not to use the nonce field.
+   * @param {boolean} val - True for nonce field, false for not nonce field.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setUseNonceField (val, cb) {
+    try {
+      this.preferencesController.setUseNonceField(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not to use phishing detection.
+   * @param {boolean} val
+   * @param {Function} cb
+   */
+  setUsePhishDetect (val, cb) {
+    try {
+      this.preferencesController.setUsePhishDetect(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets the IPFS gateway to use for ENS content resolution.
+   * @param {string} val - the host of the gateway to set
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setIpfsGateway (val, cb) {
+    try {
+      this.preferencesController.setIpfsGateway(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets whether or not the user will have usage data tracked with MetaMetrics
+   * @param {boolean} bool - True for users that wish to opt-in, false for users that wish to remain out.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setParticipateInMetaMetrics (bool, cb) {
+    try {
+      const metaMetricsId = this.preferencesController.setParticipateInMetaMetrics(bool)
+      cb(null, metaMetricsId)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  setMetaMetricsSendCount (val, cb) {
+    try {
+      this.preferencesController.setMetaMetricsSendCount(val)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * Sets the type of first time flow the user wishes to follow: create or import
+   * @param {string} type - Indicates the type of first time flow the user wishes to follow
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setFirstTimeFlowType (type, cb) {
+    try {
+      this.preferencesController.setFirstTimeFlowType(type)
+      cb(null)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+
+  /**
+   * A method for setting a user's current locale, affecting the language rendered.
+   * @param {string} key - Locale identifier.
+   * @param {Function} cb - A callback function called when complete.
+   */
+  setCurrentLocale (key, cb) {
+    try {
+      const direction = this.preferencesController.setCurrentLocale(key)
+      cb(null, direction)
+      return
+    } catch (err) {
+      cb(err)
+      return
+    }
+  }
+
+  /**
+   * A method for checking if the current keyringController is the Brave
+   * legacy kind (24 words)
+   */
+  hasBraveKeyring () {
+    try {
+      return !!this.keyringController.store.getState().argonParams
+    } catch (err) {
+      log.error(err)
+      return false
+    }
+  }
+
+  /**
+   * A method for initializing storage the first time.
+   * @param {Object} initState - The default state to initialize with.
+   * @private
+   */
+  recordFirstTimeInfo (initState) {
+    if (!('firstTimeInfo' in initState)) {
+      initState.firstTimeInfo = {
+        version,
+        date: Date.now(),
+      }
+    }
+  }
+
+  // TODO: Replace isClientOpen methods with `controllerConnectionChanged` events.
+  /**
+   * A method for recording whether the MetaMask user interface is open or not.
+   * @private
+   * @param {boolean} open
+   */
+  set isClientOpen (open) {
+    this._isClientOpen = open
+    this.detectTokensController.isOpen = open
+  }
+
+  get isClientActivated () {
+    return this._isClientActivated
+  }
+
+  set isClientActivated (activated) {
+    // Make sure this is a real update
+    if (this._isClientActivated === activated) {
+      return
+    }
+    this._isClientActivated = activated
+    if (activated) {
+      log.trace('Starting account tracker because client is active')
+      this.accountTracker.start()
+    } else {
+      log.trace('Stopping account tracker because client is not active')
+      this.accountTracker.stop()
+    }
+  }
+
+  /**
+  * Creates RPC engine middleware for processing eth_signTypedData requests
+  *
+  * @param {Object} req - request object
+  * @param {Object} res - response object
+  * @param {Function} - next
+  * @param {Function} - end
+  */
+
+  /**
+   * Adds a domain to the PhishingController safelist
+   * @param {string} hostname - the domain to safelist
+   */
+  safelistPhishingDomain (hostname) {
+    return this.phishingController.bypass(hostname)
+  }
+
+  /**
+   * Locks MetaMask
+   */
+  setLocked () {
+    return this.keyringController.setLocked()
+  }
+}

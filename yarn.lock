@@ -1179,23 +1179,6 @@
 "@ethersproject/basex@5.0.9", "@ethersproject/basex@^5.0.7":
   version "5.0.9"
   integrity sha512-FANswl1IN3PS0eltQxH2aM2+utPrkLUVG4XVFi6SafRG9EpAqXCgycxC8PU90mPGhigYTpg9cnTB5mCZ6ejQjw==
-=======
-"@ethersproject/base64@5.0.8", "@ethersproject/base64@^5.0.7":
-    "@ethersproject/properties" "^5.0.7"
-
-    "@ethersproject/abi" "^5.0.10"
-    "@ethersproject/abstract-provider" "^5.0.8"
-    "@ethersproject/abstract-signer" "^5.0.10"
-    "@ethersproject/bignumber" "^5.0.13"
-    "@ethersproject/bytes" "^5.0.9"
-    "@ethersproject/constants" "^5.0.8"
-    "@ethersproject/logger" "^5.0.8"
-    "@ethersproject/properties" "^5.0.7"
-
-"@ethersproject/hash@5.0.12", "@ethersproject/hash@>=5.0.0-beta.128", "@ethersproject/hash@^5.0.10":
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/@ethersproject/hash/-/hash-5.0.12.tgz#1074599f7509e2ca2bb7a3d4f4e39ab3a796da42"
-  integrity sha512-kn4QN+fhNFbUgX3XZTZUaQixi0oyfIEY+hfW+KtkHu+rq7dV76oAIvaLEEynu1/4npOL38E4X4YI42gGZk+C0Q==
   dependencies:
     "@ethersproject/abstract-signer" "^5.0.10"
     "@ethersproject/address" "^5.0.9"
@@ -1350,9 +1333,18 @@
 
 "@ethersproject/signing-key@5.0.11", "@ethersproject/signing-key@^5.0.8":
   version "5.0.11"
-  resolved "https://registry.yarnpkg.com/@ethersproject/wallet/-/wallet-5.0.11.tgz#9891936089d1b91e22ed59f850bc344b1544bf26"
-  integrity sha512-2Fg/DOvUltR7aZTOyWWlQhru+SKvq2UE3uEhXSyCFgMqDQNuc2nHXh1SHJtN65jsEbjVIppOe1Q7EQMvhmeeRw==
->>>>>>> 3346869d2... feature: inital draft of swaps controller
+  resolved "https://registry.yarnpkg.com/@ethersproject/units/-/units-5.0.11.tgz#f82f6e353ac0d6fa43b17337790f1f9aa72cb4c8"
+  integrity sha512-nOSPmcCWyB/dwoBRhhTtPGCsTbiXqmc7Q0Adwvafc432AC7hy3Fj3IFZtnSXsbtJ/GdHCIUIoA8gtvxSsFuBJg==
+  dependencies:
+    "@ethersproject/bignumber" "^5.0.13"
+    "@ethersproject/constants" "^5.0.8"
+    "@ethersproject/logger" "^5.0.8"
+
+"@ethersproject/wallet@5.0.12":
+  version "5.0.12"
+  resolved "https://registry.yarnpkg.com/@ethersproject/wallet/-/wallet-5.0.12.tgz#bfb96f95e066b4b1b4591c4615207b87afedda8b"
+  integrity sha512-rboJebGf47/KPZrKZQdYg9BAYuXbc/OwcUyML1K1f2jnJeo1ObWV11U1PAWTjTbhhSy6/Fg+34GO2yMb5Dt1Rw==
+>>>>>>> 298e543ef... feature: adds swaps ui
   dependencies:
     "@ethersproject/abstract-provider" "^5.0.8"
     "@ethersproject/abstract-signer" "^5.0.10"
@@ -1369,10 +1361,10 @@
     "@ethersproject/transactions" "^5.0.9"
     "@ethersproject/wordlists" "^5.0.8"
 
-"@ethersproject/web@5.0.13", "@ethersproject/web@^5.0.12":
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/@ethersproject/web/-/web-5.0.13.tgz#5a92ac6d835d2ebce95b6b645a86668736e2f532"
-  integrity sha512-G3x/Ns7pQm21ALnWLbdBI5XkW/jrsbXXffI9hKNPHqf59mTxHYtlNiSwxdoTSwCef3Hn7uvGZpaSgTyxs7IufQ==
+"@ethersproject/web@5.0.14", "@ethersproject/web@^5.0.12":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@ethersproject/web/-/web-5.0.14.tgz#6e7bebdd9fb967cb25ee60f44d9218dc0803bac4"
+  integrity sha512-QpTgplslwZ0Sp9oKNLoRuS6TKxnkwfaEk3gr7zd7XLF8XBsYejsrQO/03fNfnMx/TAT/RR6WEw/mbOwpRSeVRA==
   dependencies:
     "@ethersproject/base64" "^5.0.7"
     "@ethersproject/bytes" "^5.0.9"
@@ -1380,10 +1372,10 @@
     "@ethersproject/properties" "^5.0.7"
     "@ethersproject/strings" "^5.0.8"
 
-"@ethersproject/wordlists@5.0.9", "@ethersproject/wordlists@^5.0.8":
-  version "5.0.9"
-  resolved "https://registry.yarnpkg.com/@ethersproject/wordlists/-/wordlists-5.0.9.tgz#f16cc0b317637c3ae9c689ebd7bc2cbbffadd013"
-  integrity sha512-Sn6MTjZkfbriod6GG6+p43W09HOXT4gwcDVNj0YoPYlo4Zq2Fk6b1CU9KUX3c6aI17PrgYb4qwZm5BMuORyqyQ==
+"@ethersproject/wordlists@5.0.10", "@ethersproject/wordlists@^5.0.8":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@ethersproject/wordlists/-/wordlists-5.0.10.tgz#177b9a0b4d72b9c4f304d08b36612d6c60e9b896"
+  integrity sha512-jWsEm1iJzpg9SCXnNfFz+tcp4Ofzv0TJb6mj+soCNcar9GcT0yGz62ZsHC3pLQWaF4LkCzGwRJHJTXKjHQfG1A==
   dependencies:
     "@ethersproject/bytes" "^5.0.9"
     "@ethersproject/hash" "^5.0.10"
@@ -9855,40 +9847,40 @@ ethereumjs-wallet@0.6.5, ethereumjs-wallet@^0.6.0, ethereumjs-wallet@^0.6.3, eth
     uuid "^3.3.2"
 
 ethers@^5.0.31:
-  version "5.0.31"
-  resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.0.31.tgz#60e3b1425864fe5d2babc147ede01be8382a7d2a"
-  integrity sha512-zpq0YbNFLFn+t+ibS8UkVWFeK5w6rVMSvbSHrHAQslfazovLnQ/mc2gdN5+6P45/k8fPgHrfHrYvJ4XvyK/S1A==
+  version "5.0.32"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.0.32.tgz#f009970be31d96a589bf0ce597a39c10c7e297a6"
+  integrity sha512-rORfGWR0HsA4pjKMMcWZorw12DHsXqfIAuPVHJsXt+vI24jvXcVqx+rLsSvgOoLdaCMdxiN5qlIq2+4axKG31g==
   dependencies:
-    "@ethersproject/abi" "5.0.12"
-    "@ethersproject/abstract-provider" "5.0.9"
-    "@ethersproject/abstract-signer" "5.0.13"
-    "@ethersproject/address" "5.0.10"
-    "@ethersproject/base64" "5.0.8"
-    "@ethersproject/basex" "5.0.8"
-    "@ethersproject/bignumber" "5.0.14"
-    "@ethersproject/bytes" "5.0.10"
-    "@ethersproject/constants" "5.0.9"
-    "@ethersproject/contracts" "5.0.11"
-    "@ethersproject/hash" "5.0.11"
-    "@ethersproject/hdnode" "5.0.9"
-    "@ethersproject/json-wallets" "5.0.11"
-    "@ethersproject/keccak256" "5.0.8"
-    "@ethersproject/logger" "5.0.9"
-    "@ethersproject/networks" "5.0.8"
-    "@ethersproject/pbkdf2" "5.0.8"
-    "@ethersproject/properties" "5.0.8"
-    "@ethersproject/providers" "5.0.23"
-    "@ethersproject/random" "5.0.8"
-    "@ethersproject/rlp" "5.0.8"
-    "@ethersproject/sha2" "5.0.8"
-    "@ethersproject/signing-key" "5.0.10"
-    "@ethersproject/solidity" "5.0.9"
-    "@ethersproject/strings" "5.0.9"
-    "@ethersproject/transactions" "5.0.10"
-    "@ethersproject/units" "5.0.10"
-    "@ethersproject/wallet" "5.0.11"
-    "@ethersproject/web" "5.0.13"
-    "@ethersproject/wordlists" "5.0.9"
+    "@ethersproject/abi" "5.0.13"
+    "@ethersproject/abstract-provider" "5.0.10"
+    "@ethersproject/abstract-signer" "5.0.14"
+    "@ethersproject/address" "5.0.11"
+    "@ethersproject/base64" "5.0.9"
+    "@ethersproject/basex" "5.0.9"
+    "@ethersproject/bignumber" "5.0.15"
+    "@ethersproject/bytes" "5.0.11"
+    "@ethersproject/constants" "5.0.10"
+    "@ethersproject/contracts" "5.0.12"
+    "@ethersproject/hash" "5.0.12"
+    "@ethersproject/hdnode" "5.0.10"
+    "@ethersproject/json-wallets" "5.0.12"
+    "@ethersproject/keccak256" "5.0.9"
+    "@ethersproject/logger" "5.0.10"
+    "@ethersproject/networks" "5.0.9"
+    "@ethersproject/pbkdf2" "5.0.9"
+    "@ethersproject/properties" "5.0.9"
+    "@ethersproject/providers" "5.0.24"
+    "@ethersproject/random" "5.0.9"
+    "@ethersproject/rlp" "5.0.9"
+    "@ethersproject/sha2" "5.0.9"
+    "@ethersproject/signing-key" "5.0.11"
+    "@ethersproject/solidity" "5.0.10"
+    "@ethersproject/strings" "5.0.10"
+    "@ethersproject/transactions" "5.0.11"
+    "@ethersproject/units" "5.0.11"
+    "@ethersproject/wallet" "5.0.12"
+    "@ethersproject/web" "5.0.14"
+    "@ethersproject/wordlists" "5.0.10"
 
 ethjs-abi@0.2.0:
   version "0.2.0"

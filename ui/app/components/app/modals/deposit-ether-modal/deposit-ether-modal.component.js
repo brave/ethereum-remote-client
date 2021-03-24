@@ -11,6 +11,8 @@ export default class DepositEtherModal extends Component {
 
   static propTypes = {
     network: PropTypes.string.isRequired,
+    toWyre: PropTypes.func.isRequired,
+    address: PropTypes.string.isRequired,
     toFaucet: PropTypes.func.isRequired,
     hideWarning: PropTypes.func.isRequired,
     hideModal: PropTypes.func.isRequired,
@@ -75,10 +77,10 @@ export default class DepositEtherModal extends Component {
   }
 
   render () {
-    const { network, toFaucet } = this.props
-
-    const isTestNetwork = ['3', '4', '5', '42'].find((n) => n === network)
+    const { network, toWyre, address, toFaucet } = this.props
     const networkName = getNetworkDisplayName(network)
+    const isTestNetwork = [3, 4, 5, 42].find((n) => n === Number(network))
+
 
     return (
       <div
@@ -123,8 +125,33 @@ export default class DepositEtherModal extends Component {
               title: this.context.t('testFaucet'),
               text: this.faucetRowText(networkName),
               buttonLabel: this.context.t('getEther'),
-              onButtonClick: () => toFaucet(network),
+              onButtonClick: () => toFaucet(Number(network).toString()),
               hide: !isTestNetwork,
+            })}
+            {this.renderRow({
+              logo: (
+                <div
+                  className="deposit-ether-modal__logo"
+                  style={{
+                    backgroundImage: "url('./images/wyre.svg')",
+                    height: '40px',
+                  }}
+                />
+              ),
+              title: this.context.t('buyWithWyre'),
+              text: this.context.t('buyWithWyreDescription'),
+              buttonLabel: this.context.t('continueToWyre'),
+              onButtonClick: () => {
+                this.context.metricsEvent({
+                  eventOpts: {
+                    category: 'Accounts',
+                    action: 'Deposit Ether',
+                    name: 'Click buy Ether via Wyre',
+                  },
+                })
+                toWyre(address)
+              },
+              hide: isTestNetwork,
             })}
           </div>
         </div>

@@ -269,6 +269,11 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+    case actionConstants.CLEAR_SWAP:
+      return {
+        ...metamaskState,
+      }
+
     case actionConstants.UPDATE_TRANSACTION_PARAMS:
       const { id: txId, value } = action
       let { currentNetworkTxList } = metamaskState

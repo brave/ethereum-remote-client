@@ -66,6 +66,7 @@
   .transaction-list-item-details__body,
   .send__select-recipient-wrapper__group-label,
   .send-v2__asset-dropdown,
+  .swap__asset-dropdown,
   .unit-input,
   .send__dialog.dialog--message,
   .ens-input__wrapper--valid,
@@ -91,6 +92,16 @@
   .send-v2__asset-dropdown__list {
     * {
       background: #282828;
+    }
+  }
+
+  .swap__asset-dropdown-to,
+  .swap__asset-dropdown-from {
+    .dropdown {
+      background-image: url('/images/icons/caret-down-dark.svg');
+      background-repeat: no-repeat, repeat;
+      background-position: right 18px top 50%;
+      color: #fff;
     }
   }
 

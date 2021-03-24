@@ -52,7 +52,6 @@ import {
   SEND_ROUTE,
   SWAP_ROUTE,
   SETTINGS_ROUTE,
-  SWAP_ROUTE,
   UNLOCK_ROUTE,
 } from '../../helpers/constants/routes'
 

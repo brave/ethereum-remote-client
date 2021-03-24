@@ -154,7 +154,6 @@ export function getSwapToAccounts (state) {
   const addressBookAccounts = getAddressBook(state)
   return [...fromAccounts, ...addressBookAccounts]
 }
-
 export function getSwapTokenBalance (state) {
   return state.metamask.swap.tokenBalance
 }

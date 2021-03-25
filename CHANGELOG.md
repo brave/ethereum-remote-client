@@ -1,6 +1,6 @@
 # Changelog
 
-## Remote Component([0.1.89](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.89)), Browser Component: `1.0.28`(24-Mar-2021)
+## Remote Component([0.1.89](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.89)), Browser Component: `1.0.28`(25-Mar-2021)
 
  - [brave-browser#14701](https://github.com/brave/brave-browser/issues/14701) - Added the ability to buy Crypto using Wyre
  - [brave-browser#14566](https://github.com/brave/brave-browser/issues/14566) - Fixed missing deposit transactions from activity list 

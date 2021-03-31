@@ -5,6 +5,9 @@ import PageContainerHeader from '../../../components/ui/page-container/page-cont
 export default class SwapHeader extends Component {
 
   static propTypes = {
+    clearSwap: PropTypes.func,
+    history: PropTypes.object,
+    mostRecentOverviewPage: PropTypes.string,
     titleKey: PropTypes.string,
   }
 
@@ -12,11 +15,19 @@ export default class SwapHeader extends Component {
     t: PropTypes.func,
   }
 
+  onClose () {
+    const { clearSwap, history, mostRecentOverviewPage } = this.props
+    clearSwap()
+    history.push(mostRecentOverviewPage)
+  }
+
   render () {
     return (
       <PageContainerHeader
         className="swap__header"
+        onClose={() => this.onClose()}
         title={this.context.t(this.props.titleKey)}
+        headerCloseText={this.context.t('cancel')}
       />
     )
   }

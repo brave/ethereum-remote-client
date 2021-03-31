@@ -186,6 +186,17 @@ export function accountsWithSendEtherInfoSelector (state) {
   return accountsWithSendEtherInfo
 }
 
+export function accountsWithSwapEtherInfoSelector (state) {
+  const accounts = getMetaMaskAccounts(state)
+  const identities = getMetaMaskIdentities(state)
+
+  const accountsWithSwapEtherInfo = Object.entries(identities).map(([key, identity]) => {
+    return Object.assign({}, identity, accounts[key])
+  })
+
+  return accountsWithSwapEtherInfo
+}
+
 export function getAccountsWithLabels (state) {
   return getMetaMaskAccountsOrdered(state).map(({ address, name, balance }) => ({
     address,

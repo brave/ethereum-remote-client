@@ -6,29 +6,29 @@ let mapDispatchToProps
 
 const actionSpies = {
   setMaxModeTo: sinon.spy(),
-  updateSendAmount: sinon.spy(),
+  updateSwapAmount: sinon.spy(),
 }
 const duckActionSpies = {
-  updateSendErrors: sinon.spy(),
+  updateSwapErrors: sinon.spy(),
 }
 
-proxyquire('../send-amount-row.container.js', {
+proxyquire('../swap-amount-row.container.js', {
   'react-redux': {
     connect: (_, md) => {
       mapDispatchToProps = md
       return () => ({})
     },
   },
-  '../../../../selectors': { sendAmountIsInError: (s) => `mockInError:${s}` },
-  '../../send.utils': {
+  '../../../../selectors': { swapAmountIsInError: (s) => `mockInError:${s}` },
+  '../../swap.utils': {
     getAmountErrorObject: (mockDataObject) => ({ ...mockDataObject, mockChange: true }),
     getGasFeeErrorObject: (mockDataObject) => ({ ...mockDataObject, mockGasFeeErrorChange: true }),
   },
   '../../../../store/actions': actionSpies,
-  '../../../../ducks/send/send.duck': duckActionSpies,
+  '../../../../ducks/swap/swap.duck': duckActionSpies,
 })
 
-describe('send-amount-row container', function () {
+describe('swap-amount-row container', function () {
 
   describe('mapDispatchToProps()', function () {
     let dispatchSpy
@@ -37,7 +37,7 @@ describe('send-amount-row container', function () {
     beforeEach(function () {
       dispatchSpy = sinon.spy()
       mapDispatchToPropsObject = mapDispatchToProps(dispatchSpy)
-      duckActionSpies.updateSendErrors.resetHistory()
+      duckActionSpies.updateSwapErrors.resetHistory()
     })
 
     describe('setMaxModeTo()', function () {
@@ -52,13 +52,13 @@ describe('send-amount-row container', function () {
       })
     })
 
-    describe('updateSendAmount()', function () {
+    describe('updateSwapAmount()', function () {
       it('should dispatch an action', function () {
-        mapDispatchToPropsObject.updateSendAmount('mockAmount')
+        mapDispatchToPropsObject.updateSwapAmount('mockAmount')
         assert(dispatchSpy.calledOnce)
-        assert(actionSpies.updateSendAmount.calledOnce)
+        assert(actionSpies.updateSwapAmount.calledOnce)
         assert.equal(
-          actionSpies.updateSendAmount.getCall(0).args[0],
+          actionSpies.updateSwapAmount.getCall(0).args[0],
           'mockAmount',
         )
       })
@@ -68,21 +68,21 @@ describe('send-amount-row container', function () {
       it('should dispatch an action', function () {
         mapDispatchToPropsObject.updateGasFeeError({ some: 'data' })
         assert(dispatchSpy.calledOnce)
-        assert(duckActionSpies.updateSendErrors.calledOnce)
+        assert(duckActionSpies.updateSwapErrors.calledOnce)
         assert.deepEqual(
-          duckActionSpies.updateSendErrors.getCall(0).args[0],
+          duckActionSpies.updateSwapErrors.getCall(0).args[0],
           { some: 'data', mockGasFeeErrorChange: true },
         )
       })
     })
 
-    describe('updateSendAmountError()', function () {
+    describe('updateSwapAmountError()', function () {
       it('should dispatch an action', function () {
-        mapDispatchToPropsObject.updateSendAmountError({ some: 'data' })
+        mapDispatchToPropsObject.updateSwapAmountError({ some: 'data' })
         assert(dispatchSpy.calledOnce)
-        assert(duckActionSpies.updateSendErrors.calledOnce)
+        assert(duckActionSpies.updateSwapErrors.calledOnce)
         assert.deepEqual(
-          duckActionSpies.updateSendErrors.getCall(0).args[0],
+          duckActionSpies.updateSwapErrors.getCall(0).args[0],
           { some: 'data', mockChange: true },
         )
       })

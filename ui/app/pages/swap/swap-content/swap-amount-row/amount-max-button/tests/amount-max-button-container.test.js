@@ -7,10 +7,10 @@ let mapDispatchToProps
 
 const actionSpies = {
   setMaxModeTo: sinon.spy(),
-  updateSendAmount: sinon.spy(),
+  updateSwapAmount: sinon.spy(),
 }
 const duckActionSpies = {
-  updateSendErrors: sinon.spy(),
+  updateSwapErrors: sinon.spy(),
 }
 
 proxyquire('../amount-max-button.container.js', {
@@ -23,15 +23,15 @@ proxyquire('../amount-max-button.container.js', {
   },
   '../../../../../selectors': {
     getGasTotal: (s) => `mockGasTotal:${s}`,
-    getSendToken: (s) => `mockSendToken:${s}`,
-    getSendFromBalance: (s) => `mockBalance:${s}`,
-    getTokenBalance: (s) => `mockTokenBalance:${s}`,
-    getSendMaxModeState: (s) => `mockMaxModeOn:${s}`,
+    getSwapToken: (s) => `mockSwapToken:${s}`,
+    getSwapFromBalance: (s) => `mockBalance:${s}`,
+    getSwapTokenBalance: (s) => `mockTokenBalance:${s}`,
+    getSwapMaxModeState: (s) => `mockMaxModeOn:${s}`,
     getBasicGasEstimateLoadingStatus: (s) => `mockButtonDataLoading:${s}`,
   },
   './amount-max-button.utils.js': { calcMaxAmount: (mockObj) => mockObj.val + 1 },
   '../../../../../store/actions': actionSpies,
-  '../../../../../ducks/send/send.duck': duckActionSpies,
+  '../../../../../ducks/swap/swap.duck': duckActionSpies,
 })
 
 describe('amount-max-button container', function () {
@@ -44,7 +44,7 @@ describe('amount-max-button container', function () {
         buttonDataLoading: 'mockButtonDataLoading:mockState',
         gasTotal: 'mockGasTotal:mockState',
         maxModeOn: 'mockMaxModeOn:mockState',
-        sendToken: 'mockSendToken:mockState',
+        swapToken: 'mockSwapToken:mockState',
         tokenBalance: 'mockTokenBalance:mockState',
       })
     })
@@ -64,14 +64,14 @@ describe('amount-max-button container', function () {
       it('should dispatch an action', function () {
         mapDispatchToPropsObject.setAmountToMax({ val: 11, foo: 'bar' })
         assert(dispatchSpy.calledTwice)
-        assert(duckActionSpies.updateSendErrors.calledOnce)
+        assert(duckActionSpies.updateSwapErrors.calledOnce)
         assert.deepEqual(
-          duckActionSpies.updateSendErrors.getCall(0).args[0],
+          duckActionSpies.updateSwapErrors.getCall(0).args[0],
           { amount: null },
         )
-        assert(actionSpies.updateSendAmount.calledOnce)
+        assert(actionSpies.updateSwapAmount.calledOnce)
         assert.equal(
-          actionSpies.updateSendAmount.getCall(0).args[0],
+          actionSpies.updateSwapAmount.getCall(0).args[0],
           12,
         )
       })

@@ -35,6 +35,22 @@ export default function reduceMetamask (state = {}, action) {
       ensResolution: null,
       ensResolutionError: '',
     },
+    swap: {
+      gasLimit: null,
+      gasPrice: null,
+      gasTotal: null,
+      tokenBalance: '0x0',
+      from: '',
+      to: '',
+      amount: '0',
+      memo: '',
+      errors: {},
+      maxModeOn: false,
+      editingTransactionId: null,
+      toNickname: '',
+      ensResolution: null,
+      ensResolutionError: '',
+    },
     useBlockie: false,
     featureFlags: {},
     welcomeScreenSeen: false,
@@ -230,6 +246,35 @@ export default function reduceMetamask (state = {}, action) {
         send: newSend,
       })
 
+      case actionConstants.UPDATE_SWAP_TOKEN:
+        const newSwap = {
+          ...metamaskState.swap,
+          token: action.value,
+        }
+        // erase token-related state when switching back to native currency
+        if (newSwap.editingTransactionId && !newSwap.token) {
+          const unapprovedTx = newSwap?.unapprovedTxs?.[newSwap.editingTransactionId] || {}
+          const txParams = unapprovedTx.txParams || {}
+          Object.assign(newSwap, {
+            tokenBalance: null,
+            balance: '0',
+            from: unapprovedTx.from || '',
+            unapprovedTxs: {
+              ...newSwap.unapprovedTxs,
+              [newSwap.editingTransactionId]: {
+                ...unapprovedTx,
+                txParams: {
+                  ...txParams,
+                  data: '',
+                },
+              },
+            },
+          })
+        }
+        return Object.assign(metamaskState, {
+          swap: newSwap,
+        })
+
     case actionConstants.UPDATE_SEND_ENS_RESOLUTION:
       return {
         ...metamaskState,
@@ -250,6 +295,26 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+      case actionConstants.UPDATE_SWAP_ENS_RESOLUTION:
+        return {
+          ...metamaskState,
+          swap: {
+            ...metamaskState.send,
+            ensResolution: action.payload,
+            ensResolutionError: '',
+          },
+        }
+  
+      case actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR:
+        return {
+          ...metamaskState,
+          swap: {
+            ...metamaskState.send,
+            ensResolution: null,
+            ensResolutionError: action.payload,
+          },
+        }
+
     case actionConstants.CLEAR_SEND:
       return {
         ...metamaskState,
@@ -269,11 +334,25 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
-    case actionConstants.CLEAR_SWAP:
-      return {
-        ...metamaskState,
-      }
-
+      case actionConstants.CLEAR_SWAP:
+        return {
+          ...metamaskState,
+          swap: {
+            gasLimit: null,
+            gasPrice: null,
+            gasTotal: null,
+            tokenBalance: null,
+            from: '',
+            to: '',
+            amount: '0x0',
+            memo: '',
+            errors: {},
+            maxModeOn: false,
+            editingTransactionId: null,
+            toNickname: '',
+          },
+        }
+  
     case actionConstants.UPDATE_TRANSACTION_PARAMS:
       const { id: txId, value } = action
       let { currentNetworkTxList } = metamaskState

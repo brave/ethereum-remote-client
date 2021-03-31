@@ -1,21 +1,21 @@
 import { connect } from 'react-redux'
 import {
-  getSendEnsResolution,
-  getSendEnsResolutionError,
-  accountsWithSendEtherInfoSelector,
+  getSwapEnsResolution,
+  getSwapEnsResolutionError,
+  accountsWithSwapEtherInfoSelector,
   getAddressBook,
   getAddressBookEntry,
 } from '../../../../selectors'
 
 import {
-  updateSendTo,
+  updateSwapTo,
 } from '../../../../store/actions'
 import AddRecipient from './add-recipient.component'
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddRecipient)
 
 function mapStateToProps (state) {
-  const ensResolution = getSendEnsResolution(state)
+  const ensResolution = getSwapEnsResolution(state)
 
   let addressBookEntryName = ''
   if (ensResolution) {
@@ -26,11 +26,11 @@ function mapStateToProps (state) {
   const addressBook = getAddressBook(state)
 
   return {
-    ownedAccounts: accountsWithSendEtherInfoSelector(state),
+    ownedAccounts: accountsWithSwapEtherInfoSelector(state),
     addressBook,
     ensResolution,
     addressBookEntryName,
-    ensResolutionError: getSendEnsResolutionError(state),
+    ensResolutionError: getSwapEnsResolutionError(state),
     contacts: addressBook.filter(({ name }) => !!name),
     nonContacts: addressBook.filter(({ name }) => !name),
   }
@@ -38,6 +38,6 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    updateSendTo: (to, nickname) => dispatch(updateSendTo(to, nickname)),
+    updateSwapTo: (to, nickname) => dispatch(updateSwapTo(to, nickname)),
   }
 }

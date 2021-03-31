@@ -79,12 +79,14 @@ export default class EnsInput extends Component {
   }
 
   resetInput = () => {
-    const { updateEnsResolution, updateEnsResolutionError, onReset } = this.props
+    const { updateSwapEnsResolution, updateSwapEnsResolutionError, onReset } = this.props
     this.onChange({ target: { value: '' } })
     onReset()
-    updateEnsResolution('')
-    updateEnsResolutionError('')
+    updateSwapEnsResolution('')
+    updateSwapEnsResolutionError('')
   }
+
+  
 
   lookupCnsName = (recipient) => {
     recipient = recipient.trim()

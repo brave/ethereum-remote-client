@@ -25,7 +25,7 @@ describe('AmountMaxButton Component', function () {
         balance="mockBalance"
         gasTotal="mockGasTotal"
         maxModeOn={false}
-        sendToken={ { address: 'mockTokenAddress' } }
+        swapToken={ { address: 'mockTokenAddress' } }
         setAmountToMax={propsMethodSpies.setAmountToMax}
         setMaxModeTo={propsMethodSpies.setMaxModeTo}
         tokenBalance="mockTokenBalance"
@@ -60,7 +60,7 @@ describe('AmountMaxButton Component', function () {
         [{
           balance: 'mockBalance',
           gasTotal: 'mockGasTotal',
-          sendToken: { address: 'mockTokenAddress' },
+          swapToken: { address: 'mockTokenAddress' },
           tokenBalance: 'mockTokenBalance',
         }],
       )
@@ -69,14 +69,14 @@ describe('AmountMaxButton Component', function () {
   })
 
   describe('render', function () {
-    it('should render an element with a send-v2__amount-max class', function () {
-      assert(wrapper.exists('.send-v2__amount-max'))
+    it('should render an element with a swap-v2__amount-max class', function () {
+      assert(wrapper.exists('.swap-v2__amount-max'))
     })
 
     it('should call setMaxModeTo and setMaxAmount when the checkbox is checked', function () {
       const {
         onClick,
-      } = wrapper.find('.send-v2__amount-max').props()
+      } = wrapper.find('.swap-v2__amount-max').props()
 
       assert.equal(AmountMaxButton.prototype.setMaxAmount.callCount, 0)
       assert.equal(propsMethodSpies.setMaxModeTo.callCount, 0)
@@ -91,7 +91,7 @@ describe('AmountMaxButton Component', function () {
 
     it('should render the expected text when maxModeOn is false', function () {
       wrapper.setProps({ maxModeOn: false })
-      assert.equal(wrapper.find('.send-v2__amount-max').text(), 'max_t')
+      assert.equal(wrapper.find('.swap-v2__amount-max').text(), 'max_t')
     })
   })
 })

@@ -2,34 +2,34 @@ import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
-import SendAmountRow from '../send-amount-row.component.js'
+import SwapAmountRow from '../swap-amount-row.component.js'
 
-import SendRowWrapper from '../../send-row-wrapper/send-row-wrapper.component'
+import SwapRowWrapper from '../../swap-row-wrapper/swap-row-wrapper.component'
 import AmountMaxButton from '../amount-max-button/amount-max-button.container'
 import UserPreferencedTokenInput from '../../../../../components/app/user-preferenced-token-input'
 
-describe('SendAmountRow Component', function () {
+describe('SwapAmountRow Component', function () {
   describe('validateAmount', function () {
-    it('should call updateSendAmountError with the correct params', function () {
-      const { instance, propsMethodSpies: { updateSendAmountError } } = shallowRenderSendAmountRow()
+    it('should call updateSwapAmountError with the correct params', function () {
+      const { instance, propsMethodSpies: { updateSwapAmountError } } = shallowRenderSwapAmountRow()
 
-      assert.equal(updateSendAmountError.callCount, 0)
+      assert.equal(updateSwapAmountError.callCount, 0)
 
       instance.validateAmount('someAmount')
 
-      assert.ok(updateSendAmountError.calledOnceWithExactly({
+      assert.ok(updateSwapAmountError.calledOnceWithExactly({
         amount: 'someAmount',
         balance: 'mockBalance',
         conversionRate: 7,
         gasTotal: 'mockGasTotal',
         primaryCurrency: 'mockPrimaryCurrency',
-        sendToken: { address: 'mockTokenAddress' },
+        swapToken: { address: 'mockTokenAddress' },
         tokenBalance: 'mockTokenBalance',
       }))
     })
 
-    it('should call updateGasFeeError if sendToken is truthy', function () {
-      const { instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSendAmountRow()
+    it('should call updateGasFeeError if swapToken is truthy', function () {
+      const { instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
 
       assert.equal(updateGasFeeError.callCount, 0)
 
@@ -40,15 +40,15 @@ describe('SendAmountRow Component', function () {
         conversionRate: 7,
         gasTotal: 'mockGasTotal',
         primaryCurrency: 'mockPrimaryCurrency',
-        sendToken: { address: 'mockTokenAddress' },
+        swapToken: { address: 'mockTokenAddress' },
         tokenBalance: 'mockTokenBalance',
       }))
     })
 
-    it('should call not updateGasFeeError if sendToken is falsey', function () {
-      const { wrapper, instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSendAmountRow()
+    it('should call not updateGasFeeError if swapToken is falsey', function () {
+      const { wrapper, instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
 
-      wrapper.setProps({ sendToken: null })
+      wrapper.setProps({ swapToken: null })
 
       assert.equal(updateGasFeeError.callCount, 0)
 
@@ -62,7 +62,7 @@ describe('SendAmountRow Component', function () {
   describe('updateAmount', function () {
 
     it('should call setMaxModeTo', function () {
-      const { instance, propsMethodSpies: { setMaxModeTo } } = shallowRenderSendAmountRow()
+      const { instance, propsMethodSpies: { setMaxModeTo } } = shallowRenderSwapAmountRow()
 
       assert.equal(setMaxModeTo.callCount, 0)
 
@@ -71,57 +71,57 @@ describe('SendAmountRow Component', function () {
       assert.ok(setMaxModeTo.calledOnceWithExactly(false))
     })
 
-    it('should call updateSendAmount', function () {
-      const { instance, propsMethodSpies: { updateSendAmount } } = shallowRenderSendAmountRow()
+    it('should call updateSwapAmount', function () {
+      const { instance, propsMethodSpies: { updateSwapAmount } } = shallowRenderSwapAmountRow()
 
-      assert.equal(updateSendAmount.callCount, 0)
+      assert.equal(updateSwapAmount.callCount, 0)
 
       instance.updateAmount('someAmount')
 
-      assert.ok(updateSendAmount.calledOnceWithExactly('someAmount'))
+      assert.ok(updateSwapAmount.calledOnceWithExactly('someAmount'))
     })
 
   })
 
   describe('render', function () {
-    it('should render a SendRowWrapper component', function () {
-      const { wrapper } = shallowRenderSendAmountRow()
+    it('should render a SwapRowWrapper component', function () {
+      const { wrapper } = shallowRenderSwapAmountRow()
 
-      assert.equal(wrapper.find(SendRowWrapper).length, 1)
+      assert.equal(wrapper.find(SwapRowWrapper).length, 1)
     })
 
-    it('should pass the correct props to SendRowWrapper', function () {
-      const { wrapper } = shallowRenderSendAmountRow()
+    it('should pass the correct props to SwapRowWrapper', function () {
+      const { wrapper } = shallowRenderSwapAmountRow()
       const {
         errorType,
         label,
         showError,
-      } = wrapper.find(SendRowWrapper).props()
+      } = wrapper.find(SwapRowWrapper).props()
 
       assert.equal(errorType, 'amount')
       assert.equal(label, 'amount_t:')
       assert.equal(showError, false)
     })
 
-    it('should render an AmountMaxButton as the first child of the SendRowWrapper', function () {
-      const { wrapper } = shallowRenderSendAmountRow()
+    it('should render an AmountMaxButton as the first child of the SwapRowWrapper', function () {
+      const { wrapper } = shallowRenderSwapAmountRow()
 
-      assert(wrapper.find(SendRowWrapper).childAt(0).is(AmountMaxButton))
+      assert(wrapper.find(SwapRowWrapper).childAt(0).is(AmountMaxButton))
     })
 
-    it('should render a UserPreferencedTokenInput as the second child of the SendRowWrapper', function () {
-      const { wrapper } = shallowRenderSendAmountRow()
+    it('should render a UserPreferencedTokenInput as the second child of the SwapRowWrapper', function () {
+      const { wrapper } = shallowRenderSwapAmountRow()
 
-      assert(wrapper.find(SendRowWrapper).childAt(1).is(UserPreferencedTokenInput))
+      assert(wrapper.find(SwapRowWrapper).childAt(1).is(UserPreferencedTokenInput))
     })
 
     it('should render the UserPreferencedTokenInput with the correct props', function () {
-      const { wrapper, instanceSpies: { updateGas, updateAmount, validateAmount } } = shallowRenderSendAmountRow()
+      const { wrapper, instanceSpies: { updateGas, updateAmount, validateAmount } } = shallowRenderSwapAmountRow()
       const {
         onChange,
         error,
         value,
-      } = wrapper.find(SendRowWrapper).childAt(1).props()
+      } = wrapper.find(SwapRowWrapper).childAt(1).props()
 
       assert.equal(error, false)
       assert.equal(value, 'mockAmount')
@@ -138,13 +138,13 @@ describe('SendAmountRow Component', function () {
   })
 })
 
-function shallowRenderSendAmountRow () {
+function shallowRenderSwapAmountRow () {
   const setMaxModeTo = sinon.spy()
   const updateGasFeeError = sinon.spy()
-  const updateSendAmount = sinon.spy()
-  const updateSendAmountError = sinon.spy()
+  const updateSwapAmount = sinon.spy()
+  const updateSwapAmountError = sinon.spy()
   const wrapper = shallow((
-    <SendAmountRow
+    <SwapAmountRow
       amount="mockAmount"
       balance="mockBalance"
       conversionRate={7}
@@ -152,12 +152,12 @@ function shallowRenderSendAmountRow () {
       gasTotal="mockGasTotal"
       inError={false}
       primaryCurrency="mockPrimaryCurrency"
-      sendToken={ { address: 'mockTokenAddress' } }
+      swapToken={ { address: 'mockTokenAddress' } }
       setMaxModeTo={setMaxModeTo}
       tokenBalance="mockTokenBalance"
       updateGasFeeError={updateGasFeeError}
-      updateSendAmount={updateSendAmount}
-      updateSendAmountError={updateSendAmountError}
+      updateSwapAmount={updateSwapAmount}
+      updateSwapAmountError={updateSwapAmountError}
       updateGas={() => {}}
     />
   ), { context: { t: (str) => str + '_t' } })
@@ -172,8 +172,8 @@ function shallowRenderSendAmountRow () {
     propsMethodSpies: {
       setMaxModeTo,
       updateGasFeeError,
-      updateSendAmount,
-      updateSendAmountError,
+      updateSwapAmount,
+      updateSwapAmountError,
     },
     instanceSpies: {
       updateAmount,

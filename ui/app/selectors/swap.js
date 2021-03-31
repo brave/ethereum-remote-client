@@ -73,7 +73,7 @@ export function getSwapHexDataFeatureFlagState (state) {
 }
 
 export function getSwapEditingTransactionId (state) {
-  return state.metamask.swap.editingSwapTransactionId
+  return state.metamask.swap.editingTransactionId
 }
 
 export function getSwapErrors (state) {
@@ -117,6 +117,7 @@ export function getSwapToAccounts (state) {
   const addressBookAccounts = getAddressBook(state)
   return [...fromAccounts, ...addressBookAccounts]
 }
+
 export function getSwapTokenBalance (state) {
   return state.metamask.swap.tokenBalance
 }
@@ -168,6 +169,10 @@ export function getSwapTitleKey (state) {
 
 export function isSwapFormInError (state) {
   return Object.values(getSwapErrors(state)).some((n) => n)
+}
+
+export function getSwapTokenAddress (state) {
+  return getSwapToken(state)?.address
 }
 
 export function getSwapIsContractAddress (state) {

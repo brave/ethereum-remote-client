@@ -674,6 +674,29 @@ export function updateSendTokenBalance ({
   }
 }
 
+export function updateSwapTokenBalance ({
+  swapToken,
+  tokenContract,
+  address,
+}) {
+  return (dispatch) => {
+    const tokenBalancePromise = tokenContract
+      ? tokenContract.balanceOf(address)
+      : Promise.resolve()
+    return tokenBalancePromise
+      .then((usersToken) => {
+        if (usersToken) {
+          const newTokenBalance = calcTokenBalance({ swapToken, usersToken })
+          dispatch(setSwapTokenBalance(newTokenBalance))
+        }
+      })
+      .catch((err) => {
+        log.error(err)
+        updateSwapErrors({ tokenBalance: 'tokenBalanceError' })
+      })
+  }
+}
+
 export function updateSendErrors (errorObject) {
   return {
     type: actionConstants.UPDATE_SEND_ERRORS,
@@ -681,9 +704,24 @@ export function updateSendErrors (errorObject) {
   }
 }
 
+export function updateSwapErrors (errorObject) {
+  return {
+    type: actionConstants.UPDATE_SWAP_ERRORS,
+    value: errorObject,
+  }
+}
+
+
 export function setSendTokenBalance (tokenBalance) {
   return {
     type: actionConstants.UPDATE_SEND_TOKEN_BALANCE,
+    value: tokenBalance,
+  }
+}
+
+export function setSwapTokenBalance (tokenBalance) {
+  return {
+    type: actionConstants.UPDATE_SWAP_TOKEN_BALANCE,
     value: tokenBalance,
   }
 }
@@ -695,6 +733,13 @@ export function updateSendHexData (value) {
   }
 }
 
+export function updateSwapHexData (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_HEX_DATA,
+    value,
+  }
+}
+
 export function updateSendTo (to, nickname = '') {
   return {
     type: actionConstants.UPDATE_SEND_TO,
@@ -702,9 +747,23 @@ export function updateSendTo (to, nickname = '') {
   }
 }
 
+export function updateSwapTo (to, nickname = '') {
+  return {
+    type: actionConstants.UPDATE_SWAP_TO,
+    value: { to, nickname },
+  }
+}
+
 export function updateSendAmount (amount) {
   return {
     type: actionConstants.UPDATE_SEND_AMOUNT,
+    value: amount,
+  }
+}
+
+export function updateSwapAmount (amount) {
+  return {
+    type: actionConstants.UPDATE_SWAP_AMOUNT,
     value: amount,
   }
 }
@@ -756,9 +815,23 @@ export function updateSendEnsResolution (ensResolution) {
   }
 }
 
+export function updateSwapEnsResolution (ensResolution) {
+  return {
+    type: actionConstants.UPDATE_SWAP_ENS_RESOLUTION,
+    payload: ensResolution,
+  }
+}
+
 export function updateSendEnsResolutionError (errorMessage) {
   return {
     type: actionConstants.UPDATE_SEND_ENS_RESOLUTION_ERROR,
+    payload: errorMessage,
+  }
+}
+
+export function updateSwapEnsResolutionError (errorMessage) {
+  return {
+    type: actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR,
     payload: errorMessage,
   }
 }

@@ -26,13 +26,13 @@ export default class SwapRowWrapper extends Component {
     const customLabelContent = children.length > 1 ? children[0] : null
 
     return (
-      <div className="send-v2__form-row">
-        <div className="send-v2__form-label">
+      <div className="swap-v2__form-row">
+        <div className="swap-v2__form-label">
           {label}
           {customLabelContent}
         </div>
-        <div className="send-v2__form-field-container">
-          <div className="send-v2__form-field">
+        <div className="swap-v2__form-field-container">
+          <div className="swap-v2__form-field">
             {formField}
           </div>
           <div>
@@ -55,13 +55,13 @@ export default class SwapRowWrapper extends Component {
     const customLabelContent = (Array.isArray(children) && children.length) > 1 ? children[0] : null
 
     return (
-      <div className="send-v2__form-row">
-        <div className="send-v2__form-label">
+      <div className="swap-v2__form-row">
+        <div className="swap-v2__form-label">
           {label}
           {showError && <SwapRowErrorMessage errorType={errorType} />}
           {customLabelContent}
         </div>
-        <div className="send-v2__form-field">
+        <div className="swap-v2__form-field">
           {formField}
         </div>
       </div>

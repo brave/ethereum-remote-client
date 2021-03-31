@@ -9,9 +9,9 @@ const propsMethodSpies = {
   closeToDropdown: sinon.spy(),
   openToDropdown: sinon.spy(),
   updateGas: sinon.spy(),
-  updateSendTo: sinon.spy(),
-  updateSendToError: sinon.spy(),
-  updateSendToWarning: sinon.spy(),
+  updateSwapTo: sinon.spy(),
+  updateSwapToError: sinon.spy(),
+  updateSwapToWarning: sinon.spy(),
 }
 
 describe('AddRecipient Component', function () {
@@ -30,9 +30,9 @@ describe('AddRecipient Component', function () {
         toAccounts={['mockAccount']}
         toDropdownOpen={false}
         updateGas={propsMethodSpies.updateGas}
-        updateSendTo={propsMethodSpies.updateSendTo}
-        updateSendToError={propsMethodSpies.updateSendToError}
-        updateSendToWarning={propsMethodSpies.updateSendToWarning}
+        updateSwapTo={propsMethodSpies.updateSwapTo}
+        updateSwapToError={propsMethodSpies.updateSwapToError}
+        updateSwapToWarning={propsMethodSpies.updateSwapToWarning}
         addressBook={[{ address: '0x80F061544cC398520615B5d3e7A3BedD70cd4510', name: 'Fav 5' }]}
         nonContacts={[{ address: '0x70F061544cC398520615B5d3e7A3BedD70cd4510', name: 'Fav 7' }]}
         contacts={[{ address: '0x60F061544cC398520615B5d3e7A3BedD70cd4510', name: 'Fav 6' }]}
@@ -44,20 +44,20 @@ describe('AddRecipient Component', function () {
   afterEach(function () {
     propsMethodSpies.closeToDropdown.resetHistory()
     propsMethodSpies.openToDropdown.resetHistory()
-    propsMethodSpies.updateSendTo.resetHistory()
-    propsMethodSpies.updateSendToError.resetHistory()
-    propsMethodSpies.updateSendToWarning.resetHistory()
+    propsMethodSpies.updateSwapTo.resetHistory()
+    propsMethodSpies.updateSwapToError.resetHistory()
+    propsMethodSpies.updateSwapToWarning.resetHistory()
     propsMethodSpies.updateGas.resetHistory()
   })
 
   describe('selectRecipient', function () {
 
-    it('should call updateSendTo', function () {
-      assert.equal(propsMethodSpies.updateSendTo.callCount, 0)
+    it('should call updateSwapTo', function () {
+      assert.equal(propsMethodSpies.updateSwapTo.callCount, 0)
       instance.selectRecipient('mockTo2', 'mockNickname')
-      assert.equal(propsMethodSpies.updateSendTo.callCount, 1)
+      assert.equal(propsMethodSpies.updateSwapTo.callCount, 1)
       assert.deepEqual(
-        propsMethodSpies.updateSendTo.getCall(0).args,
+        propsMethodSpies.updateSwapTo.getCall(0).args,
         ['mockTo2', 'mockNickname'],
       )
     })
@@ -71,7 +71,7 @@ describe('AddRecipient Component', function () {
 
   describe('render', function () {
     it('should render a component', function () {
-      assert.equal(wrapper.find('.send__select-recipient-wrapper').length, 1)
+      assert.equal(wrapper.find('.swap__select-recipient-wrapper').length, 1)
     })
 
     it('should render no content if there are no recents, transfers, and contacts', function () {
@@ -80,8 +80,8 @@ describe('AddRecipient Component', function () {
         addressBook: [],
       })
 
-      assert.equal(wrapper.find('.send__select-recipient-wrapper__list__link').length, 0)
-      assert.equal(wrapper.find('.send__select-recipient-wrapper__group').length, 0)
+      assert.equal(wrapper.find('.swap__select-recipient-wrapper__list__link').length, 0)
+      assert.equal(wrapper.find('.swap__select-recipient-wrapper__group').length, 0)
     })
 
     it('should render transfer', function () {
@@ -91,12 +91,12 @@ describe('AddRecipient Component', function () {
       })
       wrapper.setState({ isShowingTransfer: true })
 
-      const xferLink = wrapper.find('.send__select-recipient-wrapper__list__link')
+      const xferLink = wrapper.find('.swap__select-recipient-wrapper__list__link')
       assert.equal(xferLink.length, 1)
 
 
       const groups = wrapper.find('RecipientGroup')
-      assert.equal(groups.shallow().find('.send__select-recipient-wrapper__group').length, 1)
+      assert.equal(groups.shallow().find('.swap__select-recipient-wrapper__group').length, 1)
     })
 
     it('should render ContactList', function () {
@@ -120,13 +120,13 @@ describe('AddRecipient Component', function () {
       })
       wrapper.setState({ isShowingTransfer: false })
 
-      const xferLink = wrapper.find('.send__select-recipient-wrapper__list__link')
+      const xferLink = wrapper.find('.swap__select-recipient-wrapper__list__link')
       assert.equal(xferLink.length, 0)
 
       const groups = wrapper.find('ContactList')
       assert.equal(groups.length, 1)
 
-      assert.equal(groups.find('.send__select-recipient-wrapper__group-item').length, 0)
+      assert.equal(groups.find('.swap__select-recipient-wrapper__group-item').length, 0)
     })
 
     it('should render error when query has no results', function () {

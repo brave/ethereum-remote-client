@@ -22,7 +22,7 @@ export default class SwapTransactionScreen extends Component {
     amount: PropTypes.string,
     blockGasLimit: PropTypes.string,
     conversionRate: PropTypes.number,
-    editingSwapTransactionId: PropTypes.string,
+    editingTransactionId: PropTypes.string,
     fetchBasicGasEstimates: PropTypes.func.isRequired,
     from: PropTypes.object,
     gasLimit: PropTypes.string,
@@ -256,7 +256,7 @@ export default class SwapTransactionScreen extends Component {
     const {
       amount,
       blockGasLimit,
-      editingSwapTransactionId,
+      editingTransactionId,
       gasLimit,
       gasPrice,
       selectedAddress,
@@ -267,7 +267,7 @@ export default class SwapTransactionScreen extends Component {
 
     updateAndSetGasLimit({
       blockGasLimit,
-      editingSwapTransactionId,
+      editingTransactionId,
       gasLimit,
       gasPrice,
       selectedAddress,
@@ -280,7 +280,7 @@ export default class SwapTransactionScreen extends Component {
 
   render () {
     const { history, to } = this.props
-    let content
+    let content 
 
     if (to) {
       content = this.renderSwapContent()

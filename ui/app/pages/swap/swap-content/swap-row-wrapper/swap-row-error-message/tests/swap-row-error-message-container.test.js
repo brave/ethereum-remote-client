@@ -10,7 +10,7 @@ proxyquire('../swap-row-error-message.container.js', {
       return () => ({})
     },
   },
-  '../../../../../selectors': { getSendErrors: (s) => `mockErrors:${s}` },
+  '../../../../../selectors': { getSwapErrors: (s) => `mockErrors:${s}` },
 })
 
 describe('swap-row-error-message container', function () {

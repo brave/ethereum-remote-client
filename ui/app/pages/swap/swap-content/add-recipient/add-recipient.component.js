@@ -4,8 +4,8 @@ import Fuse from 'fuse.js'
 import Identicon from '../../../../components/ui/identicon'
 import { isValidAddress } from '../../../../helpers/utils/util'
 import Dialog from '../../../../components/ui/dialog'
-import ContactList from '../../../../components/app/contact-list'
-import RecipientGroup from '../../../../components/app/contact-list/recipient-group/recipient-group.component'
+import ContactList from '../../../../components/app/contact-list-swaps'
+import RecipientGroup from '../../../../components/app/contact-list-swaps/recipient-group/recipient-group.component'
 import { ellipsify } from '../swap.utils'
 
 export default class AddRecipient extends Component {
@@ -100,7 +100,6 @@ export default class AddRecipient extends Component {
     const { isShowingTransfer } = this.state
 
     let content
-
     if (isValidAddress(query)) {
       content = this.renderExplicitAddress(query)
     } else if (ensResolution) {

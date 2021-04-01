@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 import metamaskReducer from './metamask/metamask'
 import localeMessagesReducer from './locale/locale'
 import sendReducer from './send/send.duck'
+import swapReducer from './swap/swap.duck'
 import appStateReducer from './app/app'
 import confirmTransactionReducer from './confirm-transaction/confirm-transaction.duck'
 import gasReducer from './gas/gas.duck'
@@ -17,6 +18,7 @@ export default combineReducers({
   appState: appStateReducer,
   history: historyReducer,
   send: sendReducer,
+  swap: swapReducer,
   confirmTransaction: confirmTransactionReducer,
   gas: gasReducer,
   localeMessages: localeMessagesReducer,

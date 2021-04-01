@@ -129,6 +129,8 @@ export default class EnsInput extends Component {
   onPaste = (event) => {
     event.clipboardData.items[0].getAsString((text) => {
       if (isValidAddress(text)) {
+        console.log("Im Valid")
+        console.log(isValidAddress(text))
         this.props.onPaste(text)
       }
     })
@@ -168,6 +170,7 @@ export default class EnsInput extends Component {
   render () {
     const { t } = this.context
     const { className, selectedAddress } = this.props
+    console.log("The selected address is " + selectedAddress)
     const { input } = this.state
 
     if (selectedAddress) {

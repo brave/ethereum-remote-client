@@ -279,14 +279,18 @@ export default class SwapTransactionScreen extends Component {
   }
 
   render () {
-    const { history, to } = this.props
-    let content 
+    const { history } = this.props
+    // TODO: HACK ; to is not been passed here.
+    const to = "0x4F75D92c8BC5CbcD9D6BA5fc0D58A28089E48e37"
+    // console.log("The to in swap.component is ")
+    // console.log(to)
+    let content = this.renderSwapContent()             
 
-    if (to) {
-      content = this.renderSwapContent()
-    } else {
-      content = this.renderAddRecipient()
-    }
+    // if (to) {
+    //   content = this.renderSwapContent()
+    // } else {
+    //   content = this.renderAddRecipient()
+    // }
 
     return (
       <div className="page-container">
@@ -314,7 +318,10 @@ export default class SwapTransactionScreen extends Component {
         onChange={this.onRecipientInputChange}
         onValidAddressTyped={(address) => this.props.updateSwapTo(address, '')}
         onPaste={(text) => {
+          console.log("pasted address in swap component")
+          console.log(text)
           this.props.updateSwapTo(text) && this.updateGas()
+          console.log(this.state)
         }}
         onReset={() => this.props.updateSwapTo('', '')}
         updateEnsResolution={this.props.updateSwapEnsResolution}

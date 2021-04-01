@@ -234,6 +234,15 @@
   "asset": {
     "message": "Asset"
   },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Slippag"
+  },
   "assets": {
     "message": "Assets"
   },

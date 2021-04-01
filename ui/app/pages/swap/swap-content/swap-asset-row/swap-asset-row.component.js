@@ -56,12 +56,20 @@ export default class SwapAssetRow extends Component {
     const { t } = this.context
 
     return (
-      <SwapRowWrapper label={`${t('asset')}:`}>
+    <div>
+      <SwapRowWrapper label={`${t('taker')}:`}>
         <div className="swap-v2__asset-dropdown">
           { this.renderSwapToken() }
           { this.props.tokens.length > 0 ? this.renderAssetDropdown() : null }
         </div>
       </SwapRowWrapper>
+      <SwapRowWrapper label={`${t('maker')}:`}>
+      <div className="swap-v2__asset-dropdown">
+        { this.renderSwapToken() }
+        { this.props.tokens.length > 0 ? this.renderAssetDropdown() : null }
+      </div>
+    </SwapRowWrapper>
+    </div>
     )
   }
 

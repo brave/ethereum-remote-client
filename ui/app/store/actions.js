@@ -796,6 +796,13 @@ export function updateSendToken (token) {
   }
 }
 
+export function updateSwapToken (token) {
+  return {
+    type: actionConstants.UPDATE_SWAP_TOKEN,
+    value: token,
+  }
+}
+
 export function clearSend () {
   return {
     type: actionConstants.CLEAR_SEND,

@@ -102,6 +102,7 @@ export default class AddRecipient extends Component {
     let content
     if (isValidAddress(query)) {
       content = this.renderExplicitAddress(query)
+      console.log("query is valid!")
     } else if (ensResolution) {
       content = this.renderExplicitAddress(ensResolution, addressBookEntryName || query)
     } else if (isShowingTransfer) {

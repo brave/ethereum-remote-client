@@ -22,9 +22,9 @@ export function getToErrorObject (to, hasHexData = false, network) {
   return { to: toError }
 }
 
-export function getToWarningObject (to, tokens = [], swapToken = null) {
+export function getToWarningObject (to, tokens = [], swapFromToken = null) {
   let toWarning = null
-  if (swapToken && (ethUtil.toChecksumAddress(to) in contractMap || checkExistingAddresses(to, tokens))) {
+  if (swapFromToken && (ethUtil.toChecksumAddress(to) in contractMap || checkExistingAddresses(to, tokens))) {
     toWarning = KNOWN_RECIPIENT_ADDRESS_ERROR
   }
   return { to: toWarning }

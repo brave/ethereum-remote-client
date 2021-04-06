@@ -6,7 +6,8 @@ import {
   getSwapGasLimit,
   getSwapAmount,
   getSwapFromBalance,
-  getSwapTokenBalance,
+  getSwapToTokenBalance,
+  getSwapFromTokenBalance,
   getSwapMaxModeState,
   getSwapGasLoadingError,
   gasSwapFeeIsInError,
@@ -73,8 +74,8 @@ function mapStateToProps (state) {
     gasLimit,
     insufficientBalance,
     maxModeOn: getSwapMaxModeState(state),
-    swapToken: getSwapToken(state),
-    tokenBalance: getSwapTokenBalance(state),
+    swapFromToken: getSwapToken(state),
+    tokenFromBalance: getSwapFromTokenBalance(state),
     isMainnet: getIsMainnet(state),
   }
 }

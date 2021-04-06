@@ -1,7 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'remote-redux-devtools'
+// import { composeWithDevTools } from 'remote-redux-devtools'
 import rootReducer from '../ducks'
+
 
 export default function configureStore (initialState) {
   const composeEnhancers = composeWithDevTools({

@@ -1,20 +1,22 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
-import { getMetaMaskAccounts, getSwapTokenAddress } from '../../../../selectors'
-import { updateSwapToken } from '../../../../store/actions'
+import { getMetaMaskAccounts, getSwapFromTokenAddress, getSwapToTokenAddress } from '../../../../selectors'
+import { updateSwapFromToken, updateSwapToToken } from '../../../../store/actions'
 
 function mapStateToProps (state) {
   return {
     tokens: state.metamask.tokens,
     selectedAddress: state.metamask.selectedAddress,
-    swapTokenAddress: getSwapTokenAddress(state),
+    swapFromTokenAddress: getSwapFromTokenAddress(state),
+    swapToTokenAddress: getSwapToTokenAddress(state),
     accounts: getMetaMaskAccounts(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    setSwapToken: (token) => dispatch(updateSwapToken(token)),
+    setSwapFromToken: (token) => dispatch(updateSwapFromToken(token)),
+    setSwapToToken: (token) => dispatch(updateSwapToToken(token)),
   }
 }
 

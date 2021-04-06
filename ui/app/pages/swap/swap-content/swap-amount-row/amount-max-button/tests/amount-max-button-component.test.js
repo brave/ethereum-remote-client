@@ -25,7 +25,7 @@ describe('AmountMaxButton Component', function () {
         balance="mockBalance"
         gasTotal="mockGasTotal"
         maxModeOn={false}
-        swapToken={ { address: 'mockTokenAddress' } }
+        swapFromToken={ { address: 'mockTokenAddress' } }
         setAmountToMax={propsMethodSpies.setAmountToMax}
         setMaxModeTo={propsMethodSpies.setMaxModeTo}
         tokenBalance="mockTokenBalance"
@@ -60,7 +60,7 @@ describe('AmountMaxButton Component', function () {
         [{
           balance: 'mockBalance',
           gasTotal: 'mockGasTotal',
-          swapToken: { address: 'mockTokenAddress' },
+          swapFromToken: { address: 'mockTokenAddress' },
           tokenBalance: 'mockTokenBalance',
         }],
       )

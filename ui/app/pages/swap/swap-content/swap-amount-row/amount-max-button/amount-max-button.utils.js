@@ -1,13 +1,13 @@
 import { multiplyCurrencies, subtractCurrencies } from '../../../../../helpers/utils/conversion-util'
 import ethUtil from 'ethereumjs-util'
 
-export function calcMaxAmount ({ balance, gasTotal, swapToken, tokenBalance }) {
-  const { decimals } = swapToken || {}
+export function calcMaxAmount ({ balance, gasTotal, swapFromToken, tokenFromBalance }) {
+  const { decimals } = swapFromToken || {}
   const multiplier = Math.pow(10, Number(decimals || 0))
 
-  return swapToken
+  return swapFromToken
     ? multiplyCurrencies(
-      tokenBalance,
+      tokenFromBalance,
       multiplier,
       {
         toNumericBase: 'hex',

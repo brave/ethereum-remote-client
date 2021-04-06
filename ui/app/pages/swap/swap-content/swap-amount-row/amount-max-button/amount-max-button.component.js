@@ -11,10 +11,11 @@ export default class AmountMaxButton extends Component {
     inError: PropTypes.bool,
     gasTotal: PropTypes.string,
     maxModeOn: PropTypes.bool,
-    swapToken: PropTypes.object,
+    swapFromToken: PropTypes.object,
     setAmountToMax: PropTypes.func,
     setMaxModeTo: PropTypes.func,
-    tokenBalance: PropTypes.string,
+    tokenFromBalance: PropTypes.string,
+    tokenToBalance: PropTypes.string,
 
   }
 
@@ -27,16 +28,16 @@ export default class AmountMaxButton extends Component {
     const {
       balance,
       gasTotal,
-      swapToken,
+      swapFromToken,
       setAmountToMax,
-      tokenBalance,
+      tokenFromBalance,
     } = this.props
 
     setAmountToMax({
       balance,
       gasTotal,
-      swapToken,
-      tokenBalance,
+      swapFromToken,
+      tokenFromBalance,
     })
   }
 

@@ -57,7 +57,7 @@ describe('add-recipient utils', function () {
       })
     })
 
-    it('should null if "to" is a token address but swapToken is falsy', function () {
+    it('should null if "to" is a token address but swapFromToken is falsy', function () {
       assert.deepEqual(getToWarningObject('0xabc123', [{ 'address': '0xabc123' }]), {
         to: null,
       })
@@ -68,7 +68,7 @@ describe('add-recipient utils', function () {
         to: KNOWN_RECIPIENT_ADDRESS_ERROR,
       })
     })
-    it('should null if "to" is part of contract metadata but swapToken is falsy', function () {
+    it('should null if "to" is part of contract metadata but swapFromToken is falsy', function () {
       assert.deepEqual(getToWarningObject('0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359', [{ 'address': '0xabc123' }], { 'address': '0xabc123' }), {
         to: KNOWN_RECIPIENT_ADDRESS_ERROR,
       })

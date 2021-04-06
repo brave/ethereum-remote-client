@@ -11,15 +11,18 @@ import {
   getSwapGasPrice,
   getGasTotal,
   getSwapPrimaryCurrency,
-  getSwapToken,
-  getSwapTokenContract,
+  getSwapFromToken,
+  getSwapToToken,
+  getSwapFromTokenContract,
+  getSwapToTokenContract,
   getSwapAmount,
   getSwapEditingTransactionId,
   getSwapHexDataFeatureFlagState,
   getSwapFromObject,
   getSwapTo,
   getSwapToNickname,
-  getSwapTokenBalance,
+  getSwapFromTokenBalance,
+  getSwapToTokenBalance,
   getQrSwapsCodeData,
   getSelectedAddress,
   getAddressBook,
@@ -67,13 +70,16 @@ function mapStateToProps (state) {
     primaryCurrency: getSwapPrimaryCurrency(state),
     qrCodeData: getQrSwapsCodeData(state),
     selectedAddress: getSelectedAddress(state),
-    swapToken: getSwapToken(state),
+    swapTokenFrom: getSwapFromToken(state),
+    swapTokenTo: getSwapToToken(state),
     showHexData: getSwapHexDataFeatureFlagState(state),
     to: getSwapTo(state),
     toNickname: getSwapToNickname(state),
     tokens: getTokens(state),
-    tokenBalance: getSwapTokenBalance(state),
-    tokenContract: getSwapTokenContract(state),
+    tokenFromBalance: getSwapFromTokenBalance(state),
+    tokenFromContract: getSwapFromTokenContract(state),
+    tokenToBalance: getSwapToTokenBalance(state),
+    tokenToContract: getSwapToTokenContract(state),
   }
 }
 
@@ -85,18 +91,18 @@ function mapDispatchToProps (dispatch) {
       gasLimit,
       gasPrice,
       selectedAddress,
-      swapToken,
+      swapFromToken,
       to,
       value,
       data,
     }) => {
       !editingTransactionId
-        ? dispatch(updateGasData({ gasPrice, selectedAddress, swapToken, blockGasLimit, to, value, data }))
+        ? dispatch(updateGasData({ gasPrice, selectedAddress, swapFromToken, blockGasLimit, to, value, data }))
         : dispatch(setGasTotal(calcGasTotal(gasLimit, gasPrice)))
     },
-    updateSwapTokenBalance: ({ swapToken, tokenContract, address }) => {
+    updateSwapTokenBalance: ({ swapFromToken, tokenContract, address }) => {
       dispatch(updateSwapTokenBalance({
-        swapToken,
+        swapFromToken,
         tokenContract,
         address,
       }))

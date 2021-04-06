@@ -7,7 +7,7 @@ const SHOW_GAS_BUTTON_GROUP = 'metamask/swap/SHOW_GAS_BUTTON_GROUP'
 const HIDE_GAS_BUTTON_GROUP = 'metamask/swap/HIDE_GAS_BUTTON_GROUP'
 
 const initState = {
-  toDropdownOpen: false,
+  toDropdownOpenTo: false,
   gasButtonGroupShown: true,
   errors: {},
 }

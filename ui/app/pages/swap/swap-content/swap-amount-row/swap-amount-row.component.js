@@ -15,9 +15,10 @@ export default class SwapAmountRow extends Component {
     gasTotal: PropTypes.string,
     inError: PropTypes.bool,
     primaryCurrency: PropTypes.string,
-    swapToken: PropTypes.object,
+    swapFromToken: PropTypes.object,
     setMaxModeTo: PropTypes.func,
-    tokenBalance: PropTypes.string,
+    tokenFromBalance: PropTypes.string,
+    tokenToBalance: PropTypes.string,
     updateGasFeeError: PropTypes.func,
     updateSwapAmount: PropTypes.func,
     updateSwapAmountError: PropTypes.func,
@@ -31,9 +32,9 @@ export default class SwapAmountRow extends Component {
 
   componentDidUpdate (prevProps) {
     const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
-    const { maxModeOn, amount, gasTotal, swapToken } = this.props
+    const { maxModeOn, amount, gasTotal, swapFromToken } = this.props
 
-    if (maxModeOn && swapToken && !prevMaxModeOn) {
+    if (maxModeOn && swapFromToken && !prevMaxModeOn) {
       this.updateGas(amount)
     }
 
@@ -50,8 +51,9 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapToken,
-      tokenBalance,
+      swapFromToken,
+      tokenToBalance,
+      tokenFromBalance,
       updateGasFeeError,
       updateSwapAmountError,
     } = this.props
@@ -62,18 +64,20 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapToken,
-      tokenBalance,
+      swapFromToken,
+      tokenFromBalance,
+      tokenToBalance
     })
 
-    if (swapToken) {
+    if (swapFromToken) {
       updateGasFeeError({
         balance,
         conversionRate,
         gasTotal,
         primaryCurrency,
-        swapToken,
-        tokenBalance,
+        swapFromToken,
+        tokenFromBalance,
+        tokenToBalance
       })
     }
   }
@@ -86,9 +90,9 @@ export default class SwapAmountRow extends Component {
   }
 
   updateGas (amount) {
-    const { swapToken, updateGas } = this.props
+    const { swapFromToken, updateGas } = this.props
 
-    if (swapToken) {
+    if (swapFromToken) {
       updateGas({ amount })
     }
   }
@@ -100,14 +104,14 @@ export default class SwapAmountRow extends Component {
   }
 
   renderInput () {
-    const { amount, inError, swapToken } = this.props
+    const { amount, inError, swapFromToken } = this.props
 
-    return swapToken ?
+    return swapFromToken ?
       (
         <UserPreferencedTokenInput
           error={inError}
           onChange={this.handleChange}
-          token={swapToken}
+          token={swapFromToken}
           value={amount}
         />
       )

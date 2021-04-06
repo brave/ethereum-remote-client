@@ -11,14 +11,15 @@ import {
   getGasLimit,
   getGasPrice,
   getGasTotal,
-  getSwapToken,
+  getSwapFromToken,
   getSwapAmount,
   getSwapEditingTransactionId,
   getSwapFromObject,
   getSwapTo,
   getSwapToAccounts,
   getSwapHexData,
-  getTokenBalance,
+  getSwapFromTokenBalance,
+  getSwapToTokenBalance,
   getUnapprovedTxs,
   getSwapErrors,
   isSwapFormInError,
@@ -55,10 +56,11 @@ function mapStateToProps (state) {
     gasPrice: getGasPrice(state),
     gasTotal: getGasTotal(state),
     inError: isSwapFormInError(state),
-    swapToken: getSwapToken(state),
+    swapFromToken: getSwapFromToken(state),
     to: getSwapTo(state),
     toAccounts: getSwapToAccounts(state),
-    tokenBalance: getTokenBalance(state),
+    tokenFromBalance: getSwapFromTokenBalance(state),
+    tokenToBalance: getSwapToTokenBalance(state),
     unapprovedTxs: getUnapprovedTxs(state),
     swapErrors: getSwapErrors(state),
     gasEstimateType,
@@ -70,19 +72,19 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     clearSwap: () => dispatch(clearSwap()),
-    sign: ({ swapToken, to, amount, from, gas, gasPrice, data }) => {
+    sign: ({ swapFromToken, to, amount, from, gas, gasPrice, data }) => {
       const txParams = constructTxParams({
         amount,
         data,
         from,
         gas,
         gasPrice,
-        swapToken,
+        swapFromToken,
         to,
       })
 
-      swapToken
-        ? dispatch(signTokenTx(swapToken.address, to, amount, txParams))
+      swapFromToken
+        ? dispatch(signTokenTx(swapFromToken.address, to, amount, txParams))
         : dispatch(signTx(txParams))
     },
     update: ({
@@ -92,7 +94,7 @@ function mapDispatchToProps (dispatch) {
       from,
       gas,
       gasPrice,
-      swapToken,
+      swapFromToken,
       to,
       unapprovedTxs,
     }) => {
@@ -103,7 +105,7 @@ function mapDispatchToProps (dispatch) {
         from,
         gas,
         gasPrice,
-        swapToken,
+        swapFromToken,
         to,
         unapprovedTxs,
       })

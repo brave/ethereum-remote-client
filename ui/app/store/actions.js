@@ -675,7 +675,7 @@ export function updateSendTokenBalance ({
 }
 
 export function updateSwapTokenBalance ({
-  swapToken,
+  swapFromToken,
   tokenContract,
   address,
 }) {
@@ -686,7 +686,7 @@ export function updateSwapTokenBalance ({
     return tokenBalancePromise
       .then((usersToken) => {
         if (usersToken) {
-          const newTokenBalance = calcTokenBalance({ swapToken, usersToken })
+          const newTokenBalance = calcTokenBalance({ swapFromToken, usersToken })
           dispatch(setSwapTokenBalance(newTokenBalance))
         }
       })
@@ -723,6 +723,20 @@ export function setSwapTokenBalance (tokenBalance) {
   return {
     type: actionConstants.UPDATE_SWAP_TOKEN_BALANCE,
     value: tokenBalance,
+  }
+}
+
+export function setSwapToTokenBalance (tokenBalance) {
+  return {
+    type: actionConstants.UPDATE_SWAP_TO_TOKEN_BALANCE,
+    value: tokenToBalance,
+  }
+}
+
+export function setSwapFromTokenBalance (tokenBalance) {
+  return {
+    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_BALANCE,
+    value: tokenFromBalance,
   }
 }
 
@@ -796,9 +810,16 @@ export function updateSendToken (token) {
   }
 }
 
-export function updateSwapToken (token) {
+export function updateSwapFromToken (token) {
   return {
-    type: actionConstants.UPDATE_SWAP_TOKEN,
+    type: actionConstants.UPDATE_SWAP_FROM_TOKEN,
+    value: token,
+  }
+}
+
+export function updateSwapToToken (token) {
+  return {
+    type: actionConstants.UPDATE_SWAP_TO_TOKEN,
     value: token,
   }
 }

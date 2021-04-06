@@ -23,12 +23,12 @@ describe('SwapAmountRow Component', function () {
         conversionRate: 7,
         gasTotal: 'mockGasTotal',
         primaryCurrency: 'mockPrimaryCurrency',
-        swapToken: { address: 'mockTokenAddress' },
+        swapFromToken: { address: 'mockTokenAddress' },
         tokenBalance: 'mockTokenBalance',
       }))
     })
 
-    it('should call updateGasFeeError if swapToken is truthy', function () {
+    it('should call updateGasFeeError if swapFromToken is truthy', function () {
       const { instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
 
       assert.equal(updateGasFeeError.callCount, 0)
@@ -40,15 +40,15 @@ describe('SwapAmountRow Component', function () {
         conversionRate: 7,
         gasTotal: 'mockGasTotal',
         primaryCurrency: 'mockPrimaryCurrency',
-        swapToken: { address: 'mockTokenAddress' },
+        swapFromToken: { address: 'mockTokenAddress' },
         tokenBalance: 'mockTokenBalance',
       }))
     })
 
-    it('should call not updateGasFeeError if swapToken is falsey', function () {
+    it('should call not updateGasFeeError if swapFromToken is falsey', function () {
       const { wrapper, instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
 
-      wrapper.setProps({ swapToken: null })
+      wrapper.setProps({ swapFromToken: null })
 
       assert.equal(updateGasFeeError.callCount, 0)
 
@@ -152,7 +152,7 @@ function shallowRenderSwapAmountRow () {
       gasTotal="mockGasTotal"
       inError={false}
       primaryCurrency="mockPrimaryCurrency"
-      swapToken={ { address: 'mockTokenAddress' } }
+      swapFromToken={ { address: 'mockTokenAddress' } }
       setMaxModeTo={setMaxModeTo}
       tokenBalance="mockTokenBalance"
       updateGasFeeError={updateGasFeeError}

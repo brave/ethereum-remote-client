@@ -14,11 +14,12 @@ export default class SwapGasRow extends Component {
     gasTotal: PropTypes.string,
     maxModeOn: PropTypes.bool,
     showCustomizeGasModal: PropTypes.func,
-    swapToken: PropTypes.object,
+    swapFromToken: PropTypes.object,
     setAmountToMax: PropTypes.func,
     setGasPrice: PropTypes.func,
     setGasLimit: PropTypes.func,
-    tokenBalance: PropTypes.string,
+    tokenFromBalance: PropTypes.string,
+    tokenToBalance: PropTypes.string,
     gasPriceButtonGroupProps: PropTypes.object,
     gasButtonGroupShown: PropTypes.bool,
     advancedInlineGasShown: PropTypes.bool,
@@ -64,16 +65,16 @@ export default class SwapGasRow extends Component {
     const {
       balance,
       gasTotal,
-      swapToken,
+      swapFromToken,
       setAmountToMax,
-      tokenBalance,
+      tokenFromBalance,
     } = this.props
 
     setAmountToMax({
       balance,
       gasTotal,
-      swapToken,
-      tokenBalance,
+      swapFromToken,
+      tokenFromBalance,
     })
   }
 

@@ -29,7 +29,6 @@ export default class SwapContent extends Component {
       <PageContainerContent>
         <div className="swap-v2__form">
           { this.maybeRenderContractWarning() }
-          { this.maybeRenderAddContact() }
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
           <SwapGasRow />
@@ -66,22 +65,22 @@ export default class SwapContent extends Component {
     )
   }
 
-  maybeRenderAddContact () {
-    const { t } = this.context
-    const { isOwnedAccount, showAddToAddressBookModal, contact = {} } = this.props
+  // maybeRenderAddContact () {
+  //   const { t } = this.context
+  //   const { isOwnedAccount, showAddToAddressBookModal, contact = {} } = this.props
 
-    if (isOwnedAccount || contact.name) {
-      return
-    }
+  //   if (isOwnedAccount || contact.name) {
+  //     return
+  //   }
 
-    return (
-      <Dialog
-        type="message"
-        className="swap__dialog"
-        onClick={showAddToAddressBookModal}
-      >
-        {t('newAccountDetectedDialogMessage')}
-      </Dialog>
-    )
-  }
+  //   return (
+  //     <Dialog
+  //       type="message"
+  //       className="swap__dialog"
+  //       onClick={showAddToAddressBookModal}
+  //     >
+  //       {t('newAccountDetectedDialogMessage')}
+  //     </Dialog>
+  //   )
+  // }
 }

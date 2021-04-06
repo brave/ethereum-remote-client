@@ -17,8 +17,10 @@ export default class SwapAssetRow extends Component {
     ).isRequired,
     accounts: PropTypes.object.isRequired,
     selectedAddress: PropTypes.string.isRequired,
-    swapTokenAddress: PropTypes.string,
-    setSwapToken: PropTypes.func.isRequired,
+    swapFromTokenAddress: PropTypes.string,
+    swapToTokenAddress: PropTypes.string,
+    setSwapFromToken: PropTypes.func.isRequired,
+    setSwapToToken: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -27,16 +29,21 @@ export default class SwapAssetRow extends Component {
   }
 
   state = {
-    isShowingDropdown: false,
+    isShowingDropdownTo: false,
+    isShowingDropdownFrom: false,
   }
 
-  openDropdown = () => this.setState({ isShowingDropdown: true })
+  openDropdownTo = () => this.setState({ isShowingDropdownTo: true })
 
-  closeDropdown = () => this.setState({ isShowingDropdown: false })
+  closeDropdownTo = () => this.setState({ isShowingDropdownTo: false })
 
-  selectToken = (token) => {
+  openDropdownFrom = () => this.setState({ isShowingDropdownFrom: true })
+
+  closeDropdownFrom = () => this.setState({ isShowingDropdownFrom: false })
+
+  selectTokenFrom = (token) => {
     this.setState({
-      isShowingDropdown: false,
+      isShowingDropdownFrom: false,
     }, () => {
       this.context.metricsEvent({
         eventOpts: {
@@ -48,60 +55,107 @@ export default class SwapAssetRow extends Component {
           assetSelected: token ? 'ERC20' : 'ETH',
         },
       })
-      this.props.setSwapToken(token)
+      this.props.setSwapFromToken(token)
+    })
+  }
+
+  selectTokenTo = (token) => {
+    this.setState({
+      isShowingDropdownTo: false,
+    }, () => {
+      this.context.metricsEvent({
+        eventOpts: {
+          category: 'Transactions',
+          action: 'Swap Screen',
+          name: 'User clicks "Assets" dropdown',
+        },
+        customVariables: {
+          assetSelected: token ? 'ERC20' : 'ETH',
+        },
+      })
+      this.props.setSwapToToken(token)
     })
   }
 
   render () {
     const { t } = this.context
+    console.log(this.props)
 
     return (
     <div>
-      <SwapRowWrapper label={`${t('taker')}:`}>
+      <SwapRowWrapper label={`${t('from')}:`}>
         <div className="swap-v2__asset-dropdown">
-          { this.renderSwapToken() }
-          { this.props.tokens.length > 0 ? this.renderAssetDropdown() : null }
+          { this.renderSwapTokenFrom() }
+          { this.props.tokens.length > 0 ? this.renderAssetDropdownFrom() : null }
         </div>
       </SwapRowWrapper>
-      <SwapRowWrapper label={`${t('maker')}:`}>
+      <SwapRowWrapper label={`${t('to')}:`}>
       <div className="swap-v2__asset-dropdown">
-        { this.renderSwapToken() }
-        { this.props.tokens.length > 0 ? this.renderAssetDropdown() : null }
+        { this.renderSwapTokenTo() }
+        { this.props.tokens.length > 0 ? this.renderAssetDropdownTo() : null }
       </div>
     </SwapRowWrapper>
     </div>
     )
   }
 
-  renderSwapToken () {
-    const { swapTokenAddress } = this.props
-    const token = this.props.tokens.find(({ address }) => address === swapTokenAddress)
+  renderSwapTokenFrom () {
+    const { swapTokenFromAddress } = this.props
+    const token = this.props.tokens.find(({ address }) => address === swapTokenFromAddress)
     return (
       <div
         className="swap-v2__asset-dropdown__input-wrapper"
-        onClick={this.openDropdown}
+        onClick={this.openDropdownFrom}
       >
-        { token ? this.renderAsset(token) : this.renderEth() }
+        { token ? this.renderAssetFrom(token) : this.renderEthFrom() }
       </div>
     )
   }
 
-  renderAssetDropdown () {
-    return this.state.isShowingDropdown && (
+  renderSwapTokenTo () {
+    const { swapFromTokenAddress } = this.props
+    const token = this.props.tokens.find(({ address }) => address === swapFromTokenAddress)
+    return (
+      <div
+        className="swap-v2__asset-dropdown__input-wrapper"
+        onClick={this.openDropdownTo}
+      >
+        { token ? this.renderAssetTo(token) : this.renderEthTo() }
+      </div>
+    )
+  }
+
+  renderAssetDropdownFrom () {
+    return this.state.isShowingDropdownFrom && (
       <div>
         <div
           className="swap-v2__asset-dropdown__close-area"
-          onClick={this.closeDropdown}
+          onClick={this.closeDropdownFrom}
         />
         <div className="swap-v2__asset-dropdown__list">
-          { this.renderEth(true) }
-          { this.props.tokens.map((token) => this.renderAsset(token, true)) }
+          { this.renderEthFrom(true) }
+          { this.props.tokens.map((token) => this.renderAssetFrom(token, true)) }
         </div>
       </div>
     )
   }
 
-  renderEth (insideDropdown = false) {
+  renderAssetDropdownTo () {
+    return this.state.isShowingDropdownTo && (
+      <div>
+        <div
+          className="swap-v2__asset-dropdown__close-area"
+          onClick={this.closeDropdownTo}
+        />
+        <div className="swap-v2__asset-dropdown__list">
+          { this.renderEthTo(true) }
+          { this.props.tokens.map((token) => this.renderAssetTo(token, true)) }
+        </div>
+      </div>
+    )
+  }
+
+  renderEthFrom (insideDropdown = false) {
     const { t } = this.context
     const { accounts, selectedAddress } = this.props
 
@@ -110,7 +164,7 @@ export default class SwapAssetRow extends Component {
     return (
       <div
         className={ this.props.tokens.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
-        onClick={() => this.selectToken()}
+        onClick={() => this.selectTokenFrom()}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
           <Identicon diameter={36} />
@@ -132,8 +186,38 @@ export default class SwapAssetRow extends Component {
     )
   }
 
+  renderEthTo (insideDropdown = false) {
+    const { t } = this.context
+    const { accounts, selectedAddress } = this.props
 
-  renderAsset (token, insideDropdown = false) {
+    const balanceValue = accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
+
+    return (
+      <div
+        className={ this.props.tokens.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
+        onClick={() => this.selectTokenFrom()}
+      >
+        <div className="swap-v2__asset-dropdown__asset-icon">
+          <Identicon diameter={36} />
+        </div>
+        <div className="swap-v2__asset-dropdown__asset-data">
+          <div className="swap-v2__asset-dropdown__symbol">ETH</div>
+          <div className="swap-v2__asset-dropdown__name">
+            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+            <UserPreferencedCurrencyDisplay
+              value={balanceValue}
+              type={PRIMARY}
+            />
+          </div>
+        </div>
+        { !insideDropdown && this.props.tokens.length > 0 && (
+          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+        )}
+      </div>
+    )
+  }
+
+  renderAssetFrom (token, insideDropdown = false) {
     const { address, symbol } = token
     const { t } = this.context
 
@@ -141,7 +225,38 @@ export default class SwapAssetRow extends Component {
       <div
         key={address}
         className="swap-v2__asset-dropdown__asset"
-        onClick={() => this.selectToken(token)}
+        onClick={() => this.selectTokenFrom(token)}
+      >
+        <div className="swap-v2__asset-dropdown__asset-icon">
+          <Identicon address={address} diameter={36} />
+        </div>
+        <div className="swap-v2__asset-dropdown__asset-data">
+          <div className="swap-v2__asset-dropdown__symbol">
+            { symbol }
+          </div>
+          <div className="swap-v2__asset-dropdown__name">
+            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+            <TokenBalance
+              token={token}
+            />
+          </div>
+        </div>
+        { !insideDropdown && (
+          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+        )}
+      </div>
+    )
+  }
+  
+  renderAssetTo (token, insideDropdown = false) {
+    const { address, symbol } = token
+    const { t } = this.context
+  
+    return (
+      <div
+        key={address}
+        className="swap-v2__asset-dropdown__asset"
+        onClick={() => this.selectTokenTo(token)}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
           <Identicon address={address} diameter={36} />
@@ -164,3 +279,6 @@ export default class SwapAssetRow extends Component {
     )
   }
 }
+
+
+

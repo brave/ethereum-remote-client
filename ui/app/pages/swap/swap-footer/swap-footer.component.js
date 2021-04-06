@@ -17,11 +17,12 @@ export default class SwapFooter extends Component {
     gasTotal: PropTypes.string,
     history: PropTypes.object,
     inError: PropTypes.bool,
-    swapToken: PropTypes.object,
+    swapFromToken: PropTypes.object,
     sign: PropTypes.func,
     to: PropTypes.string,
     toAccounts: PropTypes.array,
-    tokenBalance: PropTypes.string,
+    tokenFromBalance: PropTypes.string,
+    tokenToBalance: PropTypes.string,
     unapprovedTxs: PropTypes.object,
     update: PropTypes.func,
     swapErrors: PropTypes.object,
@@ -51,7 +52,7 @@ export default class SwapFooter extends Component {
       from: { address: from },
       gasLimit: gas,
       gasPrice,
-      swapToken,
+      swapFromToken,
       sign,
       to,
       unapprovedTxs,
@@ -80,11 +81,11 @@ export default class SwapFooter extends Component {
         from,
         gas,
         gasPrice,
-        swapToken,
+        swapFromToken,
         to,
         unapprovedTxs,
       })
-      : sign({ data, swapToken, to, amount, from, gas, gasPrice })
+      : sign({ data, swapFromToken, to, amount, from, gas, gasPrice })
 
     Promise.resolve(promise)
       .then(() => {
@@ -103,8 +104,8 @@ export default class SwapFooter extends Component {
   }
 
   formShouldBeDisabled () {
-    const { data, inError, swapToken, tokenBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
-    const missingTokenBalance = swapToken && !tokenBalance
+    const { data, inError, swapFromToken, tokenFromBalance, tokenToBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
+    const missingTokenBalance = swapFromToken && !tokenFromBalance
     const gasLimitTooLow = gasLimit < 5208 // 5208 is hex value of 21000, minimum gas limit
     const shouldBeDisabled = inError || !gasTotal || missingTokenBalance || !(data || to) || gasLimitTooLow || gasIsLoading
     return shouldBeDisabled

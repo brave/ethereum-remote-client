@@ -58,7 +58,7 @@ describe('Swap Component', function () {
         network="3"
         primaryCurrency="mockPrimaryCurrency"
         selectedAddress="mockSelectedAddress"
-        swapToken={{ address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }}
+        swapFromToken={{ address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }}
         showHexData
         tokenBalance="mockTokenBalance"
         tokenContract={{ method: 'mockTokenMethod' }}
@@ -141,7 +141,7 @@ describe('Swap Component', function () {
           prevBalance: '',
           prevGasTotal: undefined,
           prevTokenBalance: undefined,
-          swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
+          swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
           tokenBalance: 'mockTokenBalance',
         },
       )
@@ -173,13 +173,13 @@ describe('Swap Component', function () {
           conversionRate: 10,
           gasTotal: 'mockGasTotal',
           primaryCurrency: 'mockPrimaryCurrency',
-          swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
+          swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
           tokenBalance: 'mockTokenBalance',
         },
       )
     })
 
-    it('should call getGasFeeErrorObject if doesAmountErrorRequireUpdate returns true and swapToken is truthy', function () {
+    it('should call getGasFeeErrorObject if doesAmountErrorRequireUpdate returns true and swapFromToken is truthy', function () {
       utilsMethodStubs.getGasFeeErrorObject.resetHistory()
       wrapper.instance().componentDidUpdate({
         from: {
@@ -194,7 +194,7 @@ describe('Swap Component', function () {
           conversionRate: 10,
           gasTotal: 'mockGasTotal',
           primaryCurrency: 'mockPrimaryCurrency',
-          swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
+          swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
         },
       )
     })
@@ -207,9 +207,9 @@ describe('Swap Component', function () {
       assert.equal(utilsMethodStubs.getGasFeeErrorObject.callCount, 0)
     })
 
-    it('should not call getGasFeeErrorObject if doesAmountErrorRequireUpdate returns true but swapToken is falsy', function () {
+    it('should not call getGasFeeErrorObject if doesAmountErrorRequireUpdate returns true but swapFromToken is falsy', function () {
       utilsMethodStubs.getGasFeeErrorObject.resetHistory()
-      wrapper.setProps({ swapToken: null })
+      wrapper.setProps({ swapFromToken: null })
       wrapper.instance().componentDidUpdate({
         from: {
           balance: 'balanceChanged',
@@ -218,9 +218,9 @@ describe('Swap Component', function () {
       assert.equal(utilsMethodStubs.getGasFeeErrorObject.callCount, 0)
     })
 
-    it('should call updateSwapErrors with the expected params if swapToken is falsy', function () {
+    it('should call updateSwapErrors with the expected params if swapFromToken is falsy', function () {
       propsMethodSpies.updateSwapErrors.resetHistory()
-      wrapper.setProps({ swapToken: null })
+      wrapper.setProps({ swapFromToken: null })
       wrapper.instance().componentDidUpdate({
         from: {
           balance: 'balanceChanged',
@@ -233,9 +233,9 @@ describe('Swap Component', function () {
       )
     })
 
-    it('should call updateSwapErrors with the expected params if swapToken is truthy', function () {
+    it('should call updateSwapErrors with the expected params if swapFromToken is truthy', function () {
       propsMethodSpies.updateSwapErrors.resetHistory()
-      wrapper.setProps({ swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' } })
+      wrapper.setProps({ swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' } })
       wrapper.instance().componentDidUpdate({
         from: {
           balance: 'balanceChanged',
@@ -256,7 +256,7 @@ describe('Swap Component', function () {
           balance: 'balanceChanged',
         },
         network: '3',
-        swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
+        swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
       })
       assert.equal(propsMethodSpies.updateSwapTokenBalance.callCount, 0)
       assert.equal(SwapTransactionScreen.prototype.updateGas.callCount, 0)
@@ -271,7 +271,7 @@ describe('Swap Component', function () {
           balance: 'balanceChanged',
         },
         network: '3',
-        swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
+        swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
       })
       assert.equal(propsMethodSpies.updateSwapTokenBalance.callCount, 0)
       assert.equal(SwapTransactionScreen.prototype.updateGas.callCount, 0)
@@ -285,13 +285,13 @@ describe('Swap Component', function () {
           balance: 'balanceChanged',
         },
         network: '2',
-        swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
+        swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
       })
       assert.equal(propsMethodSpies.updateSwapTokenBalance.callCount, 1)
       assert.deepEqual(
         propsMethodSpies.updateSwapTokenBalance.getCall(0).args[0],
         {
-          swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
+          swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' }, // Make sure not to hit updateGas when changing asset
           tokenContract: { method: 'mockTokenMethod' },
           address: 'mockAddress',
         },
@@ -303,7 +303,7 @@ describe('Swap Component', function () {
       )
     })
 
-    it('should call updateGas when swapToken.address is changed', function () {
+    it('should call updateGas when swapFromToken.address is changed', function () {
       SwapTransactionScreen.prototype.updateGas.resetHistory()
       propsMethodSpies.updateAndSetGasLimit.resetHistory()
       wrapper.instance().componentDidUpdate({
@@ -311,7 +311,7 @@ describe('Swap Component', function () {
           balance: 'balancedChanged',
         },
         network: '3', // Make sure not to hit updateGas when changing network
-        swapToken: { address: 'newSelectedToken' },
+        swapFromToken: { address: 'newSelectedToken' },
       })
       assert.equal(propsMethodSpies.updateToNicknameIfNecessary.callCount, 0) // Network did not change
       assert.equal(propsMethodSpies.updateAndSetGasLimit.callCount, 1)
@@ -331,7 +331,7 @@ describe('Swap Component', function () {
           gasLimit: 'mockGasLimit',
           gasPrice: 'mockGasPrice',
           selectedAddress: 'mockSelectedAddress',
-          swapToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
+          swapFromToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
           to: '',
           value: 'mockAmount',
           data: undefined,

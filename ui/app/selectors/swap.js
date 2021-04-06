@@ -41,22 +41,33 @@ export function getSwapGasTotal (state) {
 }
 
 export function getSwapPrimaryCurrency (state) {
-  const swapToken = getSwapToken(state)
-  return swapToken?.symbol
+  const swapFromToken = getSwapFromToken(state)
+  return swapFromToken?.symbol
 }
 
 export function getSwapToken (state) {
   return state.metamask.swap.token
 }
 
-export function getSwapSwapTokenAddress (state) {
-  return getSwapToken(state)?.address
+export function getSwapFromToken (state) {
+  return state.metamask.swap.token
 }
 
-export function getSwapTokenContract (state) {
-  const swapTokenAddress = getSwapTokenAddress(state)
-  return swapTokenAddress
-    ? global.eth.contract(abi).at(swapTokenAddress)
+export function getSwapToToken (state) {
+  return state.metamask.swap.token
+}
+
+export function getSwapFromTokenContract (state) {
+  const swapFromTokenAddress = getSwapFromTokenAddress(state)
+  return swapFromTokenAddress
+    ? global.eth.contract(abi).at(swapFromTokenAddress)
+    : null
+}
+
+export function getSwapToTokenContract (state) {
+  const swapToTokenAddress = getSwapToTokenAddress(state)
+  return swapToTokenAddress
+    ? global.eth.contract(abi).at(swapToTokenAddress)
     : null
 }
 
@@ -122,6 +133,15 @@ export function getSwapTokenBalance (state) {
   return state.metamask.swap.tokenBalance
 }
 
+export function getSwapFromTokenBalance (state) {
+  return state.metamask.swap.tokenFromBalance
+}
+
+export function getSwapToTokenBalance (state) {
+  return state.metamask.swap.tokenToBalance
+}
+
+
 export function getSwapEnsResolution (state) {
   return state.metamask.swap.ensResolution
 }
@@ -152,10 +172,10 @@ export function getSwapGasButtonGroupShown (state) {
 
 export function getSwapTitleKey (state) {
   const isEditing = Boolean(getSwapEditingTransactionId(state))
-  const isToken = Boolean(getSwapToken(state))
+  const isToken = Boolean(getSwapFromToken(state))
 
   if (!getSwapTo(state)) {
-    return 'addRecipient'
+    return 'swapTokens'
   }
 
   if (isEditing) {
@@ -175,13 +195,21 @@ export function getSwapTokenAddress (state) {
   return getSwapToken(state)?.address
 }
 
+export function getSwapFromTokenAddress (state) {
+  return getSwapFromToken(state)?.address
+}
+
+export function getSwapToTokenAddress (state) {
+  return getSwapToToken(state)?.address
+}
+
 export function getSwapIsContractAddress (state) {
   const swapTo = getSwapTo(state)
-  const swapTokenAddress = getSwapTokenAddress(state)
+  const swapFromTokenAddress = getSwapFromTokenAddress(state)
 
-  if (!swapTokenAddress) {
+  if (!swapFromTokenAddress) {
     return false
   }
 
-  return swapTo.toLowerCase() === swapTokenAddress.toLowerCase()
+  return swapTo.toLowerCase() === swapFromTokenAddress.toLowerCase()
 }

@@ -3,7 +3,7 @@ import {
   getGasTotal,
   getSwapToken,
   getSwapFromBalance,
-  getSwapTokenBalance,
+  getSwapFromTokenBalance,
   getSwapMaxModeState,
   getBasicGasEstimateLoadingStatus,
 } from '../../../../../selectors'
@@ -26,8 +26,8 @@ function mapStateToProps (state) {
     buttonDataLoading: getBasicGasEstimateLoadingStatus(state),
     gasTotal: getGasTotal(state),
     maxModeOn: getSwapMaxModeState(state),
-    swapToken: getSwapToken(state),
-    tokenBalance: getSwapTokenBalance(state),
+    swapFromToken: getSwapToken(state),
+    tokenFromBalance: getSwapFromTokenBalance(state),
   }
 }
 

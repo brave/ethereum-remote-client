@@ -3,10 +3,12 @@ import {
   getSwapConversionRate,
   getGasTotal,
   getSwapPrimaryCurrency,
-  getSwapToken,
+  getSwapFromToken,
+  getSwapToToken,
   getSwapAmount,
   getSwapFromBalance,
-  getSwapTokenBalance,
+  getSwapToTokenBalance,
+  getSwapFromTokenBalance,
   getSwapMaxModeState,
   swapAmountIsInError,
 } from '../../../../selectors'
@@ -30,8 +32,10 @@ function mapStateToProps (state) {
     gasTotal: getGasTotal(state),
     inError: swapAmountIsInError(state),
     primaryCurrency: getSwapPrimaryCurrency(state),
-    swapToken: getSwapToken(state),
-    tokenBalance: getSwapTokenBalance(state),
+    swapFromToken: getSwapFromToken(state),
+    swapToToken: getSwapToToken(state),
+    tokenToBalance: getSwapToTokenBalance(state),
+    tokenFromBalance: getSwapFromTokenBalance(state),
     maxModeOn: getSwapMaxModeState(state),
   }
 }

@@ -6,17 +6,17 @@ import {
 describe('amount-max-button utils', function () {
 
   describe('calcMaxAmount()', function () {
-    it('should calculate the correct amount when no swapToken defined', function () {
+    it('should calculate the correct amount when no swapFromToken defined', function () {
       assert.deepEqual(calcMaxAmount({
         balance: 'ffffff',
         gasTotal: 'ff',
-        swapToken: false,
+        swapFromToken: false,
       }), 'ffff00')
     })
 
-    it('should calculate the correct amount when a swapToken is defined', function () {
+    it('should calculate the correct amount when a swapFromToken is defined', function () {
       assert.deepEqual(calcMaxAmount({
-        swapToken: {
+        swapFromToken: {
           decimals: 10,
         },
         tokenBalance: '64',

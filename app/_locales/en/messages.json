@@ -1511,6 +1511,9 @@
   "supportCenter": {
     "message": "Visit our Support Center"
   },
+  "swapTokens": {
+    "message": "Swap Tokens"
+  },
   "symbol": {
     "message": "Symbol"
   },

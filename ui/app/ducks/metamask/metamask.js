@@ -40,6 +40,8 @@ export default function reduceMetamask (state = {}, action) {
       gasPrice: null,
       gasTotal: null,
       tokenBalance: '0x0',
+      tokenToBalance: '0x0',
+      tokenFromBalance: '0x0',
       from: '',
       to: '',
       amount: '0',
@@ -246,22 +248,22 @@ export default function reduceMetamask (state = {}, action) {
         send: newSend,
       })
 
-      case actionConstants.UPDATE_SWAP_TOKEN:
-        const newSwap = {
+      case actionConstants.UPDATE_SWAP_FROM_TOKEN:
+        const newSwapFrom = {
           ...metamaskState.swap,
           token: action.value,
         }
         // erase token-related state when switching back to native currency
-        if (newSwap.editingTransactionId && !newSwap.token) {
-          const unapprovedTx = newSwap?.unapprovedTxs?.[newSwap.editingTransactionId] || {}
+        if (newSwapFrom.editingTransactionId && !newSwapFrom.token) {
+          const unapprovedTx = newSwapFrom?.unapprovedTxs?.[newSwapFrom.editingTransactionId] || {}
           const txParams = unapprovedTx.txParams || {}
-          Object.assign(newSwap, {
+          Object.assign(newSwapFrom, {
             tokenBalance: null,
             balance: '0',
             from: unapprovedTx.from || '',
             unapprovedTxs: {
-              ...newSwap.unapprovedTxs,
-              [newSwap.editingTransactionId]: {
+              ...newSwapFrom.unapprovedTxs,
+              [newSwapFrom.editingTransactionId]: {
                 ...unapprovedTx,
                 txParams: {
                   ...txParams,
@@ -272,8 +274,37 @@ export default function reduceMetamask (state = {}, action) {
           })
         }
         return Object.assign(metamaskState, {
-          swap: newSwap,
+          swap: newSwapFrom,
         })
+
+        case actionConstants.UPDATE_SWAP_TO_TOKEN:
+          const newSwapTo = {
+            ...metamaskState.swap,
+            token: action.value,
+          }
+          // erase token-related state when switching back to native currency
+          if (newSwapTo.editingTransactionId && !newSwapTo.token) {
+            const unapprovedTx = newSwapTo?.unapprovedTxs?.[newSwapTo.editingTransactionId] || {}
+            const txParams = unapprovedTx.txParams || {}
+            Object.assign(newSwapTo, {
+              tokenBalance: null,
+              balance: '0',
+              from: unapprovedTx.from || '',
+              unapprovedTxs: {
+                ...newSwapTo.unapprovedTxs,
+                [newSwapTo.editingTransactionId]: {
+                  ...unapprovedTx,
+                  txParams: {
+                    ...txParams,
+                    data: '',
+                  },
+                },
+              },
+            })
+          }
+          return Object.assign(metamaskState, {
+            swap: newSwapTo,
+          })
 
     case actionConstants.UPDATE_SEND_ENS_RESOLUTION:
       return {
@@ -322,7 +353,8 @@ export default function reduceMetamask (state = {}, action) {
           gasLimit: null,
           gasPrice: null,
           gasTotal: null,
-          tokenBalance: null,
+          tokenToBalance: null,
+          tokenFromBalance: null,
           from: '',
           to: '',
           amount: '0x0',
@@ -341,7 +373,8 @@ export default function reduceMetamask (state = {}, action) {
             gasLimit: null,
             gasPrice: null,
             gasTotal: null,
-            tokenBalance: null,
+            tokenToBalance: null,
+            tokenFromBalance: null,
             from: '',
             to: '',
             amount: '0x0',

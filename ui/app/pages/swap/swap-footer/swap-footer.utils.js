@@ -8,7 +8,7 @@ export function addHexPrefixToObjectValues (obj) {
   }, {})
 }
 
-export function constructTxParams ({ swapToken, data, to, amount, from, gas, gasPrice }) {
+export function constructTxParams ({ swapFromToken, data, to, amount, from, gas, gasPrice }) {
   const txParams = {
     data,
     from,
@@ -17,7 +17,7 @@ export function constructTxParams ({ swapToken, data, to, amount, from, gas, gas
     gasPrice,
   }
 
-  if (!swapToken) {
+  if (!swapFromToken) {
     txParams.value = amount
     txParams.to = to
   }
@@ -32,7 +32,7 @@ export function constructUpdatedTx ({
   from,
   gas,
   gasPrice,
-  swapToken,
+  swapFromToken,
   to,
   unapprovedTxs,
 }) {
@@ -54,7 +54,7 @@ export function constructUpdatedTx ({
     ),
   }
 
-  if (swapToken) {
+  if (swapFromToken) {
     const data = TOKEN_TRANSFER_FUNCTION_SIGNATURE + Array.prototype.map.call(
       ethAbi.rawEncode(['address', 'uint256'], [to, ethUtil.addHexPrefix(amount)]),
       (x) => ('00' + x.toString(16)).slice(-2),
@@ -62,7 +62,7 @@ export function constructUpdatedTx ({
 
     Object.assign(editingTx.txParams, addHexPrefixToObjectValues({
       value: '0',
-      to: swapToken.address,
+      to: swapFromToken.address,
       data,
     }))
   }

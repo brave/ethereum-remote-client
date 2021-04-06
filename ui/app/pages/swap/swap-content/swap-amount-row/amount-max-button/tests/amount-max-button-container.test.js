@@ -44,7 +44,7 @@ describe('amount-max-button container', function () {
         buttonDataLoading: 'mockButtonDataLoading:mockState',
         gasTotal: 'mockGasTotal:mockState',
         maxModeOn: 'mockMaxModeOn:mockState',
-        swapToken: 'mockSwapToken:mockState',
+        swapFromToken: 'mockSwapToken:mockState',
         tokenBalance: 'mockTokenBalance:mockState',
       })
     })

@@ -44,14 +44,50 @@ export default function reduceMetamask (state = {}, action) {
       tokenFromBalance: '0x0',
       from: '',
       to: '',
+      tokensTo: [{
+        address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+        decimals: 18,
+        symbol: 'AAVE',
+      },{
+        address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+        decimals: 18,
+        symbol: 'YFI',
+      },
+      {
+        address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+        decimals: 18,
+        symbol: 'COMP',
+      },
+      {
+        address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+        decimals: 18,
+        symbol: 'ZRX',
+      }],
+      tokensFrom: [{
+        address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+        decimals: 18,
+        symbol: 'AAVE',
+      },{
+        address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+        decimals: 18,
+        symbol: 'YFI',
+      },
+      {
+        address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+        decimals: 18,
+        symbol: 'COMP',
+      },
+      {
+        address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+        decimals: 18,
+        symbol: 'ZRX',
+      },
+    ],
       amount: '0',
       memo: '',
       errors: {},
       maxModeOn: false,
       editingTransactionId: null,
-      toNickname: '',
-      ensResolution: null,
-      ensResolutionError: '',
     },
     useBlockie: false,
     featureFlags: {},
@@ -251,8 +287,9 @@ export default function reduceMetamask (state = {}, action) {
       case actionConstants.UPDATE_SWAP_FROM_TOKEN:
         const newSwapFrom = {
           ...metamaskState.swap,
-          token: action.value,
+          tokenFrom: action.value,
         }
+        console.log(`New Swap From is : ${JSON.stringify(newSwapFrom)}`)
         // erase token-related state when switching back to native currency
         if (newSwapFrom.editingTransactionId && !newSwapFrom.token) {
           const unapprovedTx = newSwapFrom?.unapprovedTxs?.[newSwapFrom.editingTransactionId] || {}
@@ -280,8 +317,10 @@ export default function reduceMetamask (state = {}, action) {
         case actionConstants.UPDATE_SWAP_TO_TOKEN:
           const newSwapTo = {
             ...metamaskState.swap,
-            token: action.value,
+            tokenTo: action.value,
           }
+          console.log(`New Swap To is : ${JSON.stringify(newSwapTo)}`)
+
           // erase token-related state when switching back to native currency
           if (newSwapTo.editingTransactionId && !newSwapTo.token) {
             const unapprovedTx = newSwapTo?.unapprovedTxs?.[newSwapTo.editingTransactionId] || {}

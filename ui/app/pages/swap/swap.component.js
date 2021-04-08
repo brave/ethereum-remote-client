@@ -7,7 +7,7 @@ import {
   doesAmountErrorRequireUpdate,
 } from './swap.utils'
 import { debounce } from 'lodash'
-import { getToWarningObject, getToErrorObject } from './swap-content/add-recipient/add-recipient'
+// import { getToWarningObject, getToErrorObject } from './swap-content/add-recipient/add-recipient'
 import SwapHeader from './swap-header'
 import SwapContent from './swap-content'
 import SwapFooter from './swap-footer'
@@ -15,7 +15,6 @@ import SwapFooter from './swap-footer'
 export default class SwapTransactionScreen extends Component {
 
   static propTypes = {
-    addressBook: PropTypes.arrayOf(PropTypes.object),
     amount: PropTypes.string,
     blockGasLimit: PropTypes.string,
     conversionRate: PropTypes.number,
@@ -36,7 +35,8 @@ export default class SwapTransactionScreen extends Component {
     showHexData: PropTypes.bool,
     to: PropTypes.string,
     toNickname: PropTypes.string,
-    tokens: PropTypes.array,
+    tokensFrom: PropTypes.array,
+    tokensTo: PropTypes.array,
     tokenFromBalance: PropTypes.string,
     tokenFromContract: PropTypes.object,
     tokenToBalance: PropTypes.string,
@@ -84,13 +84,8 @@ export default class SwapTransactionScreen extends Component {
       updateSwapErrors,
       updateSwapTo,
       updateSwapTokenBalance,
-      tokenContract,
+      tokenToContract,
       to,
-      toNickname,
-      addressBook,
-      updateToNicknameIfNecessary,
-      qrCodeData,
-      qrCodeDetected,
     } = this.props
 
     let updateGas = false
@@ -147,13 +142,11 @@ export default class SwapTransactionScreen extends Component {
     if (!uninitialized) {
 
       if (network !== prevNetwork && network !== 'loading') {
-        updateSwapTokenBalance({
+        updateSwapToTokenBalance({
           swapFromToken,
-          tokenContract,
+          tokenFromContract,
           address,
         })
-        updateToNicknameIfNecessary(to, toNickname, addressBook)
-        updateGas = true
       }
     }
 
@@ -172,19 +165,19 @@ export default class SwapTransactionScreen extends Component {
       updateGas = true
     }
 
-    let scannedAddress
-    if (qrCodeData) {
-      if (qrCodeData.type === 'address') {
-        scannedAddress = qrCodeData.values.address.toLowerCase()
-        const currentAddress = prevTo && prevTo.toLowerCase()
-        if (currentAddress !== scannedAddress) {
-          updateSwapTo(scannedAddress)
-          updateGas = true
-          // Clean up QR code data after handling
-          qrCodeDetected(null)
-        }
-      }
-    }
+    // let scannedAddress
+    // if (qrCodeData) {
+    //   if (qrCodeData.type === 'address') {
+    //     scannedAddress = qrCodeData.values.address.toLowerCase()
+    //     const currentAddress = prevTo && prevTo.toLowerCase()
+    //     if (currentAddress !== scannedAddress) {
+    //       updateSwapTo(scannedAddress)
+    //       updateGas = true
+    //       // Clean up QR code data after handling
+    //       qrCodeDetected(null)
+    //     }
+    //   }
+    // }
 
     if (updateGas) {
       if (scannedAddress) {
@@ -236,17 +229,20 @@ export default class SwapTransactionScreen extends Component {
   validate (query) {
     const {
       hasHexData,
-      tokens,
+      tokensFrom,
+      tokensTo,
       swapFromToken,
       network,
     } = this.props
+
+    console.log(`The tokens validation is ${this.props}`)
 
     if (!query) {
       return this.setState({ toError: '', toWarning: '' })
     }
 
     const toErrorObject = getToErrorObject(query, hasHexData, network)
-    const toWarningObject = getToWarningObject(query, tokens, swapFromToken)
+    const toWarningObject = getToWarningObject(query, tokensFrom, swapFromToken)
 
     this.setState({
       toError: toErrorObject.to,
@@ -258,13 +254,13 @@ export default class SwapTransactionScreen extends Component {
     const {
       from: { address },
       swapFromToken,
-      tokenContract,
+      tokenFromContract,
       updateSwapTokenBalance,
     } = this.props
 
     updateSwapTokenBalance({
       swapFromToken,
-      tokenContract,
+      tokenFromContract,
       address,
     })
   }
@@ -273,13 +269,15 @@ export default class SwapTransactionScreen extends Component {
     const {
       from: { address },
       swapToToken,
-      tokenContract,
+      tokenToContract,
       updateSwapTokenBalance,
     } = this.props
 
+    console.log(this.props)
+
     updateSwapTokenBalance({
       swapToToken,
-      tokenContract,
+      tokenToContract,
       address,
     })
   }
@@ -304,6 +302,7 @@ export default class SwapTransactionScreen extends Component {
       gasPrice,
       selectedAddress,
       swapFromToken,
+      swapToToken,
       to: getToAddressForGasUpdate(updatedToAddress, currentToAddress),
       value: value || amount,
       data,

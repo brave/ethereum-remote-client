@@ -8,7 +8,7 @@ import { PRIMARY } from '../../../../helpers/constants/common'
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
-    tokens: PropTypes.arrayOf(
+    tokensFrom: PropTypes.arrayOf(
       PropTypes.shape({
         address: PropTypes.string,
         decimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -86,13 +86,13 @@ export default class SwapAssetRow extends Component {
       <SwapRowWrapper label={`${t('from')}:`}>
         <div className="swap-v2__asset-dropdown">
           { this.renderSwapTokenFrom() }
-          { this.props.tokens.length > 0 ? this.renderAssetDropdownFrom() : null }
+          { this.props.tokensFrom.length > 0 ? this.renderAssetDropdownFrom() : null }
         </div>
       </SwapRowWrapper>
       <SwapRowWrapper label={`${t('to')}:`}>
       <div className="swap-v2__asset-dropdown">
         { this.renderSwapTokenTo() }
-        { this.props.tokens.length > 0 ? this.renderAssetDropdownTo() : null }
+        { this.props.tokensTo.length > 0 ? this.renderAssetDropdownTo() : null }
       </div>
     </SwapRowWrapper>
     </div>
@@ -101,7 +101,7 @@ export default class SwapAssetRow extends Component {
 
   renderSwapTokenFrom () {
     const { swapTokenFromAddress } = this.props
-    const token = this.props.tokens.find(({ address }) => address === swapTokenFromAddress)
+    const token = this.props.tokensFrom.find(({ address }) => address === swapTokenFromAddress)
     return (
       <div
         className="swap-v2__asset-dropdown__input-wrapper"
@@ -113,8 +113,8 @@ export default class SwapAssetRow extends Component {
   }
 
   renderSwapTokenTo () {
-    const { swapFromTokenAddress } = this.props
-    const token = this.props.tokens.find(({ address }) => address === swapFromTokenAddress)
+    const { swapToTokenAddress } = this.props
+    const token = this.props.tokensTo.find(({ address }) => address === swapToTokenAddress)
     return (
       <div
         className="swap-v2__asset-dropdown__input-wrapper"
@@ -134,7 +134,7 @@ export default class SwapAssetRow extends Component {
         />
         <div className="swap-v2__asset-dropdown__list">
           { this.renderEthFrom(true) }
-          { this.props.tokens.map((token) => this.renderAssetFrom(token, true)) }
+          { this.props.tokensFrom.map((token) => this.renderAssetFrom(token, true)) }
         </div>
       </div>
     )
@@ -149,7 +149,7 @@ export default class SwapAssetRow extends Component {
         />
         <div className="swap-v2__asset-dropdown__list">
           { this.renderEthTo(true) }
-          { this.props.tokens.map((token) => this.renderAssetTo(token, true)) }
+          { this.props.tokensTo.map((token) => this.renderAssetTo(token, true)) }
         </div>
       </div>
     )
@@ -163,7 +163,7 @@ export default class SwapAssetRow extends Component {
 
     return (
       <div
-        className={ this.props.tokens.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
+        className={ this.props.tokensFrom.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
         onClick={() => this.selectTokenFrom()}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
@@ -179,7 +179,7 @@ export default class SwapAssetRow extends Component {
             />
           </div>
         </div>
-        { !insideDropdown && this.props.tokens.length > 0 && (
+        { !insideDropdown && this.props.tokensFrom.length > 0 && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
@@ -194,7 +194,7 @@ export default class SwapAssetRow extends Component {
 
     return (
       <div
-        className={ this.props.tokens.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
+        className={ this.props.tokensTo.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
         onClick={() => this.selectTokenFrom()}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
@@ -210,7 +210,7 @@ export default class SwapAssetRow extends Component {
             />
           </div>
         </div>
-        { !insideDropdown && this.props.tokens.length > 0 && (
+        { !insideDropdown && this.props.tokensTo.length > 0 && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>

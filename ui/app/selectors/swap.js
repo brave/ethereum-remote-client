@@ -50,11 +50,11 @@ export function getSwapToken (state) {
 }
 
 export function getSwapFromToken (state) {
-  return state.metamask.swap.token
+  return state.metamask.swap.tokenFrom
 }
 
 export function getSwapToToken (state) {
-  return state.metamask.swap.token
+  return state.metamask.swap.tokenTo
 }
 
 export function getSwapFromTokenContract (state) {

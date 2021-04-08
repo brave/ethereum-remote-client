@@ -5,7 +5,8 @@ import { updateSwapFromToken, updateSwapToToken } from '../../../../store/action
 
 function mapStateToProps (state) {
   return {
-    tokens: state.metamask.tokens,
+    tokensFrom: state.metamask.swap.tokensFrom,
+    tokensTo: state.metamask.swap.tokensTo,
     selectedAddress: state.metamask.selectedAddress,
     swapFromTokenAddress: getSwapFromTokenAddress(state),
     swapToTokenAddress: getSwapToTokenAddress(state),

@@ -189,15 +189,17 @@ export function verifySeedPhrase () {
 }
 
 export function getQuote (sellAmount, buyToken,sellToken) {
-  dispatch(showLoadingIndication())
-  return new Promise((resolve, reject) => {
-    background.quote(sellAmount, buyToken, sellToken, (error) => {
-      if (error) {
-        return reject(error)
-      }
-      resolve(true)
+  return (dispatch) => {
+    dispatch(showLoadingIndication())
+    return new Promise((resolve, reject) => {
+      background.quote(sellAmount, buyToken, sellToken, (error) => {
+        if (error) {
+          return reject(error)
+        }
+        resolve(true)
+      })
     })
-  })
+  }
 }
 
 export function requestRevealSeedWords (password) {

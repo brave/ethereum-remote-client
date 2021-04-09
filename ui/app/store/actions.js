@@ -190,7 +190,6 @@ export function verifySeedPhrase () {
 
 export function getQuote (sellAmount, buyToken,sellToken) {
   return (dispatch) => {
-    dispatch(showLoadingIndication())
     return new Promise((resolve, reject) => {
       background.quote(sellAmount, buyToken, sellToken, (error) => {
         if (error) {

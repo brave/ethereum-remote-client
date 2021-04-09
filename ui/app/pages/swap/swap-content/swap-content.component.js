@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, ReactText } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerContent from '../../../components/ui/page-container/page-container-content.component'
 import SwapAmountRow from './swap-amount-row'
@@ -6,6 +6,10 @@ import SwapGasRow from './swap-gas-row'
 import SwapHexDataRow from './swap-hex-data-row'
 import SwapAssetRow from './swap-asset-row'
 import Dialog from '../../../components/ui/dialog'
+import TextField from '../../../components/ui/text-field'
+import TransformText from './transform-text'
+import ReactDOMServer from 'react-dom/server'
+
 
 export default class SwapContent extends Component {
 
@@ -19,18 +23,32 @@ export default class SwapContent extends Component {
     showHexData: PropTypes.bool,
     contact: PropTypes.object,
     isOwnedAccount: PropTypes.bool,
+    toToken: PropTypes.object,
+    toFrom: PropTypes.object,
     isContractAddress: PropTypes.bool,
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
+  c
+
+  getSwapQuotes = () => {
+    this.props.getSwapQuotes(amount, "ETH", toToken.symbol)
+  }
+
+  getSwapsText = () => {
+    const swapText = ReactDOMServer.renderToString(this.renderQuote())
+    return swapText
+  }
 
   render () {
+    console.log(`The swap component props are ${JSON.stringify(this.props)}`)
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
           { this.maybeRenderContractWarning() }
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
+            {this.getSwapsText()}
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -42,6 +60,21 @@ export default class SwapContent extends Component {
         </div>
       </PageContainerContent>
     )
+  }
+
+  renderQuote(){
+    const { t } = this.context
+    const { amount, toToken } = this.props
+    console.log(`The amount is ${amount}`)
+
+    if (amount === "0"){
+      return
+    }
+        return (
+          <p>
+         {this.getSwapQuotes.bind(this)}
+         </p>
+        )
   }
 
   maybeRenderContractWarning () {

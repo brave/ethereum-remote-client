@@ -21,6 +21,7 @@ import {
 } from '../selectors'
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
+import { dispatch } from 'd3-dispatch'
 
 let background = null
 let promisifiedBackground = null
@@ -148,7 +149,6 @@ export function submitPassword (password) {
       if (error) {
         return reject(error)
       }
-
       resolve()
     })
   })
@@ -160,7 +160,6 @@ export function createNewVault (password) {
       if (error) {
         return reject(error)
       }
-
       resolve(true)
     })
   })
@@ -172,7 +171,6 @@ export function verifyPassword (password) {
       if (error) {
         return reject(error)
       }
-
       resolve(true)
     })
   })
@@ -186,6 +184,18 @@ export function verifySeedPhrase () {
       }
 
       resolve(seedWords)
+    })
+  })
+}
+
+export function getQuote (sellAmount, buyToken,sellToken) {
+  dispatch(showLoadingIndication())
+  return new Promise((resolve, reject) => {
+    background.quote(sellAmount, buyToken, sellToken, (error) => {
+      if (error) {
+        return reject(error)
+      }
+      resolve(true)
     })
   })
 }
@@ -2481,3 +2491,4 @@ export function setHardwareConnect (value) {
     })
   }
 }
+

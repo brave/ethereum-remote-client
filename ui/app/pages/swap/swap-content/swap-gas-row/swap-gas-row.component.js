@@ -44,7 +44,7 @@ export default class SwapGasRow extends Component {
     }
     return (
       <div
-        className="advanced-gas-options-btn"
+        className="hidden"
         onClick={() => {
           metricsEvent({
             eventOpts: {
@@ -100,7 +100,7 @@ export default class SwapGasRow extends Component {
     const gasPriceButtonGroup = (
       <div>
         <GasPriceButtonGroup
-          className="gas-price-button-group--small"
+          className="hidden"
           showCheck={false}
           {...gasPriceButtonGroupProps}
           handleGasPriceSelection={async (...args) => {
@@ -161,13 +161,16 @@ export default class SwapGasRow extends Component {
     const { gasFeeError } = this.props
 
     return (
-      <SwapRowWrapper
-        label={`${this.context.t('transactionFee')}:`}
-        showError={gasFeeError}
-        errorType="gasFee"
-      >
-        { this.renderContent() }
-      </SwapRowWrapper>
+      <div>
+        
+      </div>
+      // <SwapRowWrapper
+      //   label={`${this.context.t('transactionFee')}:`}
+      //   showError={gasFeeError}
+      //   errorType="gasFee"
+      // >
+      //   { this.renderContent() }
+      // </SwapRowWrapper>
     )
   }
 

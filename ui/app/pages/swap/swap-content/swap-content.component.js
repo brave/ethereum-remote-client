@@ -6,16 +6,19 @@ import SwapGasRow from './swap-gas-row'
 import SwapHexDataRow from './swap-hex-data-row'
 import SwapAssetRow from './swap-asset-row'
 import Dialog from '../../../components/ui/dialog'
-import TextField from '../../../components/ui/text-field'
-import TransformText from './transform-text'
-import ReactDOMServer from 'react-dom/server'
 
 
 export default class SwapContent extends Component {
 
+  constructor(props){
+    super(props);
+}
+
   static contextTypes = {
     t: PropTypes.func,
   }
+  
+
 
   static propTypes = {
     updateGas: PropTypes.func,
@@ -23,21 +26,17 @@ export default class SwapContent extends Component {
     showHexData: PropTypes.bool,
     contact: PropTypes.object,
     isOwnedAccount: PropTypes.bool,
-    toToken: PropTypes.object,
-    toFrom: PropTypes.object,
+    toToken: PropTypes.string,
+    toFrom: PropTypes.string,
+    getSwapQuotes: PropTypes.func,
     isContractAddress: PropTypes.bool,
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
-  c
-
+  
   getSwapQuotes = () => {
-    this.props.getSwapQuotes(amount, "ETH", toToken.symbol)
-  }
-
-  getSwapsText = () => {
-    const swapText = ReactDOMServer.renderToString(this.renderQuote())
-    return swapText
+    const { amount, toToken } = this.props
+    this.props.getSwapQuotes(amount, "ETH", toToken)
   }
 
   render () {
@@ -48,7 +47,7 @@ export default class SwapContent extends Component {
           { this.maybeRenderContractWarning() }
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
-            {this.getSwapsText()}
+            {this.renderQuote()}
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -63,17 +62,22 @@ export default class SwapContent extends Component {
   }
 
   renderQuote(){
-    const { t } = this.context
+    console.log(`Local Props are : ${JSON.stringify(this.props)}`)
     const { amount, toToken } = this.props
+    // this.getSwapQuotes = this.getSwapQuotes.bind(this)
     console.log(`The amount is ${amount}`)
+    console.log(`The toToken is ${JSON.stringify(toToken)}`)
+    console.log(`Swap  Quotes is : ${this.getSwapQuotes()}`)
+
 
     if (amount === "0"){
       return
     }
         return (
-          <p>
-         {this.getSwapQuotes.bind(this)}
-         </p>
+          <div>
+            {this.getSwapQuotes}
+          </div>
+
         )
   }
 
@@ -97,23 +101,4 @@ export default class SwapContent extends Component {
       </div>
     )
   }
-
-  // maybeRenderAddContact () {
-  //   const { t } = this.context
-  //   const { isOwnedAccount, showAddToAddressBookModal, contact = {} } = this.props
-
-  //   if (isOwnedAccount || contact.name) {
-  //     return
-  //   }
-
-  //   return (
-  //     <Dialog
-  //       type="message"
-  //       className="swap__dialog"
-  //       onClick={showAddToAddressBookModal}
-  //     >
-  //       {t('newAccountDetectedDialogMessage')}
-  //     </Dialog>
-  //   )
-  // }
 }

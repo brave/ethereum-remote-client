@@ -9,6 +9,18 @@ import {
 
 import { calcTokenAmount } from '../../../helpers/utils/token-util'
 
+
+import { ethers, Contract } from 'ethers'
+import abi from 'human-standard-token-abi'
+import fetch from 'node-fetch'
+const API_QUOTE_URL = 'https://api.0x.org/swap/v1/quote'
+// TODO: THIS IS MY ADDRESS AND SHOULD BE CHANGED BEFORE GO LIVE
+// TODO: GENERATE ADDRESS
+const feeAddress = '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a'
+const buyTokenPercentageFee = 0.0875
+const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
+
 import {
   BASE_TOKEN_GAS_COST,
   INSUFFICIENT_FUNDS_ERROR,
@@ -36,6 +48,7 @@ export {
   isTokenBalanceSufficient,
   removeLeadingZeroes,
   ellipsify,
+  getQuote,
 }
 
 function calcGasTotal (gasLimit = '0', gasPrice = '0') {
@@ -44,6 +57,24 @@ function calcGasTotal (gasLimit = '0', gasPrice = '0') {
     multiplicandBase: 16,
     multiplierBase: 16,
   })
+}
+
+
+async function getQuote (sellAmount, buyToken, sellToken, slippagePercentage, taker) {
+  const qs = _createQueryString({
+    sellAmount: sellAmount,
+    buyToken: buyToken,
+    sellToken: sellToken,
+    buyTokenPercentageFee: buyTokenPercentageFee,
+    slippagePercentage: slippagePercentage,
+    takerAddress: taker,
+    feeRecipient: feeAddress,
+  })
+  const quoteUrl = `${API_QUOTE_URL}?${qs}`
+  console.log(quoteUrl)
+  const response = await fetch(quoteUrl)
+  console.log(response)
+  return response
 }
 
 function isBalanceSufficient ({

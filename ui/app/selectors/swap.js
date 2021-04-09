@@ -57,6 +57,10 @@ export function getSwapToToken (state) {
   return state.metamask.swap.tokenTo
 }
 
+export function getSwapAmount (state) {
+  return state.metamask.swap.amount
+}
+
 export function getSwapFromTokenContract (state) {
   const swapFromTokenAddress = getSwapFromTokenAddress(state)
   return swapFromTokenAddress
@@ -69,10 +73,6 @@ export function getSwapToTokenContract (state) {
   return swapToTokenAddress
     ? global.eth.contract(abi).at(swapToTokenAddress)
     : null
-}
-
-export function getSwapAmount (state) {
-  return state.metamask.swap.amount
 }
 
 export function getSwapHexData (state) {
@@ -212,4 +212,21 @@ export function getSwapIsContractAddress (state) {
   }
 
   return swapTo.toLowerCase() === swapFromTokenAddress.toLowerCase()
+}
+
+export async function getQuote (state) {
+  const qs = _createQueryString({
+    sellAmount: state.swap.amount,
+    buyToken: state.swap.buyToken,
+    sellToken: state.swap.sellToken,
+    buyTokenPercentageFee: buyTokenPercentageFee,
+    slippagePercentage: slippagePercentage,
+    takerAddress: taker,
+    feeRecipient: feeAddress,
+  })
+  const quoteUrl = `${API_QUOTE_URL}?${qs}`
+  console.log(quoteUrl)
+  const response = await fetch(quoteUrl)
+  console.log(response)
+  return response
 }

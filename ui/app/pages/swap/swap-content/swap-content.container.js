@@ -6,8 +6,8 @@ import {
   getAddressBookEntry,
   getIsContractAddress,
   getSwapAmount,
-  getSwapToToken,
-  getSwapFromToken,
+  getSwapToTokenSymbol,
+  getSwapFromTokenSymbol,
 
 } from '../../../selectors'
 
@@ -21,8 +21,8 @@ function mapStateToProps (state) {
     contact: getAddressBookEntry(state, to),
     to,
     isContractAddress: getIsContractAddress(state),
-    toToken : getSwapToToken(state),
-    fromToken: getSwapFromToken(state),
+    toToken : getSwapToTokenSymbol(state),
+    fromToken: getSwapFromTokenSymbol(state),
     amount: getSwapAmount(state),  
   }
 }
@@ -33,17 +33,18 @@ function mapDispatchToProps (dispatch) {
       name: 'ADD_TO_ADDRESSBOOK',
       recipient,
     })),
-    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(getQuote(sellAmount, buyToken, sellToken))
+    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(actions.getQuote(sellAmount, buyToken, sellToken))
     ,
   }
 }
 
 function mergeProps (stateProps, dispatchProps, ownProps) {
-  const { to, ...restStateProps } = stateProps
+  const { to, sellAmount, buyToken, sellToken, ...restStateProps } = stateProps
   return {
     ...ownProps,
     ...restStateProps,
     showAddToAddressBookModal: () => dispatchProps.showAddToAddressBookModal(to),
+    getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken, sellToken),
   }
 }
 

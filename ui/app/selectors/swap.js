@@ -199,8 +199,16 @@ export function getSwapFromTokenAddress (state) {
   return getSwapFromToken(state)?.address
 }
 
+export function getSwapFromTokenSymbol (state) {
+  return getSwapFromToken(state)?.symbol
+}
+
 export function getSwapToTokenAddress (state) {
   return getSwapToToken(state)?.address
+}
+
+export function getSwapToTokenSymbol (state) {
+  return getSwapToToken(state)?.symbol
 }
 
 export function getSwapIsContractAddress (state) {

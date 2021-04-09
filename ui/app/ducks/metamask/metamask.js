@@ -538,3 +538,4 @@ export const getUnconnectedAccountAlertEnabledness = (state) => getAlertEnabledn
 export const getUnconnectedAccountAlertShown = (state) => state.metamask.unconnectedAccountAlertShownOrigins
 
 export const getTokens = (state) => state.metamask.tokens
+

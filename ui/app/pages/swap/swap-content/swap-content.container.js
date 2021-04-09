@@ -5,6 +5,10 @@ import {
   accountsWithSwapEtherInfoSelector,
   getAddressBookEntry,
   getIsContractAddress,
+  getSwapAmount,
+  getSwapToToken,
+  getSwapFromToken,
+
 } from '../../../selectors'
 
 import * as actions from '../../../store/actions'
@@ -17,6 +21,9 @@ function mapStateToProps (state) {
     contact: getAddressBookEntry(state, to),
     to,
     isContractAddress: getIsContractAddress(state),
+    toToken : getSwapToToken(state),
+    fromToken: getSwapFromToken(state),
+    amount: getSwapAmount(state),  
   }
 }
 
@@ -26,6 +33,8 @@ function mapDispatchToProps (dispatch) {
       name: 'ADD_TO_ADDRESSBOOK',
       recipient,
     })),
+    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(getQuote(sellAmount, buyToken, sellToken))
+    ,
   }
 }
 

@@ -31,7 +31,6 @@ export default class SwapTransactionScreen extends Component {
     resetSwapState: PropTypes.func.isRequired,
     selectedAddress: PropTypes.string,
     swapFromToken: PropTypes.object,
-    swapToToken: PropTypes.object,
     showHexData: PropTypes.bool,
     to: PropTypes.string,
     toNickname: PropTypes.string,
@@ -78,7 +77,7 @@ export default class SwapTransactionScreen extends Component {
       network,
       primaryCurrency,
       swapFromToken,
-      swapToToken,
+      
       tokenToBalance,
       tokenFromBalance,
       updateSwapErrors,
@@ -96,7 +95,6 @@ export default class SwapTransactionScreen extends Component {
       tokenToBalance: prevTokenToBalance,
       network: prevNetwork,
       swapFromToken: prevSwapFromToken,
-      swapToToken: prevSwapToToken,
       to: prevTo,
     } = prevProps
 
@@ -110,7 +108,7 @@ export default class SwapTransactionScreen extends Component {
       prevTokenToBalance,
       prevTokenFromBalance,
       swapFromToken,
-      swapToToken,
+      
       tokenToBalance,
       tokenFromBalance
     })
@@ -123,7 +121,7 @@ export default class SwapTransactionScreen extends Component {
         gasTotal,
         primaryCurrency,
         swapFromToken,
-        swapToToken,
+        
         tokenFromBalance,
         tokenToBalance
       })
@@ -143,7 +141,7 @@ export default class SwapTransactionScreen extends Component {
 
       if (network !== prevNetwork && network !== 'loading') {
         updateSwapToTokenBalance({
-          swapFromToken,
+          
           tokenFromContract,
           address,
         })
@@ -158,12 +156,12 @@ export default class SwapTransactionScreen extends Component {
       updateGas = true
     }
 
-    const prevToTokenAddress = prevSwapToToken && prevSwapToToken.address
-    const swapTokenToAddress = swapToToken && swapToToken.address
-    if (swapTokenToAddress && prevToTokenAddress !== swapToTokenAddress) {
-      this.updateSwapToToken()
-      updateGas = true
-    }
+    // const prevToTokenAddress = prevSwapToToken && prevSwapToToken.address
+    // const swapTokenToAddress = swapToToken && swapToToken.address
+    // if (swapTokenToAddress && prevToTokenAddress !== swapToTokenAddress) {
+    //   this.updateSwapToToken()
+    //   updateGas = true
+    // }
 
     // let scannedAddress
     // if (qrCodeData) {
@@ -232,6 +230,7 @@ export default class SwapTransactionScreen extends Component {
       tokensFrom,
       tokensTo,
       swapFromToken,
+      
       network,
     } = this.props
 
@@ -242,7 +241,7 @@ export default class SwapTransactionScreen extends Component {
     }
 
     const toErrorObject = getToErrorObject(query, hasHexData, network)
-    const toWarningObject = getToWarningObject(query, tokensFrom, swapFromToken)
+    const toWarningObject = getToWarningObject(query, tokensFrom, swapFromToken, swapToToken)
 
     this.setState({
       toError: toErrorObject.to,
@@ -268,7 +267,7 @@ export default class SwapTransactionScreen extends Component {
   updateSwapToToken () {
     const {
       from: { address },
-      swapToToken,
+      
       tokenToContract,
       updateSwapTokenBalance,
     } = this.props
@@ -276,7 +275,7 @@ export default class SwapTransactionScreen extends Component {
     console.log(this.props)
 
     updateSwapTokenBalance({
-      swapToToken,
+      
       tokenToContract,
       address,
     })
@@ -302,7 +301,7 @@ export default class SwapTransactionScreen extends Component {
       gasPrice,
       selectedAddress,
       swapFromToken,
-      swapToToken,
+      
       to: getToAddressForGasUpdate(updatedToAddress, currentToAddress),
       value: value || amount,
       data,
@@ -379,7 +378,7 @@ export default class SwapTransactionScreen extends Component {
     return [
       <SwapContent
         key="swap-content"
-        updateGas={({ to, amount, data } = {}) => this.updateGas({ to, amount, data })}
+        updateGas={({  amount, data } = {}) => this.updateGas({ amount, data })}
         showHexData={showHexData}
       />,
       <SwapFooter key="swap-footer" history={history} />,

@@ -38,9 +38,9 @@ export default class SwapAmountRow extends Component {
       this.updateGas(amount)
     }
 
-    if (prevGasTotal !== gasTotal) {
-      this.validateAmount(amount)
-    }
+    // if (prevGasTotal !== gasTotal) {
+    //   this.validateAmount(amount)
+    // }
   }
 
   updateGas = debounce(this.updateGas.bind(this), 500)
@@ -98,7 +98,7 @@ export default class SwapAmountRow extends Component {
   }
 
   handleChange = (newAmount) => {
-    this.validateAmount(newAmount)
+    // this.validateAmount(newAmount)
     this.updateGas(newAmount)
     this.updateAmount(newAmount)
   }

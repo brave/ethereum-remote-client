@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
 import { getMetaMaskAccounts, getSwapFromTokenAddress, getSwapToTokenAddress } from '../../../../selectors'
-import { updateSwapFromToken, updateSwapToToken } from '../../../../store/actions'
+import { updateSwapFromToken, updateSwapToToken, getQuote} from '../../../../store/actions'
 
 function mapStateToProps (state) {
   return {
@@ -18,6 +18,7 @@ function mapDispatchToProps (dispatch) {
   return {
     setSwapFromToken: (token) => dispatch(updateSwapFromToken(token)),
     setSwapToToken: (token) => dispatch(updateSwapToToken(token)),
+    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(getQuote(sellAmount, buyToken, sellToken))
   }
 }
 

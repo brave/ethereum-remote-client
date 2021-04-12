@@ -2610,6 +2610,16 @@
     }
   }
 
+  async quote (sellAmount, buyToken, sellToken) {
+    try {
+      let response = await this.swapsController.quote(sellAmount, buyToken, sellToken)
+      console.log("The response is : " , response)
+      return response
+    } catch (error) {
+      throw error
+    }
+  }
+
   async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
     await this.txController.createSpeedUpTransaction(originalTxId, customGasPrice, customGasLimit)
     const state = await this.getState()

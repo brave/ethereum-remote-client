@@ -267,6 +267,8 @@ export function fillOrder (quote){
   }
 }
 
+
+
 export function requestRevealSeedWords (password) {
   return async (dispatch) => {
     dispatch(showLoadingIndication())
@@ -284,6 +286,8 @@ export function requestRevealSeedWords (password) {
     }
   }
 }
+
+
 
 export function tryReverseResolveAddress (address) {
   return () => {

@@ -13,6 +13,8 @@ const buyTokenPercentageFee = 0.0875
 const slippagePercentage = 0.0875
 const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
 const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
+const slippagePercentage = 0.02
+const url = 'http://localhost:7545'
 // const { FORKED } = process.env
 
 const { abi: WETH_ABI } = require('./swap-utils/IWETH.json')

@@ -189,13 +189,13 @@ export function verifySeedPhrase () {
 }
 
 export function getQuote (sellAmount, buyToken,sellToken) {
-  return (dispatch) => {
+  return () => {
     return new Promise((resolve, reject) => {
-      background.quote(sellAmount, buyToken, sellToken, (error) => {
+      background.quote(sellAmount, buyToken, sellToken, (error, response) => {
         if (error) {
           return reject(error)
         }
-        resolve(true)
+        resolve(response)
       })
     })
   }

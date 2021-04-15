@@ -36,7 +36,12 @@ export default class SwapContent extends Component {
   
   getSwapQuotes = () => {
     const { amount, toToken } = this.props
-    this.props.getSwapQuotes(amount, "ETH", toToken)
+    const info =  this.props.getSwapQuotes(amount, "ETH", toToken).then((data) => {
+      return data
+    })
+    info.then(function (result){
+      console.log("This is the Quote", result)
+    })
   }
 
   render () {
@@ -75,7 +80,7 @@ export default class SwapContent extends Component {
     }
         return (
           <div>
-            {this.getSwapQuotes}
+            {this.getSwapQuotes()}
           </div>
 
         )

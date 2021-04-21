@@ -16,6 +16,64 @@ const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 
 const { abi: WETH_ABI } = require('./swap-utils/IWETH.json')
 
+
+const initialState = {
+  swap: {
+    gasLimit: null,
+    gasPrice: null,
+    gasTotal: null,
+    tokenBalance: '0x0',
+    tokenToBalance: '0x0',
+    tokenFromBalance: '0x0',
+    from: '',
+    to: '',
+    tokensTo: [{
+      address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+      decimals: 18,
+      symbol: 'AAVE',
+    },{
+      address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+      decimals: 18,
+      symbol: 'YFI',
+    },
+    {
+      address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+      decimals: 18,
+      symbol: 'COMP',
+    },
+    {
+      address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+      decimals: 18,
+      symbol: 'ZRX',
+    }],
+    tokensFrom: [{
+      address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+      decimals: 18,
+      symbol: 'AAVE',
+    },{
+      address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+      decimals: 18,
+      symbol: 'YFI',
+    },
+    {
+      address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+      decimals: 18,
+      symbol: 'COMP',
+    },
+    {
+      address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+      decimals: 18,
+      symbol: 'ZRX',
+    },
+  ],
+    amount: '0',
+    memo: '',
+    errors: {},
+    maxModeOn: false,
+    editingTransactionId: null,
+  },
+};
+
 export default class SwapsController {
   constructor (opts) {
     // this.opts = opts
@@ -31,9 +89,13 @@ export default class SwapsController {
     this.ethers = ethers
     this.buyTokenPercentageFee = buyTokenPercentageFee
     this.feeAddress = feeAddress
-    this.store = new ObservableStore() || opts.initState
-    this.memStore = new ObservableStore({})
+    this.store = new ObservableStore({
+      swap: { ...initialState.swap },
+    });
   }
+
+
+  
 
 
   async wrapETH () {
@@ -57,6 +119,14 @@ export default class SwapsController {
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
     console.log(quoteUrl)
     const response = await fetch(quoteUrl)
+    const { swap } = this.store.getState()
+    // this.store.updateState({
+    //   swap: {
+    //     ...swap,
+    //     quotes: response,
+    //   },
+    // })
+    
     return response
   }
 

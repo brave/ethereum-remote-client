@@ -188,18 +188,29 @@ export function verifySeedPhrase () {
   })
 }
 
+// export function getQuote (sellAmount, buyToken,sellToken) {
+//   return () => {
+//     return new Promise((resolve, reject) => {
+//       background.quote(sellAmount, buyToken, sellToken, (error, response) => {
+//         if (error) {
+//           return reject(error)
+//         }
+//         resolve(response)
+//       })
+//     })
+//   }
+// }
+
+
 export function getQuote (sellAmount, buyToken,sellToken) {
-  return () => {
-    return new Promise((resolve, reject) => {
-      background.quote(sellAmount, buyToken, sellToken, (error, response) => {
-        if (error) {
-          return reject(error)
-        }
-        resolve(response)
-      })
-    })
-  }
+  return async (dispatch) => {
+    const quote = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
+    console.log("The background is ", await promisifiedBackground)
+    // await forceUpdateMetamaskState(dispatch);
+    return quote;
+  };
 }
+
 
 export function requestRevealSeedWords (password) {
   return async (dispatch) => {

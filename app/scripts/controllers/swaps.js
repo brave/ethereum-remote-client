@@ -10,6 +10,7 @@ const API_QUOTE_URL = 'https://api.0x.org/swap/v1/quote'
 // TODO: GENERATE ADDRESS
 const feeAddress = '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a'
 const buyTokenPercentageFee = 0.0875
+const slippagePercentage = 0.0875
 const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
 const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 // const { FORKED } = process.env
@@ -78,25 +79,22 @@ export default class SwapsController {
   constructor (opts) {
     // this.opts = opts
     // const initSwapControllerState = opts.initSwapControllerState || {}
-    this.provider = opts.provider
-    this.buyToken = opts.buyToken
-    this.sellToken = opts.sellToken
-    this.taker = opts.from
-    this.slippagePercentage = opts.slippagePercentage
-    this.sellAmount = opts.sellAmount
-    this.signEthTx = opts.signTransaction
-    this.abi = abi
-    this.ethers = ethers
-    this.buyTokenPercentageFee = buyTokenPercentageFee
-    this.feeAddress = feeAddress
+    // this.provider = opts.provider
+    // this.buyToken = opts.buyToken
+    // this.sellToken = opts.sellToken
+    // this.taker = opts.from
+    // this.slippagePercentage = opts.slippagePercentage
+    // this.sellAmount = opts.sellAmount
+    // this.signEthTx = opts.signTransaction
+    // this.abi = abi
+    // this.ethers = ethers
+    // this.buyTokenPercentageFee = buyTokenPercentageFee
+    // this.feeAddress = feeAddress
     this.store = new ObservableStore({
       swap: { ...initialState.swap },
     });
   }
-
-
-  
-
+  // constructor (){}
 
   async wrapETH () {
     const overrides = {
@@ -106,28 +104,28 @@ export default class SwapsController {
     return receipt
   }
 
-  async quote () {
+  async quote (sellAmount, buyToken,sellToken) {
     const qs = _createQueryString({
-      sellAmount: this.sellAmount,
-      buyToken: this.buyToken,
-      sellToken: this.sellToken,
-      buyTokenPercentageFee: this.buyTokenPercentageFee,
-      slippagePercentage: this.slippagePercentage,
-      takerAddress: this.taker,
+      sellAmount: sellAmount,
+      buyToken: buyToken,
+      sellToken: sellToken,
+      buyTokenPercentageFee: buyTokenPercentageFee,
+      slippagePercentage: slippagePercentage,
+      // takerAddress: this.taker,
       feeRecipient: feeAddress,
     })
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
     console.log(quoteUrl)
     const response = await fetch(quoteUrl)
     const { swap } = this.store.getState()
-    // this.store.updateState({
-    //   swap: {
-    //     ...swap,
-    //     quotes: response,
-    //   },
-    // })
+    this.store.updateState({
+      swap: {
+        ...swap,
+        quotes: response.json,
+      },
+    })
     
-    return response
+    return swap.quotes
   }
 
   async approveTokenAllowance (response) {

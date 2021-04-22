@@ -36,68 +36,78 @@ describe('Swaps Controller', function () {
     const url = 'http://localhost:7545'
     const provider = new ethers.providers.JsonRpcProvider(url)
     from = (getTestAccounts()[0]).address
-    slippagePercentage = 0.1
+    // slippagePercentage = 0.1
+    // const sellAmount = 100
+    // const buyToken = "ETH"
+    // const sellToken  = "BAT"
+
+
 
     nock('https://api.0x.org/swap/v1/quote')
       .get('?sellAmount=1&buyToken=BAT&sellToken=ETH&buyTokenPercentageFee=0.0875&slippagePercentage=0.1&takerAddress=0x88bb7F89eB5e5b30D3e15a57C68DBe03C6aCCB21&feeRecipient=0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a')
       .reply(200, quoteResponse)
 
-    swapsController = new SwapsController({ provider,
-      buyToken,
-      sellToken,
-      from,
-      slippagePercentage,
-      sellAmount,
-      abi: abi,
-      // buyAmount,
-      signTransaction: (ethTx) => new Promise((resolve) => {
-        ethTx.sign(from.key)
-        resolve()
-      }) })
+    // swapsController = new SwapsController({ provider,
+    //   buyToken,
+    //   sellToken,
+    //   from,
+    //   slippagePercentage,
+    //   sellAmount,
+    //   abi: abi,
+    //   // buyAmount,
+    //   signTransaction: (ethTx) => new Promise((resolve) => {
+    //     ethTx.sign(from.key)
+    //     resolve()
+    //   }) })
+
+          swapsController = new SwapsController()
 
   })
 
   describe('#quote', function () {
+    const sellAmount = 100
+    const buyToken = "ETH"
+    const sellToken  = "BAT"
     it('it should return a quote for the swap', async function () {
-      const quote = await swapsController.quote()
+      const quote = await swapsController.quote(sellAmount, buyToken,sellToken)
       assert.ok(200, quote.status)
       assert.ok('1', quote.json().sellAmount)
     })
   })
 
   // TODO: Add more tests
-  describe('#WETH', function () {
-    it('it should wrap ETH', async function () {
-      const receipt = await swapsController.wrapETH()
-      assert.ok(from, receipt.from)
-      //   assert.ok('1', quote.json().sellAmount)
-    })
-  })
+  // describe('#WETH', function () {
+  //   it('it should wrap ETH', async function () {
+  //     const receipt = await swapsController.wrapETH()
+  //     assert.ok(from, receipt.from)
+  //     //   assert.ok('1', quote.json().sellAmount)
+  //   })
+  // })
 
-  // TODO: Include check to see that transaction is approved.
-  describe('#Transaction', function () {
-    it('it should approve transaction allowance', async function () {
-      const allowanceTarget = '0x0000000000000000000000000000000000000000'
-      const receipt = await swapsController.approveTokenAllowance(
-        allowanceTarget,
-      )
-       console.log(receipt)
-      //   assert.ok(200, quote.status)
-      //   assert.ok('1', quote.json().sellAmount)
-    })
+  // // TODO: Include check to see that transaction is approved.
+  // describe('#Transaction', function () {
+  //   it('it should approve transaction allowance', async function () {
+  //     const allowanceTarget = '0x0000000000000000000000000000000000000000'
+  //     const receipt = await swapsController.approveTokenAllowance(
+  //       allowanceTarget,
+  //     )
+  //      console.log(receipt)
+  //     //   assert.ok(200, quote.status)
+  //     //   assert.ok('1', quote.json().sellAmount)
+  //   })
 
-        it('it should fill the order', async() => {
-            let  receipt = await swapsController.fillOrder(
-                            quoteResponse.to,
-                            quoteResponse.data,
-                            quoteResponse.value,
-                            quoteResponse.gasPrice,
-                            quoteResponse.gas,
-                            )
-             assert(receipt.hash || receipt.blockNumber  != null)
-             assert.ok(quoteResponse.data , receipt.data)
-             assert.ok(from, receipt.from)
-             assert.ok(quoteResponse.to, receipt.to)
-       })
-  })
+  //       it('it should fill the order', async() => {
+  //           let  receipt = await swapsController.fillOrder(
+  //                           quoteResponse.to,
+  //                           quoteResponse.data,
+  //                           quoteResponse.value,
+  //                           quoteResponse.gasPrice,
+  //                           quoteResponse.gas,
+  //                           )
+  //            assert(receipt.hash || receipt.blockNumber  != null)
+  //            assert.ok(quoteResponse.data , receipt.data)
+  //            assert.ok(from, receipt.from)
+  //            assert.ok(quoteResponse.to, receipt.to)
+  //      })
+  // })
 })

@@ -202,13 +202,32 @@ export function verifySeedPhrase () {
 // }
 
 
+// export function getQuote (sellAmount, buyToken,sellToken) {
+//   return async () => {
+//     const quote = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
+//     console.log("The quote in the account is ", quote)
+//     console.log("The background is ", await promisifiedBackground)
+//     // await forceUpdateMetamaskState(dispatch);
+//     return quote;
+//   };
+// }
+
 export function getQuote (sellAmount, buyToken,sellToken) {
-  return async (dispatch) => {
-    const quote = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
-    console.log("The background is ", await promisifiedBackground)
-    // await forceUpdateMetamaskState(dispatch);
-    return quote;
-  };
+  log.debug('background.getQuote')
+
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      console.log("The background script function are ", background)
+      console.log("The background quote is ", JSON.stringify(background.quote()))
+      background.quote(sellAmount, buyToken,sellToken, (err, response) => {
+        if (err) {
+          dispatch(displayWarning(err.message))
+          return reject(err)
+        }
+        resolve(response)
+      })
+    })
+  }
 }
 
 

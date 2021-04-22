@@ -12,6 +12,7 @@ export default class SwapContent extends Component {
 
   constructor(props){
     super(props);
+    this.state = { response: [] };
 }
 
   static contextTypes = {
@@ -39,9 +40,18 @@ export default class SwapContent extends Component {
     const info =  this.props.getSwapQuotes(amount, "ETH", toToken).then((data) => {
       return data
     })
+    console.log("The data in the quote is ", info)
     info.then(function (result){
       console.log("This is the Quote", result)
     })
+  }
+
+  componentDidMount() {
+    const { amount, toToken } = this.props
+    this.getSwapQuotes(amount, "ETH", toToken).then((res) => { res.json()
+      return res.json
+    })
+    .then(json => this.setState({ data: json }));
   }
 
   render () {
@@ -52,7 +62,8 @@ export default class SwapContent extends Component {
           { this.maybeRenderContractWarning() }
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
-            {this.renderQuote()}
+            {/* {this.renderQuote()} */}
+            {JSON.stringify(this.state.response)}
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -85,7 +96,6 @@ export default class SwapContent extends Component {
 
         )
   }
-
   maybeRenderContractWarning () {
     const { t } = this.context
     const { isContractAddress } = this.props

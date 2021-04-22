@@ -4,7 +4,7 @@
  * @license   MIT
  */
 
-import EventEmitter from 'events'
+ import EventEmitter from 'events'
 
 import pump from 'pump'
 import Dnode from 'dnode'

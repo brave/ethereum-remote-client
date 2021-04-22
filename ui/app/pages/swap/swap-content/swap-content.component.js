@@ -1,4 +1,4 @@
-import React, { Component, ReactText } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerContent from '../../../components/ui/page-container/page-container-content.component'
 import SwapAmountRow from './swap-amount-row'
@@ -9,40 +9,42 @@ import Dialog from '../../../components/ui/dialog'
 
 
 export default class SwapContent extends Component {
-
-  constructor(props){
-    super(props);
-    this.state = { response: [] };
-}
-
   static contextTypes = {
     t: PropTypes.func,
   }
-  
-
 
   static propTypes = {
     updateGas: PropTypes.func,
-    showAddToAddressBookModal: PropTypes.func,
+    // showAddToAddressBookModal: PropTypes.func,
     showHexData: PropTypes.bool,
-    contact: PropTypes.object,
-    isOwnedAccount: PropTypes.bool,
-    toToken: PropTypes.string,
-    toFrom: PropTypes.string,
+    // contact: PropTypes.object,
+    // isOwnedAccount: PropTypes.bool,
+    // toToken: PropTypes.string,
+    // toFrom: PropTypes.string,
     getSwapQuotes: PropTypes.func,
     isContractAddress: PropTypes.bool,
+    sellAmount: PropTypes.number,
+    buyToken: PropTypes.string,
+    // sellToken: PropTypes.string,
+  }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      quoteResult: undefined,
+    }
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
-  
-  getSwapQuotes = () => {
-    const { amount, toToken } = this.props
-    const info =  this.props.getSwapQuotes(amount, "ETH", toToken).then((data) => {
-      return data
-    })
-    console.log("The data in the quote is ", info)
-    info.then(function (result){
-      console.log("This is the Quote", result)
+
+  swapQuotes = () => {
+    const { sellAmount, buyToken, getSwapQuotes } = this.props
+    // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((resp) => resp.json()).then((result) => {
+    //   console.log('This is the Quote', result)
+    // })
+    getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
+      console.log('This Is The Quote', data)
+      this.setState({ quoteResult: data.quotes })
     })
   }
 
@@ -55,15 +57,15 @@ export default class SwapContent extends Component {
   // }
 
   render () {
-    console.log(`The swap component props are ${JSON.stringify(this.props)}`)
+    // console.log(`The swap component props are ${JSON.stringify(this.props)}`)
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
-          { this.maybeRenderContractWarning() }
+          {this.maybeRenderContractWarning()}
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
-            {this.renderQuote()}
-            {/* {JSON.stringify(this.state.response)} */}
+          <span onClick={() => this.swapQuotes()}>Get Quote</span>
+          {this.renderQuote()}
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -77,24 +79,34 @@ export default class SwapContent extends Component {
     )
   }
 
-  renderQuote(){
-    console.log(`Local Props are : ${JSON.stringify(this.props)}`)
-    const { amount, toToken } = this.props
+  renderQuote () {
+    // console.log(`Local Props are : ${JSON.stringify(this.props)}`)
+    const { sellAmount } = this.props
     // this.getSwapQuotes = this.getSwapQuotes.bind(this)
-    console.log(`The amount is ${amount}`)
-    console.log(`The toToken is ${JSON.stringify(toToken)}`)
-    console.log(`Swap  Quotes is : ${this.getSwapQuotes()}`)
+    // console.log(`The amount is ${sellAmount}`)
+    // console.log(`The buy token is ${JSON.stringify(buyToken)}`)
 
-
-    if (amount === "0"){
+    if (sellAmount === '0') {
       return
     }
-        return (
-          <div>
-            {this.getSwapQuotes()}
+    this.swapQuotes()
+    return (
+      <>
+        {this.state.quoteResult !== undefined ? (
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'column' }}>
+            <span>Sell Amount: {this.state.quoteResult.sellAmount}</span>
+            <span>Buy Amount: {this.state.quoteResult.buyAmount}</span>
+            <span>Rate: {this.state.quoteResult.buyTokenToEthRate}</span>
+            <span>Estimated Gas: {this.state.quoteResult.estimatedGas}</span>
+            <span>Gas: {this.state.quoteResult.gas}</span>
+            <span>Gas Price: {this.state.quoteResult.gasPrice}</span>
+            <span>Guaranteed Price: {this.state.quoteResult.guaranteedPrice}</span>
           </div>
-
-        )
+        ) : (
+          <div>Loading....</div>
+        )}
+      </>
+    )
   }
   maybeRenderContractWarning () {
     const { t } = this.context

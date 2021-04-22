@@ -46,13 +46,13 @@ export default class SwapContent extends Component {
     })
   }
 
-  componentDidMount() {
-    const { amount, toToken } = this.props
-    this.getSwapQuotes(amount, "ETH", toToken).then((res) => { res.json()
-      return res.json
-    })
-    .then(json => this.setState({ data: json }));
-  }
+  // componentDidMount() {
+  //   const { amount, toToken } = this.props
+  //   this.getSwapQuotes(amount, "ETH", toToken).then((res) => { res.json()
+  //     return res.json
+  //   })
+  //   .then(json => this.setState({ data: json }));
+  // }
 
   render () {
     console.log(`The swap component props are ${JSON.stringify(this.props)}`)
@@ -62,8 +62,8 @@ export default class SwapContent extends Component {
           { this.maybeRenderContractWarning() }
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
-            {/* {this.renderQuote()} */}
-            {JSON.stringify(this.state.response)}
+            {this.renderQuote()}
+            {/* {JSON.stringify(this.state.response)} */}
           <SwapGasRow />
           {
             this.props.showHexData && (

@@ -61,6 +61,14 @@ export default class SwapContent extends Component {
 
   }
 
+  componentDidMount() {
+    const { amount, toToken } = this.props
+    this.getSwapQuotes(amount, "ETH", toToken).then((res) => { res.json()
+      return res.json
+    })
+    .then(json => this.setState({ data: json }));
+  }
+
   render () {
     return (
       <PageContainerContent>
@@ -110,7 +118,6 @@ export default class SwapContent extends Component {
       </>
     )
   }
-
   maybeRenderContractWarning () {
     const { t } = this.context
     const { isContractAddress } = this.props

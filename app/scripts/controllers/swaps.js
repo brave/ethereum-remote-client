@@ -32,7 +32,7 @@ const initialState = {
       address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
       decimals: 18,
       symbol: 'AAVE',
-    },{
+    }, {
       address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
       decimals: 18,
       symbol: 'YFI',
@@ -51,7 +51,7 @@ const initialState = {
       address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
       decimals: 18,
       symbol: 'AAVE',
-    },{
+    }, {
       address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
       decimals: 18,
       symbol: 'YFI',
@@ -66,7 +66,7 @@ const initialState = {
       decimals: 18,
       symbol: 'ZRX',
     },
-  ],
+    ],
     amount: '0',
     memo: '',
     errors: {},
@@ -76,7 +76,7 @@ const initialState = {
 };
 
 export default class SwapsController {
-  constructor (opts) {
+  constructor(opts) {
     // this.opts = opts
     // const initSwapControllerState = opts.initSwapControllerState || {}
     // this.provider = opts.provider
@@ -104,7 +104,7 @@ export default class SwapsController {
     return receipt
   }
 
-  async quote (sellAmount, buyToken,sellToken) {
+  async quote (sellAmount, buyToken, sellToken) {
     const qs = _createQueryString({
       sellAmount: sellAmount,
       buyToken: buyToken,
@@ -116,16 +116,17 @@ export default class SwapsController {
     })
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
     console.log(quoteUrl)
-    const response = await fetch(quoteUrl)
     const { swap } = this.store.getState()
-    this.store.updateState({
-      swap: {
-        ...swap,
-        quotes: response.json,
-      },
-    })
-    
-    return swap.quotes
+    await fetch(quoteUrl).then((response) => response.json()).then((data) => {
+      this.store.updateState({
+        swap: {
+          ...swap,
+          quotes: data,
+        },
+      })
+    },
+    )
+    return swap
   }
 
   async approveTokenAllowance (response) {

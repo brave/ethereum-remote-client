@@ -13,7 +13,7 @@ import {
 
 import * as actions from '../../../store/actions'
 
-function mapStateToProps (state) {
+const mapStateToProps = (state) => {
   const ownedAccounts = accountsWithSwapEtherInfoSelector(state)
   const to = getSwapTo(state)
   return {
@@ -21,30 +21,30 @@ function mapStateToProps (state) {
     contact: getAddressBookEntry(state, to),
     to,
     isContractAddress: getIsContractAddress(state),
-    toToken : getSwapToTokenSymbol(state),
-    fromToken: getSwapFromTokenSymbol(state),
-    amount: getSwapAmount(state),  
+    buyToken: getSwapToTokenSymbol(state),
+    sellToken: getSwapFromTokenSymbol(state),
+    sellAmount: getSwapAmount(state),
   }
 }
 
-function mapDispatchToProps (dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     showAddToAddressBookModal: (recipient) => dispatch(actions.showModal({
       name: 'ADD_TO_ADDRESSBOOK',
       recipient,
     })),
-    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(actions.getQuote(sellAmount, buyToken, sellToken))
-    ,
+    getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
   }
 }
 
-function mergeProps (stateProps, dispatchProps, ownProps) {
-  const { to, sellAmount, buyToken, sellToken, ...restStateProps } = stateProps
+const mergeProps = (stateProps, dispatchProps, ownProps) => {
+  const { to, sellAmount, buyToken, ...restStateProps } = stateProps
   return {
+    ...stateProps,
     ...ownProps,
     ...restStateProps,
     showAddToAddressBookModal: () => dispatchProps.showAddToAddressBookModal(to),
-    getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken, sellToken),
+    getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
   }
 }
 

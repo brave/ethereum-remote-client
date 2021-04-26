@@ -44,6 +44,7 @@ export default function reduceMetamask (state = {}, action) {
       tokenFromBalance: '0x0',
       from: '',
       to: '',
+      quotes: '',
       tokensTo: [{
         address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
         decimals: 18,
@@ -246,6 +247,15 @@ export default function reduceMetamask (state = {}, action) {
             amount: action.value,
           },
         }
+
+        case actionConstants.UPDATE_SWAP_QUOTE:
+          return {
+            ...metamaskState,
+            swap: {
+              ...metamaskState.swap,
+              quotes: action.value,
+            },
+          }
 
     case actionConstants.UPDATE_MAX_MODE:
       return {

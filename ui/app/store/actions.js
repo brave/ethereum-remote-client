@@ -823,6 +823,13 @@ export function updateSwapAmount (amount) {
   }
 }
 
+export function updateSwapQuote (quote) {
+  return {
+    type: actionConstants.UPDATE_SWAP_QUOTE,
+    value: quote,
+  }
+}
+
 export function updateCustomNonce (value) {
   return {
     type: actionConstants.UPDATE_CUSTOM_NONCE,

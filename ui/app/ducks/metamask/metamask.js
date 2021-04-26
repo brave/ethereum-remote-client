@@ -249,6 +249,7 @@ export default function reduceMetamask (state = {}, action) {
         }
 
         case actionConstants.UPDATE_SWAP_QUOTE:
+          console.log("Quotes in metamask duck ", action.value)
           return {
             ...metamaskState,
             swap: {
@@ -256,7 +257,7 @@ export default function reduceMetamask (state = {}, action) {
               quotes: action.value,
             },
           }
-
+          
     case actionConstants.UPDATE_MAX_MODE:
       return {
         ...metamaskState,

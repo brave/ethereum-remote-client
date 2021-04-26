@@ -36,36 +36,29 @@ export default class SwapContent extends Component {
     super(props)
     this.state = {
       quoteResult: undefined,
+      updatedQuote: undefined,
     }
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
 
-  // updateQuote (quote) {
-  //   const { updateSwapQuote } = this.props
-  //   updateSwapQuote(quote)
-  // }
-
-  updateQuote = (quote) => this.props.updateSwapQuote(quote) 
+  // updateQuote = (quote) => this.props.updateSwapQuote(quote)
 
   swapQuotes = () => {
-    const { sellAmount, buyToken, getSwapQuotes } = this.props
+    const { sellAmount, buyToken, getSwapQuotes, updateSwapQuote, quote } = this.props
+    console.log("Props in SwapQuote ", this.props)
     console.log("The sellAmount in swapQuote is ", sellAmount)
-    // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((resp) => resp.json()).then((result) => {
-    //   console.log('This is the Quote', result)
-    // })
-    // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
       getSwapQuotes().then((data) => {
       console.log('This Is The Quote', data)
-      this.setState({ quoteResult: data.quotes })
-      this.updateQuote()
-    })
-    // this.updateQuote(data.quotes)
+      this.setState({ quoteResult: data.quotes }, () => { updateSwapQuote()})
+      this.setState({ updateSwapQuote: quote})
+      console.log("This is the state in swapQuote ", this.state)
+    }).then((updateSwapQuote))
+
   }
 
 
   render () {
-    // console.log(`The swap component props are ${JSON.stringify(this.props)}`)
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
@@ -120,6 +113,16 @@ export default class SwapContent extends Component {
         )}
       </>
     )
+  }
+
+  renderExecuteQuote(){
+    const { quote } = this.props
+
+    if (!quote) {
+      return
+    }
+
+
   }
 
 

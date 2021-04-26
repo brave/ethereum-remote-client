@@ -1792,6 +1792,7 @@
      })
  
      this.swapsController = new SwapsController({
+       initState: initState.SwapsController
       //  provider: this.provider,
       //  buyToken: opts.buyToken,
       //  sellToken: opts.sellToken,

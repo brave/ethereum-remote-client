@@ -6,6 +6,7 @@ import {
   getSwapFromTokenBalance,
   getSwapMaxModeState,
   getBasicGasEstimateLoadingStatus,
+  getSwapQ
 } from '../../../../../selectors'
 import { calcMaxAmount } from './amount-max-button.utils.js'
 import {

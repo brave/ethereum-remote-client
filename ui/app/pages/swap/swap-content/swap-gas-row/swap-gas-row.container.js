@@ -21,7 +21,7 @@ import {
   getIsMainnet,
 } from '../../../../selectors'
 import {
-  isBalanceSufficient,
+  // isBalanceSufficient,
   calcGasTotal,
 } from '../../swap.utils.js'
 import { calcMaxAmount } from '../swap-amount-row/amount-max-button/amount-max-button.utils'
@@ -50,12 +50,12 @@ function mapStateToProps (state) {
   const conversionRate = getSwapConversionRate(state)
   const balance = getCurrentEthBalance(state)
 
-  const insufficientBalance = !isBalanceSufficient({
-    amount: getSwapToken(state) ? '0x0' : getSwapAmount(state),
-    gasTotal,
-    balance,
-    conversionRate,
-  })
+  // const insufficientBalance = !isBalanceSufficient({
+  //   amount: getSwapToken(state) ? '0x0' : getSwapAmount(state),
+  //   gasTotal,
+  //   balance,
+  //   conversionRate,
+  // })
 
   return {
     balance: getSwapFromBalance(state),
@@ -72,7 +72,7 @@ function mapStateToProps (state) {
     advancedInlineGasShown: getAdvancedInlineGasShown(state),
     gasPrice,
     gasLimit,
-    insufficientBalance,
+    // insufficientBalance,
     maxModeOn: getSwapMaxModeState(state),
     swapFromToken: getSwapToken(state),
     tokenFromBalance: getSwapFromTokenBalance(state),

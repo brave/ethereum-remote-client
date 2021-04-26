@@ -34,17 +34,19 @@ const mapDispatchToProps = (dispatch) => {
       recipient,
     })),
     getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
+    updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote))
   }
 }
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const { to, sellAmount, buyToken, ...restStateProps } = stateProps
+  const { to, sellAmount, buyToken, quote, ...restStateProps } = stateProps
   return {
     ...stateProps,
     ...ownProps,
     ...restStateProps,
     showAddToAddressBookModal: () => dispatchProps.showAddToAddressBookModal(to),
     getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
+    updateSwapQuote: () => dispatchProps.updateSwapQuote(quote)
   }
 }
 

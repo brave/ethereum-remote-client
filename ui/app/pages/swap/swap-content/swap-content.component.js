@@ -6,6 +6,7 @@ import SwapGasRow from './swap-gas-row'
 import SwapHexDataRow from './swap-hex-data-row'
 import SwapAssetRow from './swap-asset-row'
 import Dialog from '../../../components/ui/dialog'
+import Button from '../../../components/ui/button'
 
 
 export default class SwapContent extends Component {
@@ -37,6 +38,11 @@ export default class SwapContent extends Component {
 
   updateGas = (updateData) => this.props.updateGas(updateData)
 
+  updateQuote (quote) {
+    const { updateSwapQuote} = this.props
+    updateSwapQuote(quote)
+  }
+
   swapQuotes = () => {
     const { sellAmount, buyToken, getSwapQuotes } = this.props
     // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((resp) => resp.json()).then((result) => {
@@ -45,6 +51,7 @@ export default class SwapContent extends Component {
     getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
       console.log('This Is The Quote', data)
       this.setState({ quoteResult: data.quotes })
+      this.updateQuote(data.quotes)
     })
   }
 
@@ -64,7 +71,10 @@ export default class SwapContent extends Component {
           {this.maybeRenderContractWarning()}
           <SwapAssetRow />
           <SwapAmountRow updateGas={this.updateGas} />
-          <span onClick={() => this.swapQuotes()}>Get Quote</span>
+          <br></br>
+          <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
+          {/* <span onClick={() => this.swapQuotes()}>Get Quote</span> */}
+          <br></br>
           {this.renderQuote()}
           <SwapGasRow />
           {
@@ -108,6 +118,8 @@ export default class SwapContent extends Component {
       </>
     )
   }
+
+
   maybeRenderContractWarning () {
     const { t } = this.context
     const { isContractAddress } = this.props

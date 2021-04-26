@@ -218,18 +218,17 @@ export function getQuote (sellAmount, buyToken,sellToken) {
   return (dispatch) => {
     return new Promise((resolve, reject) => {
       console.log("The background script function are ", background)
-      console.log("The background quote is ", JSON.stringify(background.quote()))
       background.quote(sellAmount, buyToken,sellToken, (err, response) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
         }
-        resolve(response)
+        return forceUpdateMetamaskState(dispatch)
+          .then( resolve(response))
       })
     })
   }
 }
-
 
 export function requestRevealSeedWords (password) {
   return async (dispatch) => {

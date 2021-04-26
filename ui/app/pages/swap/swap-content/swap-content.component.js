@@ -24,7 +24,7 @@ export default class SwapContent extends Component {
     // toFrom: PropTypes.string,
     getSwapQuotes: PropTypes.func,
     isContractAddress: PropTypes.bool,
-    sellAmount: PropTypes.number,
+    sellAmount: PropTypes.string,
     buyToken: PropTypes.string,
     // sellToken: PropTypes.string,
   }
@@ -38,20 +38,23 @@ export default class SwapContent extends Component {
 
   updateGas = (updateData) => this.props.updateGas(updateData)
 
-  updateQuote (quote) {
-    const { updateSwapQuote} = this.props
-    updateSwapQuote(quote)
-  }
+  // updateQuote (quote) {
+  //   const { updateSwapQuote } = this.props
+  //   updateSwapQuote(quote)
+  // }
+
+  updateQuote = (quote) => this.props.updateSwapQuote(quote) 
 
   swapQuotes = () => {
     const { sellAmount, buyToken, getSwapQuotes } = this.props
+    console.log("The sellAmount in swapQuote is ", sellAmount)
     // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((resp) => resp.json()).then((result) => {
     //   console.log('This is the Quote', result)
     // })
     getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
       console.log('This Is The Quote', data)
       this.setState({ quoteResult: data.quotes })
-      this.updateQuote(data.quotes)
+      // this.updateQuote(this.state.quoteResult)
     })
   }
 
@@ -73,6 +76,7 @@ export default class SwapContent extends Component {
           <SwapAmountRow updateGas={this.updateGas} />
           <br></br>
           <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
+          {/* { this.render()} */}
           {/* <span onClick={() => this.swapQuotes()}>Get Quote</span> */}
           <br></br>
           {this.renderQuote()}
@@ -99,7 +103,7 @@ export default class SwapContent extends Component {
     if (sellAmount === '0') {
       return
     }
-    this.swapQuotes()
+    // this.swapQuotes()
     return (
       <>
         {this.state.quoteResult !== undefined ? (

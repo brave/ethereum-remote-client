@@ -61,6 +61,10 @@ export function getSwapAmount (state) {
   return state.metamask.swap.amount
 }
 
+export function getSwapQuote (state) {
+  return state.metamask.swap.quotes
+}
+
 export function getSwapFromTokenContract (state) {
   const swapFromTokenAddress = getSwapFromTokenAddress(state)
   return swapFromTokenAddress

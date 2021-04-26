@@ -8,7 +8,7 @@ import {
   getSwapAmount,
   getSwapToTokenSymbol,
   getSwapFromTokenSymbol,
-
+  getSwapQuote,
 } from '../../../selectors'
 
 import * as actions from '../../../store/actions'
@@ -24,15 +24,12 @@ const mapStateToProps = (state) => {
     buyToken: getSwapToTokenSymbol(state),
     sellToken: getSwapFromTokenSymbol(state),
     sellAmount: getSwapAmount(state),
+    quote: getSwapQuote(state),
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    showAddToAddressBookModal: (recipient) => dispatch(actions.showModal({
-      name: 'ADD_TO_ADDRESSBOOK',
-      recipient,
-    })),
     getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
     updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote))
   }
@@ -44,7 +41,6 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...stateProps,
     ...ownProps,
     ...restStateProps,
-    showAddToAddressBookModal: () => dispatchProps.showAddToAddressBookModal(to),
     getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
     updateSwapQuote: () => dispatchProps.updateSwapQuote(quote)
   }

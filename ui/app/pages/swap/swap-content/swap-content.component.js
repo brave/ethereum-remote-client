@@ -7,6 +7,8 @@ import SwapHexDataRow from './swap-hex-data-row'
 import SwapAssetRow from './swap-asset-row'
 import Dialog from '../../../components/ui/dialog'
 import Button from '../../../components/ui/button'
+import { ethers } from 'ethers'
+
 
 
 export default class SwapContent extends Component {
@@ -23,6 +25,7 @@ export default class SwapContent extends Component {
     // toToken: PropTypes.string,
     // toFrom: PropTypes.string,
     getSwapQuotes: PropTypes.func,
+    updateSwapQuote: PropTypes.func,
     isContractAddress: PropTypes.bool,
     sellAmount: PropTypes.string,
     buyToken: PropTypes.string,
@@ -51,20 +54,15 @@ export default class SwapContent extends Component {
     // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((resp) => resp.json()).then((result) => {
     //   console.log('This is the Quote', result)
     // })
-    getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
+    // getSwapQuotes(parseInt(sellAmount, 16), buyToken).then((data) => {
+      getSwapQuotes().then((data) => {
       console.log('This Is The Quote', data)
       this.setState({ quoteResult: data.quotes })
-      // this.updateQuote(this.state.quoteResult)
+      this.updateQuote()
     })
+    // this.updateQuote(data.quotes)
   }
 
-  // componentDidMount() {
-  //   const { amount, toToken } = this.props
-  //   this.getSwapQuotes(amount, "ETH", toToken).then((res) => { res.json()
-  //     return res.json
-  //   })
-  //   .then(json => this.setState({ data: json }));
-  // }
 
   render () {
     // console.log(`The swap component props are ${JSON.stringify(this.props)}`)
@@ -108,6 +106,7 @@ export default class SwapContent extends Component {
       <>
         {this.state.quoteResult !== undefined ? (
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'column' }}>
+            {/* <span>Sell Amount: {ethers.utils.parseEther(this.state.quoteResult.sellAmount)}</span> */}
             <span>Sell Amount: {this.state.quoteResult.sellAmount}</span>
             <span>Buy Amount: {this.state.quoteResult.buyAmount}</span>
             <span>Rate: {this.state.quoteResult.buyTokenToEthRate}</span>

@@ -18,7 +18,6 @@ function mapDispatchToProps (dispatch) {
   return {
     setSwapFromToken: (token) => dispatch(updateSwapFromToken(token)),
     setSwapToToken: (token) => dispatch(updateSwapToToken(token)),
-    getSwapQuotes: (sellAmount, buyToken, sellToken) => dispatch(getQuote(sellAmount, buyToken, sellToken))
   }
 }
 

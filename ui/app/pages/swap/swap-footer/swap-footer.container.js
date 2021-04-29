@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import ethUtil from 'ethereumjs-util'
+import ethers from 'ethers'
 import {
   addToAddressBook,
   clearSwap,
@@ -15,9 +16,12 @@ import {
   getSwapAmount,
   getSwapEditingTransactionId,
   getSwapFromObject,
-  getSwapTo,
+  getSwapQuoteTo,
   getSwapToAccounts,
-  getSwapHexData,
+  getSwapQuoteData,
+  getSwapQuoteGas,
+  getSwapQuoteGasPrice,
+  getSwapQuoteValue,
   getSwapFromTokenBalance,
   getSwapToTokenBalance,
   getUnapprovedTxs,
@@ -49,15 +53,17 @@ function mapStateToProps (state) {
 
   return {
     amount: getSwapAmount(state),
-    data: getSwapHexData(state),
+    data: getSwapQuoteData(state),
     editingTransactionId,
     from: getSwapFromObject(state),
     gasLimit: getGasLimit(state),
-    gasPrice: getGasPrice(state),
+    gasPrice: getSwapQuoteGasPrice(state),
+    gas: getSwapQuoteGas(state),
     gasTotal: getGasTotal(state),
     inError: isSwapFormInError(state),
     swapFromToken: getSwapFromToken(state),
-    to: getSwapTo(state),
+    to: getSwapQuoteTo(state),
+    value: getSwapQuoteValue(state),
     toAccounts: getSwapToAccounts(state),
     tokenFromBalance: getSwapFromTokenBalance(state),
     tokenToBalance: getSwapToTokenBalance(state),
@@ -68,6 +74,8 @@ function mapStateToProps (state) {
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
   }
 }
+
+
 
 function mapDispatchToProps (dispatch) {
   return {

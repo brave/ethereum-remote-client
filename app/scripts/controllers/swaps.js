@@ -17,70 +17,12 @@ const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 
 const { abi: WETH_ABI } = require('./swap-utils/IWETH.json')
 
-
-// const initialState = {
-//   swap: {
-//     gasLimit: null,
-//     gasPrice: null,
-//     gasTotal: null,
-//     tokenBalance: '0x0',
-//     tokenToBalance: '0x0',
-//     tokenFromBalance: '0x0',
-//     from: '',
-//     to: '',
-//     tokensTo: [{
-//       address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
-//       decimals: 18,
-//       symbol: 'AAVE',
-//     }, {
-//       address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
-//       decimals: 18,
-//       symbol: 'YFI',
-//     },
-//     {
-//       address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-//       decimals: 18,
-//       symbol: 'COMP',
-//     },
-//     {
-//       address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-//       decimals: 18,
-//       symbol: 'ZRX',
-//     }],
-//     tokensFrom: [{
-//       address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
-//       decimals: 18,
-//       symbol: 'AAVE',
-//     }, {
-//       address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
-//       decimals: 18,
-//       symbol: 'YFI',
-//     },
-//     {
-//       address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-//       decimals: 18,
-//       symbol: 'COMP',
-//     },
-//     {
-//       address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-//       decimals: 18,
-//       symbol: 'ZRX',
-//     },
-//     ],
-//     amount: '0',
-//     memo: '',
-//     errors: {},
-//     maxModeOn: false,
-//     editingTransactionId: null,
-//   },
-// };
-
 export default class SwapsController {
   constructor(opts) {
     const initState = opts.initState || {}
     // this.opts = opts
     // const initSwapControllerState = opts.initSwapControllerState || {}
-    // this.provider = opts.provider
+    this.provider = opts.provider
     // this.buyToken = opts.buyToken
     // this.sellToken = opts.sellToken
     // this.taker = opts.from
@@ -144,17 +86,19 @@ export default class SwapsController {
     return receipt
   }
 
-  async fillOrder (to, data, value, gasPrice, gas) {
+  async fillOrder (quote) {
     const parameters = {
       from: this.taker,
-      to: to,
-      data: data,
-      value: ethers.utils.parseEther(value).toHexString(),
-      gasPrice: ethers.utils.hexValue(parseInt(gasPrice)),
+      to: quote.to,
+      data: quote.data,
+      value: ethers.utils.parseEther(quote.value).toHexString(),
+      gasPrice: ethers.utils.hexValue(parseInt(quote.gasPrice)),
       // ...(FORKED ? {} : { gas :  ethers.utils.hexValue(parseInt(gas)) }),
     }
-    const receipt = await this.provider.getSigner(0).sendTransaction(parameters)
-    return receipt
+    // const receipt = await this.provider.getSigner(0).sendTransaction(parameters)
+    // return receipt
+    console.log("This is the provider", this.provider)
+    return this.provider
   }
 }
 

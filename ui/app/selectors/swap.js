@@ -65,6 +65,32 @@ export function getSwapQuote (state) {
   return state.metamask.swap.quotes
 }
 
+export function getSwapQuoteData (state) {
+  return state.metamask.swap.quotes.data
+}
+
+export function getSwapQuoteTo (state) {
+  return state.metamask.swap.quotes.to
+}
+
+export function getGasTotal (state) {
+  return calcGasTotal(getGasLimit(state), getGasPrice(state))
+}
+
+export function getSwapQuoteValue (state) {
+  return state.metamask.swap.quotes.value
+}
+
+
+export function getSwapQuoteGasPrice (state) {
+  return state.metamask.swap.quotes.gasPrice
+}
+
+export function getSwapQuoteGas (state) {
+  return state.metamask.swap.quotes.gas
+}
+
+
 export function getSwapFromTokenContract (state) {
   const swapFromTokenAddress = getSwapFromTokenAddress(state)
   return swapFromTokenAddress

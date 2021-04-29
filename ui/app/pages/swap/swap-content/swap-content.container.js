@@ -31,7 +31,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
-    updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote))
+    updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote)),
+    fillOrder : (quote) => dispatch(actions.fillOrder(quote))
   }
 }
 
@@ -42,7 +43,8 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...ownProps,
     ...restStateProps,
     getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
-    updateSwapQuote: () => dispatchProps.updateSwapQuote(quote)
+    updateSwapQuote: () => dispatchProps.updateSwapQuote(quote),
+    fillOrder: () => dispatchProps.fillOrder(quote)
   }
 }
 

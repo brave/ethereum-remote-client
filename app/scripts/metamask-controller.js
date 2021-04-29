@@ -424,7 +424,7 @@
        // quote: nodeify(swapsController.quote, swapsController),
        quote: nodeify(this.quote, this),
        approveTokenAllowance: nodeify(swapsController.approveTokenAllowance, swapsController),
-       fillOrder: nodeify(swapsController.fillOrder, swapsController),
+       fillOrder: nodeify(this.fillOrder, this),
  
        // messageManager
        signMessage: nodeify(this.signMessage, this),
@@ -1306,6 +1306,16 @@
        throw error
      }
    }
+
+   async fillOrder (quote) {
+    try {
+      const response = await this.swapsController.fillOrder(quote)
+      return response 
+    } catch (error) {
+      throw error
+    }
+  }
+
    async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
      await this.txController.createSpeedUpTransaction(originalTxId, customGasPrice, customGasLimit)
      const state = await this.getState()
@@ -1792,8 +1802,8 @@
      })
  
      this.swapsController = new SwapsController({
-       initState: initState.SwapsController
-      //  provider: this.provider,
+       initState: initState.SwapsController,
+       provider: this.provider,
       //  buyToken: opts.buyToken,
       //  sellToken: opts.sellToken,
       //  from: opts.taker,

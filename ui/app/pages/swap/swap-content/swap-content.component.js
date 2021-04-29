@@ -37,6 +37,7 @@ export default class SwapContent extends Component {
     this.state = {
       quoteResult: undefined,
       updatedQuote: undefined,
+      quoteStatus: undefined,
     }
   }
 
@@ -45,19 +46,30 @@ export default class SwapContent extends Component {
   // updateQuote = (quote) => this.props.updateSwapQuote(quote)
 
   swapQuotes = () => {
-    const { sellAmount, buyToken, getSwapQuotes, updateSwapQuote, quote } = this.props
+    const { sellAmount, buyToken, getSwapQuotes } = this.props
     console.log("Props in SwapQuote ", this.props)
     console.log("The sellAmount in swapQuote is ", sellAmount)
       getSwapQuotes().then((data) => {
       console.log('This Is The Quote', data)
-      this.setState({ quoteResult: data.quotes }, () => { updateSwapQuote()})
-      this.setState({ updateSwapQuote: quote})
+      this.setState({ quoteResult: data.quotes , quoteStatus: 'QUOTED'})
+      // this.setState({ updateSwapQuote: quote})
       console.log("This is the state in swapQuote ", this.state)
       console.log("This is the props  swapQuote after the call", this.props)
-    }).then((updateSwapQuote))
-
+    })
   }
 
+  fillOrder = () => {
+    const { quote , fillOrder } = this.props
+    console.log("Props in fillOrder ", this.props)
+    fillOrder().then((data) => {
+      console.log('This Is The Quote', data)
+      this.setState({ quoteStatus: data })
+      // this.setState({ updateSwapQuote: quote})
+      console.log("This is the state in swapQuote ", this.state)
+      console.log("This is the props  swapQuote after the call", this.props)
+    })
+
+  }
 
   render () {
     return (
@@ -68,10 +80,9 @@ export default class SwapContent extends Component {
           <SwapAmountRow updateGas={this.updateGas} />
           <br></br>
           <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
-          {/* { this.render()} */}
-          {/* <span onClick={() => this.swapQuotes()}>Get Quote</span> */}
           <br></br>
           {this.renderQuote()}
+          { this.renderExecuteQuote() }
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -99,7 +110,7 @@ export default class SwapContent extends Component {
     return (
       <>
         {this.state.quoteResult !== undefined ? (
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'column' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
             {/* <span>Sell Amount: {ethers.utils.parseEther(this.state.quoteResult.sellAmount)}</span> */}
             <span>Sell Amount: {this.state.quoteResult.sellAmount}</span>
             <span>Buy Amount: {this.state.quoteResult.buyAmount}</span>
@@ -117,13 +128,23 @@ export default class SwapContent extends Component {
   }
 
   renderExecuteQuote(){
-    const { quote } = this.props
+    const { quoteStatus } = this.state
 
-    if (!quote) {
+    if ( quoteStatus === undefined) {
       return
     }
 
-
+    return (
+      <>
+        {this.state.quoteStatus !== undefined ? (
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'column' }}>
+            <Button onClick={() => this.fillOrder()}> Swap </Button>
+          </div>
+        ) : (
+          <div>Loading....</div>
+        )}
+      </>
+    )
   }
 
 

@@ -72,7 +72,7 @@ export default class SwapFooter extends Component {
     // }
 
     // TODO: add nickname functionality
-    await addToAddressBookIfNew(to, toAccounts)
+    // await addToAddressBookIfNew(to, toAccounts)
     const promise = editingTransactionId
       ? update({
         amount,
@@ -103,13 +103,13 @@ export default class SwapFooter extends Component {
       })
   }
 
-  formShouldBeDisabled () {
-    const { data, inError, swapFromToken, tokenFromBalance, tokenToBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
-    const missingTokenBalance = swapFromToken && !tokenFromBalance
-    const gasLimitTooLow = gasLimit < 5208 // 5208 is hex value of 21000, minimum gas limit
-    const shouldBeDisabled = inError || !gasTotal || missingTokenBalance || !(data || to) || gasLimitTooLow || gasIsLoading
-    return shouldBeDisabled
-  }
+  // formShouldBeDisabled () {
+  //   const { data, inError, swapFromToken, tokenFromBalance, tokenToBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
+  //   const missingTokenBalance = swapFromToken && !tokenFromBalance
+  //   const gasLimitTooLow = gasLimit < 5208 // 5208 is hex value of 21000, minimum gas limit
+  //   const shouldBeDisabled = inError || !gasTotal || missingTokenBalance || !(data || to) || gasLimitTooLow || gasIsLoading
+  //   return shouldBeDisabled
+  // }
 
   componentDidUpdate (prevProps) {
     const { inError, swapErrors } = this.props
@@ -137,7 +137,7 @@ export default class SwapFooter extends Component {
       <PageContainerFooter
         onCancel={() => this.onCancel()}
         onSubmit={(e) => this.onSubmit(e)}
-        disabled={this.formShouldBeDisabled()}
+        // disabled={this.formShouldBeDisabled()}
       />
     )
   }

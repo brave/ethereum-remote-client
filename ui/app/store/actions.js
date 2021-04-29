@@ -250,28 +250,22 @@ export function getQuote (sellAmount, buyToken, sellToken){
   }
 }
 
-
-// export function signMsg (msgData) {
-//   log.debug('action - signMsg')
-//   return async (dispatch) => {
-//     dispatch(showLoadingIndication())
-//     log.debug(`actions calling background.signMessage`)
-//     let newState
-//     try {
-//       newState = await promisifiedBackground.signMessage(msgData)
-//     } catch (error) {
-//       dispatch(hideLoadingIndication())
-//       log.error(error)
-//       dispatch(displayWarning(error.message))
-//       throw error
-//     }
-//     dispatch(hideLoadingIndication())
-//     dispatch(updateMetamaskState(newState))
-//     dispatch(completedTx(msgData.metamaskId))
-//     dispatch(closeCurrentNotificationWindow())
-//     return msgData
-//   }
-// }
+export function fillOrder (quote){
+  log.debug('action - fillOrder')
+  return async(dispatch) => {
+    let newState 
+    try {
+      newState = await promisifiedBackground.fillOrder(quote)
+    } catch (error) {
+      log.error(error)
+      dispatch(displayWarning(error.message))
+      throw error
+    }
+    console.log("The response in  fillOuote is", newState)
+    // dispatch(updateSwapQuote(newState.quotes))
+    return newState
+  }
+}
 
 export function requestRevealSeedWords (password) {
   return async (dispatch) => {

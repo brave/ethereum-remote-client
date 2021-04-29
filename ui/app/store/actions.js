@@ -212,23 +212,66 @@ export function verifySeedPhrase () {
 //   };
 // }
 
-export function getQuote (sellAmount, buyToken,sellToken) {
-  log.debug('background.getQuote')
+// export function getQuote (sellAmount, buyToken,sellToken) {
+//   log.debug('background.getQuote')
 
-  return (dispatch) => {
-    return new Promise((resolve, reject) => {
-      console.log("The background script function are ", background)
-      background.quote(sellAmount, buyToken,sellToken, (err, response) => {
-        if (err) {
-          dispatch(displayWarning(err.message))
-          return reject(err)
-        }
-        return forceUpdateMetamaskState(dispatch)
-          .then( resolve(response))
-      })
-    })
+//   return (dispatch) => {
+//     return new Promise((resolve, reject) => {
+//       console.log("The background script function are ", background)
+//       background.quote(sellAmount, buyToken,sellToken, (err, response) => {
+//         if (err) {
+//           dispatch(displayWarning(err.message))
+//           return reject(err)
+//         }
+//         console.log("This is the response in the getQuote ", response)
+//         await forceUpdateMetamaskState(response)
+//         resolve(response)
+//       })
+//     }) 
+//   }
+// }
+
+export function getQuote (sellAmount, buyToken, sellToken){
+  log.debug('action - getQuote')
+  return async(dispatch) => {
+    let newState 
+    try {
+      newState = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
+    } catch (error) {
+      // dispatch(hideLoadingIndication())
+      log.error(error)
+      dispatch(displayWarning(error.message))
+      throw error
+    }
+    // dispatch(hideLoadingIndication())
+    console.log("The response in getQuote dispatch is", newState)
+    dispatch(updateSwapQuote(newState.quotes))
+    return newState
   }
 }
+
+
+// export function signMsg (msgData) {
+//   log.debug('action - signMsg')
+//   return async (dispatch) => {
+//     dispatch(showLoadingIndication())
+//     log.debug(`actions calling background.signMessage`)
+//     let newState
+//     try {
+//       newState = await promisifiedBackground.signMessage(msgData)
+//     } catch (error) {
+//       dispatch(hideLoadingIndication())
+//       log.error(error)
+//       dispatch(displayWarning(error.message))
+//       throw error
+//     }
+//     dispatch(hideLoadingIndication())
+//     dispatch(updateMetamaskState(newState))
+//     dispatch(completedTx(msgData.metamaskId))
+//     dispatch(closeCurrentNotificationWindow())
+//     return msgData
+//   }
+// }
 
 export function requestRevealSeedWords (password) {
   return async (dispatch) => {

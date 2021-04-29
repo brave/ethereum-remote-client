@@ -53,6 +53,7 @@ export default class SwapContent extends Component {
       this.setState({ quoteResult: data.quotes }, () => { updateSwapQuote()})
       this.setState({ updateSwapQuote: quote})
       console.log("This is the state in swapQuote ", this.state)
+      console.log("This is the props  swapQuote after the call", this.props)
     }).then((updateSwapQuote))
 
   }

@@ -234,8 +234,6 @@ export default class SwapTransactionScreen extends Component {
       network,
     } = this.props
 
-    console.log(`The tokens validation is ${this.props}`)
-
     if (!query) {
       return this.setState({ toError: '', toWarning: '' })
     }
@@ -271,8 +269,6 @@ export default class SwapTransactionScreen extends Component {
       tokenToContract,
       updateSwapTokenBalance,
     } = this.props
-
-    console.log(this.props)
 
     updateSwapTokenBalance({
       
@@ -329,48 +325,6 @@ export default class SwapTransactionScreen extends Component {
       </div>
     )
   }
-
-  // renderInput () {
-  //   return (
-  //     <EnsInput
-  //       className="swap__to-row"
-  //       scanQrCode={(_) => {
-  //         this.context.metricsEvent({
-  //           eventOpts: {
-  //             category: 'Transactions',
-  //             action: 'Edit Screen',
-  //             name: 'Used QR scanner',
-  //           },
-  //         })
-  //         this.props.scanQrCode()
-  //       }}
-  //       onChange={this.onRecipientInputChange}
-  //       onValidAddressTyped={(address) => this.props.updateSwapTo(address, '')}
-  //       onPaste={(text) => {
-  //         console.log("pasted address in swap component")
-  //         console.log(text)
-  //         this.props.updateSwapTo(text) && this.updateGas()
-  //         console.log(this.state)
-  //       }}
-  //       onReset={() => this.props.updateSwapTo('', '')}
-  //       updateEnsResolution={this.props.updateSwapEnsResolution}
-  //       updateEnsResolutionError={this.props.updateSwapEnsResolutionError}
-  //     />
-  //   )
-  // }
-
-  // renderAddRecipient () {
-  //   const { toError, toWarning } = this.state
-
-  //   return (
-  //     <AddRecipient
-  //       updateGas={({ to, amount, data } = {}) => this.updateGas({ to, amount, data })}
-  //       query={this.state.query}
-  //       toError={toError}
-  //       toWarning={toWarning}
-  //     />
-  //   )
-  // }
 
   renderSwapContent () {
     const { history, showHexData } = this.props

@@ -56,7 +56,6 @@ export default class SwapsController {
       feeRecipient: feeAddress,
     })
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
-    console.log(quoteUrl)
     const { swap } = this.store.getState()
     await fetch(quoteUrl).then((response) => response.json()).then((data) => {
       this.store.updateState({
@@ -93,12 +92,10 @@ export default class SwapsController {
       data: quote.data,
       value: ethers.utils.parseEther(quote.value).toHexString(),
       gasPrice: ethers.utils.hexValue(parseInt(quote.gasPrice)),
-      // ...(FORKED ? {} : { gas :  ethers.utils.hexValue(parseInt(gas)) }),
+      ...(FORKED ? {} : { gas :  ethers.utils.hexValue(parseInt(gas)) }),
     }
-    // const receipt = await this.provider.getSigner(0).sendTransaction(parameters)
-    // return receipt
-    console.log("This is the provider", this.provider)
-    return this.provider
+    const receipt = await this.provider.getSigner(0).sendTransaction(parameters)
+    return receipt
   }
 }
 

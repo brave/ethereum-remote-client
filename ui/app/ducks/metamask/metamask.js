@@ -250,7 +250,6 @@ export default function reduceMetamask (state = {}, action) {
         }
 
         case actionConstants.UPDATE_SWAP_QUOTE:
-          console.log("Quotes in metamask duck ", action.value)
           return {
             ...metamaskState,
             swap: {
@@ -310,7 +309,6 @@ export default function reduceMetamask (state = {}, action) {
           ...metamaskState.swap,
           tokenFrom: action.value,
         }
-        console.log(`New Swap From is : ${JSON.stringify(newSwapFrom)}`)
         // erase token-related state when switching back to native currency
         if (newSwapFrom.editingTransactionId && !newSwapFrom.token) {
           const unapprovedTx = newSwapFrom?.unapprovedTxs?.[newSwapFrom.editingTransactionId] || {}
@@ -340,7 +338,6 @@ export default function reduceMetamask (state = {}, action) {
             ...metamaskState.swap,
             tokenTo: action.value,
           }
-          console.log(`New Swap To is : ${JSON.stringify(newSwapTo)}`)
 
           // erase token-related state when switching back to native currency
           if (newSwapTo.editingTransactionId && !newSwapTo.token) {

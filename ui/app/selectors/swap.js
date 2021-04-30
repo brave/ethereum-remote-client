@@ -29,11 +29,11 @@ export function getSwapCurrentNetwork (state) {
 }
 
 export function getSwapGasLimit (state) {
-  return state.metamask.swap.gasLimit || '0'
+  return state.metamask.swap.quotes.gas || '0'
 }
 
 export function getSwapGasPrice (state) {
-  return state.metamask.swap.gasPrice || getAveragePriceEstimateInHexWEI(state)
+  return state.metamask.swap.quotes.gasPrice || getAveragePriceEstimateInHexWEI(state)
 }
 
 export function getSwapGasTotal (state) {
@@ -72,10 +72,6 @@ export function getSwapQuoteData (state) {
 export function getSwapQuoteTo (state) {
   return state.metamask.swap.quotes.to
 }
-
-// export function getGasTotal (state) {
-//   return calcGasTotal(getGasLimit(state), getGasPrice(state))
-// }
 
 export function getSwapQuoteValue (state) {
   return state.metamask.swap.quotes.value
@@ -250,21 +246,4 @@ export function getSwapIsContractAddress (state) {
   }
 
   return swapTo.toLowerCase() === swapFromTokenAddress.toLowerCase()
-}
-
-export async function getQuote (state) {
-  const qs = _createQueryString({
-    sellAmount: state.swap.amount,
-    buyToken: state.swap.buyToken,
-    sellToken: state.swap.sellToken,
-    buyTokenPercentageFee: buyTokenPercentageFee,
-    slippagePercentage: slippagePercentage,
-    takerAddress: taker,
-    feeRecipient: feeAddress,
-  })
-  const quoteUrl = `${API_QUOTE_URL}?${qs}`
-  console.log(quoteUrl)
-  const response = await fetch(quoteUrl)
-  console.log(response)
-  return response
 }

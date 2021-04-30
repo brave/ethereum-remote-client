@@ -1356,6 +1356,9 @@
   "sendETH": {
     "message": "Send ETH"
   },
+  "swapETH": {
+    "message": "Swap ETH"
+  },
   "sendTokens": {
     "message": "Send Tokens"
   },

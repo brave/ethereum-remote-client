@@ -71,9 +71,7 @@ async function getQuote (sellAmount, buyToken, sellToken, slippagePercentage, ta
     feeRecipient: feeAddress,
   })
   const quoteUrl = `${API_QUOTE_URL}?${qs}`
-  console.log(quoteUrl)
   const response = await fetch(quoteUrl)
-  console.log(response)
   return response
 }
 

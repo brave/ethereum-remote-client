@@ -47,26 +47,16 @@ export default class SwapContent extends Component {
 
   swapQuotes = () => {
     const { sellAmount, buyToken, getSwapQuotes } = this.props
-    console.log("Props in SwapQuote ", this.props)
-    console.log("The sellAmount in swapQuote is ", sellAmount)
       getSwapQuotes().then((data) => {
-      console.log('This Is The Quote', data)
       this.setState({ quoteResult: data.quotes , quoteStatus: 'QUOTED'})
-      // this.setState({ updateSwapQuote: quote})
-      console.log("This is the state in swapQuote ", this.state)
-      console.log("This is the props  swapQuote after the call", this.props)
     })
   }
 
   fillOrder = () => {
     const { quote , fillOrder } = this.props
-    console.log("Props in fillOrder ", this.props)
     fillOrder().then((data) => {
       console.log('This Is The Quote', data)
       this.setState({ quoteStatus: data })
-      // this.setState({ updateSwapQuote: quote})
-      console.log("This is the state in swapQuote ", this.state)
-      console.log("This is the props  swapQuote after the call", this.props)
     })
 
   }
@@ -82,7 +72,6 @@ export default class SwapContent extends Component {
           <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
           <br></br>
           {this.renderQuote()}
-          { this.renderExecuteQuote() }
           <SwapGasRow />
           {
             this.props.showHexData && (
@@ -97,11 +86,7 @@ export default class SwapContent extends Component {
   }
 
   renderQuote () {
-    // console.log(`Local Props are : ${JSON.stringify(this.props)}`)
     const { sellAmount } = this.props
-    // this.getSwapQuotes = this.getSwapQuotes.bind(this)
-    // console.log(`The amount is ${sellAmount}`)
-    // console.log(`The buy token is ${JSON.stringify(buyToken)}`)
 
     if (sellAmount === '0') {
       return
@@ -111,7 +96,6 @@ export default class SwapContent extends Component {
       <>
         {this.state.quoteResult !== undefined ? (
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-            {/* <span>Sell Amount: {ethers.utils.parseEther(this.state.quoteResult.sellAmount)}</span> */}
             <span>Sell Amount: {this.state.quoteResult.sellAmount}</span>
             <span>Buy Amount: {this.state.quoteResult.buyAmount}</span>
             <span>Rate: {this.state.quoteResult.buyTokenToEthRate}</span>
@@ -126,27 +110,6 @@ export default class SwapContent extends Component {
       </>
     )
   }
-
-  renderExecuteQuote(){
-    const { quoteStatus } = this.state
-
-    if ( quoteStatus === undefined) {
-      return
-    }
-
-    return (
-      <>
-        {this.state.quoteStatus !== undefined ? (
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexDirection: 'column' }}>
-            <Button onClick={() => this.fillOrder()}> Swap </Button>
-          </div>
-        ) : (
-          <div>Loading....</div>
-        )}
-      </>
-    )
-  }
-
 
   maybeRenderContractWarning () {
     const { t } = this.context

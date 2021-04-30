@@ -9,9 +9,9 @@ import {
   updateTransaction,
 } from '../../../store/actions'
 import {
-  getGasLimit,
+  getSwapGasLimit,
   getGasPrice,
-  getGasTotal,
+  getSwapGasTotal,
   getSwapFromToken,
   getSwapAmount,
   getSwapEditingTransactionId,
@@ -56,10 +56,10 @@ function mapStateToProps (state) {
     data: getSwapQuoteData(state),
     editingTransactionId,
     from: getSwapFromObject(state),
-    gasLimit: getGasLimit(state),
+    gasLimit: getSwapGasLimit(state),
     gasPrice: getSwapQuoteGasPrice(state),
     gas: getSwapQuoteGas(state),
-    gasTotal: getGasTotal(state),
+    gasTotal: getSwapGasTotal(state),
     inError: isSwapFormInError(state),
     swapFromToken: getSwapFromToken(state),
     to: getSwapQuoteTo(state),
@@ -74,8 +74,6 @@ function mapStateToProps (state) {
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
   }
 }
-
-
 
 function mapDispatchToProps (dispatch) {
   return {

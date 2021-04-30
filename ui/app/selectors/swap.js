@@ -73,9 +73,9 @@ export function getSwapQuoteTo (state) {
   return state.metamask.swap.quotes.to
 }
 
-export function getGasTotal (state) {
-  return calcGasTotal(getGasLimit(state), getGasPrice(state))
-}
+// export function getGasTotal (state) {
+//   return calcGasTotal(getGasLimit(state), getGasPrice(state))
+// }
 
 export function getSwapQuoteValue (state) {
   return state.metamask.swap.quotes.value

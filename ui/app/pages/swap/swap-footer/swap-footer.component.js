@@ -6,11 +6,8 @@ import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
 export default class SwapFooter extends Component {
 
   static propTypes = {
-    addToAddressBookIfNew: PropTypes.func,
     amount: PropTypes.string,
     data: PropTypes.string,
-    clearSwap: PropTypes.func,
-    editingTransactionId: PropTypes.string,
     from: PropTypes.object,
     gasLimit: PropTypes.string,
     gasPrice: PropTypes.string,
@@ -24,7 +21,6 @@ export default class SwapFooter extends Component {
     tokenFromBalance: PropTypes.string,
     tokenToBalance: PropTypes.string,
     unapprovedTxs: PropTypes.object,
-    update: PropTypes.func,
     swapErrors: PropTypes.object,
     gasEstimateType: PropTypes.string,
     gasIsLoading: PropTypes.bool,
@@ -36,62 +32,29 @@ export default class SwapFooter extends Component {
     metricsEvent: PropTypes.func,
   }
 
-  onCancel () {
-    const { clearSwap, history, mostRecentOverviewPage } = this.props
-    clearSwap()
-    history.push(mostRecentOverviewPage)
-  }
-
   async onSubmit (event) {
     event.preventDefault()
     const {
-      addToAddressBookIfNew,
       amount,
       data,
-      editingTransactionId,
       from: { address: from },
       gasLimit: gas,
       gasPrice,
       swapFromToken,
       sign,
       to,
-      unapprovedTxs,
-      // updateTx,
-      update,
-      toAccounts,
       history,
       gasEstimateType,
     } = this.props
     const { metricsEvent } = this.context
 
-    // Should not be needed because submit should be disabled if there are errors.
-    // const noErrors = !amountError && toError === null
-
-    // if (!noErrors) {
-    //   return
-    // }
-
-    // TODO: add nickname functionality
-    // await addToAddressBookIfNew(to, toAccounts)
-    const promise = editingTransactionId
-      ? update({
-        amount,
-        data,
-        editingTransactionId,
-        from,
-        gas,
-        gasPrice,
-        swapFromToken,
-        to,
-        unapprovedTxs,
-      })
-      : sign({ data, swapFromToken, to, amount, from, gas, gasPrice })
+    const promise = sign({ data, swapFromToken, to, amount, from, gas, gasPrice })
 
     Promise.resolve(promise)
       .then(() => {
         metricsEvent({
           eventOpts: {
-            category: 'Transactions',
+            category: 'Swap',
             action: 'Edit Screen',
             name: 'Complete',
           },
@@ -103,14 +66,6 @@ export default class SwapFooter extends Component {
       })
   }
 
-  // formShouldBeDisabled () {
-  //   const { data, inError, swapFromToken, tokenFromBalance, tokenToBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
-  //   const missingTokenBalance = swapFromToken && !tokenFromBalance
-  //   const gasLimitTooLow = gasLimit < 5208 // 5208 is hex value of 21000, minimum gas limit
-  //   const shouldBeDisabled = inError || !gasTotal || missingTokenBalance || !(data || to) || gasLimitTooLow || gasIsLoading
-  //   return shouldBeDisabled
-  // }
-
   componentDidUpdate (prevProps) {
     const { inError, swapErrors } = this.props
     const { metricsEvent } = this.context
@@ -120,7 +75,7 @@ export default class SwapFooter extends Component {
 
       metricsEvent({
         eventOpts: {
-          category: 'Transactions',
+          category: 'Swap',
           action: 'Edit Screen',
           name: 'Error',
         },
@@ -132,14 +87,31 @@ export default class SwapFooter extends Component {
     }
   }
 
+  reviewSwapButtonShouldBeDisabled () {
+    /**
+     * TODO (@onyb): add the following checks.
+     *  - Swap token pairs are set.
+     *  - Swap token pairs are NOT the same.
+     *  - Amount is greater than 0.
+     *  - Amount is less than asset balance.
+     *  - Estimated gas price is set (reject non-zero values).
+     *  - Swap quote from 0x is available.
+     *  - Slippage tolerance is set.
+     *  - Gas limit is greater than 21000.
+     */
+
+    const { inError, gasIsLoading } = this.props
+    return inError || gasIsLoading
+  }
+
   render () {
     return (
       <PageContainerFooter
-        onCancel={() => this.onCancel()}
         onSubmit={(e) => this.onSubmit(e)}
-        // disabled={this.formShouldBeDisabled()}
+        submitText="Review Swap"
+        disabled={this.reviewSwapButtonShouldBeDisabled()}
+        hideCancel
       />
     )
   }
-
 }

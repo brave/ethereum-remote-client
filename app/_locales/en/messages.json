@@ -935,6 +935,9 @@
   "mainnet": {
     "message": "Main Ethereum Network"
   },
+  "availableOnMainnet": {
+    "message": "Only available on mainnet"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },

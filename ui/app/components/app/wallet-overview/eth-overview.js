@@ -14,7 +14,7 @@ import Tooltip from '../../ui/tooltip-v2'
 import UserPreferencedCurrencyDisplay from '../user-preferenced-currency-display'
 import { PRIMARY, SECONDARY } from '../../../helpers/constants/common'
 import { showModal } from '../../../store/actions'
-import { isBalanceCached, getSelectedAccount, getShouldShowFiat } from '../../../selectors/selectors'
+import { isBalanceCached, getSelectedAccount, getShouldShowFiat, getIsMainnet } from '../../../selectors/selectors'
 import PaperAirplane from '../../ui/icon/paper-airplane-icon'
 import Interaction from '../../ui/icon/interaction-icon.component'
 
@@ -47,6 +47,7 @@ const EthOverview = ({ className }) => {
   const showFiat = useSelector(getShouldShowFiat)
   const selectedAccount = useSelector(getSelectedAccount)
   const { balance } = selectedAccount
+  const isMainnet = useSelector(getIsMainnet)
 
   return (
     <WalletOverview
@@ -112,19 +113,22 @@ const EthOverview = ({ className }) => {
           >
             { t('send') }
           </Button>
-          <Button
-            type="secondary"
-            className="eth-overview__button"
-            rounded
-            icon={<Interaction color="#037DD6" size={20} />}
-            onClick={() => {
-              swapEvent()
-              history.push(SWAP_ROUTE)
-            }}
-            data-testid="eth-overview-swap"
-          >
-            { t('swap') }
-          </Button>
+          <Tooltip position="bottom" title={t('availableOnMainnet')} disabled={isMainnet} offset={-115} distance={-30}>
+            <Button
+              type="secondary"
+              className="eth-overview__button"
+              rounded
+              icon={<Interaction color="#037DD6" size={20} />}
+              onClick={() => {
+                swapEvent()
+                history.push(SWAP_ROUTE)
+              }}
+              data-testid="eth-overview-swap"
+              disabled={!isMainnet}
+            >
+              { t('swap') }
+            </Button>
+          </Tooltip>
         </>
       )}
       className={className}

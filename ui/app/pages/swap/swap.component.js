@@ -7,7 +7,6 @@ import {
   doesAmountErrorRequireUpdate,
 } from './swap.utils'
 import { debounce } from 'lodash'
-// import { getToWarningObject, getToErrorObject } from './swap-content/add-recipient/add-recipient'
 import SwapHeader from './swap-header'
 import SwapContent from './swap-content'
 import SwapFooter from './swap-footer'
@@ -238,12 +237,14 @@ export default class SwapTransactionScreen extends Component {
       return this.setState({ toError: '', toWarning: '' })
     }
 
-    const toErrorObject = getToErrorObject(query, hasHexData, network)
-    const toWarningObject = getToWarningObject(query, tokensFrom, swapFromToken, swapToToken)
 
+    // FIXME (@onyb): leftover from ui/app/pages/swap/swap-content/add-recipient
+    //
+    // const toErrorObject = getToErrorObject(query, hasHexData, network)
+    // const toWarningObject = getToWarningObject(query, tokensFrom, swapFromToken, swapToToken)
     this.setState({
-      toError: toErrorObject.to,
-      toWarning: toWarningObject.to,
+      toError: "", // toErrorObject.to,
+      toWarning: "", // toWarningObject.to,
     })
   }
 

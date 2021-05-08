@@ -556,6 +556,23 @@
     justify-content: space-between;
   }
 
+  &__form-row-label {
+    font-weight: 700;
+  }
+
+  &__form-row-full {
+    margin: 0.2rem 1rem 0;
+    display: flex;
+    flex-flow: row;
+    flex: 1 0 auto;
+    color: #6a737d;
+    font-size: 0.75rem;
+
+    span {
+      padding-right: 2px;
+    }
+  }
+
   &__form-field-container {
     display: flex;
     flex-direction: column;
@@ -598,7 +615,7 @@
 
   &__from-dropdown,
   &__asset-dropdown {
-    width: 100%;
+    width: 50%;
     border: 1px solid $alto;
     border-radius: 4px;
     background-color: $white;
@@ -630,6 +647,30 @@
       margin-left: -1px;
       overflow-y: scroll;
     }
+  }
+
+  &__from-amount-box {
+    width: 50%;
+
+    .unit-input {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  &__to-amount-box {
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    min-height: 54px;
+    color: #4d4d4d;
+    font-size: 16px;
+    padding: 8px 10px;
+    width: 50%;
   }
 
   &__from-dropdown {
@@ -719,6 +760,8 @@
     &__input-wrapper {
       border: 1px solid $alto;
       border-radius: 4px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
       height: 100%;
 
       &--opened {

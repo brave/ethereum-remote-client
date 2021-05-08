@@ -118,7 +118,7 @@ export default class SwapAssetRow extends Component {
             { this.props.tokensTo.length > 0 && this.renderAssetDropdownTo() }
           </div>
           <div className="swap-v2__to-amount-box">
-            2000 BAT
+            ???? {this.getSwapToToken()?.symbol || 'ETH'}
           </div>
         </div>
 
@@ -127,8 +127,8 @@ export default class SwapAssetRow extends Component {
   }
 
   getSwapFromToken () {
-    const { swapTokenFromAddress } = this.props
-    return this.props.tokensFrom.find(({ address }) => address === swapTokenFromAddress)
+    const { swapFromTokenAddress } = this.props
+    return this.props.tokensFrom.find(({ address }) => address === swapFromTokenAddress)
   }
 
   getSwapToToken () {
@@ -252,7 +252,7 @@ export default class SwapAssetRow extends Component {
     return (
       <div
         className={ this.props.tokensTo.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
-        onClick={() => this.selectTokenFrom()}
+        onClick={() => this.selectTokenTo()}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
           <Identicon diameter={36} />

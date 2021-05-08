@@ -10,7 +10,6 @@ import Button from '../../../components/ui/button'
 import { ethers } from 'ethers'
 
 
-
 export default class SwapContent extends Component {
   static contextTypes = {
     t: PropTypes.func,
@@ -32,7 +31,7 @@ export default class SwapContent extends Component {
     // sellToken: PropTypes.string,
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       quoteResult: undefined,
@@ -47,13 +46,13 @@ export default class SwapContent extends Component {
 
   swapQuotes = () => {
     const { sellAmount, buyToken, getSwapQuotes } = this.props
-      getSwapQuotes().then((data) => {
-      this.setState({ quoteResult: data.quotes , quoteStatus: 'QUOTED'})
+    getSwapQuotes().then((data) => {
+      this.setState({ quoteResult: data.quotes, quoteStatus: 'QUOTED' })
     })
   }
 
   fillOrder = () => {
-    const { quote , fillOrder } = this.props
+    const { quote, fillOrder } = this.props
     fillOrder().then((data) => {
       console.log('This Is The Quote', data)
       this.setState({ quoteStatus: data })
@@ -67,7 +66,6 @@ export default class SwapContent extends Component {
         <div className="swap-v2__form">
           {this.maybeRenderContractWarning()}
           <SwapAssetRow />
-          <SwapAmountRow updateGas={this.updateGas} />
           <br></br>
           <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
           <br></br>

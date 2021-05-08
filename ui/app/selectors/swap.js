@@ -1,7 +1,3 @@
-export function getHeaderTitle () {
-  return 'swapTokens'
-}
-
 import abi from 'human-standard-token-abi'
 import {
   accountsWithSwapEtherInfoSelector,
@@ -194,23 +190,6 @@ export function gasSwapFeeIsInError (state) {
 
 export function getSwapGasButtonGroupShown (state) {
   return state.swap.gasButtonGroupShown
-}
-
-export function getSwapTitleKey (state) {
-  const isEditing = Boolean(getSwapEditingTransactionId(state))
-  const isToken = Boolean(getSwapFromToken(state))
-
-  if (!getSwapTo(state)) {
-    return 'swapTokens'
-  }
-
-  if (isEditing) {
-    return 'edit'
-  } else if (isToken) {
-    return 'swapTokens'
-  } else {
-    return 'swapETH'
-  }
 }
 
 export function isSwapFormInError (state) {

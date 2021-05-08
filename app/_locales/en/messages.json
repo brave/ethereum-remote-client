@@ -1356,9 +1356,6 @@
   "sendETH": {
     "message": "Send ETH"
   },
-  "swapETH": {
-    "message": "Swap ETH"
-  },
   "sendTokens": {
     "message": "Send Tokens"
   },
@@ -1516,9 +1513,6 @@
   },
   "supportCenter": {
     "message": "Visit our Support Center"
-  },
-  "swapTokens": {
-    "message": "Swap Tokens"
   },
   "symbol": {
     "message": "Symbol"

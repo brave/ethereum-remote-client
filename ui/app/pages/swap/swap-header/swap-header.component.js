@@ -8,7 +8,6 @@ export default class SwapHeader extends Component {
     clearSwap: PropTypes.func,
     history: PropTypes.object,
     mostRecentOverviewPage: PropTypes.string,
-    titleKey: PropTypes.string,
   }
 
   static contextTypes = {
@@ -26,7 +25,7 @@ export default class SwapHeader extends Component {
       <PageContainerHeader
         className="swap__header"
         onClose={() => this.onClose()}
-        title={this.context.t(this.props.titleKey)}
+        title={this.context.t('swap')}
         headerCloseText={this.context.t('cancel')}
       />
     )

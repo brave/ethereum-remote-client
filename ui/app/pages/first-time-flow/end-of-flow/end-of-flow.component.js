@@ -68,7 +68,16 @@ export default class EndOfFlowScreen extends PureComponent {
           { '• ' + t('endOfFlowMessage6') }
         </div>
         <div className="end-of-flow__text-3">
-          { '• ' + t('endOfFlowMessage7') }
+          { '• ' + t('endOfFlowMessage7') }&nbsp;
+          <a
+            href="https://community.brave.com/c/support-and-troubleshooting/wallet/131"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="first-time-flow__link-text-underlined">
+              {t('endOfFlowMessage11')}
+            </span>
+          </a>
         </div>
         <div className="first-time-flow__text-block end-of-flow__text-4">
           { '*' + t('endOfFlowMessage8') }&nbsp;

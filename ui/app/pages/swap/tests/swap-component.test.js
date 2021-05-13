@@ -5,7 +5,6 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import timeout from '../../../../lib/test-timeout'
 
-import AddRecipient from '../swap-content/add-recipient/add-recipient.container'
 import SwapHeader from '../swap-header/swap-header.container'
 import SwapContent from '../swap-content/swap-content.container'
 import SwapFooter from '../swap-footer/swap-footer.container'
@@ -361,9 +360,8 @@ describe('Swap Component', function () {
       assert.equal(wrapper.find('.page-container').length, 1)
     })
 
-    it('should render SwapHeader and AddRecipient', function () {
+    it('should render SwapHeader', function () {
       assert.equal(wrapper.find(SwapHeader).length, 1)
-      assert.equal(wrapper.find(AddRecipient).length, 1)
     })
 
     it('should pass the history prop to SwapHeader and SwapFooter', function () {

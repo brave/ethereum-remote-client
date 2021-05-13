@@ -13,7 +13,6 @@ export default class SwapAmountRow extends Component {
     balance: PropTypes.string,
     conversionRate: PropTypes.number,
     gasTotal: PropTypes.string,
-    inError: PropTypes.bool,
     primaryCurrency: PropTypes.string,
     swapFromToken: PropTypes.object,
     setMaxModeTo: PropTypes.func,
@@ -68,7 +67,7 @@ export default class SwapAmountRow extends Component {
       primaryCurrency,
       swapFromToken,
       tokenFromBalance,
-      tokenToBalance
+      tokenToBalance,
     })
 
     if (swapFromToken) {
@@ -79,7 +78,7 @@ export default class SwapAmountRow extends Component {
         primaryCurrency,
         swapFromToken,
         tokenFromBalance,
-        tokenToBalance
+        tokenToBalance,
       })
     }
   }
@@ -105,13 +104,12 @@ export default class SwapAmountRow extends Component {
     this.updateAmount(newAmount)
   }
 
-  renderInput () {
-    const { amount, inError, swapFromToken } = this.props
+  render () {
+    const { amount, swapFromToken } = this.props
 
     return swapFromToken ?
       (
         <UserPreferencedTokenInput
-          error={inError}
           onChange={this.handleChange}
           token={swapFromToken}
           value={amount}
@@ -119,26 +117,9 @@ export default class SwapAmountRow extends Component {
       )
       : (
         <UserPreferencedCurrencyInput
-          error={inError}
           onChange={this.handleChange}
           value={amount}
         />
       )
   }
-
-  render () {
-    const { gasTotal, inError } = this.props
-
-    return (
-      <SwapRowWrapper
-        label={`${this.context.t('amount')}:`}
-        showError={inError}
-        errorType="amount"
-      >
-        {gasTotal && <AmountMaxButton inError={inError} />}
-        { this.renderInput() }
-      </SwapRowWrapper>
-    )
-  }
-
 }

@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import SwapRowWrapper from '../swap-row-wrapper'
 import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import { PRIMARY } from '../../../../helpers/constants/common'
+
+import SwapAmountRow from '../swap-amount-row'
+import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
@@ -79,29 +81,84 @@ export default class SwapAssetRow extends Component {
 
   render () {
     const { t } = this.context
-    console.log(this.props)
 
     return (
-    <div>
-      <SwapRowWrapper label={`${t('from')}:`}>
-        <div className="swap-v2__asset-dropdown">
-          { this.renderSwapTokenFrom() }
-          { this.props.tokensFrom.length > 0 ? this.renderAssetDropdownFrom() : null }
+      <div>
+        <div className="swap-v2__form-row">
+          <span className="swap-v2__form-row-label">{`${t('from')}`}</span>
         </div>
-      </SwapRowWrapper>
-      <SwapRowWrapper label={`${t('to')}:`}>
-      <div className="swap-v2__asset-dropdown">
-        { this.renderSwapTokenTo() }
-        { this.props.tokensTo.length > 0 ? this.renderAssetDropdownTo() : null }
+
+        <div className="swap-v2__form-row">
+          <div className="swap-v2__asset-dropdown">
+            { this.renderSwapTokenFrom() }
+            { this.props.tokensFrom.length > 0 && this.renderAssetDropdownFrom() }
+          </div>
+          <div className="swap-v2__from-amount-box">
+            <SwapAmountRow /> {/** TODO (@onyb): add updateGas prop */}
+          </div>
+        </div>
+
+        <div className="swap-v2__form-row-full">
+          <SwapRowErrorMessage errorType="amount" />
+        </div>
+
+        <div className="swap-v2__form-row-full">
+          <span>{`${t('balance')}:`}</span>
+          <span>{this.renderFromBalance()}</span>
+        </div>
+
+
+        <div className="swap-v2__form-row">
+          <span className="swap-v2__form-row-label">{`${t('to')}`}</span>
+        </div>
+
+        <div className="swap-v2__form-row">
+          <div className="swap-v2__asset-dropdown">
+            { this.renderSwapTokenTo() }
+            { this.props.tokensTo.length > 0 && this.renderAssetDropdownTo() }
+          </div>
+          <div className="swap-v2__to-amount-box">
+            ???? {this.getSwapToToken()?.symbol || 'ETH'}
+          </div>
+        </div>
+
       </div>
-    </SwapRowWrapper>
-    </div>
+    )
+  }
+
+  getSwapFromToken () {
+    const { swapFromTokenAddress } = this.props
+    return this.props.tokensFrom.find(({ address }) => address === swapFromTokenAddress)
+  }
+
+  getSwapToToken () {
+    const { swapToTokenAddress } = this.props
+    return this.props.tokensTo.find(({ address }) => address === swapToTokenAddress)
+  }
+
+  getSelectedETHAccountBalance () {
+    const { accounts, selectedAddress } = this.props
+    return accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
+  }
+
+  renderFromBalance () {
+    const token = this.getSwapFromToken()
+    const balanceValue = this.getSelectedETHAccountBalance()
+
+    return token ? (
+      <TokenBalance
+        token={token}
+      />
+    ) : (
+      <UserPreferencedCurrencyDisplay
+        value={balanceValue}
+        type={PRIMARY}
+      />
     )
   }
 
   renderSwapTokenFrom () {
-    const { swapTokenFromAddress } = this.props
-    const token = this.props.tokensFrom.find(({ address }) => address === swapTokenFromAddress)
+    const token = this.getSwapFromToken()
     return (
       <div
         className="swap-v2__asset-dropdown__input-wrapper"
@@ -113,8 +170,8 @@ export default class SwapAssetRow extends Component {
   }
 
   renderSwapTokenTo () {
-    const { swapToTokenAddress } = this.props
-    const token = this.props.tokensTo.find(({ address }) => address === swapToTokenAddress)
+    const token = this.getSwapToToken()
+
     return (
       <div
         className="swap-v2__asset-dropdown__input-wrapper"
@@ -157,9 +214,8 @@ export default class SwapAssetRow extends Component {
 
   renderEthFrom (insideDropdown = false) {
     const { t } = this.context
-    const { accounts, selectedAddress } = this.props
 
-    const balanceValue = accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
+    const balanceValue = this.getSelectedETHAccountBalance()
 
     return (
       <div
@@ -171,15 +227,17 @@ export default class SwapAssetRow extends Component {
         </div>
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">ETH</div>
-          <div className="swap-v2__asset-dropdown__name">
-            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
-            <UserPreferencedCurrencyDisplay
-              value={balanceValue}
-              type={PRIMARY}
-            />
-          </div>
+          {insideDropdown && (
+            <div className="swap-v2__asset-dropdown__name">
+              <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+              <UserPreferencedCurrencyDisplay
+                value={balanceValue}
+                type={PRIMARY}
+              />
+            </div>
+          )}
         </div>
-        { !insideDropdown && this.props.tokensFrom.length > 0 && (
+        {!insideDropdown && this.props.tokensFrom.length > 0 && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
@@ -188,29 +246,30 @@ export default class SwapAssetRow extends Component {
 
   renderEthTo (insideDropdown = false) {
     const { t } = this.context
-    const { accounts, selectedAddress } = this.props
 
-    const balanceValue = accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
+    const balanceValue = this.getSelectedETHAccountBalance()
 
     return (
       <div
         className={ this.props.tokensTo.length > 0 ? 'swap-v2__asset-dropdown__asset' : 'swap-v2__asset-dropdown__single-asset' }
-        onClick={() => this.selectTokenFrom()}
+        onClick={() => this.selectTokenTo()}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
           <Identicon diameter={36} />
         </div>
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">ETH</div>
-          <div className="swap-v2__asset-dropdown__name">
-            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
-            <UserPreferencedCurrencyDisplay
-              value={balanceValue}
-              type={PRIMARY}
-            />
-          </div>
+          {insideDropdown && (
+            <div className="swap-v2__asset-dropdown__name">
+              <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+              <UserPreferencedCurrencyDisplay
+                value={balanceValue}
+                type={PRIMARY}
+              />
+            </div>
+          )}
         </div>
-        { !insideDropdown && this.props.tokensTo.length > 0 && (
+        {!insideDropdown && this.props.tokensTo.length > 0 && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
@@ -234,24 +293,26 @@ export default class SwapAssetRow extends Component {
           <div className="swap-v2__asset-dropdown__symbol">
             { symbol }
           </div>
-          <div className="swap-v2__asset-dropdown__name">
-            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
-            <TokenBalance
-              token={token}
-            />
-          </div>
+          {insideDropdown && (
+            <div className="swap-v2__asset-dropdown__name">
+              <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+              <TokenBalance
+                token={token}
+              />
+            </div>
+          )}
         </div>
-        { !insideDropdown && (
+        {!insideDropdown && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
     )
   }
-  
+
   renderAssetTo (token, insideDropdown = false) {
     const { address, symbol } = token
     const { t } = this.context
-  
+
     return (
       <div
         key={address}
@@ -265,20 +326,19 @@ export default class SwapAssetRow extends Component {
           <div className="swap-v2__asset-dropdown__symbol">
             { symbol }
           </div>
-          <div className="swap-v2__asset-dropdown__name">
-            <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
-            <TokenBalance
-              token={token}
-            />
-          </div>
+          {insideDropdown && (
+            <div className="swap-v2__asset-dropdown__name">
+              <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
+              <TokenBalance
+                token={token}
+              />
+            </div>
+          )}
         </div>
-        { !insideDropdown && (
+        {!insideDropdown && (
           <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
     )
   }
 }
-
-
-

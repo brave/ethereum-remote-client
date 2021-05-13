@@ -304,64 +304,39 @@ export default function reduceMetamask (state = {}, action) {
         send: newSend,
       })
 
-      case actionConstants.UPDATE_SWAP_FROM_TOKEN:
-        const newSwapFrom = {
-          ...metamaskState.swap,
-          tokenFrom: action.value,
-        }
-        // erase token-related state when switching back to native currency
-        if (newSwapFrom.editingTransactionId && !newSwapFrom.token) {
-          const unapprovedTx = newSwapFrom?.unapprovedTxs?.[newSwapFrom.editingTransactionId] || {}
-          const txParams = unapprovedTx.txParams || {}
-          Object.assign(newSwapFrom, {
-            tokenBalance: null,
-            balance: '0',
-            from: unapprovedTx.from || '',
-            unapprovedTxs: {
-              ...newSwapFrom.unapprovedTxs,
-              [newSwapFrom.editingTransactionId]: {
-                ...unapprovedTx,
-                txParams: {
-                  ...txParams,
-                  data: '',
-                },
-              },
-            },
-          })
-        }
-        return Object.assign(metamaskState, {
-          swap: newSwapFrom,
+    case actionConstants.UPDATE_SWAP_FROM_TOKEN:
+      const newSwapFrom = {
+        ...metamaskState.swap,
+        tokenFrom: action.value,
+      }
+
+      // erase token-related state when switching back to native currency
+      if (!newSwapFrom.tokenFrom) {
+        Object.assign(newSwapFrom, {
+          tokenFromBalance: null,
         })
+      }
 
-        case actionConstants.UPDATE_SWAP_TO_TOKEN:
-          const newSwapTo = {
-            ...metamaskState.swap,
-            tokenTo: action.value,
-          }
+      return Object.assign(metamaskState, {
+        swap: newSwapFrom,
+      })
 
-          // erase token-related state when switching back to native currency
-          if (newSwapTo.editingTransactionId && !newSwapTo.token) {
-            const unapprovedTx = newSwapTo?.unapprovedTxs?.[newSwapTo.editingTransactionId] || {}
-            const txParams = unapprovedTx.txParams || {}
-            Object.assign(newSwapTo, {
-              tokenBalance: null,
-              balance: '0',
-              from: unapprovedTx.from || '',
-              unapprovedTxs: {
-                ...newSwapTo.unapprovedTxs,
-                [newSwapTo.editingTransactionId]: {
-                  ...unapprovedTx,
-                  txParams: {
-                    ...txParams,
-                    data: '',
-                  },
-                },
-              },
-            })
-          }
-          return Object.assign(metamaskState, {
-            swap: newSwapTo,
-          })
+    case actionConstants.UPDATE_SWAP_TO_TOKEN:
+      const newSwapTo = {
+        ...metamaskState.swap,
+        tokenTo: action.value,
+      }
+
+      // erase token-related state when switching back to native currency
+      if (!newSwapTo.tokenTo) {
+        Object.assign(newSwapTo, {
+          tokenToBalance: null,
+        })
+      }
+
+      return Object.assign(metamaskState, {
+        swap: newSwapTo,
+      })
 
     case actionConstants.UPDATE_SEND_ENS_RESOLUTION:
       return {

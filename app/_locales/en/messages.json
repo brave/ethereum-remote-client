@@ -1167,7 +1167,7 @@
     "message": "Recipient Address"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Search, public address (0x), or domain"
   },
   "rejectAll": {
     "message": "Reject All"

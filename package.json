@@ -61,7 +61,6 @@
     "**/knex/minimist": "^1.2.5",
     "**/optimist/minimist": "^1.2.5",
     "**/socketcluster/minimist": "^1.2.5",
-    "ganache-core/lodash": "^4.17.21",
     "serialize-javascript": "^3.1.0",
     "dot-prop": "4.2.1",
     "elliptic": "^6.5.3",
@@ -74,7 +73,9 @@
     "axios": "^0.21.1",
     "prismjs": "1.23.0",
     "immer": "8.0.1",
-    "netmask": "^2.0.1"
+    "netmask": "^2.0.1",
+    "ganache-core/lodash": "^4.17.21",
+    "underscore": "^1.12.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -136,6 +137,8 @@
     "extensionizer": "^1.0.1",
     "fast-json-patch": "^2.0.4",
     "fuse.js": "^3.2.0",
+    "ganache-cli": "^6.12.2",
+    "ganache-core": "^2.13.2",
     "human-standard-token-abi": "^2.0.0",
     "jazzicon": "^2.0.0",
     "json-rpc-engine": "^5.1.8",
@@ -238,8 +241,6 @@
     "fast-glob": "^3.2.2",
     "file-loader": "^1.1.11",
     "fs-extra": "^8.1.0",
-    "ganache-cli": "^6.9.1",
-    "ganache-core": "^2.10.2",
     "geckodriver": "^1.19.1",
     "get-port": "^5.1.0",
     "gulp": "^4.0.2",

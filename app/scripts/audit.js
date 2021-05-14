@@ -1,5 +1,10 @@
 const { execSync } = require('child_process')
 
+// Ping security team before adding to ignoredAdvisories
+const ignoredAdvisories = [
+  1693, // Regular Expression Denial of Service
+]
+
 const prettyPrint = (advisories) => {
   advisories.forEach(({ severity, module_name }) => { // eslint-disable-line camelcase
     console.log(`Module Name: ${module_name} Severity: ${severity}`) // eslint-disable-line camelcase
@@ -39,7 +44,9 @@ try {
   // Filter out exceptions
   }).filter((item) => {
     return item && !exceptions.includes(item['module_name'])
-  })
+  }).filter((item) => !ignoredAdvisories.includes(item.id))
+
+  console.log('Ignoring NPM advisories:', ignoredAdvisories)
 
   // Set advisory counts
   advisories.forEach(({ severity }) => {

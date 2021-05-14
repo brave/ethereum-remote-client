@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import contracts from 'eth-contract-metadata'
+import contracts from '@metamask/contract-metadata'
 import { warn } from 'loglevel'
 import { MAINNET } from './network/enums'
 // By default, poll every 3 minutes
@@ -25,7 +25,7 @@ export default class DetectTokensController {
   }
 
   /**
-   * For each token in eth-contract-metadata, find check selectedAddress balance.
+   * For each token in @metamask/contract-metadata, find check selectedAddress balance.
    */
   async detectNewTokens () {
     if (!this.isActive) {

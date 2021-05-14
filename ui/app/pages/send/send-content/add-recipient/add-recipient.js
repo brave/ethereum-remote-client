@@ -7,7 +7,7 @@ import {
 
 import { isValidAddress, isEthNetwork, checkExistingAddresses } from '../../../../helpers/utils/util'
 import ethUtil from 'ethereumjs-util'
-import contractMap from 'eth-contract-metadata'
+import contractMap from '@metamask/contract-metadata'
 
 export function getToErrorObject (to, hasHexData = false, network) {
   let toError = null

@@ -20,7 +20,7 @@ const copyTargets = [
     dest: `images`,
   },
   {
-    src: `./node_modules/eth-contract-metadata/images/`,
+    src: `./node_modules/@metamask/contract-metadata/images/`,
     dest: `images/contract`,
   },
   {

@@ -557,7 +557,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@brave.com."
+    "message": "If you ever have questions or see something fishy, visit our wallet"
   },
   "endOfFlowMessage8": {
     "message": "Brave cannot recover your seedphrase."
@@ -567,6 +567,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "support forum."
   },
   "externalExtension": {
     "message": "External Extension"

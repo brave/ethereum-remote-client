@@ -161,4 +161,9 @@
   &__link-text {
     color: $primary-blue;
   }
+
+  &__link-text-underlined {
+    color: $primary-blue;
+    text-decoration: underline;
+  }
 }

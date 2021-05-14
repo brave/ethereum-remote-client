@@ -37,20 +37,20 @@ export function getSwapGasTotal (state) {
 }
 
 export function getSwapPrimaryCurrency (state) {
-  const swapFromToken = getSwapFromToken(state)
-  return swapFromToken?.symbol
+  const swapFromAsset = getSwapFromAsset(state)
+  return swapFromAsset?.symbol
 }
 
 export function getSwapToken (state) {
   return state.metamask.swap.token
 }
 
-export function getSwapFromToken (state) {
-  return state.metamask.swap.tokenFrom
+export function getSwapFromAsset (state) {
+  return state.metamask.swap.fromAsset
 }
 
-export function getSwapToToken (state) {
-  return state.metamask.swap.tokenTo
+export function getSwapToAsset (state) {
+  return state.metamask.swap.toAsset
 }
 
 export function getSwapAmount (state) {
@@ -201,19 +201,19 @@ export function getSwapTokenAddress (state) {
 }
 
 export function getSwapFromTokenAddress (state) {
-  return getSwapFromToken(state)?.address
+  return getSwapFromAsset(state)?.address
 }
 
-export function getSwapFromTokenSymbol (state) {
-  return getSwapFromToken(state)?.symbol
+export function getSwapFromAssetSymbol (state) {
+  return getSwapFromAsset(state)?.symbol
 }
 
 export function getSwapToTokenAddress (state) {
-  return getSwapToToken(state)?.address
+  return getSwapToAsset(state)?.address
 }
 
-export function getSwapToTokenSymbol (state) {
-  return getSwapToToken(state)?.symbol
+export function getSwapToAssetSymbol (state) {
+  return getSwapToAsset(state)?.symbol
 }
 
 export function getSwapIsContractAddress (state) {

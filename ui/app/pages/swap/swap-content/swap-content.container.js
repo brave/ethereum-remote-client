@@ -6,8 +6,8 @@ import {
   getAddressBookEntry,
   getIsContractAddress,
   getSwapAmount,
-  getSwapToTokenSymbol,
-  getSwapFromTokenSymbol,
+  getSwapToAssetSymbol,
+  getSwapFromAssetSymbol,
   getSwapQuote,
 } from '../../../selectors'
 
@@ -21,8 +21,8 @@ const mapStateToProps = (state) => {
     contact: getAddressBookEntry(state, to),
     to,
     isContractAddress: getIsContractAddress(state),
-    buyToken: getSwapToTokenSymbol(state),
-    sellToken: getSwapFromTokenSymbol(state),
+    buyToken: getSwapToAssetSymbol(state),
+    sellToken: getSwapFromAssetSymbol(state),
     sellAmount: getSwapAmount(state),
     quote: getSwapQuote(state),
   }
@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
     updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote)),
-    fillOrder : (quote) => dispatch(actions.fillOrder(quote))
+    fillOrder: (quote) => dispatch(actions.fillOrder(quote)),
   }
 }
 
@@ -44,7 +44,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...restStateProps,
     getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
     updateSwapQuote: () => dispatchProps.updateSwapQuote(quote),
-    fillOrder: () => dispatchProps.fillOrder(quote)
+    fillOrder: () => dispatchProps.fillOrder(quote),
   }
 }
 

@@ -14,7 +14,7 @@ export default class SwapFooter extends Component {
     gasTotal: PropTypes.string,
     history: PropTypes.object,
     inError: PropTypes.bool,
-    swapFromToken: PropTypes.object,
+    fromAsset: PropTypes.object,
     sign: PropTypes.func,
     to: PropTypes.string,
     toAccounts: PropTypes.array,
@@ -40,7 +40,7 @@ export default class SwapFooter extends Component {
       from: { address: from },
       gasLimit: gas,
       gasPrice,
-      swapFromToken,
+      fromAsset,
       sign,
       to,
       history,
@@ -48,7 +48,7 @@ export default class SwapFooter extends Component {
     } = this.props
     const { metricsEvent } = this.context
 
-    const promise = sign({ data, swapFromToken, to, amount, from, gas, gasPrice })
+    const promise = sign({ data, fromAsset, to, amount, from, gas, gasPrice })
 
     Promise.resolve(promise)
       .then(() => {

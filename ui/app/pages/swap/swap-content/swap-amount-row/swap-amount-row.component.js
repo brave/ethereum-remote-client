@@ -14,7 +14,7 @@ export default class SwapAmountRow extends Component {
     conversionRate: PropTypes.number,
     gasTotal: PropTypes.string,
     primaryCurrency: PropTypes.string,
-    swapFromToken: PropTypes.object,
+    fromAsset: PropTypes.object,
     setMaxModeTo: PropTypes.func,
     tokenFromBalance: PropTypes.string,
     tokenToBalance: PropTypes.string,
@@ -32,10 +32,10 @@ export default class SwapAmountRow extends Component {
 
   componentDidUpdate (prevProps) {
     const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
-    const { maxModeOn, amount, gasTotal, swapFromToken } = this.props
+    const { maxModeOn, amount, gasTotal, fromAsset } = this.props
     console.log(`The Amount in swap amount component is :  ${amount})`)
 
-    if (maxModeOn && swapFromToken && !prevMaxModeOn) {
+    if (maxModeOn && fromAsset && !prevMaxModeOn) {
       this.updateGas(amount)
     }
 
@@ -52,7 +52,7 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapFromToken,
+      fromAsset,
       tokenToBalance,
       tokenFromBalance,
       updateGasFeeError,
@@ -65,18 +65,18 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapFromToken,
+      fromAsset,
       tokenFromBalance,
       tokenToBalance,
     })
 
-    if (swapFromToken) {
+    if (fromAsset) {
       updateGasFeeError({
         balance,
         conversionRate,
         gasTotal,
         primaryCurrency,
-        swapFromToken,
+        fromAsset,
         tokenFromBalance,
         tokenToBalance,
       })
@@ -91,9 +91,9 @@ export default class SwapAmountRow extends Component {
   }
 
   updateGas (amount) {
-    const { swapFromToken, updateGas } = this.props
+    const { fromAsset, updateGas } = this.props
 
-    if (swapFromToken) {
+    if (fromAsset) {
       updateGas({ amount })
     }
   }
@@ -105,21 +105,23 @@ export default class SwapAmountRow extends Component {
   }
 
   render () {
-    const { amount, swapFromToken } = this.props
+    const { amount, fromAsset } = this.props
 
-    return swapFromToken ?
-      (
-        <UserPreferencedTokenInput
-          onChange={this.handleChange}
-          token={swapFromToken}
-          value={amount}
-        />
-      )
-      : (
-        <UserPreferencedCurrencyInput
-          onChange={this.handleChange}
-          value={amount}
-        />
-      )
+    return fromAsset ?
+      fromAsset.address ?
+        (
+          <UserPreferencedTokenInput
+            onChange={this.handleChange}
+            token={fromAsset}
+            value={amount}
+          />
+        )
+        : (
+          <UserPreferencedCurrencyInput
+            onChange={this.handleChange}
+            value={amount}
+          />
+        )
+      : null
   }
 }

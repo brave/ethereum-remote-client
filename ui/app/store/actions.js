@@ -227,14 +227,14 @@ export function verifySeedPhrase () {
 //         await forceUpdateMetamaskState(response)
 //         resolve(response)
 //       })
-//     }) 
+//     })
 //   }
 // }
 
-export function getQuote (sellAmount, buyToken, sellToken){
+export function getQuote (sellAmount, buyToken, sellToken) {
   log.debug('action - getQuote')
-  return async(dispatch) => {
-    let newState 
+  return async (dispatch) => {
+    let newState
     try {
       newState = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
     } catch (error) {
@@ -244,16 +244,16 @@ export function getQuote (sellAmount, buyToken, sellToken){
       throw error
     }
     // dispatch(hideLoadingIndication())
-    console.log("The response in getQuote dispatch is", newState)
+    console.log('The response in getQuote dispatch is', newState)
     dispatch(updateSwapQuote(newState.quotes))
     return newState
   }
 }
 
-export function fillOrder (quote){
+export function fillOrder (quote) {
   log.debug('action - fillOrder')
-  return async(dispatch) => {
-    let newState 
+  return async (dispatch) => {
+    let newState
     try {
       newState = await promisifiedBackground.fillOrder(quote)
     } catch (error) {
@@ -261,7 +261,7 @@ export function fillOrder (quote){
       dispatch(displayWarning(error.message))
       throw error
     }
-    console.log("The response in  fillOuote is", newState)
+    console.log('The response in  fillOuote is', newState)
     // dispatch(updateSwapQuote(newState.quotes))
     return newState
   }
@@ -894,17 +894,17 @@ export function updateSendToken (token) {
   }
 }
 
-export function updateSwapFromToken (token) {
+export function updateSwapFromAsset (asset) {
   return {
-    type: actionConstants.UPDATE_SWAP_FROM_TOKEN,
-    value: token,
+    type: actionConstants.UPDATE_SWAP_FROM_ASSET,
+    value: asset,
   }
 }
 
-export function updateSwapToToken (token) {
+export function updateSwapToAsset (asset) {
   return {
-    type: actionConstants.UPDATE_SWAP_TO_TOKEN,
-    value: token,
+    type: actionConstants.UPDATE_SWAP_TO_ASSET,
+    value: asset,
   }
 }
 

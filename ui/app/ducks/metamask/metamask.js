@@ -46,45 +46,38 @@ export default function reduceMetamask (state = {}, action) {
       to: '',
       quotes: '',
       status: '',
-      tokensTo: [{
-        address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+      assets: [
+        {
+          address: '',
+          decimals: 18,
+          symbol: 'ETH',
+        },
+        {
+          address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
+          decimals: 18,
+          symbol: 'AAVE',
+        }, {
+          address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+          decimals: 18,
+          symbol: 'YFI',
+        },
+        {
+          address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+          decimals: 18,
+          symbol: 'COMP',
+        },
+        {
+          address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+          decimals: 18,
+          symbol: 'ZRX',
+        },
+      ],
+      fromAsset: {
+        address: '',
         decimals: 18,
-        symbol: 'AAVE',
-      },{
-        address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
-        decimals: 18,
-        symbol: 'YFI',
+        symbol: 'ETH',
       },
-      {
-        address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-        decimals: 18,
-        symbol: 'COMP',
-      },
-      {
-        address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-        decimals: 18,
-        symbol: 'ZRX',
-      }],
-      tokensFrom: [{
-        address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
-        decimals: 18,
-        symbol: 'AAVE',
-      },{
-        address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
-        decimals: 18,
-        symbol: 'YFI',
-      },
-      {
-        address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-        decimals: 18,
-        symbol: 'COMP',
-      },
-      {
-        address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-        decimals: 18,
-        symbol: 'ZRX',
-      },
-    ],
+      toAsset: null,
       amount: '0',
       memo: '',
       errors: {},
@@ -240,24 +233,24 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
-      case actionConstants.UPDATE_SWAP_AMOUNT:
-        return {
-          ...metamaskState,
-          swap: {
-            ...metamaskState.swap,
-            amount: action.value,
-          },
-        }
+    case actionConstants.UPDATE_SWAP_AMOUNT:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          amount: action.value,
+        },
+      }
 
-        case actionConstants.UPDATE_SWAP_QUOTE:
-          return {
-            ...metamaskState,
-            swap: {
-              ...metamaskState.swap,
-              quotes: action.value,
-            },
-          }
-          
+    case actionConstants.UPDATE_SWAP_QUOTE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          quotes: action.value,
+        },
+      }
+
     case actionConstants.UPDATE_MAX_MODE:
       return {
         ...metamaskState,
@@ -304,14 +297,14 @@ export default function reduceMetamask (state = {}, action) {
         send: newSend,
       })
 
-    case actionConstants.UPDATE_SWAP_FROM_TOKEN:
+    case actionConstants.UPDATE_SWAP_FROM_ASSET:
       const newSwapFrom = {
         ...metamaskState.swap,
-        tokenFrom: action.value,
+        fromAsset: action.value,
       }
 
       // erase token-related state when switching back to native currency
-      if (!newSwapFrom.tokenFrom) {
+      if (!newSwapFrom.fromAsset?.address) {
         Object.assign(newSwapFrom, {
           tokenFromBalance: null,
         })
@@ -321,14 +314,14 @@ export default function reduceMetamask (state = {}, action) {
         swap: newSwapFrom,
       })
 
-    case actionConstants.UPDATE_SWAP_TO_TOKEN:
+    case actionConstants.UPDATE_SWAP_TO_ASSET:
       const newSwapTo = {
         ...metamaskState.swap,
-        tokenTo: action.value,
+        toAsset: action.value,
       }
 
       // erase token-related state when switching back to native currency
-      if (!newSwapTo.tokenTo) {
+      if (!newSwapTo.toAsset?.address) {
         Object.assign(newSwapTo, {
           tokenToBalance: null,
         })
@@ -358,25 +351,25 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
-      case actionConstants.UPDATE_SWAP_ENS_RESOLUTION:
-        return {
-          ...metamaskState,
-          swap: {
-            ...metamaskState.send,
-            ensResolution: action.payload,
-            ensResolutionError: '',
-          },
-        }
-  
-      case actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR:
-        return {
-          ...metamaskState,
-          swap: {
-            ...metamaskState.send,
-            ensResolution: null,
-            ensResolutionError: action.payload,
-          },
-        }
+    case actionConstants.UPDATE_SWAP_ENS_RESOLUTION:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.send,
+          ensResolution: action.payload,
+          ensResolutionError: '',
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.send,
+          ensResolution: null,
+          ensResolutionError: action.payload,
+        },
+      }
 
     case actionConstants.CLEAR_SEND:
       return {
@@ -398,26 +391,26 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
-      case actionConstants.CLEAR_SWAP:
-        return {
-          ...metamaskState,
-          swap: {
-            gasLimit: null,
-            gasPrice: null,
-            gasTotal: null,
-            tokenToBalance: null,
-            tokenFromBalance: null,
-            from: '',
-            to: '',
-            amount: '0x0',
-            memo: '',
-            errors: {},
-            maxModeOn: false,
-            editingTransactionId: null,
-            toNickname: '',
-          },
-        }
-  
+    case actionConstants.CLEAR_SWAP:
+      return {
+        ...metamaskState,
+        swap: {
+          gasLimit: null,
+          gasPrice: null,
+          gasTotal: null,
+          tokenToBalance: null,
+          tokenFromBalance: null,
+          from: '',
+          to: '',
+          amount: '0x0',
+          memo: '',
+          errors: {},
+          maxModeOn: false,
+          editingTransactionId: null,
+          toNickname: '',
+        },
+      }
+
     case actionConstants.UPDATE_TRANSACTION_PARAMS:
       const { id: txId, value } = action
       let { currentNetworkTxList } = metamaskState

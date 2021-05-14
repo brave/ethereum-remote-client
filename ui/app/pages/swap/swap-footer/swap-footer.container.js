@@ -1,18 +1,17 @@
 import { connect } from 'react-redux'
 import ethUtil from 'ethereumjs-util'
-import ethers from 'ethers'
+
 import {
   addToAddressBook,
   clearSwap,
   signTokenTx,
   signTx,
-  updateTransaction,
 } from '../../../store/actions'
 import {
   getSwapGasLimit,
   getGasPrice,
   getSwapGasTotal,
-  getSwapFromToken,
+  getSwapFromAsset,
   getSwapAmount,
   getSwapEditingTransactionId,
   getSwapFromObject,
@@ -35,7 +34,6 @@ import SwapFooter from './swap-footer.component'
 import {
   addressIsNew,
   constructTxParams,
-  constructUpdatedTx,
 } from './swap-footer.utils'
 import { getMostRecentOverviewPage } from '../../../ducks/history/history'
 
@@ -61,7 +59,7 @@ function mapStateToProps (state) {
     gas: getSwapQuoteGas(state),
     gasTotal: getSwapGasTotal(state),
     inError: isSwapFormInError(state),
-    swapFromToken: getSwapFromToken(state),
+    fromAsset: getSwapFromAsset(state),
     to: getSwapQuoteTo(state),
     value: getSwapQuoteValue(state),
     toAccounts: getSwapToAccounts(state),
@@ -78,45 +76,20 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     clearSwap: () => dispatch(clearSwap()),
-    sign: ({ swapFromToken, to, amount, from, gas, gasPrice, data }) => {
+    sign: ({ fromAsset, to, amount, from, gas, gasPrice, data }) => {
       const txParams = constructTxParams({
         amount,
         data,
         from,
         gas,
         gasPrice,
-        swapFromToken,
+        fromAsset,
         to,
       })
 
-      swapFromToken
-        ? dispatch(signTokenTx(swapFromToken.address, to, amount, txParams))
+      fromAsset.address
+        ? dispatch(signTokenTx(fromAsset.address, to, amount, txParams))
         : dispatch(signTx(txParams))
-    },
-    update: ({
-      amount,
-      data,
-      editingTransactionId,
-      from,
-      gas,
-      gasPrice,
-      swapFromToken,
-      to,
-      unapprovedTxs,
-    }) => {
-      const editingTx = constructUpdatedTx({
-        amount,
-        data,
-        editingTransactionId,
-        from,
-        gas,
-        gasPrice,
-        swapFromToken,
-        to,
-        unapprovedTxs,
-      })
-
-      return dispatch(updateTransaction(editingTx))
     },
 
     addToAddressBookIfNew: (newAddress, toAccounts, nickname = '') => {

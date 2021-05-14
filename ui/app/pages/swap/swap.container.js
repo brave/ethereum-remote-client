@@ -11,8 +11,8 @@ import {
   getSwapGasPrice,
   getGasTotal,
   getSwapPrimaryCurrency,
-  getSwapFromToken,
-  getSwapToToken,
+  getSwapFromAsset,
+  getSwapToAsset,
   getSwapFromTokenContract,
   getSwapToTokenContract,
   getSwapAmount,
@@ -70,8 +70,8 @@ function mapStateToProps (state) {
     primaryCurrency: getSwapPrimaryCurrency(state),
     qrCodeData: getQrSwapsCodeData(state),
     selectedAddress: getSelectedAddress(state),
-    swapTokenFrom: getSwapFromToken(state),
-    swapTokenTo: getSwapToToken(state),
+    fromAsset: getSwapFromAsset(state),
+    toAsset: getSwapToAsset(state),
     showHexData: getSwapHexDataFeatureFlagState(state),
     to: getSwapTo(state),
     toNickname: getSwapToNickname(state),
@@ -91,18 +91,18 @@ function mapDispatchToProps (dispatch) {
       gasLimit,
       gasPrice,
       selectedAddress,
-      swapFromToken,
+      fromAsset,
       to,
       value,
       data,
     }) => {
       !editingTransactionId
-        ? dispatch(updateGasData({ gasPrice, selectedAddress, swapFromToken, blockGasLimit, to, value, data }))
+        ? dispatch(updateGasData({ gasPrice, selectedAddress, fromAsset, blockGasLimit, to, value, data }))
         : dispatch(setGasTotal(calcGasTotal(gasLimit, gasPrice)))
     },
-    updateSwapTokenBalance: ({ swapFromToken, tokenContract, address }) => {
+    updateSwapTokenBalance: ({ fromAsset, tokenContract, address }) => {
       dispatch(updateSwapTokenBalance({
-        swapFromToken,
+        fromAsset,
         tokenContract,
         address,
       }))

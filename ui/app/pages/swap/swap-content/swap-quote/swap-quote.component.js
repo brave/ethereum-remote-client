@@ -20,9 +20,9 @@ export default class SwapQuote extends Component {
     t: PropTypes.func,
   }
 
-  constructor (props) {
-    super(props)
-    this.state = { seconds: countdownLimit }
+  state = { seconds: countdownLimit }
+
+  componentDidMount () {
     this.timer = null
     this.startTimer = this.startTimer.bind(this)
     this.closeTimer = this.endTimer.bind(this)
@@ -30,6 +30,10 @@ export default class SwapQuote extends Component {
 
     // Start countdown on component initialization.
     this.startTimer()
+  }
+
+  componentWillUnmount () {
+    this.endTimer()
   }
 
   startTimer () {

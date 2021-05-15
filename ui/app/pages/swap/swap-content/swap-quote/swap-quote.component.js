@@ -5,15 +5,27 @@ import { Tooltip as ReactTippy } from 'react-tippy'
 
 const countdownLimit = 40
 
-export default class SwapQuotes extends Component {
+const AssetPropTypes = PropTypes.shape({
+  address: PropTypes.string,
+  decimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  symbol: PropTypes.string,
+})
+
+export default class SwapQuote extends Component {
+  static propTypes = {
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
+    amount: PropTypes.string,
+    quote: PropTypes.object,
+    getSwapQuote: PropTypes.func.isRequired,
+  }
+
   static contextTypes = {
     t: PropTypes.func,
   }
 
-  static propTypes = {}
-
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = { seconds: countdownLimit }
     this.timer = null
     this.startTimer = this.startTimer.bind(this)
@@ -36,7 +48,19 @@ export default class SwapQuotes extends Component {
     this.timer = null
   }
 
-  clock (hook) {
+  shouldFetchQuote () {
+    const { fromAsset, toAsset, amount } = this.props
+
+    return fromAsset && toAsset && amount !== '0'
+  }
+
+  hook () {
+    const { fromAsset, toAsset, amount, getSwapQuote } = this.props
+
+    this.shouldFetchQuote() && getSwapQuote(fromAsset, toAsset, amount)
+  }
+
+  clock () {
     // Remove one second, set state so a re-render happens.
     const seconds = this.state.seconds - 1
     this.setState({ seconds })
@@ -44,10 +68,7 @@ export default class SwapQuotes extends Component {
     // Check if we're at zero.
     if (seconds < 0) {
       this.endTimer()
-
-      // Call hook if provided
-      hook && hook()
-
+      this.hook()
       this.startTimer()
     }
   }
@@ -80,10 +101,14 @@ export default class SwapQuotes extends Component {
   }
 
   render () {
-    return (
+    const { fromAsset, toAsset, quote } = this.props
+
+    return fromAsset && toAsset && quote && (
       <>
         <div className="swap-v2__form-row-centered">
-          <div className="rate">1 ETH = 10000 USD</div>
+          <div className="rate">
+            {`1 ${fromAsset.symbol} = ${parseFloat(quote.price).toFixed(4)} ${toAsset.symbol}`}
+          </div>
         </div>
         <div className="swap-v2__form-row-centered">
           <div className="quote">

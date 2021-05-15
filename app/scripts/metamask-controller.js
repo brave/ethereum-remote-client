@@ -1298,13 +1298,8 @@
      }
    }
  
-   async quote (sellAmount, buyToken,sellToken) {
-     try {
-       const response = await this.swapsController.quote(sellAmount, buyToken,sellToken)
-       return response 
-     } catch (error) {
-       throw error
-     }
+   async quote (fromAsset, toAsset, amount) {
+     return await this.swapsController.quote(fromAsset, toAsset, amount)
    }
 
    async fillOrder (quote) {

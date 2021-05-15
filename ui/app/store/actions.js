@@ -231,22 +231,20 @@ export function verifySeedPhrase () {
 //   }
 // }
 
-export function getQuote (sellAmount, buyToken, sellToken) {
+export function getQuote (fromAsset, toAsset, amount) {
   log.debug('action - getQuote')
   return async (dispatch) => {
-    let newState
+    let quote = null
+
     try {
-      newState = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
+      quote = await promisifiedBackground.quote(fromAsset.symbol, toAsset.symbol, parseInt(amount, 16))
     } catch (error) {
-      // dispatch(hideLoadingIndication())
       log.error(error)
       dispatch(displayWarning(error.message))
       throw error
     }
-    // dispatch(hideLoadingIndication())
-    console.log('The response in getQuote dispatch is', newState)
-    dispatch(updateSwapQuote(newState.quotes))
-    return newState
+    console.log('Retrieved Swap quote:', quote)
+    dispatch(updateSwapQuote(quote))
   }
 }
 

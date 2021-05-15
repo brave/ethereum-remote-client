@@ -231,8 +231,8 @@ export function verifySeedPhrase () {
 //   }
 // }
 
-export function getQuote (fromAsset, toAsset, amount) {
-  log.debug('action - getQuote')
+export function fetchSwapQuote (fromAsset, toAsset, amount) {
+  log.debug('action - fetchSwapQuote')
   return async (dispatch) => {
     let quote = null
 

@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
+import CurrencyDisplay from '../../../../components/ui/currency-display'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import { PRIMARY } from '../../../../helpers/constants/common'
+import { calcTokenAmount } from '../../../../helpers/utils/token-util'
 
 import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
@@ -101,7 +103,7 @@ export default class SwapAssetRow extends Component {
 
   render () {
     const { t } = this.context
-    const { toAsset, fromAsset, assets } = this.props
+    const { fromAsset, assets } = this.props
 
     return (
       <div>
@@ -143,7 +145,9 @@ export default class SwapAssetRow extends Component {
             {this.renderSwapToAsset()}
             {assets.length > 0 && this.renderToAssetDropdown()}
           </div>
-          <div className="swap-v2__to-amount-box">???? {toAsset?.symbol}</div>
+          <div className="swap-v2__to-amount-box">
+            {this.renderToAmount()}
+          </div>
         </div>
       </div>
     )
@@ -152,6 +156,17 @@ export default class SwapAssetRow extends Component {
   getSelectedETHAccountBalance () {
     const { accounts, selectedAddress } = this.props
     return accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
+  }
+
+  renderToAmount () {
+    const { toAsset, quote } = this.props
+
+    if (!toAsset || !quote) {
+      return
+    }
+
+    const amount = calcTokenAmount(quote.buyAmount, toAsset.decimals).toFixed(4)
+    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
   }
 
   renderFromBalance () {

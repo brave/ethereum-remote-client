@@ -55,9 +55,9 @@ export default class SwapQuote extends Component {
   }
 
   hook () {
-    const { fromAsset, toAsset, amount, getSwapQuote } = this.props
+    const { fromAsset, toAsset, amount, fetchSwapQuote } = this.props
 
-    this.shouldFetchQuote() && getSwapQuote(fromAsset, toAsset, amount)
+    this.shouldFetchQuote() && fetchSwapQuote(fromAsset, toAsset, amount)
   }
 
   clock () {
@@ -115,7 +115,7 @@ export default class SwapQuote extends Component {
             New quote in{' '}
             <span
               className="countdown"
-              style={{ color: this.state.seconds < 30 ? '#d73a49' : undefined }}
+              style={{ color: this.state.seconds < 20 ? '#d73a49' : undefined }}
             >
               0:{this.state.seconds.toString().padStart(2, '0')}
             </span>

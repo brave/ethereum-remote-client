@@ -18,7 +18,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  getSwapQuote: (fromAsset, toAsset, amount) => dispatch(actions.getQuote(fromAsset, toAsset, amount)),
+  fetchSwapQuote: (fromAsset, toAsset, amount) => dispatch(actions.fetchSwapQuote(fromAsset, toAsset, amount)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapQuote)

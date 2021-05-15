@@ -573,6 +573,31 @@
     }
   }
 
+  &__form-row-centered {
+    margin: 1rem 1rem 0;
+    display: flex;
+    flex-flow: row;
+    flex: 1 0 auto;
+    justify-content: center;
+
+    .rate {
+      color: #6a737d;
+      font-size: 0.8rem;
+    }
+
+    .quote {
+      font-size: 0.8rem;
+      border-radius: 42px;
+      background: #f2f3f4;
+      padding: 7px 14px;
+      font-weight: 700;
+
+      .countdown {
+        font-weight: 400;
+      }
+    }
+  }
+
   &__form-field-container {
     display: flex;
     flex-direction: column;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
-import SwapRowWrapper from '../swap-row-wrapper'
-import AmountMaxButton from './amount-max-button'
+
 import UserPreferencedCurrencyInput from '../../../../components/app/user-preferenced-currency-input'
 import UserPreferencedTokenInput from '../../../../components/app/user-preferenced-token-input'
 
@@ -107,21 +106,24 @@ export default class SwapAmountRow extends Component {
   render () {
     const { amount, fromAsset } = this.props
 
-    return fromAsset ?
-      fromAsset.address ?
-        (
-          <UserPreferencedTokenInput
-            onChange={this.handleChange}
-            token={fromAsset}
-            value={amount}
-          />
-        )
-        : (
-          <UserPreferencedCurrencyInput
-            onChange={this.handleChange}
-            value={amount}
-          />
-        )
-      : null
+    // Handle case when the From asset field is unselected.
+    if (!fromAsset) {
+      return null
+    }
+
+    return fromAsset.address ?
+      (
+        <UserPreferencedTokenInput
+          onChange={this.handleChange}
+          token={fromAsset}
+          value={amount}
+        />
+      )
+      : (
+        <UserPreferencedCurrencyInput
+          onChange={this.handleChange}
+          value={amount}
+        />
+      )
   }
 }

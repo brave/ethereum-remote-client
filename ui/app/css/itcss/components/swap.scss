@@ -583,6 +583,7 @@
     .rate {
       color: #6a737d;
       font-size: 0.8rem;
+      font-weight: 600;
     }
 
     .quote {
@@ -594,6 +595,41 @@
 
       .countdown {
         font-weight: 400;
+      }
+    }
+
+    .fees {
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 0.8rem;
+
+      table {
+        width: 100%;
+
+        td {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        tr:first-child {
+          font-weight: 700;
+
+          td {
+            padding-top: 7px;
+          }
+
+          td:nth-child(2) {
+            color: #6a737d;
+          }
+        }
+
+        tr:last-child {
+          td {
+            padding-top: 10px;
+            padding-bottom: 7px;
+          }
+        }
       }
     }
   }

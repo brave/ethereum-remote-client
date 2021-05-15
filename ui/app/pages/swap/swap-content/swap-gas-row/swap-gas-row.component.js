@@ -161,16 +161,14 @@ export default class SwapGasRow extends Component {
     const { gasFeeError } = this.props
 
     return (
-      <div>
-        
-      </div>
-      // <SwapRowWrapper
-      //   label={`${this.context.t('transactionFee')}:`}
-      //   showError={gasFeeError}
-      //   errorType="gasFee"
-      // >
-      //   { this.renderContent() }
-      // </SwapRowWrapper>
+
+      <SwapRowWrapper
+        label={`${this.context.t('transactionFee')}:`}
+        showError={gasFeeError}
+        errorType="gasFee"
+      >
+        { this.renderContent() }
+      </SwapRowWrapper>
     )
   }
 

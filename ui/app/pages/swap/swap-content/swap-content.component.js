@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerContent from '../../../components/ui/page-container/page-container-content.component'
-import SwapAmountRow from './swap-amount-row'
+
 import SwapGasRow from './swap-gas-row'
-import SwapHexDataRow from './swap-hex-data-row'
 import SwapAssetRow from './swap-asset-row'
-import Dialog from '../../../components/ui/dialog'
+import SwapQuotes from './swap-quotes'
 import Button from '../../../components/ui/button'
-import { ethers } from 'ethers'
 
 
 export default class SwapContent extends Component {
@@ -64,20 +62,14 @@ export default class SwapContent extends Component {
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
-          {this.maybeRenderContractWarning()}
           <SwapAssetRow />
           <br></br>
           <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
           <br></br>
           {this.renderQuote()}
           <SwapGasRow />
-          {
-            this.props.showHexData && (
-              <SwapHexDataRow
-                updateGas={this.updateGas}
-              />
-            )
-          }
+
+          <SwapQuotes />
         </div>
       </PageContainerContent>
     )
@@ -106,27 +98,6 @@ export default class SwapContent extends Component {
           <div>Loading....</div>
         )}
       </>
-    )
-  }
-
-  maybeRenderContractWarning () {
-    const { t } = this.context
-    const { isContractAddress } = this.props
-
-    if (!isContractAddress) {
-      return
-    }
-
-    return (
-      <div className="contract-error-dialog">
-        <Dialog
-          type="error"
-          className="error__dialog"
-          onClick={undefined}
-        >
-          {t('contractErrorMessage')}
-        </Dialog>
-      </div>
     )
   }
 }

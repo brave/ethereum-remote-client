@@ -44,7 +44,7 @@ export default function reduceMetamask (state = {}, action) {
       tokenFromBalance: '0x0',
       from: '',
       to: '',
-      quotes: '',
+      quote: null,
       status: '',
       assets: [
         {
@@ -247,7 +247,7 @@ export default function reduceMetamask (state = {}, action) {
         ...metamaskState,
         swap: {
           ...metamaskState.swap,
-          quotes: action.value,
+          quote: action.value,
         },
       }
 

@@ -25,11 +25,11 @@ export function getSwapCurrentNetwork (state) {
 }
 
 export function getSwapGasLimit (state) {
-  return state.metamask.swap.quotes.gas || '0'
+  return state.metamask.swap.quote?.gas || '0'
 }
 
 export function getSwapGasPrice (state) {
-  return state.metamask.swap.quotes.gasPrice || getAveragePriceEstimateInHexWEI(state)
+  return state.metamask.swap.quote?.gasPrice || getAveragePriceEstimateInHexWEI(state)
 }
 
 export function getSwapGasTotal (state) {
@@ -58,28 +58,28 @@ export function getSwapAmount (state) {
 }
 
 export function getSwapQuote (state) {
-  return state.metamask.swap.quotes
+  return state.metamask.swap.quote
 }
 
 export function getSwapQuoteData (state) {
-  return state.metamask.swap.quotes.data
+  return state.metamask.swap.quote?.data
 }
 
 export function getSwapQuoteTo (state) {
-  return state.metamask.swap.quotes.to
+  return state.metamask.swap.quote?.to
 }
 
 export function getSwapQuoteValue (state) {
-  return state.metamask.swap.quotes.value
+  return state.metamask.swap.quote?.value
 }
 
 
 export function getSwapQuoteGasPrice (state) {
-  return state.metamask.swap.quotes.gasPrice
+  return state.metamask.swap.quote?.gasPrice
 }
 
 export function getSwapQuoteGas (state) {
-  return state.metamask.swap.quotes.gas
+  return state.metamask.swap.quote?.gas
 }
 
 

@@ -45,29 +45,20 @@ export default class SwapsController {
     return receipt
   }
 
-  async quote (sellAmount, buyToken, sellToken) {
+  async quote (fromAssetSymbol, toAssetSymbol, amount) {
     const qs = _createQueryString({
-      sellAmount: sellAmount,
-      buyToken: buyToken,
-      sellToken: sellToken,
+      sellAmount: amount,
+      buyToken: toAssetSymbol,
+      sellToken: fromAssetSymbol,
       buyTokenPercentageFee: buyTokenPercentageFee,
       slippagePercentage: slippagePercentage,
       // takerAddress: this.taker,
       feeRecipient: feeAddress,
     })
+
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
-    const { swap } = this.store.getState()
-    await fetch(quoteUrl).then((response) => response.json()).then((data) => {
-      this.store.updateState({
-        swap: {
-          ...swap,
-          quotes: data,
-          amount: sellAmount
-        },
-      })
-    },
-    )
-    return swap
+    const response = await fetch(quoteUrl)
+    return response.json()
   }
 
   async approveTokenAllowance (response) {
@@ -86,13 +77,14 @@ export default class SwapsController {
   }
 
   async fillOrder (quote) {
+    const gas = 0
     const parameters = {
       from: this.taker,
       to: quote.to,
       data: quote.data,
       value: ethers.utils.parseEther(quote.value).toHexString(),
       gasPrice: ethers.utils.hexValue(parseInt(quote.gasPrice)),
-      ...(FORKED ? {} : { gas :  ethers.utils.hexValue(parseInt(gas)) }),
+      ...(FORKED ? {} : { gas: ethers.utils.hexValue(parseInt(gas)) }),
     }
     const receipt = await this.provider.getSigner(0).sendTransaction(parameters)
     return receipt

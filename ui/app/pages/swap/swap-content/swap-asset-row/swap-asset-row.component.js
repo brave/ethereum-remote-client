@@ -9,22 +9,18 @@ import { calcTokenAmount } from '../../../../helpers/utils/token-util'
 
 import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
-
-const AssetPropTypes = PropTypes.shape({
-  address: PropTypes.string,
-  decimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  symbol: PropTypes.string,
-})
+import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
     assets: PropTypes.arrayOf(AssetPropTypes).isRequired,
     accounts: PropTypes.object.isRequired,
     selectedAddress: PropTypes.string.isRequired,
-    fromAsset: AssetPropTypes.isRequired,
-    toAsset: AssetPropTypes.isRequired,
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
     setFromAsset: PropTypes.func.isRequired,
     setToAsset: PropTypes.func.isRequired,
+    quote: QuotePropTypes,
   }
 
   static contextTypes = {

@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import { Tooltip as ReactTippy } from 'react-tippy'
 
-const countdownLimit = 40
+import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 
-const AssetPropTypes = PropTypes.shape({
-  address: PropTypes.string,
-  decimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  symbol: PropTypes.string,
-})
+// Refresh Swap quote every 40 seconds.
+const countdownLimit = 40
 
 export default class SwapQuote extends Component {
   static propTypes = {
     fromAsset: AssetPropTypes,
     toAsset: AssetPropTypes,
     amount: PropTypes.string,
-    quote: PropTypes.object,
-    getSwapQuote: PropTypes.func.isRequired,
+    quote: QuotePropTypes,
+    fetchSwapQuote: PropTypes.func.isRequired,
   }
 
   static contextTypes = {

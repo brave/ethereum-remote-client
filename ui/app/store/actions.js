@@ -243,7 +243,6 @@ export function fetchSwapQuote (fromAsset, toAsset, amount) {
       dispatch(displayWarning(error.message))
       throw error
     }
-    console.log('Retrieved Swap quote:', quote)
     dispatch(updateSwapQuote(quote))
   }
 }

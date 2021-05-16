@@ -11,7 +11,6 @@ import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 
-
 export default class SwapAssetRow extends Component {
   static propTypes = {
     assets: PropTypes.arrayOf(AssetPropTypes).isRequired,
@@ -19,9 +18,10 @@ export default class SwapAssetRow extends Component {
     selectedAddress: PropTypes.string.isRequired,
     fromAsset: AssetPropTypes,
     toAsset: AssetPropTypes,
+    quote: QuotePropTypes,
     setFromAsset: PropTypes.func.isRequired,
     setToAsset: PropTypes.func.isRequired,
-    quote: QuotePropTypes,
+    refreshQuote: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -43,7 +43,7 @@ export default class SwapAssetRow extends Component {
   closeDropdownFrom = () => this.setState({ isShowingDropdownFrom: false })
 
   selectFromAsset = (asset) => {
-    const { setFromAsset, setToAsset, toAsset } = this.props
+    const { setFromAsset, setToAsset, toAsset, refreshQuote } = this.props
 
     this.setState(
       {
@@ -54,7 +54,7 @@ export default class SwapAssetRow extends Component {
           eventOpts: {
             category: 'Swap',
             action: 'Swap Screen',
-            name: 'User clicks "Assets" dropdown',
+            name: 'User clicks "From" dropdown',
           },
           customVariables: {
             assetSelected: asset?.symbol,
@@ -62,16 +62,15 @@ export default class SwapAssetRow extends Component {
         })
 
         setFromAsset(asset)
-        toAsset &&
-          toAsset.address === asset.address &&
-          toAsset.symbol === asset.symbol &&
-          setToAsset()
+        toAsset?.address === asset?.address && toAsset?.symbol === asset?.symbol
+          ? setToAsset()
+          : refreshQuote(asset, toAsset)
       },
     )
   }
 
   selectToAsset = (asset) => {
-    const { setFromAsset, setToAsset, fromAsset } = this.props
+    const { setFromAsset, setToAsset, fromAsset, refreshQuote } = this.props
 
     this.setState(
       {
@@ -82,7 +81,7 @@ export default class SwapAssetRow extends Component {
           eventOpts: {
             category: 'Swap',
             action: 'Swap Screen',
-            name: 'User clicks "Assets" dropdown',
+            name: 'User clicks "To" dropdown',
           },
           customVariables: {
             assetSelected: asset?.symbol,
@@ -90,17 +89,16 @@ export default class SwapAssetRow extends Component {
         })
 
         setToAsset(asset)
-        fromAsset &&
-          fromAsset.address === asset.address &&
-          fromAsset.symbol === asset.symbol &&
-          setFromAsset()
+        fromAsset?.address === asset?.address && fromAsset?.symbol === asset?.symbol
+          ? setFromAsset()
+          : refreshQuote(fromAsset, asset)
       },
     )
   }
 
   render () {
     const { t } = this.context
-    const { fromAsset, assets } = this.props
+    const { fromAsset } = this.props
 
     return (
       <div>
@@ -111,7 +109,7 @@ export default class SwapAssetRow extends Component {
         <div className="swap-v2__form-row">
           <div className="swap-v2__asset-dropdown">
             {this.renderSwapFromAsset()}
-            {assets.length > 0 && this.renderFromAssetDropdown()}
+            {this.renderFromAssetDropdown()}
           </div>
           <div
             className={
@@ -140,11 +138,9 @@ export default class SwapAssetRow extends Component {
         <div className="swap-v2__form-row">
           <div className="swap-v2__asset-dropdown">
             {this.renderSwapToAsset()}
-            {assets.length > 0 && this.renderToAssetDropdown()}
+            {this.renderToAssetDropdown()}
           </div>
-          <div className="swap-v2__to-amount-box">
-            {this.renderToAmount()}
-          </div>
+          <div className="swap-v2__to-amount-box">{this.renderToAmount()}</div>
         </div>
       </div>
     )
@@ -225,7 +221,9 @@ export default class SwapAssetRow extends Component {
             onClick={this.closeDropdownFrom}
           />
           <div className="swap-v2__asset-dropdown__list">
-            {this.props.assets.map((asset) => this.renderAsset(asset, this.selectFromAsset, true))}
+            {this.props.assets.map((asset) =>
+              this.renderAsset(asset, this.selectFromAsset, true),
+            )}
           </div>
         </div>
       )
@@ -241,7 +239,9 @@ export default class SwapAssetRow extends Component {
             onClick={this.closeDropdownTo}
           />
           <div className="swap-v2__asset-dropdown__list">
-            {this.props.assets.map((asset) => this.renderAsset(asset, this.selectToAsset, true))}
+            {this.props.assets.map((asset) =>
+              this.renderAsset(asset, this.selectToAsset, true),
+            )}
           </div>
         </div>
       )
@@ -256,7 +256,7 @@ export default class SwapAssetRow extends Component {
       <div
         key={address || symbol}
         className="swap-v2__asset-dropdown__asset"
-        onClick={() => onSelectAsset(asset)}
+        onClick={() => insideDropdown && onSelectAsset(asset)}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
           <Identicon address={address} diameter={36} />

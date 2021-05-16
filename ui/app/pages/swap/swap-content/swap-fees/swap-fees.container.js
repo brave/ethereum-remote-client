@@ -5,7 +5,6 @@ import {
   getSwapQuote,
   getSwapFromAsset,
   getSwapToAsset,
-  getSwapAmount,
   getSwapQuoteGasPrice,
   getSwapQuoteGas,
 } from '../../../../selectors'
@@ -17,7 +16,6 @@ const mapStateToProps = (state) => {
   return {
     fromAsset: getSwapFromAsset(state),
     toAsset: getSwapToAsset(state),
-    amount: getSwapAmount(state),
     quote: getSwapQuote(state),
     gasLimit: getSwapQuoteGas(state),
     estimatedGasPrice: getSwapQuoteGasPrice(state),

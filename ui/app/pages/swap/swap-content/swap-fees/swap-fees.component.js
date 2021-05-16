@@ -4,10 +4,13 @@ import PropTypes from 'prop-types'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import { PRIMARY } from '../../../../helpers/constants/common'
 import { conversionUtil } from '../../../../helpers/utils/conversion-util'
+import { AssetPropTypes } from '../../prop-types'
 
 
 export default class SwapFees extends Component {
   static propTypes = {
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
     gasLimit: PropTypes.string,
     estimatedGasPrice: PropTypes.string,
     currentCurrency: PropTypes.string,
@@ -45,8 +48,9 @@ export default class SwapFees extends Component {
 
   render () {
     const estimatedGasCost = this.getEstimatedGasCost()
+    const { fromAsset, toAsset } = this.props
 
-    return (
+    return fromAsset && toAsset && estimatedGasCost ? (
       <div className="swap-v2__form-row-centered">
         <div className="fees">
           <table>
@@ -54,15 +58,13 @@ export default class SwapFees extends Component {
               <tr>
                 <td>Estimated network fee</td>
                 <td>
-                  {estimatedGasCost && (
-                    <UserPreferencedCurrencyDisplay
-                      value={estimatedGasCost}
-                      type={PRIMARY}
-                    />
-                  )}
+                  <UserPreferencedCurrencyDisplay
+                    value={estimatedGasCost}
+                    type={PRIMARY}
+                  />
                 </td>
                 <td>
-                  {estimatedGasCost && this.weiHexToFiat(estimatedGasCost)}
+                  {this.weiHexToFiat(estimatedGasCost)}
                 </td>
               </tr>
 
@@ -78,6 +80,6 @@ export default class SwapFees extends Component {
           </table>
         </div>
       </div>
-    )
+    ) : null
   }
 }

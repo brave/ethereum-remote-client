@@ -4,6 +4,7 @@ import { debounce } from 'lodash'
 
 import UserPreferencedCurrencyInput from '../../../../components/app/user-preferenced-currency-input'
 import UserPreferencedTokenInput from '../../../../components/app/user-preferenced-token-input'
+import { AssetPropTypes } from '../../prop-types'
 
 export default class SwapAmountRow extends Component {
 
@@ -13,7 +14,8 @@ export default class SwapAmountRow extends Component {
     conversionRate: PropTypes.number,
     gasTotal: PropTypes.string,
     primaryCurrency: PropTypes.string,
-    fromAsset: PropTypes.object,
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
     setMaxModeTo: PropTypes.func,
     tokenFromBalance: PropTypes.string,
     tokenToBalance: PropTypes.string,
@@ -22,6 +24,7 @@ export default class SwapAmountRow extends Component {
     updateSwapAmountError: PropTypes.func,
     updateGas: PropTypes.func,
     maxModeOn: PropTypes.bool,
+    refreshQuote: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -98,9 +101,15 @@ export default class SwapAmountRow extends Component {
   }
 
   handleChange = (newAmount) => {
-    // this.validateAmount(newAmount)
+    const { fromAsset, toAsset, refreshQuote } = this.props
+
+    /**
+     * TODO: enable amount validation.
+     * this.validateAmount(newAmount)
+     **/
     this.updateGas(newAmount)
     this.updateAmount(newAmount)
+    refreshQuote(fromAsset, toAsset, newAmount)
   }
 
   render () {

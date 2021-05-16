@@ -98,7 +98,7 @@ export default class SwapAssetRow extends Component {
 
   render () {
     const { t } = this.context
-    const { fromAsset } = this.props
+    const { fromAsset, refreshQuote } = this.props
 
     return (
       <div>
@@ -116,7 +116,7 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow /> {/** TODO (@onyb): add updateGas prop */}
+            <SwapAmountRow refreshQuote={refreshQuote} /> {/** TODO (@onyb): add updateGas prop */}
           </div>
         </div>
 

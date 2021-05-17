@@ -2,8 +2,9 @@ import PropTypes from 'prop-types'
 
 export const AssetPropTypes = PropTypes.shape({
   address: PropTypes.string,
-  decimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  decimals: PropTypes.number,
   symbol: PropTypes.string,
+  name: PropTypes.string.isRequired,
 })
 
 export const QuotePropTypes = PropTypes.shape({

@@ -1,5 +1,6 @@
 import contractMap from 'eth-contract-metadata'
 import ethUtil from 'ethereumjs-util'
+import uniqBy from 'lodash/uniqBy'
 
 /**
  * Brave Swap Asset Registry
@@ -8,7 +9,9 @@ import ethUtil from 'ethereumjs-util'
  * via the 0x Swap API. We filter out tokens whose EIP55-formatted
  * contract address isn't listed in the eth-contract-metadata package.
  *
- * The registry is intentionally static to prevent MITM attacks.
+ * CAUTION:
+ *  - The registry is intentionally static to prevent MITM attacks.
+ *  - The 0x API response may have duplicate tokens.
  *
  * Update instructions:
  * 1. Obtain the latest list of tokens from the 0x Swap API:
@@ -644,9 +647,12 @@ const swapTokens0x = [
   },
 ]
 
-export const assets = swapTokens0x
-  .map((asset) => ({
-    ...asset,
-    address: asset.symbol === 'ETH' ? '' : ethUtil.toChecksumAddress(asset.address),
-  }))
-  .filter(({ symbol, address }) => symbol === 'ETH' || address in contractMap)
+export const assets = uniqBy(
+  swapTokens0x
+    .map((asset) => ({
+      ...asset,
+      address: asset.symbol === 'ETH' ? '' : ethUtil.toChecksumAddress(asset.address),
+    }))
+    .filter(({ symbol, address }) => symbol === 'ETH' || address in contractMap),
+  (e) => e.address,
+)

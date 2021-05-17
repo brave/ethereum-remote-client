@@ -46,36 +46,11 @@ export default function reduceMetamask (state = {}, action) {
       to: '',
       quote: null,
       status: '',
-      assets: [
-        {
-          address: '',
-          decimals: 18,
-          symbol: 'ETH',
-        },
-        {
-          address: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
-          decimals: 18,
-          symbol: 'AAVE',
-        }, {
-          address: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
-          decimals: 18,
-          symbol: 'YFI',
-        },
-        {
-          address: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-          decimals: 18,
-          symbol: 'COMP',
-        },
-        {
-          address: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-          decimals: 18,
-          symbol: 'ZRX',
-        },
-      ],
       fromAsset: {
-        address: '',
-        decimals: 18,
-        symbol: 'ETH',
+        'name': 'Ether',
+        'symbol': 'ETH',
+        'address': '',
+        'decimals': 18,
       },
       toAsset: null,
       amount: '0',

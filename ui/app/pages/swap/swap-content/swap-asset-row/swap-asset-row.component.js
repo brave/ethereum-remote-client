@@ -10,10 +10,10 @@ import { calcTokenAmount } from '../../../../helpers/utils/token-util'
 import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
+import { assets } from '../../asset-registry'
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
-    assets: PropTypes.arrayOf(AssetPropTypes).isRequired,
     accounts: PropTypes.object.isRequired,
     selectedAddress: PropTypes.string.isRequired,
     fromAsset: AssetPropTypes,
@@ -221,7 +221,7 @@ export default class SwapAssetRow extends Component {
             onClick={this.closeDropdownFrom}
           />
           <div className="swap-v2__asset-dropdown__list">
-            {this.props.assets.map((asset) =>
+            {assets.map((asset) =>
               this.renderAsset(asset, this.selectFromAsset, true),
             )}
           </div>
@@ -239,7 +239,7 @@ export default class SwapAssetRow extends Component {
             onClick={this.closeDropdownTo}
           />
           <div className="swap-v2__asset-dropdown__list">
-            {this.props.assets.map((asset) =>
+            {assets.map((asset) =>
               this.renderAsset(asset, this.selectToAsset, true),
             )}
           </div>

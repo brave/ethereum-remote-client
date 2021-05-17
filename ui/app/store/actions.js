@@ -258,7 +258,6 @@ export function fillOrder (quote) {
       dispatch(displayWarning(error.message))
       throw error
     }
-    console.log('The response in  fillOuote is', newState)
     // dispatch(updateSwapQuote(newState.quotes))
     return newState
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { debounce } from 'lodash'
+
 import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
 import CurrencyDisplay from '../../../../components/ui/currency-display'
@@ -96,9 +98,11 @@ export default class SwapAssetRow extends Component {
     )
   }
 
+  debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
+
   render () {
     const { t } = this.context
-    const { fromAsset, refreshQuote } = this.props
+    const { fromAsset } = this.props
 
     return (
       <div>
@@ -116,7 +120,7 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={refreshQuote} /> {/** TODO (@onyb): add updateGas prop */}
+            <SwapAmountRow refreshQuote={ this.debouncedRefreshQuote } /> {/** TODO (@onyb): add updateGas prop */}
           </div>
         </div>
 

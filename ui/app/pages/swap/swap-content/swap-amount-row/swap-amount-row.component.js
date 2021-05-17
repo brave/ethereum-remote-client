@@ -35,7 +35,6 @@ export default class SwapAmountRow extends Component {
   componentDidUpdate (prevProps) {
     const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
     const { maxModeOn, amount, gasTotal, fromAsset } = this.props
-    console.log(`The Amount in swap amount component is :  ${amount})`)
 
     if (maxModeOn && fromAsset && !prevMaxModeOn) {
       this.updateGas(amount)

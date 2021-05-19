@@ -1,132 +1,90 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import PageContainerContent from '../../../components/ui/page-container/page-container-content.component'
-import SwapAmountRow from './swap-amount-row'
-import SwapGasRow from './swap-gas-row'
-import SwapHexDataRow from './swap-hex-data-row'
-import SwapAssetRow from './swap-asset-row'
-import Dialog from '../../../components/ui/dialog'
-import Button from '../../../components/ui/button'
-import { ethers } from 'ethers'
 
+import PageContainerContent from '../../../components/ui/page-container/page-container-content.component'
+
+import SwapAssetRow from './swap-asset-row'
+import SwapQuote from './swap-quote'
+import SwapFees from './swap-fees'
+import { AssetPropTypes } from '../prop-types'
+
+// Refresh Swap quote every 40 seconds.
+const countdownLimit = 40
 
 export default class SwapContent extends Component {
-  static contextTypes = {
-    t: PropTypes.func,
-  }
-
   static propTypes = {
-    updateGas: PropTypes.func,
-    // showAddToAddressBookModal: PropTypes.func,
-    showHexData: PropTypes.bool,
-    // contact: PropTypes.object,
-    // isOwnedAccount: PropTypes.bool,
-    // toToken: PropTypes.string,
-    // toFrom: PropTypes.string,
-    getSwapQuotes: PropTypes.func,
-    updateSwapQuote: PropTypes.func,
-    isContractAddress: PropTypes.bool,
-    sellAmount: PropTypes.string,
-    buyToken: PropTypes.string,
-    // sellToken: PropTypes.string,
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
+    amount: PropTypes.string,
+    fetchSwapQuote: PropTypes.func.isRequired,
   }
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      quoteResult: undefined,
-      updatedQuote: undefined,
-      quoteStatus: undefined,
+  state = { seconds: countdownLimit }
+
+  componentDidMount () {
+    this.timer = null
+
+    // Start countdown on component initialization.
+    this.startTimer()
+  }
+
+  componentWillUnmount () {
+    this.endTimer()
+  }
+
+  startTimer = () => {
+    if (this.timer === null) {
+      this.setState({ seconds: countdownLimit })
+      this.timer = setInterval(this.clock, 1000)
     }
   }
 
-  updateGas = (updateData) => this.props.updateGas(updateData)
-
-  // updateQuote = (quote) => this.props.updateSwapQuote(quote)
-
-  swapQuotes = () => {
-    const { sellAmount, buyToken, getSwapQuotes } = this.props
-    getSwapQuotes().then((data) => {
-      this.setState({ quoteResult: data.quotes, quoteStatus: 'QUOTED' })
-    })
+  endTimer = () => {
+    clearInterval(this.timer)
+    this.timer = null
   }
 
-  fillOrder = () => {
-    const { quote, fillOrder } = this.props
-    fillOrder().then((data) => {
-      console.log('This Is The Quote', data)
-      this.setState({ quoteStatus: data })
-    })
+  refreshQuote = (
+    fromAsset,
+    toAsset,
+    amount = this.props.amount,
+    showLoading = true,
+  ) => {
+    const { fetchSwapQuote } = this.props
+    this.endTimer()
 
+    // Fetch live Swap quote if all inputs are valid.
+    fromAsset &&
+      toAsset &&
+      amount !== '0' &&
+      fetchSwapQuote(fromAsset, toAsset, amount, showLoading)
+
+    this.startTimer()
+  }
+
+  clock = () => {
+    // Remove one second, set state so a re-render happens.
+    const seconds = this.state.seconds - 1
+    this.setState({ seconds })
+
+    // Check if we're at zero.
+    if (seconds < 0) {
+      const { fromAsset, toAsset, amount } = this.props
+      this.refreshQuote(fromAsset, toAsset, amount, false)
+    }
   }
 
   render () {
+    const { seconds } = this.state
+
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
-          {this.maybeRenderContractWarning()}
-          <SwapAssetRow />
-          <br></br>
-          <Button onClick={() => this.swapQuotes()}> Get Quote</Button>
-          <br></br>
-          {this.renderQuote()}
-          <SwapGasRow />
-          {
-            this.props.showHexData && (
-              <SwapHexDataRow
-                updateGas={this.updateGas}
-              />
-            )
-          }
+          <SwapAssetRow refreshQuote={this.refreshQuote} />
+          <SwapQuote seconds={seconds} />
+          <SwapFees />
         </div>
       </PageContainerContent>
-    )
-  }
-
-  renderQuote () {
-    const { sellAmount } = this.props
-
-    if (sellAmount === '0') {
-      return
-    }
-    // this.swapQuotes()
-    return (
-      <>
-        {this.state.quoteResult !== undefined ? (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-            <span>Sell Amount: {this.state.quoteResult.sellAmount}</span>
-            <span>Buy Amount: {this.state.quoteResult.buyAmount}</span>
-            <span>Rate: {this.state.quoteResult.buyTokenToEthRate}</span>
-            <span>Estimated Gas: {this.state.quoteResult.estimatedGas}</span>
-            <span>Gas: {this.state.quoteResult.gas}</span>
-            <span>Gas Price: {this.state.quoteResult.gasPrice}</span>
-            <span>Guaranteed Price: {this.state.quoteResult.guaranteedPrice}</span>
-          </div>
-        ) : (
-          <div>Loading....</div>
-        )}
-      </>
-    )
-  }
-
-  maybeRenderContractWarning () {
-    const { t } = this.context
-    const { isContractAddress } = this.props
-
-    if (!isContractAddress) {
-      return
-    }
-
-    return (
-      <div className="contract-error-dialog">
-        <Dialog
-          type="error"
-          className="error__dialog"
-          onClick={undefined}
-        >
-          {t('contractErrorMessage')}
-        </Dialog>
-      </div>
     )
   }
 }

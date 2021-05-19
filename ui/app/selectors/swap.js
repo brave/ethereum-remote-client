@@ -25,11 +25,11 @@ export function getSwapCurrentNetwork (state) {
 }
 
 export function getSwapGasLimit (state) {
-  return state.metamask.swap.quotes.gas || '0'
+  return state.metamask.swap.quote?.gas || '0'
 }
 
 export function getSwapGasPrice (state) {
-  return state.metamask.swap.quotes.gasPrice || getAveragePriceEstimateInHexWEI(state)
+  return state.metamask.swap.quote?.gasPrice || getAveragePriceEstimateInHexWEI(state)
 }
 
 export function getSwapGasTotal (state) {
@@ -37,20 +37,20 @@ export function getSwapGasTotal (state) {
 }
 
 export function getSwapPrimaryCurrency (state) {
-  const swapFromToken = getSwapFromToken(state)
-  return swapFromToken?.symbol
+  const swapFromAsset = getSwapFromAsset(state)
+  return swapFromAsset?.symbol
 }
 
 export function getSwapToken (state) {
   return state.metamask.swap.token
 }
 
-export function getSwapFromToken (state) {
-  return state.metamask.swap.tokenFrom
+export function getSwapFromAsset (state) {
+  return state.metamask.swap.fromAsset
 }
 
-export function getSwapToToken (state) {
-  return state.metamask.swap.tokenTo
+export function getSwapToAsset (state) {
+  return state.metamask.swap.toAsset
 }
 
 export function getSwapAmount (state) {
@@ -58,28 +58,28 @@ export function getSwapAmount (state) {
 }
 
 export function getSwapQuote (state) {
-  return state.metamask.swap.quotes
+  return state.metamask.swap.quote
 }
 
 export function getSwapQuoteData (state) {
-  return state.metamask.swap.quotes.data
+  return state.metamask.swap.quote?.data
 }
 
 export function getSwapQuoteTo (state) {
-  return state.metamask.swap.quotes.to
+  return state.metamask.swap.quote?.to
 }
 
 export function getSwapQuoteValue (state) {
-  return state.metamask.swap.quotes.value
+  return state.metamask.swap.quote?.value
 }
 
 
 export function getSwapQuoteGasPrice (state) {
-  return state.metamask.swap.quotes.gasPrice
+  return state.metamask.swap.quote?.gasPrice
 }
 
 export function getSwapQuoteGas (state) {
-  return state.metamask.swap.quotes.gas
+  return state.metamask.swap.quote?.gas
 }
 
 
@@ -201,19 +201,19 @@ export function getSwapTokenAddress (state) {
 }
 
 export function getSwapFromTokenAddress (state) {
-  return getSwapFromToken(state)?.address
+  return getSwapFromAsset(state)?.address
 }
 
-export function getSwapFromTokenSymbol (state) {
-  return getSwapFromToken(state)?.symbol
+export function getSwapFromAssetSymbol (state) {
+  return getSwapFromAsset(state)?.symbol
 }
 
 export function getSwapToTokenAddress (state) {
-  return getSwapToToken(state)?.address
+  return getSwapToAsset(state)?.address
 }
 
-export function getSwapToTokenSymbol (state) {
-  return getSwapToToken(state)?.symbol
+export function getSwapToAssetSymbol (state) {
+  return getSwapToAsset(state)?.symbol
 }
 
 export function getSwapIsContractAddress (state) {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
-import SwapRowWrapper from '../swap-row-wrapper'
-import AmountMaxButton from './amount-max-button'
+
 import UserPreferencedCurrencyInput from '../../../../components/app/user-preferenced-currency-input'
 import UserPreferencedTokenInput from '../../../../components/app/user-preferenced-token-input'
+import { AssetPropTypes } from '../../prop-types'
 
 export default class SwapAmountRow extends Component {
 
@@ -14,7 +14,8 @@ export default class SwapAmountRow extends Component {
     conversionRate: PropTypes.number,
     gasTotal: PropTypes.string,
     primaryCurrency: PropTypes.string,
-    swapFromToken: PropTypes.object,
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
     setMaxModeTo: PropTypes.func,
     tokenFromBalance: PropTypes.string,
     tokenToBalance: PropTypes.string,
@@ -23,6 +24,7 @@ export default class SwapAmountRow extends Component {
     updateSwapAmountError: PropTypes.func,
     updateGas: PropTypes.func,
     maxModeOn: PropTypes.bool,
+    refreshQuote: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -32,10 +34,9 @@ export default class SwapAmountRow extends Component {
 
   componentDidUpdate (prevProps) {
     const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
-    const { maxModeOn, amount, gasTotal, swapFromToken } = this.props
-    console.log(`The Amount in swap amount component is :  ${amount})`)
+    const { maxModeOn, amount, gasTotal, fromAsset } = this.props
 
-    if (maxModeOn && swapFromToken && !prevMaxModeOn) {
+    if (maxModeOn && fromAsset && !prevMaxModeOn) {
       this.updateGas(amount)
     }
 
@@ -52,7 +53,7 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapFromToken,
+      fromAsset,
       tokenToBalance,
       tokenFromBalance,
       updateGasFeeError,
@@ -65,18 +66,18 @@ export default class SwapAmountRow extends Component {
       conversionRate,
       gasTotal,
       primaryCurrency,
-      swapFromToken,
+      fromAsset,
       tokenFromBalance,
       tokenToBalance,
     })
 
-    if (swapFromToken) {
+    if (fromAsset) {
       updateGasFeeError({
         balance,
         conversionRate,
         gasTotal,
         primaryCurrency,
-        swapFromToken,
+        fromAsset,
         tokenFromBalance,
         tokenToBalance,
       })
@@ -91,27 +92,38 @@ export default class SwapAmountRow extends Component {
   }
 
   updateGas (amount) {
-    const { swapFromToken, updateGas } = this.props
+    const { fromAsset, updateGas } = this.props
 
-    if (swapFromToken) {
+    if (fromAsset) {
       updateGas({ amount })
     }
   }
 
   handleChange = (newAmount) => {
-    // this.validateAmount(newAmount)
+    const { fromAsset, toAsset, refreshQuote } = this.props
+
+    /**
+     * TODO: enable amount validation.
+     * this.validateAmount(newAmount)
+     **/
     this.updateGas(newAmount)
     this.updateAmount(newAmount)
+    refreshQuote(fromAsset, toAsset, newAmount)
   }
 
   render () {
-    const { amount, swapFromToken } = this.props
+    const { amount, fromAsset } = this.props
 
-    return swapFromToken ?
+    // Handle case when the From asset field is unselected.
+    if (!fromAsset) {
+      return null
+    }
+
+    return fromAsset.address ?
       (
         <UserPreferencedTokenInput
           onChange={this.handleChange}
-          token={swapFromToken}
+          token={fromAsset}
           value={amount}
         />
       )

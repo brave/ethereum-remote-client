@@ -1,6 +1,4 @@
-import ethAbi from 'ethereumjs-abi'
 import ethUtil from 'ethereumjs-util'
-import { TOKEN_TRANSFER_FUNCTION_SIGNATURE } from '../swap.constants'
 
 export function addHexPrefixToObjectValues (obj) {
   return Object.keys(obj).reduce((newObj, key) => {
@@ -8,7 +6,7 @@ export function addHexPrefixToObjectValues (obj) {
   }, {})
 }
 
-export function constructTxParams ({ swapFromToken, data, to, amount, from, gas, gasPrice }) {
+export function constructTxParams ({ fromAsset, data, to, amount, from, gas, gasPrice }) {
   const txParams = {
     data,
     from,
@@ -17,61 +15,12 @@ export function constructTxParams ({ swapFromToken, data, to, amount, from, gas,
     gasPrice,
   }
 
-  if (!swapFromToken) {
+  if (!fromAsset.address) {
     txParams.value = amount
     txParams.to = to
   }
 
   return addHexPrefixToObjectValues(txParams)
-}
-
-export function constructUpdatedTx ({
-  amount,
-  data,
-  editingTransactionId,
-  from,
-  gas,
-  gasPrice,
-  swapFromToken,
-  to,
-  unapprovedTxs,
-}) {
-  const unapprovedTx = unapprovedTxs[editingTransactionId]
-  const txParamsData = unapprovedTx.txParams.data ? unapprovedTx.txParams.data : data
-
-  const editingTx = {
-    ...unapprovedTx,
-    txParams: Object.assign(
-      unapprovedTx.txParams,
-      addHexPrefixToObjectValues({
-        data: txParamsData,
-        to,
-        from,
-        gas,
-        gasPrice,
-        value: amount,
-      }),
-    ),
-  }
-
-  if (swapFromToken) {
-    const data = TOKEN_TRANSFER_FUNCTION_SIGNATURE + Array.prototype.map.call(
-      ethAbi.rawEncode(['address', 'uint256'], [to, ethUtil.addHexPrefix(amount)]),
-      (x) => ('00' + x.toString(16)).slice(-2),
-    ).join('')
-
-    Object.assign(editingTx.txParams, addHexPrefixToObjectValues({
-      value: '0',
-      to: swapFromToken.address,
-      data,
-    }))
-  }
-
-  if (typeof editingTx.txParams.data === 'undefined') {
-    delete editingTx.txParams.data
-  }
-
-  return editingTx
 }
 
 export function addressIsNew (toAccounts, newAddress) {

@@ -1,51 +1,39 @@
 import { connect } from 'react-redux'
 import SwapContent from './swap-content.component'
+
 import {
-  getSwapTo,
-  accountsWithSwapEtherInfoSelector,
-  getAddressBookEntry,
-  getIsContractAddress,
+  displayWarning,
+  fetchSwapQuote,
+  hideLoadingIndication,
+  showLoadingIndication,
+} from '../../../store/actions'
+import {
   getSwapAmount,
-  getSwapToTokenSymbol,
-  getSwapFromTokenSymbol,
+  getSwapFromAsset,
   getSwapQuote,
+  getSwapToAsset,
 } from '../../../selectors'
 
-import * as actions from '../../../store/actions'
+const mapStateToProps = (state) => ({
+  fromAsset: getSwapFromAsset(state),
+  toAsset: getSwapToAsset(state),
+  amount: getSwapAmount(state),
+  quote: getSwapQuote(state),
+})
 
-const mapStateToProps = (state) => {
-  const ownedAccounts = accountsWithSwapEtherInfoSelector(state)
-  const to = getSwapTo(state)
-  return {
-    isOwnedAccount: !!ownedAccounts.find(({ address }) => address.toLowerCase() === to.toLowerCase()),
-    contact: getAddressBookEntry(state, to),
-    to,
-    isContractAddress: getIsContractAddress(state),
-    buyToken: getSwapToTokenSymbol(state),
-    sellToken: getSwapFromTokenSymbol(state),
-    sellAmount: getSwapAmount(state),
-    quote: getSwapQuote(state),
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  fetchSwapQuote: async (fromAsset, toAsset, amount, showLoading) => {
+    showLoading && (await dispatch(showLoadingIndication()))
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getSwapQuotes: (sellAmount, buyToken) => dispatch(actions.getQuote(parseInt(sellAmount, 16), buyToken, 'ETH')),
-    updateSwapQuote: (quote) => dispatch(actions.updateSwapQuote(quote)),
-    fillOrder : (quote) => dispatch(actions.fillOrder(quote))
-  }
-}
+    try {
+      await dispatch(fetchSwapQuote(fromAsset, toAsset, amount))
+    } catch (err) {
+      dispatch(displayWarning(err.message))
+      throw err
+    } finally {
+      await dispatch(hideLoadingIndication())
+    }
+  },
+})
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const { to, sellAmount, buyToken, quote, ...restStateProps } = stateProps
-  return {
-    ...stateProps,
-    ...ownProps,
-    ...restStateProps,
-    getSwapQuotes: () => dispatchProps.getSwapQuotes(sellAmount, buyToken),
-    updateSwapQuote: () => dispatchProps.updateSwapQuote(quote),
-    fillOrder: () => dispatchProps.fillOrder(quote)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(SwapContent)
+export default connect(mapStateToProps, mapDispatchToProps)(SwapContent)

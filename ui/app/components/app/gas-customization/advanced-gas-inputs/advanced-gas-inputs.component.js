@@ -104,16 +104,16 @@ export default class AdvancedGasInputs extends Component {
 
   renderGasInput ({ value, onChange, errorComponent, errorType, infoOnClick, label }) {
     return (
-      <div className="hidden">
-        <div className="hidden">
-          { label }
-          <i className="hidden" onClick={infoOnClick} />
+      <div className="advanced-gas-inputs__gas-edit-row">
+        <div className="advanced-gas-inputs__gas-edit-row__label">
+          {label}
+          <i className="fa fa-info-circle" onClick={infoOnClick}/>
         </div>
-        <div className="hidden">
+        <div className="advanced-gas-inputs__gas-edit-row__input-wrapper">
           <input
-            className={classnames('hidden', {
-              'hidden': errorType === 'error',
-              'hidden': errorType === 'warning',
+            className={classnames('advanced-gas-inputs__gas-edit-row__input', {
+              'advanced-gas-inputs__gas-edit-row__input--error': errorType === 'error',
+              'advanced-gas-inputs__gas-edit-row__input--warning': errorType === 'warning',
             })}
             type="number"
             min="0"
@@ -121,25 +121,25 @@ export default class AdvancedGasInputs extends Component {
             onChange={onChange}
           />
           <div
-            className={classnames('hidden', {
-              'hidden': errorType === 'error',
-              'hidden': errorType === 'warning',
+            className={classnames('advanced-gas-inputs__gas-edit-row__input-arrows', {
+              'advanced-gas-inputs__gas-edit-row__input--error': errorType === 'error',
+              'advanced-gas-inputs__gas-edit-row__input--warning': errorType === 'warning',
             })}
           >
             <div
-              className="hidden"
+              className="advanced-gas-inputs__gas-edit-row__input-arrows__i-wrap"
               onClick={() => onChange({ target: { value: value + 1 } })}
             >
-              <i className="hidden" />
+              <i className="fa fa-sm fa-angle-up"/>
             </div>
             <div
-              className="hidden"
+              className="advanced-gas-inputs__gas-edit-row__input-arrows__i-wrap"
               onClick={() => onChange({ target: { value: Math.max(value - 1, 0) } })}
             >
-              <i className="hidden" />
+              <i className="fa fa-sm fa-angle-down"/>
             </div>
           </div>
-          { errorComponent }
+          {errorComponent}
         </div>
       </div>
     )
@@ -163,8 +163,8 @@ export default class AdvancedGasInputs extends Component {
       errorType: gasPriceErrorType,
     } = this.gasPriceError({ insufficientBalance, customPriceIsSafe, isSpeedUp, gasPrice })
     const gasPriceErrorComponent = gasPriceErrorType ? (
-      <div className={"hidden"}>
-        { gasPriceErrorText }
+      <div className={`advanced-gas-inputs__gas-edit-row__${gasPriceErrorType}-text`}>
+        {gasPriceErrorText}
       </div>
     ) : null
 
@@ -173,29 +173,29 @@ export default class AdvancedGasInputs extends Component {
       errorType: gasLimitErrorType,
     } = this.gasLimitError({ insufficientBalance, gasLimit })
     const gasLimitErrorComponent = gasLimitErrorType ? (
-      <div className={"hidden"}>
-        { gasLimitErrorText }
+      <div className={`advanced-gas-inputs__gas-edit-row__${gasLimitErrorType}-text`}>
+        {gasLimitErrorText}
       </div>
     ) : null
 
     return (
-      <div className="hidden">
-        {/* { this.renderGasInput({
+      <div className="advanced-gas-inputs__gas-edit-rows">
+        {this.renderGasInput({
           label: this.context.t('gasPrice'),
           value: this.state.gasPrice,
           onChange: this.onChangeGasPrice,
           errorComponent: gasPriceErrorComponent,
           errorType: gasPriceErrorType,
           infoOnClick: showGasPriceInfoModal,
-        }) }
-        { this.renderGasInput({
+        })}
+        {this.renderGasInput({
           label: this.context.t('gasLimit'),
           value: this.state.gasLimit,
           onChange: this.onChangeGasLimit,
           errorComponent: gasLimitErrorComponent,
           errorType: gasLimitErrorType,
-          infoOnClick: showGasLimitInfoModal, */}
-        {/* }) } */}
+          infoOnClick: showGasLimitInfoModal,
+        })}
       </div>
     )
   }

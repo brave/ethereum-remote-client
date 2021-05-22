@@ -34,7 +34,7 @@ export default function AmountMaxButton ({
 
   // Do not display the Max button for unselected state.
   return fromAsset ? (
-    <span className="swap-v2__max-amount-button" onClick={onMaxClick}>
+    <span className="swap-v2__form-row-header-right" onClick={onMaxClick}>
       {t('max')}
     </span>
   ) : null

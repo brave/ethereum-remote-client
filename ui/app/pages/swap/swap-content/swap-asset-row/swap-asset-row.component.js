@@ -110,7 +110,7 @@ export default class SwapAssetRow extends Component {
     return (
       <div>
         <div className="swap-v2__form-row">
-          <span className="swap-v2__form-row-label">{`${t('from')}`}</span>
+          <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
           <AmountMaxButton />
         </div>
 
@@ -140,7 +140,7 @@ export default class SwapAssetRow extends Component {
         )}
 
         <div className="swap-v2__form-row">
-          <span className="swap-v2__form-row-label">{`${t('to')}`}</span>
+          <span className="swap-v2__form-row-header-left">{`${t('to')}`}</span>
         </div>
 
         <div className="swap-v2__form-row">

@@ -556,11 +556,11 @@
     justify-content: space-between;
   }
 
-  &__form-row-label {
+  &__form-row-header-left {
     font-weight: 700;
   }
 
-  &__max-amount-button {
+  &__form-row-header-right {
     float: right;
     font-size: 0.8rem;
     color: #037dd6;

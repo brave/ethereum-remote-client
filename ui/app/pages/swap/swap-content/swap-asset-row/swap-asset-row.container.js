@@ -1,16 +1,22 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
-import { getMetaMaskAccounts, getSwapFromAsset, getSwapToAsset, getSwapQuote } from '../../../../selectors'
+import {
+  getSelectedAccount,
+  getSwapFromAsset,
+  getSwapFromTokenAssetBalance,
+  getSwapQuote,
+  getSwapToAsset,
+} from '../../../../selectors'
 import { updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
 
 function mapStateToProps (state) {
   return {
-    accounts: getMetaMaskAccounts(state),
+    selectedAccount: getSelectedAccount(state),
     assets: state.metamask.swap.assets,
-    selectedAddress: state.metamask.selectedAddress,
     fromAsset: getSwapFromAsset(state),
     toAsset: getSwapToAsset(state),
     quote: getSwapQuote(state),
+    fromTokenAssetBalance: getSwapFromTokenAssetBalance(state),
   }
 }
 

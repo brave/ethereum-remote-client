@@ -30,7 +30,7 @@ import {
 
 import {
   updateSwapTo,
-  updateSwapTokenBalance,
+  updateSwapFromTokenBalance,
   updateGasData,
   setGasTotal,
   showQrScanner,
@@ -101,7 +101,7 @@ function mapDispatchToProps (dispatch) {
         : dispatch(setGasTotal(calcGasTotal(gasLimit, gasPrice)))
     },
     updateSwapTokenBalance: ({ fromAsset, tokenContract, address }) => {
-      dispatch(updateSwapTokenBalance({
+      dispatch(updateSwapFromTokenBalance({
         fromAsset,
         tokenContract,
         address,

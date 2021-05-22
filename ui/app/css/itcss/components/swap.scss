@@ -560,6 +560,13 @@
     font-weight: 700;
   }
 
+  &__max-amount-button {
+    float: right;
+    font-size: 0.8rem;
+    color: #037dd6;
+    cursor: pointer;
+  }
+
   &__form-row-full {
     margin: 0.2rem 1rem 0;
     display: flex;

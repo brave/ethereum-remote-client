@@ -36,13 +36,11 @@ function mapStateToProps (state) {
     toAsset: getSwapToAsset(state),
     tokenToBalance: getSwapToTokenBalance(state),
     tokenFromBalance: getSwapFromTokenBalance(state),
-    maxModeOn: getSwapMaxModeState(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    setMaxModeTo: (bool) => dispatch(setMaxModeTo(bool)),
     updateSwapAmount: (newAmount) => dispatch(updateSwapAmount(newAmount)),
     updateGasFeeError: (amountDataObject) => {
       dispatch(updateSwapErrors(getGasFeeErrorObject(amountDataObject)))

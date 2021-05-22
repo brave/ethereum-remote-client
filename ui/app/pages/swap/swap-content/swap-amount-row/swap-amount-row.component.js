@@ -16,7 +16,6 @@ export default class SwapAmountRow extends Component {
     primaryCurrency: PropTypes.string,
     fromAsset: AssetPropTypes,
     toAsset: AssetPropTypes,
-    setMaxModeTo: PropTypes.func,
     tokenFromBalance: PropTypes.string,
     tokenToBalance: PropTypes.string,
     updateGasFeeError: PropTypes.func,
@@ -85,9 +84,7 @@ export default class SwapAmountRow extends Component {
   }
 
   updateAmount (amount) {
-    const { updateSwapAmount, setMaxModeTo } = this.props
-
-    setMaxModeTo(false)
+    const { updateSwapAmount } = this.props
     updateSwapAmount(amount)
   }
 

@@ -11,25 +11,13 @@ export default class SwapFees extends Component {
   static propTypes = {
     fromAsset: AssetPropTypes,
     toAsset: AssetPropTypes,
-    gasLimit: PropTypes.string,
-    estimatedGasPrice: PropTypes.string,
+    estimatedGasCost: PropTypes.string,
     currentCurrency: PropTypes.string,
     conversionRate: PropTypes.number,
   }
 
   static contextTypes = {
     t: PropTypes.func,
-  }
-
-  getEstimatedGasCost () {
-    const { gasLimit, estimatedGasPrice } = this.props
-
-    if (!gasLimit || !estimatedGasPrice) {
-      return
-    }
-
-    const gasCost = parseInt(gasLimit) * parseInt(estimatedGasPrice)
-    return gasCost.toString(16)
   }
 
   weiHexToFiat (value) {
@@ -47,8 +35,7 @@ export default class SwapFees extends Component {
   }
 
   render () {
-    const estimatedGasCost = this.getEstimatedGasCost()
-    const { fromAsset, toAsset } = this.props
+    const { fromAsset, toAsset, estimatedGasCost } = this.props
 
     return fromAsset && toAsset && estimatedGasCost ? (
       <div className="swap-v2__form-row-centered">

@@ -1,26 +1,14 @@
 import {
   addCurrencies,
-  conversionUtil,
-  conversionGTE,
-  multiplyCurrencies,
   conversionGreaterThan,
+  conversionGTE,
   conversionLessThan,
+  conversionUtil,
+  multiplyCurrencies,
 } from '../../../helpers/utils/conversion-util'
 
 import { calcTokenAmount } from '../../../helpers/utils/token-util'
-
-
-import { ethers, Contract } from 'ethers'
-import abi from 'human-standard-token-abi'
 import fetch from 'node-fetch'
-const API_QUOTE_URL = 'https://api.0x.org/swap/v1/quote'
-// TODO: THIS IS MY ADDRESS AND SHOULD BE CHANGED BEFORE GO LIVE
-// TODO: GENERATE ADDRESS
-const feeAddress = '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a'
-const buyTokenPercentageFee = 0.0875
-const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
-const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
-
 import {
   BASE_TOKEN_GAS_COST,
   INSUFFICIENT_FUNDS_ERROR,
@@ -33,6 +21,14 @@ import {
 
 import abi from 'ethereumjs-abi'
 import ethUtil from 'ethereumjs-util'
+
+const API_QUOTE_URL = 'https://api.0x.org/swap/v1/quote'
+// TODO: THIS IS MY ADDRESS AND SHOULD BE CHANGED BEFORE GO LIVE
+// TODO: GENERATE ADDRESS
+const feeAddress = '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a'
+const buyTokenPercentageFee = 0.0875
+const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 
 export {
   addGasBuffer,
@@ -348,4 +344,23 @@ function removeLeadingZeroes (str) {
 
 function ellipsify (text, first = 6, last = 4) {
   return `${text.slice(0, first)}...${text.slice(-last)}`
+}
+
+export function hexAmountToDecimal (value, asset) {
+  const { decimals, symbol } = asset
+
+  if (value === '0') {
+    return '0'
+  }
+
+  const multiplier = Math.pow(10, Number(decimals || 0))
+  const decimalValueString = conversionUtil(ethUtil.addHexPrefix(value), {
+    fromNumericBase: 'hex',
+    toNumericBase: 'dec',
+    toCurrency: symbol,
+    conversionRate: multiplier,
+    invertConversionRate: true,
+  })
+
+  return Number(decimalValueString) ? decimalValueString : ''
 }

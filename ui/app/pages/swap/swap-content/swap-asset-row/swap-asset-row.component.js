@@ -13,12 +13,15 @@ import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 import { assets } from '../../asset-registry'
+import AmountMaxButton from '../amount-max-button'
+import { hexAmountToDecimal } from '../swap.utils'
+
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
-    accounts: PropTypes.object.isRequired,
-    selectedAddress: PropTypes.string.isRequired,
+    selectedAccount: PropTypes.object.isRequired,
     fromAsset: AssetPropTypes,
+    fromTokenAssetBalance: PropTypes.string,
     toAsset: AssetPropTypes,
     quote: QuotePropTypes,
     setFromAsset: PropTypes.func.isRequired,
@@ -43,6 +46,8 @@ export default class SwapAssetRow extends Component {
   openDropdownFrom = () => this.setState({ isShowingDropdownFrom: true })
 
   closeDropdownFrom = () => this.setState({ isShowingDropdownFrom: false })
+
+  debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
 
   selectFromAsset = (asset) => {
     const { setFromAsset, setToAsset, toAsset, refreshQuote } = this.props
@@ -98,8 +103,6 @@ export default class SwapAssetRow extends Component {
     )
   }
 
-  debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
-
   render () {
     const { t } = this.context
     const { fromAsset } = this.props
@@ -108,6 +111,7 @@ export default class SwapAssetRow extends Component {
       <div>
         <div className="swap-v2__form-row">
           <span className="swap-v2__form-row-label">{`${t('from')}`}</span>
+          <AmountMaxButton />
         </div>
 
         <div className="swap-v2__form-row">
@@ -120,7 +124,7 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={ this.debouncedRefreshQuote } /> {/** TODO (@onyb): add updateGas prop */}
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} /> {/** TODO (@onyb): add updateGas prop */}
           </div>
         </div>
 
@@ -150,11 +154,6 @@ export default class SwapAssetRow extends Component {
     )
   }
 
-  getSelectedETHAccountBalance () {
-    const { accounts, selectedAddress } = this.props
-    return accounts[selectedAddress] ? accounts[selectedAddress].balance : ''
-  }
-
   renderToAmount () {
     const { toAsset, quote } = this.props
 
@@ -166,13 +165,21 @@ export default class SwapAssetRow extends Component {
     return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
   }
 
-  renderAssetBalance (asset) {
-    const balanceValue = this.getSelectedETHAccountBalance()
+  renderAssetBalance (asset, insideDropdown = false) {
+    const { selectedAccount, fromTokenAssetBalance } = this.props
 
     return asset.address ? (
-      <TokenBalance token={asset} />
+      insideDropdown ? <TokenBalance token={asset} /> : (
+        fromTokenAssetBalance === '0' ? `0 ${asset.symbol}`
+          : (
+            <CurrencyDisplay
+              displayValue={hexAmountToDecimal(fromTokenAssetBalance, asset)}
+              suffix={asset.symbol}
+            />
+          )
+      )
     ) : (
-      <UserPreferencedCurrencyDisplay value={balanceValue} type={PRIMARY} />
+      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY} />
     )
   }
 
@@ -272,7 +279,7 @@ export default class SwapAssetRow extends Component {
               <span className="swap-v2__asset-dropdown__name__label">
                 {`${t('balance')}:`}
               </span>
-              {this.renderAssetBalance(asset)}
+              {this.renderAssetBalance(asset, insideDropdown)}
             </div>
           )}
         </div>

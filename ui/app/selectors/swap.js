@@ -82,6 +82,18 @@ export function getSwapQuoteGas (state) {
   return state.metamask.swap.quote?.gas
 }
 
+export function getSwapQuoteEstimatedGasCost (state) {
+  const gasLimit = getSwapQuoteGas(state)
+  const estimatedGasPrice = getSwapQuoteGasPrice(state)
+
+  if (!gasLimit || !estimatedGasPrice) {
+    return
+  }
+
+  const gasCost = parseInt(gasLimit) * parseInt(estimatedGasPrice)
+  return gasCost.toString(16)
+}
+
 
 export function getSwapFromTokenContract (state) {
   const swapFromTokenAddress = getSwapFromTokenAddress(state)
@@ -121,6 +133,11 @@ export function getSwapFrom (state) {
   return state.metamask.swap.from
 }
 
+export function getSwapFromTokenAssetBalance (state) {
+  return state.metamask.swap.fromTokenAssetBalance
+}
+
+// TODO: remove this
 export function getSwapFromBalance (state) {
   const fromAccount = getSwapFromObject(state)
   return fromAccount.balance

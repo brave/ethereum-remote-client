@@ -24,7 +24,7 @@ import {
   // isBalanceSufficient,
   calcGasTotal,
 } from '../../swap.utils.js'
-import { calcMaxAmount } from '../swap-amount-row/amount-max-button/amount-max-button.utils'
+import { calcMaxAmount } from '../amount-max-button/amount-max-button.utils'
 import {
   showGasButtonGroup,
   updateSwapErrors,

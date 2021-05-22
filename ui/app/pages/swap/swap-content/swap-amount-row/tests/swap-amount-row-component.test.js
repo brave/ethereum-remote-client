@@ -5,7 +5,7 @@ import sinon from 'sinon'
 import SwapAmountRow from '../swap-amount-row.component.js'
 
 import SwapRowWrapper from '../../swap-row-wrapper/swap-row-wrapper.component'
-import AmountMaxButton from '../amount-max-button/amount-max-button.container'
+import AmountMaxButton from '../../amount-max-button/amount-max-button.container'
 import UserPreferencedTokenInput from '../../../../../components/app/user-preferenced-token-input'
 
 describe('SwapAmountRow Component', function () {

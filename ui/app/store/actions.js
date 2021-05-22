@@ -15,16 +15,13 @@ import { setCustomGasLimit } from '../ducks/gas/gas.duck'
 import txHelper from '../../lib/tx-helper'
 import { getEnvironmentType } from '../../../app/scripts/lib/util'
 import * as actionConstants from './actionConstants'
-import {
-  getPermittedAccountsForCurrentTab,
-  getSelectedAddress,
-} from '../selectors'
+import { getPermittedAccountsForCurrentTab, getSelectedAddress, getSwapFromTokenContract } from '../selectors'
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
-import { dispatch } from 'd3-dispatch'
 
 let background = null
 let promisifiedBackground = null
+
 export function _setBackgroundConnection (backgroundConnection) {
   background = backgroundConnection
   promisifiedBackground = pify(background)
@@ -747,25 +744,39 @@ export function updateSendTokenBalance ({
   }
 }
 
-export function updateSwapTokenBalance ({
-  swapFromToken,
-  tokenContract,
-  address,
-}) {
-  return (dispatch) => {
-    const tokenBalancePromise = tokenContract
-      ? tokenContract.balanceOf(address)
-      : Promise.resolve()
-    return tokenBalancePromise
+export function updateSwapFromTokenBalance ({ fromAsset }) {
+  return async (dispatch, getState) => {
+    // Step 1: unset fromTokenAssetBalance if fromAsset is unselected or set
+    // to ETH.
+    if (!fromAsset?.address) {
+      dispatch(setSwapFromTokenAssetBalance(null))
+      return
+    }
+
+    // Step 2: Get current Redux state, to use with selectors.
+    const state = getState()
+
+    // Step 3: Get properties from the state required for querying the
+    // the token balance.
+    const contract = getSwapFromTokenContract(state)
+    const address = getSelectedAddress(state)
+
+    // Step 4: Do nothing if no contract object was initialized.
+    if (!contract) {
+      return
+    }
+
+    // Step 5: Invoke balanceOf(addr) on the contract, and update the
+    // Redux state.
+    return contract.balanceOf(address)
       .then((usersToken) => {
         if (usersToken) {
-          const newTokenBalance = calcTokenBalance({ swapFromToken, usersToken })
-          dispatch(setSwapTokenBalance(newTokenBalance))
+          dispatch(setSwapFromTokenAssetBalance(usersToken.balance.toString(16)))
         }
       })
       .catch((err) => {
         log.error(err)
-        updateSwapErrors({ tokenBalance: 'tokenBalanceError' })
+        updateSwapErrors({ fromTokenAssetBalance: 'tokenBalanceError' })
       })
   }
 }
@@ -792,24 +803,10 @@ export function setSendTokenBalance (tokenBalance) {
   }
 }
 
-export function setSwapTokenBalance (tokenBalance) {
+export function setSwapFromTokenAssetBalance (balance) {
   return {
-    type: actionConstants.UPDATE_SWAP_TOKEN_BALANCE,
-    value: tokenBalance,
-  }
-}
-
-export function setSwapToTokenBalance (tokenBalance) {
-  return {
-    type: actionConstants.UPDATE_SWAP_TO_TOKEN_BALANCE,
-    value: tokenToBalance,
-  }
-}
-
-export function setSwapFromTokenBalance (tokenBalance) {
-  return {
-    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_BALANCE,
-    value: tokenFromBalance,
+    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_BALANCE,
+    value: balance,
   }
 }
 
@@ -891,9 +888,12 @@ export function updateSendToken (token) {
 }
 
 export function updateSwapFromAsset (asset) {
-  return {
-    type: actionConstants.UPDATE_SWAP_FROM_ASSET,
-    value: asset,
+  return async (dispatch) => {
+    await dispatch({
+      type: actionConstants.UPDATE_SWAP_FROM_ASSET,
+      value: asset,
+    })
+    await dispatch(updateSwapFromTokenBalance({ fromAsset: asset }))
   }
 }
 

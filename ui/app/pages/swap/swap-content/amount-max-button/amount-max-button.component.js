@@ -3,13 +3,16 @@ import PropTypes from 'prop-types'
 import { useI18nContext } from '../../../../hooks/useI18nContext'
 import { useMetricEvent } from '../../../../hooks/useMetricEvent'
 import { AssetPropTypes } from '../../prop-types'
+import { calcMaxAmount } from './amount-max-button.utils'
 
 export default function AmountMaxButton ({
   account,
   fromAsset,
+  toAsset,
   fromTokenAssetBalance,
   estimatedGasCost,
-  setAmountToMax,
+  setAmount,
+  refreshQuote,
 }) {
   const t = useI18nContext()
   const metricsEvent = useMetricEvent()
@@ -25,11 +28,14 @@ export default function AmountMaxButton ({
       },
     })
 
-    setAmountToMax({
+    const maxAmount = calcMaxAmount({
       balance,
       estimatedGasCost,
       fromAsset,
     })
+
+    setAmount(maxAmount)
+    refreshQuote(fromAsset, toAsset, maxAmount)
   }
 
   // Do not display the Max button for unselected state.
@@ -43,7 +49,9 @@ export default function AmountMaxButton ({
 AmountMaxButton.propTypes = {
   account: PropTypes.object.isRequired,
   fromAsset: AssetPropTypes,
+  toAsset: AssetPropTypes,
   fromTokenAssetBalance: PropTypes.string,
-  setAmountToMax: PropTypes.func.isRequired,
+  setAmount: PropTypes.func.isRequired,
   estimatedGasCost: PropTypes.string,
+  refreshQuote: PropTypes.func.isRequired,
 }

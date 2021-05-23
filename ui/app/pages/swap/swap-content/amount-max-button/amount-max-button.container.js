@@ -4,18 +4,18 @@ import {
   getSwapFromAsset,
   getSwapFromTokenAssetBalance,
   getSwapQuoteEstimatedGasCost,
+  getSwapToAsset,
 } from '../../../../selectors'
-import { calcMaxAmount } from './amount-max-button.utils.js'
 import { updateSwapAmount } from '../../../../store/actions'
 import AmountMaxButton from './amount-max-button.component'
 import { updateSwapErrors } from '../../../../ducks/swap/swap.duck'
 
-export default connect(mapStateToProps, mapDispatchToProps)(AmountMaxButton)
 
 function mapStateToProps (state) {
   return {
     account: getSelectedAccount(state),
     fromAsset: getSwapFromAsset(state),
+    toAsset: getSwapToAsset(state),
     estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
     fromTokenAssetBalance: getSwapFromTokenAssetBalance(state),
   }
@@ -23,9 +23,11 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    setAmountToMax: (maxAmountDataObject) => {
+    setAmount: (value) => {
       dispatch(updateSwapErrors({ amount: null }))
-      dispatch(updateSwapAmount(calcMaxAmount(maxAmountDataObject)))
+      dispatch(updateSwapAmount(value))
     },
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(AmountMaxButton)

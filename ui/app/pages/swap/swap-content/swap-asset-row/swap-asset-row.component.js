@@ -105,13 +105,13 @@ export default class SwapAssetRow extends Component {
 
   render () {
     const { t } = this.context
-    const { fromAsset } = this.props
+    const { fromAsset, refreshQuote } = this.props
 
     return (
       <div>
         <div className="swap-v2__form-row">
           <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
-          <AmountMaxButton />
+          <AmountMaxButton refreshQuote={refreshQuote} />
         </div>
 
         <div className="swap-v2__form-row">

@@ -1,7 +1,5 @@
 import {
-  addCurrencies,
   conversionGreaterThan,
-  conversionGTE,
   conversionLessThan,
   conversionUtil,
   multiplyCurrencies,
@@ -11,10 +9,7 @@ import { calcTokenAmount } from '../../../helpers/utils/token-util'
 import fetch from 'node-fetch'
 import {
   BASE_TOKEN_GAS_COST,
-  INSUFFICIENT_FUNDS_ERROR,
-  INSUFFICIENT_TOKENS_ERROR,
   MIN_GAS_LIMIT_HEX,
-  NEGATIVE_ETH_ERROR,
   SIMPLE_GAS_COST,
   TOKEN_TRANSFER_FUNCTION_SIGNATURE,
 } from './swap.constants'
@@ -37,11 +32,7 @@ export {
   doesAmountErrorRequireUpdate,
   estimateGas,
   generateTokenTransferData,
-  getAmountErrorObject,
-  getGasFeeErrorObject,
   getToAddressForGasUpdate,
-  isBalanceSufficient,
-  isTokenBalanceSufficient,
   removeLeadingZeroes,
   ellipsify,
   getQuote,
@@ -67,134 +58,7 @@ async function getQuote (sellAmount, buyToken, sellToken, slippagePercentage, ta
     feeRecipient: feeAddress,
   })
   const quoteUrl = `${API_QUOTE_URL}?${qs}`
-  const response = await fetch(quoteUrl)
-  return response
-}
-
-function isBalanceSufficient ({
-  amount = '0x0',
-  balance = '0x0',
-  conversionRate = 1,
-  gasTotal = '0x0',
-  primaryCurrency,
-}) {
-  const totalAmount = addCurrencies(amount, gasTotal, {
-    aBase: 16,
-    bBase: 16,
-    toNumericBase: 'hex',
-  })
-
-  const balanceIsSufficient = conversionGTE(
-    {
-      value: balance,
-      fromNumericBase: 'hex',
-      fromCurrency: primaryCurrency,
-      conversionRate,
-    },
-    {
-      value: totalAmount,
-      fromNumericBase: 'hex',
-      conversionRate: conversionRate,
-      fromCurrency: primaryCurrency,
-    },
-  )
-
-  return balanceIsSufficient
-}
-
-function isTokenBalanceSufficient ({
-  amount = '0x0',
-  tokenBalance,
-  decimals,
-}) {
-  const amountInDec = conversionUtil(amount, {
-    fromNumericBase: 'hex',
-  })
-
-  const tokenBalanceIsSufficient = conversionGTE(
-    {
-      value: tokenBalance,
-      fromNumericBase: 'hex',
-    },
-    {
-      value: calcTokenAmount(amountInDec, decimals),
-    },
-  )
-
-  return tokenBalanceIsSufficient
-}
-
-function getAmountErrorObject ({
-  amount,
-  balance,
-  conversionRate,
-  gasTotal,
-  primaryCurrency,
-  swapFromToken,
-  tokenBalance,
-}) {
-  let insufficientFunds = false
-  if (gasTotal && conversionRate && !swapFromToken) {
-    insufficientFunds = !isBalanceSufficient({
-      amount,
-      balance,
-      conversionRate,
-      gasTotal,
-      primaryCurrency,
-    })
-  }
-
-  let inSufficientTokens = false
-  if (swapFromToken && tokenBalance !== null) {
-    const { decimals } = swapFromToken
-    inSufficientTokens = !isTokenBalanceSufficient({
-      tokenBalance,
-      amount,
-      decimals,
-    })
-  }
-
-  const amountLessThanZero = conversionGreaterThan(
-    { value: 0, fromNumericBase: 'dec' },
-    { value: amount, fromNumericBase: 'hex' },
-  )
-
-  let amountError = null
-
-  if (insufficientFunds) {
-    amountError = INSUFFICIENT_FUNDS_ERROR
-  } else if (inSufficientTokens) {
-    amountError = INSUFFICIENT_TOKENS_ERROR
-  } else if (amountLessThanZero) {
-    amountError = NEGATIVE_ETH_ERROR
-  }
-
-  return { amount: amountError }
-}
-
-function getGasFeeErrorObject ({
-  balance,
-  conversionRate,
-  gasTotal,
-  primaryCurrency,
-}) {
-  let gasFeeError = null
-
-  if (gasTotal && conversionRate) {
-    const insufficientFunds = !isBalanceSufficient({
-      amount: '0x0',
-      balance,
-      conversionRate,
-      gasTotal,
-      primaryCurrency,
-    })
-
-    if (insufficientFunds) {
-      gasFeeError = INSUFFICIENT_FUNDS_ERROR
-    }
-  }
-
-  return { gasFee: gasFeeError }
+  return await fetch(quoteUrl)
 }
 
 function calcTokenBalance ({ swapFromToken, usersToken }) {

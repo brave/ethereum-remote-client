@@ -15,9 +15,22 @@ import { setCustomGasLimit } from '../ducks/gas/gas.duck'
 import txHelper from '../../lib/tx-helper'
 import { getEnvironmentType } from '../../../app/scripts/lib/util'
 import * as actionConstants from './actionConstants'
-import { getPermittedAccountsForCurrentTab, getSelectedAddress, getSwapFromTokenContract } from '../selectors'
+import {
+  getPermittedAccountsForCurrentTab,
+  getSelectedAccount,
+  getSelectedAddress,
+  getSwapAmount,
+  getSwapConversionRate,
+  getSwapFromAsset,
+  getSwapFromTokenAssetBalance,
+  getSwapFromTokenContract,
+  getSwapPrimaryCurrency,
+  getSwapQuoteEstimatedGasCost,
+} from '../selectors'
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
+import { updateSwapErrors } from '../ducks/swap/swap.duck'
+import { getAmountErrorObject, getGasFeeErrorObject } from '../pages/swap/swap.utils'
 
 let background = null
 let promisifiedBackground = null
@@ -263,6 +276,49 @@ export function fillOrder (quote) {
     }
     // dispatch(updateSwapQuote(newState.quotes))
     return newState
+  }
+}
+
+export function computeSwapErrors (overrides) {
+  return async (dispatch, getState) => {
+    const state = getState()
+
+    const data = {
+      amount: getSwapAmount(state),
+      balance: getSelectedAccount(state)?.balance || '0x0',
+      conversionRate: getSwapConversionRate(state),
+      estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
+      primaryCurrency: getSwapPrimaryCurrency(state),
+      tokenBalance: getSwapFromTokenAssetBalance(state),
+      fromAsset: getSwapFromAsset(state),
+      ...overrides,
+    }
+
+    const { fromAsset, amount } = data
+    if (!fromAsset) {
+      await dispatch(updateSwapErrors({ amount: null, gasFee: null }))
+      return
+    }
+
+    if (!amount || amount === '0') {
+      await dispatch(updateSwapErrors({ amount: null }))
+      await dispatch(updateSwapErrors(getGasFeeErrorObject(data)))
+      return
+    }
+
+    const errors = {
+      ...getAmountErrorObject(data),
+      ...getGasFeeErrorObject(data),
+    }
+
+    const { amount: amountError, gasFee: gasFeeError } = errors
+
+    if (!fromAsset.address && amountError && gasFeeError) {
+      await dispatch(updateSwapErrors({ amount: amountError, gasFee: null }))
+      return
+    }
+
+    await dispatch(updateSwapErrors(errors))
   }
 }
 
@@ -793,14 +849,6 @@ export function updateSendErrors (errorObject) {
     value: errorObject,
   }
 }
-
-export function updateSwapErrors (errorObject) {
-  return {
-    type: actionConstants.UPDATE_SWAP_ERRORS,
-    value: errorObject,
-  }
-}
-
 
 export function setSendTokenBalance (tokenBalance) {
   return {

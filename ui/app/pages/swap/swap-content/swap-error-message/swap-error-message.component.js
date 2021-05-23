@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 
 export default class SwapRowErrorMessage extends Component {
 
@@ -15,12 +14,13 @@ export default class SwapRowErrorMessage extends Component {
 
   render () {
     const { errors, errorType } = this.props
+    const { t } = this.context
 
     const errorMessage = errors[errorType]
 
     return (
       errorMessage
-        ? <div className={classnames('swap-v2__error', { 'swap-v2__error-amount': errorType === 'amount' })}>{this.context.t(errorMessage)}</div>
+        ? <div className="swap-v2__error">{t(errorMessage)}</div>
         : null
     )
   }

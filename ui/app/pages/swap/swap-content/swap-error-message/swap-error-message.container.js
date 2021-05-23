@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { getSwapErrors } from '../../../../../selectors'
-import SwapRowErrorMessage from './swap-row-error-message.component'
+import { getSwapErrors } from '../../../../selectors'
+import SwapRowErrorMessage from './swap-error-message.component'
 
 export default connect(mapStateToProps)(SwapRowErrorMessage)
 

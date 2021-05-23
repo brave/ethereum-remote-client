@@ -1,7 +1,7 @@
 import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
-import SwapRowErrorMessage from '../swap-row-error-message.component.js'
+import SwapRowErrorMessage from '../swap-error-message.component.js'
 
 describe('SwapRowErrorMessage Component', function () {
   let wrapper

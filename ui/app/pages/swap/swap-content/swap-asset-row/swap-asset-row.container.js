@@ -7,7 +7,7 @@ import {
   getSwapQuote,
   getSwapToAsset,
 } from '../../../../selectors'
-import { updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
+import { computeSwapErrors, updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
 
 function mapStateToProps (state) {
   return {
@@ -22,7 +22,10 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    setFromAsset: (asset) => dispatch(updateSwapFromAsset(asset)),
+    setFromAsset: async (asset) => {
+      await dispatch(updateSwapFromAsset(asset))
+      await dispatch(computeSwapErrors({ fromAsset: asset }))
+    },
     setToAsset: (asset) => dispatch(updateSwapToAsset(asset)),
   }
 }

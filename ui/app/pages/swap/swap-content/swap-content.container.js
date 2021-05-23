@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import SwapContent from './swap-content.component'
 
 import {
+  computeSwapErrors,
   displayWarning,
   fetchSwapQuote,
   hideLoadingIndication,
@@ -46,6 +47,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setGasPrice: (value) => dispatch(updateSwapGasPrice(value)),
   setGasLimit: (value) => dispatch(updateSwapGasLimit(value)),
+  computeSwapErrors: (value) => dispatch(computeSwapErrors(value)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapContent)

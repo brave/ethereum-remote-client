@@ -38,6 +38,7 @@ export default class SwapAssetRow extends Component {
     isShowingDropdownTo: false,
     isShowingDropdownFrom: false,
   }
+  debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
 
   openDropdownTo = () => this.setState({ isShowingDropdownTo: true })
 
@@ -46,8 +47,6 @@ export default class SwapAssetRow extends Component {
   openDropdownFrom = () => this.setState({ isShowingDropdownFrom: true })
 
   closeDropdownFrom = () => this.setState({ isShowingDropdownFrom: false })
-
-  debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
 
   selectFromAsset = (asset) => {
     const { setFromAsset, setToAsset, toAsset, refreshQuote } = this.props
@@ -111,7 +110,7 @@ export default class SwapAssetRow extends Component {
       <div>
         <div className="swap-v2__form-row">
           <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
-          <AmountMaxButton refreshQuote={refreshQuote} />
+          <AmountMaxButton refreshQuote={refreshQuote}/>
         </div>
 
         <div className="swap-v2__form-row">
@@ -124,12 +123,13 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} /> {/** TODO (@onyb): add updateGas prop */}
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote}/> {/** TODO (@onyb): add updateGas prop */}
           </div>
         </div>
 
-        <div className="swap-v2__form-row-full">
-          <SwapRowErrorMessage errorType="amount" />
+        <div className="swap-v2__form-row-full" style={{ display: 'block' }}>
+          <SwapRowErrorMessage errorType="amount"/>
+          <SwapRowErrorMessage errorType="gasFee"/>
         </div>
 
         {fromAsset && (
@@ -162,14 +162,14 @@ export default class SwapAssetRow extends Component {
     }
 
     const amount = calcTokenAmount(quote.buyAmount, toAsset.decimals).toFixed(4)
-    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
+    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol}/>
   }
 
   renderAssetBalance (asset, insideDropdown = false) {
     const { selectedAccount, fromTokenAssetBalance } = this.props
 
     return asset.address ? (
-      insideDropdown ? <TokenBalance token={asset} /> : (
+      insideDropdown ? <TokenBalance token={asset}/> : (
         fromTokenAssetBalance === '0' ? `0 ${asset.symbol}`
           : (
             <CurrencyDisplay
@@ -179,7 +179,7 @@ export default class SwapAssetRow extends Component {
           )
       )
     ) : (
-      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY} />
+      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY}/>
     )
   }
 
@@ -218,7 +218,7 @@ export default class SwapAssetRow extends Component {
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">Select asset</div>
         </div>
-        <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+        <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
       </div>
     )
   }
@@ -270,7 +270,7 @@ export default class SwapAssetRow extends Component {
         onClick={() => insideDropdown && onSelectAsset(asset)}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
-          <Identicon address={address} diameter={36} />
+          <Identicon address={address} diameter={36}/>
         </div>
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">{symbol}</div>
@@ -284,7 +284,7 @@ export default class SwapAssetRow extends Component {
           )}
         </div>
         {!insideDropdown && (
-          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+          <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
         )}
       </div>
     )

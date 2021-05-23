@@ -6,9 +6,8 @@ import {
   getSwapQuoteEstimatedGasCost,
   getSwapToAsset,
 } from '../../../../selectors'
-import { updateSwapAmount } from '../../../../store/actions'
+import { computeSwapErrors, updateSwapAmount } from '../../../../store/actions'
 import AmountMaxButton from './amount-max-button.component'
-import { updateSwapErrors } from '../../../../ducks/swap/swap.duck'
 
 
 function mapStateToProps (state) {
@@ -23,9 +22,9 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    setAmount: (value) => {
-      dispatch(updateSwapErrors({ amount: null }))
-      dispatch(updateSwapAmount(value))
+    setAmount: async (value) => {
+      await dispatch(updateSwapAmount(value))
+      await dispatch(computeSwapErrors({ amount: value }))
     },
   }
 }

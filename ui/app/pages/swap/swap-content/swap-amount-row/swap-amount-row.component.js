@@ -9,18 +9,12 @@ export default class SwapAmountRow extends Component {
 
   static propTypes = {
     amount: PropTypes.string,
-    balance: PropTypes.string,
-    conversionRate: PropTypes.number,
-    gasTotal: PropTypes.string,
-    primaryCurrency: PropTypes.string,
+    estimatedGasCost: PropTypes.string,
     fromAsset: AssetPropTypes,
     toAsset: AssetPropTypes,
-    tokenFromBalance: PropTypes.string,
-    tokenToBalance: PropTypes.string,
-    updateGasFeeError: PropTypes.func,
     updateSwapAmount: PropTypes.func,
-    updateSwapAmountError: PropTypes.func,
     refreshQuote: PropTypes.func.isRequired,
+    computeSwapErrors: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -28,62 +22,25 @@ export default class SwapAmountRow extends Component {
   }
 
 
-  componentDidUpdate (prevProps) {
-    // if (prevGasTotal !== gasTotal) {
-    //   this.validateAmount(amount)
-    // }
-  }
+  // eslint-disable-next-line no-unused-vars
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    const { estimatedGasCost: prevEstimatedGasCost, amount: prevAmount } = prevProps
+    const { estimatedGasCost, amount, computeSwapErrors } = this.props
 
-  validateAmount (amount) {
-    const {
-      balance,
-      conversionRate,
-      gasTotal,
-      primaryCurrency,
-      fromAsset,
-      tokenToBalance,
-      tokenFromBalance,
-      updateGasFeeError,
-      updateSwapAmountError,
-    } = this.props
+    if (prevEstimatedGasCost !== estimatedGasCost) {
+      computeSwapErrors({ estimatedGasCost })
+    }
 
-    updateSwapAmountError({
-      amount,
-      balance,
-      conversionRate,
-      gasTotal,
-      primaryCurrency,
-      fromAsset,
-      tokenFromBalance,
-      tokenToBalance,
-    })
-
-    if (fromAsset) {
-      updateGasFeeError({
-        balance,
-        conversionRate,
-        gasTotal,
-        primaryCurrency,
-        fromAsset,
-        tokenFromBalance,
-        tokenToBalance,
-      })
+    if (prevAmount !== amount) {
+      computeSwapErrors({ amount })
     }
   }
 
-  updateAmount (amount) {
-    const { updateSwapAmount } = this.props
-    updateSwapAmount(amount)
-  }
-
   handleChange = (newAmount) => {
-    const { fromAsset, toAsset, refreshQuote } = this.props
+    const { fromAsset, toAsset, refreshQuote, updateSwapAmount, computeSwapErrors } = this.props
 
-    /**
-     * TODO: enable amount validation.
-     * this.validateAmount(newAmount)
-     **/
-    this.updateAmount(newAmount)
+    computeSwapErrors({ amount: newAmount })
+    updateSwapAmount(newAmount)
     refreshQuote(fromAsset, toAsset, newAmount)
   }
 

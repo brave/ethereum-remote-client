@@ -2,10 +2,11 @@ import { connect } from 'react-redux'
 import SwapFees from './swap-fees.component'
 
 import {
-  getSwapQuote,
+  getSwapAmount,
   getSwapFromAsset,
+  getSwapQuote,
+  getSwapQuoteEstimatedGasCost,
   getSwapToAsset,
-  getSwapQuoteEstimatedGasCost, getSwapGasCost, getSwapAmount,
 } from '../../../../selectors'
 
 
@@ -17,14 +18,12 @@ const mapStateToProps = (state) => {
     toAsset: getSwapToAsset(state),
     quote: getSwapQuote(state),
     estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
-    actualGasCost: getSwapGasCost(state),
     amount: getSwapAmount(state),
     currentCurrency,
     conversionRate,
   }
 }
 
-const mapDispatchToProps = () => ({
-})
+const mapDispatchToProps = () => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapFees)

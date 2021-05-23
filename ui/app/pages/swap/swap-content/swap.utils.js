@@ -364,3 +364,7 @@ export function hexAmountToDecimal (value, asset) {
 
   return Number(decimalValueString) ? decimalValueString : ''
 }
+
+export function decimalToHex (value) {
+  return ethUtil.addHexPrefix(parseInt(value).toString(16))
+}

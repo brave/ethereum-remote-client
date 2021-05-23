@@ -5,7 +5,7 @@ import {
   getSwapQuote,
   getSwapFromAsset,
   getSwapToAsset,
-  getSwapQuoteEstimatedGasCost,
+  getSwapQuoteEstimatedGasCost, getSwapGasCost, getSwapAmount,
 } from '../../../../selectors'
 
 
@@ -17,11 +17,14 @@ const mapStateToProps = (state) => {
     toAsset: getSwapToAsset(state),
     quote: getSwapQuote(state),
     estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
+    actualGasCost: getSwapGasCost(state),
+    amount: getSwapAmount(state),
     currentCurrency,
     conversionRate,
   }
 }
 
-const mapDispatchToProps = () => ({})
+const mapDispatchToProps = () => ({
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapFees)

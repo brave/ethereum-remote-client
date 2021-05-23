@@ -228,19 +228,25 @@ export function verifySeedPhrase () {
 //   }
 // }
 
-export function fetchSwapQuote (fromAsset, toAsset, amount) {
-  log.debug('action - fetchSwapQuote')
+export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
   return async (dispatch) => {
     let quote = null
 
+    const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
+
     try {
-      quote = await promisifiedBackground.quote(fromAsset.symbol, toAsset.symbol, parseInt(amount, 16))
+      quote = await promisifiedBackground.quote(
+        fromAsset.symbol, toAsset.symbol, parseInt(amount, 16), gasPriceDecimal,
+      )
     } catch (error) {
       log.error(error)
       dispatch(displayWarning(error.message))
       throw error
     }
-    dispatch(updateSwapQuote(quote))
+
+    await dispatch(updateSwapQuote(quote))
+
+    console.log('Fetching with gas: ', gasPriceDecimal)
   }
 }
 
@@ -842,6 +848,20 @@ export function updateSendAmount (amount) {
   return {
     type: actionConstants.UPDATE_SEND_AMOUNT,
     value: amount,
+  }
+}
+
+export function updateSwapGasPrice (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_GAS_PRICE,
+    value,
+  }
+}
+
+export function updateSwapGasLimit (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_GAS_LIMIT,
+    value,
   }
 }
 

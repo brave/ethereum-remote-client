@@ -206,6 +206,24 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+    case actionConstants.UPDATE_SWAP_GAS_LIMIT:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasLimit: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_GAS_PRICE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasPrice: action.value,
+        },
+      }
+
     case actionConstants.UPDATE_SWAP_AMOUNT:
       return {
         ...metamaskState,

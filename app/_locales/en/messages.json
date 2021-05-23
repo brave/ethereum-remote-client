@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Customize"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },

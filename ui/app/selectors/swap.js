@@ -1,12 +1,6 @@
 import abi from 'human-standard-token-abi'
-import {
-  accountsWithSwapEtherInfoSelector,
-  getAddressBook,
-  getSelectedAccount,
-  getTargetAccount,
-  getAveragePriceEstimateInHexWEI,
-} from '.'
-import { calcGasTotal } from '../pages/swap/swap.utils'
+import { accountsWithSwapEtherInfoSelector, getAddressBook, getSelectedAccount, getTargetAccount } from '.'
+import { multiplyCurrencies } from '../helpers/utils/conversion-util'
 
 export function getSwapBlockGasLimit (state) {
   return state.metamask.currentBlockGasLimit
@@ -24,16 +18,31 @@ export function getSwapCurrentNetwork (state) {
   return state.metamask.network
 }
 
-export function getSwapGasLimit (state) {
+export function getSwapQuoteGasLimit (state) {
   return state.metamask.swap.quote?.gas || '0'
 }
 
 export function getSwapGasPrice (state) {
-  return state.metamask.swap.quote?.gasPrice || getAveragePriceEstimateInHexWEI(state)
+  return state.metamask.swap.gasPrice
 }
 
-export function getSwapGasTotal (state) {
-  return calcGasTotal(getSwapGasLimit(state), getSwapGasPrice(state))
+export function getSwapGasLimit (state) {
+  return state.metamask.swap.gasLimit
+}
+
+export function getSwapGasCost (state) {
+  const gasLimit = getSwapQuoteGas(state)
+  const gasPrice = getSwapGasPrice(state)
+
+  if (!gasLimit || !gasPrice) {
+    return
+  }
+
+  return multiplyCurrencies(gasLimit, gasPrice, {
+    toNumericBase: 'hex',
+    multiplicandBase: 10,
+    multiplierBase: 16,
+  })
 }
 
 export function getSwapPrimaryCurrency (state) {

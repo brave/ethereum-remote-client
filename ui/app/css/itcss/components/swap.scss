@@ -567,6 +567,13 @@
     cursor: pointer;
   }
 
+  &__gas-control-btn {
+    font-size: 0.8rem;
+    color: #037dd6;
+    cursor: pointer;
+    padding-right: 7px;
+  }
+
   &__form-row-full {
     margin: 0.2rem 1rem 0;
     display: flex;

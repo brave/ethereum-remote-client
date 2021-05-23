@@ -10,7 +10,7 @@ import { PRIMARY } from '../../../../helpers/constants/common'
 import { calcTokenAmount } from '../../../../helpers/utils/token-util'
 
 import SwapAmountRow from '../swap-amount-row'
-import SwapRowErrorMessage from '../swap-row-wrapper/swap-row-error-message'
+import SwapRowErrorMessage from '../swap-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 import { assets } from '../../asset-registry'
 import AmountMaxButton from '../amount-max-button'

@@ -1,40 +1,31 @@
 import { connect } from 'react-redux'
 import ethUtil from 'ethereumjs-util'
 
+import { addToAddressBook, clearSwap, signTokenTx, signTx } from '../../../store/actions'
 import {
-  addToAddressBook,
-  clearSwap,
-  signTokenTx,
-  signTx,
-} from '../../../store/actions'
-import {
-  getSwapGasLimit,
+  getDefaultActiveButtonIndex,
+  getGasIsLoading,
   getGasPrice,
-  getSwapGasTotal,
-  getSwapFromAsset,
+  getRenderableEstimateDataForSmallButtonsFromGWEI,
   getSwapAmount,
   getSwapEditingTransactionId,
+  getSwapErrors,
+  getSwapFromAsset,
   getSwapFromObject,
-  getSwapQuoteTo,
-  getSwapToAccounts,
+  getSwapFromTokenBalance,
   getSwapQuoteData,
   getSwapQuoteGas,
+  getSwapQuoteGasLimit,
   getSwapQuoteGasPrice,
+  getSwapQuoteTo,
   getSwapQuoteValue,
-  getSwapFromTokenBalance,
+  getSwapToAccounts,
   getSwapToTokenBalance,
   getUnapprovedTxs,
-  getSwapErrors,
   isSwapFormInError,
-  getGasIsLoading,
-  getRenderableEstimateDataForSmallButtonsFromGWEI,
-  getDefaultActiveButtonIndex,
 } from '../../../selectors'
 import SwapFooter from './swap-footer.component'
-import {
-  addressIsNew,
-  constructTxParams,
-} from './swap-footer.utils'
+import { addressIsNew, constructTxParams } from './swap-footer.utils'
 import { getMostRecentOverviewPage } from '../../../ducks/history/history'
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapFooter)
@@ -54,10 +45,9 @@ function mapStateToProps (state) {
     data: getSwapQuoteData(state),
     editingTransactionId,
     from: getSwapFromObject(state),
-    gasLimit: getSwapGasLimit(state),
+    gasLimit: getSwapQuoteGasLimit(state),
     gasPrice: getSwapQuoteGasPrice(state),
     gas: getSwapQuoteGas(state),
-    gasTotal: getSwapGasTotal(state),
     inError: isSwapFormInError(state),
     fromAsset: getSwapFromAsset(state),
     to: getSwapQuoteTo(state),

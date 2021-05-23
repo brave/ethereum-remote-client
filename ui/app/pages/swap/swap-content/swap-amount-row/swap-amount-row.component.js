@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { debounce } from 'lodash'
 
 import UserPreferencedCurrencyInput from '../../../../components/app/user-preferenced-currency-input'
 import UserPreferencedTokenInput from '../../../../components/app/user-preferenced-token-input'
@@ -21,8 +20,6 @@ export default class SwapAmountRow extends Component {
     updateGasFeeError: PropTypes.func,
     updateSwapAmount: PropTypes.func,
     updateSwapAmountError: PropTypes.func,
-    updateGas: PropTypes.func,
-    maxModeOn: PropTypes.bool,
     refreshQuote: PropTypes.func.isRequired,
   }
 
@@ -32,19 +29,10 @@ export default class SwapAmountRow extends Component {
 
 
   componentDidUpdate (prevProps) {
-    const { maxModeOn: prevMaxModeOn, gasTotal: prevGasTotal } = prevProps
-    const { maxModeOn, amount, gasTotal, fromAsset } = this.props
-
-    if (maxModeOn && fromAsset && !prevMaxModeOn) {
-      this.updateGas(amount)
-    }
-
     // if (prevGasTotal !== gasTotal) {
     //   this.validateAmount(amount)
     // }
   }
-
-  updateGas = debounce(this.updateGas.bind(this), 500)
 
   validateAmount (amount) {
     const {
@@ -88,14 +76,6 @@ export default class SwapAmountRow extends Component {
     updateSwapAmount(amount)
   }
 
-  updateGas (amount) {
-    const { fromAsset, updateGas } = this.props
-
-    if (fromAsset) {
-      updateGas({ amount })
-    }
-  }
-
   handleChange = (newAmount) => {
     const { fromAsset, toAsset, refreshQuote } = this.props
 
@@ -103,7 +83,6 @@ export default class SwapAmountRow extends Component {
      * TODO: enable amount validation.
      * this.validateAmount(newAmount)
      **/
-    this.updateGas(newAmount)
     this.updateAmount(newAmount)
     refreshQuote(fromAsset, toAsset, newAmount)
   }

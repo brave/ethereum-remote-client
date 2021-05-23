@@ -5,7 +5,7 @@ import UserPreferencedCurrencyDisplay from '../../../../components/app/user-pref
 import { PRIMARY } from '../../../../helpers/constants/common'
 import { conversionUtil } from '../../../../helpers/utils/conversion-util'
 import { AssetPropTypes } from '../../prop-types'
-
+import CustomizeGasButton from '../swap-gas-customize'
 
 export default class SwapFees extends Component {
   static propTypes = {
@@ -14,6 +14,8 @@ export default class SwapFees extends Component {
     estimatedGasCost: PropTypes.string,
     currentCurrency: PropTypes.string,
     conversionRate: PropTypes.number,
+    refreshQuote: PropTypes.func.isRequired,
+    amount: PropTypes.string,
   }
 
   static contextTypes = {
@@ -35,7 +37,7 @@ export default class SwapFees extends Component {
   }
 
   render () {
-    const { fromAsset, toAsset, estimatedGasCost } = this.props
+    const { fromAsset, toAsset, estimatedGasCost, refreshQuote, amount } = this.props
 
     return fromAsset && toAsset && estimatedGasCost ? (
       <div className="swap-v2__form-row-centered">
@@ -56,9 +58,14 @@ export default class SwapFees extends Component {
               </tr>
 
               <tr>
-                <td>Max network fee</td>
-                <td>-</td>
-                <td>-</td>
+                <td colSpan={3}>
+                  <CustomizeGasButton />
+                  <span
+                    className="swap-v2__gas-control-btn"
+                    onClick={() => refreshQuote(fromAsset, toAsset, amount, null)}
+                  >Reset
+                  </span>
+                </td>
               </tr>
               <tr>
                 <td colSpan="3">Quote includes a 1% Brave fee</td>

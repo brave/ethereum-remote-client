@@ -6,11 +6,17 @@ import {
   fetchSwapQuote,
   hideLoadingIndication,
   showLoadingIndication,
+  updateSwapGasLimit,
+  updateSwapGasPrice,
 } from '../../../store/actions'
 import {
+  getCustomGasPrice,
   getSwapAmount,
   getSwapFromAsset,
+  getSwapGasLimit,
+  getSwapGasPrice,
   getSwapQuote,
+  getSwapQuoteGasPrice,
   getSwapToAsset,
 } from '../../../selectors'
 
@@ -19,14 +25,18 @@ const mapStateToProps = (state) => ({
   toAsset: getSwapToAsset(state),
   amount: getSwapAmount(state),
   quote: getSwapQuote(state),
+  globalGasPrice: getCustomGasPrice(state),
+  gasPrice: getSwapGasPrice(state),
+  gasLimit: getSwapGasLimit(state),
+  quoteGasPrice: getSwapQuoteGasPrice(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchSwapQuote: async (fromAsset, toAsset, amount, showLoading) => {
+  fetchSwapQuote: async (fromAsset, toAsset, amount, gasPrice, showLoading) => {
     showLoading && (await dispatch(showLoadingIndication()))
 
     try {
-      await dispatch(fetchSwapQuote(fromAsset, toAsset, amount))
+      await dispatch(fetchSwapQuote(fromAsset, toAsset, amount, gasPrice))
     } catch (err) {
       dispatch(displayWarning(err.message))
       throw err
@@ -34,6 +44,8 @@ const mapDispatchToProps = (dispatch) => ({
       await dispatch(hideLoadingIndication())
     }
   },
+  setGasPrice: (value) => dispatch(updateSwapGasPrice(value)),
+  setGasLimit: (value) => dispatch(updateSwapGasLimit(value)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapContent)

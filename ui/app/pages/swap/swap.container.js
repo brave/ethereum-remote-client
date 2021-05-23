@@ -4,54 +4,44 @@ import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 
 import {
+  getAddressBook,
+  getQrSwapsCodeData,
+  getSelectedAddress,
+  getSwapAmount,
   getSwapBlockGasLimit,
   getSwapConversionRate,
   getSwapCurrentNetwork,
-  getSwapGasLimit,
-  getSwapGasPrice,
-  getGasTotal,
-  getSwapPrimaryCurrency,
-  getSwapFromAsset,
-  getSwapToAsset,
-  getSwapFromTokenContract,
-  getSwapToTokenContract,
-  getSwapAmount,
   getSwapEditingTransactionId,
-  getSwapHexDataFeatureFlagState,
+  getSwapFromAsset,
   getSwapFromObject,
-  getSwapTo,
-  getSwapToNickname,
   getSwapFromTokenBalance,
+  getSwapFromTokenContract,
+  getSwapGasPrice,
+  getSwapHexDataFeatureFlagState,
+  getSwapPrimaryCurrency,
+  getSwapQuoteGasLimit,
+  getSwapTo,
+  getSwapToAsset,
+  getSwapToNickname,
   getSwapToTokenBalance,
-  getQrSwapsCodeData,
-  getSelectedAddress,
-  getAddressBook,
+  getSwapToTokenContract,
 } from '../../selectors'
 
 import {
-  updateSwapTo,
-  updateSwapFromTokenBalance,
-  updateGasData,
+  qrCodeDetected,
   setGasTotal,
   showQrScanner,
-  qrCodeDetected,
+  updateGasData,
   updateSwapEnsResolution,
   updateSwapEnsResolutionError,
+  updateSwapFromTokenBalance,
+  updateSwapTo,
 } from '../../store/actions'
-import {
-  resetSwapState,
-  updateSwapErrors,
-} from '../../ducks/swap/swap.duck'
-import {
-  fetchBasicGasEstimates,
-} from '../../ducks/gas/gas.duck'
+import { resetSwapState, updateSwapErrors } from '../../ducks/swap/swap.duck'
+import { fetchBasicGasEstimates } from '../../ducks/gas/gas.duck'
 import { getTokens } from '../../ducks/metamask/metamask'
-import {
-  calcGasTotal,
-} from './swap.utils.js'
-import {
-  isValidDomainName,
-} from '../../helpers/utils/util'
+import { calcGasTotal } from './swap.utils.js'
+import { isValidDomainName } from '../../helpers/utils/util'
 
 function mapStateToProps (state) {
   const editingTransactionId = getSwapEditingTransactionId(state)
@@ -63,9 +53,9 @@ function mapStateToProps (state) {
     conversionRate: getSwapConversionRate(state),
     editingTransactionId,
     from: getSwapFromObject(state),
-    gasLimit: getSwapGasLimit(state),
+    gasLimit: getSwapQuoteGasLimit(state),
     gasPrice: getSwapGasPrice(state),
-    gasTotal: getGasTotal(state),
+    gasTotal: '0',
     network: getSwapCurrentNetwork(state),
     primaryCurrency: getSwapPrimaryCurrency(state),
     qrCodeData: getQrSwapsCodeData(state),

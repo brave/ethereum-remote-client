@@ -1,25 +1,36 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { useI18nContext } from '../../../../hooks/useI18nContext'
-import { useMetricEvent } from '../../../../hooks/useMetricEvent'
 import { AssetPropTypes } from '../../prop-types'
 import { calcMaxAmount } from './amount-max-button.utils'
 
-export default function AmountMaxButton ({
-  account,
-  fromAsset,
-  toAsset,
-  fromTokenAssetBalance,
-  estimatedGasCost,
-  setAmount,
-  refreshQuote,
-}) {
-  const t = useI18nContext()
-  const metricsEvent = useMetricEvent()
+export default class AmountMaxButton extends Component {
+  static propTypes = {
+    account: PropTypes.object.isRequired,
+    fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
+    fromTokenAssetBalance: PropTypes.string,
+    setAmount: PropTypes.func.isRequired,
+    estimatedGasCost: PropTypes.string,
+    refreshQuote: PropTypes.func.isRequired,
+  }
 
-  const balance = fromAsset?.address ? fromTokenAssetBalance : account.balance
+  static contextTypes = {
+    t: PropTypes.func,
+    metricsEvent: PropTypes.func,
+  }
 
-  const onMaxClick = () => {
+  onMaxClick = () => {
+    const {
+      fromAsset,
+      toAsset,
+      refreshQuote,
+      setAmount,
+      fromTokenAssetBalance,
+      account,
+      estimatedGasCost,
+    } = this.props
+    const { metricsEvent } = this.context
+
     metricsEvent({
       eventOpts: {
         category: 'Swap',
@@ -27,6 +38,10 @@ export default function AmountMaxButton ({
         name: 'Clicked "Max"',
       },
     })
+
+    const balance = fromAsset?.address
+      ? fromTokenAssetBalance
+      : account.balance
 
     const maxAmount = calcMaxAmount({
       balance,
@@ -38,20 +53,18 @@ export default function AmountMaxButton ({
     refreshQuote(fromAsset, toAsset, maxAmount)
   }
 
-  // Do not display the Max button for unselected state.
-  return fromAsset ? (
-    <span className="swap-v2__form-row-header-right" onClick={onMaxClick}>
-      {t('max')}
-    </span>
-  ) : null
-}
+  render () {
+    const { fromAsset } = this.props
+    const { t } = this.context
 
-AmountMaxButton.propTypes = {
-  account: PropTypes.object.isRequired,
-  fromAsset: AssetPropTypes,
-  toAsset: AssetPropTypes,
-  fromTokenAssetBalance: PropTypes.string,
-  setAmount: PropTypes.func.isRequired,
-  estimatedGasCost: PropTypes.string,
-  refreshQuote: PropTypes.func.isRequired,
+    // Do not display the Max button for unselected state.
+    return fromAsset ? (
+      <span
+        className="swap-v2__form-row-header-right"
+        onClick={this.onMaxClick}
+      >
+        {t('max')}
+      </span>
+    ) : null
+  }
 }

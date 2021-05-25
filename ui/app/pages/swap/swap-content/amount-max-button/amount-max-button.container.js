@@ -9,7 +9,6 @@ import {
 import { computeSwapErrors, updateSwapAmount } from '../../../../store/actions'
 import AmountMaxButton from './amount-max-button.component'
 
-
 function mapStateToProps (state) {
   return {
     account: getSelectedAccount(state),

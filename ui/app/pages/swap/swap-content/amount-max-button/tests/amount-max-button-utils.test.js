@@ -1,27 +1,43 @@
 import assert from 'assert'
-import {
-  calcMaxAmount,
-} from '../amount-max-button.utils.js'
+import { calcMaxAmount } from '../amount-max-button.utils.js'
 
 describe('amount-max-button utils', function () {
-
   describe('calcMaxAmount()', function () {
-    it('should calculate the correct amount when no swapFromToken defined', function () {
-      assert.deepEqual(calcMaxAmount({
-        balance: 'ffffff',
-        gasTotal: 'ff',
-        swapFromToken: false,
-      }), 'ffff00')
+    it('should calculate the correct max amount for ETH', function () {
+      assert.deepStrictEqual(
+        calcMaxAmount({
+          balance: 'ffffff', // 16777215 WEI
+          estimatedGasCost: 'ff', // 255 WEI
+          fromAsset: {
+            address: '',
+          },
+        }),
+        'ffff00', // 16777215 WEI - 255 WEI = 16776960 WEI
+      )
     })
 
-    it('should calculate the correct amount when a swapFromToken is defined', function () {
-      assert.deepEqual(calcMaxAmount({
-        swapFromToken: {
-          decimals: 10,
-        },
-        tokenBalance: '64',
-      }), 'e8d4a51000')
+    it('should calculate the correct max amount for ETH without gas estimates', function () {
+      assert.deepStrictEqual(
+        calcMaxAmount({
+          balance: 'ffffff', // 16777215 WEI
+          fromAsset: {
+            address: '',
+          },
+        }),
+        'ffffff', // 16777215 WEI
+      )
+    })
+
+    it('should calculate the correct max amount for token', function () {
+      assert.deepStrictEqual(
+        calcMaxAmount({
+          fromAsset: {
+            address: '0x1234',
+          },
+          balance: 'e8d4a51000', // 1000000000000 units
+        }),
+        'e8d4a51000', // 1000000000000 units
+      )
     })
   })
-
 })

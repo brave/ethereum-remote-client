@@ -2,96 +2,148 @@ import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
+import { itParam } from 'mocha-param'
 import AmountMaxButton from '../amount-max-button.component.js'
 
-describe('AmountMaxButton Component', function () {
-  let wrapper
-  let instance
+const ETH = {
+  name: 'Ether',
+  address: '',
+  symbol: 'ETH',
+  decimals: 18,
+}
 
+const BAT = {
+  name: 'Basic Attention Token',
+  address: '0xDEADBEEF',
+  symbol: 'BAT',
+  decimals: 18,
+}
+
+const MOCK = {
+  name: 'mockTokenName',
+  address: 'mockTokenAddress',
+  symbol: 'MOCK',
+  decimals: 18,
+}
+
+describe('AmountMaxButton Component', function () {
   const propsMethodSpies = {
-    setAmountToMax: sinon.spy(),
-    setMaxModeTo: sinon.spy(),
+    setAmount: sinon.spy(),
+    refreshQuote: sinon.spy(),
   }
 
-  const MOCK_EVENT = { preventDefault: () => {} }
-
-  before(function () {
-    sinon.spy(AmountMaxButton.prototype, 'setMaxAmount')
-  })
-
-  beforeEach(function () {
-    wrapper = shallow((
-      <AmountMaxButton
-        balance="mockBalance"
-        gasTotal="mockGasTotal"
-        maxModeOn={false}
-        swapFromToken={ { address: 'mockTokenAddress' } }
-        setAmountToMax={propsMethodSpies.setAmountToMax}
-        setMaxModeTo={propsMethodSpies.setMaxModeTo}
-        tokenBalance="mockTokenBalance"
-      />
-    ), {
-      context: {
-        t: (str) => str + '_t',
-        metricsEvent: () => {},
-      },
-    })
-    instance = wrapper.instance()
-  })
+  const context = {
+    t: (str) => str + '_t',
+    metricsEvent: () => {},
+  }
 
   afterEach(function () {
-    propsMethodSpies.setAmountToMax.resetHistory()
-    propsMethodSpies.setMaxModeTo.resetHistory()
-    AmountMaxButton.prototype.setMaxAmount.resetHistory()
-  })
+    propsMethodSpies.setAmount.resetHistory()
+    propsMethodSpies.refreshQuote.resetHistory()
 
-  after(function () {
     sinon.restore()
   })
 
-  describe('setMaxAmount', function () {
+  describe('onMaxClick()', function () {
+    const cases = [
+      {
+        name: 'ETH',
+        props: {
+          account: { balance: '73' }, // 0x73 = 115 WEI
+          fromAsset: ETH,
+          toAsset: MOCK,
+          estimatedGasCost: 'f', // 0xf = 15 WEI
+        },
+        expected: {
+          setAmount: ['64'], // 0x64 = 100 WEI
+          refreshQuotes: [
+            ETH,
+            MOCK,
+            '64', // 0x64 = 100 WEI
+          ],
+        },
+      },
+      {
+        name: 'BAT',
+        props: {
+          account: { balance: '73' }, // 0x73 = 115 WEI
+          fromAsset: BAT,
+          toAsset: MOCK,
+          fromTokenAssetBalance: '64', // 0x64 = 100 WEI
+        },
+        expected: {
+          setAmount: ['64'], // 0x64 = 100 WEI
+          refreshQuotes: [
+            BAT,
+            MOCK,
+            '64', // 0x64 = 100 WEI
+          ],
+        },
+      },
+    ]
 
-    it('should call setAmountToMax with the correct params', function () {
-      assert.equal(propsMethodSpies.setAmountToMax.callCount, 0)
-      instance.setMaxAmount()
-      assert.equal(propsMethodSpies.setAmountToMax.callCount, 1)
-      assert.deepEqual(
-        propsMethodSpies.setAmountToMax.getCall(0).args,
-        [{
-          balance: 'mockBalance',
-          gasTotal: 'mockGasTotal',
-          swapFromToken: { address: 'mockTokenAddress' },
-          tokenBalance: 'mockTokenBalance',
-        }],
-      )
-    })
+    itParam(
+      'should call setAmount and refreshQuotes for ${value.name}',
+      cases,
+      function ({ props, expected }) {
+        const wrapper = shallow(
+          <AmountMaxButton
+            toAsset={MOCK}
+            setAmount={propsMethodSpies.setAmount}
+            refreshQuote={propsMethodSpies.refreshQuote}
+            {...props}
+          />,
+          { context },
+        )
+        const instance = wrapper.instance()
 
+        assert.strictEqual(propsMethodSpies.setAmount.callCount, 0)
+        assert.strictEqual(propsMethodSpies.refreshQuote.callCount, 0)
+
+        instance.onMaxClick()
+
+        assert.strictEqual(propsMethodSpies.setAmount.callCount, 1)
+        assert.deepStrictEqual(
+          propsMethodSpies.setAmount.getCall(0).args,
+          expected.setAmount,
+        )
+
+        assert.strictEqual(propsMethodSpies.refreshQuote.callCount, 1)
+        assert.deepStrictEqual(
+          propsMethodSpies.refreshQuote.getCall(0).args,
+          expected.refreshQuotes,
+        )
+      },
+    )
   })
 
-  describe('render', function () {
-    it('should render an element with a swap-v2__amount-max class', function () {
-      assert(wrapper.exists('.swap-v2__amount-max'))
-    })
-
-    it('should call setMaxModeTo and setMaxAmount when the checkbox is checked', function () {
-      const {
-        onClick,
-      } = wrapper.find('.swap-v2__amount-max').props()
-
-      assert.equal(AmountMaxButton.prototype.setMaxAmount.callCount, 0)
-      assert.equal(propsMethodSpies.setMaxModeTo.callCount, 0)
-      onClick(MOCK_EVENT)
-      assert.equal(AmountMaxButton.prototype.setMaxAmount.callCount, 1)
-      assert.equal(propsMethodSpies.setMaxModeTo.callCount, 1)
-      assert.deepEqual(
-        propsMethodSpies.setMaxModeTo.getCall(0).args,
-        [true],
+  describe('render()', function () {
+    it('should render as null when fromAsset is missing', function () {
+      const wrapper = shallow(
+        <AmountMaxButton
+          setAmount={() => {}}
+          refreshQuote={() => {}}
+          account={{ balance: '0' }}
+        />,
+        { context },
       )
+
+      assert(wrapper.isEmptyRender())
     })
 
-    it('should render the expected text when maxModeOn is false', function () {
-      wrapper.setProps({ maxModeOn: false })
-      assert.equal(wrapper.find('.swap-v2__amount-max').text(), 'max_t')
+    it('should render the Max button', function () {
+      const wrapper = shallow(
+        <AmountMaxButton
+          setAmount={() => {}}
+          refreshQuote={() => {}}
+          account={{ balance: '0' }}
+          fromAsset={ETH}
+          toAsset={MOCK}
+        />,
+        { context },
+      )
+
+      assert.strictEqual(wrapper.find('span').text(), 'max_t')
     })
   })
 })

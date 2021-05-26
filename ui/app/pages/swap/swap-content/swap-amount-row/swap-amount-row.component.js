@@ -6,7 +6,6 @@ import UserPreferencedTokenInput from '../../../../components/app/user-preferenc
 import { AssetPropTypes } from '../../prop-types'
 
 export default class SwapAmountRow extends Component {
-
   static propTypes = {
     amount: PropTypes.string,
     estimatedGasCost: PropTypes.string,
@@ -21,10 +20,12 @@ export default class SwapAmountRow extends Component {
     t: PropTypes.func,
   }
 
-
   // eslint-disable-next-line no-unused-vars
   componentDidUpdate (prevProps, prevState, snapshot) {
-    const { estimatedGasCost: prevEstimatedGasCost, amount: prevAmount } = prevProps
+    const {
+      estimatedGasCost: prevEstimatedGasCost,
+      amount: prevAmount,
+    } = prevProps
     const { estimatedGasCost, amount, computeSwapErrors } = this.props
 
     if (prevEstimatedGasCost !== estimatedGasCost) {
@@ -37,7 +38,13 @@ export default class SwapAmountRow extends Component {
   }
 
   handleChange = (newAmount) => {
-    const { fromAsset, toAsset, refreshQuote, updateSwapAmount, computeSwapErrors } = this.props
+    const {
+      fromAsset,
+      toAsset,
+      refreshQuote,
+      updateSwapAmount,
+      computeSwapErrors,
+    } = this.props
 
     computeSwapErrors({ amount: newAmount })
     updateSwapAmount(newAmount)
@@ -52,19 +59,17 @@ export default class SwapAmountRow extends Component {
       return null
     }
 
-    return fromAsset.address ?
-      (
-        <UserPreferencedTokenInput
-          onChange={this.handleChange}
-          token={fromAsset}
-          value={amount}
-        />
-      )
-      : (
-        <UserPreferencedCurrencyInput
-          onChange={this.handleChange}
-          value={amount}
-        />
-      )
+    return fromAsset.address ? (
+      <UserPreferencedTokenInput
+        onChange={this.handleChange}
+        token={fromAsset}
+        value={amount}
+      />
+    ) : (
+      <UserPreferencedCurrencyInput
+        onChange={this.handleChange}
+        value={amount}
+      />
+    )
   }
 }

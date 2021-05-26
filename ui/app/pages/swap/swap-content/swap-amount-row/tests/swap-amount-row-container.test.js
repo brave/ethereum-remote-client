@@ -2,33 +2,42 @@ import assert from 'assert'
 import proxyquire from 'proxyquire'
 import sinon from 'sinon'
 
+let mapStateToProps
 let mapDispatchToProps
 
 const actionSpies = {
-  setMaxModeTo: sinon.spy(),
+  computeSwapErrors: sinon.spy(),
   updateSwapAmount: sinon.spy(),
-}
-const duckActionSpies = {
-  updateSwapErrors: sinon.spy(),
 }
 
 proxyquire('../swap-amount-row.container.js', {
   'react-redux': {
-    connect: (_, md) => {
+    connect: (ms, md) => {
+      mapStateToProps = ms
       mapDispatchToProps = md
       return () => ({})
     },
   },
-  '../../../../selectors': { swapAmountIsInError: (s) => `mockInError:${s}` },
-  '../../swap.utils': {
-    getAmountErrorObject: (mockDataObject) => ({ ...mockDataObject, mockChange: true }),
-    getGasFeeErrorObject: (mockDataObject) => ({ ...mockDataObject, mockGasFeeErrorChange: true }),
+  '../../../../selectors': {
+    getSwapAmount: (s) => `mockAmount:${s}`,
+    getSwapFromAsset: (s) => `mockFromAsset:${s}`,
+    getSwapToAsset: (s) => `mockToAsset:${s}`,
+    getSwapQuoteEstimatedGasCost: (s) => `mockEstimatedGasCost:${s}`,
   },
   '../../../../store/actions': actionSpies,
-  '../../../../ducks/swap/swap.duck': duckActionSpies,
 })
 
 describe('swap-amount-row container', function () {
+  describe('mapStateToProps()', function () {
+    it('should map the correct properties to props', function () {
+      assert.deepStrictEqual(mapStateToProps('mockState'), {
+        amount: 'mockAmount:mockState',
+        fromAsset: 'mockFromAsset:mockState',
+        toAsset: 'mockToAsset:mockState',
+        estimatedGasCost: 'mockEstimatedGasCost:mockState',
+      })
+    })
+  })
 
   describe('mapDispatchToProps()', function () {
     let dispatchSpy
@@ -37,19 +46,6 @@ describe('swap-amount-row container', function () {
     beforeEach(function () {
       dispatchSpy = sinon.spy()
       mapDispatchToPropsObject = mapDispatchToProps(dispatchSpy)
-      duckActionSpies.updateSwapErrors.resetHistory()
-    })
-
-    describe('setMaxModeTo()', function () {
-      it('should dispatch an action', function () {
-        mapDispatchToPropsObject.setMaxModeTo('mockBool')
-        assert(dispatchSpy.calledOnce)
-        assert(actionSpies.setMaxModeTo.calledOnce)
-        assert.equal(
-          actionSpies.setMaxModeTo.getCall(0).args[0],
-          'mockBool',
-        )
-      })
     })
 
     describe('updateSwapAmount()', function () {
@@ -57,37 +53,21 @@ describe('swap-amount-row container', function () {
         mapDispatchToPropsObject.updateSwapAmount('mockAmount')
         assert(dispatchSpy.calledOnce)
         assert(actionSpies.updateSwapAmount.calledOnce)
-        assert.equal(
-          actionSpies.updateSwapAmount.getCall(0).args[0],
+        assert.deepStrictEqual(actionSpies.updateSwapAmount.getCall(0).args, [
           'mockAmount',
-        )
+        ])
       })
     })
 
-    describe('updateGasFeeError()', function () {
+    describe('computeSwapErrors()', function () {
       it('should dispatch an action', function () {
-        mapDispatchToPropsObject.updateGasFeeError({ some: 'data' })
+        mapDispatchToPropsObject.computeSwapErrors('mockOverrides')
         assert(dispatchSpy.calledOnce)
-        assert(duckActionSpies.updateSwapErrors.calledOnce)
-        assert.deepEqual(
-          duckActionSpies.updateSwapErrors.getCall(0).args[0],
-          { some: 'data', mockGasFeeErrorChange: true },
-        )
+        assert(actionSpies.computeSwapErrors.calledOnce)
+        assert.deepStrictEqual(actionSpies.computeSwapErrors.getCall(0).args, [
+          'mockOverrides',
+        ])
       })
     })
-
-    describe('updateSwapAmountError()', function () {
-      it('should dispatch an action', function () {
-        mapDispatchToPropsObject.updateSwapAmountError({ some: 'data' })
-        assert(dispatchSpy.calledOnce)
-        assert(duckActionSpies.updateSwapErrors.calledOnce)
-        assert.deepEqual(
-          duckActionSpies.updateSwapErrors.getCall(0).args[0],
-          { some: 'data', mockChange: true },
-        )
-      })
-    })
-
   })
-
 })

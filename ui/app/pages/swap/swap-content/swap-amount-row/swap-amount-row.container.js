@@ -1,5 +1,10 @@
 import { connect } from 'react-redux'
-import { getSwapAmount, getSwapFromAsset, getSwapQuoteEstimatedGasCost, getSwapToAsset } from '../../../../selectors'
+import {
+  getSwapAmount,
+  getSwapFromAsset,
+  getSwapQuoteEstimatedGasCost,
+  getSwapToAsset,
+} from '../../../../selectors'
 import { computeSwapErrors, updateSwapAmount } from '../../../../store/actions'
 import SwapAmountRow from './swap-amount-row.component'
 

@@ -3,182 +3,134 @@ import assert from 'assert'
 import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import SwapAmountRow from '../swap-amount-row.component.js'
-
-import SwapRowWrapper from '../../swap-row-wrapper/swap-row-wrapper.component'
-import AmountMaxButton from '../../amount-max-button/amount-max-button.container'
 import UserPreferencedTokenInput from '../../../../../components/app/user-preferenced-token-input'
+import UserPreferencedCurrencyInput from '../../../../../components/app/user-preferenced-currency-input'
+
+const ETH = {
+  name: 'Ether',
+  address: '',
+  symbol: 'ETH',
+  decimals: 18,
+}
+
+const BAT = {
+  name: 'Basic Attention Token',
+  address: '0xDEADBEEF',
+  symbol: 'BAT',
+  decimals: 18,
+}
+
+const MOCK = {
+  name: 'mockTokenName',
+  address: 'mockTokenAddress',
+  symbol: 'MOCK',
+  decimals: 18,
+}
 
 describe('SwapAmountRow Component', function () {
-  describe('validateAmount', function () {
-    it('should call updateSwapAmountError with the correct params', function () {
-      const { instance, propsMethodSpies: { updateSwapAmountError } } = shallowRenderSwapAmountRow()
+  describe('handleChange()', function () {
+    it('should call side-effect functions with correct params', function () {
+      const {
+        instance,
+        propsMethodSpies: { computeSwapErrors, updateSwapAmount, refreshQuote },
+      } = shallowRenderSwapAmountRow(ETH)
 
-      assert.equal(updateSwapAmountError.callCount, 0)
+      assert.strictEqual(computeSwapErrors.callCount, 0)
+      assert.strictEqual(updateSwapAmount.callCount, 0)
+      assert.strictEqual(refreshQuote.callCount, 0)
 
-      instance.validateAmount('someAmount')
+      instance.handleChange('someAmount')
 
-      assert.ok(updateSwapAmountError.calledOnceWithExactly({
-        amount: 'someAmount',
-        balance: 'mockBalance',
-        conversionRate: 7,
-        gasTotal: 'mockGasTotal',
-        primaryCurrency: 'mockPrimaryCurrency',
-        swapFromToken: { address: 'mockTokenAddress' },
-        tokenBalance: 'mockTokenBalance',
-      }))
-    })
-
-    it('should call updateGasFeeError if swapFromToken is truthy', function () {
-      const { instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
-
-      assert.equal(updateGasFeeError.callCount, 0)
-
-      instance.validateAmount('someAmount')
-
-      assert.ok(updateGasFeeError.calledOnceWithExactly({
-        balance: 'mockBalance',
-        conversionRate: 7,
-        gasTotal: 'mockGasTotal',
-        primaryCurrency: 'mockPrimaryCurrency',
-        swapFromToken: { address: 'mockTokenAddress' },
-        tokenBalance: 'mockTokenBalance',
-      }))
-    })
-
-    it('should call not updateGasFeeError if swapFromToken is falsey', function () {
-      const { wrapper, instance, propsMethodSpies: { updateGasFeeError } } = shallowRenderSwapAmountRow()
-
-      wrapper.setProps({ swapFromToken: null })
-
-      assert.equal(updateGasFeeError.callCount, 0)
-
-      instance.validateAmount('someAmount')
-
-      assert.equal(updateGasFeeError.callCount, 0)
-    })
-
-  })
-
-  describe('updateAmount', function () {
-
-    it('should call setMaxModeTo', function () {
-      const { instance, propsMethodSpies: { setMaxModeTo } } = shallowRenderSwapAmountRow()
-
-      assert.equal(setMaxModeTo.callCount, 0)
-
-      instance.updateAmount('someAmount')
-
-      assert.ok(setMaxModeTo.calledOnceWithExactly(false))
-    })
-
-    it('should call updateSwapAmount', function () {
-      const { instance, propsMethodSpies: { updateSwapAmount } } = shallowRenderSwapAmountRow()
-
-      assert.equal(updateSwapAmount.callCount, 0)
-
-      instance.updateAmount('someAmount')
-
+      assert.ok(
+        computeSwapErrors.calledOnceWithExactly({
+          amount: 'someAmount',
+        }),
+      )
       assert.ok(updateSwapAmount.calledOnceWithExactly('someAmount'))
+      assert.ok(refreshQuote.calledOnceWithExactly(ETH, MOCK, 'someAmount'))
     })
-
   })
 
   describe('render', function () {
-    it('should render a SwapRowWrapper component', function () {
+    it('should render as null when fromAsset is missing', function () {
       const { wrapper } = shallowRenderSwapAmountRow()
-
-      assert.equal(wrapper.find(SwapRowWrapper).length, 1)
+      assert(wrapper.isEmptyRender())
     })
 
-    it('should pass the correct props to SwapRowWrapper', function () {
-      const { wrapper } = shallowRenderSwapAmountRow()
+    it('should pass the correct props', function () {
+      const { instance } = shallowRenderSwapAmountRow(ETH)
+
+      const { amount, estimatedGasCost, fromAsset, toAsset } = instance.props
+
+      assert.strictEqual(amount, 'mockAmount')
+      assert.strictEqual(estimatedGasCost, 'mockEstimatedGasCost')
+      assert.deepStrictEqual(fromAsset, ETH)
+      assert.deepStrictEqual(toAsset, MOCK)
+    })
+
+    it('should render UserPreferencedTokenInput for BAT', function () {
       const {
-        errorType,
-        label,
-        showError,
-      } = wrapper.find(SwapRowWrapper).props()
+        wrapper,
+        instanceSpies: { handleChange },
+      } = shallowRenderSwapAmountRow(BAT)
 
-      assert.equal(errorType, 'amount')
-      assert.equal(label, 'amount_t:')
-      assert.equal(showError, false)
+      assert(wrapper.is(UserPreferencedTokenInput))
+
+      assert.strictEqual(handleChange.callCount, 0)
+      handleChange('mockNewAmount')
+      assert.ok(handleChange.calledOnceWithExactly('mockNewAmount'))
     })
 
-    it('should render an AmountMaxButton as the first child of the SwapRowWrapper', function () {
-      const { wrapper } = shallowRenderSwapAmountRow()
-
-      assert(wrapper.find(SwapRowWrapper).childAt(0).is(AmountMaxButton))
-    })
-
-    it('should render a UserPreferencedTokenInput as the second child of the SwapRowWrapper', function () {
-      const { wrapper } = shallowRenderSwapAmountRow()
-
-      assert(wrapper.find(SwapRowWrapper).childAt(1).is(UserPreferencedTokenInput))
-    })
-
-    it('should render the UserPreferencedTokenInput with the correct props', function () {
-      const { wrapper, instanceSpies: { updateGas, updateAmount, validateAmount } } = shallowRenderSwapAmountRow()
+    it('should render UserPreferencedCurrencyInput for ETH', function () {
       const {
-        onChange,
-        error,
-        value,
-      } = wrapper.find(SwapRowWrapper).childAt(1).props()
+        wrapper,
+        instanceSpies: { handleChange },
+      } = shallowRenderSwapAmountRow(ETH)
 
-      assert.equal(error, false)
-      assert.equal(value, 'mockAmount')
-      assert.equal(updateGas.callCount, 0)
-      assert.equal(updateAmount.callCount, 0)
-      assert.equal(validateAmount.callCount, 0)
+      assert(wrapper.is(UserPreferencedCurrencyInput))
 
-      onChange('mockNewAmount')
-
-      assert.ok(updateGas.calledOnceWithExactly('mockNewAmount'))
-      assert.ok(updateAmount.calledOnceWithExactly('mockNewAmount'))
-      assert.ok(validateAmount.calledOnceWithExactly('mockNewAmount'))
+      assert.strictEqual(handleChange.callCount, 0)
+      handleChange('mockNewAmount')
+      assert.ok(handleChange.calledOnceWithExactly('mockNewAmount'))
     })
   })
 })
 
-function shallowRenderSwapAmountRow () {
-  const setMaxModeTo = sinon.spy()
-  const updateGasFeeError = sinon.spy()
+function shallowRenderSwapAmountRow (fromAsset) {
   const updateSwapAmount = sinon.spy()
-  const updateSwapAmountError = sinon.spy()
-  const wrapper = shallow((
+  const refreshQuote = sinon.spy()
+  const computeSwapErrors = sinon.spy()
+
+  const wrapper = shallow(
     <SwapAmountRow
       amount="mockAmount"
-      balance="mockBalance"
-      conversionRate={7}
-      convertedCurrency="mockConvertedCurrency"
-      gasTotal="mockGasTotal"
-      inError={false}
-      primaryCurrency="mockPrimaryCurrency"
-      swapFromToken={ { address: 'mockTokenAddress' } }
-      setMaxModeTo={setMaxModeTo}
-      tokenBalance="mockTokenBalance"
-      updateGasFeeError={updateGasFeeError}
+      estimatedGasCost="mockEstimatedGasCost"
+      fromAsset={fromAsset}
+      toAsset={{
+        name: 'mockTokenName',
+        address: 'mockTokenAddress',
+        symbol: 'MOCK',
+        decimals: 18,
+      }}
       updateSwapAmount={updateSwapAmount}
-      updateSwapAmountError={updateSwapAmountError}
-      updateGas={() => {}}
-    />
-  ), { context: { t: (str) => str + '_t' } })
+      refreshQuote={refreshQuote}
+      computeSwapErrors={computeSwapErrors}
+    />,
+    { context: { t: (str) => str + '_t' } },
+  )
   const instance = wrapper.instance()
-  const updateAmount = sinon.spy(instance, 'updateAmount')
-  const updateGas = sinon.spy(instance, 'updateGas')
-  const validateAmount = sinon.spy(instance, 'validateAmount')
+  const handleChange = sinon.spy(instance, 'handleChange')
 
   return {
     instance,
     wrapper,
     propsMethodSpies: {
-      setMaxModeTo,
-      updateGasFeeError,
       updateSwapAmount,
-      updateSwapAmountError,
+      refreshQuote,
+      computeSwapErrors,
     },
     instanceSpies: {
-      updateAmount,
-      updateGas,
-      validateAmount,
+      handleChange,
     },
   }
 }

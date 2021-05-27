@@ -283,9 +283,9 @@ export function computeSwapErrors (overrides) {
   return async (dispatch, getState) => {
     const state = getState()
 
-    const data = {
-      amount: getSwapAmount(state),
-      balance: getSelectedAccount(state)?.balance || '0x0',
+    let data = {
+      amount: getSwapAmount(state) || '0',
+      balance: getSelectedAccount(state)?.balance || '0',
       conversionRate: getSwapConversionRate(state),
       estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
       primaryCurrency: getSwapPrimaryCurrency(state),
@@ -294,13 +294,19 @@ export function computeSwapErrors (overrides) {
       ...overrides,
     }
 
+    data = {
+      ...data,
+      amount: ethUtil.addHexPrefix(data.amount),
+      balance: ethUtil.addHexPrefix(data.balance),
+    }
+
     const { fromAsset, amount } = data
     if (!fromAsset) {
       await dispatch(updateSwapErrors({ amount: null, gasFee: null }))
       return
     }
 
-    if (!amount || amount === '0') {
+    if (amount === '0x0') {
       await dispatch(updateSwapErrors({ amount: null }))
       await dispatch(updateSwapErrors(getGasFeeErrorObject(data)))
       return

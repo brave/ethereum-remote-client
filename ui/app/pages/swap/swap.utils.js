@@ -15,6 +15,7 @@ import {
   INSUFFICIENT_TOKENS_ERROR,
   MIN_GAS_LIMIT_HEX,
   NEGATIVE_ETH_ERROR,
+  BALANCE_FETCH_ERROR,
   SIMPLE_GAS_COST,
   TOKEN_TRANSFER_FUNCTION_SIGNATURE,
 } from './swap.constants'
@@ -100,6 +101,10 @@ function getAmountErrorObject ({
   fromAsset,
   tokenBalance,
 }) {
+  if (fromAsset.address && tokenBalance === null) {
+    return { amount: BALANCE_FETCH_ERROR }
+  }
+
   let insufficientFunds = false
   if (estimatedGasCost && conversionRate && !fromAsset.address) {
     insufficientFunds = !isBalanceSufficient({

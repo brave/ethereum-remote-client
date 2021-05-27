@@ -26,6 +26,7 @@ const INSUFFICIENT_FUNDS_GAS_ERROR = 'insufficientFundsGas'
 const INSUFFICIENT_FUNDS_ERROR = 'insufficientFunds'
 const INSUFFICIENT_TOKENS_ERROR = 'insufficientTokens'
 const NEGATIVE_ETH_ERROR = 'negativeETH'
+const BALANCE_FETCH_ERROR = 'balanceFetchError'
 const INVALID_RECIPIENT_ADDRESS_ERROR = 'invalidAddressRecipient'
 const INVALID_RECIPIENT_ADDRESS_NOT_ETH_NETWORK_ERROR = 'invalidAddressRecipientNotEthNetwork'
 const REQUIRED_ERROR = 'required'
@@ -48,6 +49,7 @@ export {
   MIN_GAS_PRICE_HEX,
   MIN_GAS_TOTAL,
   NEGATIVE_ETH_ERROR,
+  BALANCE_FETCH_ERROR,
   REQUIRED_ERROR,
   SIMPLE_GAS_COST,
   TOKEN_TRANSFER_FUNCTION_SIGNATURE,

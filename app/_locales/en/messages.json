@@ -824,6 +824,9 @@
   "insufficientFundsGas": {
     "message": "Insufficient funds for gas."
   },
+  "balanceFetchError": {
+    "message": "Balance fetch error."
+  },
   "invalidAddress": {
     "message": "Invalid address"
   },

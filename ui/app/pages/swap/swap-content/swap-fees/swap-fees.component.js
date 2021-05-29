@@ -6,6 +6,7 @@ import { PRIMARY } from '../../../../helpers/constants/common'
 import { conversionUtil } from '../../../../helpers/utils/conversion-util'
 import { AssetPropTypes } from '../../prop-types'
 import CustomizeGasButton from '../swap-gas-customize'
+import config from '../../swap.config'
 
 export default class SwapFees extends Component {
   static propTypes = {
@@ -68,7 +69,7 @@ export default class SwapFees extends Component {
                 </td>
               </tr>
               <tr>
-                <td colSpan="3">Quote includes a 1% Brave fee</td>
+                <td colSpan="3">Quote includes a {config.buyTokenPercentageFee}% Brave fee</td>
               </tr>
             </tbody>
           </table>

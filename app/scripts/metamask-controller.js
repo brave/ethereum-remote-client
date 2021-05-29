@@ -40,7 +40,7 @@
  import PersonalMessageManager from './lib/personal-message-manager'
  import TypedMessageManager from './lib/typed-message-manager'
  import TransactionController from './controllers/transactions'
- import SwapsController from './controllers/swaps'
+ import SwapsController from './controllers/swap'
  import TokenRatesController from './controllers/token-rates'
  import DetectTokensController from './controllers/detect-tokens'
  import { PermissionsController } from './controllers/permissions'

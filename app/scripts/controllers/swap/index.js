@@ -5,17 +5,14 @@ import fetch from 'node-fetch'
 import ObservableStore from 'obs-store'
 // import process from 'process'
 
-const API_QUOTE_URL = 'https://api.0x.org/swap/v1/quote'
-// TODO: THIS IS MY ADDRESS AND SHOULD BE CHANGED BEFORE GO LIVE
-// TODO: GENERATE ADDRESS
-const feeAddress = '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a'
-const buyTokenPercentageFee = 0.0875
+import config from '../../../../ui/app/pages/swap/swap.config'
+
 const slippagePercentage = 0.0875
 const WETHAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
 const BATAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
 // const { FORKED } = process.env
 
-const { abi: WETH_ABI } = require('./swap-utils/IWETH.json')
+const { abi: WETH_ABI } = require('./utils/IWETH.json')
 
 export default class SwapsController {
   constructor(opts) {
@@ -50,14 +47,14 @@ export default class SwapsController {
       sellAmount: amount,
       buyToken: toAssetSymbol,
       sellToken: fromAssetSymbol,
-      buyTokenPercentageFee: buyTokenPercentageFee,
+      buyTokenPercentageFee: config.buyTokenPercentageFee,
       slippagePercentage: slippagePercentage,
       // takerAddress: this.taker,
-      feeRecipient: feeAddress,
+      feeRecipient: config.feeRecipient,
       gasPrice,
     })
 
-    const quoteUrl = `${API_QUOTE_URL}?${qs}`
+    const quoteUrl = `${config.swapAPIQuoteURL}?${qs}`
     const response = await fetch(quoteUrl)
     return response.json()
   }

@@ -20,6 +20,8 @@ export default class SwapContent extends Component {
     fetchSwapQuote: PropTypes.func.isRequired,
     quoteGasPrice: PropTypes.string,
     globalGasPrice: PropTypes.string,
+    customAllowance: PropTypes.string,
+    setCustomAllowance: PropTypes.func.isRequired,
   }
 
   state = { seconds: countdownLimit }
@@ -91,11 +93,16 @@ export default class SwapContent extends Component {
 
   render () {
     const { seconds } = this.state
+    const { customAllowance, setCustomAllowance } = this.props
 
     return (
       <PageContainerContent>
         <div className="swap-v2__form">
-          <SwapAssetRow refreshQuote={this.refreshQuote} />
+          <SwapAssetRow
+            refreshQuote={this.refreshQuote}
+            customAllowance={customAllowance}
+            setCustomAllowance={setCustomAllowance}
+          />
           <SwapQuote seconds={seconds} />
           <SwapFees refreshQuote={this.refreshQuote} />
         </div>

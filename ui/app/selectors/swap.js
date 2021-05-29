@@ -1,6 +1,7 @@
 import abi from 'human-standard-token-abi'
 import { getSelectedAccount, getSelectedAddress, getTargetAccount } from '.'
-import { multiplyCurrencies } from '../helpers/utils/conversion-util'
+import { conversionGTE, multiplyCurrencies } from '../helpers/utils/conversion-util'
+import { decimalToHex } from '../pages/swap/swap.utils'
 
 export function getSwapBlockGasLimit (state) {
   return state.metamask.currentBlockGasLimit
@@ -189,6 +190,40 @@ export function getSwapToTokenAddress (state) {
   return getSwapToAsset(state)?.address
 }
 
+export function getSwapTransactionObject (state) {
+  const quote = getSwapQuote(state)
+  if (!quote) {
+    return
   }
 
+  return {
+    from: getSelectedAddress(state),
+    to: quote.to,
+    value: decimalToHex(quote.value),
+    gas: decimalToHex(quote.gas),
+    gasPrice: decimalToHex(quote.gasPrice),
+    data: quote.data,
+  }
+}
+
+export function isSwapFromTokenAssetAllowanceEnough (state) {
+  const amount = getSwapAmount(state)
+  const fromTokenAssetAllowance = getSwapFromTokenAssetAllowance(state)
+
+  if (!amount || !fromTokenAssetAllowance) {
+    return true
+  }
+
+  const hasSufficientAllowance = conversionGTE(
+    {
+      value: fromTokenAssetAllowance,
+      fromNumericBase: 'hex',
+    },
+    {
+      value: amount,
+      fromNumericBase: 'hex',
+    },
+  )
+
+  return fromTokenAssetAllowance !== '0' && hasSufficientAllowance
 }

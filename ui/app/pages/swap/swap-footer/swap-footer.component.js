@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerFooter from '../../../components/ui/page-container/page-container-footer'
-import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
+import { AssetPropTypes } from '../prop-types'
 
 export default class SwapFooter extends Component {
 
   static propTypes = {
-    amount: PropTypes.string,
-    data: PropTypes.string,
-    from: PropTypes.object,
-    gasLimit: PropTypes.string,
-    gasPrice: PropTypes.string,
-    history: PropTypes.object,
+    transaction: PropTypes.object,
     inError: PropTypes.bool,
-    fromAsset: PropTypes.object,
     sign: PropTypes.func,
-    to: PropTypes.string,
     swapErrors: PropTypes.object,
-    gasEstimateType: PropTypes.string,
-    gasIsLoading: PropTypes.bool,
+    customAllowance: PropTypes.string,
+    fromAsset: AssetPropTypes,
+    isSwapFromTokenAssetAllowanceEnough: PropTypes.bool,
+    approve: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -29,20 +24,21 @@ export default class SwapFooter extends Component {
   async onSubmit (event) {
     event.preventDefault()
     const {
-      amount,
-      data,
-      from: { address: from },
-      gasLimit: gas,
-      gasPrice,
-      fromAsset,
+      transaction,
       sign,
-      to,
-      history,
-      gasEstimateType,
+      approve,
+      isSwapFromTokenAssetAllowanceEnough,
+      customAllowance,
+      fromAsset,
     } = this.props
     const { metricsEvent } = this.context
 
-    const promise = sign({ data, fromAsset, to, amount, from, gas, gasPrice })
+    let promise
+    if (fromAsset.address && !isSwapFromTokenAssetAllowanceEnough) {
+      promise = approve(customAllowance)
+    } else {
+      promise = sign(transaction)
+    }
 
     Promise.resolve(promise)
       .then(() => {
@@ -53,17 +49,18 @@ export default class SwapFooter extends Component {
             name: 'Complete',
           },
           customVariables: {
-            gasChanged: gasEstimateType,
+            gasChanged: '???',
           },
         })
-        history.push(CONFIRM_TRANSACTION_ROUTE)
       })
   }
 
   componentDidUpdate (prevProps) {
     const { inError, swapErrors } = this.props
+    const { inError: prevInError } = prevProps
+
     const { metricsEvent } = this.context
-    if (!prevProps.inError && inError) {
+    if (!prevInError && inError) {
       const errorField = Object.keys(swapErrors).find((key) => swapErrors[key])
       const errorMessage = swapErrors[errorField]
 
@@ -94,8 +91,8 @@ export default class SwapFooter extends Component {
      *  - Gas limit is greater than 21000.
      */
 
-    const { inError, gasIsLoading } = this.props
-    return inError || gasIsLoading
+    const { inError } = this.props
+    return inError
   }
 
   render () {

@@ -1,14 +1,17 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
 import {
-  getSelectedAccount, getSwapAmount,
-  getSwapFromAsset, getSwapFromTokenAssetAllowance,
+  getSelectedAccount,
+  getSwapAmount,
+  getSwapFromAsset,
+  getSwapFromTokenAssetAllowance,
   getSwapFromTokenAssetBalance,
   getSwapQuote,
   getSwapToAsset,
 } from '../../../../selectors'
 import { computeSwapErrors, showModal, updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
 import { hexAmountToDecimal } from '../../swap.utils'
+import { ethers } from 'ethers'
 
 function mapStateToProps (state) {
   return {
@@ -41,6 +44,9 @@ function mapDispatchToProps (dispatch) {
         ? hexAmountToDecimal(fromTokenAssetBalance, fromAsset)
         : '0'
 
+      const divisor = ethers.BigNumber.from(10).pow(fromAsset.decimals)
+      const maxAllowance = ethers.BigNumber.from(2).pow(256).sub(1).div(divisor)
+
       dispatch(
         showModal({
           name: 'EDIT_APPROVAL_PERMISSION',
@@ -48,7 +54,7 @@ function mapDispatchToProps (dispatch) {
           decimals: fromAsset.decimals,
           origin: '0x Exchange Proxy',
           setCustomAmount: setCustomAllowance,
-          tokenAmount: fromTokenAssetBalanceDecimal,
+          tokenAmount: maxAllowance,
           tokenBalance: fromTokenAssetBalanceDecimal,
           tokenSymbol: fromAsset.symbol,
         }),

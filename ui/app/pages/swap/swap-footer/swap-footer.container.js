@@ -1,93 +1,37 @@
 import { connect } from 'react-redux'
-import ethUtil from 'ethereumjs-util'
+import { compose } from 'redux'
+import { withRouter } from 'react-router-dom'
 
-import { addToAddressBook, clearSwap, signTokenTx, signTx } from '../../../store/actions'
+import { approveAllowance, clearSwap, signTx } from '../../../store/actions'
 import {
-  getDefaultActiveButtonIndex,
-  getGasIsLoading,
-  getGasPrice,
-  getRenderableEstimateDataForSmallButtonsFromGWEI,
-  getSwapAmount,
-  getSwapEditingTransactionId,
   getSwapErrors,
   getSwapFromAsset,
-  getSwapFromObject,
-  getSwapFromTokenBalance,
-  getSwapQuoteData,
-  getSwapQuoteGas,
-  getSwapQuoteGasLimit,
-  getSwapQuoteGasPrice,
-  getSwapQuoteTo,
-  getSwapQuoteValue,
-  getSwapToAccounts,
-  getSwapToTokenBalance,
-  getUnapprovedTxs,
+  getSwapTransactionObject,
   isSwapFormInError,
+  isSwapFromTokenAssetAllowanceEnough,
 } from '../../../selectors'
 import SwapFooter from './swap-footer.component'
-import { addressIsNew, constructTxParams } from './swap-footer.utils'
-import { getMostRecentOverviewPage } from '../../../ducks/history/history'
-
-export default connect(mapStateToProps, mapDispatchToProps)(SwapFooter)
 
 function mapStateToProps (state) {
-
-  const gasButtonInfo = getRenderableEstimateDataForSmallButtonsFromGWEI(state)
-  const gasPrice = getGasPrice(state)
-  const activeButtonIndex = getDefaultActiveButtonIndex(gasButtonInfo, gasPrice)
-  const gasEstimateType = activeButtonIndex >= 0
-    ? gasButtonInfo[activeButtonIndex].gasEstimateType
-    : 'custom'
-  const editingTransactionId = getSwapEditingTransactionId(state)
-
   return {
-    amount: getSwapAmount(state),
-    data: getSwapQuoteData(state),
-    editingTransactionId,
-    from: getSwapFromObject(state),
-    gasLimit: getSwapQuoteGasLimit(state),
-    gasPrice: getSwapQuoteGasPrice(state),
-    gas: getSwapQuoteGas(state),
-    inError: isSwapFormInError(state),
-    fromAsset: getSwapFromAsset(state),
-    to: getSwapQuoteTo(state),
-    value: getSwapQuoteValue(state),
-    toAccounts: getSwapToAccounts(state),
-    tokenFromBalance: getSwapFromTokenBalance(state),
-    tokenToBalance: getSwapToTokenBalance(state),
-    unapprovedTxs: getUnapprovedTxs(state),
     swapErrors: getSwapErrors(state),
-    gasEstimateType,
-    gasIsLoading: getGasIsLoading(state),
-    mostRecentOverviewPage: getMostRecentOverviewPage(state),
+    inError: isSwapFormInError(state),
+    transaction: getSwapTransactionObject(state),
+    isSwapFromTokenAssetAllowanceEnough: isSwapFromTokenAssetAllowanceEnough(state),
+    fromAsset: getSwapFromAsset(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
     clearSwap: () => dispatch(clearSwap()),
-    sign: ({ fromAsset, to, amount, from, gas, gasPrice, data }) => {
-      const txParams = constructTxParams({
-        amount,
-        data,
-        from,
-        gas,
-        gasPrice,
-        fromAsset,
-        to,
-      })
-
-      fromAsset.address
-        ? dispatch(signTokenTx(fromAsset.address, to, amount, txParams))
-        : dispatch(signTx(txParams))
-    },
-
-    addToAddressBookIfNew: (newAddress, toAccounts, nickname = '') => {
-      const hexPrefixedAddress = ethUtil.addHexPrefix(newAddress)
-      if (addressIsNew(toAccounts, hexPrefixedAddress)) {
-        // TODO: nickname, i.e. addToAddressBook(recipient, nickname)
-        dispatch(addToAddressBook(hexPrefixedAddress, nickname))
-      }
-    },
+    sign: (transaction) => dispatch(signTx(transaction)),
+    approve: (allowance) => dispatch(approveAllowance(allowance)),
   }
 }
+
+
+export default compose(
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps),
+)(SwapFooter)

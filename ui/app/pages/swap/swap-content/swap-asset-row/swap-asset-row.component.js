@@ -123,7 +123,7 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote}/> {/** TODO (@onyb): add updateGas prop */}
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote}/>
           </div>
         </div>
 

@@ -7,6 +7,7 @@ import SwapAssetRow from './swap-asset-row'
 import SwapQuote from './swap-quote'
 import SwapFees from './swap-fees'
 import { AssetPropTypes } from '../prop-types'
+import { decimalToHex } from '../swap.utils'
 
 // Refresh Swap quote every 40 seconds.
 const countdownLimit = 40
@@ -17,6 +18,8 @@ export default class SwapContent extends Component {
     toAsset: AssetPropTypes,
     amount: PropTypes.string,
     fetchSwapQuote: PropTypes.func.isRequired,
+    quoteGasPrice: PropTypes.string,
+    globalGasPrice: PropTypes.string,
   }
 
   state = { seconds: countdownLimit }
@@ -30,6 +33,17 @@ export default class SwapContent extends Component {
 
   componentWillUnmount () {
     this.endTimer()
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    const { globalGasPrice: prevGlobalGasPrice } = prevProps
+    const { globalGasPrice, fromAsset, toAsset, amount } = this.props
+
+    if (prevGlobalGasPrice !== null && globalGasPrice === null) {
+      const gasPrice = parseInt(prevGlobalGasPrice, 16).toString()
+      this.refreshQuote(fromAsset, toAsset, amount, gasPrice, true)
+    }
   }
 
   startTimer = () => {
@@ -48,6 +62,7 @@ export default class SwapContent extends Component {
     fromAsset,
     toAsset,
     amount = this.props.amount,
+    gasPrice = this.props.quoteGasPrice,
     showLoading = true,
   ) => {
     const { fetchSwapQuote } = this.props
@@ -55,9 +70,9 @@ export default class SwapContent extends Component {
 
     // Fetch live Swap quote if all inputs are valid.
     fromAsset &&
-      toAsset &&
-      amount !== '0' &&
-      fetchSwapQuote(fromAsset, toAsset, amount, showLoading)
+    toAsset &&
+    amount !== '0' &&
+    fetchSwapQuote(fromAsset, toAsset, amount, gasPrice && decimalToHex(gasPrice), showLoading)
 
     this.startTimer()
   }
@@ -69,8 +84,8 @@ export default class SwapContent extends Component {
 
     // Check if we're at zero.
     if (seconds < 0) {
-      const { fromAsset, toAsset, amount } = this.props
-      this.refreshQuote(fromAsset, toAsset, amount, false)
+      const { fromAsset, toAsset, amount, quoteGasPrice } = this.props
+      this.refreshQuote(fromAsset, toAsset, amount, quoteGasPrice, false)
     }
   }
 
@@ -82,7 +97,7 @@ export default class SwapContent extends Component {
         <div className="swap-v2__form">
           <SwapAssetRow refreshQuote={this.refreshQuote} />
           <SwapQuote seconds={seconds} />
-          <SwapFees />
+          <SwapFees refreshQuote={this.refreshQuote} />
         </div>
       </PageContainerContent>
     )

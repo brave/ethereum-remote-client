@@ -3,7 +3,7 @@ import proxyquire from 'proxyquire'
 
 let mapStateToProps
 
-proxyquire('../swap-row-error-message.container.js', {
+proxyquire('../swap-error-message.container.js', {
   'react-redux': {
     connect: (ms) => {
       mapStateToProps = ms
@@ -13,7 +13,7 @@ proxyquire('../swap-row-error-message.container.js', {
   '../../../../../selectors': { getSwapErrors: (s) => `mockErrors:${s}` },
 })
 
-describe('swap-row-error-message container', function () {
+describe('swap-error-message container', function () {
 
   describe('mapStateToProps()', function () {
 

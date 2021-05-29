@@ -5,7 +5,7 @@ import SwapContent from '../swap-content.component.js'
 
 import PageContainerContent from '../../../../components/ui/page-container/page-container-content.component'
 import SwapAmountRow from '../swap-amount-row/swap-amount-row.container'
-import SwapGasRow from '../swap-gas-row/swap-gas-row.container'
+import SwapGasRow from '../swap-gas-customize/swap-gas-customize.container'
 import SwapHexDataRow from '../swap-hex-data-row/swap-hex-data-row.container'
 import SwapAssetRow from '../swap-asset-row/swap-asset-row.container'
 import Dialog from '../../../../components/ui/dialog'

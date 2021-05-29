@@ -1,12 +1,6 @@
 import abi from 'human-standard-token-abi'
-import {
-  accountsWithSwapEtherInfoSelector,
-  getAddressBook,
-  getSelectedAccount,
-  getTargetAccount,
-  getAveragePriceEstimateInHexWEI,
-} from '.'
-import { calcGasTotal } from '../pages/swap/swap.utils'
+import { accountsWithSwapEtherInfoSelector, getAddressBook, getSelectedAccount, getTargetAccount } from '.'
+import { multiplyCurrencies } from '../helpers/utils/conversion-util'
 
 export function getSwapBlockGasLimit (state) {
   return state.metamask.currentBlockGasLimit
@@ -24,16 +18,31 @@ export function getSwapCurrentNetwork (state) {
   return state.metamask.network
 }
 
-export function getSwapGasLimit (state) {
+export function getSwapQuoteGasLimit (state) {
   return state.metamask.swap.quote?.gas || '0'
 }
 
 export function getSwapGasPrice (state) {
-  return state.metamask.swap.quote?.gasPrice || getAveragePriceEstimateInHexWEI(state)
+  return state.metamask.swap.gasPrice
 }
 
-export function getSwapGasTotal (state) {
-  return calcGasTotal(getSwapGasLimit(state), getSwapGasPrice(state))
+export function getSwapGasLimit (state) {
+  return state.metamask.swap.gasLimit
+}
+
+export function getSwapGasCost (state) {
+  const gasLimit = getSwapQuoteGas(state)
+  const gasPrice = getSwapGasPrice(state)
+
+  if (!gasLimit || !gasPrice) {
+    return
+  }
+
+  return multiplyCurrencies(gasLimit, gasPrice, {
+    toNumericBase: 'hex',
+    multiplicandBase: 10,
+    multiplierBase: 16,
+  })
 }
 
 export function getSwapPrimaryCurrency (state) {
@@ -82,6 +91,18 @@ export function getSwapQuoteGas (state) {
   return state.metamask.swap.quote?.gas
 }
 
+export function getSwapQuoteEstimatedGasCost (state) {
+  const gasLimit = getSwapQuoteGas(state)
+  const estimatedGasPrice = getSwapQuoteGasPrice(state)
+
+  if (!gasLimit || !estimatedGasPrice) {
+    return
+  }
+
+  const gasCost = parseInt(gasLimit) * parseInt(estimatedGasPrice)
+  return gasCost.toString(16)
+}
+
 
 export function getSwapFromTokenContract (state) {
   const swapFromTokenAddress = getSwapFromTokenAddress(state)
@@ -121,6 +142,11 @@ export function getSwapFrom (state) {
   return state.metamask.swap.from
 }
 
+export function getSwapFromTokenAssetBalance (state) {
+  return state.metamask.swap.fromTokenAssetBalance
+}
+
+// TODO: remove this
 export function getSwapFromBalance (state) {
   const fromAccount = getSwapFromObject(state)
   return fromAccount.balance

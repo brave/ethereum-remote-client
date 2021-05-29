@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Customize"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -817,6 +820,12 @@
   },
   "insufficientTokens": {
     "message": "Insufficient tokens."
+  },
+  "insufficientFundsGas": {
+    "message": "Insufficient funds for gas."
+  },
+  "balanceFetchError": {
+    "message": "Balance fetch error."
   },
   "invalidAddress": {
     "message": "Invalid address"

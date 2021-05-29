@@ -39,9 +39,6 @@ export default function reduceMetamask (state = {}, action) {
       gasLimit: null,
       gasPrice: null,
       gasTotal: null,
-      tokenBalance: '0x0',
-      tokenToBalance: '0x0',
-      tokenFromBalance: '0x0',
       from: '',
       to: '',
       quote: null,
@@ -52,6 +49,7 @@ export default function reduceMetamask (state = {}, action) {
         'address': '',
         'decimals': 18,
       },
+      fromTokenAssetBalance: null,
       toAsset: null,
       amount: '0',
       memo: '',
@@ -208,6 +206,24 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+    case actionConstants.UPDATE_SWAP_GAS_LIMIT:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasLimit: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_GAS_PRICE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasPrice: action.value,
+        },
+      }
+
     case actionConstants.UPDATE_SWAP_AMOUNT:
       return {
         ...metamaskState,
@@ -276,30 +292,25 @@ export default function reduceMetamask (state = {}, action) {
       const newSwapFrom = {
         ...metamaskState.swap,
         fromAsset: action.value,
-      }
-
-      // erase token-related state when switching back to native currency
-      if (!newSwapFrom.fromAsset?.address) {
-        Object.assign(newSwapFrom, {
-          tokenFromBalance: null,
-        })
+        amount: '0',
       }
 
       return Object.assign(metamaskState, {
         swap: newSwapFrom,
       })
 
+    case actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_BALANCE:
+      return Object.assign(metamaskState, {
+        swap: {
+          ...metamaskState.swap,
+          fromTokenAssetBalance: action.value,
+        },
+      })
+
     case actionConstants.UPDATE_SWAP_TO_ASSET:
       const newSwapTo = {
         ...metamaskState.swap,
         toAsset: action.value,
-      }
-
-      // erase token-related state when switching back to native currency
-      if (!newSwapTo.toAsset?.address) {
-        Object.assign(newSwapTo, {
-          tokenToBalance: null,
-        })
       }
 
       return Object.assign(metamaskState, {
@@ -373,8 +384,6 @@ export default function reduceMetamask (state = {}, action) {
           gasLimit: null,
           gasPrice: null,
           gasTotal: null,
-          tokenToBalance: null,
-          tokenFromBalance: null,
           from: '',
           to: '',
           amount: '0x0',

@@ -10,7 +10,7 @@ const actionSpies = {
   updateSwapAmount: sinon.spy(),
 }
 
-proxyquire('../swap-amount-row.container.js', {
+proxyquire('../amount-max-button.container.js', {
   'react-redux': {
     connect: (ms, md) => {
       mapStateToProps = ms
@@ -19,22 +19,24 @@ proxyquire('../swap-amount-row.container.js', {
     },
   },
   '../../../../selectors': {
-    getSwapAmount: (s) => `mockAmount:${s}`,
+    getSelectedAccount: (s) => `mockAccount:${s}`,
     getSwapFromAsset: (s) => `mockFromAsset:${s}`,
     getSwapToAsset: (s) => `mockToAsset:${s}`,
     getSwapQuoteEstimatedGasCost: (s) => `mockEstimatedGasCost:${s}`,
+    getSwapFromTokenAssetBalance: (s) => `mockFromTokenAssetBalance:${s}`,
   },
   '../../../../store/actions': actionSpies,
 })
 
-describe('swap-amount-row container', function () {
+describe('amount-max-button container', function () {
   describe('mapStateToProps()', function () {
     it('should map the correct properties to props', function () {
       assert.deepStrictEqual(mapStateToProps('mockState'), {
-        amount: 'mockAmount:mockState',
+        account: 'mockAccount:mockState',
         fromAsset: 'mockFromAsset:mockState',
         toAsset: 'mockToAsset:mockState',
         estimatedGasCost: 'mockEstimatedGasCost:mockState',
+        fromTokenAssetBalance: 'mockFromTokenAssetBalance:mockState',
       })
     })
   })
@@ -48,25 +50,22 @@ describe('swap-amount-row container', function () {
       mapDispatchToPropsObject = mapDispatchToProps(dispatchSpy)
     })
 
-    describe('updateSwapAmount()', function () {
+    describe('setAmount()', function () {
       it('should dispatch an action', function () {
-        mapDispatchToPropsObject.updateSwapAmount('mockAmount')
-        assert(dispatchSpy.calledOnce)
-        assert(actionSpies.updateSwapAmount.calledOnce)
-        assert.deepStrictEqual(actionSpies.updateSwapAmount.getCall(0).args, [
-          'mockAmount',
-        ])
-      })
-    })
+        mapDispatchToPropsObject.setAmount(11).then(function () {
+          assert(dispatchSpy.calledTwice)
 
-    describe('computeSwapErrors()', function () {
-      it('should dispatch an action', function () {
-        mapDispatchToPropsObject.computeSwapErrors('mockOverrides')
-        assert(dispatchSpy.calledOnce)
-        assert(actionSpies.computeSwapErrors.calledOnce)
-        assert.deepStrictEqual(actionSpies.computeSwapErrors.getCall(0).args, [
-          'mockOverrides',
-        ])
+          assert(actionSpies.computeSwapErrors.calledOnce)
+          assert.deepStrictEqual(
+            actionSpies.computeSwapErrors.getCall(0).args,
+            [{ amount: 11 }],
+          )
+
+          assert(actionSpies.updateSwapAmount.calledOnce)
+          assert.deepStrictEqual(actionSpies.updateSwapAmount.getCall(0).args, [
+            11,
+          ])
+        })
       })
     })
   })

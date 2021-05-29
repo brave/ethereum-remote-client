@@ -1,27 +1,31 @@
 import { connect } from 'react-redux'
 import {
-  getSwapAmount,
+  getSelectedAccount,
   getSwapFromAsset,
+  getSwapFromTokenAssetBalance,
   getSwapQuoteEstimatedGasCost,
   getSwapToAsset,
 } from '../../../../selectors'
 import { computeSwapErrors, updateSwapAmount } from '../../../../store/actions'
-import SwapAmountRow from './swap-amount-row.component'
+import AmountMaxButton from './amount-max-button.component'
 
 function mapStateToProps (state) {
   return {
-    amount: getSwapAmount(state),
+    account: getSelectedAccount(state),
     fromAsset: getSwapFromAsset(state),
     toAsset: getSwapToAsset(state),
     estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
+    fromTokenAssetBalance: getSwapFromTokenAssetBalance(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    updateSwapAmount: (newAmount) => dispatch(updateSwapAmount(newAmount)),
-    computeSwapErrors: (overrides) => dispatch(computeSwapErrors(overrides)),
+    setAmount: async (value) => {
+      await dispatch(updateSwapAmount(value))
+      await dispatch(computeSwapErrors({ amount: value }))
+    },
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SwapAmountRow)
+export default connect(mapStateToProps, mapDispatchToProps)(AmountMaxButton)

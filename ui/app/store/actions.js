@@ -17,14 +17,24 @@ import { getEnvironmentType } from '../../../app/scripts/lib/util'
 import * as actionConstants from './actionConstants'
 import {
   getPermittedAccountsForCurrentTab,
+  getSelectedAccount,
   getSelectedAddress,
+  getSwapAmount,
+  getSwapConversionRate,
+  getSwapFromAsset,
+  getSwapFromTokenAssetBalance,
+  getSwapFromTokenContract,
+  getSwapPrimaryCurrency,
+  getSwapQuoteEstimatedGasCost,
 } from '../selectors'
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
-import { dispatch } from 'd3-dispatch'
+import { updateSwapErrors } from '../ducks/swap/swap.duck'
+import { getAmountErrorObject, getGasFeeErrorObject } from '../pages/swap/swap.utils'
 
 let background = null
 let promisifiedBackground = null
+
 export function _setBackgroundConnection (backgroundConnection) {
   background = backgroundConnection
   promisifiedBackground = pify(background)
@@ -231,19 +241,25 @@ export function verifySeedPhrase () {
 //   }
 // }
 
-export function fetchSwapQuote (fromAsset, toAsset, amount) {
-  log.debug('action - fetchSwapQuote')
+export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
   return async (dispatch) => {
     let quote = null
 
+    const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
+
     try {
-      quote = await promisifiedBackground.quote(fromAsset.symbol, toAsset.symbol, parseInt(amount, 16))
+      quote = await promisifiedBackground.quote(
+        fromAsset.symbol, toAsset.symbol, parseInt(amount, 16), gasPriceDecimal,
+      )
     } catch (error) {
       log.error(error)
       dispatch(displayWarning(error.message))
       throw error
     }
-    dispatch(updateSwapQuote(quote))
+
+    await dispatch(updateSwapQuote(quote))
+
+    console.log('Fetching with gas: ', gasPriceDecimal)
   }
 }
 
@@ -260,6 +276,55 @@ export function fillOrder (quote) {
     }
     // dispatch(updateSwapQuote(newState.quotes))
     return newState
+  }
+}
+
+export function computeSwapErrors (overrides) {
+  return async (dispatch, getState) => {
+    const state = getState()
+
+    let data = {
+      amount: getSwapAmount(state) || '0',
+      balance: getSelectedAccount(state)?.balance || '0',
+      conversionRate: getSwapConversionRate(state),
+      estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
+      primaryCurrency: getSwapPrimaryCurrency(state),
+      tokenBalance: getSwapFromTokenAssetBalance(state),
+      fromAsset: getSwapFromAsset(state),
+      ...overrides,
+    }
+
+    data = {
+      ...data,
+      amount: ethUtil.addHexPrefix(data.amount),
+      balance: ethUtil.addHexPrefix(data.balance),
+    }
+
+    const { fromAsset, amount } = data
+    if (!fromAsset) {
+      await dispatch(updateSwapErrors({ amount: null, gasFee: null }))
+      return
+    }
+
+    if (amount === '0x0') {
+      await dispatch(updateSwapErrors({ amount: null }))
+      await dispatch(updateSwapErrors(getGasFeeErrorObject(data)))
+      return
+    }
+
+    const errors = {
+      ...getAmountErrorObject(data),
+      ...getGasFeeErrorObject(data),
+    }
+
+    const { amount: amountError, gasFee: gasFeeError } = errors
+
+    if (!fromAsset.address && amountError && gasFeeError) {
+      await dispatch(updateSwapErrors({ amount: amountError, gasFee: null }))
+      return
+    }
+
+    await dispatch(updateSwapErrors(errors))
   }
 }
 
@@ -747,25 +812,39 @@ export function updateSendTokenBalance ({
   }
 }
 
-export function updateSwapTokenBalance ({
-  swapFromToken,
-  tokenContract,
-  address,
-}) {
-  return (dispatch) => {
-    const tokenBalancePromise = tokenContract
-      ? tokenContract.balanceOf(address)
-      : Promise.resolve()
-    return tokenBalancePromise
+export function updateSwapFromTokenBalance ({ fromAsset }) {
+  return async (dispatch, getState) => {
+    // Step 1: unset fromTokenAssetBalance if fromAsset is unselected or set
+    // to ETH.
+    if (!fromAsset?.address) {
+      dispatch(setSwapFromTokenAssetBalance(null))
+      return
+    }
+
+    // Step 2: Get current Redux state, to use with selectors.
+    const state = getState()
+
+    // Step 3: Get properties from the state required for querying the
+    // the token balance.
+    const contract = getSwapFromTokenContract(state)
+    const address = getSelectedAddress(state)
+
+    // Step 4: Do nothing if no contract object was initialized.
+    if (!contract) {
+      return
+    }
+
+    // Step 5: Invoke balanceOf(addr) on the contract, and update the
+    // Redux state.
+    return contract.balanceOf(address)
       .then((usersToken) => {
         if (usersToken) {
-          const newTokenBalance = calcTokenBalance({ swapFromToken, usersToken })
-          dispatch(setSwapTokenBalance(newTokenBalance))
+          dispatch(setSwapFromTokenAssetBalance(usersToken.balance.toString(16)))
         }
       })
       .catch((err) => {
         log.error(err)
-        updateSwapErrors({ tokenBalance: 'tokenBalanceError' })
+        updateSwapErrors({ fromTokenAssetBalance: 'tokenBalanceError' })
       })
   }
 }
@@ -777,14 +856,6 @@ export function updateSendErrors (errorObject) {
   }
 }
 
-export function updateSwapErrors (errorObject) {
-  return {
-    type: actionConstants.UPDATE_SWAP_ERRORS,
-    value: errorObject,
-  }
-}
-
-
 export function setSendTokenBalance (tokenBalance) {
   return {
     type: actionConstants.UPDATE_SEND_TOKEN_BALANCE,
@@ -792,24 +863,10 @@ export function setSendTokenBalance (tokenBalance) {
   }
 }
 
-export function setSwapTokenBalance (tokenBalance) {
+export function setSwapFromTokenAssetBalance (balance) {
   return {
-    type: actionConstants.UPDATE_SWAP_TOKEN_BALANCE,
-    value: tokenBalance,
-  }
-}
-
-export function setSwapToTokenBalance (tokenBalance) {
-  return {
-    type: actionConstants.UPDATE_SWAP_TO_TOKEN_BALANCE,
-    value: tokenToBalance,
-  }
-}
-
-export function setSwapFromTokenBalance (tokenBalance) {
-  return {
-    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_BALANCE,
-    value: tokenFromBalance,
+    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_BALANCE,
+    value: balance,
   }
 }
 
@@ -845,6 +902,20 @@ export function updateSendAmount (amount) {
   return {
     type: actionConstants.UPDATE_SEND_AMOUNT,
     value: amount,
+  }
+}
+
+export function updateSwapGasPrice (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_GAS_PRICE,
+    value,
+  }
+}
+
+export function updateSwapGasLimit (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_GAS_LIMIT,
+    value,
   }
 }
 
@@ -891,9 +962,12 @@ export function updateSendToken (token) {
 }
 
 export function updateSwapFromAsset (asset) {
-  return {
-    type: actionConstants.UPDATE_SWAP_FROM_ASSET,
-    value: asset,
+  return async (dispatch) => {
+    await dispatch({
+      type: actionConstants.UPDATE_SWAP_FROM_ASSET,
+      value: asset,
+    })
+    await dispatch(updateSwapFromTokenBalance({ fromAsset: asset }))
   }
 }
 

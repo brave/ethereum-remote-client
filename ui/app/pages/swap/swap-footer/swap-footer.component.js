@@ -11,20 +11,14 @@ export default class SwapFooter extends Component {
     from: PropTypes.object,
     gasLimit: PropTypes.string,
     gasPrice: PropTypes.string,
-    gasTotal: PropTypes.string,
     history: PropTypes.object,
     inError: PropTypes.bool,
     fromAsset: PropTypes.object,
     sign: PropTypes.func,
     to: PropTypes.string,
-    toAccounts: PropTypes.array,
-    tokenFromBalance: PropTypes.string,
-    tokenToBalance: PropTypes.string,
-    unapprovedTxs: PropTypes.object,
     swapErrors: PropTypes.object,
     gasEstimateType: PropTypes.string,
     gasIsLoading: PropTypes.bool,
-    mostRecentOverviewPage: PropTypes.string.isRequired,
   }
 
   static contextTypes = {

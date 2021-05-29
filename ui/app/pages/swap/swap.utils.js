@@ -1,17 +1,21 @@
 import {
   addCurrencies,
-  conversionUtil,
-  conversionGTE,
-  multiplyCurrencies,
   conversionGreaterThan,
+  conversionGTE,
   conversionLessThan,
+  conversionUtil,
+  multiplyCurrencies,
 } from '../../helpers/utils/conversion-util'
+
+import { decimalToHex as decimalToHexHelper } from '../../helpers/utils/conversions.util'
 
 import { calcTokenAmount } from '../../helpers/utils/token-util'
 
 import {
+  BALANCE_FETCH_ERROR,
   BASE_TOKEN_GAS_COST,
   INSUFFICIENT_FUNDS_ERROR,
+  INSUFFICIENT_FUNDS_GAS_ERROR,
   INSUFFICIENT_TOKENS_ERROR,
   MIN_GAS_LIMIT_HEX,
   NEGATIVE_ETH_ERROR,
@@ -35,7 +39,6 @@ export {
   isBalanceSufficient,
   isTokenBalanceSufficient,
   removeLeadingZeroes,
-  ellipsify,
 }
 
 function calcGasTotal (gasLimit = '0', gasPrice = '0') {
@@ -50,16 +53,16 @@ function isBalanceSufficient ({
   amount = '0x0',
   balance = '0x0',
   conversionRate = 1,
-  gasTotal = '0x0',
+  estimatedGasCost = '0x0',
   primaryCurrency,
 }) {
-  const totalAmount = addCurrencies(amount, gasTotal, {
+  const totalAmount = addCurrencies(amount, estimatedGasCost, {
     aBase: 16,
     bBase: 16,
     toNumericBase: 'hex',
   })
 
-  const balanceIsSufficient = conversionGTE(
+  return conversionGTE(
     {
       value: balance,
       fromNumericBase: 'hex',
@@ -73,55 +76,68 @@ function isBalanceSufficient ({
       fromCurrency: primaryCurrency,
     },
   )
-
-  return balanceIsSufficient
 }
 
 function isTokenBalanceSufficient ({
   amount = '0x0',
-  tokenBalance,
-  decimals,
+  tokenBalance = '0x0',
 }) {
-  const amountInDec = conversionUtil(amount, {
-    fromNumericBase: 'hex',
-  })
-
-  const tokenBalanceIsSufficient = conversionGTE(
+  return conversionGTE(
     {
       value: tokenBalance,
       fromNumericBase: 'hex',
     },
     {
-      value: calcTokenAmount(amountInDec, decimals),
+      value: amount,
+      fromNumericBase: 'hex',
     },
   )
-
-  return tokenBalanceIsSufficient
 }
 
 function getAmountErrorObject ({
   amount,
   balance,
   conversionRate,
-  gasTotal,
+  estimatedGasCost,
   primaryCurrency,
-  swapFromToken,
+  fromAsset,
   tokenBalance,
 }) {
+  if (fromAsset.address && tokenBalance === null) {
+    return { amount: BALANCE_FETCH_ERROR }
+  }
+
   let insufficientFunds = false
-  if (gasTotal && conversionRate && !swapFromToken) {
+  if (estimatedGasCost && conversionRate && !fromAsset.address) {
     insufficientFunds = !isBalanceSufficient({
       amount,
       balance,
       conversionRate,
-      gasTotal,
+      estimatedGasCost,
       primaryCurrency,
     })
   }
 
+  if (!estimatedGasCost && amount && conversionRate && !fromAsset.address) {
+    insufficientFunds = insufficientFunds || !conversionGreaterThan(
+      {
+        value: balance,
+        fromNumericBase: 'hex',
+        fromCurrency: primaryCurrency,
+        conversionRate,
+      },
+      {
+        value: amount,
+        fromNumericBase: 'hex',
+        conversionRate: conversionRate,
+        fromCurrency: primaryCurrency,
+      },
+    )
+  }
+
   let inSufficientTokens = false
-  if (swapFromToken && tokenBalance !== null) {
-    const { decimals } = swapFromToken
+  if (fromAsset.address) {
+    const { decimals } = fromAsset
     inSufficientTokens = !isTokenBalanceSufficient({
       tokenBalance,
       amount,
@@ -148,25 +164,44 @@ function getAmountErrorObject ({
 }
 
 function getGasFeeErrorObject ({
+  amount,
   balance,
   conversionRate,
-  gasTotal,
+  estimatedGasCost,
   primaryCurrency,
 }) {
   let gasFeeError = null
 
-  if (gasTotal && conversionRate) {
-    const insufficientFunds = !isBalanceSufficient({
+  let insufficientFunds = false
+  if (estimatedGasCost && conversionRate) {
+    insufficientFunds = !isBalanceSufficient({
       amount: '0x0',
       balance,
       conversionRate,
-      gasTotal,
+      estimatedGasCost,
       primaryCurrency,
     })
+  }
 
-    if (insufficientFunds) {
-      gasFeeError = INSUFFICIENT_FUNDS_ERROR
-    }
+  if (!estimatedGasCost && conversionRate) {
+    insufficientFunds = insufficientFunds || !conversionGreaterThan(
+      {
+        value: balance,
+        fromNumericBase: 'hex',
+        fromCurrency: primaryCurrency,
+        conversionRate,
+      },
+      {
+        value: amount,
+        fromNumericBase: 'hex',
+        conversionRate: conversionRate,
+        fromCurrency: primaryCurrency,
+      },
+    )
+  }
+
+  if (insufficientFunds) {
+    gasFeeError = INSUFFICIENT_FUNDS_GAS_ERROR
   }
 
   return { gasFee: gasFeeError }
@@ -189,9 +224,7 @@ function doesAmountErrorRequireUpdate ({
   const balanceHasChanged = balance !== prevBalance
   const gasTotalHasChange = gasTotal !== prevGasTotal
   const tokenBalanceHasChanged = swapFromToken && tokenBalance !== prevTokenBalance
-  const amountErrorRequiresUpdate = balanceHasChanged || gasTotalHasChange || tokenBalanceHasChanged
-
-  return amountErrorRequiresUpdate
+  return balanceHasChanged || gasTotalHasChange || tokenBalanceHasChanged
 }
 
 async function estimateGas ({
@@ -317,6 +350,25 @@ function removeLeadingZeroes (str) {
   return str.replace(/^0*(?=\d)/, '')
 }
 
-function ellipsify (text, first = 6, last = 4) {
-  return `${text.slice(0, first)}...${text.slice(-last)}`
+export function decimalToHex (value) {
+  return ethUtil.addHexPrefix(decimalToHexHelper(value))
+}
+
+export function hexAmountToDecimal (value, asset) {
+  const { decimals, symbol } = asset
+
+  if (value === '0') {
+    return '0'
+  }
+
+  const multiplier = Math.pow(10, Number(decimals || 0))
+  const decimalValueString = conversionUtil(ethUtil.addHexPrefix(value), {
+    fromNumericBase: 'hex',
+    toNumericBase: 'dec',
+    toCurrency: symbol,
+    conversionRate: multiplier,
+    invertConversionRate: true,
+  })
+
+  return Number(decimalValueString) ? decimalValueString : ''
 }

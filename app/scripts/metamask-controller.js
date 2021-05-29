@@ -1298,8 +1298,8 @@
      }
    }
  
-   async quote (fromAsset, toAsset, amount) {
-     return await this.swapsController.quote(fromAsset, toAsset, amount)
+   async quote (fromAsset, toAsset, amount, gasPrice) {
+     return await this.swapsController.quote(fromAsset, toAsset, amount, gasPrice)
    }
 
    async fillOrder (quote) {

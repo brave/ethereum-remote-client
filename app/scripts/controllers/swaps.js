@@ -45,7 +45,7 @@ export default class SwapsController {
     return receipt
   }
 
-  async quote (fromAssetSymbol, toAssetSymbol, amount) {
+  async quote (fromAssetSymbol, toAssetSymbol, amount, gasPrice) {
     const qs = _createQueryString({
       sellAmount: amount,
       buyToken: toAssetSymbol,
@@ -54,6 +54,7 @@ export default class SwapsController {
       slippagePercentage: slippagePercentage,
       // takerAddress: this.taker,
       feeRecipient: feeAddress,
+      gasPrice,
     })
 
     const quoteUrl = `${API_QUOTE_URL}?${qs}`
@@ -92,7 +93,9 @@ export default class SwapsController {
 }
 
 function _createQueryString (params) {
-  return Object.entries(params).map(([k, v]) => `${k}=${v}`).join('&')
+  return Object.entries(params)
+    .filter(([_, v]) => v)
+    .map(([k, v]) => `${k}=${v}`).join('&')
 }
 
 

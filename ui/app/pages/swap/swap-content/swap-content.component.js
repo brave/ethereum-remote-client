@@ -7,7 +7,7 @@ import SwapAssetRow from './swap-asset-row'
 import SwapQuote from './swap-quote'
 import SwapFees from './swap-fees'
 import { AssetPropTypes } from '../prop-types'
-import { decimalToHex } from './swap.utils'
+import { decimalToHex } from '../swap.utils'
 
 // Refresh Swap quote every 40 seconds.
 const countdownLimit = 40

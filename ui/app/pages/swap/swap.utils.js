@@ -3,19 +3,22 @@ import {
   conversionGreaterThan,
   conversionGTE,
   conversionLessThan,
+  conversionUtil,
   multiplyCurrencies,
 } from '../../helpers/utils/conversion-util'
+
+import { decimalToHex as decimalToHexHelper } from '../../helpers/utils/conversions.util'
 
 import { calcTokenAmount } from '../../helpers/utils/token-util'
 
 import {
+  BALANCE_FETCH_ERROR,
   BASE_TOKEN_GAS_COST,
   INSUFFICIENT_FUNDS_ERROR,
   INSUFFICIENT_FUNDS_GAS_ERROR,
   INSUFFICIENT_TOKENS_ERROR,
   MIN_GAS_LIMIT_HEX,
   NEGATIVE_ETH_ERROR,
-  BALANCE_FETCH_ERROR,
   SIMPLE_GAS_COST,
   TOKEN_TRANSFER_FUNCTION_SIGNATURE,
 } from './swap.constants'
@@ -36,7 +39,6 @@ export {
   isBalanceSufficient,
   isTokenBalanceSufficient,
   removeLeadingZeroes,
-  ellipsify,
 }
 
 function calcGasTotal (gasLimit = '0', gasPrice = '0') {
@@ -348,6 +350,25 @@ function removeLeadingZeroes (str) {
   return str.replace(/^0*(?=\d)/, '')
 }
 
-function ellipsify (text, first = 6, last = 4) {
-  return `${text.slice(0, first)}...${text.slice(-last)}`
+export function decimalToHex (value) {
+  return ethUtil.addHexPrefix(decimalToHexHelper(value))
+}
+
+export function hexAmountToDecimal (value, asset) {
+  const { decimals, symbol } = asset
+
+  if (value === '0') {
+    return '0'
+  }
+
+  const multiplier = Math.pow(10, Number(decimals || 0))
+  const decimalValueString = conversionUtil(ethUtil.addHexPrefix(value), {
+    fromNumericBase: 'hex',
+    toNumericBase: 'dec',
+    toCurrency: symbol,
+    conversionRate: multiplier,
+    invertConversionRate: true,
+  })
+
+  return Number(decimalValueString) ? decimalValueString : ''
 }

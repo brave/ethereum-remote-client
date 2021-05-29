@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { decimalToHex } from '../swap.utils'
+import { decimalToHex } from '../../swap.utils'
 
 export default class CustomizeGasButton extends Component {
 

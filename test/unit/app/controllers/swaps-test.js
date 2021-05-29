@@ -1,6 +1,6 @@
 import assert from 'assert'
 import ObservableStore from 'obs-store'
-import SwapsController from '../../../../app/scripts/controllers/swaps'
+import SwapsController from '../../../../app/scripts/controllers/swap'
 import sinon from 'sinon'
 import ethUtil from 'ethereumjs-util'
 import EthTx from 'ethereumjs-tx'

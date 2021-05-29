@@ -4,6 +4,7 @@ import getBuyEthUrl from '../../../app/scripts/lib/buy-eth-url'
 import { checksumAddress } from '../helpers/utils/util'
 import { calcTokenBalance, estimateGas } from '../pages/send/send.utils'
 import ethUtil from 'ethereumjs-util'
+import { ethers } from 'ethers'
 import { fetchLocale, loadRelativeTimeFormatLocaleData } from '../helpers/utils/i18n-helper'
 import { getMethodDataAsync } from '../helpers/utils/transactions.util'
 import { fetchSymbolAndDecimals } from '../helpers/utils/token-util'
@@ -25,12 +26,13 @@ import {
   getSwapFromTokenAssetBalance,
   getSwapFromTokenContract,
   getSwapPrimaryCurrency,
+  getSwapQuote,
   getSwapQuoteEstimatedGasCost,
 } from '../selectors'
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
 import { updateSwapErrors } from '../ducks/swap/swap.duck'
-import { getAmountErrorObject, getGasFeeErrorObject } from '../pages/swap/swap.utils'
+import { decimalToHex, getAmountErrorObject, getGasFeeErrorObject } from '../pages/swap/swap.utils'
 
 let background = null
 let promisifiedBackground = null
@@ -717,6 +719,39 @@ export function signTx (txData) {
       }
     })
     dispatch(showConfTxPage())
+  }
+}
+
+export function approveAllowance (allowance) {
+  return async (dispatch, getState) => {
+    const state = getState()
+
+    const { address: tokenAddress, decimals } = getSwapFromAsset(state)
+    const allowanceTarget = getSwapQuote(state).allowanceTarget
+
+    const maxAllowance = ethers.BigNumber.from(2).pow(256).sub(1)
+    const decimalFactor = ethers.BigNumber.from(10).pow(decimals)
+    const computedAllowance = allowance ? ethers.BigNumber.from(allowance).mul(decimalFactor) : maxAllowance
+
+    const iERC20 = new ethers.utils.Interface(abi)
+    const data = iERC20.encodeFunctionData(
+      'approve', [allowanceTarget, computedAllowance],
+    )
+
+    const transaction = {
+      from: getSelectedAddress(state),
+      to: tokenAddress,
+      value: '0x0',
+      gas: decimalToHex('21000'),
+      gasPrice: decimalToHex('100000000'),
+      data,
+    }
+
+    await global.ethQuery.sendTransaction(transaction, function (error) {
+      if (error) {
+        dispatch(displayWarning(error.message))
+      }
+    })
   }
 }
 

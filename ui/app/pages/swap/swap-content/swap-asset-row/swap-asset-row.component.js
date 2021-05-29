@@ -14,7 +14,7 @@ import SwapRowErrorMessage from '../swap-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 import { assets } from '../../asset-registry'
 import AmountMaxButton from '../amount-max-button'
-import { hexAmountToDecimal } from '../swap.utils'
+import { hexAmountToDecimal } from '../../swap.utils'
 
 
 export default class SwapAssetRow extends Component {

@@ -258,8 +258,7 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
     }
 
     await dispatch(updateSwapQuote(quote))
-
-    console.log('Fetching with gas: ', gasPriceDecimal)
+    await dispatch(updateSwapFromTokenAllowance({ fromAsset, quote }))
   }
 }
 
@@ -834,9 +833,9 @@ export function updateSwapFromTokenBalance ({ fromAsset }) {
       return
     }
 
-    // Step 5: Invoke balanceOf(addr) on the contract, and update the
-    // Redux state.
-    return contract.balanceOf(address)
+    // Step 5: Invoke following contract method and update the Redux store:
+    //    balanceOf(address account) → uint256
+    contract.balanceOf(address)
       .then((usersToken) => {
         if (usersToken) {
           dispatch(setSwapFromTokenAssetBalance(usersToken.balance.toString(16)))
@@ -845,6 +844,43 @@ export function updateSwapFromTokenBalance ({ fromAsset }) {
       .catch((err) => {
         log.error(err)
         updateSwapErrors({ fromTokenAssetBalance: 'tokenBalanceError' })
+      })
+  }
+}
+
+export function updateSwapFromTokenAllowance ({ fromAsset, quote }) {
+  return async (dispatch, getState) => {
+    // Step 1: unset fromTokenAssetBalance if fromAsset is unselected or set
+    // to ETH.
+    if (!fromAsset?.address) {
+      dispatch(setSwapFromTokenAssetAllowance(null))
+      return
+    }
+
+    // Step 2: Get current Redux state, to use with selectors.
+    const state = getState()
+
+    // Step 3: Get properties from the state required for querying the
+    // the contract allowance.
+    const contract = getSwapFromTokenContract(state)
+    const address = getSelectedAddress(state)
+
+    // Step 4: Do nothing if no contract object was initialized.
+    if (!contract) {
+      return
+    }
+
+    // Step 5: Invoke following contract method and update the Redux store:
+    //    allowance(address owner, address spender) → uint256
+    contract.allowance(address, quote.allowanceTarget)
+      .then((allowance) => {
+        if (allowance) {
+          dispatch(setSwapFromTokenAssetAllowance(allowance.remaining.toString(16)))
+        }
+      })
+      .catch((err) => {
+        log.error(err)
+        updateSwapErrors({ fromTokenAssetAllowance: 'tokenBalanceError' })
       })
   }
 }
@@ -867,6 +903,13 @@ export function setSwapFromTokenAssetBalance (balance) {
   return {
     type: actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_BALANCE,
     value: balance,
+  }
+}
+
+export function setSwapFromTokenAssetAllowance (allowance) {
+  return {
+    type: actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_ALLOWANCE,
+    value: allowance,
   }
 }
 

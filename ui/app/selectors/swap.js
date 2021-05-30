@@ -113,6 +113,10 @@ export function getSwapFromTokenAssetBalance (state) {
   return state.metamask.swap.fromTokenAssetBalance
 }
 
+export function getSwapFromTokenAssetAllowance (state) {
+  return state.metamask.swap.fromTokenAssetAllowance
+}
+
 export function getSwapFromObject (state) {
   const fromAddress = getSwapFrom(state)
   return fromAddress

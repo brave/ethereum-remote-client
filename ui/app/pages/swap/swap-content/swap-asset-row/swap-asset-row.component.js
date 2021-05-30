@@ -15,6 +15,7 @@ import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 import { assets } from '../../asset-registry'
 import AmountMaxButton from '../amount-max-button'
 import { hexAmountToDecimal } from '../../swap.utils'
+import { conversionGTE } from '../../../../helpers/utils/conversion-util'
 
 
 export default class SwapAssetRow extends Component {
@@ -22,11 +23,14 @@ export default class SwapAssetRow extends Component {
     selectedAccount: PropTypes.object.isRequired,
     fromAsset: AssetPropTypes,
     fromTokenAssetBalance: PropTypes.string,
+    fromTokenAssetAllowance: PropTypes.string,
     toAsset: AssetPropTypes,
     quote: QuotePropTypes,
     setFromAsset: PropTypes.func.isRequired,
     setToAsset: PropTypes.func.isRequired,
     refreshQuote: PropTypes.func.isRequired,
+    amount: PropTypes.string,
+    setAllowance: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -107,16 +111,48 @@ export default class SwapAssetRow extends Component {
     )
   }
 
+  renderAllowanceButton () {
+    const { setAllowance, fromTokenAssetAllowance, amount } = this.props
+    const { customAllowance } = this.state
+
+    if (!fromTokenAssetAllowance) {
+      return null
+    }
+
+    const hasSufficientAllowance = conversionGTE(
+      {
+        value: fromTokenAssetAllowance,
+        fromNumericBase: 'hex',
+      },
+      {
+        value: amount,
+        fromNumericBase: 'hex',
+      },
+    )
+
+    if (fromTokenAssetAllowance !== '0x0' && hasSufficientAllowance) {
+      return null
+    }
+
+    return (
+      <div
+        className="swap-v2__form-row-secondary-right"
+        onClick={() => setAllowance(customAllowance, this.setCustomAllowance)}
+      >
+        Set allowance
+      </div>
+    )
+  }
+
   render () {
     const { t } = this.context
-    const { fromAsset, refreshQuote, setAllowance } = this.props
-    const { customAllowance } = this.state
+    const { fromAsset, refreshQuote } = this.props
 
     return (
       <div>
         <div className="swap-v2__form-row">
           <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
-          <AmountMaxButton refreshQuote={refreshQuote}/>
+          <AmountMaxButton refreshQuote={refreshQuote} />
         </div>
 
         <div className="swap-v2__form-row">
@@ -129,13 +165,13 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote}/>
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} />
           </div>
         </div>
 
         <div className="swap-v2__form-row-full" style={{ display: 'block' }}>
-          <SwapRowErrorMessage errorType="amount"/>
-          <SwapRowErrorMessage errorType="gasFee"/>
+          <SwapRowErrorMessage errorType="amount" />
+          <SwapRowErrorMessage errorType="gasFee" />
         </div>
 
         {fromAsset && (
@@ -144,10 +180,7 @@ export default class SwapAssetRow extends Component {
               <span>{`${t('balance')}:`}</span>
               <span>{this.renderAssetBalance(fromAsset)}</span>
             </div>
-            <div className="swap-v2__form-row-secondary-right"
-                 onClick={() => setAllowance(customAllowance, this.setCustomAllowance)}>
-              Set allowance
-            </div>
+            {this.renderAllowanceButton()}
           </div>
         )}
 
@@ -174,14 +207,14 @@ export default class SwapAssetRow extends Component {
     }
 
     const amount = calcTokenAmount(quote.buyAmount, toAsset.decimals).toFixed(4)
-    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol}/>
+    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
   }
 
   renderAssetBalance (asset, insideDropdown = false) {
     const { selectedAccount, fromTokenAssetBalance } = this.props
 
     return asset.address ? (
-      insideDropdown ? <TokenBalance token={asset}/> : (
+      insideDropdown ? <TokenBalance token={asset} /> : (
         fromTokenAssetBalance === '0' ? `0 ${asset.symbol}`
           : (
             <CurrencyDisplay
@@ -191,7 +224,7 @@ export default class SwapAssetRow extends Component {
           )
       )
     ) : (
-      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY}/>
+      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY} />
     )
   }
 
@@ -230,7 +263,7 @@ export default class SwapAssetRow extends Component {
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">Select asset</div>
         </div>
-        <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
+        <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
       </div>
     )
   }
@@ -282,7 +315,7 @@ export default class SwapAssetRow extends Component {
         onClick={() => insideDropdown && onSelectAsset(asset)}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
-          <Identicon address={address} diameter={36}/>
+          <Identicon address={address} diameter={36} />
         </div>
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">{symbol}</div>
@@ -296,7 +329,7 @@ export default class SwapAssetRow extends Component {
           )}
         </div>
         {!insideDropdown && (
-          <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
+          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
         )}
       </div>
     )

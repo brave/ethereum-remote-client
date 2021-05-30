@@ -578,10 +578,23 @@
     flex: 1 0 auto;
     color: #6a737d;
     font-size: 0.75rem;
+  }
+
+  &__form-row-secondary-left {
+    display: flex;
+    color: #6a737d;
+    font-size: 0.75rem;
 
     span {
       padding-right: 2px;
     }
+  }
+
+  &__form-row-secondary-right {
+    float: right;
+    font-size: 0.8rem;
+    color: #037dd6;
+    cursor: pointer;
   }
 
   &__form-row-centered {

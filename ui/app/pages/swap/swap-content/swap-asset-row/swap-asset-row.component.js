@@ -37,8 +37,13 @@ export default class SwapAssetRow extends Component {
   state = {
     isShowingDropdownTo: false,
     isShowingDropdownFrom: false,
+    customAllowance: null,
   }
   debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
+
+  setCustomAllowance = (value) => {
+    this.setState({ customAllowance: value })
+  }
 
   openDropdownTo = () => this.setState({ isShowingDropdownTo: true })
 
@@ -104,7 +109,8 @@ export default class SwapAssetRow extends Component {
 
   render () {
     const { t } = this.context
-    const { fromAsset, refreshQuote } = this.props
+    const { fromAsset, refreshQuote, setAllowance } = this.props
+    const { customAllowance } = this.state
 
     return (
       <div>
@@ -133,9 +139,15 @@ export default class SwapAssetRow extends Component {
         </div>
 
         {fromAsset && (
-          <div className="swap-v2__form-row-full">
-            <span>{`${t('balance')}:`}</span>
-            <span>{this.renderAssetBalance(fromAsset)}</span>
+          <div className="swap-v2__form-row">
+            <div className="swap-v2__form-row-secondary-left">
+              <span>{`${t('balance')}:`}</span>
+              <span>{this.renderAssetBalance(fromAsset)}</span>
+            </div>
+            <div className="swap-v2__form-row-secondary-right"
+                 onClick={() => setAllowance(customAllowance, this.setCustomAllowance)}>
+              Set allowance
+            </div>
           </div>
         )}
 

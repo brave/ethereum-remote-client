@@ -1,5 +1,5 @@
 import abi from 'human-standard-token-abi'
-import { accountsWithSwapEtherInfoSelector, getAddressBook, getSelectedAccount, getTargetAccount } from '.'
+import { getSelectedAccount, getSelectedAddress, getTargetAccount } from '.'
 import { multiplyCurrencies } from '../helpers/utils/conversion-util'
 
 export function getSwapBlockGasLimit (state) {
@@ -8,10 +8,6 @@ export function getSwapBlockGasLimit (state) {
 
 export function getSwapConversionRate (state) {
   return state.metamask.conversionRate
-}
-
-export function getSwapNativeCurrency (state) {
-  return state.metamask.nativeCurrency
 }
 
 export function getSwapCurrentNetwork (state) {
@@ -50,10 +46,6 @@ export function getSwapPrimaryCurrency (state) {
   return swapFromAsset?.symbol
 }
 
-export function getSwapToken (state) {
-  return state.metamask.swap.token
-}
-
 export function getSwapFromAsset (state) {
   return state.metamask.swap.fromAsset
 }
@@ -69,19 +61,6 @@ export function getSwapAmount (state) {
 export function getSwapQuote (state) {
   return state.metamask.swap.quote
 }
-
-export function getSwapQuoteData (state) {
-  return state.metamask.swap.quote?.data
-}
-
-export function getSwapQuoteTo (state) {
-  return state.metamask.swap.quote?.to
-}
-
-export function getSwapQuoteValue (state) {
-  return state.metamask.swap.quote?.value
-}
-
 
 export function getSwapQuoteGasPrice (state) {
   return state.metamask.swap.quote?.gasPrice
@@ -118,18 +97,6 @@ export function getSwapToTokenContract (state) {
     : null
 }
 
-export function getSwapHexData (state) {
-  return state.metamask.swap.data
-}
-
-export function getSwapHexDataFeatureFlagState (state) {
-  return state.metamask.featureFlags.swapHexData
-}
-
-export function getSwapEditingTransactionId (state) {
-  return state.metamask.swap.editingTransactionId
-}
-
 export function getSwapErrors (state) {
   return state.swap.errors
 }
@@ -146,21 +113,11 @@ export function getSwapFromTokenAssetBalance (state) {
   return state.metamask.swap.fromTokenAssetBalance
 }
 
-// TODO: remove this
-export function getSwapFromBalance (state) {
-  const fromAccount = getSwapFromObject(state)
-  return fromAccount.balance
-}
-
 export function getSwapFromObject (state) {
   const fromAddress = getSwapFrom(state)
   return fromAddress
     ? getTargetAccount(state, fromAddress)
     : getSelectedAccount(state)
-}
-
-export function getSwapMaxModeState (state) {
-  return state.metamask.swap.maxModeOn
 }
 
 export function getSwapTo (state) {
@@ -169,12 +126,6 @@ export function getSwapTo (state) {
 
 export function getSwapToNickname (state) {
   return state.metamask.swap.toNickname
-}
-
-export function getSwapToAccounts (state) {
-  const fromAccounts = accountsWithSwapEtherInfoSelector(state)
-  const addressBookAccounts = getAddressBook(state)
-  return [...fromAccounts, ...addressBookAccounts]
 }
 
 export function getSwapTokenBalance (state) {
@@ -222,10 +173,6 @@ export function isSwapFormInError (state) {
   return Object.values(getSwapErrors(state)).some((n) => n)
 }
 
-export function getSwapTokenAddress (state) {
-  return getSwapToken(state)?.address
-}
-
 export function getSwapFromTokenAddress (state) {
   return getSwapFromAsset(state)?.address
 }
@@ -238,17 +185,6 @@ export function getSwapToTokenAddress (state) {
   return getSwapToAsset(state)?.address
 }
 
-export function getSwapToAssetSymbol (state) {
-  return getSwapToAsset(state)?.symbol
-}
-
-export function getSwapIsContractAddress (state) {
-  const swapTo = getSwapTo(state)
-  const swapFromTokenAddress = getSwapFromTokenAddress(state)
-
-  if (!swapFromTokenAddress) {
-    return false
   }
 
-  return swapTo.toLowerCase() === swapFromTokenAddress.toLowerCase()
 }

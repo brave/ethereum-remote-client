@@ -50,6 +50,7 @@ export default function reduceMetamask (state = {}, action) {
         'decimals': 18,
       },
       fromTokenAssetBalance: null,
+      fromTokenAssetAllowance: null,
       toAsset: null,
       amount: '0',
       memo: '',
@@ -304,6 +305,14 @@ export default function reduceMetamask (state = {}, action) {
         swap: {
           ...metamaskState.swap,
           fromTokenAssetBalance: action.value,
+        },
+      })
+
+    case actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_ALLOWANCE:
+      return Object.assign(metamaskState, {
+        swap: {
+          ...metamaskState.swap,
+          fromTokenAssetAllowance: action.value,
         },
       })
 

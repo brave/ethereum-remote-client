@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
 import {
-  getSelectedAccount,
-  getSwapFromAsset,
+  getSelectedAccount, getSwapAmount,
+  getSwapFromAsset, getSwapFromTokenAssetAllowance,
   getSwapFromTokenAssetBalance,
   getSwapQuote,
   getSwapToAsset,
@@ -18,6 +18,8 @@ function mapStateToProps (state) {
     toAsset: getSwapToAsset(state),
     quote: getSwapQuote(state),
     fromTokenAssetBalance: getSwapFromTokenAssetBalance(state),
+    fromTokenAssetAllowance: getSwapFromTokenAssetAllowance(state),
+    amount: getSwapAmount(state),
   }
 }
 
@@ -44,7 +46,7 @@ function mapDispatchToProps (dispatch) {
           name: 'EDIT_APPROVAL_PERMISSION',
           customTokenAmount: customAllowance,
           decimals: fromAsset.decimals,
-          origin: '0x: Exchange Proxy',
+          origin: '0x Exchange Proxy',
           setCustomAmount: setCustomAllowance,
           tokenAmount: fromTokenAssetBalanceDecimal,
           tokenBalance: fromTokenAssetBalanceDecimal,

@@ -7,7 +7,8 @@ import {
   getSwapQuote,
   getSwapToAsset,
 } from '../../../../selectors'
-import { computeSwapErrors, updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
+import { computeSwapErrors, showModal, updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
+import { hexAmountToDecimal } from '../../swap.utils'
 
 function mapStateToProps (state) {
   return {
@@ -27,7 +28,45 @@ function mapDispatchToProps (dispatch) {
       await dispatch(computeSwapErrors({ fromAsset: asset }))
     },
     setToAsset: (asset) => dispatch(updateSwapToAsset(asset)),
+
+    setAllowance: (fromAsset, fromTokenAssetBalance, customAllowance, setCustomAllowance) => {
+      // Allowance can be set only for tokens
+      if (!fromAsset?.address) {
+        return
+      }
+
+      const fromTokenAssetBalanceDecimal = fromTokenAssetBalance
+        ? hexAmountToDecimal(fromTokenAssetBalance, fromAsset)
+        : '0'
+
+      dispatch(
+        showModal({
+          name: 'EDIT_APPROVAL_PERMISSION',
+          customTokenAmount: customAllowance,
+          decimals: fromAsset.decimals,
+          origin: '0x: Exchange Proxy',
+          setCustomAmount: setCustomAllowance,
+          tokenAmount: fromTokenAssetBalanceDecimal,
+          tokenBalance: fromTokenAssetBalanceDecimal,
+          tokenSymbol: fromAsset.symbol,
+        }),
+      )
+    },
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SwapAssetRow)
+const mergeProps = (stateProps, dispatchProps, ownProps) => {
+  const { fromAsset, fromTokenAssetBalance } = stateProps
+  const { setAllowance } = dispatchProps
+
+  return {
+    ...stateProps,
+    ...dispatchProps,
+    ...ownProps,
+    setAllowance: (customAllowance, setCustomAllowance) =>
+      setAllowance(fromAsset, fromTokenAssetBalance, customAllowance, setCustomAllowance),
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(SwapAssetRow)

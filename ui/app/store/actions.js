@@ -200,83 +200,16 @@ export function verifySeedPhrase () {
   })
 }
 
-// export function getQuote (sellAmount, buyToken,sellToken) {
-//   return () => {
-//     return new Promise((resolve, reject) => {
-//       background.quote(sellAmount, buyToken, sellToken, (error, response) => {
-//         if (error) {
-//           return reject(error)
-//         }
-//         resolve(response)
-//       })
-//     })
-//   }
-// }
-
-
-// export function getQuote (sellAmount, buyToken,sellToken) {
-//   return async () => {
-//     const quote = await promisifiedBackground.quote(sellAmount, buyToken, sellToken)
-//     console.log("The quote in the account is ", quote)
-//     console.log("The background is ", await promisifiedBackground)
-//     // await forceUpdateMetamaskState(dispatch);
-//     return quote;
-//   };
-// }
-
-// export function getQuote (sellAmount, buyToken,sellToken) {
-//   log.debug('background.getQuote')
-
-//   return (dispatch) => {
-//     return new Promise((resolve, reject) => {
-//       console.log("The background script function are ", background)
-//       background.quote(sellAmount, buyToken,sellToken, (err, response) => {
-//         if (err) {
-//           dispatch(displayWarning(err.message))
-//           return reject(err)
-//         }
-//         console.log("This is the response in the getQuote ", response)
-//         await forceUpdateMetamaskState(response)
-//         resolve(response)
-//       })
-//     })
-//   }
-// }
-
 export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
   return async (dispatch) => {
-    let quote = null
-
     const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
 
-    try {
-      quote = await promisifiedBackground.quote(
-        fromAsset.symbol, toAsset.symbol, parseInt(amount, 16), gasPriceDecimal,
-      )
-    } catch (error) {
-      log.error(error)
-      dispatch(displayWarning(error.message))
-      throw error
-    }
+    const quote = await promisifiedBackground.quote(
+      fromAsset.symbol, toAsset.symbol, parseInt(amount, 16), gasPriceDecimal,
+    )
 
     await dispatch(updateSwapQuote(quote))
     await dispatch(updateSwapFromTokenAllowance({ fromAsset, quote }))
-  }
-}
-
-export function fillOrder (quote) {
-  log.debug('action - fillOrder')
-  return async (dispatch) => {
-    let newState
-    try {
-      newState = await promisifiedBackground.fillOrder(quote)
-    } catch (error) {
-      log.error(error)
-      dispatch(displayWarning(error.message))
-      throw error
-    }
-    // dispatch(updateSwapQuote(newState.quotes))
-    return newState
   }
 }
 

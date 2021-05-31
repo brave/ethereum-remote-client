@@ -8,5 +8,5 @@
 export default {
   swapAPIQuoteURL: 'https://api.0x.org/swap/v1/quote',
   buyTokenPercentageFee: 0.875,
-  feeRecipient: '0x324Ea50e48C07dEb39c8e98f0479d4aBD2Bd8e9a',
+  feeRecipient: '0xbd9420A98a7Bd6B89765e5715e169481602D9c3d',
 }

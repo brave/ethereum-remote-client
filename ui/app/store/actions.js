@@ -12,11 +12,12 @@ import switchDirection from '../helpers/utils/switch-direction'
 import log from 'loglevel'
 import { ENVIRONMENT_TYPE_NOTIFICATION } from '../../../app/scripts/lib/enums'
 import { hasUnconfirmedTransactions } from '../helpers/utils/confirm-tx.util'
-import { setCustomGasLimit } from '../ducks/gas/gas.duck'
+import { fetchBasicGasAndTimeEstimates, setCustomGasLimit } from '../ducks/gas/gas.duck'
 import txHelper from '../../lib/tx-helper'
 import { getEnvironmentType } from '../../../app/scripts/lib/util'
 import * as actionConstants from './actionConstants'
 import {
+  getBlockGasLimit,
   getPermittedAccountsForCurrentTab,
   getSelectedAccount,
   getSelectedAddress,
@@ -32,7 +33,13 @@ import {
 import { switchedToUnconnectedAccount } from '../ducks/alerts/unconnected-account'
 import { getUnconnectedAccountAlertEnabledness } from '../ducks/metamask/metamask'
 import { updateSwapErrors } from '../ducks/swap/swap.duck'
-import { decimalToHex, getAmountErrorObject, getGasFeeErrorObject } from '../pages/swap/swap.utils'
+import {
+  decimalToHex,
+  estimateGasForTransaction,
+  getAmountErrorObject,
+  getGasFeeErrorObject,
+} from '../pages/swap/swap.utils'
+import { conversionUtil } from '../helpers/utils/conversion-util'
 
 let background = null
 let promisifiedBackground = null
@@ -671,16 +678,37 @@ export function approveAllowance (allowance) {
       'approve', [allowanceTarget, computedAllowance],
     )
 
+    const basicGasEstimates = await dispatch(fetchBasicGasAndTimeEstimates())
+    const gasPrice = ethUtil.addHexPrefix(conversionUtil(basicGasEstimates.fast, {
+      fromDenomination: 'GWEI',
+      toDenomination: 'WEI',
+      fromNumericBase: 'dec',
+      toNumericBase: 'hex',
+    }))
+
     const transaction = {
       from: getSelectedAddress(state),
       to: tokenAddress,
       value: '0x0',
-      gas: decimalToHex('21000'),
-      gasPrice: decimalToHex('100000000'),
+      gasPrice,
       data,
     }
 
-    await dispatch(createTransaction(transaction))
+    const blockGasLimit = getBlockGasLimit(state)
+
+    let gas = decimalToHex('21000')
+    try {
+      gas = await estimateGasForTransaction({
+        transaction,
+        estimateGasMethod: promisifiedBackground.estimateGas,
+        blockGasLimit,
+      })
+
+    } catch (e) {
+      dispatch(displayWarning(e.message))
+    }
+
+    await dispatch(createTransaction({ ...transaction, gas }))
   }
 }
 

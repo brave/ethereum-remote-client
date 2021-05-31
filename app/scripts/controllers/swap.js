@@ -3,7 +3,6 @@ import fetch from 'node-fetch'
 import ObservableStore from 'obs-store'
 import config from '../../../ui/app/pages/swap/swap.config'
 
-const slippagePercentage = 0.0875
 
 export default class SwapsController {
   constructor (opts) {
@@ -18,8 +17,7 @@ export default class SwapsController {
       buyToken: toAssetSymbol,
       sellToken: fromAssetSymbol,
       buyTokenPercentageFee: config.buyTokenPercentageFee,
-      slippagePercentage: slippagePercentage,
-      // takerAddress: this.taker,
+      slippagePercentage: config.defaultSlippage,
       feeRecipient: config.feeRecipient,
       gasPrice,
     })

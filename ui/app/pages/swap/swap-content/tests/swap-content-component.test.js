@@ -6,7 +6,6 @@ import SwapContent from '../swap-content.component.js'
 import PageContainerContent from '../../../../components/ui/page-container/page-container-content.component'
 import SwapAmountRow from '../swap-amount-row/swap-amount-row.container'
 import SwapGasRow from '../swap-gas-customize/swap-gas-customize.container'
-import SwapHexDataRow from '../swap-hex-data-row/swap-hex-data-row.container'
 import SwapAssetRow from '../swap-asset-row/swap-asset-row.container'
 import Dialog from '../../../../components/ui/dialog'
 
@@ -39,7 +38,6 @@ describe('SwapContent Component', function () {
       assert(PageContainerContentChild.childAt(1).is(SwapAssetRow), 'row[1] should be SwapAssetRow')
       assert(PageContainerContentChild.childAt(2).is(SwapAmountRow), 'row[2] should be SwapAmountRow')
       assert(PageContainerContentChild.childAt(3).is(SwapGasRow), 'row[3] should be SwapGasRow')
-      assert(PageContainerContentChild.childAt(4).is(SwapHexDataRow), 'row[4] should be SwapHexDataRow')
     })
 
     it('should not render the SwapHexDataRow if props.showHexData is false', function () {

@@ -39,7 +39,6 @@ const mapDispatchToProps = (dispatch) => ({
       await dispatch(fetchSwapQuote(fromAsset, toAsset, amount, gasPrice))
     } catch (err) {
       dispatch(displayWarning(err.message))
-      throw err
     } finally {
       await dispatch(hideLoadingIndication())
     }

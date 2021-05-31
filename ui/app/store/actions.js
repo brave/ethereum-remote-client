@@ -747,9 +747,15 @@ export function approveAllowance (allowance) {
       data,
     }
 
-    await global.ethQuery.sendTransaction(transaction, function (error) {
-      if (error) {
-        dispatch(displayWarning(error.message))
+    await dispatch(createTransaction(transaction))
+  }
+}
+
+export function createTransaction (transaction) {
+  return (dispatch) => {
+    global.ethQuery.sendTransaction(transaction, (err) => {
+      if (err) {
+        return dispatch(displayWarning(err.message))
       }
     })
   }

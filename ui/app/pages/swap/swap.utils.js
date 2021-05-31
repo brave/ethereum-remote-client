@@ -13,40 +13,23 @@ import { calcTokenAmount } from '../../helpers/utils/token-util'
 
 import {
   BALANCE_FETCH_ERROR,
-  BASE_TOKEN_GAS_COST,
   INSUFFICIENT_FUNDS_ERROR,
   INSUFFICIENT_FUNDS_GAS_ERROR,
   INSUFFICIENT_TOKENS_ERROR,
   MIN_GAS_LIMIT_HEX,
   NEGATIVE_ETH_ERROR,
-  SIMPLE_GAS_COST,
-  TOKEN_TRANSFER_FUNCTION_SIGNATURE,
 } from './swap.constants'
 
-import abi from 'ethereumjs-abi'
 import ethUtil from 'ethereumjs-util'
 
 export {
   addGasBuffer,
-  calcGasTotal,
   calcTokenBalance,
-  doesAmountErrorRequireUpdate,
-  estimateGas,
-  generateTokenTransferData,
+  estimateGasForTransaction,
   getAmountErrorObject,
   getGasFeeErrorObject,
-  getToAddressForGasUpdate,
   isBalanceSufficient,
   isTokenBalanceSufficient,
-  removeLeadingZeroes,
-}
-
-function calcGasTotal (gasLimit = '0', gasPrice = '0') {
-  return multiplyCurrencies(gasLimit, gasPrice, {
-    toNumericBase: 'hex',
-    multiplicandBase: 16,
-    multiplierBase: 16,
-  })
 }
 
 function isBalanceSufficient ({
@@ -197,78 +180,20 @@ function calcTokenBalance ({ swapFromToken, usersToken }) {
   return calcTokenAmount(usersToken.balance.toString(), decimals).toString(16)
 }
 
-function doesAmountErrorRequireUpdate ({
-  balance,
-  gasTotal,
-  prevBalance,
-  prevGasTotal,
-  prevTokenBalance,
-  swapFromToken,
-  tokenBalance,
-}) {
-  const balanceHasChanged = balance !== prevBalance
-  const gasTotalHasChange = gasTotal !== prevGasTotal
-  const tokenBalanceHasChanged = swapFromToken && tokenBalance !== prevTokenBalance
-  return balanceHasChanged || gasTotalHasChange || tokenBalanceHasChanged
-}
-
-async function estimateGas ({
-  selectedAddress,
-  swapFromToken,
-  blockGasLimit = MIN_GAS_LIMIT_HEX,
-  to,
-  value,
-  data,
-  gasPrice,
+async function estimateGasForTransaction ({
+  transaction,
   estimateGasMethod,
+  blockGasLimit = MIN_GAS_LIMIT_HEX,
 }) {
-  const paramsForGasEstimate = { from: selectedAddress, value, gasPrice }
-
-  // if recipient has no code, gas is 21k max:
-  if (!swapFromToken && !data) {
-    const code = Boolean(to) && await global.eth.getCode(to)
-    // Geth will return '0x', and ganache-core v2.2.1 will return '0x0'
-    const codeIsEmpty = !code || code === '0x' || code === '0x0'
-    if (codeIsEmpty) {
-      return SIMPLE_GAS_COST
-    }
-  } else if (swapFromToken && !to) {
-    return BASE_TOKEN_GAS_COST
-  }
-
-  if (swapFromToken) {
-    paramsForGasEstimate.value = '0x0'
-    paramsForGasEstimate.data = generateTokenTransferData({ toAddress: to, amount: value, swapFromToken })
-    paramsForGasEstimate.to = swapFromToken.address
-  } else {
-    if (data) {
-      paramsForGasEstimate.data = data
-    }
-
-    if (to) {
-      paramsForGasEstimate.to = to
-    }
-
-    if (!value || value === '0') {
-      paramsForGasEstimate.value = '0xff'
-    }
-  }
-
-  // if not, fall back to block gasLimit
-  if (!blockGasLimit) {
-    blockGasLimit = MIN_GAS_LIMIT_HEX
-  }
-
-  paramsForGasEstimate.gas = ethUtil.addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
+  const gas = ethUtil.addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
     multiplicandBase: 16,
     multiplierBase: 10,
     roundDown: '0',
     toNumericBase: 'hex',
   }))
 
-  // run tx
   try {
-    const estimatedGas = await estimateGasMethod(paramsForGasEstimate)
+    const estimatedGas = await estimateGasMethod({ ...transaction, gas })
     const estimateWithBuffer = addGasBuffer(estimatedGas.toString(16), blockGasLimit, 1.5)
     return ethUtil.addHexPrefix(estimateWithBuffer)
   } catch (error) {
@@ -277,7 +202,7 @@ async function estimateGas ({
       error.message.includes('gas required exceeds allowance or always failing transaction')
     )
     if (simulationFailed) {
-      const estimateWithBuffer = addGasBuffer(paramsForGasEstimate.gas, blockGasLimit, 1.5)
+      const estimateWithBuffer = addGasBuffer(gas, blockGasLimit, 1.5)
       return ethUtil.addHexPrefix(estimateWithBuffer)
     } else {
       throw error
@@ -315,24 +240,6 @@ function addGasBuffer (initialGasLimitHex, blockGasLimitHex, bufferMultiplier = 
   }
   // otherwise use blockGasLimit
   return upperGasLimit
-}
-
-function generateTokenTransferData ({ toAddress = '0x0', amount = '0x0', swapFromToken }) {
-  if (!swapFromToken) {
-    return
-  }
-  return TOKEN_TRANSFER_FUNCTION_SIGNATURE + Array.prototype.map.call(
-    abi.rawEncode(['address', 'uint256'], [toAddress, ethUtil.addHexPrefix(amount)]),
-    (x) => ('00' + x.toString(16)).slice(-2),
-  ).join('')
-}
-
-function getToAddressForGasUpdate (...addresses) {
-  return [...addresses, ''].find((str) => str !== undefined && str !== null).toLowerCase()
-}
-
-function removeLeadingZeroes (str) {
-  return str.replace(/^0*(?=\d)/, '')
 }
 
 export function decimalToHex (value) {

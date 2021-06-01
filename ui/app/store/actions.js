@@ -18,15 +18,14 @@ import { getEnvironmentType } from '../../../app/scripts/lib/util'
 import * as actionConstants from './actionConstants'
 import {
   getBlockGasLimit,
+  getConversionRate,
   getPermittedAccountsForCurrentTab,
   getSelectedAccount,
   getSelectedAddress,
   getSwapAmount,
-  getSwapConversionRate,
   getSwapFromAsset,
   getSwapFromTokenAssetBalance,
   getSwapFromTokenContract,
-  getSwapPrimaryCurrency,
   getSwapQuote,
   getSwapQuoteEstimatedGasCost,
 } from '../selectors'
@@ -227,9 +226,8 @@ export function computeSwapErrors (overrides) {
     let data = {
       amount: getSwapAmount(state) || '0',
       balance: getSelectedAccount(state)?.balance || '0',
-      conversionRate: getSwapConversionRate(state),
+      conversionRate: getConversionRate(state),
       estimatedGasCost: getSwapQuoteEstimatedGasCost(state),
-      primaryCurrency: getSwapPrimaryCurrency(state),
       tokenBalance: getSwapFromTokenAssetBalance(state),
       fromAsset: getSwapFromAsset(state),
       ...overrides,
@@ -922,23 +920,9 @@ export function updateSendHexData (value) {
   }
 }
 
-export function updateSwapHexData (value) {
-  return {
-    type: actionConstants.UPDATE_SWAP_HEX_DATA,
-    value,
-  }
-}
-
 export function updateSendTo (to, nickname = '') {
   return {
     type: actionConstants.UPDATE_SEND_TO,
-    value: { to, nickname },
-  }
-}
-
-export function updateSwapTo (to, nickname = '') {
-  return {
-    type: actionConstants.UPDATE_SWAP_TO,
     value: { to, nickname },
   }
 }
@@ -1042,13 +1026,6 @@ export function updateSendEnsResolution (ensResolution) {
   }
 }
 
-export function updateSwapEnsResolution (ensResolution) {
-  return {
-    type: actionConstants.UPDATE_SWAP_ENS_RESOLUTION,
-    payload: ensResolution,
-  }
-}
-
 export function updateSendEnsResolutionError (errorMessage) {
   return {
     type: actionConstants.UPDATE_SEND_ENS_RESOLUTION_ERROR,
@@ -1056,12 +1033,6 @@ export function updateSendEnsResolutionError (errorMessage) {
   }
 }
 
-export function updateSwapEnsResolutionError (errorMessage) {
-  return {
-    type: actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR,
-    payload: errorMessage,
-  }
-}
 
 export function signTokenTx (tokenAddress, toAddress, amount, txData) {
   return (dispatch) => {

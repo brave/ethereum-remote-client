@@ -1,23 +1,8 @@
 import abi from 'human-standard-token-abi'
 import { getSelectedAccount, getSelectedAddress, getTargetAccount } from '.'
-import { conversionGTE, multiplyCurrencies } from '../helpers/utils/conversion-util'
+import { conversionGTE } from '../helpers/utils/conversion-util'
 import { decimalToHex } from '../pages/swap/swap.utils'
 
-export function getSwapBlockGasLimit (state) {
-  return state.metamask.currentBlockGasLimit
-}
-
-export function getSwapConversionRate (state) {
-  return state.metamask.conversionRate
-}
-
-export function getSwapCurrentNetwork (state) {
-  return state.metamask.network
-}
-
-export function getSwapQuoteGasLimit (state) {
-  return state.metamask.swap.quote?.gas || '0'
-}
 
 export function getSwapGasPrice (state) {
   return state.metamask.swap.gasPrice
@@ -25,26 +10,6 @@ export function getSwapGasPrice (state) {
 
 export function getSwapGasLimit (state) {
   return state.metamask.swap.gasLimit
-}
-
-export function getSwapGasCost (state) {
-  const gasLimit = getSwapQuoteGas(state)
-  const gasPrice = getSwapGasPrice(state)
-
-  if (!gasLimit || !gasPrice) {
-    return
-  }
-
-  return multiplyCurrencies(gasLimit, gasPrice, {
-    toNumericBase: 'hex',
-    multiplicandBase: 10,
-    multiplierBase: 16,
-  })
-}
-
-export function getSwapPrimaryCurrency (state) {
-  const swapFromAsset = getSwapFromAsset(state)
-  return swapFromAsset?.symbol
 }
 
 export function getSwapFromAsset (state) {
@@ -85,25 +50,15 @@ export function getSwapQuoteEstimatedGasCost (state) {
 
 
 export function getSwapFromTokenContract (state) {
-  const swapFromTokenAddress = getSwapFromTokenAddress(state)
+  const swapFromTokenAddress = getSwapFromAsset(state)?.address
+
   return swapFromTokenAddress
     ? global.eth.contract(abi).at(swapFromTokenAddress)
     : null
 }
 
-export function getSwapToTokenContract (state) {
-  const swapToTokenAddress = getSwapToTokenAddress(state)
-  return swapToTokenAddress
-    ? global.eth.contract(abi).at(swapToTokenAddress)
-    : null
-}
-
 export function getSwapErrors (state) {
   return state.swap.errors
-}
-
-export function swapAmountIsInError (state) {
-  return Boolean(state.swap.errors.amount)
 }
 
 export function getSwapFrom (state) {
@@ -176,18 +131,6 @@ export function getSwapGasButtonGroupShown (state) {
 
 export function isSwapFormInError (state) {
   return Object.values(getSwapErrors(state)).some((n) => n)
-}
-
-export function getSwapFromTokenAddress (state) {
-  return getSwapFromAsset(state)?.address
-}
-
-export function getSwapFromAssetSymbol (state) {
-  return getSwapFromAsset(state)?.symbol
-}
-
-export function getSwapToTokenAddress (state) {
-  return getSwapToAsset(state)?.address
 }
 
 export function getSwapTransactionObject (state) {

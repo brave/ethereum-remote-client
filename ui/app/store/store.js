@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { composeWithDevTools } from 'remote-redux-devtools'
 import rootReducer from '../ducks'
@@ -10,7 +10,7 @@ export default function configureStore (initialState) {
     hostname: 'localhost',
     port: 8000,
     realtime: Boolean(process.env.METAMASK_DEBUG),
-    trace: true, 
+    trace: true,
     traceLimit: 25,
   })
   return createStore(rootReducer, initialState, composeEnhancers(

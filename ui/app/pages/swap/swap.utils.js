@@ -82,7 +82,6 @@ function getAmountErrorObject ({
   balance,
   conversionRate,
   estimatedGasCost,
-  primaryCurrency,
   fromAsset,
   tokenBalance,
 }) {
@@ -97,7 +96,7 @@ function getAmountErrorObject ({
       balance,
       conversionRate,
       estimatedGasCost,
-      primaryCurrency,
+      primaryCurrency: fromAsset.symbol,
     })
   }
 
@@ -106,14 +105,14 @@ function getAmountErrorObject ({
       {
         value: balance,
         fromNumericBase: 'hex',
-        fromCurrency: primaryCurrency,
+        fromCurrency: fromAsset.symbol,
         conversionRate,
       },
       {
         value: amount,
         fromNumericBase: 'hex',
         conversionRate: conversionRate,
-        fromCurrency: primaryCurrency,
+        fromCurrency: fromAsset.symbol,
       },
     )
   }
@@ -151,7 +150,6 @@ function getGasFeeErrorObject ({
   balance,
   conversionRate,
   estimatedGasCost,
-  primaryCurrency,
   fromAsset,
 }) {
   if (!conversionRate) {
@@ -164,7 +162,7 @@ function getGasFeeErrorObject ({
     balance,
     conversionRate,
     estimatedGasCost: estimatedGasCost || '0x0',
-    primaryCurrency,
+    primaryCurrency: fromAsset.symbol,
   })
 
 

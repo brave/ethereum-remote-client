@@ -346,26 +346,6 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
-    case actionConstants.UPDATE_SWAP_ENS_RESOLUTION:
-      return {
-        ...metamaskState,
-        swap: {
-          ...metamaskState.send,
-          ensResolution: action.payload,
-          ensResolutionError: '',
-        },
-      }
-
-    case actionConstants.UPDATE_SWAP_ENS_RESOLUTION_ERROR:
-      return {
-        ...metamaskState,
-        swap: {
-          ...metamaskState.send,
-          ensResolution: null,
-          ensResolutionError: action.payload,
-        },
-      }
-
     case actionConstants.CLEAR_SEND:
       return {
         ...metamaskState,

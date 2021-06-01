@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { withRouter } from 'react-router-dom'
 
-import { approveAllowance, clearSwap, createTransaction } from '../../../store/actions'
+import { approveAllowance, clearSwap, createTransaction, showLoadingIndication } from '../../../store/actions'
 import {
   getSwapErrors,
   getSwapFromAsset,
@@ -25,8 +25,14 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     clearSwap: () => dispatch(clearSwap()),
-    sign: (transaction) => dispatch(createTransaction(transaction)),
-    approve: (allowance) => dispatch(approveAllowance(allowance)),
+    sign: async (transaction) => {
+      await dispatch(showLoadingIndication())
+      await dispatch(createTransaction(transaction))
+    },
+    approve: async (allowance) => {
+      await dispatch(showLoadingIndication())
+      await dispatch(approveAllowance(allowance))
+    },
   }
 }
 

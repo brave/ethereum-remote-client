@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { resetSwapState } from '../../ducks/swap/swap.duck'
 import Swap from './swap.component'
 import { getUnapprovedTxs } from '../../selectors'
+import { hideLoadingIndication } from '../../store/actions'
 
 
 function mapStateToProps (state) {
@@ -16,6 +17,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     resetSwapState: () => dispatch(resetSwapState()),
+    hideLoadingIndication: () => dispatch(hideLoadingIndication()),
   }
 }
 

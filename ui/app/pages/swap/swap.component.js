@@ -10,6 +10,7 @@ export default class SwapTransactionScreen extends Component {
     history: PropTypes.object,
     unapprovedTxs: PropTypes.object.isRequired,
     resetSwapState: PropTypes.func.isRequired,
+    hideLoadingIndication: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -28,14 +29,23 @@ export default class SwapTransactionScreen extends Component {
 
   // eslint-disable-next-line no-unused-vars
   componentDidUpdate (prevProps, prevState, snapshot) {
-    const { unapprovedTxs, history } = this.props
+    const { unapprovedTxs, history, hideLoadingIndication } = this.props
     const { unapprovedTxs: prevUnapprovedTxs } = prevProps
 
-    Object.keys(unapprovedTxs).forEach(
+    const newTransactions = Object.keys(unapprovedTxs).filter(
+      (id) => prevUnapprovedTxs[id] === undefined,
+    )
+
+    newTransactions.forEach(
       (id) =>
-        prevUnapprovedTxs[id] === undefined &&
         history.push(`${CONFIRM_TRANSACTION_ROUTE}/${id}`),
     )
+
+    // Hide the loader that was initiated by the swap-footer.
+    // See: ui/app/pages/swap/swap-footer/swap-footer.container.js
+    if (newTransactions.length > 0) {
+      hideLoadingIndication()
+    }
   }
 
   setCustomAllowance = (value) => {

@@ -705,7 +705,7 @@ export function approveAllowance (allowance) {
       })
 
     } catch (e) {
-      dispatch(displayWarning(e.message))
+      await dispatch(displayWarning(e.message))
     }
 
     await dispatch(createTransaction({ ...transaction, gas }))

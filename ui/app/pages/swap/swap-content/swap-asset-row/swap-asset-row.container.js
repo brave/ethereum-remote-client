@@ -16,7 +16,6 @@ import { ethers } from 'ethers'
 function mapStateToProps (state) {
   return {
     selectedAccount: getSelectedAccount(state),
-    assets: state.metamask.swap.assets,
     fromAsset: getSwapFromAsset(state),
     toAsset: getSwapToAsset(state),
     quote: getSwapQuote(state),

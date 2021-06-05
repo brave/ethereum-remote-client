@@ -4,14 +4,6 @@ import { conversionGTE } from '../helpers/utils/conversion-util'
 import { decimalToHex } from '../pages/swap/swap.utils'
 
 
-export function getSwapGasPrice (state) {
-  return state.metamask.swap.gasPrice
-}
-
-export function getSwapGasLimit (state) {
-  return state.metamask.swap.gasLimit
-}
-
 export function getSwapFromAsset (state) {
   return state.metamask.swap.fromAsset
 }

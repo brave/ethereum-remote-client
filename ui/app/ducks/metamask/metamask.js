@@ -36,11 +36,6 @@ export default function reduceMetamask (state = {}, action) {
       ensResolutionError: '',
     },
     swap: {
-      gasLimit: null,
-      gasPrice: null,
-      gasTotal: null,
-      from: '',
-      to: '',
       quote: null,
       status: '',
       fromAsset: {
@@ -53,10 +48,7 @@ export default function reduceMetamask (state = {}, action) {
       fromTokenAssetAllowance: null,
       toAsset: null,
       amount: '0',
-      memo: '',
       errors: {},
-      maxModeOn: false,
-      editingTransactionId: null,
     },
     useBlockie: false,
     featureFlags: {},

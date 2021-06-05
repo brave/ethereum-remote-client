@@ -13,8 +13,6 @@ import {
   getCustomGasPrice,
   getSwapAmount,
   getSwapFromAsset,
-  getSwapGasLimit,
-  getSwapGasPrice,
   getSwapQuote,
   getSwapQuoteGasPrice,
   getSwapToAsset,
@@ -26,8 +24,6 @@ const mapStateToProps = (state) => ({
   amount: getSwapAmount(state),
   quote: getSwapQuote(state),
   globalGasPrice: getCustomGasPrice(state),
-  gasPrice: getSwapGasPrice(state),
-  gasLimit: getSwapGasLimit(state),
   quoteGasPrice: getSwapQuoteGasPrice(state),
 })
 

@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import SwapFees from './swap-fees.component'
 
 import {
+  getNetworkIdentifier,
   getSwapAmount,
   getSwapFromAsset,
   getSwapQuote,
@@ -21,6 +22,7 @@ const mapStateToProps = (state) => {
     amount: getSwapAmount(state),
     currentCurrency,
     conversionRate,
+    network: getNetworkIdentifier(state),
   }
 }
 

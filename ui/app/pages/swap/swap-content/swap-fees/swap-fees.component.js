@@ -6,7 +6,7 @@ import { PRIMARY } from '../../../../helpers/constants/common'
 import { conversionUtil } from '../../../../helpers/utils/conversion-util'
 import { AssetPropTypes } from '../../prop-types'
 import CustomizeGasButton from '../swap-gas-customize'
-import config from '../../swap.config'
+import getConfig from '../../swap.config'
 
 export default class SwapFees extends Component {
   static propTypes = {
@@ -17,6 +17,7 @@ export default class SwapFees extends Component {
     conversionRate: PropTypes.number,
     refreshQuote: PropTypes.func.isRequired,
     amount: PropTypes.string,
+    network: PropTypes.string.isRequired,
   }
 
   static contextTypes = {
@@ -38,7 +39,8 @@ export default class SwapFees extends Component {
   }
 
   render () {
-    const { fromAsset, toAsset, estimatedGasCost, refreshQuote, amount } = this.props
+    const { fromAsset, toAsset, estimatedGasCost, refreshQuote, amount, network } = this.props
+    const config = getConfig(network)
 
     return fromAsset && toAsset && estimatedGasCost ? (
       <div className="swap-v2__form-row-centered">

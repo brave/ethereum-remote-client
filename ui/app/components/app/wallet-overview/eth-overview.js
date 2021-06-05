@@ -14,9 +14,15 @@ import Tooltip from '../../ui/tooltip-v2'
 import UserPreferencedCurrencyDisplay from '../user-preferenced-currency-display'
 import { PRIMARY, SECONDARY } from '../../../helpers/constants/common'
 import { showModal } from '../../../store/actions'
-import { isBalanceCached, getSelectedAccount, getShouldShowFiat, getIsMainnet } from '../../../selectors/selectors'
+import {
+  getNetworkIdentifier,
+  getSelectedAccount,
+  getShouldShowFiat,
+  isBalanceCached,
+} from '../../../selectors/selectors'
 import PaperAirplane from '../../ui/icon/paper-airplane-icon'
 import Interaction from '../../ui/icon/interaction-icon.component'
+import { MAINNET, ROPSTEN } from '../../../../../app/scripts/controllers/network/enums'
 
 const EthOverview = ({ className }) => {
   const dispatch = useDispatch()
@@ -47,7 +53,9 @@ const EthOverview = ({ className }) => {
   const showFiat = useSelector(getShouldShowFiat)
   const selectedAccount = useSelector(getSelectedAccount)
   const { balance } = selectedAccount
-  const isMainnet = useSelector(getIsMainnet)
+  const networkIdentifier = useSelector(getNetworkIdentifier)
+
+  const isSwapAvailable = [MAINNET, ROPSTEN].includes(networkIdentifier)
 
   return (
     <WalletOverview
@@ -111,9 +119,15 @@ const EthOverview = ({ className }) => {
             }}
             data-testid="eth-overview-send"
           >
-            { t('send') }
+            {t('send')}
           </Button>
-          <Tooltip position="bottom" title={t('availableOnMainnet')} disabled={isMainnet} offset={-115} distance={-30}>
+          <Tooltip
+            position="bottom"
+            title={t('availableOnMainnetRopsten')}
+            disabled={isSwapAvailable}
+            offset={-115}
+            distance={-30}
+          >
             <Button
               type="secondary"
               className="eth-overview__button"
@@ -124,7 +138,7 @@ const EthOverview = ({ className }) => {
                 history.push(SWAP_ROUTE)
               }}
               data-testid="eth-overview-swap"
-              disabled={!isMainnet}
+              disabled={!isSwapAvailable}
             >
               { t('swap') }
             </Button>

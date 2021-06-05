@@ -1,7 +1,7 @@
 'use strict'
 import fetch from 'node-fetch'
 import ObservableStore from 'obs-store'
-import config from '../../../ui/app/pages/swap/swap.config'
+import getConfig from '../../../ui/app/pages/swap/swap.config'
 
 
 export default class SwapsController {
@@ -11,7 +11,9 @@ export default class SwapsController {
     this.store = new ObservableStore({ initState })
   }
 
-  async quote (fromAssetSymbol, toAssetSymbol, amount, gasPrice) {
+  async quote (fromAssetSymbol, toAssetSymbol, amount, gasPrice, network) {
+    const config = getConfig(network)
+
     const qs = _createQueryString({
       sellAmount: amount,
       buyToken: toAssetSymbol,

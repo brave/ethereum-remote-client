@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import SwapAssetRow from './swap-asset-row.component'
 import {
+  getNetworkIdentifier,
   getSelectedAccount,
   getSwapAmount,
   getSwapFromAsset,
@@ -22,6 +23,7 @@ function mapStateToProps (state) {
     fromTokenAssetBalance: getSwapFromTokenAssetBalance(state),
     fromTokenAssetAllowance: getSwapFromTokenAssetAllowance(state),
     amount: getSwapAmount(state),
+    network: getNetworkIdentifier(state),
   }
 }
 

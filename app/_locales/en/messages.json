@@ -947,8 +947,8 @@
   "mainnet": {
     "message": "Main Ethereum Network"
   },
-  "availableOnMainnet": {
-    "message": "Only available on mainnet"
+  "availableOnMainnetRopsten": {
+    "message": "Only available on mainnet and ropsten"
   },
   "memorizePhrase": {
     "message": "Memorize this phrase."

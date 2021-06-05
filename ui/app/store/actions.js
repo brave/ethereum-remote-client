@@ -19,6 +19,7 @@ import * as actionConstants from './actionConstants'
 import {
   getBlockGasLimit,
   getConversionRate,
+  getNetworkIdentifier,
   getPermittedAccountsForCurrentTab,
   getSelectedAccount,
   getSelectedAddress,
@@ -207,11 +208,18 @@ export function verifySeedPhrase () {
 }
 
 export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
+    const state = getState()
+    const network = getNetworkIdentifier(state)
+
     const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
 
     const quote = await promisifiedBackground.quote(
-      fromAsset.symbol, toAsset.symbol, parseInt(amount, 16), gasPriceDecimal,
+      fromAsset.symbol,
+      toAsset.symbol,
+      parseInt(amount, 16),
+      gasPriceDecimal,
+      network,
     )
 
     await dispatch(updateSwapQuote(quote))

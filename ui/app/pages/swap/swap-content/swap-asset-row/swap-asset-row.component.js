@@ -12,7 +12,7 @@ import { calcTokenAmount } from '../../../../helpers/utils/token-util'
 import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
-import { assets } from '../../asset-registry'
+import assetsMap from '../../assets'
 import AmountMaxButton from '../amount-max-button'
 import { hexAmountToDecimal } from '../../swap.utils'
 import { conversionGTE } from '../../../../helpers/utils/conversion-util'
@@ -33,6 +33,7 @@ export default class SwapAssetRow extends Component {
     setAllowance: PropTypes.func.isRequired,
     customAllowance: PropTypes.string,
     setCustomAllowance: PropTypes.func.isRequired,
+    network: PropTypes.string.isRequired,
   }
 
   static contextTypes = {
@@ -259,12 +260,15 @@ export default class SwapAssetRow extends Component {
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">Select asset</div>
         </div>
-        <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+        <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
       </div>
     )
   }
 
   renderFromAssetDropdown () {
+    const { network } = this.props
+    const assets = assetsMap[network]
+
     return (
       this.state.isShowingDropdownFrom && (
         <div>
@@ -283,6 +287,9 @@ export default class SwapAssetRow extends Component {
   }
 
   renderToAssetDropdown () {
+    const { network } = this.props
+    const assets = assetsMap[network]
+
     return (
       this.state.isShowingDropdownTo && (
         <div>

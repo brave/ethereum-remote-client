@@ -1,4 +1,3 @@
-import abi from 'human-standard-token-abi'
 import { getSelectedAccount, getSelectedAddress, getTargetAccount } from '.'
 import { conversionGTE } from '../helpers/utils/conversion-util'
 import { decimalToHex } from '../pages/swap/swap.utils'
@@ -38,15 +37,6 @@ export function getSwapQuoteEstimatedGasCost (state) {
 
   const gasCost = parseInt(gasLimit) * parseInt(estimatedGasPrice)
   return gasCost.toString(16)
-}
-
-
-export function getSwapFromTokenContract (state) {
-  const swapFromTokenAddress = getSwapFromAsset(state)?.address
-
-  return swapFromTokenAddress
-    ? global.eth.contract(abi).at(swapFromTokenAddress)
-    : null
 }
 
 export function getSwapErrors (state) {

@@ -26,7 +26,6 @@ import {
   getSwapAmount,
   getSwapFromAsset,
   getSwapFromTokenAssetBalance,
-  getSwapFromTokenContract,
   getSwapQuote,
   getSwapQuoteEstimatedGasCost,
 } from '../selectors'
@@ -40,6 +39,7 @@ import {
   getGasFeeErrorObject,
 } from '../pages/swap/swap.utils'
 import { conversionUtil } from '../helpers/utils/conversion-util'
+import { makeContract } from './utils'
 
 let background = null
 let promisifiedBackground = null
@@ -48,6 +48,12 @@ export function _setBackgroundConnection (backgroundConnection) {
   background = backgroundConnection
   promisifiedBackground = pify(background)
 }
+
+function getBackgroundConnection () {
+  return promisifiedBackground
+}
+
+exports.getBackgroundConnection = getBackgroundConnection
 
 export function goHome () {
   return {
@@ -214,7 +220,8 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
 
     const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
 
-    const quote = await promisifiedBackground.quote(
+    const conn = exports.getBackgroundConnection()
+    const quote = await conn.quote(
       fromAsset.symbol,
       toAsset.symbol,
       parseInt(amount, 16),
@@ -833,7 +840,7 @@ export function updateSwapFromTokenBalance ({ fromAsset }) {
 
     // Step 3: Get properties from the state required for querying the
     // the token balance.
-    const contract = getSwapFromTokenContract(state)
+    const contract = makeContract(fromAsset)
     const address = getSelectedAddress(state)
 
     // Step 4: Do nothing if no contract object was initialized.
@@ -870,7 +877,7 @@ export function updateSwapFromTokenAllowance ({ fromAsset, quote }) {
 
     // Step 3: Get properties from the state required for querying the
     // the contract allowance.
-    const contract = getSwapFromTokenContract(state)
+    const contract = makeContract(fromAsset)
     const address = getSelectedAddress(state)
 
     // Step 4: Do nothing if no contract object was initialized.

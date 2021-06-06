@@ -20,14 +20,14 @@ describe('SwapHeader Component', function () {
   })
 
   beforeEach(function () {
-    wrapper = shallow((
+    wrapper = shallow(
       <SwapHeader
         clearSwap={propsMethodSpies.clearSwap}
         history={historySpies}
         mostRecentOverviewPage="mostRecentOverviewPage"
-        titleKey="mockTitleKey"
-      />
-    ), { context: { t: (str1, str2) => (str2 ? str1 + str2 : str1) } })
+      />,
+      { context: { t: (str1, str2) => (str2 ? str1 + str2 : str1) } },
+    )
   })
 
   afterEach(function () {
@@ -42,33 +42,33 @@ describe('SwapHeader Component', function () {
 
   describe('onClose', function () {
     it('should call clearSwap', function () {
-      assert.equal(propsMethodSpies.clearSwap.callCount, 0)
+      assert.strictEqual(propsMethodSpies.clearSwap.callCount, 0)
       wrapper.instance().onClose()
-      assert.equal(propsMethodSpies.clearSwap.callCount, 1)
+      assert.strictEqual(propsMethodSpies.clearSwap.callCount, 1)
     })
 
     it('should call history.push', function () {
-      assert.equal(historySpies.push.callCount, 0)
+      assert.strictEqual(historySpies.push.callCount, 0)
       wrapper.instance().onClose()
-      assert.equal(historySpies.push.callCount, 1)
-      assert.equal(historySpies.push.getCall(0).args[0], 'mostRecentOverviewPage')
+      assert.strictEqual(historySpies.push.callCount, 1)
+      assert.strictEqual(
+        historySpies.push.getCall(0).args[0],
+        'mostRecentOverviewPage',
+      )
     })
   })
 
   describe('render', function () {
     it('should render a PageContainerHeader component', function () {
-      assert.equal(wrapper.find(PageContainerHeader).length, 1)
+      assert.strictEqual(wrapper.find(PageContainerHeader).length, 1)
     })
 
     it('should pass the correct props to PageContainerHeader', function () {
-      const {
-        onClose,
-        title,
-      } = wrapper.find(PageContainerHeader).props()
-      assert.equal(title, 'mockTitleKey')
-      assert.equal(SwapHeader.prototype.onClose.callCount, 0)
+      const { onClose, title } = wrapper.find(PageContainerHeader).props()
+      assert.strictEqual(title, 'swap')
+      assert.strictEqual(SwapHeader.prototype.onClose.callCount, 0)
       onClose()
-      assert.equal(SwapHeader.prototype.onClose.callCount, 1)
+      assert.strictEqual(SwapHeader.prototype.onClose.callCount, 1)
     })
   })
 })

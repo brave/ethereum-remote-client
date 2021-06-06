@@ -14,7 +14,7 @@ export default class SwapsController {
   async quote (fromAssetSymbol, toAssetSymbol, amount, gasPrice, network) {
     const config = getConfig(network)
 
-    const qs = _createQueryString({
+    const qs = createQueryString({
       sellAmount: amount,
       buyToken: toAssetSymbol,
       sellToken: fromAssetSymbol,
@@ -30,7 +30,7 @@ export default class SwapsController {
   }
 }
 
-function _createQueryString (params) {
+export function createQueryString (params) {
   return Object.entries(params)
     .filter(([_, v]) => v)
     .map(([k, v]) => `${k}=${v}`).join('&')

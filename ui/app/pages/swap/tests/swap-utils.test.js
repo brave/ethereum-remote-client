@@ -2,36 +2,41 @@ import assert from 'assert'
 import sinon from 'sinon'
 import proxyquire from 'proxyquire'
 import {
-  BASE_TOKEN_GAS_COST,
-  SIMPLE_GAS_COST,
+  BALANCE_FETCH_ERROR,
   INSUFFICIENT_FUNDS_ERROR,
+  INSUFFICIENT_FUNDS_GAS_ERROR,
   INSUFFICIENT_TOKENS_ERROR,
 } from '../swap.constants'
+import itParam from 'mocha-param'
+
+const ETH = {
+  name: 'Ether',
+  address: '',
+  symbol: 'ETH',
+  decimals: 18,
+}
+
+const BAT = {
+  name: 'Basic Attention Token',
+  address: '0xDEADBEEF',
+  symbol: 'BAT',
+  decimals: 18,
+}
 
 const stubs = {
-  addCurrencies: sinon.stub().callsFake((a, b) => {
-    if (String(a).match(/^0x.+/)) {
-      a = Number(String(a).slice(2))
-    }
-    if (String(b).match(/^0x.+/)) {
-      b = Number(String(b).slice(2))
-    }
-    return a + b
-  }),
-  conversionUtil: sinon.stub().callsFake((val) => parseInt(val, 16)),
-  conversionGTE: sinon.stub().callsFake((obj1, obj2) => obj1.value >= obj2.value),
   multiplyCurrencies: sinon.stub().callsFake((a, b) => `${a}x${b}`),
   calcTokenAmount: sinon.stub().callsFake((a, d) => 'calc:' + a + d),
   rawEncode: sinon.stub().returns([16, 1100]),
-  conversionGreaterThan: sinon.stub().callsFake((obj1, obj2) => obj1.value > obj2.value),
-  conversionLessThan: sinon.stub().callsFake((obj1, obj2) => obj1.value < obj2.value),
+  conversionGreaterThan: sinon
+    .stub()
+    .callsFake((obj1, obj2) => obj1.value > obj2.value),
+  conversionLessThan: sinon
+    .stub()
+    .callsFake((obj1, obj2) => obj1.value < obj2.value),
 }
 
 const swapUtils = proxyquire('../swap.utils.js', {
   '../../helpers/utils/conversion-util': {
-    addCurrencies: stubs.addCurrencies,
-    conversionUtil: stubs.conversionUtil,
-    conversionGTE: stubs.conversionGTE,
     multiplyCurrencies: stubs.multiplyCurrencies,
     conversionGreaterThan: stubs.conversionGreaterThan,
     conversionLessThan: stubs.conversionLessThan,
@@ -43,412 +48,329 @@ const swapUtils = proxyquire('../swap.utils.js', {
 })
 
 const {
-  calcGasTotal,
-  estimateGas,
-  doesAmountErrorRequireUpdate,
-  generateTokenTransferData,
+  estimateGasForTransaction,
   getAmountErrorObject,
   getGasFeeErrorObject,
-  getToAddressForGasUpdate,
   calcTokenBalance,
   isBalanceSufficient,
   isTokenBalanceSufficient,
-  removeLeadingZeroes,
 } = swapUtils
 
-describe('swap utils', function () {
-
-  describe('calcGasTotal()', function () {
-    it('should call multiplyCurrencies with the correct params and return the multiplyCurrencies return', function () {
-      const result = calcGasTotal(12, 15)
-      assert.equal(result, '12x15')
-      const call_ = stubs.multiplyCurrencies.getCall(0).args
-      assert.deepEqual(
-        call_,
-        [12, 15, {
-          toNumericBase: 'hex',
-          multiplicandBase: 16,
-          multiplierBase: 16,
-        } ],
-      )
-    })
-  })
-
-  describe('doesAmountErrorRequireUpdate()', function () {
-    const config = {
-      'should return true if balances are different': {
-        balance: 0,
-        prevBalance: 1,
-        expectedResult: true,
-      },
-      'should return true if gasTotals are different': {
-        gasTotal: 0,
-        prevGasTotal: 1,
-        expectedResult: true,
-      },
-      'should return true if token balances are different': {
-        tokenBalance: 0,
-        prevTokenBalance: 1,
-        swapFromToken: { address: '0x0' },
-        expectedResult: true,
-      },
-      'should return false if they are all the same': {
-        balance: 1,
-        prevBalance: 1,
-        gasTotal: 1,
-        prevGasTotal: 1,
-        tokenBalance: 1,
-        prevTokenBalance: 1,
-        swapFromToken: { address: '0x0' },
-        expectedResult: false,
-      },
-    }
-    Object.entries(config).forEach(([description, obj]) => {
-      it(description, function () {
-        assert.equal(doesAmountErrorRequireUpdate(obj), obj.expectedResult)
-      })
-    })
-
-  })
-
-  describe('generateTokenTransferData()', function () {
-    it('should return undefined if not passed a swap token', function () {
-      assert.equal(generateTokenTransferData({ toAddress: 'mockAddress', amount: '0xa', swapFromToken: undefined }), undefined)
-    })
-
-    it('should call abi.rawEncode with the correct params', function () {
-      stubs.rawEncode.resetHistory()
-      generateTokenTransferData({ toAddress: 'mockAddress', amount: 'ab', swapFromToken: { address: '0x0' } })
-      assert.deepEqual(
-        stubs.rawEncode.getCall(0).args,
-        [['address', 'uint256'], ['mockAddress', '0xab']],
-      )
-    })
-
-    it('should return encoded token transfer data', function () {
-      assert.equal(
-        generateTokenTransferData({ toAddress: 'mockAddress', amount: '0xa', swapFromToken: { address: '0x0' } }),
-        '0xa9059cbb104c',
-      )
-    })
-  })
-
+describe('Swap utils', function () {
   describe('getAmountErrorObject()', function () {
-    const config = {
-      'should return insufficientFunds error if isBalanceSufficient returns false': {
-        amount: 15,
-        balance: 1,
-        conversionRate: 3,
-        gasTotal: 17,
-        primaryCurrency: 'ABC',
-        expectedResult: { amount: INSUFFICIENT_FUNDS_ERROR },
+    const cases = [
+      {
+        name: 'should return balanceFetchError for BAT if tokenBalance is null',
+        props: {
+          amount: 'f',
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: '0',
+          fromAsset: BAT,
+          tokenBalance: null,
+        },
+        expected: { amount: BALANCE_FETCH_ERROR },
       },
-      'should not return insufficientFunds error if swapFromToken is truthy': {
-        amount: '0x0',
-        balance: 1,
-        conversionRate: 3,
-        gasTotal: 17,
-        primaryCurrency: 'ABC',
-        swapFromToken: { address: '0x0', symbol: 'DEF', decimals: 0 },
-        decimals: 0,
-        tokenBalance: 'sometokenbalance',
-        expectedResult: { amount: null },
+      {
+        name:
+          'should return insufficientFunds for ETH if not enough balance and estimatedGasCost=null',
+        props: {
+          amount: 'f',
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: null,
+          fromAsset: ETH,
+        },
+        expected: { amount: INSUFFICIENT_FUNDS_ERROR },
       },
-      'should return insufficientTokens error if token is selected and isTokenBalanceSufficient returns false': {
-        amount: '0x10',
-        balance: 100,
-        conversionRate: 3,
-        decimals: 10,
-        gasTotal: 17,
-        primaryCurrency: 'ABC',
-        swapFromToken: { address: '0x0' },
-        tokenBalance: 123,
-        expectedResult: { amount: INSUFFICIENT_TOKENS_ERROR },
+      {
+        name: 'should handle null ETH amount',
+        props: {
+          amount: null,
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: null,
+          fromAsset: ETH,
+        },
+        expected: { amount: null },
       },
-    }
-    Object.entries(config).forEach(([description, obj]) => {
-      it(description, function () {
-        assert.deepEqual(getAmountErrorObject(obj), obj.expectedResult)
-      })
+      {
+        name: 'should handle null BAT amount',
+        props: {
+          amount: null,
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: null,
+          fromAsset: BAT,
+          tokenBalance: 'f',
+        },
+        expected: { amount: null },
+      },
+      {
+        name:
+          'should return insufficientFunds for ETH if balance is not enough',
+        props: {
+          amount: 'f',
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: 'e',
+          fromAsset: ETH,
+        },
+        expected: { amount: INSUFFICIENT_FUNDS_ERROR },
+      },
+      {
+        name: 'should return no error for ETH if balance is enough',
+        props: {
+          amount: '1',
+          balance: 'f',
+          conversionRate: 3,
+          estimatedGasCost: 'e',
+          fromAsset: ETH,
+        },
+        expected: { amount: null },
+      },
+      {
+        name:
+          'should return insufficientTokens error for BAT if balance is not enough',
+        props: {
+          amount: 'f',
+          balance: '1',
+          conversionRate: 3,
+          estimatedGasCost: 'e',
+          fromAsset: BAT,
+        },
+        expected: { amount: INSUFFICIENT_TOKENS_ERROR },
+      },
+      {
+        name: 'should return no error for BAT if balance is enough',
+        props: {
+          amount: '1',
+          balance: 'e',
+          tokenBalance: 'f',
+          conversionRate: 3,
+          estimatedGasCost: 'e',
+          fromAsset: BAT,
+        },
+        expected: { amount: null },
+      },
+    ]
+
+    itParam('${value.name}', cases, function ({ props, expected }) {
+      assert.deepStrictEqual(getAmountErrorObject(props), expected)
     })
   })
 
   describe('getGasFeeErrorObject()', function () {
-    const config = {
-      'should return insufficientFunds error if isBalanceSufficient returns false': {
-        balance: 16,
-        conversionRate: 3,
-        gasTotal: 17,
-        primaryCurrency: 'ABC',
-        expectedResult: { gasFee: INSUFFICIENT_FUNDS_ERROR },
+    const cases = [
+      {
+        name: 'should return no error if conversionRate is null',
+        props: {
+          amount: '0',
+          balance: '10',
+          conversionRate: null,
+          estimatedGasCost: '11',
+          fromAsset: ETH,
+        },
+        expected: { gasFee: null },
       },
-      'should return null error if isBalanceSufficient returns true': {
-        balance: 16,
-        conversionRate: 3,
-        gasTotal: 15,
-        primaryCurrency: 'ABC',
-        expectedResult: { gasFee: null },
+      {
+        name: 'should return insufficientFundsGas error if balance is 0',
+        props: {
+          amount: '0',
+          balance: '0',
+          conversionRate: '1',
+          estimatedGasCost: '11',
+          fromAsset: ETH,
+        },
+        expected: { gasFee: INSUFFICIENT_FUNDS_GAS_ERROR },
       },
-    }
-    Object.entries(config).forEach(([description, obj]) => {
-      it(description, function () {
-        assert.deepEqual(getGasFeeErrorObject(obj), obj.expectedResult)
-      })
+      {
+        name: 'should return null error if ETH balance is sufficient',
+        props: {
+          amount: '4e20',
+          balance: '5208',
+          conversionRate: '1',
+          estimatedGasCost: '3e8',
+          fromAsset: ETH,
+        },
+        expected: { gasFee: null },
+      },
+      {
+        name: 'should return null error for BAT if gas is sufficient',
+        props: {
+          amount: '186a0',
+          balance: '5208',
+          conversionRate: '1',
+          estimatedGasCost: '3e8',
+          fromAsset: BAT,
+        },
+        expected: { gasFee: null },
+      },
+      {
+        name:
+          'should return insufficientFundsGas error for BAT if gas is insufficient',
+        props: {
+          amount: '186a0',
+          balance: '3e8',
+          conversionRate: '1',
+          estimatedGasCost: '5208',
+          fromAsset: BAT,
+        },
+        expected: { gasFee: INSUFFICIENT_FUNDS_GAS_ERROR },
+      },
+      {
+        name: 'should not break if estimatedGas unavailable',
+        props: {
+          amount: '186a0',
+          balance: '3e8',
+          conversionRate: '1',
+          estimatedGasCost: null,
+          fromAsset: BAT,
+        },
+        expected: { gasFee: null },
+      },
+    ]
+
+    itParam('${value.name}', cases, function ({ props, expected }) {
+      assert.deepStrictEqual(getGasFeeErrorObject(props), expected)
     })
   })
 
   describe('calcTokenBalance()', function () {
     it('should return the calculated token balance', function () {
-      assert.equal(calcTokenBalance({
-        swapFromToken: {
-          address: '0x0',
-          decimals: 11,
-        },
-        usersToken: {
-          balance: 20,
-        },
-      }), 'calc:2011')
+      assert.strictEqual(
+        calcTokenBalance({
+          swapFromToken: {
+            address: '0x0',
+            decimals: 11,
+          },
+          usersToken: {
+            balance: 20,
+          },
+        }),
+        'calc:2011',
+      )
     })
   })
 
   describe('isBalanceSufficient()', function () {
     it('should correctly call addCurrencies and return the result of calling conversionGTE', function () {
-      stubs.conversionGTE.resetHistory()
       const result = isBalanceSufficient({
-        amount: 15,
-        balance: 100,
+        amount: '4e20',
+        balance: '5208',
         conversionRate: 3,
-        gasTotal: 17,
+        estimatedGasCost: '3e8',
         primaryCurrency: 'ABC',
       })
-      assert.deepEqual(
-        stubs.addCurrencies.getCall(0).args,
-        [
-          15, 17, {
-            aBase: 16,
-            bBase: 16,
-            toNumericBase: 'hex',
-          },
-        ],
-      )
-      assert.deepEqual(
-        stubs.conversionGTE.getCall(0).args,
-        [
-          {
-            value: 100,
-            fromNumericBase: 'hex',
-            fromCurrency: 'ABC',
-            conversionRate: 3,
-          },
-          {
-            value: 32,
-            fromNumericBase: 'hex',
-            conversionRate: 3,
-            fromCurrency: 'ABC',
-          },
-        ],
-      )
-
-      assert.equal(result, true)
+      assert.strictEqual(result, true)
     })
   })
 
   describe('isTokenBalanceSufficient()', function () {
-    it('should correctly call conversionUtil and return the result of calling conversionGTE', function () {
-      stubs.conversionGTE.resetHistory()
-      stubs.conversionUtil.resetHistory()
+    it('should return the result of calling isTokenBalanceSufficient', function () {
       const result = isTokenBalanceSufficient({
-        amount: '0x10',
-        tokenBalance: 123,
-        decimals: 10,
+        tokenBalance: '4e20',
+        amount: '5208',
       })
-      assert.deepEqual(
-        stubs.conversionUtil.getCall(0).args,
-        [
-          '0x10', {
-            fromNumericBase: 'hex',
-          },
-        ],
-      )
-      assert.deepEqual(
-        stubs.conversionGTE.getCall(0).args,
-        [
-          {
-            value: 123,
-            fromNumericBase: 'hex',
-          },
-          {
-            value: 'calc:1610',
-          },
-        ],
-      )
-
-      assert.equal(result, false)
+      assert.strictEqual(result, false)
     })
   })
 
-  describe('estimateGas', function () {
+  describe('estimateGasForTransaction', function () {
     const baseMockParams = {
       blockGasLimit: '0x64',
-      selectedAddress: 'mockAddress',
-      to: '0xisContract',
-      estimateGasMethod: sinon.stub().callsFake(
-        ({ to }) => {
-          if (typeof to === 'string' && to.match(/willFailBecauseOf:/)) {
-            throw new Error(to.match(/:(.+)$/)[1])
-          }
-          return { toString: (n) => `0xabc${n}` }
-        },
-      ),
+      transaction: {
+        to: '0xisContract',
+        from: 'mockAddress',
+        value: 'mockValue',
+        gasPrice: 'mockGasPrice',
+        data: 'mockData',
+      },
+      estimateGasMethod: sinon.stub().callsFake(({ to }) => {
+        if (typeof to === 'string' && to.match(/willFailBecauseOf:/)) {
+          throw new Error(to.match(/:(.+)$/)[1])
+        }
+        return { toString: (n) => `0xabc${n}` }
+      }),
     }
     const baseExpectedCall = {
       from: 'mockAddress',
       gas: '0x64x0.95',
       to: '0xisContract',
-      value: '0xff',
+      value: 'mockValue',
+      data: 'mockData',
+      gasPrice: 'mockGasPrice',
     }
-
-    beforeEach(function () {
-      global.eth = {
-        getCode: sinon.stub().callsFake(
-          (address) => Promise.resolve(address.match(/isContract/) ? 'not-0x' : '0x'),
-        ),
-      }
-    })
 
     afterEach(function () {
       baseMockParams.estimateGasMethod.resetHistory()
-      global.eth.getCode.resetHistory()
     })
 
     it('should call ethQuery.estimateGas with the expected params', async function () {
-      const result = await swapUtils.estimateGas(baseMockParams)
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 1)
-      assert.deepEqual(
+      const result = await estimateGasForTransaction(baseMockParams)
+      assert.strictEqual(baseMockParams.estimateGasMethod.callCount, 1)
+      assert.deepStrictEqual(
         baseMockParams.estimateGasMethod.getCall(0).args[0],
-        Object.assign({ gasPrice: undefined, value: undefined }, baseExpectedCall),
+        Object.assign(
+          { gasPrice: undefined, value: undefined },
+          baseExpectedCall,
+        ),
       )
-      assert.equal(result, '0xabc16')
+      assert.strictEqual(result, '0xabc16')
     })
 
     it('should call ethQuery.estimateGas with the expected params when initialGasLimitHex is lower than the upperGasLimit', async function () {
-      const result = await estimateGas(Object.assign({}, baseMockParams, { blockGasLimit: '0xbcd' }))
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 1)
-      assert.deepEqual(
-        baseMockParams.estimateGasMethod.getCall(0).args[0],
-        Object.assign({ gasPrice: undefined, value: undefined }, baseExpectedCall, { gas: '0xbcdx0.95' }),
+      const result = await estimateGasForTransaction(
+        Object.assign({}, baseMockParams, { blockGasLimit: '0xbcd' }),
       )
-      assert.equal(result, '0xabc16x1.5')
-    })
-
-    it('should call ethQuery.estimateGas with a value of 0x0 and the expected data and to if passed a swapFromToken', async function () {
-      const result = await estimateGas(Object.assign({ data: 'mockData', swapFromToken: { address: 'mockAddress' } }, baseMockParams))
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 1)
-      assert.deepEqual(
+      assert.strictEqual(baseMockParams.estimateGasMethod.callCount, 1)
+      assert.deepStrictEqual(
         baseMockParams.estimateGasMethod.getCall(0).args[0],
-        Object.assign({}, baseExpectedCall, {
-          gasPrice: undefined,
-          value: '0x0',
-          data: '0xa9059cbb104c',
-          to: 'mockAddress',
-        }),
+        Object.assign(
+          { gasPrice: undefined, value: undefined },
+          baseExpectedCall,
+          { gas: '0xbcdx0.95' },
+        ),
       )
-      assert.equal(result, '0xabc16')
-    })
-
-    it('should call ethQuery.estimateGas without a recipient if the recipient is empty and data passed', async function () {
-      const data = 'mockData'
-      const to = ''
-      const result = await estimateGas({ ...baseMockParams, data, to })
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 1)
-      assert.deepEqual(
-        baseMockParams.estimateGasMethod.getCall(0).args[0],
-        { gasPrice: undefined, value: '0xff', data, from: baseExpectedCall.from, gas: baseExpectedCall.gas },
-      )
-      assert.equal(result, '0xabc16')
-    })
-
-    it(`should return ${SIMPLE_GAS_COST} if ethQuery.getCode does not return '0x'`, async function () {
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 0)
-      const result = await estimateGas(Object.assign({}, baseMockParams, { to: '0x123' }))
-      assert.equal(result, SIMPLE_GAS_COST)
-    })
-
-    it(`should return ${SIMPLE_GAS_COST} if not passed a swapFromToken or truthy to address`, async function () {
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 0)
-      const result = await estimateGas(Object.assign({}, baseMockParams, { to: null }))
-      assert.equal(result, SIMPLE_GAS_COST)
-    })
-
-    it(`should not return ${SIMPLE_GAS_COST} if passed a swapFromToken`, async function () {
-      assert.equal(baseMockParams.estimateGasMethod.callCount, 0)
-      const result = await estimateGas(Object.assign({}, baseMockParams, { to: '0x123', swapFromToken: { address: '0x0' } }))
-      assert.notEqual(result, SIMPLE_GAS_COST)
-    })
-
-    it(`should return ${BASE_TOKEN_GAS_COST} if passed a swapFromToken but no to address`, async function () {
-      const result = await estimateGas(Object.assign({}, baseMockParams, { to: null, swapFromToken: { address: '0x0' } }))
-      assert.equal(result, BASE_TOKEN_GAS_COST)
+      assert.strictEqual(result, '0xabc16x1.5')
     })
 
     it(`should return the adjusted blockGasLimit if it fails with a 'Transaction execution error.'`, async function () {
-      const result = await estimateGas(Object.assign({}, baseMockParams, {
-        to: 'isContract willFailBecauseOf:Transaction execution error.',
-      }))
-      assert.equal(result, '0x64x0.95')
+      const result = await estimateGasForTransaction({
+        ...baseMockParams,
+        transaction: {
+          ...baseMockParams.transaction,
+          to: 'isContract willFailBecauseOf:Transaction execution error.',
+        },
+      })
+      assert.strictEqual(result, '0x64x0.95')
     })
 
     it(`should return the adjusted blockGasLimit if it fails with a 'gas required exceeds allowance or always failing transaction.'`, async function () {
-      const result = await estimateGas(Object.assign({}, baseMockParams, {
-        to: 'isContract willFailBecauseOf:gas required exceeds allowance or always failing transaction.',
-      }))
-      assert.equal(result, '0x64x0.95')
+      const result = await estimateGasForTransaction({
+        ...baseMockParams,
+        transaction: {
+          ...baseMockParams.transaction,
+          to:
+            'isContract willFailBecauseOf:gas required exceeds allowance or always failing transaction.',
+        },
+      })
+
+      assert.strictEqual(result, '0x64x0.95')
     })
 
     it(`should reject other errors`, async function () {
       try {
-        await estimateGas(Object.assign({}, baseMockParams, {
-          to: 'isContract willFailBecauseOf:some other error',
-        }))
+        await estimateGasForTransaction({
+          ...baseMockParams,
+          transaction: {
+            ...baseMockParams.transaction,
+            to: 'isContract willFailBecauseOf:some other error',
+          },
+        })
       } catch (err) {
-        assert.equal(err.message, 'some other error')
+        assert.strictEqual(err.message, 'some other error')
       }
-    })
-  })
-
-  describe('getToAddressForGasUpdate()', function () {
-    it('should return empty string if all params are undefined or null', function () {
-      assert.equal(getToAddressForGasUpdate(undefined, null), '')
-    })
-
-    it('should return the first string that is not defined or null in lower case', function () {
-      assert.equal(getToAddressForGasUpdate('A', null), 'a')
-      assert.equal(getToAddressForGasUpdate(undefined, 'B'), 'b')
-    })
-  })
-
-  describe('removeLeadingZeroes()', function () {
-    it('should remove leading zeroes from int when user types', function () {
-      assert.equal(removeLeadingZeroes('0'), '0')
-      assert.equal(removeLeadingZeroes('1'), '1')
-      assert.equal(removeLeadingZeroes('00'), '0')
-      assert.equal(removeLeadingZeroes('01'), '1')
-    })
-
-    it('should remove leading zeroes from int when user copy/paste', function () {
-      assert.equal(removeLeadingZeroes('001'), '1')
-    })
-
-    it('should remove leading zeroes from float when user types', function () {
-      assert.equal(removeLeadingZeroes('0.'), '0.')
-      assert.equal(removeLeadingZeroes('0.0'), '0.0')
-      assert.equal(removeLeadingZeroes('0.00'), '0.00')
-      assert.equal(removeLeadingZeroes('0.001'), '0.001')
-      assert.equal(removeLeadingZeroes('0.10'), '0.10')
-    })
-
-    it('should remove leading zeroes from float when user copy/paste', function () {
-      assert.equal(removeLeadingZeroes('00.1'), '0.1')
     })
   })
 })

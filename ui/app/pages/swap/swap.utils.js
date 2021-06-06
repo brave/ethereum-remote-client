@@ -90,31 +90,14 @@ function getAmountErrorObject ({
   }
 
   let insufficientFunds = false
-  if (estimatedGasCost && conversionRate && !fromAsset.address) {
+  if (conversionRate && !fromAsset.address) {
     insufficientFunds = !isBalanceSufficient({
-      amount,
+      amount: amount || '0',
       balance,
       conversionRate,
-      estimatedGasCost,
+      estimatedGasCost: estimatedGasCost || '0',
       primaryCurrency: fromAsset.symbol,
     })
-  }
-
-  if (!estimatedGasCost && amount && conversionRate && !fromAsset.address) {
-    insufficientFunds = insufficientFunds || !conversionGreaterThan(
-      {
-        value: balance,
-        fromNumericBase: 'hex',
-        fromCurrency: fromAsset.symbol,
-        conversionRate,
-      },
-      {
-        value: amount,
-        fromNumericBase: 'hex',
-        conversionRate: conversionRate,
-        fromCurrency: fromAsset.symbol,
-      },
-    )
   }
 
   let inSufficientTokens = false
@@ -122,7 +105,7 @@ function getAmountErrorObject ({
     const { decimals } = fromAsset
     inSufficientTokens = !isTokenBalanceSufficient({
       tokenBalance,
-      amount,
+      amount: amount || '0',
       decimals,
     })
   }
@@ -164,7 +147,6 @@ function getGasFeeErrorObject ({
     estimatedGasCost: estimatedGasCost || '0x0',
     primaryCurrency: fromAsset.symbol,
   })
-
 
   if (insufficientFunds) {
     gasFeeError = INSUFFICIENT_FUNDS_GAS_ERROR

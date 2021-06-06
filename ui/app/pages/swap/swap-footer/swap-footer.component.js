@@ -8,12 +8,12 @@ export default class SwapFooter extends Component {
   static propTypes = {
     transaction: PropTypes.object,
     inError: PropTypes.bool,
-    sign: PropTypes.func,
     swapErrors: PropTypes.object,
     customAllowance: PropTypes.string,
     fromAsset: AssetPropTypes,
     isSwapFromTokenAssetAllowanceEnough: PropTypes.bool,
     approve: PropTypes.func.isRequired,
+    sign: PropTypes.func.isRequired,
   }
 
   static contextTypes = {

@@ -1,6 +1,39 @@
 import * as actionConstants from '../../store/actionConstants'
 import { ALERT_TYPES } from '../../../../app/scripts/controllers/alert'
 
+const initSwapState = {
+  quote: null,
+  status: '',
+  fromAsset: {
+    'name': 'Ether',
+    'symbol': 'ETH',
+    'address': '',
+    'decimals': 18,
+  },
+  fromTokenAssetBalance: null,
+  fromTokenAssetAllowance: null,
+  toAsset: null,
+  amount: '0',
+  errors: {},
+}
+
+const initSendState = {
+  gasLimit: null,
+  gasPrice: null,
+  gasTotal: null,
+  tokenBalance: '0x0',
+  from: '',
+  to: '',
+  amount: '0',
+  memo: '',
+  errors: {},
+  maxModeOn: false,
+  editingTransactionId: null,
+  toNickname: '',
+  ensResolution: null,
+  ensResolutionError: '',
+}
+
 export default function reduceMetamask (state = {}, action) {
   const metamaskState = Object.assign({
     isInitialized: false,
@@ -19,37 +52,8 @@ export default function reduceMetamask (state = {}, action) {
     }],
     pendingTokens: {},
     customNonceValue: '',
-    send: {
-      gasLimit: null,
-      gasPrice: null,
-      gasTotal: null,
-      tokenBalance: '0x0',
-      from: '',
-      to: '',
-      amount: '0',
-      memo: '',
-      errors: {},
-      maxModeOn: false,
-      editingTransactionId: null,
-      toNickname: '',
-      ensResolution: null,
-      ensResolutionError: '',
-    },
-    swap: {
-      quote: null,
-      status: '',
-      fromAsset: {
-        'name': 'Ether',
-        'symbol': 'ETH',
-        'address': '',
-        'decimals': 18,
-      },
-      fromTokenAssetBalance: null,
-      fromTokenAssetAllowance: null,
-      toAsset: null,
-      amount: '0',
-      errors: {},
-    },
+    send: Object.assign({}, initSendState),
+    swap: Object.assign({}, initSwapState),
     useBlockie: false,
     featureFlags: {},
     welcomeScreenSeen: false,
@@ -341,39 +345,13 @@ export default function reduceMetamask (state = {}, action) {
     case actionConstants.CLEAR_SEND:
       return {
         ...metamaskState,
-        send: {
-          gasLimit: null,
-          gasPrice: null,
-          gasTotal: null,
-          tokenToBalance: null,
-          tokenFromBalance: null,
-          from: '',
-          to: '',
-          amount: '0x0',
-          memo: '',
-          errors: {},
-          maxModeOn: false,
-          editingTransactionId: null,
-          toNickname: '',
-        },
+        send: Object.assign({}, initSendState),
       }
 
     case actionConstants.CLEAR_SWAP:
       return {
         ...metamaskState,
-        swap: {
-          gasLimit: null,
-          gasPrice: null,
-          gasTotal: null,
-          from: '',
-          to: '',
-          amount: '0x0',
-          memo: '',
-          errors: {},
-          maxModeOn: false,
-          editingTransactionId: null,
-          toNickname: '',
-        },
+        swap: Object.assign({}, initSwapState),
       }
 
     case actionConstants.UPDATE_TRANSACTION_PARAMS:

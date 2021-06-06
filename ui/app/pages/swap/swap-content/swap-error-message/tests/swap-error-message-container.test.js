@@ -10,19 +10,19 @@ proxyquire('../swap-error-message.container.js', {
       return () => ({})
     },
   },
-  '../../../../../selectors': { getSwapErrors: (s) => `mockErrors:${s}` },
+  '../../../../selectors': { getSwapErrors: (s) => `mockErrors:${s}` },
 })
 
 describe('swap-error-message container', function () {
-
   describe('mapStateToProps()', function () {
-
     it('should map the correct properties to props', function () {
-      assert.deepEqual(mapStateToProps('mockState', { errorType: 'someType' }), {
-        errors: 'mockErrors:mockState',
-        errorType: 'someType' })
+      assert.deepStrictEqual(
+        mapStateToProps('mockState', { errorType: 'someType' }),
+        {
+          errors: 'mockErrors:mockState',
+          errorType: 'someType',
+        },
+      )
     })
-
   })
-
 })

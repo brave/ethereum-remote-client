@@ -1,104 +1,104 @@
 import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
-import SwapContent from '../swap-content.component.js'
 
+import SwapContent from '../swap-content.component.js'
 import PageContainerContent from '../../../../components/ui/page-container/page-container-content.component'
-import SwapAmountRow from '../swap-amount-row/swap-amount-row.container'
-import SwapGasRow from '../swap-gas-customize/swap-gas-customize.container'
-import SwapAssetRow from '../swap-asset-row/swap-asset-row.container'
-import Dialog from '../../../../components/ui/dialog'
+import SwapAssetRow from '../swap-asset-row'
+import SwapFees from '../swap-fees'
+import SwapQuote from '../swap-quote'
+import sinon from 'sinon'
+
+const ETH = {
+  name: 'Ether',
+  address: '',
+  symbol: 'ETH',
+  decimals: 18,
+}
+
+const BAT = {
+  name: 'Basic Attention Token',
+  address: '0xDEADBEEF',
+  symbol: 'BAT',
+  decimals: 18,
+}
 
 describe('SwapContent Component', function () {
-  let wrapper
+  const propsMethodSpies = {
+    fetchSwapQuote: sinon.spy(),
+    setCustomAllowance: sinon.spy(),
+  }
 
-  beforeEach(function () {
-    wrapper = shallow(
-      <SwapContent
-        showHexData
-      />,
-      { context: { t: (str) => str + '_t' } },
-    )
+  const wrapperFactory = (props) => shallow(
+    <SwapContent
+      fetchSwapQuote={propsMethodSpies.fetchSwapQuote}
+      setCustomAllowance={propsMethodSpies.setCustomAllowance}
+      {...props}
+    />,
+    { context: { t: (str) => str, metricsEvent: () => ({}) } },
+  )
+
+  afterEach(function () {
+    propsMethodSpies.setCustomAllowance.resetHistory()
+    propsMethodSpies.fetchSwapQuote.resetHistory()
   })
 
   describe('render', function () {
     it('should render a PageContainerContent component', function () {
-      assert.equal(wrapper.find(PageContainerContent).length, 1)
+      const wrapper = wrapperFactory()
+      assert.strictEqual(wrapper.find(PageContainerContent).length, 1)
     })
 
     it('should render a div with a .swap-v2__form class as a child of PageContainerContent', function () {
+      const wrapper = wrapperFactory()
       const PageContainerContentChild = wrapper.find(PageContainerContent).children()
       PageContainerContentChild.is('div')
       PageContainerContentChild.is('.swap-v2__form')
     })
 
     it('should render the correct row components as grandchildren of the PageContainerContent component', function () {
-      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-      assert(PageContainerContentChild.childAt(0).is(Dialog), 'row[0] should be Dialog')
-      assert(PageContainerContentChild.childAt(1).is(SwapAssetRow), 'row[1] should be SwapAssetRow')
-      assert(PageContainerContentChild.childAt(2).is(SwapAmountRow), 'row[2] should be SwapAmountRow')
-      assert(PageContainerContentChild.childAt(3).is(SwapGasRow), 'row[3] should be SwapGasRow')
-    })
-
-    it('should not render the SwapHexDataRow if props.showHexData is false', function () {
-      wrapper.setProps({ showHexData: false })
-      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-      assert(PageContainerContentChild.childAt(0).is(Dialog), 'row[0] should be Dialog')
-      assert(PageContainerContentChild.childAt(1).is(SwapAssetRow), 'row[1] should be SwapAssetRow')
-      assert(PageContainerContentChild.childAt(2).is(SwapAmountRow), 'row[2] should be SwapAmountRow')
-      assert(PageContainerContentChild.childAt(3).is(SwapGasRow), 'row[3] should be SwapGasRow')
-      assert.equal(PageContainerContentChild.childAt(4).exists(), false)
-    })
-
-    it('should not render the Dialog if contact has a name', function () {
-      wrapper.setProps({
-        showHexData: false,
-        contact: { name: 'testName' },
-      })
-      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-      assert(PageContainerContentChild.childAt(0).is(SwapAssetRow), 'row[1] should be SwapAssetRow')
-      assert(PageContainerContentChild.childAt(1).is(SwapAmountRow), 'row[2] should be SwapAmountRow')
-      assert(PageContainerContentChild.childAt(2).is(SwapGasRow), 'row[3] should be SwapGasRow')
-      assert.equal(PageContainerContentChild.childAt(3).exists(), false)
-    })
-
-    it('should not render the Dialog if it is an ownedAccount', function () {
-      wrapper.setProps({
-        showHexData: false,
-        isOwnedAccount: true,
-      })
-      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-      assert(PageContainerContentChild.childAt(0).is(SwapAssetRow), 'row[1] should be SwapAssetRow')
-      assert(PageContainerContentChild.childAt(1).is(SwapAmountRow), 'row[2] should be SwapAmountRow')
-      assert(PageContainerContentChild.childAt(2).is(SwapGasRow), 'row[3] should be SwapGasRow')
-      assert.equal(PageContainerContentChild.childAt(3).exists(), false)
-    })
-
-    it('should render contract warning when swaping a token to its own address', function () {
-      wrapper.setProps({
-        showHexData: false,
-        isOwnedAccount: true,
-        isContractAddress: true,
-      })
-      const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-      assert(PageContainerContentChild.childAt(0).is('.contract-error-dialog'), 'row[0] should be contract error dialog')
-    })
-
-    it('should not render contract warning when swaping a token to an appropriate address', function () {
-      wrapper.setProps({
-        showHexData: false,
-        isOwnedAccount: true,
-        isContractAddress: false,
-      })
+      const wrapper = wrapperFactory()
       const PageContainerContentChild = wrapper.find(PageContainerContent).children()
       assert(PageContainerContentChild.childAt(0).is(SwapAssetRow), 'row[0] should be SwapAssetRow')
+      assert(PageContainerContentChild.childAt(1).is(SwapQuote), 'row[1] should be SwapQuote')
+      assert(PageContainerContentChild.childAt(2).is(SwapFees), 'row[2] should be SwapFees')
     })
-  })
 
-  it('should not render the asset dropdown if token length is 0 ', function () {
-    wrapper.setProps({ tokens: [] })
-    const PageContainerContentChild = wrapper.find(PageContainerContent).children()
-    assert(PageContainerContentChild.childAt(1).is(SwapAssetRow))
-    assert(PageContainerContentChild.childAt(1).find('swap-v2__asset-dropdown__single-asset'), true)
+    it('should pass seconds prop to SwapQuote on change', function () {
+      const wrapper = wrapperFactory()
+      wrapper.setState({ seconds: 'mockSeconds' })
+      assert.strictEqual(
+        wrapper.find(SwapQuote).props().seconds,
+        'mockSeconds',
+      )
+    })
+
+    it('should not invoke fetchSwapQuote is no fromAsset', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(null, BAT)
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should not invoke fetchSwapQuote is no toAsset', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, null)
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should not invoke fetchSwapQuote is no amount', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, BAT, '0')
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should invoke fetchSwapQuote if correct props are passed', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, BAT, '7b', '100')
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, true)
+      assert.deepStrictEqual(
+        propsMethodSpies.fetchSwapQuote.getCall(0).args,
+        [ETH, BAT, '7b', '0x64', true],
+      )
+    })
   })
 })

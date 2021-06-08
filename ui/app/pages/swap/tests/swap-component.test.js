@@ -29,12 +29,10 @@ describe('Swap component', function () {
     )
 
   before(function () {
-    sinon.spy(SwapTransactionScreen.prototype, 'componentDidUpdate')
     sinon.spy(SwapTransactionScreen.prototype, 'componentWillUnmount')
   })
 
   afterEach(function () {
-    SwapTransactionScreen.prototype.componentDidUpdate.resetHistory()
     SwapTransactionScreen.prototype.componentWillUnmount.resetHistory()
   })
 
@@ -54,29 +52,6 @@ describe('Swap component', function () {
       assert.strictEqual(propsMethodSpies.resetSwapState.callCount, 0)
       wrapperFactory().instance().componentWillUnmount()
       assert.strictEqual(propsMethodSpies.resetSwapState.callCount, 1)
-    })
-  })
-
-  describe('componentDidUpdate', function () {
-    it('should handle newly created unapproved transaction', function () {
-      const wrapper = wrapperFactory()
-      assert.strictEqual(
-        SwapTransactionScreen.prototype.componentDidUpdate.calledOnce,
-        false,
-      )
-
-      wrapper.setProps({
-        unapprovedTxs: {
-          1234567890: 'mockUnapprovedTx',
-        },
-      })
-
-      assert(SwapTransactionScreen.prototype.componentDidUpdate.calledOnce)
-      assert.deepStrictEqual(mockHistory.push.getCall(0).args, [
-        '/confirm-transaction/1234567890',
-      ])
-
-      assert.strictEqual(propsMethodSpies.hideLoadingIndication.callCount, 1)
     })
   })
 

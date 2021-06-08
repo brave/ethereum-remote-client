@@ -5,9 +5,7 @@ import sinon from 'sinon'
 let mapStateToProps
 let mapDispatchToProps
 
-const actionSpies = {
-  hideLoadingIndication: sinon.spy(),
-}
+
 const duckActionSpies = {
   resetSwapState: sinon.spy(),
 }
@@ -25,19 +23,13 @@ proxyquire('../swap.container.js', {
     },
   },
   redux: { compose: (_, arg2) => () => arg2() },
-  '../../store/actions': actionSpies,
   '../../ducks/swap/swap.duck': duckActionSpies,
-  '../../selectors': {
-    getUnapprovedTxs: (s) => `mockUnapprovedTxs:${s}`,
-  },
 })
 
 describe('Swap container', function () {
   describe('mapStateToProps()', function () {
     it('should map the correct properties to props', function () {
-      assert.deepStrictEqual(mapStateToProps('mockState'), {
-        unapprovedTxs: 'mockUnapprovedTxs:mockState',
-      })
+      assert.deepStrictEqual(mapStateToProps('mockState'), {})
     })
   })
 
@@ -48,17 +40,6 @@ describe('Swap container', function () {
     beforeEach(function () {
       dispatchSpy = sinon.spy()
       mapDispatchToPropsObject = mapDispatchToProps(dispatchSpy)
-    })
-
-    describe('hideLoadingIndication()', function () {
-      it('should dispatch an action', function () {
-        mapDispatchToPropsObject.hideLoadingIndication()
-        assert(dispatchSpy.calledOnce)
-        assert.strictEqual(
-          actionSpies.hideLoadingIndication.getCall(0).args.length,
-          0,
-        )
-      })
     })
 
     describe('resetSwapState()', function () {

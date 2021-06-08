@@ -424,6 +424,9 @@
   "contactUs": {
     "message": "Contact us!"
   },
+  "continueToSwap": {
+    "message": "Continue to Swap"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -782,6 +785,9 @@
   },
   "history": {
     "message": "History"
+  },
+  "home": {
+    "message": "Home"
   },
   "import": {
     "message": "Import",
@@ -1562,6 +1568,9 @@
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
   },
+  "timeout": {
+    "message": "Timeout"
+  },
   "tips": {
     "message": "Tips"
   },
@@ -1856,5 +1865,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Welcome to Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Waiting for confirmation."
   }
 }

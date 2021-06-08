@@ -27,6 +27,7 @@ proxyquire('../swap-footer.container.js', {
     isSwapFromTokenAssetAllowanceEnough: (s) =>
       `mockIsSwapFromTokenAssetAllowanceEnough:${s}`,
     getSwapFromAsset: (s) => `mockFromAsset:${s}`,
+    getUnapprovedTxs: (s) => `mockUnapprovedTxs:${s}`,
   },
   '../../../store/actions': actionSpies,
 })
@@ -41,6 +42,7 @@ describe('swap-footer container', function () {
         isSwapFromTokenAssetAllowanceEnough:
           'mockIsSwapFromTokenAssetAllowanceEnough:mockState',
         fromAsset: 'mockFromAsset:mockState',
+        unapprovedTxs: 'mockUnapprovedTxs:mockState',
       })
     })
   })

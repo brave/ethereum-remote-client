@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerFooter from '../../../components/ui/page-container/page-container-footer'
 import { AssetPropTypes } from '../prop-types'
+import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
 
 export default class SwapFooter extends Component {
-
   static propTypes = {
     transaction: PropTypes.object,
     inError: PropTypes.bool,
@@ -14,6 +14,10 @@ export default class SwapFooter extends Component {
     isSwapFromTokenAssetAllowanceEnough: PropTypes.bool,
     approve: PropTypes.func.isRequired,
     sign: PropTypes.func.isRequired,
+    history: PropTypes.object,
+    unapprovedTxs: PropTypes.object.isRequired,
+    hideLoadingIndication: PropTypes.func.isRequired,
+    updateSwapTokenApprovalTxId: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -40,24 +44,35 @@ export default class SwapFooter extends Component {
       promise = sign(transaction)
     }
 
-    Promise.resolve(promise)
-      .then(() => {
-        metricsEvent({
-          eventOpts: {
-            category: 'Swap',
-            action: 'Edit Screen',
-            name: 'Complete',
-          },
-          customVariables: {
-            gasChanged: '???',
-          },
-        })
+    Promise.resolve(promise).then(() => {
+      metricsEvent({
+        eventOpts: {
+          category: 'Swap',
+          action: 'Edit Screen',
+          name: 'Complete',
+        },
+        customVariables: {
+          gasChanged: '???',
+        },
       })
+    })
   }
 
   componentDidUpdate (prevProps) {
-    const { inError, swapErrors } = this.props
-    const { inError: prevInError } = prevProps
+    const {
+      inError,
+      swapErrors,
+      unapprovedTxs,
+      history,
+      hideLoadingIndication,
+      updateSwapTokenApprovalTxId,
+      fromAsset,
+      isSwapFromTokenAssetAllowanceEnough,
+    } = this.props
+    const {
+      inError: prevInError,
+      unapprovedTxs: prevUnapprovedTxs,
+    } = prevProps
 
     const { metricsEvent } = this.context
     if (!prevInError && inError) {
@@ -75,6 +90,21 @@ export default class SwapFooter extends Component {
           errorMessage,
         },
       })
+    }
+
+    const newTransactions = Object.keys(unapprovedTxs).filter(
+      (id) => prevUnapprovedTxs[id] === undefined,
+    )
+
+    if (newTransactions.length > 0) {
+      const id = newTransactions[0]
+
+      if (fromAsset.address && !isSwapFromTokenAssetAllowanceEnough) {
+        updateSwapTokenApprovalTxId(id)
+      }
+
+      history.push(`${CONFIRM_TRANSACTION_ROUTE}/${id}`)
+      hideLoadingIndication()
     }
   }
 

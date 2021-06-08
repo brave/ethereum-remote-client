@@ -2,11 +2,18 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { withRouter } from 'react-router-dom'
 
-import { approveAllowance, createTransaction, showLoadingIndication } from '../../../store/actions'
+import {
+  approveAllowance,
+  createTransaction,
+  hideLoadingIndication,
+  showLoadingIndication,
+  updateSwapTokenApprovalTxId,
+} from '../../../store/actions'
 import {
   getSwapErrors,
   getSwapFromAsset,
   getSwapTransactionObject,
+  getUnapprovedTxs,
   isSwapFormInError,
   isSwapFromTokenAssetAllowanceEnough,
 } from '../../../selectors'
@@ -19,6 +26,7 @@ function mapStateToProps (state) {
     transaction: getSwapTransactionObject(state),
     isSwapFromTokenAssetAllowanceEnough: isSwapFromTokenAssetAllowanceEnough(state),
     fromAsset: getSwapFromAsset(state),
+    unapprovedTxs: getUnapprovedTxs(state),
   }
 }
 
@@ -32,6 +40,8 @@ function mapDispatchToProps (dispatch) {
       await dispatch(showLoadingIndication())
       await dispatch(approveAllowance(allowance))
     },
+    hideLoadingIndication: () => dispatch(hideLoadingIndication()),
+    updateSwapTokenApprovalTxId: (value) => dispatch(updateSwapTokenApprovalTxId(value)),
   }
 }
 

@@ -3,7 +3,7 @@ import { ALERT_TYPES } from '../../../../app/scripts/controllers/alert'
 
 const initSwapState = {
   quote: null,
-  status: '',
+  tokenApprovalTxId: null,
   fromAsset: {
     'name': 'Ether',
     'symbol': 'ETH',
@@ -200,6 +200,15 @@ export default function reduceMetamask (state = {}, action) {
         send: {
           ...metamaskState.send,
           amount: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_TOKEN_APPROVAL_TXID:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          tokenApprovalTxId: action.value,
         },
       }
 

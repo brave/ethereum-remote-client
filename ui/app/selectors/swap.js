@@ -92,3 +92,7 @@ export function isSwapFromTokenAssetAllowanceEnough (state) {
 
   return fromTokenAssetAllowance !== '0' && hasSufficientAllowance
 }
+
+export function getSwapTokenApprovalTxId (state) {
+  return state.metamask.swap.tokenApprovalTxId
+}

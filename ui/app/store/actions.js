@@ -963,6 +963,13 @@ export function updateSwapGasLimit (value) {
   }
 }
 
+export function updateSwapTokenApprovalTxId (value) {
+  return {
+    type: actionConstants.UPDATE_SWAP_TOKEN_APPROVAL_TXID,
+    value: value && parseInt(value),
+  }
+}
+
 export function updateSwapAmount (amount) {
   return {
     type: actionConstants.UPDATE_SWAP_AMOUNT,

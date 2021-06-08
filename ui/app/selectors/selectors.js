@@ -338,3 +338,7 @@ export function getOriginOfCurrentTab (state) {
 export function getIpfsGateway (state) {
   return state.metamask.ipfsGateway
 }
+
+export function getLoadingIndication (state) {
+  return state.appState.isLoading
+}

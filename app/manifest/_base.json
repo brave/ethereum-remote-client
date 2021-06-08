@@ -77,7 +77,47 @@
     "activeTab",
     "webRequest",
     "*://*.eth/",
-    "notifications"
+    "notifications",
+    "hid",
+    "usb",
+    {
+      "usbDevices": [
+        {
+          "vendorId": 11415,
+          "productId": 0
+        }, {
+          "vendorId": 11415,
+          "productId": 16
+        }, {
+          "vendorId": 11415,
+          "productId": 64
+        }, {
+          "vendorId": 11415,
+          "productId": 1
+        }, {
+          "vendorId": 11415,
+          "productId": 4
+        }, {
+          "vendorId": 11415,
+          "productId": 4113
+        }, {
+          "vendorId": 11415,
+          "productId": 4101
+        }, {
+          "vendorId": 11415,
+          "productId": 4117
+        }, {
+          "vendorId": 11415,
+          "productId": 16405
+        }, {
+          "vendorId": 11415,
+          "productId": 16389
+        }, {
+          "vendorId": 11415,
+          "productId": 21441
+        }
+      ]
+    }
   ],
   "web_accessible_resources": [
     "inpage.js",

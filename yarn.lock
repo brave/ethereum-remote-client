@@ -5833,15 +5833,6 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-brave-crypto@^0.2.1:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/brave-crypto/-/brave-crypto-0.2.4.tgz#7b2f3f3504df6337b33b2675aa07c244824a0f99"
-  integrity sha512-a0hfFQ84jXE3aRyL8PRAYqzGDwF2Ge81gA/2swqTyLKxDT4K327E39z25q2FU4cOG6R6mWsxXdk2Vc2E6j+SNg==
-  dependencies:
-    bip39 "^2.6.0"
-    niceware "^1.0.7"
-    tweetnacl "^1.0.3"
-
 brave-crypto@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/brave-crypto/-/brave-crypto-0.3.1.tgz#604c318ebb0d28f1906a1e6c4a1954d018aaf1ca"
@@ -10345,7 +10336,7 @@ ethereumjs-wallet@0.6.5, ethereumjs-wallet@^0.6.0, ethereumjs-wallet@^0.6.3, eth
     utf8 "^3.0.0"
     uuid "^3.3.2"
 
-ethers@^5.2.0:
+ethers@^5.0.31, ethers@^5.2.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.3.0.tgz#1ec14d09c461e8f2554b00cd080e94a3094e7e9d"
   integrity sha512-myN+338S4sFQZvQ9trii7xit8Hu/LnUtjA0ROFOHpUreQc3fgLZEMNVqF3vM1u2D78DIIeG1TbuozVCVlXQWvQ==

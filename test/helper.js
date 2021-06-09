@@ -8,8 +8,6 @@ import { JSDOM } from 'jsdom'
 
 nock.disableNetConnect()
 nock.enableNetConnect('localhost')
-// nock.enableNetConnect()
-
 
 // catch rejections that are still unhandled when tests exit
 const unhandledRejections = new Map()

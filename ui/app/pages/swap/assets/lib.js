@@ -1,9 +1,9 @@
 const fetch = require('node-fetch')
 const fs = require('fs')
-const contractMap = require('eth-contract-metadata')
+const contractMap = require('@metamask/contract-metadata')
 const ethUtil = require('ethereumjs-util')
 const uniqBy = require('lodash/uniqBy')
-
+const sortBy = require('lodash/sortBy')
 
 const ETH = {
   symbol: 'ETH',
@@ -11,6 +11,20 @@ const ETH = {
   name: 'Ether',
   decimals: 18,
 }
+
+const assetsPriorityList = [
+  'ETH',
+  'WETH',
+  'USDT',
+  'USDC',
+  'UNI',
+  'LINK',
+  'BUSD',
+  'MATIC',
+  'WBTC',
+  'DAI',
+  'AAVE',
+]
 
 function main () {
   fetch('https://tokens.coingecko.com/uniswap/all.json').then((r) =>
@@ -22,14 +36,11 @@ function main () {
           name: token.name,
           decimals: token.decimals,
         }))
-        .filter(
-          ({ address }) => address in contractMap,
-        )
+        .filter(({ address }) => address in contractMap)
 
-      const assets = uniqBy(
-        [ETH, ...tokens],
-        (e) => e.address,
-      )
+      let assets = uniqBy([ETH, ...tokens], (e) => e.address)
+
+      assets = prioritySort(assets, assetsPriorityList)
 
       try {
         fs.writeFileSync(
@@ -45,3 +56,15 @@ function main () {
 }
 
 module.exports.main = main
+
+function prioritySort (assets) {
+  return [
+    ...assetsPriorityList.map(
+      (asset) => assets.filter((e) => e.symbol === asset)[0],
+    ),
+    ...sortBy(
+      assets.filter((asset) => !assetsPriorityList.includes(asset.symbol)),
+      (asset) => asset.symbol,
+    ),
+  ]
+}

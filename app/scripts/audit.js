@@ -2,7 +2,13 @@ const { execSync } = require('child_process')
 
 // Ping security team before adding to ignoredAdvisories
 const ignoredAdvisories = [
-  1693, // Regular Expression Denial of Service
+  1693, // postcss: Regular Expression Denial of Service
+  1751, // glob-parent: Regular expression denial of service
+  1755, // normalize-url: Regular Expression Denial of Service
+  1754, // css-what: Denial of Service
+  1753, // trim-newlines: Regular Expression Denial of Service
+  1748, // ws: Regular Expression Denial of Service
+  1747, // browserslist: Regular Expression Denial of Service
 ]
 
 const prettyPrint = (advisories) => {

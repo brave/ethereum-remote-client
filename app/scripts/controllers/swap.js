@@ -11,7 +11,7 @@ export default class SwapsController {
     this.store = new ObservableStore({ initState })
   }
 
-  async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network) {
+  async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network, full) {
     const config = getConfig(network)
 
     const qs = createQueryString({
@@ -25,7 +25,8 @@ export default class SwapsController {
       gasPrice,
     })
 
-    const quoteUrl = `${config.swapAPIQuoteURL}?${qs}`
+    const path = full ? 'quote' : 'price'
+    const quoteUrl = `${config.swapAPIURL}/${path}?${qs}`
 
     const response = await fetch(quoteUrl)
     return response.json()

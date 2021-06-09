@@ -1,1 +1,1 @@
-export { default } from './swap-content.container'
+export { default } from './swap-content.component'

@@ -12,6 +12,7 @@ import {
 import {
   getSwapErrors,
   getSwapFromAsset,
+  getSwapToAsset,
   getSwapTransactionObject,
   getUnapprovedTxs,
   isSwapFormInError,
@@ -23,24 +24,23 @@ function mapStateToProps (state) {
   return {
     swapErrors: getSwapErrors(state),
     inError: isSwapFormInError(state),
-    transaction: getSwapTransactionObject(state),
     isSwapFromTokenAssetAllowanceEnough: isSwapFromTokenAssetAllowanceEnough(state),
     fromAsset: getSwapFromAsset(state),
+    toAsset: getSwapToAsset(state),
     unapprovedTxs: getUnapprovedTxs(state),
+    transaction: getSwapTransactionObject(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    sign: async (transaction) => {
-      await dispatch(showLoadingIndication())
-      await dispatch(createTransaction(transaction))
-    },
+    sign: (transaction) => dispatch(createTransaction(transaction)),
     approve: async (allowance) => {
       await dispatch(showLoadingIndication())
       await dispatch(approveAllowance(allowance))
     },
     hideLoadingIndication: () => dispatch(hideLoadingIndication()),
+    showLoadingIndication: () => dispatch(showLoadingIndication()),
     updateSwapTokenApprovalTxId: (value) => dispatch(updateSwapTokenApprovalTxId(value)),
   }
 }

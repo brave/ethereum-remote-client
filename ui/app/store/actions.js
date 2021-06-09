@@ -213,7 +213,7 @@ export function verifySeedPhrase () {
   })
 }
 
-export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
+export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, full) {
   return async (dispatch, getState) => {
     const state = getState()
     const network = getNetworkIdentifier(state)
@@ -229,6 +229,7 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
       gasPriceDecimal,
       selectedAddress,
       network,
+      full,
     )
 
     if (quote?.code) {

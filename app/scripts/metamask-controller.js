@@ -1294,8 +1294,8 @@
      }
    }
  
-   async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network) {
-     return await this.swapsController.quote(fromAsset, toAsset, amount, gasPrice, selectedAddress, network)
+   async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network, full) {
+     return await this.swapsController.quote(fromAsset, toAsset, amount, gasPrice, selectedAddress, network, full)
    }
 
    async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {

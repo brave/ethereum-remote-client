@@ -6,11 +6,11 @@ import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
 
 export default class SwapFooter extends Component {
   static propTypes = {
-    transaction: PropTypes.object,
     inError: PropTypes.bool,
     swapErrors: PropTypes.object,
     customAllowance: PropTypes.string,
     fromAsset: AssetPropTypes,
+    toAsset: AssetPropTypes,
     isSwapFromTokenAssetAllowanceEnough: PropTypes.bool,
     approve: PropTypes.func.isRequired,
     sign: PropTypes.func.isRequired,
@@ -18,6 +18,8 @@ export default class SwapFooter extends Component {
     unapprovedTxs: PropTypes.object.isRequired,
     hideLoadingIndication: PropTypes.func.isRequired,
     updateSwapTokenApprovalTxId: PropTypes.func.isRequired,
+    refreshQuote: PropTypes.func.isRequired,
+    transaction: PropTypes.object,
   }
 
   static contextTypes = {
@@ -28,33 +30,34 @@ export default class SwapFooter extends Component {
   async onSubmit (event) {
     event.preventDefault()
     const {
-      transaction,
-      sign,
       approve,
       isSwapFromTokenAssetAllowanceEnough,
       customAllowance,
       fromAsset,
+      toAsset,
+      refreshQuote,
     } = this.props
     const { metricsEvent } = this.context
 
-    let promise
     if (fromAsset.address && !isSwapFromTokenAssetAllowanceEnough) {
-      promise = approve(customAllowance)
+      approve(customAllowance)
     } else {
-      promise = sign(transaction)
+      this.props.showLoadingIndication()
+      await refreshQuote(fromAsset, toAsset)
+
+      // signing to be in the componentDidUpdate
     }
 
-    Promise.resolve(promise).then(() => {
-      metricsEvent({
-        eventOpts: {
-          category: 'Swap',
-          action: 'Edit Screen',
-          name: 'Complete',
-        },
-        customVariables: {
-          gasChanged: '???',
-        },
-      })
+    metricsEvent({
+      eventOpts: {
+        category: 'Swap',
+        action: 'Edit Screen',
+        name: 'Complete',
+      },
+      customVariables: {
+        fromAsset,
+        toAsset,
+      },
     })
   }
 
@@ -68,10 +71,13 @@ export default class SwapFooter extends Component {
       updateSwapTokenApprovalTxId,
       fromAsset,
       isSwapFromTokenAssetAllowanceEnough,
+      sign,
+      transaction,
     } = this.props
     const {
       inError: prevInError,
       unapprovedTxs: prevUnapprovedTxs,
+      transaction: prevTransaction,
     } = prevProps
 
     const { metricsEvent } = this.context
@@ -90,6 +96,12 @@ export default class SwapFooter extends Component {
           errorMessage,
         },
       })
+    }
+
+    // This is uniquely the case when the full quote is fetched.
+    if (prevTransaction?.data === undefined && transaction?.data) {
+      console.log(transaction)
+      sign(transaction)
     }
 
     const newTransactions = Object.keys(unapprovedTxs).filter(

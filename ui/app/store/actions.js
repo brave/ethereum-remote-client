@@ -217,19 +217,35 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice) {
   return async (dispatch, getState) => {
     const state = getState()
     const network = getNetworkIdentifier(state)
+    const selectedAddress = getSelectedAddress(state)
 
     const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
 
     const conn = exports.getBackgroundConnection()
     const quote = await conn.quote(
-      fromAsset.symbol,
-      toAsset.symbol,
+      fromAsset,
+      toAsset,
       parseInt(amount, 16),
       gasPriceDecimal,
+      selectedAddress,
       network,
     )
 
+    if (quote?.code) {
+      const primaryReason = quote.reason
+      const { validationErrors } = quote
+      const secondaryReason = (validationErrors || []).map(
+        (error) => `${error.field}: ${error.reason}`,
+      ).join(' ')
+
+      await dispatch(updateSwapErrors(
+        { quote: `${primaryReason} - ${secondaryReason}` },
+      ))
+      return
+    }
+
     await dispatch(updateSwapQuote(quote))
+    await dispatch(updateSwapErrors({ quote: null }))
     await dispatch(updateSwapFromTokenAllowance({ fromAsset, quote }))
   }
 }

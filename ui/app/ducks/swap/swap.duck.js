@@ -1,6 +1,6 @@
 // Actions
-const UPDATE_SWAP_ERRORS = 'metamask/swap/UPDATE_SWAP_ERRORS'
-const RESET_SWAP_STATE = 'metamask/swap/RESET_SWAP_STATE'
+export const UPDATE_SWAP_ERRORS = 'metamask/swap/UPDATE_SWAP_ERRORS'
+export const RESET_SWAP_STATE = 'metamask/swap/RESET_SWAP_STATE'
 
 const initState = {
   errors: {},

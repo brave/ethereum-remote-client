@@ -149,7 +149,7 @@ export default class SwapAssetRow extends Component {
       <div>
         <div className="swap-v2__form-row">
           <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
-          <AmountMaxButton refreshQuote={refreshQuote} />
+          <AmountMaxButton refreshQuote={refreshQuote}/>
         </div>
 
         <div className="swap-v2__form-row">
@@ -162,13 +162,14 @@ export default class SwapAssetRow extends Component {
               fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
             }
           >
-            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} />
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote}/>
           </div>
         </div>
 
         <div className="swap-v2__form-row-full" style={{ display: 'block' }}>
           <SwapRowErrorMessage errorType="amount" />
           <SwapRowErrorMessage errorType="gasFee" />
+          <SwapRowErrorMessage errorType="quote" />
         </div>
 
         {fromAsset && (
@@ -204,14 +205,16 @@ export default class SwapAssetRow extends Component {
     }
 
     const amount = calcTokenAmount(quote.buyAmount, toAsset.decimals).toFixed(4)
-    return <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
+    return amount
+      ? <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
+      : null
   }
 
   renderAssetBalance (asset, insideDropdown = false) {
     const { selectedAccount, fromTokenAssetBalance } = this.props
 
     return asset.address ? (
-      insideDropdown ? <TokenBalance token={asset} /> : (
+      insideDropdown ? <TokenBalance token={asset}/> : (
         fromTokenAssetBalance === '0' ? `0 ${asset.symbol}`
           : (
             <CurrencyDisplay
@@ -221,7 +224,7 @@ export default class SwapAssetRow extends Component {
           )
       )
     ) : (
-      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY} />
+      <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY}/>
     )
   }
 
@@ -318,7 +321,7 @@ export default class SwapAssetRow extends Component {
         onClick={() => insideDropdown && onSelectAsset(asset)}
       >
         <div className="swap-v2__asset-dropdown__asset-icon">
-          <Identicon address={address} diameter={36} />
+          <Identicon address={address} diameter={36}/>
         </div>
         <div className="swap-v2__asset-dropdown__asset-data">
           <div className="swap-v2__asset-dropdown__symbol">{symbol}</div>
@@ -332,7 +335,7 @@ export default class SwapAssetRow extends Component {
           )}
         </div>
         {!insideDropdown && (
-          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+          <i className="fa fa-caret-down fa-lg simple-dropdown__caret"/>
         )}
       </div>
     )

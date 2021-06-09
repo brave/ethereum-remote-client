@@ -1294,18 +1294,9 @@
      }
    }
  
-   async quote (fromAsset, toAsset, amount, gasPrice) {
-     return await this.swapsController.quote(fromAsset, toAsset, amount, gasPrice)
+   async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network) {
+     return await this.swapsController.quote(fromAsset, toAsset, amount, gasPrice, selectedAddress, network)
    }
-
-   async fillOrder (quote) {
-    try {
-      const response = await this.swapsController.fillOrder(quote)
-      return response 
-    } catch (error) {
-      throw error
-    }
-  }
 
    async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
      await this.txController.createSpeedUpTransaction(originalTxId, customGasPrice, customGasLimit)
@@ -1795,12 +1786,6 @@
      this.swapsController = new SwapsController({
        initState: initState.SwapsController,
        provider: this.provider,
-      //  buyToken: opts.buyToken,
-      //  sellToken: opts.sellToken,
-      //  from: opts.taker,
-      //  slippagePercentage: opts.slippagePercentage,
-      //  sellAmount: opts.sellAmount,
-      //  signTransaction: this.keyringController.signTransaction.bind(this.keyringController),
      })
  
      this.networkController.on('networkDidChange', () => {

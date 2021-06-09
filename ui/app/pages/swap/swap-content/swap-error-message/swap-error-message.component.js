@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export default class SwapRowErrorMessage extends Component {
-
   static propTypes = {
     errors: PropTypes.object,
     errorType: PropTypes.string,
@@ -18,11 +17,10 @@ export default class SwapRowErrorMessage extends Component {
 
     const errorMessage = errors[errorType]
 
-    return (
-      errorMessage
-        ? <div className="swap-v2__error">{t(errorMessage)}</div>
-        : null
-    )
+    return errorMessage ? (
+      <div className="swap-v2__error">
+        {errorType === 'quote' ? errorMessage : t(errorMessage)}
+      </div>
+    ) : null
   }
-
 }

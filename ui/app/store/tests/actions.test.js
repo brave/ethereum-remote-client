@@ -7,6 +7,8 @@ import { itParam } from 'mocha-param'
 import * as types from '../actionConstants'
 import * as actions from '../actions'
 import * as utils from '../utils'
+import * as ducks from '../../ducks/swap/swap.duck'
+
 import { ROPSTEN } from '../../../../app/scripts/controllers/network/enums'
 
 const middlewares = [thunk]
@@ -38,6 +40,10 @@ describe('async actions creators', function () {
           type: types.UPDATE_SWAP_QUOTE,
           value: 'ETH-DAI-1000000000000000000-21000',
         },
+        {
+          type: ducks.UPDATE_SWAP_ERRORS,
+          value: { quote: null },
+        },
         { type: types.UPDATE_SWAP_FROM_TOKEN_ASSET_ALLOWANCE, value: null },
       ],
     },
@@ -50,6 +56,10 @@ describe('async actions creators', function () {
           type: types.UPDATE_SWAP_QUOTE,
           value: 'DAI-ETH-1000000000000000000-21000',
         },
+        {
+          type: ducks.UPDATE_SWAP_ERRORS,
+          value: { quote: null },
+        },
         { type: types.UPDATE_SWAP_FROM_TOKEN_ASSET_ALLOWANCE, value: '64' },
       ],
     },
@@ -61,7 +71,7 @@ describe('async actions creators', function () {
       quote: sinon
         .stub()
         .callsFake(function (fromAsset, toAsset, amount, gasPrice) {
-          return `${fromAsset}-${toAsset}-${amount}-${gasPrice}`
+          return `${fromAsset.symbol}-${toAsset.symbol}-${amount}-${gasPrice}`
         }),
     })
 

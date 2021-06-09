@@ -3,6 +3,20 @@ import SwapsController, { createQueryString } from '../../../../app/scripts/cont
 import nock from 'nock'
 import { MAINNET } from '../../../../app/scripts/controllers/network/enums'
 
+const ETH = {
+  name: 'Ether',
+  address: '',
+  symbol: 'ETH',
+  decimals: 18,
+}
+
+const BAT = {
+  name: 'Basic Attention Token',
+  address: '0xDEADBEEF',
+  symbol: 'BAT',
+  decimals: 18,
+}
+
 const quoteResponse = {
   price: '548.34375',
   guaranteedPrice: '439.57375',
@@ -53,8 +67,9 @@ describe('Swaps Controller', function () {
 
   beforeEach(function () {
     const qs = createQueryString({
+      takerAddress: '0xFOODBABE',
       sellAmount: '100',
-      buyToken: 'BAT',
+      buyToken: '0xDEADBEEF',
       sellToken: 'ETH',
       buyTokenPercentageFee: '0.875',
       slippagePercentage: '0.03',
@@ -72,10 +87,11 @@ describe('Swaps Controller', function () {
   describe('#quote', function () {
     it('it should return a quote for the swap', async function () {
       const quote = await swapsController.quote(
-        'ETH',
-        'BAT',
+        ETH,
+        BAT,
         '100',
         '21',
+        '0xFOODBABE',
         MAINNET,
       )
       assert.ok(200, quote.status)

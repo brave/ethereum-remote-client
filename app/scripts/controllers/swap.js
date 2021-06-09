@@ -11,13 +11,14 @@ export default class SwapsController {
     this.store = new ObservableStore({ initState })
   }
 
-  async quote (fromAssetSymbol, toAssetSymbol, amount, gasPrice, network) {
+  async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network) {
     const config = getConfig(network)
 
     const qs = createQueryString({
+      takerAddress: selectedAddress,
       sellAmount: amount,
-      buyToken: toAssetSymbol,
-      sellToken: fromAssetSymbol,
+      buyToken: toAsset.address || toAsset.symbol,
+      sellToken: fromAsset.address || fromAsset.symbol,
       buyTokenPercentageFee: config.buyTokenPercentageFee,
       slippagePercentage: config.defaultSlippage,
       feeRecipient: config.feeRecipient,
@@ -25,6 +26,7 @@ export default class SwapsController {
     })
 
     const quoteUrl = `${config.swapAPIQuoteURL}?${qs}`
+
     const response = await fetch(quoteUrl)
     return response.json()
   }

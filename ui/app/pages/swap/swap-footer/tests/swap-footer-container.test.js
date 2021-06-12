@@ -9,6 +9,7 @@ const actionSpies = {
   createTransaction: sinon.spy(),
   approveAllowance: sinon.spy(),
   showLoadingIndication: sinon.spy(),
+  hideLoadingIndication: sinon.spy(),
 }
 const spyObjs = Object.values(actionSpies)
 
@@ -27,12 +28,13 @@ proxyquire('../swap-footer.container.js', {
     isSwapFromTokenAssetAllowanceEnough: (s) =>
       `mockIsSwapFromTokenAssetAllowanceEnough:${s}`,
     getSwapFromAsset: (s) => `mockFromAsset:${s}`,
+    getSwapToAsset: (s) => `mockToAsset:${s}`,
     getUnapprovedTxs: (s) => `mockUnapprovedTxs:${s}`,
   },
   '../../../store/actions': actionSpies,
 })
 
-describe('swap-footer container', function () {
+describe('SwapFooter container', function () {
   describe('mapStateToProps()', function () {
     it('should map the correct properties to props', function () {
       assert.deepStrictEqual(mapStateToProps('mockState'), {
@@ -42,6 +44,7 @@ describe('swap-footer container', function () {
         isSwapFromTokenAssetAllowanceEnough:
           'mockIsSwapFromTokenAssetAllowanceEnough:mockState',
         fromAsset: 'mockFromAsset:mockState',
+        toAsset: 'mockToAsset:mockState',
         unapprovedTxs: 'mockUnapprovedTxs:mockState',
       })
     })
@@ -60,30 +63,25 @@ describe('swap-footer container', function () {
 
     describe('sign()', function () {
       it('should dispatch the right actions', function () {
-        mapDispatchToPropsObject
-          .sign('mockTransactionParams')
-          .then(function () {
-            assert(dispatchSpy.calledTwice)
-            assert(actionSpies.createTransaction.calledOnce)
-            assert(actionSpies.showLoadingIndication.calledOnce)
-            assert.deepStrictEqual(
-              actionSpies.createTransaction.getCall(0).args,
-              ['mockTransactionParams'],
-            )
-          })
+        mapDispatchToPropsObject.sign('mockTransactionParams')
+        assert(dispatchSpy.calledOnce)
+        assert(actionSpies.createTransaction.calledOnce)
+        assert.deepStrictEqual(
+          actionSpies.createTransaction.getCall(0).args,
+          ['mockTransactionParams'],
+        )
       })
     })
 
     describe('approve()', function () {
-      it('should dispatch the right actions', function () {
-        mapDispatchToPropsObject.approve('mockAllowance').then(function () {
-          assert(dispatchSpy.calledTwice)
-          assert(actionSpies.approveAllowance.calledOnce)
-          assert(actionSpies.showLoadingIndication.calledOnce)
-          assert.deepStrictEqual(actionSpies.approveAllowance.getCall(0).args, [
-            'mockAllowance',
-          ])
-        })
+      it('should dispatch the right actions', async function () {
+        await mapDispatchToPropsObject.approve('mockAllowance')
+        assert(dispatchSpy.calledTwice)
+        assert(actionSpies.approveAllowance.calledOnce)
+        assert(actionSpies.showLoadingIndication.calledOnce)
+        assert.deepStrictEqual(actionSpies.approveAllowance.getCall(0).args, [
+          'mockAllowance',
+        ])
       })
     })
   })

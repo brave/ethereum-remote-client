@@ -1,38 +1,26 @@
 import React from 'react'
 import assert from 'assert'
 import { shallow } from 'enzyme'
+import sinon from 'sinon'
 
 import SwapContent from '../swap-content.component.js'
 import PageContainerContent from '../../../../components/ui/page-container/page-container-content.component'
 import SwapAssetRow from '../swap-asset-row'
 import SwapFees from '../swap-fees'
 import SwapQuote from '../swap-quote'
-import sinon from 'sinon'
-
-const ETH = {
-  name: 'Ether',
-  address: '',
-  symbol: 'ETH',
-  decimals: 18,
-}
-
-const BAT = {
-  name: 'Basic Attention Token',
-  address: '0xDEADBEEF',
-  symbol: 'BAT',
-  decimals: 18,
-}
 
 describe('SwapContent Component', function () {
   const propsMethodSpies = {
-    fetchSwapQuote: sinon.spy(),
     setCustomAllowance: sinon.spy(),
+    refreshQuote: sinon.spy(),
   }
 
   const wrapperFactory = (props) => shallow(
     <SwapContent
-      fetchSwapQuote={propsMethodSpies.fetchSwapQuote}
       setCustomAllowance={propsMethodSpies.setCustomAllowance}
+      refreshQuote={propsMethodSpies.refreshQuote}
+      customAllowance="mockCustomAllowance"
+      seconds={12345}
       {...props}
     />,
     { context: { t: (str) => str, metricsEvent: () => ({}) } },
@@ -40,7 +28,7 @@ describe('SwapContent Component', function () {
 
   afterEach(function () {
     propsMethodSpies.setCustomAllowance.resetHistory()
-    propsMethodSpies.fetchSwapQuote.resetHistory()
+    propsMethodSpies.refreshQuote.resetHistory()
   })
 
   describe('render', function () {
@@ -64,40 +52,31 @@ describe('SwapContent Component', function () {
       assert(PageContainerContentChild.childAt(2).is(SwapFees), 'row[2] should be SwapFees')
     })
 
-    it('should pass seconds prop to SwapQuote on change', function () {
+    it('should pass the correct props to SwapQuote', function () {
       const wrapper = wrapperFactory()
-      wrapper.setState({ seconds: 'mockSeconds' })
-      assert.strictEqual(
-        wrapper.find(SwapQuote).props().seconds,
-        'mockSeconds',
+      assert.deepStrictEqual(
+        wrapper.find(SwapQuote).props(),
+        { seconds: 12345 },
       )
     })
 
-    it('should not invoke fetchSwapQuote is no fromAsset', function () {
-      const wrapper = wrapperFactory({})
-      wrapper.instance().refreshQuote(null, BAT)
-      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
-    })
-
-    it('should not invoke fetchSwapQuote is no toAsset', function () {
-      const wrapper = wrapperFactory({})
-      wrapper.instance().refreshQuote(ETH, null)
-      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
-    })
-
-    it('should not invoke fetchSwapQuote is no amount', function () {
-      const wrapper = wrapperFactory({})
-      wrapper.instance().refreshQuote(ETH, BAT, '0')
-      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
-    })
-
-    it('should invoke fetchSwapQuote if correct props are passed', function () {
-      const wrapper = wrapperFactory({})
-      wrapper.instance().refreshQuote(ETH, BAT, '7b', '100')
-      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, true)
+    it('should pass the correct props to SwapAssetRow', function () {
+      const wrapper = wrapperFactory()
       assert.deepStrictEqual(
-        propsMethodSpies.fetchSwapQuote.getCall(0).args,
-        [ETH, BAT, '7b', '0x64', true],
+        wrapper.find(SwapAssetRow).props(), {
+          customAllowance: 'mockCustomAllowance',
+          refreshQuote: propsMethodSpies.refreshQuote,
+          setCustomAllowance: propsMethodSpies.setCustomAllowance,
+        },
+      )
+    })
+
+    it('should pass the correct props to SwapFees', function () {
+      const wrapper = wrapperFactory()
+      assert.deepStrictEqual(
+        wrapper.find(SwapFees).props(), {
+          refreshQuote: propsMethodSpies.refreshQuote,
+        },
       )
     })
   })

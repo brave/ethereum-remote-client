@@ -9,14 +9,14 @@ import {
 } from '../swap.constants'
 import itParam from 'mocha-param'
 
-const ETH = {
+export const ETH = {
   name: 'Ether',
   address: '',
   symbol: 'ETH',
   decimals: 18,
 }
 
-const BAT = {
+export const BAT = {
   name: 'Basic Attention Token',
   address: '0xDEADBEEF',
   symbol: 'BAT',

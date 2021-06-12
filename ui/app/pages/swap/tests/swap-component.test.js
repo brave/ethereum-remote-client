@@ -4,14 +4,16 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 
 import SwapHeader from '../swap-header/swap-header.container'
-import SwapContent from '../swap-content/swap-content.container'
+import SwapContent from '../swap-content'
 import SwapFooter from '../swap-footer/swap-footer.container'
 import SwapTransactionScreen from '../swap.component'
+import { BAT, ETH } from './swap-utils.test'
 
 describe('Swap component', function () {
   const propsMethodSpies = {
     hideLoadingIndication: sinon.spy(),
     resetSwapState: sinon.spy(),
+    fetchSwapQuote: sinon.spy(),
   }
 
   const mockHistory = { mockProp: 'history-abc', push: sinon.spy() }
@@ -20,6 +22,7 @@ describe('Swap component', function () {
     shallow(
       <SwapTransactionScreen
         history={mockHistory}
+        fetchSwapQuote={propsMethodSpies.fetchSwapQuote}
         resetSwapState={propsMethodSpies.resetSwapState}
         hideLoadingIndication={propsMethodSpies.hideLoadingIndication}
         unapprovedTxs={{}}
@@ -130,6 +133,43 @@ describe('Swap component', function () {
       assert.strictEqual(
         wrapper.find(SwapContent).props().customAllowance,
         'mockCustomAllowance',
+      )
+    })
+
+    it('should pass seconds prop to SwapContent on change', function () {
+      const wrapper = wrapperFactory()
+      wrapper.setState({ seconds: 'mockSeconds' })
+      assert.strictEqual(
+        wrapper.find(SwapContent).props().seconds,
+        'mockSeconds',
+      )
+    })
+
+    it('should not invoke fetchSwapQuote is no fromAsset', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(null, BAT)
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should not invoke fetchSwapQuote is no toAsset', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, null)
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should not invoke fetchSwapQuote is no amount', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, BAT, '0')
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, false)
+    })
+
+    it('should invoke fetchSwapQuote if correct props are passed', function () {
+      const wrapper = wrapperFactory({})
+      wrapper.instance().refreshQuote(ETH, BAT, '7b', '100')
+      assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, true)
+      assert.deepStrictEqual(
+        propsMethodSpies.fetchSwapQuote.getCall(0).args,
+        [ETH, BAT, '7b', '0x64', true, false],
       )
     })
   })

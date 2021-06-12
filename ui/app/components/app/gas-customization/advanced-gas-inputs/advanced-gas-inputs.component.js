@@ -107,7 +107,7 @@ export default class AdvancedGasInputs extends Component {
       <div className="advanced-gas-inputs__gas-edit-row">
         <div className="advanced-gas-inputs__gas-edit-row__label">
           {label}
-          <i className="fa fa-info-circle" onClick={infoOnClick}/>
+          <i className="fa fa-info-circle" onClick={infoOnClick} />
         </div>
         <div className="advanced-gas-inputs__gas-edit-row__input-wrapper">
           <input
@@ -130,13 +130,13 @@ export default class AdvancedGasInputs extends Component {
               className="advanced-gas-inputs__gas-edit-row__input-arrows__i-wrap"
               onClick={() => onChange({ target: { value: value + 1 } })}
             >
-              <i className="fa fa-sm fa-angle-up"/>
+              <i className="fa fa-sm fa-angle-up" />
             </div>
             <div
               className="advanced-gas-inputs__gas-edit-row__input-arrows__i-wrap"
               onClick={() => onChange({ target: { value: Math.max(value - 1, 0) } })}
             >
-              <i className="fa fa-sm fa-angle-down"/>
+              <i className="fa fa-sm fa-angle-down" />
             </div>
           </div>
           {errorComponent}

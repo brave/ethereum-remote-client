@@ -4,20 +4,7 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import SwapFooter from '../swap-footer.component.js'
 import PageContainerFooter from '../../../../components/ui/page-container/page-container-footer'
-
-const ETH = {
-  name: 'Ether',
-  address: '',
-  symbol: 'ETH',
-  decimals: 18,
-}
-
-const BAT = {
-  name: 'Basic Attention Token',
-  address: '0xDEADBEEF',
-  symbol: 'BAT',
-  decimals: 18,
-}
+import { BAT, ETH } from '../../tests/swap-utils.test'
 
 describe('SwapFooter Component', function () {
   const propsMethodSpies = {
@@ -25,6 +12,8 @@ describe('SwapFooter Component', function () {
     sign: sinon.spy(),
     updateSwapTokenApprovalTxId: sinon.spy(),
     hideLoadingIndication: sinon.spy(),
+    showLoadingIndication: sinon.spy(),
+    refreshQuote: sinon.spy(),
   }
 
   const mockEvent = {
@@ -39,8 +28,10 @@ describe('SwapFooter Component', function () {
         history={mockHistory}
         approve={propsMethodSpies.approve}
         sign={propsMethodSpies.sign}
+        refreshQuote={propsMethodSpies.refreshQuote}
         updateSwapTokenApprovalTxId={propsMethodSpies.updateSwapTokenApprovalTxId}
         hideLoadingIndication={propsMethodSpies.hideLoadingIndication}
+        showLoadingIndication={propsMethodSpies.showLoadingIndication}
         unapprovedTxs={{}}
         {...props}
       />,
@@ -55,8 +46,10 @@ describe('SwapFooter Component', function () {
   afterEach(function () {
     propsMethodSpies.approve.resetHistory()
     propsMethodSpies.sign.resetHistory()
+    propsMethodSpies.refreshQuote.resetHistory()
     propsMethodSpies.updateSwapTokenApprovalTxId.resetHistory()
     propsMethodSpies.hideLoadingIndication.resetHistory()
+    propsMethodSpies.showLoadingIndication.resetHistory()
     SwapFooter.prototype.onSubmit.resetHistory()
     SwapFooter.prototype.componentDidUpdate.resetHistory()
   })
@@ -69,28 +62,31 @@ describe('SwapFooter Component', function () {
     it('should call sign() for ETH', function () {
       const wrapper = wrapperFactory({
         fromAsset: ETH,
+        toAsset: BAT,
         transaction: { params: 'mockTransaction' },
       })
       assert.strictEqual(propsMethodSpies.sign.callCount, 0)
       wrapper.instance().onSubmit(mockEvent)
-      assert.strictEqual(propsMethodSpies.sign.callCount, 1)
-      assert.deepStrictEqual(propsMethodSpies.sign.getCall(0).args, [
-        { params: 'mockTransaction' },
-      ])
+      assert(propsMethodSpies.showLoadingIndication.calledOnce)
+      assert.strictEqual(propsMethodSpies.refreshQuote.callCount, 1)
+      assert.deepStrictEqual(propsMethodSpies.refreshQuote.getCall(0).args,
+        [ETH, BAT],
+      )
     })
 
     it('should call sign() for BAT with enough allowance', function () {
       const wrapper = wrapperFactory({
         fromAsset: BAT,
+        toAsset: ETH,
         transaction: { params: 'mockTransaction' },
         isSwapFromTokenAssetAllowanceEnough: true,
       })
-      assert.strictEqual(propsMethodSpies.sign.callCount, 0)
+      assert.strictEqual(propsMethodSpies.refreshQuote.callCount, 0)
       wrapper.instance().onSubmit(mockEvent)
-      assert.strictEqual(propsMethodSpies.sign.callCount, 1)
-      assert.deepStrictEqual(propsMethodSpies.sign.getCall(0).args, [
-        { params: 'mockTransaction' },
-      ])
+      assert.strictEqual(propsMethodSpies.refreshQuote.callCount, 1)
+      assert.deepStrictEqual(propsMethodSpies.refreshQuote.getCall(0).args,
+        [BAT, ETH],
+      )
     })
 
     it('should call approve() for BAT if not enough allowance', function () {
@@ -133,10 +129,7 @@ describe('SwapFooter Component', function () {
 
     it('should handle newly created unapproved transaction from BAT', function () {
       const wrapper = wrapperFactory({ fromAsset: BAT })
-      assert.strictEqual(
-        SwapFooter.prototype.componentDidUpdate.calledOnce,
-        false,
-      )
+      assert(!SwapFooter.prototype.componentDidUpdate.calledOnce)
 
       wrapper.setProps({
         unapprovedTxs: {
@@ -156,8 +149,26 @@ describe('SwapFooter Component', function () {
         ['1234567890'],
       )
     })
-  })
 
+    it('should call sign() if full quote is fetched', function () {
+      const wrapper = wrapperFactory(
+        { transaction: {} },
+      )
+      assert(!SwapFooter.prototype.componentDidUpdate.calledOnce)
+
+      wrapper.setProps({
+        transaction: {
+          data: 'mockTransactionData',
+        },
+      })
+      assert(SwapFooter.prototype.componentDidUpdate.calledOnce)
+      assert.strictEqual(propsMethodSpies.sign.callCount, 1)
+      assert.deepStrictEqual(
+        propsMethodSpies.sign.getCall(0).args,
+        [{ data: 'mockTransactionData' }],
+      )
+    })
+  })
 
   describe('render', function () {
     it('should render a PageContainerFooter component', function () {

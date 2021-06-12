@@ -738,16 +738,14 @@
     width: 50%;
 
     .unit-input {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 
   &__to-amount-box {
     border: 1px solid #dedede;
-    border-radius: 4px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-radius: 0 4px 4px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -844,9 +842,7 @@
 
     &__input-wrapper {
       border: 1px solid $alto;
-      border-radius: 4px;
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-radius: 4px 0 0 4px;
       height: 100%;
 
       &--opened {

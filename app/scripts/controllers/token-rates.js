@@ -3,6 +3,7 @@ import log from 'loglevel'
 import { normalize as normalizeAddress } from 'eth-sig-util'
 import ethUtil from 'ethereumjs-util'
 
+/* eslint-disable accessor-pairs */
 
 // By default, poll every 3 minutes
 const DEFAULT_INTERVAL = 180 * 1000
@@ -67,6 +68,10 @@ export default class TokenRatesController {
   set tokens (tokens) {
     this._tokens = tokens
     this.updateExchangeRates()
+  }
+
+  get tokens () {
+    return this._tokens
   }
 
   start (interval = DEFAULT_INTERVAL) {

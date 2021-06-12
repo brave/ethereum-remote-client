@@ -5,20 +5,7 @@ import sinon from 'sinon'
 import SwapAmountRow from '../swap-amount-row.component.js'
 import UserPreferencedTokenInput from '../../../../../components/app/user-preferenced-token-input'
 import UserPreferencedCurrencyInput from '../../../../../components/app/user-preferenced-currency-input'
-
-const ETH = {
-  name: 'Ether',
-  address: '',
-  symbol: 'ETH',
-  decimals: 18,
-}
-
-const BAT = {
-  name: 'Basic Attention Token',
-  address: '0xDEADBEEF',
-  symbol: 'BAT',
-  decimals: 18,
-}
+import { BAT, ETH } from '../../../tests/swap-utils.test'
 
 const MOCK = {
   name: 'mockTokenName',

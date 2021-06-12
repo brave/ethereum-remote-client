@@ -4,20 +4,8 @@ import { shallow } from 'enzyme'
 import sinon from 'sinon'
 import { itParam } from 'mocha-param'
 import AmountMaxButton from '../amount-max-button.component.js'
+import { BAT, ETH } from '../../../tests/swap-utils.test'
 
-const ETH = {
-  name: 'Ether',
-  address: '',
-  symbol: 'ETH',
-  decimals: 18,
-}
-
-const BAT = {
-  name: 'Basic Attention Token',
-  address: '0xDEADBEEF',
-  symbol: 'BAT',
-  decimals: 18,
-}
 
 const MOCK = {
   name: 'mockTokenName',
@@ -34,7 +22,8 @@ describe('AmountMaxButton Component', function () {
 
   const context = {
     t: (str) => str + '_t',
-    metricsEvent: () => {},
+    metricsEvent: () => {
+    },
   }
 
   afterEach(function () {
@@ -121,8 +110,10 @@ describe('AmountMaxButton Component', function () {
     it('should render as null when fromAsset is missing', function () {
       const wrapper = shallow(
         <AmountMaxButton
-          setAmount={() => {}}
-          refreshQuote={() => {}}
+          setAmount={() => {
+          }}
+          refreshQuote={() => {
+          }}
           account={{ balance: '0' }}
         />,
         { context },
@@ -134,8 +125,10 @@ describe('AmountMaxButton Component', function () {
     it('should render the Max button', function () {
       const wrapper = shallow(
         <AmountMaxButton
-          setAmount={() => {}}
-          refreshQuote={() => {}}
+          setAmount={() => {
+          }}
+          refreshQuote={() => {
+          }}
           account={{ balance: '0' }}
           fromAsset={ETH}
           toAsset={MOCK}

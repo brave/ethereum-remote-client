@@ -17,11 +17,10 @@ const BAT = {
   decimals: 18,
 }
 
-const quoteResponse = {
+const priceResponse = {
   price: '548.34375',
   guaranteedPrice: '439.57375',
   to: '0xdef1c0ded9bec7f1a1670819833240f027b25eff',
-  data: '0xDEADBEEF',
   value: '100',
   gas: '280000',
   estimatedGas: '280000',
@@ -38,6 +37,14 @@ const quoteResponse = {
     { name: 'Uniswap_V2', proportion: '0' },
     { name: 'SushiSwap', proportion: '1' },
   ],
+  allowanceTarget: '0x0000000000000000000000000000000000000000',
+  sellTokenToEthRate: '1',
+  buyTokenToEthRate: '3557.1034673136928607',
+}
+
+const quoteResponse = {
+  ...priceResponse,
+  data: '0xDEADBEEF',
   orders: [
     {
       makerToken: '0x0d8775f648430679a709e98d2b0cb6250d2887ef',
@@ -57,9 +64,6 @@ const quoteResponse = {
       type: 0,
     },
   ],
-  allowanceTarget: '0x0000000000000000000000000000000000000000',
-  sellTokenToEthRate: '1',
-  buyTokenToEthRate: '3557.1034673136928607',
 }
 
 describe('Swaps Controller', function () {
@@ -81,11 +85,15 @@ describe('Swaps Controller', function () {
       .get(`?${qs}`)
       .reply(200, quoteResponse)
 
+    nock('https://api.0x.org/swap/v1/price')
+      .get(`?${qs}`)
+      .reply(200, priceResponse)
+
     swapsController = new SwapsController({})
   })
 
   describe('#quote', function () {
-    it('it should return a quote for the swap', async function () {
+    it('it should return the swap quote', async function () {
       const quote = await swapsController.quote(
         ETH,
         BAT,
@@ -93,9 +101,24 @@ describe('Swaps Controller', function () {
         '21',
         '0xFOODBABE',
         MAINNET,
+        true,
       )
       assert.ok(200, quote.status)
       assert.deepStrictEqual(quote, quoteResponse)
+    })
+
+    it('it should return the swap pricing', async function () {
+      const quote = await swapsController.quote(
+        ETH,
+        BAT,
+        '100',
+        '21',
+        '0xFOODBABE',
+        MAINNET,
+        false,
+      )
+      assert.ok(200, quote.status)
+      assert.deepStrictEqual(quote, priceResponse)
     })
   })
 })

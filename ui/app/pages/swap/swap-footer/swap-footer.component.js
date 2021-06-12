@@ -17,6 +17,7 @@ export default class SwapFooter extends Component {
     history: PropTypes.object,
     unapprovedTxs: PropTypes.object.isRequired,
     hideLoadingIndication: PropTypes.func.isRequired,
+    showLoadingIndication: PropTypes.func.isRequired,
     updateSwapTokenApprovalTxId: PropTypes.func.isRequired,
     refreshQuote: PropTypes.func.isRequired,
     transaction: PropTypes.object,
@@ -100,7 +101,6 @@ export default class SwapFooter extends Component {
 
     // This is uniquely the case when the full quote is fetched.
     if (prevTransaction?.data === undefined && transaction?.data) {
-      console.log(transaction)
       sign(transaction)
     }
 

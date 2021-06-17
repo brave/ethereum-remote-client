@@ -2,6 +2,8 @@ const { execSync } = require('child_process')
 
 // Ping security team before adding to ignoredAdvisories
 const ignoredAdvisories = [
+  786, // braces: RxDoS
+  877, // web3: no fix available
   1693, // postcss: Regular Expression Denial of Service
   1751, // glob-parent: Regular expression denial of service
   1755, // normalize-url: Regular Expression Denial of Service
@@ -10,10 +12,9 @@ const ignoredAdvisories = [
   1748, // ws: Regular Expression Denial of Service
   1747, // browserslist: Regular Expression Denial of Service
 ]
-
 const prettyPrint = (advisories) => {
-  advisories.forEach(({ severity, module_name }) => { // eslint-disable-line camelcase
-    console.log(`Module Name: ${module_name} Severity: ${severity}`) // eslint-disable-line camelcase
+  advisories.forEach(({ url, module_name }) => { // eslint-disable-line camelcase
+    console.log(`Module: ${module_name} ${url}`) // eslint-disable-line camelcase
   })
 }
 
@@ -22,16 +23,6 @@ try {
 } catch (e) {
   const stdoutRaw = e.stdout.toString()
   const JSONLines = stdoutRaw.split('\n')
-
-  const advisoryCount = {
-    'low': 0,
-    'moderate': 0,
-    'high': 0,
-  }
-  // Approved exceptions only, in cases where
-  // both a patch will likely not be available
-  // and where the actual risk is low.
-  const exceptions = []
 
   // There is erroneous data that is not valid JSON that
   // yarn can produce, as they do not echo out a valid JSON
@@ -47,34 +38,15 @@ try {
   // Extra data.advisory for later convenience
   }).map((line) => {
     return JSON.parse(line).data.advisory
-  // Filter out exceptions
-  }).filter((item) => {
-    return item && !exceptions.includes(item['module_name'])
-  }).filter((item) => !ignoredAdvisories.includes(item.id))
+  }).filter((item) => item && item.id && !ignoredAdvisories.includes(item.id))
 
   console.log('Ignoring NPM advisories:', ignoredAdvisories)
 
-  // Set advisory counts
-  advisories.forEach(({ severity }) => {
-    advisoryCount[severity] = ++advisoryCount[severity]
-  })
-
-  // If there are any moderate or high vulnerabilities, fail.
-  if (advisoryCount.moderate || advisoryCount.high) {
+  if (advisories.length) {
     prettyPrint(advisories)
-    throw new Error('Moderate or higher vulnerabilities found during yarn audit')
+    console.log('Audit failed')
+    return process.exit(1)
   }
-
-  // If there are 10 or more low vulneravilities, fail.
-  if (advisoryCount.low >= 10) {
-    prettyPrint(advisories)
-    throw new Error('10 or more low vulnerabilities identified')
-  }
-
-  // Extra info
-  (({ low, moderate, high }) => {
-    console.log(`Advisory counts: Low: ${low}, Moderate: ${moderate}, High: ${high}`)
-  })(advisoryCount)
 
   console.log('-'.repeat(30))
   console.log('Audit complete')

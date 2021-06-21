@@ -39,6 +39,7 @@ proxyquire('../swap.container.js', {
     getSwapQuote: (s) => `mockSwapQuote:${s}`,
     getCustomGasPrice: (s) => `mockGlobalGasPrice:${s}`,
     getSwapQuoteGasPrice: (s) => `mockSwapQuoteGasPrice:${s}`,
+    getSwapSlippage: (s) => `mockSwapSlippage:${s}`,
   },
   '../../store/actions': actionSpies,
 })
@@ -50,6 +51,7 @@ describe('Swap container', function () {
         fromAsset: 'mockSwapFromAsset:mockState',
         toAsset: 'mockSwapToAsset:mockState',
         amount: `mockSwapAmount:mockState`,
+        slippage: 'mockSwapSlippage:mockState',
         quote: `mockSwapQuote:mockState`,
         globalGasPrice: `mockGlobalGasPrice:mockState`,
         quoteGasPrice: `mockSwapQuoteGasPrice:mockState`,
@@ -80,23 +82,23 @@ describe('Swap container', function () {
     describe('fetchSwapQuote()', function () {
       it('should dispatch an action - showLoading=false', async function () {
         await mapDispatchToPropsObject.fetchSwapQuote(
-          ETH, BAT, 'mockAmount', 'mockGasPrice', false, false,
+          ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false, false,
         )
         assert(dispatchSpy.calledOnce)
         assert.deepStrictEqual(
           actionSpies.fetchSwapQuote.getCall(0).args,
-          [ETH, BAT, 'mockAmount', 'mockGasPrice', false],
+          [ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false],
         )
       })
 
       it('should dispatch an action - showLoading=true', async function () {
         await mapDispatchToPropsObject.fetchSwapQuote(
-          ETH, BAT, 'mockAmount', 'mockGasPrice', true, false,
+          ETH, BAT, 'mockAmount', 'mockGasPrice', 3, true, false,
         )
         assert(dispatchSpy.calledThrice)
         assert.deepStrictEqual(
           actionSpies.fetchSwapQuote.getCall(0).args,
-          [ETH, BAT, 'mockAmount', 'mockGasPrice', false],
+          [ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false],
         )
         assert(actionSpies.hideLoadingIndication.calledOnce)
         assert(actionSpies.showLoadingIndication.calledOnce)

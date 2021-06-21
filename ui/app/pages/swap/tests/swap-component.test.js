@@ -165,11 +165,11 @@ describe('Swap component', function () {
 
     it('should invoke fetchSwapQuote if correct props are passed', function () {
       const wrapper = wrapperFactory({})
-      wrapper.instance().refreshQuote(ETH, BAT, '7b', '100')
+      wrapper.instance().refreshQuote(ETH, BAT, '7b', '100', 3)
       assert.strictEqual(propsMethodSpies.fetchSwapQuote.calledOnce, true)
       assert.deepStrictEqual(
         propsMethodSpies.fetchSwapQuote.getCall(0).args,
-        [ETH, BAT, '7b', '0x64', true, false],
+        [ETH, BAT, '7b', '0x64', 3, true, false],
       )
     })
   })

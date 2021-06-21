@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
+import { Tooltip as ReactTippy } from 'react-tippy'
 
 import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
@@ -127,7 +128,7 @@ export default class SwapAssetRow extends Component {
       },
     )
 
-    if (fromTokenAssetAllowance !== '0x0' && hasSufficientAllowance) {
+    if (fromTokenAssetAllowance !== '0' && hasSufficientAllowance) {
       return null
     }
 
@@ -137,6 +138,33 @@ export default class SwapAssetRow extends Component {
         onClick={() => setAllowance(customAllowance, setCustomAllowance)}
       >
         Set allowance
+
+        {fromTokenAssetAllowance !== '0' && (
+          <ReactTippy
+            style={{
+              paddingLeft: '5px',
+            }}
+            html={(
+              <p
+                style={{
+                  textAlign: 'left',
+                  width: '200px',
+                  fontSize: 'small',
+                }}
+              >
+              For security reasons, it is advisable to reset the allowance to 0
+              first before setting it the desired value, to prevent transaction
+              reordering attacks.
+              </p>
+            )}
+            distance={26}
+            animation="none"
+            position="top"
+            arrow
+          >
+            <i className="fas fa-info-circle" style={{ color: 'orange' }} />
+          </ReactTippy>
+        )}
       </div>
     )
   }

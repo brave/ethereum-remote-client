@@ -37,8 +37,9 @@ import {
   estimateGasForTransaction,
   getAmountErrorObject,
   getGasFeeErrorObject,
+  hexAmountToDecimal,
 } from '../pages/swap/swap.utils'
-import { conversionUtil } from '../helpers/utils/conversion-util'
+import { conversionUtil, multiplyCurrencies } from '../helpers/utils/conversion-util'
 import { makeContract } from './utils'
 
 let background = null
@@ -696,12 +697,28 @@ export function approveAllowance (allowance) {
   return async (dispatch, getState) => {
     const state = getState()
 
-    const { address: tokenAddress, decimals } = getSwapFromAsset(state)
+    const fromAsset = getSwapFromAsset(state)
+    const fromTokenAssetBalance = getSwapFromTokenAssetBalance(state)
+    const amount = getSwapAmount(state)
     const allowanceTarget = getSwapQuote(state).allowanceTarget
 
-    const maxAllowance = ethers.BigNumber.from(2).pow(256).sub(1)
-    const decimalFactor = ethers.BigNumber.from(10).pow(decimals)
-    const computedAllowance = allowance ? ethers.BigNumber.from(allowance).mul(decimalFactor) : maxAllowance
+    const fromTokenAssetBalanceDecimal = fromTokenAssetBalance
+      ? hexAmountToDecimal(fromTokenAssetBalance, fromAsset)
+      : '0'
+
+    const proposedAllowance = amount
+      ? hexAmountToDecimal(amount, fromAsset)
+      : fromTokenAssetBalanceDecimal
+
+    const multiplier = Math.pow(10, Number(fromAsset.decimals || 0))
+
+    const computedAllowance = multiplyCurrencies(
+      allowance || proposedAllowance, multiplier, {
+        multiplicandBase: 10,
+        multiplierBase: 10,
+        toNumericBase: 'dec',
+      },
+    )
 
     const iERC20 = new ethers.utils.Interface(abi)
     const data = iERC20.encodeFunctionData(
@@ -718,7 +735,7 @@ export function approveAllowance (allowance) {
 
     const transaction = {
       from: getSelectedAddress(state),
-      to: tokenAddress,
+      to: fromAsset.address,
       value: '0x0',
       gasPrice,
       data,

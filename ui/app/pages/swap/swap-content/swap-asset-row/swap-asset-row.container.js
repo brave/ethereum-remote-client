@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+
 import SwapAssetRow from './swap-asset-row.component'
 import {
   getNetworkIdentifier,
@@ -10,9 +11,13 @@ import {
   getSwapQuote,
   getSwapToAsset,
 } from '../../../../selectors'
-import { computeSwapErrors, showModal, updateSwapFromAsset, updateSwapToAsset } from '../../../../store/actions'
+import {
+  computeSwapErrors,
+  showModal,
+  updateSwapFromAsset,
+  updateSwapToAsset,
+} from '../../../../store/actions'
 import { hexAmountToDecimal } from '../../swap.utils'
-import { ethers } from 'ethers'
 
 function mapStateToProps (state) {
   return {
@@ -35,7 +40,13 @@ function mapDispatchToProps (dispatch) {
     },
     setToAsset: (asset) => dispatch(updateSwapToAsset(asset)),
 
-    setAllowance: (fromAsset, fromTokenAssetBalance, customAllowance, setCustomAllowance) => {
+    setAllowance: (
+      fromAsset,
+      amount,
+      fromTokenAssetBalance,
+      customAllowance,
+      setCustomAllowance,
+    ) => {
       // Allowance can be set only for tokens
       if (!fromAsset?.address) {
         return
@@ -45,8 +56,9 @@ function mapDispatchToProps (dispatch) {
         ? hexAmountToDecimal(fromTokenAssetBalance, fromAsset)
         : '0'
 
-      const divisor = ethers.BigNumber.from(10).pow(fromAsset.decimals)
-      const maxAllowance = ethers.BigNumber.from(2).pow(256).sub(1).div(divisor)
+      const proposedAllowance = amount
+        ? hexAmountToDecimal(amount, fromAsset)
+        : fromTokenAssetBalanceDecimal
 
       dispatch(
         showModal({
@@ -55,7 +67,7 @@ function mapDispatchToProps (dispatch) {
           decimals: fromAsset.decimals,
           origin: '0x Exchange Proxy',
           setCustomAmount: setCustomAllowance,
-          tokenAmount: maxAllowance,
+          tokenAmount: proposedAllowance,
           tokenBalance: fromTokenAssetBalanceDecimal,
           tokenSymbol: fromAsset.symbol,
         }),
@@ -65,7 +77,7 @@ function mapDispatchToProps (dispatch) {
 }
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const { fromAsset, fromTokenAssetBalance } = stateProps
+  const { amount, fromAsset, fromTokenAssetBalance } = stateProps
   const { setAllowance } = dispatchProps
 
   return {
@@ -73,9 +85,18 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...dispatchProps,
     ...ownProps,
     setAllowance: (customAllowance, setCustomAllowance) =>
-      setAllowance(fromAsset, fromTokenAssetBalance, customAllowance, setCustomAllowance),
+      setAllowance(
+        fromAsset,
+        amount,
+        fromTokenAssetBalance,
+        customAllowance,
+        setCustomAllowance,
+      ),
   }
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(SwapAssetRow)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+)(SwapAssetRow)

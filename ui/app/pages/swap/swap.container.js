@@ -11,15 +11,21 @@ import {
   getSwapQuote,
   getSwapQuoteGasPrice,
   getSwapToAsset,
+  getSwapSlippage,
 } from '../../selectors'
-import { displayWarning, fetchSwapQuote, hideLoadingIndication, showLoadingIndication } from '../../store/actions'
-
+import {
+  displayWarning,
+  fetchSwapQuote,
+  hideLoadingIndication,
+  showLoadingIndication,
+} from '../../store/actions'
 
 function mapStateToProps (state) {
   return {
     fromAsset: getSwapFromAsset(state),
     toAsset: getSwapToAsset(state),
     amount: getSwapAmount(state),
+    slippage: getSwapSlippage(state),
     quote: getSwapQuote(state),
     globalGasPrice: getCustomGasPrice(state),
     quoteGasPrice: getSwapQuoteGasPrice(state),
@@ -29,11 +35,11 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     resetSwapState: () => dispatch(resetSwapState()),
-    fetchSwapQuote: async (fromAsset, toAsset, amount, gasPrice, showLoading, full) => {
+    fetchSwapQuote: async (fromAsset, toAsset, amount, gasPrice, slippage, showLoading, full) => {
       showLoading && (await dispatch(showLoadingIndication()))
 
       try {
-        await dispatch(fetchSwapQuote(fromAsset, toAsset, amount, gasPrice, full))
+        await dispatch(fetchSwapQuote(fromAsset, toAsset, amount, gasPrice, slippage, full))
       } catch (err) {
         dispatch(displayWarning(err.message))
       } finally {
@@ -43,7 +49,4 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default compose(
-  withRouter,
-  connect(mapStateToProps, mapDispatchToProps),
-)(Swap)
+export default compose(withRouter, connect(mapStateToProps, mapDispatchToProps))(Swap)

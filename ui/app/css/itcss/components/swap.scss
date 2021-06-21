@@ -636,11 +636,19 @@
           padding-right: 10px;
         }
 
-        tr:first-child {
+        tr:nth-child(1) {
           font-weight: 700;
 
           td {
             padding-top: 7px;
+          }
+        }
+
+        tr:nth-child(2) {
+          font-weight: 700;
+
+          td {
+            padding-top: 14px;
           }
 
           td:nth-child(2) {

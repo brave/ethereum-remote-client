@@ -11,7 +11,7 @@ export default class SwapsController {
     this.store = new ObservableStore({ initState })
   }
 
-  async quote (fromAsset, toAsset, amount, gasPrice, selectedAddress, network, full) {
+  async quote (fromAsset, toAsset, amount, gasPrice, slippage, selectedAddress, network, full) {
     const config = getConfig(network)
 
     const qs = createQueryString({
@@ -20,7 +20,7 @@ export default class SwapsController {
       buyToken: toAsset.address || toAsset.symbol,
       sellToken: fromAsset.address || fromAsset.symbol,
       buyTokenPercentageFee: config.buyTokenPercentageFee,
-      slippagePercentage: config.defaultSlippage,
+      slippagePercentage: slippage / 100,
       feeRecipient: config.feeRecipient,
       gasPrice,
     })

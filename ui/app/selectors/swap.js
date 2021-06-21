@@ -96,3 +96,7 @@ export function isSwapFromTokenAssetAllowanceEnough (state) {
 export function getSwapTokenApprovalTxId (state) {
   return state.metamask.swap.tokenApprovalTxId
 }
+
+export function getSwapSlippage (state) {
+  return state.metamask.swap.slippage
+}

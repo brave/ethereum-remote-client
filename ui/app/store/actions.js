@@ -214,7 +214,7 @@ export function verifySeedPhrase () {
   })
 }
 
-export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, full) {
+export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, slippage, full) {
   return async (dispatch, getState) => {
     const state = getState()
     const network = getNetworkIdentifier(state)
@@ -228,6 +228,7 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, full) {
       toAsset,
       parseInt(amount, 16),
       gasPriceDecimal,
+      slippage,
       selectedAddress,
       network,
       full,
@@ -931,6 +932,13 @@ export function updateSwapFromTokenAllowance ({ fromAsset, quote }) {
         log.error(err)
         updateSwapErrors({ fromTokenAssetAllowance: 'tokenBalanceError' })
       })
+  }
+}
+
+export function updateSwapSlippage (slippage) {
+  return {
+    type: actionConstants.UPDATE_SWAP_SLIPPAGE,
+    value: slippage,
   }
 }
 

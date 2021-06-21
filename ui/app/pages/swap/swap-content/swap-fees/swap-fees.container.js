@@ -8,11 +8,16 @@ import {
   getSwapQuote,
   getSwapQuoteEstimatedGasCost,
   getSwapToAsset,
+  getSwapQuoteGasPrice,
+  getSwapSlippage,
 } from '../../../../selectors'
 
+import { updateSwapSlippage } from '../../../../store/actions'
 
 const mapStateToProps = (state) => {
-  const { metamask: { currentCurrency, conversionRate } } = state
+  const {
+    metamask: { currentCurrency, conversionRate },
+  } = state
 
   return {
     fromAsset: getSwapFromAsset(state),
@@ -23,9 +28,13 @@ const mapStateToProps = (state) => {
     currentCurrency,
     conversionRate,
     network: getNetworkIdentifier(state),
+    quoteGasPrice: getSwapQuoteGasPrice(state),
+    slippage: getSwapSlippage(state),
   }
 }
 
-const mapDispatchToProps = () => ({})
+const mapDispatchToProps = (dispatch) => ({
+  setSlippage: (slippage) => dispatch(updateSwapSlippage(slippage)),
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwapFees)

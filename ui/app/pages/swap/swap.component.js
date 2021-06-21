@@ -19,6 +19,7 @@ export default class SwapTransactionScreen extends Component {
     fetchSwapQuote: PropTypes.func.isRequired,
     quoteGasPrice: PropTypes.string,
     globalGasPrice: PropTypes.string,
+    slippage: PropTypes.number.isRequired,
   }
 
   static contextTypes = {
@@ -48,11 +49,11 @@ export default class SwapTransactionScreen extends Component {
   // eslint-disable-next-line no-unused-vars
   componentDidUpdate (prevProps, prevState, snapshot) {
     const { globalGasPrice: prevGlobalGasPrice } = prevProps
-    const { globalGasPrice, fromAsset, toAsset, amount } = this.props
+    const { globalGasPrice, fromAsset, toAsset, amount, slippage } = this.props
 
     if (prevGlobalGasPrice !== null && globalGasPrice === null) {
       const gasPrice = parseInt(prevGlobalGasPrice, 16).toString()
-      this.refreshQuote(fromAsset, toAsset, amount, gasPrice, true)
+      this.refreshQuote(fromAsset, toAsset, amount, gasPrice, slippage, true)
     }
   }
 
@@ -73,6 +74,7 @@ export default class SwapTransactionScreen extends Component {
     toAsset,
     amount = this.props.amount,
     gasPrice = this.props.quoteGasPrice,
+    slippage = this.props.slippage,
     showLoading = true,
     full = false,
   ) => {
@@ -81,9 +83,17 @@ export default class SwapTransactionScreen extends Component {
 
     // Fetch live Swap quote if all inputs are valid.
     fromAsset &&
-    toAsset &&
-    amount !== '0' &&
-    fetchSwapQuote(fromAsset, toAsset, amount, gasPrice && decimalToHex(gasPrice), showLoading, full)
+      toAsset &&
+      amount !== '0' &&
+      fetchSwapQuote(
+        fromAsset,
+        toAsset,
+        amount,
+        gasPrice && decimalToHex(gasPrice),
+        slippage,
+        showLoading,
+        full,
+      )
 
     this.startTimer()
   }
@@ -95,8 +105,8 @@ export default class SwapTransactionScreen extends Component {
 
     // Check if we're at zero.
     if (seconds < 0) {
-      const { fromAsset, toAsset, amount, quoteGasPrice } = this.props
-      this.refreshQuote(fromAsset, toAsset, amount, quoteGasPrice, false)
+      const { fromAsset, toAsset, amount, quoteGasPrice, slippage } = this.props
+      this.refreshQuote(fromAsset, toAsset, amount, quoteGasPrice, slippage, false)
     }
   }
 
@@ -105,7 +115,7 @@ export default class SwapTransactionScreen extends Component {
   }
 
   render () {
-    const { history, fromAsset, toAsset, amount, quoteGasPrice } = this.props
+    const { history, fromAsset, toAsset, amount, quoteGasPrice, slippage } = this.props
     const { customAllowance, seconds } = this.state
 
     return (
@@ -120,10 +130,8 @@ export default class SwapTransactionScreen extends Component {
         <SwapFooter
           history={history}
           customAllowance={customAllowance}
-          refreshQuote={
-            () => this.refreshQuote(
-              fromAsset, toAsset, amount, quoteGasPrice, false, true,
-            )
+          refreshQuote={() =>
+            this.refreshQuote(fromAsset, toAsset, amount, quoteGasPrice, slippage, false, true)
           }
         />
       </div>

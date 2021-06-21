@@ -4,6 +4,7 @@ import { ALERT_TYPES } from '../../../../app/scripts/controllers/alert'
 const initSwapState = {
   quote: null,
   tokenApprovalTxId: null,
+  slippage: 3,
   fromAsset: {
     'name': 'Ether',
     'symbol': 'ETH',
@@ -209,6 +210,15 @@ export default function reduceMetamask (state = {}, action) {
         swap: {
           ...metamaskState.swap,
           tokenApprovalTxId: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_SLIPPAGE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          slippage: action.value,
         },
       }
 

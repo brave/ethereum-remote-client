@@ -75,7 +75,7 @@ describe('Swaps Controller', function () {
       sellAmount: '100',
       buyToken: '0xDEADBEEF',
       sellToken: 'ETH',
-      buyTokenPercentageFee: '0.875',
+      buyTokenPercentageFee: '0.00875',
       slippagePercentage: '0.03',
       feeRecipient: '0xbd9420A98a7Bd6B89765e5715e169481602D9c3d',
       gasPrice: '21',

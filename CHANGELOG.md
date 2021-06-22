@@ -2,7 +2,7 @@
 
 ## Remote Component([0.1.90](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.90)), Browser Component: `1.0.29`(22-Jun-2021)
 
- - [brave-browser#16206](https://github.com/brave/brave-browser/issues/16206) - Implement `webhid transport` for communication between Ledger and Crypto Wallets extension
+ - [brave-browser#16206](https://github.com/brave/brave-browser/issues/16206) - Implemented `webhid transport` for communication between Ledger and Crypto Wallets extension
  - [brave-browser#7687](https://github.com/brave/brave-browser/issues/7687) - Fixed Windows Security modal from appearing when connecting a Ledger Nano device with Crypto Wallet
  - [brave-browser#15797](https://github.com/brave/brave-browser/issues/15797) - Update `ENS` to `domain` on Add recipient window
  - [brave-browser#15688](https://github.com/brave/brave-browser/issues/15688) - Update token list for Crypto Wallets extension

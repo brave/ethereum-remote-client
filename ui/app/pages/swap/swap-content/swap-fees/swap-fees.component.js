@@ -142,7 +142,7 @@ export default class SwapFees extends Component {
                 </td>
               </tr>
               <tr>
-                <td colSpan="3">Quote includes a {config.buyTokenPercentageFee}% Brave fee</td>
+                <td colSpan="3">Quote includes a {(config.buyTokenPercentageFee * 100).toFixed(3)}% Brave fee</td>
               </tr>
             </tbody>
           </table>

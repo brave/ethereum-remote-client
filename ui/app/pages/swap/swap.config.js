@@ -10,15 +10,15 @@ export default function getConfig (network) {
     case ROPSTEN:
       return {
         swapAPIURL: 'https://ropsten.api.0x.org/swap/v1',
-        buyTokenPercentageFee: 0.875,
-        feeRecipient: '0xBc0447ab9c1D4FE379Aae40b25e8586DB3f52498',
+        buyTokenPercentageFee: 0.00875,
+        feeRecipient: '0x7B4933b164092b480A7c1b9bbCdBc8Ecd5201B96',
       }
 
     case MAINNET:
     default:
       return {
         swapAPIURL: 'https://api.0x.org/swap/v1',
-        buyTokenPercentageFee: 0.875,
+        buyTokenPercentageFee: 0.00875,
         feeRecipient: '0xbd9420A98a7Bd6B89765e5715e169481602D9c3d',
       }
   }

@@ -1727,7 +1727,13 @@ export default class MetamaskController extends EventEmitter {
     const initState = opts.initState || {}
 
     this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))
-    this.keyringController.on('unlock', () => this.emit('unlock'))
+    this.keyringController.on('unlock', () => {
+      if (chrome.braveWallet && chrome.braveWallet.notifyWalletUnlock) { // eslint-disable-line no-undef
+        chrome.braveWallet.notifyWalletUnlock() // eslint-disable-line no-undef
+      }
+      this.emit('unlock')
+    })
+
 
     this.permissionsController = new PermissionsController({
       getKeyringAccounts: this.keyringController.getAccounts.bind(this.keyringController),

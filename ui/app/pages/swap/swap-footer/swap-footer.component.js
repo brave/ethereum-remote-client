@@ -137,6 +137,26 @@ export default class SwapFooter extends Component {
     return inError
   }
 
+  renderFooterExtra () {
+    const privacyPolicy = (
+      <a href="https://brave.com/privacy/browser" target="_blank" rel="noreferrer">
+        Privacy Policy
+      </a>
+    )
+
+    const tou = (
+      <a href="https://brave.com/terms-of-use" target="_blank" rel="noreferrer">
+        Terms of Use
+      </a>
+    )
+
+    return (
+      <div className="swap-v2__form-row-footer-secondary">
+        Read our {privacyPolicy} and {tou}.
+      </div>
+    )
+  }
+
   render () {
     return (
       <PageContainerFooter
@@ -144,7 +164,9 @@ export default class SwapFooter extends Component {
         submitText="Review Swap"
         disabled={this.reviewSwapButtonShouldBeDisabled()}
         hideCancel
-      />
+      >
+        {this.renderFooterExtra()}
+      </PageContainerFooter>
     )
   }
 }

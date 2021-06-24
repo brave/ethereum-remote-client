@@ -597,6 +597,14 @@
     cursor: pointer;
   }
 
+  &__form-row-footer-secondary {
+    font-size: 0.75rem;
+
+    a {
+      text-transform: none !important;
+    }
+  }
+
   &__form-row-centered {
     margin: 1rem 1rem 0;
     display: flex;

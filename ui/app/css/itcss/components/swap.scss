@@ -545,7 +545,7 @@
   }
 
   &__form-row {
-    margin: 1rem 1rem 0;
+    margin: 0.5rem 1rem 0;
     position: relative;
     display: flex;
     flex-flow: row;
@@ -599,6 +599,11 @@
 
   &__form-row-footer-secondary {
     font-size: 0.75rem;
+
+    span {
+      color: #2f9ae0;
+      cursor: pointer;
+    }
 
     a {
       text-transform: none !important;

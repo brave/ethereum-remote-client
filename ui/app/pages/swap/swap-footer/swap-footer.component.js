@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerFooter from '../../../components/ui/page-container/page-container-footer'
 import { AssetPropTypes } from '../prop-types'
-import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
+import { CONFIRM_TRANSACTION_ROUTE, SECURITY_ROUTE } from '../../../helpers/constants/routes'
 
 export default class SwapFooter extends Component {
   static propTypes = {
@@ -138,21 +138,23 @@ export default class SwapFooter extends Component {
   }
 
   renderFooterExtra () {
-    const privacyPolicy = (
-      <a href="https://brave.com/privacy/browser" target="_blank" rel="noreferrer">
-        Privacy Policy
+    const { history } = this.props
+    const zeroX = (
+      <a href="https://0x.org" target="_blank" rel="noreferrer">
+        0x
       </a>
     )
 
-    const tou = (
-      <a href="https://brave.com/terms-of-use" target="_blank" rel="noreferrer">
-        Terms of Use
-      </a>
+    const security = (
+      <span onClick={() => history.push(SECURITY_ROUTE)}>
+        Security &amp; Privacy
+      </span>
     )
 
     return (
       <div className="swap-v2__form-row-footer-secondary">
-        Read our {privacyPolicy} and {tou}.
+        Brave uses {zeroX} as a DEX aggregator.
+        Please see {security} for more information.
       </div>
     )
   }

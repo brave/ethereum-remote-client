@@ -1,0 +1,14 @@
+[
+  {
+    "symbol": "ETH",
+    "address": "",
+    "name": "Ether",
+    "decimals": 18
+  },
+  {
+    "symbol": "DAI",
+    "address": "0xad6d458402f60fd3bd25163575031acdce07538d",
+    "name": "Dai",
+    "decimals": 18
+  }
+]

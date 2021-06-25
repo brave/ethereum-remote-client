@@ -1,6 +1,40 @@
 import * as actionConstants from '../../store/actionConstants'
 import { ALERT_TYPES } from '../../../../app/scripts/controllers/alert'
 
+const initSwapState = {
+  quote: null,
+  tokenApprovalTxId: null,
+  slippage: 3,
+  fromAsset: {
+    'name': 'Ether',
+    'symbol': 'ETH',
+    'address': '',
+    'decimals': 18,
+  },
+  fromTokenAssetBalance: null,
+  fromTokenAssetAllowance: null,
+  toAsset: null,
+  amount: '0',
+  errors: {},
+}
+
+const initSendState = {
+  gasLimit: null,
+  gasPrice: null,
+  gasTotal: null,
+  tokenBalance: '0x0',
+  from: '',
+  to: '',
+  amount: '0',
+  memo: '',
+  errors: {},
+  maxModeOn: false,
+  editingTransactionId: null,
+  toNickname: '',
+  ensResolution: null,
+  ensResolutionError: '',
+}
+
 export default function reduceMetamask (state = {}, action) {
   const metamaskState = Object.assign({
     isInitialized: false,
@@ -19,22 +53,8 @@ export default function reduceMetamask (state = {}, action) {
     }],
     pendingTokens: {},
     customNonceValue: '',
-    send: {
-      gasLimit: null,
-      gasPrice: null,
-      gasTotal: null,
-      tokenBalance: '0x0',
-      from: '',
-      to: '',
-      amount: '0',
-      memo: '',
-      errors: {},
-      maxModeOn: false,
-      editingTransactionId: null,
-      toNickname: '',
-      ensResolution: null,
-      ensResolutionError: '',
-    },
+    send: Object.assign({}, initSendState),
+    swap: Object.assign({}, initSwapState),
     useBlockie: false,
     featureFlags: {},
     welcomeScreenSeen: false,
@@ -184,6 +204,60 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+    case actionConstants.UPDATE_SWAP_TOKEN_APPROVAL_TXID:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          tokenApprovalTxId: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_SLIPPAGE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          slippage: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_GAS_LIMIT:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasLimit: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_GAS_PRICE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          gasPrice: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_AMOUNT:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          amount: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_SWAP_QUOTE:
+      return {
+        ...metamaskState,
+        swap: {
+          ...metamaskState.swap,
+          quote: action.value,
+        },
+      }
+
     case actionConstants.UPDATE_MAX_MODE:
       return {
         ...metamaskState,
@@ -230,6 +304,43 @@ export default function reduceMetamask (state = {}, action) {
         send: newSend,
       })
 
+    case actionConstants.UPDATE_SWAP_FROM_ASSET:
+      const newSwapFrom = {
+        ...metamaskState.swap,
+        fromAsset: action.value,
+        amount: '0',
+      }
+
+      return Object.assign(metamaskState, {
+        swap: newSwapFrom,
+      })
+
+    case actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_BALANCE:
+      return Object.assign(metamaskState, {
+        swap: {
+          ...metamaskState.swap,
+          fromTokenAssetBalance: action.value,
+        },
+      })
+
+    case actionConstants.UPDATE_SWAP_FROM_TOKEN_ASSET_ALLOWANCE:
+      return Object.assign(metamaskState, {
+        swap: {
+          ...metamaskState.swap,
+          fromTokenAssetAllowance: action.value,
+        },
+      })
+
+    case actionConstants.UPDATE_SWAP_TO_ASSET:
+      const newSwapTo = {
+        ...metamaskState.swap,
+        toAsset: action.value,
+      }
+
+      return Object.assign(metamaskState, {
+        swap: newSwapTo,
+      })
+
     case actionConstants.UPDATE_SEND_ENS_RESOLUTION:
       return {
         ...metamaskState,
@@ -253,20 +364,13 @@ export default function reduceMetamask (state = {}, action) {
     case actionConstants.CLEAR_SEND:
       return {
         ...metamaskState,
-        send: {
-          gasLimit: null,
-          gasPrice: null,
-          gasTotal: null,
-          tokenBalance: null,
-          from: '',
-          to: '',
-          amount: '0x0',
-          memo: '',
-          errors: {},
-          maxModeOn: false,
-          editingTransactionId: null,
-          toNickname: '',
-        },
+        send: Object.assign({}, initSendState),
+      }
+
+    case actionConstants.CLEAR_SWAP:
+      return {
+        ...metamaskState,
+        swap: Object.assign({}, initSwapState),
       }
 
     case actionConstants.UPDATE_TRANSACTION_PARAMS:
@@ -382,3 +486,4 @@ export const getUnconnectedAccountAlertEnabledness = (state) => getAlertEnabledn
 export const getUnconnectedAccountAlertShown = (state) => state.metamask.unconnectedAccountAlertShownOrigins
 
 export const getTokens = (state) => state.metamask.tokens
+

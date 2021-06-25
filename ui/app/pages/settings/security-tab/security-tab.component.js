@@ -137,6 +137,20 @@ export default class SecurityTab extends PureComponent {
     )
   }
 
+  renderSwapSection () {
+    const { t } = this.context
+    return (
+      <div className="settings-page__content-row">
+        <div className="settings-page__content-item">
+          <span>{ t('swapPrivacyPolicy') }</span>
+          <div className="settings-page__content-description">
+            { t('swapPrivacyPolicyDescription') }
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   render () {
     const { warning } = this.props
 
@@ -147,6 +161,7 @@ export default class SecurityTab extends PureComponent {
         { this.renderIncomingTransactionsOptIn() }
         { this.renderPhishingDetectionToggle() }
         { this.renderMetaMetricsOptIn() }
+        { this.renderSwapSection() }
       </div>
     )
   }

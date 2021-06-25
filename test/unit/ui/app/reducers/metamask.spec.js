@@ -208,19 +208,20 @@ describe('MetaMask Reducers', function () {
 
   it('clears send', function () {
     const initStateSend = {
-      send:
-      { gasLimit: null,
-        gasPrice: null,
-        gasTotal: null,
-        tokenBalance: null,
-        from: '',
-        to: '',
-        amount: '0x0',
-        memo: '',
-        errors: {},
-        maxModeOn: false,
-        editingTransactionId: null,
-        toNickname: '' },
+      gasLimit: null,
+      gasPrice: null,
+      gasTotal: null,
+      tokenBalance: '0x0',
+      from: '',
+      to: '',
+      amount: '0',
+      memo: '',
+      errors: {},
+      maxModeOn: false,
+      editingTransactionId: null,
+      toNickname: '',
+      ensResolution: null,
+      ensResolutionError: '',
     }
 
     const sendState = {
@@ -237,15 +238,16 @@ describe('MetaMask Reducers', function () {
         memo: '0xMemo',
         errors: {},
         editingTransactionId: 22,
+        ensResolution: null,
+        ensResolutionError: '',
       },
     }
-
 
     const state = reduceMetamask(sendState, {
       type: actionConstants.CLEAR_SEND,
     })
 
-    assert.deepEqual(state.send, initStateSend.send)
+    assert.deepEqual(state.send, initStateSend)
   })
 
   it('updates value of tx by id', function () {

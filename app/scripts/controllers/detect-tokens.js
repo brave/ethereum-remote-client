@@ -7,6 +7,9 @@ const DEFAULT_INTERVAL = 180 * 1000
 import SINGLE_CALL_BALANCES_ABI from 'single-call-balance-checker-abi'
 
 const SINGLE_CALL_BALANCES_ADDRESS = '0xb1f8e55c7f64d203c1400b9d8555d050f94adf39'
+
+/* eslint-disable accessor-pairs */
+
 /**
  * A controller that polls for token exchange
  * rates based on a user's current token list

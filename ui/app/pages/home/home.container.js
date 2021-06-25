@@ -3,22 +3,20 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import {
-  unconfirmedTransactionsCountSelector,
   getFirstPermissionRequest,
+  getSwapTokenApprovalTxId,
   getTotalUnapprovedCount,
+  unconfirmedTransactionsCountSelector,
 } from '../../selectors'
 
 import {
-  setShowRestorePromptToFalse,
   setConnectedStatusPopoverHasBeenShown,
   setDefaultHomeActiveTabName,
   setHardwareConnect,
+  setShowRestorePromptToFalse,
 } from '../../store/actions'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
-import {
-  ENVIRONMENT_TYPE_NOTIFICATION,
-  ENVIRONMENT_TYPE_POPUP,
-} from '../../../../app/scripts/lib/enums'
+import { ENVIRONMENT_TYPE_NOTIFICATION, ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
 
 const mapStateToProps = (state) => {
   const { metamask, appState } = state
@@ -57,6 +55,7 @@ const mapStateToProps = (state) => {
     connectedStatusPopoverHasBeenShown,
     defaultHomeActiveTabName,
     hardwareConnect,
+    swapTokenApprovalTxId: getSwapTokenApprovalTxId(state),
   }
 }
 

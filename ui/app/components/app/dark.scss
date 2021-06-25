@@ -63,9 +63,13 @@
   .settings-page,
   .add-to-address-book-modal,
   .send-v2__form-row > div,
+  .swap-v2__form-row > div,
   .transaction-list-item-details__body,
   .send__select-recipient-wrapper__group-label,
+  .swap__select-recipient-wrapper__group-label,
   .send-v2__asset-dropdown,
+  .swap-v2__asset-dropdown,
+  .swap__asset-dropdown,
   .unit-input,
   .send__dialog.dialog--message,
   .ens-input__wrapper--valid,
@@ -82,15 +86,27 @@
   .request-signature__account-item,
   .network-display__container,
   .send-v2__asset-dropdown__list,
+  .swap-v2__asset-dropdown__list,
   .transaction-status--submitted {
     background: #282828;
   }
 
   .Select-menu-outer,
   .simple-dropdown__options,
+  .swap-v2__asset-dropdown__list,
   .send-v2__asset-dropdown__list {
     * {
       background: #282828;
+    }
+  }
+
+  .swap__asset-dropdown-to,
+  .swap__asset-dropdown-from {
+    .dropdown {
+      background-image: url('/images/icons/caret-down-dark.svg');
+      background-repeat: no-repeat, repeat;
+      background-position: right 18px top 50%;
+      color: #fff;
     }
   }
 
@@ -103,7 +119,8 @@
     color: #fff;
   }
 
-  .send-v2__asset-dropdown__asset {
+  .send-v2__asset-dropdown__asset,
+  .swap-v2__asset-dropdown__asset {
     &:hover {
       background-color: #282828;
     }
@@ -168,6 +185,7 @@
   .reveal-seed-phrase__secret-words,
   .ens-input__wrapper__input,
   .dialog.send__error-dialog.dialog--error,
+  .dialog.swap__error-dialog.dialog--error,
   .error-message__text,
   .networks-tab__network-form-row--warning {
     color: #000;

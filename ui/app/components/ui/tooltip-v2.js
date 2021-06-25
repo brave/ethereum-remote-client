@@ -12,6 +12,7 @@ export default class Tooltip extends PureComponent {
     onHidden: null,
     position: 'left',
     offset: 0,
+    distance: 10,
     size: 'small',
     title: null,
     trigger: 'mouseenter',
@@ -26,6 +27,7 @@ export default class Tooltip extends PureComponent {
     html: PropTypes.node,
     interactive: PropTypes.bool,
     offset: PropTypes.number,
+    distance: PropTypes.number,
     onHidden: PropTypes.func,
     position: PropTypes.oneOf([
       'top',
@@ -56,6 +58,7 @@ export default class Tooltip extends PureComponent {
       trigger,
       onHidden,
       offset,
+      distance,
       wrapperClassName,
       style,
     } = this.props
@@ -81,6 +84,7 @@ export default class Tooltip extends PureComponent {
           position={position}
           size={size}
           offset={offset}
+          distance={distance}
           style={style}
           title={title}
           trigger={trigger}

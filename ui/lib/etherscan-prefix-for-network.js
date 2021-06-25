@@ -20,3 +20,25 @@ export function getEtherscanNetworkPrefix (networkId) {
       return ''
   }
 }
+
+export function getEtherScanNetworkIdentifier (networkName) {
+  switch (networkName) {
+    case networkEnums.ROPSTEN:
+      return networkEnums.ROPSTEN_NETWORK_ID
+
+    case networkEnums.RINKEBY:
+      return networkEnums.RINKEBY_NETWORK_ID
+
+    case networkEnums.KOVAN:
+      return networkEnums.KOVAN_NETWORK_ID
+
+    case networkEnums.GOERLI:
+      return networkEnums.GOERLI_NETWORK_ID
+
+    case networkEnums.MAINNET:
+      return networkEnums.MAINNET_NETWORK_ID
+
+    default:
+      return networkName
+  }
+}

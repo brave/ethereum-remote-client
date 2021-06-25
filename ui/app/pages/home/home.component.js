@@ -24,6 +24,7 @@ import {
   CONNECTED_ACCOUNTS_ROUTE,
   CONNECT_HARDWARE_ROUTE,
 } from '../../helpers/constants/routes'
+import WaitForTransaction from '../swap/wait-for-transaction'
 
 const LEARN_MORE_URL = 'https://support.brave.com/hc/en-us/articles/360035488071-How-do-I-manage-my-Crypto-Wallets-'
 
@@ -48,6 +49,7 @@ export default class Home extends PureComponent {
     onTabClick: PropTypes.func.isRequired,
     hardwareConnect: PropTypes.bool,
     setHardwareConnect: PropTypes.func,
+    swapTokenApprovalTxId: PropTypes.number,
   }
 
   state = {
@@ -191,7 +193,12 @@ export default class Home extends PureComponent {
       history,
       connectedStatusPopoverHasBeenShown,
       isPopup,
+      swapTokenApprovalTxId,
     } = this.props
+
+    if (swapTokenApprovalTxId) {
+      return <WaitForTransaction id={swapTokenApprovalTxId} />
+    }
 
     if (forgottenPassword) {
       return <Redirect to={{ pathname: RESTORE_VAULT_ROUTE }} />

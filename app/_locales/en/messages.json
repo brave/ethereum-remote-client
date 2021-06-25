@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Customize"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Slippage Tolerance"
   },
   "assets": {
     "message": "Assets"
@@ -411,6 +423,9 @@
   },
   "contactUs": {
     "message": "Contact us!"
+  },
+  "continueToSwap": {
+    "message": "Continue to Swap"
   },
   "continueToWyre": {
     "message": "Continue to Wyre"
@@ -771,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Home"
+  },
   "import": {
     "message": "Import",
     "description": "Button to import an account from a selected file"
@@ -811,6 +829,12 @@
   },
   "insufficientTokens": {
     "message": "Insufficient tokens."
+  },
+  "insufficientFundsGas": {
+    "message": "Insufficient funds for gas."
+  },
+  "balanceFetchError": {
+    "message": "Balance fetch error."
   },
   "invalidAddress": {
     "message": "Invalid address"
@@ -928,6 +952,9 @@
   },
   "mainnet": {
     "message": "Main Ethereum Network"
+  },
+  "availableOnMainnetRopsten": {
+    "message": "Only available on mainnet and ropsten"
   },
   "memorizePhrase": {
     "message": "Memorize this phrase."
@@ -1338,6 +1365,9 @@
   "send": {
     "message": "Send"
   },
+  "swap": {
+    "message": "Swap"
+  },
   "sendAmount": {
     "message": "Send Amount"
   },
@@ -1502,6 +1532,12 @@
   "supportCenter": {
     "message": "Visit our Support Center"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swap Privacy Policy"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave uses 0x (https://0x.org) as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1537,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Timeout"
   },
   "tips": {
     "message": "Tips"
@@ -1832,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Welcome to Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Waiting for confirmation."
   }
 }

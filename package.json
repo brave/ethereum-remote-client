@@ -22,6 +22,8 @@
     "dapp-forwarder": "concurrently -k -n forwarder,dapp -p '[{time}][{name}]' 'yarn forwarder' 'yarn dapp'",
     "sendwithprivatedapp": "node development/static-server.js test/e2e/send-eth-with-private-key-test --port 8080",
     "test:unit": "mocha --exit --timeout 0 --require test/env.js --require test/setup.js --recursive \"test/unit/**/*.js\" \"ui/app/**/*.test.js\"",
+    "test:unit:swaps": "mocha --exit --timeout 0 --require test/env.js --require test/setup.js test/unit/app/controllers/swaps-test",
+    "start-fork": "FORKED=1 ganache-cli -m \"${npm_package_config_mnemonic}\" -f ${RPC_URL} -i 1 -p 7545",
     "test:unit:global": "mocha --exit --require test/env.js --require test/setup.js --recursive mocha test/unit-global/*",
     "test:unit:lax": "mocha --exit --require test/env.js --require test/setup.js --recursive \"test/unit/{,**/!(permissions)}/*.js\" \"ui/app/**/*.test.js\"",
     "test:unit:strict": "mocha --exit --require test/env.js --require test/setup.js --recursive \"test/unit/**/permissions/*.js\"",
@@ -46,7 +48,7 @@
     "mozilla-lint": "addons-linter dist/firefox",
     "watch": "mocha --watch --require test/env.js --require test/setup.js --reporter min --recursive \"test/unit/**/*.js\" \"ui/app/**/*.test.js\"",
     "devtools:react": "react-devtools",
-    "devtools:redux": "remotedev --hostname=localhost --port=8000",
+    "devtools:redux": "redux-devtools --hostname=localhost --port=8000 --open=browser",
     "start:dev": "concurrently -k -n build,react,redux yarn:start yarn:devtools:react yarn:devtools:redux",
     "announce": "node development/announcer.js",
     "storybook": "start-storybook -p 6006 -c .storybook --static-dir ./app",
@@ -56,6 +58,9 @@
     "generate:migration": "./development/generate-migration.sh",
     "update-patches": "node brave/build/update-patches.js",
     "apply-patches": "node brave/build/apply-patches.js"
+  },
+  "config": {
+    "mnemonic": "people carpet cluster attract ankle motor ozone mass dove original primary mask"
   },
   "resolutions": {
     "**/knex/minimist": "^1.2.5",
@@ -132,6 +137,7 @@
     "ethereumjs-tx": "1.3.7",
     "ethereumjs-util": "5.1.0",
     "ethereumjs-wallet": "^0.6.0",
+    "ethers": "^5.0.31",
     "ethjs": "^0.4.0",
     "ethjs-contract": "^0.2.3",
     "ethjs-ens": "^2.0.0",
@@ -267,6 +273,7 @@
     "koa": "^2.7.0",
     "lockfile-lint": "^4.0.0",
     "mocha": "^7.2.0",
+    "mocha-param": "^2.0.1",
     "nock": "^9.0.14",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
@@ -278,6 +285,7 @@
     "react-devtools": "^4.4.0",
     "react-test-renderer": "^16.12.0",
     "read-installed": "^4.0.3",
+    "redux-devtools-extension": "^2.13.9",
     "redux-mock-store": "^1.5.4",
     "regenerator-runtime": "^0.13.3",
     "remote-redux-devtools": "^0.5.16",

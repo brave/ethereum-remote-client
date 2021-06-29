@@ -10,8 +10,10 @@ import {
   updateSwapTokenApprovalTxId,
 } from '../../../store/actions'
 import {
+  getSwapAmount,
   getSwapErrors,
   getSwapFromAsset,
+  getSwapQuote,
   getSwapToAsset,
   getSwapTransactionObject,
   getUnapprovedTxs,
@@ -29,6 +31,8 @@ function mapStateToProps (state) {
     toAsset: getSwapToAsset(state),
     unapprovedTxs: getUnapprovedTxs(state),
     transaction: getSwapTransactionObject(state),
+    amount: getSwapAmount(state),
+    quote: getSwapQuote(state),
   }
 }
 

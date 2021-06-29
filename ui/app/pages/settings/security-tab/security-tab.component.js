@@ -144,7 +144,11 @@ export default class SecurityTab extends PureComponent {
         <div className="settings-page__content-item">
           <span>{ t('swapPrivacyPolicy') }</span>
           <div className="settings-page__content-description">
-            { t('swapPrivacyPolicyDescription') }
+            {t('swapPrivacyPolicyDescriptionPart1')}
+            <a href="https://0x.org" style={{ color: '#037dd6' }}>
+              0x
+            </a>
+            {t('swapPrivacyPolicyDescriptionPart2')}
           </div>
         </div>
       </div>

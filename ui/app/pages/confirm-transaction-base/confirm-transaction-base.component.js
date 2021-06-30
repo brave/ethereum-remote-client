@@ -98,6 +98,7 @@ export default class ConfirmTransactionBase extends Component {
     showAccountInHeader: PropTypes.bool,
     mostRecentOverviewPage: PropTypes.string.isRequired,
     isMainnet: PropTypes.bool,
+    cleanSwap: PropTypes.func.isRequired,
   }
 
   state = {
@@ -418,6 +419,7 @@ export default class ConfirmTransactionBase extends Component {
       txData: { origin },
       methodData = {},
       updateCustomNonce,
+      cleanSwap,
     } = this.props
 
     this._removeBeforeUnload()
@@ -434,6 +436,10 @@ export default class ConfirmTransactionBase extends Component {
       },
     })
     updateCustomNonce('')
+
+    // cleanup any data related to an ongoing token approval for Swap
+    cleanSwap()
+
     if (onCancel) {
       onCancel(txData)
     } else {

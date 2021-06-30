@@ -125,8 +125,12 @@ const EthOverview = ({ className }) => {
             position="bottom"
             title={t('availableOnMainnetRopsten')}
             disabled={isSwapAvailable}
-            offset={-115}
             distance={-30}
+            style={{
+              position: 'relative',
+              paddingLeft: '90px',
+              top: '-20px',
+            }}
           >
             <Button
               type="secondary"

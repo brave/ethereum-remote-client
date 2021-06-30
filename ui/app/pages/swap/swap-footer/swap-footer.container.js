@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import {
   approveAllowance,
+  clearSwap,
   createTransaction,
   hideLoadingIndication,
   showLoadingIndication,
@@ -21,6 +22,7 @@ import {
   isSwapFromTokenAssetAllowanceEnough,
 } from '../../../selectors'
 import SwapFooter from './swap-footer.component'
+import { resetSwapState } from '../../../ducks/swap/swap.duck'
 
 function mapStateToProps (state) {
   return {
@@ -46,6 +48,10 @@ function mapDispatchToProps (dispatch) {
     hideLoadingIndication: () => dispatch(hideLoadingIndication()),
     showLoadingIndication: () => dispatch(showLoadingIndication()),
     updateSwapTokenApprovalTxId: (value) => dispatch(updateSwapTokenApprovalTxId(value)),
+    clearSwap: () => {
+      dispatch(clearSwap())
+      dispatch(resetSwapState())
+    },
   }
 }
 

@@ -23,6 +23,7 @@ export default class SwapFooter extends Component {
     transaction: PropTypes.object,
     amount: PropTypes.string,
     quote: PropTypes.object,
+    clearSwap: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -76,6 +77,7 @@ export default class SwapFooter extends Component {
       isSwapFromTokenAssetAllowanceEnough,
       sign,
       transaction,
+      clearSwap,
     } = this.props
     const {
       inError: prevInError,
@@ -115,8 +117,9 @@ export default class SwapFooter extends Component {
 
       if (fromAsset.address && !isSwapFromTokenAssetAllowanceEnough) {
         updateSwapTokenApprovalTxId(id)
+      } else {
+        clearSwap()
       }
-
       history.push(`${CONFIRM_TRANSACTION_ROUTE}/${id}`)
       hideLoadingIndication()
     }

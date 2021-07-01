@@ -10,15 +10,10 @@ import {
   getSwapFromAsset,
   getSwapQuote,
   getSwapQuoteGasPrice,
-  getSwapToAsset,
   getSwapSlippage,
+  getSwapToAsset,
 } from '../../selectors'
-import {
-  displayWarning,
-  fetchSwapQuote,
-  hideLoadingIndication,
-  showLoadingIndication,
-} from '../../store/actions'
+import { displayWarning, fetchSwapQuote, hideLoadingIndication, showLoadingIndication } from '../../store/actions'
 
 function mapStateToProps (state) {
   return {

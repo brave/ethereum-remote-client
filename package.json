@@ -76,7 +76,7 @@
     "node-fetch": "^2.6.1",
     "object-path": "^0.11.5",
     "axios": "^0.21.1",
-    "prismjs": "1.23.0",
+    "prismjs": "1.24.0",
     "immer": "8.0.1",
     "netmask": "^2.0.1",
     "ganache-core/lodash": "^4.17.21",

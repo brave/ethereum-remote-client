@@ -84,11 +84,13 @@ describe('Swap container', function () {
         await mapDispatchToPropsObject.fetchSwapQuote(
           ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false, false,
         )
-        assert(dispatchSpy.calledOnce)
+        assert(dispatchSpy.calledTwice)
         assert.deepStrictEqual(
           actionSpies.fetchSwapQuote.getCall(0).args,
           [ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false],
         )
+        assert(actionSpies.hideLoadingIndication.calledOnce)
+        assert(actionSpies.showLoadingIndication.notCalled)
       })
 
       it('should dispatch an action - showLoading=true', async function () {
@@ -100,7 +102,8 @@ describe('Swap container', function () {
           actionSpies.fetchSwapQuote.getCall(0).args,
           [ETH, BAT, 'mockAmount', 'mockGasPrice', 3, false],
         )
-        assert(actionSpies.hideLoadingIndication.calledOnce)
+
+        assert(actionSpies.hideLoadingIndication.called)
         assert(actionSpies.showLoadingIndication.calledOnce)
       })
     })

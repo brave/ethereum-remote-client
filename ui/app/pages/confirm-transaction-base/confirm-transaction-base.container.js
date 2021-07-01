@@ -11,12 +11,14 @@ import {
   updateCustomNonce,
   cancelTx,
   cancelTxs,
+  clearSwap,
   updateAndApproveTx,
   showModal,
   setMetaMetricsSendCount,
   updateTransaction,
   getNextNonce,
   tryReverseResolveAddress,
+  updateSwapTokenApprovalTxId,
 } from '../../store/actions'
 import {
   INSUFFICIENT_FUNDS_ERROR_KEY,
@@ -38,6 +40,7 @@ import {
   transactionFeeSelector,
 } from '../../selectors'
 import { getMostRecentOverviewPage } from '../../ducks/history/history'
+import { resetSwapState } from '../../ducks/swap/swap.duck'
 
 const casedContractMap = Object.keys(contractMap).reduce((acc, base) => {
   return {
@@ -211,6 +214,11 @@ export const mapDispatchToProps = (dispatch) => {
     sendTransaction: (txData) => dispatch(updateAndApproveTx(customNonceMerge(txData))),
     setMetaMetricsSendCount: (val) => dispatch(setMetaMetricsSendCount(val)),
     getNextNonce: () => dispatch(getNextNonce()),
+    cleanSwap: () => {
+      dispatch(updateSwapTokenApprovalTxId(null))
+      dispatch(clearSwap())
+      dispatch(resetSwapState())
+    },
   }
 }
 

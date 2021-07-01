@@ -7,33 +7,23 @@ import {
   CONFIRMED_STATUS,
   FAILED_STATUS,
   REJECTED_STATUS,
+  SUBMITTED_STATUS,
 } from '../../../helpers/constants/transactions'
 import { getBlockExplorerUrlForTx } from '../../../helpers/utils/transactions.util'
 import { getEtherScanNetworkIdentifier } from '../../../../lib/etherscan-prefix-for-network'
 
+const FAILURE_STATUSES = [FAILED_STATUS, CANCELLED_STATUS, REJECTED_STATUS]
 
-const FAILURE_STATUSES = [
-  FAILED_STATUS,
-  CANCELLED_STATUS,
-  REJECTED_STATUS,
-]
-
-const TERMINAL_STATUSES = [
-  CONFIRMED_STATUS,
-  ...FAILURE_STATUSES,
-]
+const TERMINAL_STATUSES = [CONFIRMED_STATUS, ...FAILURE_STATUSES]
 
 const EVM_SUCCESS_STATUS = '0x1'
 
 export default class WaitForTransaction extends Component {
   static propTypes = {
     transaction: PropTypes.object,
-    isLoading: PropTypes.bool.isRequired,
     network: PropTypes.string.isRequired,
     rpcPrefs: PropTypes.object.isRequired,
     history: PropTypes.object,
-    hideLoadingIndication: PropTypes.func.isRequired,
-    showLoadingIndication: PropTypes.func.isRequired,
     updateSwapTokenApprovalTxId: PropTypes.func.isRequired,
   }
 
@@ -46,57 +36,152 @@ export default class WaitForTransaction extends Component {
     this.state = { timeout: false }
 
     setTimeout(() => {
-      props.hideLoadingIndication()
       this.setState({ timeout: true })
     }, 600000)
   }
 
-  componentDidMount () {
-    const { transaction, showLoadingIndication } = this.props
-    const { t } = this.context
+  renderTransactionHash () {
+    const { transaction, network, rpcPrefs } = this.props
 
-    showLoadingIndication(transaction ? t(transaction.status) : undefined)
+    const { txReceipt, hash } = transaction
+    const transactionHash = txReceipt?.transactionHash || hash
+    const networkId = getEtherScanNetworkIdentifier(network)
+
+    return (
+      transactionHash && (
+        <p
+          onClick={() =>
+            global.platform.openTab({
+              url: getBlockExplorerUrlForTx(
+                networkId,
+                transactionHash,
+                rpcPrefs,
+              ),
+            })
+          }
+          style={{
+            fontSize: '0.8rem',
+            color: '#037dd6',
+            cursor: 'pointer',
+          }}
+        >
+          {rpcPrefs.blockExplorerUrl
+            ? this.context.t('blockExplorerView', [
+              rpcPrefs.blockExplorerUrl.match(/^https?:\/\/(.+)/)[1],
+            ])
+            : this.context.t('viewOnEtherscan')}
+        </p>
+      )
+    )
   }
 
-  componentDidUpdate (prevProps) {
-    const {
-      transaction,
-      showLoadingIndication,
-      hideLoadingIndication,
-      isLoading,
-    } = this.props
+  renderEvmStatus () {
+    const { transaction } = this.props
     const { t } = this.context
-    const { transaction: prevTransaction } = prevProps
 
-    if (transaction?.status !== prevTransaction?.status) {
-      showLoadingIndication(transaction ? t(transaction.status) : undefined)
-
-      if (TERMINAL_STATUSES.includes(transaction?.status) && isLoading) {
-        hideLoadingIndication()
-        return
-      }
+    if (!transaction) {
+      return null
     }
 
-    if (
+    const { txReceipt } = transaction
+    const { status } = transaction
+    const evmStatus = txReceipt?.status
+
+    return (
+      <>
+        <div
+          style={{
+            fontSize: '100px',
+            color: evmStatus === EVM_SUCCESS_STATUS ? 'green' : 'red',
+          }}
+        >
+          <i
+            className={
+              evmStatus === EVM_SUCCESS_STATUS
+                ? 'fas fa-check-circle'
+                : 'fas fa-times-circle'
+            }
+          />
+        </div>
+        <p>{evmStatus === EVM_SUCCESS_STATUS ? t(status) : t('failed')}</p>
+      </>
+    )
+  }
+
+  renderTimeout () {
+    const { t } = this.context
+    return (
+      <>
+        <div
+          style={{
+            fontSize: '100px',
+            color: 'yellow',
+          }}
+        >
+          <i className="fas fa-exclamation-triangle" />
+        </div>
+        <p>{t('timeout')}</p>
+      </>
+    )
+  }
+
+  loader () {
+    return (
+      <svg
+        version="1.1"
+        id="L9"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+        enableBackground="new 0 0 0 0"
+        xmlSpace="preserve"
+        style={{ height: '100px' }}
+      >
+        <path
+          fill="#000"
+          d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+        >
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            dur="1s"
+            from="0 50 50"
+            to="360 50 50"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
+    )
+  }
+
+  renderProgress () {
+    const { t } = this.context
+    const { transaction } = this.props
+
+    const displayProgress =
       transaction &&
       !TERMINAL_STATUSES.includes(transaction.status) &&
-      !transaction.txReceipt &&
-      !isLoading
-    ) {
-      showLoadingIndication(
-        `${t(transaction.status)}. ${t('waitingForConfirmation')}`,
+      !transaction.txReceipt
+
+    return (
+      displayProgress && (
+        <>
+          {this.loader()}
+          <p>
+            {transaction.status === SUBMITTED_STATUS
+              ? `${t(transaction.status)}. ${t('waitingForConfirmation')}`
+              : t(transaction.status)}
+          </p>
+        </>
       )
-    }
+    )
   }
 
   render () {
-    const {
-      transaction,
-      history,
-      updateSwapTokenApprovalTxId,
-      network,
-      rpcPrefs,
-    } = this.props
+    const { transaction, history, updateSwapTokenApprovalTxId } = this.props
     const { timeout } = this.state
     const { t } = this.context
 
@@ -104,73 +189,21 @@ export default class WaitForTransaction extends Component {
       return null
     }
 
-    const { status, txReceipt } = transaction
-    const transactionHash = txReceipt?.transactionHash
-    const evmStatus = txReceipt?.status
-
-    const networkId = getEtherScanNetworkIdentifier(network)
+    const { status } = transaction
 
     return (
       <PageContainer
         title={t('approve')}
-        contentComponent={
-          (TERMINAL_STATUSES.includes(status) || timeout) && (
-            <div style={{ textAlign: 'center', marginTop: '100px' }}>
-              <div
-                style={{
-                  fontSize: '100px',
-                  color:
-                    evmStatus === EVM_SUCCESS_STATUS
-                      ? 'green'
-                      : 'red',
-                }}
-              >
-                <i
-                  className={
-                    evmStatus === EVM_SUCCESS_STATUS
-                      ? 'fas fa-check-circle'
-                      : 'fas fa-times-circle'
-                  }
-                />
-              </div>
-              <div>
-                <p>
-                  {evmStatus === EVM_SUCCESS_STATUS
-                    ? t(status)
-                    : !transactionHash && timeout
-                      ? t('timeout')
-                      : t('failed')}
-                </p>
-                {transactionHash && (
-                  <p
-                    onClick={() =>
-                      global.platform.openTab({
-                        url: getBlockExplorerUrlForTx(
-                          networkId,
-                          transactionHash,
-                          rpcPrefs,
-                        ),
-                      })
-                    }
-                    style={{
-                      fontSize: '0.8rem',
-                      color: '#037dd6',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {rpcPrefs.blockExplorerUrl
-                      ? this.context.t('blockExplorerView', [
-                        rpcPrefs.blockExplorerUrl.match(
-                          /^https?:\/\/(.+)/,
-                        )[1],
-                      ])
-                      : this.context.t('viewOnEtherscan')}
-                  </p>
-                )}
-              </div>
-            </div>
-          )
-        }
+        contentComponent={(
+          <div style={{ textAlign: 'center', marginTop: '100px' }}>
+            {timeout &&
+              !TERMINAL_STATUSES.includes(status) &&
+              this.renderTimeout()}
+            {TERMINAL_STATUSES.includes(status) && this.renderEvmStatus()}
+            {this.renderProgress()}
+            {this.renderTransactionHash()}
+          </div>
+        )}
         submitText={t('continueToSwap')}
         onSubmit={() => {
           history.push(SWAP_ROUTE)

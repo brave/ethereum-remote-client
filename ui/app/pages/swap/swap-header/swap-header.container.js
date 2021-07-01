@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { clearSwap } from '../../../store/actions'
-import SwapHeader from './swap-header.component'
 import { getMostRecentOverviewPage } from '../../../ducks/history/history'
+import { resetSwapState } from '../../../ducks/swap/swap.duck'
+import SwapHeader from './swap-header.component'
 
-export default connect(mapStateToProps, mapDispatchToProps)(SwapHeader)
 
 function mapStateToProps (state) {
   return {
@@ -13,6 +13,11 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    clearSwap: () => dispatch(clearSwap()),
+    clearSwap: () => {
+      dispatch(clearSwap())
+      dispatch(resetSwapState())
+    },
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(SwapHeader)

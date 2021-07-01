@@ -30,6 +30,8 @@ proxyquire('../swap-footer.container.js', {
     getSwapFromAsset: (s) => `mockFromAsset:${s}`,
     getSwapToAsset: (s) => `mockToAsset:${s}`,
     getUnapprovedTxs: (s) => `mockUnapprovedTxs:${s}`,
+    getSwapAmount: (s) => `mockAmount:${s}`,
+    getSwapQuote: (s) => `mockQuote:${s}`,
   },
   '../../../store/actions': actionSpies,
 })
@@ -46,6 +48,8 @@ describe('SwapFooter container', function () {
         fromAsset: 'mockFromAsset:mockState',
         toAsset: 'mockToAsset:mockState',
         unapprovedTxs: 'mockUnapprovedTxs:mockState',
+        amount: 'mockAmount:mockState',
+        quote: 'mockQuote:mockState',
       })
     })
   })

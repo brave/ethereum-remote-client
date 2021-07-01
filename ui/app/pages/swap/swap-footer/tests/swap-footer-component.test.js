@@ -14,6 +14,7 @@ describe('SwapFooter Component', function () {
     hideLoadingIndication: sinon.spy(),
     showLoadingIndication: sinon.spy(),
     refreshQuote: sinon.spy(),
+    clearSwap: sinon.spy(),
   }
 
   const mockEvent = {
@@ -28,8 +29,9 @@ describe('SwapFooter Component', function () {
         history={mockHistory}
         approve={propsMethodSpies.approve}
         sign={propsMethodSpies.sign}
-        refreshQuote={propsMethodSpies.refreshQuote}
+        clearSwap={propsMethodSpies.clearSwap}
         updateSwapTokenApprovalTxId={propsMethodSpies.updateSwapTokenApprovalTxId}
+        refreshQuote={propsMethodSpies.refreshQuote}
         hideLoadingIndication={propsMethodSpies.hideLoadingIndication}
         showLoadingIndication={propsMethodSpies.showLoadingIndication}
         unapprovedTxs={{}}
@@ -46,8 +48,9 @@ describe('SwapFooter Component', function () {
   afterEach(function () {
     propsMethodSpies.approve.resetHistory()
     propsMethodSpies.sign.resetHistory()
-    propsMethodSpies.refreshQuote.resetHistory()
+    propsMethodSpies.clearSwap.resetHistory()
     propsMethodSpies.updateSwapTokenApprovalTxId.resetHistory()
+    propsMethodSpies.refreshQuote.resetHistory()
     propsMethodSpies.hideLoadingIndication.resetHistory()
     propsMethodSpies.showLoadingIndication.resetHistory()
     SwapFooter.prototype.onSubmit.resetHistory()
@@ -125,6 +128,7 @@ describe('SwapFooter Component', function () {
 
       assert.strictEqual(propsMethodSpies.hideLoadingIndication.callCount, 1)
       assert.strictEqual(propsMethodSpies.updateSwapTokenApprovalTxId.callCount, 0)
+      assert.strictEqual(propsMethodSpies.clearSwap.callCount, 1)
     })
 
     it('should handle newly created unapproved transaction from BAT', function () {
@@ -148,6 +152,7 @@ describe('SwapFooter Component', function () {
         propsMethodSpies.updateSwapTokenApprovalTxId.getCall(0).args,
         ['1234567890'],
       )
+      assert.strictEqual(propsMethodSpies.clearSwap.callCount, 0)
     })
 
     it('should call sign() if full quote is fetched', function () {

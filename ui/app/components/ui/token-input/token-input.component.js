@@ -29,6 +29,7 @@ export default class TokenInput extends PureComponent {
       symbol: PropTypes.string,
     }).isRequired,
     tokenExchangeRates: PropTypes.object,
+    forceHideConversion: PropTypes.bool,
   }
 
   constructor (props) {
@@ -127,7 +128,7 @@ export default class TokenInput extends PureComponent {
   }
 
   render () {
-    const { token, ...restProps } = this.props
+    const { token, forceHideConversion, ...restProps } = this.props
     const { decimalValue } = this.state
 
     return (
@@ -137,7 +138,7 @@ export default class TokenInput extends PureComponent {
         onChange={this.handleChange}
         value={decimalValue}
       >
-        { this.renderConversionComponent() }
+        { !forceHideConversion && this.renderConversionComponent() }
       </UnitInput>
     )
   }

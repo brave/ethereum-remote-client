@@ -64,6 +64,7 @@ export default class SwapAmountRow extends Component {
         onChange={this.handleChange}
         token={fromAsset}
         value={amount}
+        forceHideConversion
       />
     ) : (
       <UserPreferencedCurrencyInput

@@ -72,7 +72,11 @@ export default function ConfirmApprove () {
     [customPermissionAmount, tokenAmount],
   )
 
-  const { origin } = transaction
+  const { origin: realOrigin } = transaction
+
+  // Dirty hack to transform "metamask" origin to "brave".
+  const origin = realOrigin === 'metamask' ? 'brave' : realOrigin
+
   const formattedOrigin = origin
     ? origin[0].toUpperCase() + origin.slice(1)
     : ''

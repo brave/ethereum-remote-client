@@ -35,6 +35,9 @@ export default class SwapTransactionScreen extends Component {
   componentDidMount () {
     this.timer = null
 
+    const { fromAsset, toAsset } = this.props
+    this.refreshQuote(fromAsset, toAsset)
+
     // Start countdown on component initialization.
     this.startTimer()
   }
@@ -83,17 +86,17 @@ export default class SwapTransactionScreen extends Component {
 
     // Fetch live Swap quote if all inputs are valid.
     fromAsset &&
-      toAsset &&
-      amount !== '0' &&
-      fetchSwapQuote(
-        fromAsset,
-        toAsset,
-        amount,
-        gasPrice && decimalToHex(gasPrice),
-        slippage,
-        showLoading,
-        full,
-      )
+    toAsset &&
+    amount !== '0' &&
+    fetchSwapQuote(
+      fromAsset,
+      toAsset,
+      amount,
+      gasPrice && decimalToHex(gasPrice),
+      slippage,
+      showLoading,
+      full,
+    )
 
     this.startTimer()
   }

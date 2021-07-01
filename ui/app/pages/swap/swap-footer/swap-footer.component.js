@@ -21,6 +21,9 @@ export default class SwapFooter extends Component {
     updateSwapTokenApprovalTxId: PropTypes.func.isRequired,
     refreshQuote: PropTypes.func.isRequired,
     transaction: PropTypes.object,
+    amount: PropTypes.string,
+    quote: PropTypes.object,
+    clearSwap: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -74,6 +77,7 @@ export default class SwapFooter extends Component {
       isSwapFromTokenAssetAllowanceEnough,
       sign,
       transaction,
+      clearSwap,
     } = this.props
     const {
       inError: prevInError,
@@ -113,28 +117,26 @@ export default class SwapFooter extends Component {
 
       if (fromAsset.address && !isSwapFromTokenAssetAllowanceEnough) {
         updateSwapTokenApprovalTxId(id)
+      } else {
+        clearSwap()
       }
-
       history.push(`${CONFIRM_TRANSACTION_ROUTE}/${id}`)
       hideLoadingIndication()
     }
   }
 
   reviewSwapButtonShouldBeDisabled () {
-    /**
-     * TODO (@onyb): add the following checks.
-     *  - Swap token pairs are set.
-     *  - Swap token pairs are NOT the same.
-     *  - Amount is greater than 0.
-     *  - Amount is less than asset balance.
-     *  - Estimated gas price is set (reject non-zero values).
-     *  - Swap quote from 0x is available.
-     *  - Slippage tolerance is set.
-     *  - Gas limit is greater than 21000.
-     */
+    const { inError, fromAsset, toAsset, amount, quote } = this.props
 
-    const { inError } = this.props
-    return inError
+    const isAmountInvalid = !amount || parseFloat(amount) <= 0
+
+    return (
+      inError ||
+      !fromAsset || !toAsset || // check if asset pairs are set
+      fromAsset.address === toAsset.address || // check if asset pairs are the same
+      isAmountInvalid || // check if amount is valid
+      !quote // check if quote is set
+    )
   }
 
   renderFooterExtra () {

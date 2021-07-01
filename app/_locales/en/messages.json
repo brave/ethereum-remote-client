@@ -1535,11 +1535,8 @@
   "swapPrivacyPolicy": {
     "message": "Swap Privacy Policy"
   },
-  "swapPrivacyPolicyDescriptionPart1": {
-    "message": "Brave uses "
-  },
-  "swapPrivacyPolicyDescriptionPart2": {
-    "message": " as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave uses $1 as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
   },
   "symbol": {
     "message": "Symbol"

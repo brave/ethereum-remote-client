@@ -43,7 +43,7 @@ function mapDispatchToProps (dispatch) {
       } catch (err) {
         dispatch(displayWarning(err.message))
       } finally {
-        showLoading && (await dispatch(hideLoadingIndication()))
+        await dispatch(hideLoadingIndication())
       }
     },
   }

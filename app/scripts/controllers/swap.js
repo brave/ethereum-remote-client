@@ -14,7 +14,7 @@ export default class SwapsController {
   async quote (fromAsset, toAsset, amount, gasPrice, slippage, selectedAddress, network, full) {
     const config = getConfig(network)
 
-    const qs = createQueryString({
+    const baseQueryObj = {
       takerAddress: selectedAddress,
       sellAmount: amount,
       buyToken: toAsset.address || toAsset.symbol,
@@ -23,7 +23,17 @@ export default class SwapsController {
       slippagePercentage: slippage / 100,
       feeRecipient: config.feeRecipient,
       gasPrice,
-    })
+    }
+
+    // Add an affiliateAddress field if querying the full quote, which allows
+    // us to tag the trade for metrics and/or aggregated statistics.
+    //
+    // We're using the same ETH address as feeRecipient for this purpose.
+    const queryObj = full
+      ? { affiliateAddress: config.feeRecipient, ...baseQueryObj }
+      : baseQueryObj
+
+    const qs = createQueryString(queryObj)
 
     const path = full ? 'quote' : 'price'
     const quoteUrl = `${config.swapAPIURL}/${path}?${qs}`

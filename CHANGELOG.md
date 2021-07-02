@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.93](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.93)), Browser Component: `1.0.30`(02-Jul-2021)
+
+ - [brave-browser#15859](https://github.com/brave/brave-browser/issues/15859) - Added Brave Swap to Crypto Wallets
+
 ## Remote Component([0.1.90](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.90)), Browser Component: `1.0.29`(22-Jun-2021)
 
  - [brave-browser#16206](https://github.com/brave/brave-browser/issues/16206) - Implemented `webhid transport` for communication between Ledger and Crypto Wallets extension

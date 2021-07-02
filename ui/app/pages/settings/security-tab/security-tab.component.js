@@ -139,17 +139,19 @@ export default class SecurityTab extends PureComponent {
 
   renderSwapSection () {
     const { t } = this.context
+
+    const msg = t('swapPrivacyPolicyDescription', [
+      `<a href="https://0x.org" style="color:#037dd6">0x</a>`,
+    ])
+
     return (
       <div className="settings-page__content-row">
         <div className="settings-page__content-item">
-          <span>{ t('swapPrivacyPolicy') }</span>
-          <div className="settings-page__content-description">
-            {t('swapPrivacyPolicyDescriptionPart1')}
-            <a href="https://0x.org" style={{ color: '#037dd6' }}>
-              0x
-            </a>
-            {t('swapPrivacyPolicyDescriptionPart2')}
-          </div>
+          <span>{t('swapPrivacyPolicy')}</span>
+          <div
+            className="settings-page__content-description"
+            dangerouslySetInnerHTML={{ __html: msg }}
+          />
         </div>
       </div>
     )

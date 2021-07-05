@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { debounce } from 'lodash'
 import { Tooltip as ReactTippy } from 'react-tippy'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import Fuse from 'fuse.js'
 
 import Identicon from '../../../../components/ui/identicon/identicon.component'
 import TokenBalance from '../../../../components/ui/token-balance'
@@ -9,15 +11,34 @@ import CurrencyDisplay from '../../../../components/ui/currency-display'
 import UserPreferencedCurrencyDisplay from '../../../../components/app/user-preferenced-currency-display'
 import { PRIMARY } from '../../../../helpers/constants/common'
 import { calcTokenAmount } from '../../../../helpers/utils/token-util'
-
+import { conversionGTE } from '../../../../helpers/utils/conversion-util'
+import TextField from '../../../../components/ui/text-field'
+import { MAINNET, ROPSTEN } from '../../../../../../app/scripts/controllers/network/enums'
 import SwapAmountRow from '../swap-amount-row'
 import SwapRowErrorMessage from '../swap-error-message'
 import { AssetPropTypes, QuotePropTypes } from '../../prop-types'
 import assetsMap from '../../assets'
 import AmountMaxButton from '../amount-max-button'
 import { hexAmountToDecimal } from '../../swap.utils'
-import { conversionGTE } from '../../../../helpers/utils/conversion-util'
 
+const fuseFactory = (network) =>
+  new Fuse(assetsMap[network], {
+    shouldSort: true,
+    threshold: 0.45,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: [
+      { name: 'name', weight: 0.5 },
+      { name: 'symbol', weight: 0.5 },
+    ],
+  })
+
+const fuseDB = {
+  [MAINNET]: fuseFactory(MAINNET),
+  [ROPSTEN]: fuseFactory(ROPSTEN),
+}
 
 export default class SwapAssetRow extends Component {
   static propTypes = {
@@ -45,16 +66,32 @@ export default class SwapAssetRow extends Component {
   state = {
     isShowingDropdownTo: false,
     isShowingDropdownFrom: false,
+    searchQuery: '',
+    searchResults: [],
   }
+
   debouncedRefreshQuote = debounce(this.props.refreshQuote, 400)
 
-  openDropdownTo = () => this.setState({ isShowingDropdownTo: true })
+  getPopularAssets () {
+    const { network } = this.props
+    return assetsMap[network].slice(0, 10)
+  }
 
-  closeDropdownTo = () => this.setState({ isShowingDropdownTo: false })
+  openDropdownTo = () => {
+    this.setState({
+      isShowingDropdownTo: true,
+      searchResults: this.getPopularAssets(),
+      searchQuery: '',
+    })
+  }
 
-  openDropdownFrom = () => this.setState({ isShowingDropdownFrom: true })
-
-  closeDropdownFrom = () => this.setState({ isShowingDropdownFrom: false })
+  openDropdownFrom = () => {
+    this.setState({
+      isShowingDropdownFrom: true,
+      searchResults: this.getPopularAssets(),
+      searchQuery: '',
+    })
+  }
 
   selectFromAsset = (asset) => {
     const { setFromAsset, setToAsset, toAsset, refreshQuote } = this.props
@@ -62,6 +99,8 @@ export default class SwapAssetRow extends Component {
     this.setState(
       {
         isShowingDropdownFrom: false,
+        searchResults: [],
+        searchQuery: '',
       },
       () => {
         this.context.metricsEvent({
@@ -89,6 +128,8 @@ export default class SwapAssetRow extends Component {
     this.setState(
       {
         isShowingDropdownTo: false,
+        searchResults: [],
+        searchQuery: '',
       },
       () => {
         this.context.metricsEvent({
@@ -111,7 +152,8 @@ export default class SwapAssetRow extends Component {
   }
 
   renderAllowanceButton () {
-    const { setAllowance, fromTokenAssetAllowance, amount, customAllowance, setCustomAllowance } = this.props
+    const { setAllowance, fromTokenAssetAllowance, amount, customAllowance, setCustomAllowance } =
+      this.props
 
     if (!fromTokenAssetAllowance) {
       return null
@@ -138,7 +180,6 @@ export default class SwapAssetRow extends Component {
         onClick={() => setAllowance(customAllowance, setCustomAllowance)}
       >
         Set allowance
-
         {fromTokenAssetAllowance !== '0' && (
           <ReactTippy
             style={{
@@ -152,9 +193,8 @@ export default class SwapAssetRow extends Component {
                   fontSize: 'small',
                 }}
               >
-              For security reasons, it is advisable to reset the allowance to 0
-              first before setting it the desired value, to prevent transaction
-              reordering attacks.
+                For security reasons, it is advisable to reset the allowance to 0 first before
+                setting it the desired value, to prevent transaction reordering attacks.
               </p>
             )}
             distance={26}
@@ -169,62 +209,6 @@ export default class SwapAssetRow extends Component {
     )
   }
 
-  render () {
-    const { t } = this.context
-    const { fromAsset, refreshQuote } = this.props
-
-    return (
-      <div>
-        <div className="swap-v2__form-row">
-          <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
-          <AmountMaxButton refreshQuote={refreshQuote} />
-        </div>
-
-        <div className="swap-v2__form-row">
-          <div className="swap-v2__asset-dropdown">
-            {this.renderSwapFromAsset()}
-            {this.renderFromAssetDropdown()}
-          </div>
-          <div
-            className={
-              fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'
-            }
-          >
-            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} />
-          </div>
-        </div>
-
-        <div className="swap-v2__form-row-full" style={{ display: 'block' }}>
-          <SwapRowErrorMessage errorType="amount" />
-          <SwapRowErrorMessage errorType="gasFee" />
-          <SwapRowErrorMessage errorType="quote" />
-        </div>
-
-        {fromAsset && (
-          <div className="swap-v2__form-row">
-            <div className="swap-v2__form-row-secondary-left">
-              <span>{`${t('balance')}:`}</span>
-              <span>{this.renderAssetBalance(fromAsset)}</span>
-            </div>
-            {this.renderAllowanceButton()}
-          </div>
-        )}
-
-        <div className="swap-v2__form-row">
-          <span className="swap-v2__form-row-header-left">{`${t('to')}`}</span>
-        </div>
-
-        <div className="swap-v2__form-row">
-          <div className="swap-v2__asset-dropdown">
-            {this.renderSwapToAsset()}
-            {this.renderToAssetDropdown()}
-          </div>
-          <div className="swap-v2__to-amount-box">{this.renderToAmount()}</div>
-        </div>
-      </div>
-    )
-  }
-
   renderToAmount () {
     const { toAsset, quote } = this.props
 
@@ -233,55 +217,66 @@ export default class SwapAssetRow extends Component {
     }
 
     const amount = calcTokenAmount(quote.buyAmount, toAsset.decimals).toFixed(4)
-    return amount
-      ? <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} />
-      : null
+    return amount ? <CurrencyDisplay displayValue={amount} suffix={toAsset.symbol} /> : null
   }
 
   renderAssetBalance (asset, insideDropdown = false) {
     const { selectedAccount, fromTokenAssetBalance } = this.props
 
     return asset.address ? (
-      insideDropdown ? <TokenBalance token={asset} /> : (
-        fromTokenAssetBalance === '0' ? `0 ${asset.symbol}`
-          : (
-            <CurrencyDisplay
-              displayValue={hexAmountToDecimal(fromTokenAssetBalance, asset)}
-              suffix={asset.symbol}
-            />
-          )
+      insideDropdown ? (
+        <TokenBalance token={asset} />
+      ) : fromTokenAssetBalance === '0' ? (
+        `0 ${asset.symbol}`
+      ) : (
+        <CurrencyDisplay
+          displayValue={hexAmountToDecimal(fromTokenAssetBalance, asset)}
+          suffix={asset.symbol}
+        />
       )
     ) : (
       <UserPreferencedCurrencyDisplay value={selectedAccount?.balance} type={PRIMARY} />
     )
   }
 
-  renderSwapFromAsset () {
+  renderSwapFromAssetRow () {
     const { fromAsset } = this.props
+    const { isShowingDropdownFrom } = this.state
     return (
-      <div
-        className="swap-v2__asset-dropdown__input-wrapper"
-        onClick={this.openDropdownFrom}
-      >
-        {fromAsset
-          ? this.renderAsset(fromAsset, this.selectFromAsset)
-          : this.renderUnselectedAsset()}
-      </div>
+      !isShowingDropdownFrom && (
+        <div className="swap-v2__form-row">
+          <div className="swap-v2__asset-dropdown">
+            <div className="swap-v2__asset-dropdown__input-wrapper" onClick={this.openDropdownFrom}>
+              {fromAsset
+                ? this.renderAsset(fromAsset, this.selectFromAsset)
+                : this.renderUnselectedAsset()}
+            </div>
+          </div>
+          <div className={fromAsset ? 'swap-v2__from-amount-box' : 'swap-v2__to-amount-box'}>
+            <SwapAmountRow refreshQuote={this.debouncedRefreshQuote} />
+          </div>
+        </div>
+      )
     )
   }
 
-  renderSwapToAsset () {
+  renderSwapToAssetRow () {
     const { toAsset } = this.props
+    const { isShowingDropdownTo } = this.state
 
     return (
-      <div
-        className="swap-v2__asset-dropdown__input-wrapper"
-        onClick={this.openDropdownTo}
-      >
-        {toAsset
-          ? this.renderAsset(toAsset, this.selectToAsset)
-          : this.renderUnselectedAsset()}
-      </div>
+      !isShowingDropdownTo && (
+        <div className="swap-v2__form-row">
+          <div className="swap-v2__asset-dropdown">
+            <div className="swap-v2__asset-dropdown__input-wrapper" onClick={this.openDropdownTo}>
+              {toAsset
+                ? this.renderAsset(toAsset, this.selectToAsset)
+                : this.renderUnselectedAsset()}
+            </div>
+          </div>
+          <div className="swap-v2__to-amount-box">{this.renderToAmount()}</div>
+        </div>
+      )
     )
   }
 
@@ -296,43 +291,60 @@ export default class SwapAssetRow extends Component {
     )
   }
 
-  renderFromAssetDropdown () {
+  handleSearch (searchQuery) {
     const { network } = this.props
-    const assets = assetsMap[network]
+    const fuse = fuseDB[network]
 
-    return (
-      this.state.isShowingDropdownFrom && (
-        <div>
-          <div
-            className="swap-v2__asset-dropdown__close-area"
-            onClick={this.closeDropdownFrom}
-          />
-          <div className="swap-v2__asset-dropdown__list">
-            {assets.map((asset) =>
-              this.renderAsset(asset, this.selectFromAsset, true),
-            )}
-          </div>
-        </div>
-      )
-    )
+    this.setState({ searchQuery }, () => {
+      const fuseSearchResult = fuse.search(searchQuery)
+      this.setState({
+        searchResults: fuseSearchResult,
+      })
+    })
   }
 
-  renderToAssetDropdown () {
-    const { network } = this.props
-    const assets = assetsMap[network]
+  renderAssetDropdown (fromOrTo) {
+    const { isShowingDropdownFrom, isShowingDropdownTo, searchQuery, searchResults } = this.state
+    const { t } = this.context
+
+    const isShowingDropdown = fromOrTo === 'from' ? isShowingDropdownFrom : isShowingDropdownTo
+
+    const selector = fromOrTo === 'from' ? this.selectFromAsset : this.selectToAsset
 
     return (
-      this.state.isShowingDropdownTo && (
-        <div>
-          <div
-            className="swap-v2__asset-dropdown__close-area"
-            onClick={this.closeDropdownTo}
-          />
-          <div className="swap-v2__asset-dropdown__list">
-            {assets.map((asset) =>
-              this.renderAsset(asset, this.selectToAsset, true),
+      isShowingDropdown && (
+        <div className="swap-v2__form-row">
+          <TextField
+            placeholder={t('searchAssets')}
+            type="text"
+            value={searchQuery}
+            onChange={(e) => this.handleSearch(e.target.value)}
+            startAdornment={(
+              <InputAdornment position="start" style={{ marginRight: '12px' }}>
+                <img src="images/search.svg" />
+              </InputAdornment>
             )}
-          </div>
+            onBlur={() =>
+              setTimeout(
+                () =>
+                  this.setState({
+                    isShowingDropdownFrom: false,
+                    isShowingDropdownTo: false,
+                    searchQuery: '',
+                    searchResults: [],
+                  }),
+                250,
+              )
+            }
+            autoFocus
+            fullWidth
+          />
+
+          {searchResults.length !== 0 && (
+            <div className="swap-v2__asset-dropdown__list">
+              {searchResults.map((asset) => this.renderAsset(asset, selector, true))}
+            </div>
+          )}
         </div>
       )
     )
@@ -355,16 +367,52 @@ export default class SwapAssetRow extends Component {
           <div className="swap-v2__asset-dropdown__symbol">{symbol}</div>
           {insideDropdown && (
             <div className="swap-v2__asset-dropdown__name">
-              <span className="swap-v2__asset-dropdown__name__label">
-                {`${t('balance')}:`}
-              </span>
+              <span className="swap-v2__asset-dropdown__name__label">{`${t('balance')}:`}</span>
               {this.renderAssetBalance(asset, insideDropdown)}
             </div>
           )}
         </div>
-        {!insideDropdown && (
-          <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
+        {!insideDropdown && <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />}
+      </div>
+    )
+  }
+
+  render () {
+    const { t } = this.context
+    const { fromAsset, refreshQuote } = this.props
+
+    return (
+      <div>
+        <div className="swap-v2__form-row">
+          <span className="swap-v2__form-row-header-left">{`${t('from')}`}</span>
+          <AmountMaxButton refreshQuote={refreshQuote} />
+        </div>
+
+        {this.renderSwapFromAssetRow()}
+        {this.renderAssetDropdown('from')}
+
+        <div className="swap-v2__form-row-full" style={{ display: 'block' }}>
+          <SwapRowErrorMessage errorType="amount" />
+          <SwapRowErrorMessage errorType="gasFee" />
+          <SwapRowErrorMessage errorType="quote" />
+        </div>
+
+        {fromAsset && (
+          <div className="swap-v2__form-row">
+            <div className="swap-v2__form-row-secondary-left">
+              <span>{`${t('balance')}:`}</span>
+              <span>{this.renderAssetBalance(fromAsset)}</span>
+            </div>
+            {this.renderAllowanceButton()}
+          </div>
         )}
+
+        <div className="swap-v2__form-row">
+          <span className="swap-v2__form-row-header-left">{`${t('to')}`}</span>
+        </div>
+
+        {this.renderSwapToAssetRow()}
+        {this.renderAssetDropdown('to')}
       </div>
     )
   }

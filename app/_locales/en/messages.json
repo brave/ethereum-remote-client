@@ -1390,6 +1390,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Search Assets"
+  },
   "searchTokens": {
     "message": "Search Tokens"
   },

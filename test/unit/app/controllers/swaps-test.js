@@ -70,7 +70,7 @@ describe('Swaps Controller', function () {
   let swapsController
 
   beforeEach(function () {
-    const qs = createQueryString({
+    const baseQueryObj = {
       takerAddress: '0xFOODBABE',
       sellAmount: '100',
       buyToken: '0xDEADBEEF',
@@ -79,14 +79,19 @@ describe('Swaps Controller', function () {
       slippagePercentage: '0.03',
       feeRecipient: '0xbd9420A98a7Bd6B89765e5715e169481602D9c3d',
       gasPrice: '21',
+    }
+    const qsPrice = createQueryString(baseQueryObj)
+    const qsQuote = createQueryString({
+      affiliateAddress: '0xbd9420A98a7Bd6B89765e5715e169481602D9c3d',
+      ...baseQueryObj,
     })
 
     nock('https://api.0x.org/swap/v1/quote')
-      .get(`?${qs}`)
+      .get(`?${qsQuote}`)
       .reply(200, quoteResponse)
 
     nock('https://api.0x.org/swap/v1/price')
-      .get(`?${qs}`)
+      .get(`?${qsPrice}`)
       .reply(200, priceResponse)
 
     swapsController = new SwapsController({})

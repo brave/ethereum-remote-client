@@ -154,6 +154,7 @@ export default class SwapAssetRow extends Component {
   renderAllowanceButton () {
     const { setAllowance, fromTokenAssetAllowance, amount, customAllowance, setCustomAllowance } =
       this.props
+    const { t } = this.context
 
     if (!fromTokenAssetAllowance) {
       return null
@@ -193,8 +194,7 @@ export default class SwapAssetRow extends Component {
                   fontSize: 'small',
                 }}
               >
-                For security reasons, it is advisable to reset the allowance to 0 first before
-                setting it the desired value, to prevent transaction reordering attacks.
+                { t('swapApprovalSecurityMsg') }
               </p>
             )}
             distance={26}
@@ -281,10 +281,14 @@ export default class SwapAssetRow extends Component {
   }
 
   renderUnselectedAsset () {
+    const { t } = this.context
+
     return (
       <div className="swap-v2__asset-dropdown__asset">
         <div className="swap-v2__asset-dropdown__asset-data">
-          <div className="swap-v2__asset-dropdown__symbol">Select asset</div>
+          <div className="swap-v2__asset-dropdown__symbol">
+            { t('selectAsset') }
+          </div>
         </div>
         <i className="fa fa-caret-down fa-lg simple-dropdown__caret" />
       </div>

@@ -17,6 +17,8 @@ export default class SwapQuote extends Component {
   }
 
   getTooltip () {
+    const { t } = this.context
+
     return (
       <ReactTippy
         style={{
@@ -30,7 +32,7 @@ export default class SwapQuote extends Component {
               fontSize: 'small',
             }}
           >
-            Quotes are refreshed often to reflect current market conditions.
+            { t('swapQuoteRefresh') }
           </p>
         )}
         distance={26}

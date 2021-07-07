@@ -45,6 +45,8 @@ export default class SwapFees extends Component {
   }
 
   getSlippageTooltip () {
+    const { t } = this.context
+
     return (
       <ReactTippy
         style={{
@@ -58,8 +60,7 @@ export default class SwapFees extends Component {
               fontSize: 'small',
             }}
           >
-            The maximum acceptable price change in % of the buy asset. If the delta exceeds the
-            slippage, the swap will not be executed.
+            { t('swapSlippageDescription') }
           </p>
         )}
         distance={26}
@@ -142,7 +143,9 @@ export default class SwapFees extends Component {
                 </td>
               </tr>
               <tr>
-                <td colSpan="3">Quote includes a {(config.buyTokenPercentageFee * 100).toFixed(3)}% Brave fee</td>
+                <td colSpan="3">
+                  { t('swapBraveFees', [`${(config.buyTokenPercentageFee * 100).toFixed(3)}%`]) }
+                </td>
               </tr>
             </tbody>
           </table>

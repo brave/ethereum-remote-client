@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PageContainerFooter from '../../../components/ui/page-container/page-container-footer'
 import { AssetPropTypes } from '../prop-types'
-import { CONFIRM_TRANSACTION_ROUTE, SECURITY_ROUTE } from '../../../helpers/constants/routes'
+import { CONFIRM_TRANSACTION_ROUTE } from '../../../helpers/constants/routes'
 
 export default class SwapFooter extends Component {
   static propTypes = {
@@ -140,32 +140,40 @@ export default class SwapFooter extends Component {
   }
 
   renderFooterExtra () {
-    const { history } = this.props
+    const { t } = this.context
+
     const zeroX = (
-      <a href="https://0x.org" target="_blank" rel="noreferrer">
+      `<a href="https://0x.org" target="_blank" rel="noreferrer">
         0x
-      </a>
+      </a>`
     )
 
     const security = (
-      <span onClick={() => history.push(SECURITY_ROUTE)}>
-        Security &amp; Privacy
-      </span>
+      `<span>
+        ${t('securityAndPrivacy')}
+      </span>`
     )
 
+    const msg = t('swapFooterPrivacyNotice', [
+      zeroX,
+      security,
+    ])
+
     return (
-      <div className="swap-v2__form-row-footer-secondary">
-        Brave uses {zeroX} as a DEX aggregator.
-        Please see {security} for more information.
-      </div>
+      <div
+        className="swap-v2__form-row-footer-secondary"
+        dangerouslySetInnerHTML={{ __html: msg }}
+      />
     )
   }
 
   render () {
+    const { t } = this.context
+
     return (
       <PageContainerFooter
         onSubmit={(e) => this.onSubmit(e)}
-        submitText="Review Swap"
+        submitText={t('reviewSwap')}
         disabled={this.reviewSwapButtonShouldBeDisabled()}
         hideCancel
       >

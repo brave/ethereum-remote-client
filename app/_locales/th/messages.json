@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "ปรับแต่ง"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "ผู้สร้าง"
+  },
+  "taker": {
+    "message": "ผู้รับ"
+  },
+  "slippage": {
+    "message": "ความทนทานต่อการลื่นไถล"
   },
   "assets": {
     "message": "แอสเซท"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "ติดต่อเรา"
   },
+  "continueToSwap": {
+    "message": "ดําเนินการสวอปต่อไป"
+  },
   "continueToWyre": {
     "message": "ไปที่ Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "หากคุณมีข้อสงสัยหรือพบเห็นสิ่งที่น่าสงสัย โปรดส่งอีเมลมาที่ support@brave.com"
+    "message": "หากคุณมีคําถามหรือเห็นสิ่งน่าสงสัย โปรดไปที่กระเป๋าเงินของเรา"
   },
   "endOfFlowMessage8": {
     "message": "Brave ไม่สามารถกู้คืนรหัส Seed ของคุณได้"
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "ฟอรัมสนับสนุน"
   },
   "externalExtension": {
     "message": "ส่วนขยายภายนอก"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "หน้าแรก"
+  },
   "import": {
     "message": "นำเข้า",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "นำเข้า Wallet"
   },
   "importYourExisting": {
-    "message": "นำเข้า Wallet ที่คุณมีอยู่โดยใช้รหัส Seed แบบ 24 คำ"
+    "message": "นําเข้ากระเป๋าเงินที่มีอยู่ของคุณโดยใช้วลี 12 หรือ 24 คํา"
   },
   "imported": {
     "message": "นำเข้าเรียบร้อย",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "โทเค็นไม่เพียงพอ"
   },
+  "insufficientFundsGas": {
+    "message": "เงินทุนไม่เพียงพอสําหรับแก๊ส"
+  },
+  "balanceFetchError": {
+    "message": "ข้อผิดพลาดในการดึงข้อมูลยอดคงเหลือ"
+  },
   "invalidAddress": {
     "message": "แอดแดรสไม่ถูกต้อง"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ไม่ใช่เครือข่าย ETH ตั้งเป็นตัวพิมพ์เล็ก"
   },
-  "invalidInput": {
-    "message": "อินพุทไม่ถูกต้อง"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "เครือข่ายแบบกําหนดเอง '$1' ไม่มีรหัสลูกโซ่",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "รหัสลูกโซ่เป็นสิ่งจําเป็นสําหรับเครือข่ายแบบกําหนดเองทั้งหมดเพื่อป้องกันคุณจากผู้ให้บริการเครือข่ายที่เป็นอันตรายหรือผิดปกติ"
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "ไปที่การตั้งค่า>เครือข่าย แล้วป้อนรหัสลูกโซ่ คุณสามารถพบรหัสลูกโซ่ของเครือข่ายยอดนิยมได้ที่ $1",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "เครือข่ายแบบกําหนดเองไม่ถูกต้อง"
+  },
+  "invalidHexNumber": {
+    "message": "เลขฐานสิบหกไม่ถูกต้อง"
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "เลขฐานสิบหกไม่ถูกต้อง เอาเลขศูนย์ที่นําหน้าออก"
   },
   "invalidRPC": {
     "message": "RPC URI ไม่ถูกต้อง"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "เกตเวย์ IPFS ไม่ถูกต้อง: ค่านี้ต้องเป็น URL ที่ถูกต้อง"
+  },
+  "invalidNumber": {
+    "message": "ตัวเลขไม่ถูกต้อง ป้อนเลขทศนิยมหรือเลขฐานสิบหก"
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "ตัวเลขไม่ถูกต้อง นำเลขศูนย์ที่นําหน้าออก"
   },
   "forbiddenIpfsGateway": {
     "message": "เกตเวย์ IPFS ที่ไม่อนุญาต: โปรดระบุเกตเวย์ CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "เครือข่าย Main Net"
   },
+  "availableOnMainnetRopsten": {
+    "message": "ใช้ได้เฉพาะในเมนเน็ตและรอปสเตน"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "เครือข่าย"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "รหัสลูกโซ่ใช้สําหรับการลงชื่อในธุรกรรม ป้อนเลขทศนิยมหรือเลขฐานสิบหกที่ขึ้นต้นด้วย '0x'"
+  },
   "networkSettingsDescription": {
     "message": "เพิ่มและแก้ไขเครือข่าย RPC แบบกำหนดเอง"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "ผู้ให้บริการเครือข่าย Ethereum ที่ประสงค์ร้ายอาจโกหกเกี่ยวกับสถานะของบล็อกเชนและบันทึกกิจกรรมในเครือข่ายของคุณ โปรดเพิ่มเฉพาะเครือข่ายที่คุณเชื่อถือ"
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "แอดแดรสผู้รับ"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "ค้นหา, ที่อยู่สาธารณะ (0x), หรือโดเมน"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "ระบุรหัสลับแบบ 24 คำที่นี่เพื่อกู้คืนที่เก็บนิรภัยของคุณ"
+    "message": "ป้อนวลีลับ 12 หรือ 24 คําเพื่อกู้คืนห้องนิรภัยของคุณ"
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "ส่ง"
+  },
+  "swap": {
+    "message": "สวอป"
   },
   "sendAmount": {
     "message": "ส่งจำนวนเงินนี้"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "ไปที่ศูนย์สนับสนุนของเรา"
   },
+  "swapPrivacyPolicy": {
+    "message": "นโยบายความเป็นส่วนตัวของสวอป"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "เบรฟใช้ $1 ทำหน้าที่รวบรวม DEX  0x จะประมวลผลที่อยู่อีเธอร์เรียมและที่อยู่ IP เพื่อเติมเต็มการทําธุรกรรม (รวมถึงการรับใบเสนอราคา) 0x จะใช้ข้อมูลนี้เพื่อวัตถุประสงค์ในการประมวลผลธุรกรรมเท่านั้น"
+  },
   "symbol": {
     "message": "เครื่องหมาย"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "สิ่งนี้จะสร้าง Wallet และ Seed Phrase ใหม่"
+  },
+  "timeout": {
+    "message": "หมดเวลา"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "การตั้งค่า Brave"
   },
+  "contractErrorMessage": {
+    "message": "คำเตือน: คุณกําลังจะส่งสินทรัพย์นี้ไปยังสัญญาอัจฉริยะของตัวมันเอง คุณอาจไม่ได้ตั้งใจทําเช่นนี้เนื่องจากอาจทําให้ไม่สามารถกู้คืนสินทรัพย์ได้"
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallet ช่วยให้คุณดำเนินการกับสกุลเงินคริปโตและแอสเซทที่เกี่ยวข้องใน Brave ได้ Crypto Wallet รองรับโทเค็น Ethereum เช่น ETH และ BAT และยังสามารถเก็บไว้ได้ อีกทั้งยังทำให้คุณดำเนินการกับ Ðapp และสัญญาอัจฉริยะอื่นๆ ได้ ทั้งหมดนี้เหมาะสำหรับผู้ที่คุ้นเคยกับ Ethereum และระบบบล็อกเชนอื่นๆ อยู่แล้ว รวมไปถึงผู้ที่สนใจอยากเรียนรู้"
   },
@@ -1784,7 +1852,7 @@
     "message": "เชื่อมต่อ Ledger Hardware Wallet ของคุณเพื่อติดต่อสัมพันธ์กับ dApp และทำการโอนไปยัง Wallet อื่นๆ ที่เชื่อมต่อ"
   },
   "metamaskImportSubText": {
-    "message": "หมายเหตุ: หากนำเข้าจาก Metamask ให้ป้อนรหัสแบบ 12 คำแทน 24 คำ"
+    "message": "หมายเหตุ: หากนําเข้าจากกระเป๋าเงินคริปโตเวอร์ชัน 1.0.26 หรือเก่ากว่า วลีลับของคุณจะเป็น 24 คํา ไม่ใช่ 12 คํา"
   },
   "newLocalWallet": {
     "message": "Local Wallet ใหม่"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "ขอต้อนรับสู่ Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "กําลังรอการยืนยัน"
   }
 }

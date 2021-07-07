@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Tùy chỉnh"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Người tạo lệnh"
+  },
+  "taker": {
+    "message": "Người khớp lệnh"
+  },
+  "slippage": {
+    "message": "Tỷ lệ trượt giá"
   },
   "assets": {
     "message": "Tài sản"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Liên hệ với chúng tôi!"
   },
+  "continueToSwap": {
+    "message": "Tiếp tục đến Swap"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@brave.com."
+    "message": "Nếu có thắc mắc hoặc thấy có gì chưa rõ ràng, hãy truy cập ví của chúng tôi"
   },
   "endOfFlowMessage8": {
     "message": "Brave cannot recover your seedphrase. Learn more."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "diễn đàn hỗ trợ."
   },
   "externalExtension": {
     "message": "Tiện ích mở rộng Bên ngoài"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Trang chủ"
+  },
   "import": {
     "message": "Nhập",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Import Wallet"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 word seed phrase"
+    "message": "Nhập ví hiện có của bạn bằng cách sử dụng cụm từ hạt giống gồm 12 hoặc 24 từ khóa"
   },
   "imported": {
     "message": "Đã nhập",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Insufficient tokens."
   },
+  "insufficientFundsGas": {
+    "message": "Không đủ tiền mua khí đốt."
+  },
+  "balanceFetchError": {
+    "message": "Lỗi nạp số dư."
+  },
   "invalidAddress": {
     "message": "Địa chỉ không hợp lệ"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Thông tin nhập vào không hợp lệ"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Mạng tùy chỉnh '$1' thiếu ID chuỗi.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Để bảo vệ bạn khỏi các nhà cung cấp mạng độc hại hoặc bị lỗi, hiện tại ID chuỗi là bắt buộc đối với tất cả các mạng tùy chỉnh."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Vào Cài đặt> Mạng và nhập ID chuỗi. Bạn có thể tìm thấy ID chuỗi của hầu hết các mạng phổ biến trên $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Mạng tùy chỉnh không hợp lệ"
+  },
+  "invalidHexNumber": {
+    "message": "Số thập lục phân không hợp lệ."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Số thập lục phân không hợp lệ. Loại bỏ số không ở đầu."
   },
   "invalidRPC": {
     "message": "Invalid RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Cổng IPFS Không hợp lệ: Giá trị phải là URL hợp lệ"
+  },
+  "invalidNumber": {
+    "message": "Số không hợp lệ. Nhập một số thập phân hoặc thập lục phân."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Số không hợp lệ. Loại bỏ số không ở đầu."
   },
   "forbiddenIpfsGateway": {
     "message": "Cổng IPFS Bị cấm: Xin vui lòng chỉ định cổng CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Mạng Ethereum MainNet (tiền ETH thật)"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Chỉ có trên mainnet và ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Các mạng lưới"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "ID chuỗi được sử dụng để ký kết các giao dịch. Nhập số thập phân hoặc số thập lục phân bắt đầu bằng '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Một nhà cung cấp mạng Ethereum độc hại có thể nói dối về trạng thái của blockchain và ghi lại hoạt động mạng của bạn. Chỉ thêm các mạng tùy chỉnh mà bạn tin tưởng."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "Địa chỉ người nhận"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Tìm kiếm, địa chỉ công cộng (0x) hoặc miền"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "Enter your secret twelve word phrase here to restore your vault."
+    "message": "Nhập cụm từ gồm 12 hoặc 24 từ khóa bí mật của bạn để khôi phục kho tiền của bạn."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Gửi"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visit our Support Center"
   },
+  "swapPrivacyPolicy": {
+    "message": "Chính sách Quyền riêng tư của Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave sử dụng $1 làm công cụ tổng hợp DEX. 0x sẽ xử lý địa chỉ Ethereum và địa chỉ IP để thực hiện giao dịch (bao gồm cả việc nhận báo giá). 0x sẽ CHỈ sử dụng dữ liệu này cho các mục đích xử lý giao dịch."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Hết giờ"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Cài đặt Brave"
   },
+  "contractErrorMessage": {
+    "message": "Cảnh báo: Bạn sắp gửi tài sản này đến hợp đồng thông minh của chính nó. Có thể bạn không định làm vậy, vì nó rất có thể sẽ khiến tài sản đó không thể khôi phục được."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Ví Tiền điện tử giúp bạn có thể làm việc với tiền điện tử và các tài sản liên quan trong Brave. Ví Tiền điện tử hỗ trợ các token Ethereum như ETH và BAT, cũng như các vật phẩm sưu tập (collectible), đồng thời cho phép bạn làm việc với Dapp và các hợp đồng thông minh khác. Tất cả điều này là dành cho những người đã quen thuộc với Ethereum và các hệ thống blockchain khác — hoặc thích tìm hiểu."
   },
@@ -1784,7 +1852,7 @@
     "message": "Kết nối ví phần cứng Ledger của bạn để tương tác với các ứng dụng phi tập trung và chuyển khoản sang các ví được kết nối khác."
   },
   "metamaskImportSubText": {
-    "message": "Lưu ý: Nếu nhập từ ví Metamask, hãy nhập 12 từ thay vì 24 từ."
+    "message": "Lưu ý: Nếu nhập từ Ví tiền điện tử Phiên bản 1.0.26 trở xuống, cụm từ bí mật của bạn chứa 24 từ khóa thay vì 12 từ khóa."
   },
   "newLocalWallet": {
     "message": "Ví trên máy tính mới"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Chào mừng bạn đến với Ví Tiền điện tử Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "Đang chờ xác nhận."
   }
 }

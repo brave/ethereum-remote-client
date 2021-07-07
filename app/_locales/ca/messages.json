@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Opcions Avançades"
   },
+  "customizeGas": {
+    "message": "Personalitzar"
+  },
   "addToAddressBook": {
     "message": "Afegir al llibre d'adreces"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Actius"
+  },
+  "maker": {
+    "message": "Fabricant"
+  },
+  "taker": {
+    "message": "Comprador"
+  },
+  "slippage": {
+    "message": "Tolerància a la Disminució"
   },
   "assets": {
     "message": "Actius"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Contacti'ns!"
   },
+  "continueToSwap": {
+    "message": "Continueu l'Intercanvi"
+  },
   "continueToWyre": {
     "message": "Continua a Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Si necessites fer una còpia de seguretat de la teva frase de recuperació una altra vegada, la pots trobar a Configuració-> Seguretat."
   },
   "endOfFlowMessage7": {
-    "message": "Si mai tens preguntes o veus alguna cosa sospitosa, envia un correu a support@brave.com."
+    "message": "Si algun cop teniu preguntes o veieu alguna cosa sospitosa, visiteu la nostra cartera"
   },
   "endOfFlowMessage8": {
     "message": "Brave no pot recuperar la teva seedphrase. Descobreix per què."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Tot fet"
+  },
+  "endOfFlowMessage11": {
+    "message": "fòrum d'ajuda."
   },
   "externalExtension": {
     "message": "Extensió Externa"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historial"
   },
+  "home": {
+    "message": "Inici"
+  },
   "import": {
     "message": "Importa",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importar Moneder"
   },
   "importYourExisting": {
-    "message": "Importa el teu moneder utilitzant la frase de recuperació de 12 paraules"
+    "message": "Importeu la vostra cartera existent utilitzant una frase llavor de 12 o 24 paraules"
   },
   "imported": {
     "message": "Importats",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Tokens insuficients."
   },
+  "insufficientFundsGas": {
+    "message": "Fons insuficients per al gas."
+  },
+  "balanceFetchError": {
+    "message": "Equilibreu l'error fetch."
+  },
   "invalidAddress": {
     "message": "Adreça no vàlida"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No hi ha xarxa ETH, posar en minúscules"
   },
-  "invalidInput": {
-    "message": "Entrada no vàlida."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "A la xarxa personalitzada '$1' li falta la seva cadena ID.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Per a protegir-vos de proveïdors de xarxa maliciosos o defectuosos, les cadenes ID ara es requereixen per a totes les xarxes personalitzades."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Aneu a Opcions > Xarxa i introduïu la cadena ID. Podeu trobar les cadenes ID de les xarxes més populars a $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Xarxa personalitzada invàlida"
+  },
+  "invalidHexNumber": {
+    "message": "Nombre hexadecimal invàlid."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Nombre hexadecimal invàlid. Elimineu qualsevol zero inicial."
   },
   "invalidRPC": {
     "message": "URL de RPC"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Passarel·la IPFS invàlida: El valor ha de ser una URL vàlida"
+  },
+  "invalidNumber": {
+    "message": "Nombre invàlid. Introduïu un nombre decimal o hexadecimal."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Nombre invàlid. Elimineu qualsevol zero inicial."
   },
   "forbiddenIpfsGateway": {
     "message": "Prohibida l'entrada a l'IPFS: Si us plau, especifiqui una porta d'enllaç CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Xarxa Ethereum principal"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Disponible només a mainnet i ropsten"
+  },
   "memorizePhrase": {
     "message": "Memoritza aquesta frase"
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Xarxes"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "La cadena ID s'utilitza per a transaccions firmades. Introduïu un nombre decimal o hexadecimal que comenci per '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Afegeix i edita xarxes RPC a mida"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un proveïdor de xarxa Ethereum maliciós pot mentir sobre l'estat de la cadena de bloqueig i registrar la seva activitat a la xarxa. Agregui només xarxes personalitzades en les quals confiï. "
-  },
-  "optionalChainId": {
-    "message": "Cadena ID (opcional)"
   },
   "optionalSymbol": {
     "message": "Símbol (opcional)"
@@ -1144,7 +1197,7 @@
     "message": "Adreça del destinatari"
   },
   "recipientAddressPlaceholder": {
-    "message": "Cerca, adreça pública (0x), o ENS"
+    "message": "Busqueu, adreça pública (0x), o domini"
   },
   "rejectAll": {
     "message": "Rebutja-ho tot"
@@ -1265,7 +1318,7 @@
     "message": "ATENCIÓ: No divulguis mai la teva frase de recuperació. Qualsevol amb aquesta frase pot utilitzar el teu Ether per sempre."
   },
   "secretPhrase": {
-    "message": "Introdueix aquí la teva frase secreta de dotze paraules per a recuperar la teva caixa forta."
+    "message": "Introduïu la vostra frase secreta de 12 o 24 paraules per a restaurar la vostra caixa forta."
   },
   "securityAndPrivacy": {
     "message": "Seguretat i privacitat"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Envia"
+  },
+  "swap": {
+    "message": "Intercanvi"
   },
   "sendAmount": {
     "message": "Enviar Quantitat"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visita el nostre Centre de Suport"
   },
+  "swapPrivacyPolicy": {
+    "message": "Intercanvieu la Política de Privacitat"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave utilitza $1 com a agregador DEX. 0x processarà l'adreça Ethereum i l'adreça IP per a completar la transacció (incloent-hi les cotitzacions). 0x NOMÉS utilitzarà aquestes dades amb l'objectiu de processar transaccions."
+  },
   "symbol": {
     "message": "Símbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Això crearà un nou moneder i frase de recuperació"
+  },
+  "timeout": {
+    "message": "Sessió expirada"
   },
   "tips": {
     "message": "Propines"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Configuració de Brave"
   },
+  "contractErrorMessage": {
+    "message": "Avís: Esteu a punt d'enviar aquest valor al seu propi contracte intel·ligent. Segurament no voleu fer-ho, ja que és probable que deixi el valor com a irrecuperable."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Les carteres Crypto li permeten treballar amb la criptografia i els actius relacionats a Brave. Les carteres Crypto suporten fitxes d'Ethereum com ETH i BAT, així com col·leccionables, i li permeten treballar amb Dapps i altres contractes intel·ligents. Tot això és per a persones familiaritzades amb l'Ethereum i altres sistemes de cadenes de bloqueig - o són entusiastes per aprendre'n."
   },
@@ -1784,7 +1852,7 @@
     "message": "Connecta el teu moneder hardware Ledger per interactuar amb DApps i fer transferències a altres moneders connectats."
   },
   "metamaskImportSubText": {
-    "message": "Nota: Si s'importa una cartera de Metamask, introudiexi 12 paraules enlloc de 24."
+    "message": "Nota: Si importeu de Carteres Crypto Versió 1.0.26 o anterior, la vostra frase secreta és de 24 paraules en lloc de 12."
   },
   "newLocalWallet": {
     "message": "Nova cartera local"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Benvinguts a Crypto Monedes Brave "
+  },
+  "waitingForConfirmation": {
+    "message": "Esperant per la confirmació."
   }
 }

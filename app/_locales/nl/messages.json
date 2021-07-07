@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Geavanceerde Opties"
   },
+  "customizeGas": {
+    "message": "Aanpassen"
+  },
   "addToAddressBook": {
     "message": "Voeg toe aan adresboek"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Bezit"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Nemer"
+  },
+  "slippage": {
+    "message": "Wegglijdtolerantie"
   },
   "assets": {
     "message": "Activa"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Neem contact met ons op!"
   },
+  "continueToSwap": {
+    "message": "Doorgaan met Wisselen"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Als je jouw seed phrase opnieuw wilt opslaan, kun je het vinden in Instellingen -> Beveiliging."
   },
   "endOfFlowMessage7": {
-    "message": "Mocht u ooit vragen hebben of iets verkeerds zien, stuur dan een e-mail naar support@brave.com."
+    "message": "Als u ooit vragen heeft of iets verdachts ziet, bezoek dan onze portefeuille."
   },
   "endOfFlowMessage8": {
     "message": "Dapper kan uw sleutelzin niet herstellen."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Gereed"
+  },
+  "endOfFlowMessage11": {
+    "message": "ondersteuningsforum."
   },
   "externalExtension": {
     "message": "Externe uitbreiding"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Geschiedenis"
   },
+  "home": {
+    "message": "Homepage"
+  },
   "import": {
     "message": "Importeren",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Portemonnee importeren"
   },
   "importYourExisting": {
-    "message": "Importeer uw bestaande portemonnee met behulp van een sleutelzin van 24 woorden."
+    "message": "Importeer uw bestaande portefeuille met behulp van een seed-zin van 12 of 24 woorden."
   },
   "imported": {
     "message": "geïmporteerde",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Onvoldoende tokens."
   },
+  "insufficientFundsGas": {
+    "message": "Onvoldoende saldo voor brandstof."
+  },
+  "balanceFetchError": {
+    "message": "Fout bij ophalen saldo."
+  },
   "invalidAddress": {
     "message": "Ongeldig adres"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Ongeldige invoer."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Het aangepaste netwerk '$1' mist zijn keten-ID",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Om u te beschermen tegen kwaadwillende of gebrekkige netwerkproviders zijn keten-ID's nu vereist voor alle aangepaste netwerken."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Ga naar Instellingen > Netwerk en voer het keten-ID in. U kunt de keten-ID's van de meeste populaire netwerken vinden op $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Ongeldig Aangepast Netwerk"
+  },
+  "invalidHexNumber": {
+    "message": "Ongeldig hexadecimaal nummer."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Ongeldig hexadecimaal nummer. Verwijder voorafgaande nullen."
   },
   "invalidRPC": {
     "message": "Ongeldige RPC-URI"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Ongeldige IPFS-gateway: de waarde moet een geldige URL zijn"
+  },
+  "invalidNumber": {
+    "message": "Ongeldig nummer. Voer een decimaal of hexadecimaal nummer in."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Ongeldig nummer. Verwijder voorafgaande nullen."
   },
   "forbiddenIpfsGateway": {
     "message": "Verboden IPFS Gateway: Voer een CID-gateway in"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Main Netwerk"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Alleen beschikbaar op mainnet en ropsten"
+  },
   "memorizePhrase": {
     "message": "Onthoud deze phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "netwerken"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Het keten-ID wordt gebruikt om transacties te ondertekenen. Voer een decimaal of hexadecimaal nummer in dat begint met '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Een kwaadwillende Ethereum netwerkprovider kan liegen over de staat van de blockchain en uw netwerkactiviteit vastleggen. Voeg alleen eigen netwerken toe die u vertrouwt."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optioneel)"
   },
   "optionalSymbol": {
     "message": "Symbool (optioneel)"
@@ -1144,7 +1197,7 @@
     "message": "Geadresseerde adres"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Zoek, openbaar adres (0x), of domein"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WAARSCHUWING: Onthul nooit jouw backup phrase. Iedereen met deze phrase kan jouw Ether voor altijd overnemen."
   },
   "secretPhrase": {
-    "message": "Voer hier uw geheime zin van 24 woorden in om uw kluis te herstellen."
+    "message": "Voer uw geheime zin van 12 of 24 woorden in om uw kluis te herstellen."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Sturen"
+  },
+  "swap": {
+    "message": "Wisselen"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Bezoek ons ​​ondersteuningscentrum"
   },
+  "swapPrivacyPolicy": {
+    "message": "Privacybeleid Wisselen"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave gebruikt $1 als een DEX-aggregator. 0x zal het Ethereum-adres en IP-adres verwerken om een transactie af te handelen (waaronder het ophalen van offertes). 0x zal deze gegevens UITSLUITEND gebruiken voor het verwerken van transacties."
+  },
   "symbol": {
     "message": "Symbool"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Dit zal een nieuwe wallet en seed phrase creëren"
+  },
+  "timeout": {
+    "message": "Time-out"
   },
   "tips": {
     "message": "Fooien"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave-instellingen"
   },
+  "contractErrorMessage": {
+    "message": "Waarschuwing: u staat op het punt dit asset te versturen naar zijn eigen smart-contract. Vermoedelijk is dit niet uw bedoeling, aangezien het er waarschijnlijk voor zal zorgen dat het asset niet meer terug te winnen is. "
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Met Crypto Wallets kunt u werken met cryptocurrency en aanverwante zaken in Brave. Crypto Wallets ondersteunt Ethereum tokens zoals ETH en BAT, maar ook collectibles, en stelt u in staat om te werken met Ðapps en andere slimme contracten. Dit alles is bedoeld voor mensen die bekend zijn met Ethereum en andere blockchain-systemen of die het graag willen leren."
   },
@@ -1784,7 +1852,7 @@
     "message": "Verbind je Ledger hardware-wallet om met dApps te communiceren  en overschrijvingen te doen naar andere verbonden wallets."
   },
   "metamaskImportSubText": {
-    "message": "Opmerking: Als u importeert uit een Metamask-portemonnee, voer dan 12 woorden in in plaats van 24."
+    "message": "Opmerking: wanneer u importeert uit Crypto-portefeuilles Versie 1.0.26 of ouder, is uw geheime zin 24 woorden in plaats van 12."
   },
   "newLocalWallet": {
     "message": "Nieuwe Lokale Wallet"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Welkom bij Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Wachten op bevestiging."
   }
 }

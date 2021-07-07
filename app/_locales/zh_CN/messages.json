@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "高级选项"
   },
+  "customizeGas": {
+    "message": "自定义"
+  },
   "addToAddressBook": {
     "message": "添加地址簿"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "资产"
+  },
+  "maker": {
+    "message": "制造者"
+  },
+  "taker": {
+    "message": "接受者"
+  },
+  "slippage": {
+    "message": "滑点公差"
   },
   "assets": {
     "message": "资产"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "赶快与我们联系吧！"
   },
+  "continueToSwap": {
+    "message": "继续交换"
+  },
   "continueToWyre": {
     "message": "继续前往 Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "如果您需要再次备份个人种子密语，请通过设置 -> 安全选项完成该操作。"
   },
   "endOfFlowMessage7": {
-    "message": "如有任何疑问或看到有什么可疑的地方，请发邮件到support@brave.com。"
+    "message": "如果您有任何疑问或看到可疑的内容，请访问我们的钱包"
   },
   "endOfFlowMessage8": {
     "message": "Brave无法恢复您的助记词。"
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "全部完成"
+  },
+  "endOfFlowMessage11": {
+    "message": "支持论坛。"
   },
   "externalExtension": {
     "message": "外部扩展"
@@ -768,6 +786,9 @@
   "history": {
     "message": "历史记录"
   },
+  "home": {
+    "message": "首页"
+  },
   "import": {
     "message": "导入",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "导入钱包"
   },
   "importYourExisting": {
-    "message": "使用一个由24个字组成的助记词导入您现有的钱包"
+    "message": "使用一个由 12 或 24 个字组成的助记词导入您现有的钱包"
   },
   "imported": {
     "message": "已导入",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "代币余额不足."
   },
+  "insufficientFundsGas": {
+    "message": "天然气资金不足。"
+  },
+  "balanceFetchError": {
+    "message": "余额提取错误。"
+  },
   "invalidAddress": {
     "message": "无效地址"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "非 ETH 网络，设置为小写"
   },
-  "invalidInput": {
-    "message": "无效输入."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "自定义网络“$1”的链 ID 缺失。",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "为了保护您免受恶意或有问题的网络提供商的侵害，现在所有自定义网络都需要有链 ID。"
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "转到设置 > 网络，然后输入链 ID。您可以在 $1 上找到最热门网络的链 ID。",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "自定义网络无效"
+  },
+  "invalidHexNumber": {
+    "message": "十六进制数无效。"
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "十六进制数无效。删除任何前导零。"
   },
   "invalidRPC": {
     "message": "无效 RPC URI"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "IPFS网关无效。该值必须是一个有效的URL"
+  },
+  "invalidNumber": {
+    "message": "号码无效。输入十进制或十六进制数。"
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "号码无效。删除任何前导零。"
   },
   "forbiddenIpfsGateway": {
     "message": "禁止使用IPFS网关：请指定一个CID网关"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "以太坊主网络"
   },
+  "availableOnMainnetRopsten": {
+    "message": "仅在主网和 ropsten 上可用"
+  },
   "memorizePhrase": {
     "message": "记住该密语。"
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "网络"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "链 ID 用于签署交易。 输入一个以“0x”开头的十进制或十六进制数。"
+  },
   "networkSettingsDescription": {
     "message": "添加和编辑自定义 RPC 网络"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "恶意的以太坊网络提供商可能会谎报区块链的状态并记录您的网络活动。请只添加您信任的自定义网络。"
-  },
-  "optionalChainId": {
-    "message": "ChainID（选填）"
   },
   "optionalSymbol": {
     "message": "符号（选填）"
@@ -1144,7 +1197,7 @@
     "message": "接收地址"
   },
   "recipientAddressPlaceholder": {
-    "message": "查找、公用地址 (0x) 或 ENS"
+    "message": "搜索、公共地址 (0x) 或域"
   },
   "rejectAll": {
     "message": "拒绝所有"
@@ -1265,7 +1318,7 @@
     "message": "警告：切勿向他人透露您的备份密语。任何人一旦持有该密语，即可取走您的以太币。"
   },
   "secretPhrase": {
-    "message": "在这里输入您的由24个字组成的秘语，就可以恢复您的金库了。"
+    "message": "在这里输入您的由 12 或 24 个字组成的秘语短语，就可以恢复您的金库了。"
   },
   "securityAndPrivacy": {
     "message": "安全与隐私"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "发送"
+  },
+  "swap": {
+    "message": "交换"
   },
   "sendAmount": {
     "message": "发送金额"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "访问我们的支持中心"
   },
+  "swapPrivacyPolicy": {
+    "message": "交换隐私政策"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave 将 $1 用作 DEX 聚合器。0x 将处理以太坊地址和 IP 地址以完成交易（包括获取报价）。0x 只会将这些数据用于处理交易的目的。"
+  },
   "symbol": {
     "message": "符号"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "该操作将为您创建新钱包和种子密语"
+  },
+  "timeout": {
+    "message": "超时"
   },
   "tips": {
     "message": "赏金"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave 设置"
   },
+  "contractErrorMessage": {
+    "message": "警告：您即将将此资产发送到其智能合约中。您可能并不打算这样做，因为它可能会使资产无法恢复。"
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets可以让您在Brave浏览器上使用加密货币和相关资产。Crypto Wallets支持ETH和BAT等以太坊代币，以及各种收藏品，并让您可以使用Ðapps和其他智能合约。所有这些都是为熟悉以太坊和其他区块链系统或乐于学习的人开发设计的。"
   },
@@ -1784,7 +1852,7 @@
     "message": "请连接您的 Ledger 硬件钱包，与 dApps 建立交互，随时与其他已连接钱包互通转账。"
   },
   "metamaskImportSubText": {
-    "message": "注意：如果从Metamask钱包导入，请输入12个字（而不是24个字）。"
+    "message": "注意：如果从 Crypto Wallets 版本 1.0.26 或更早版本导入，您的密码短语由 24 个单词（而不是由 12  个单词）组成。"
   },
   "newLocalWallet": {
     "message": "新增本地钱包"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "欢迎使用 Brave 加密钱包"
+  },
+  "waitingForConfirmation": {
+    "message": "等待确认中。"
   }
 }

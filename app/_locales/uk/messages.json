@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Додаткові параметри"
   },
+  "customizeGas": {
+    "message": "Персоналізувати"
+  },
   "addToAddressBook": {
     "message": "Додати до адресної книги"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Актив"
+  },
+  "maker": {
+    "message": "Мейкер"
+  },
+  "taker": {
+    "message": "Тейкер"
+  },
+  "slippage": {
+    "message": "Толерантність до прослизання"
   },
   "assets": {
     "message": "Файли"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Зв'яжіться з нами!"
   },
+  "continueToSwap": {
+    "message": "Перейти до свопу"
+  },
   "continueToWyre": {
     "message": "Продовжити у Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Якщо вам потрібно знову зробити резервну копію вашої початкової фрази, ви можете знайти її у Налаштування -> Безпека."
   },
   "endOfFlowMessage7": {
-    "message": "Якщо матимете запитання або помітите щось підозріле, пишіть на support@brave.com."
+    "message": "Якщо виникнуть запитання, або помітите щось підозріле, відвідайте форум підтримки"
   },
   "endOfFlowMessage8": {
     "message": "Brave не вдалося віднайти вашу початкову фразу."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Усе готово"
+  },
+  "endOfFlowMessage11": {
+    "message": "нашого гаманця."
   },
   "externalExtension": {
     "message": "Стороннє розширення"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Історія"
   },
+  "home": {
+    "message": "Домашня сторінка"
+  },
   "import": {
     "message": "Імпортувати",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Імпортувати гаманець"
   },
   "importYourExisting": {
-    "message": "Імпортувати ваш існуючий гаманець за допомогою початкової фрази із 24 слів"
+    "message": "Імпортуйте свій існуючий гаманець за допомогою сід-фрази із 12 або 24 слів"
   },
   "imported": {
     "message": "Імпортовано",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Недостатньо токенів"
   },
+  "insufficientFundsGas": {
+    "message": "Недостатньо коштів на пальне."
+  },
+  "balanceFetchError": {
+    "message": "Помилка отримання балансу."
+  },
   "invalidAddress": {
     "message": "Недійсна адреса"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Не є мережею ETH, налаштуйте нижній регістр"
   },
-  "invalidInput": {
-    "message": "Неприпустимий ввід."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "У власній мережі '$1' не вистачає ідентифікатора ланцюга.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Відтепер ідентифікатори ланцюгів вимагаються для усіх власних мереж, щоб захистити вас від зловмисних або незадовільних постачальників мереж."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Зайдіть у \"Налаштування\" > \"Мережа\" та введіть ідентифікатор ланцюга. Ідентифікатори ланцюгів найпопулярніших мереж можна знайти на $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Невірна власна мережа"
+  },
+  "invalidHexNumber": {
+    "message": "Невірне шістнадцяткове число."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Невірне шістнадцяткове число. Заберіть провідні нулі, якщо вони є."
   },
   "invalidRPC": {
     "message": "Недійсний RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Недійсний шлюз IPFS: значення має бути дійсною URL-адресою"
+  },
+  "invalidNumber": {
+    "message": "Невірне число. Введіть десяткове або шістнадцяткове число."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Невірне число. Заберіть провідні нулі, якщо вони є."
   },
   "forbiddenIpfsGateway": {
     "message": "Заборонений шлюз IPFS: будь ласка, вкажіть шлюз CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Головна Мережа Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Доступно лише на mainnet та ropsten"
+  },
   "memorizePhrase": {
     "message": "Запам'ятайте цю фразу."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Мережі"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Ідентифікатор ланцюга використовується для підписування транзакцій. Введіть десяткове або шістнадцяткове число, яке починається із '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Додавайте та редагуйте мережі RPC, що можна налаштовувати"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Зловмисний провайдер мережі Ethereum може брехати про стан блокчейну та фіксувати вашу мережеву активність. Додавайте лише власні мережі, яким ви довіряєте."
-  },
-  "optionalChainId": {
-    "message": "ChainID (необов’язково)"
   },
   "optionalSymbol": {
     "message": "Символ (не обов'язково)"
@@ -1144,7 +1197,7 @@
     "message": "Адреса отримувача"
   },
   "recipientAddressPlaceholder": {
-    "message": "Пошук, публічна адреса (0x), або ENS"
+    "message": "Пошукова чи публічна адреса (0x) або домен"
   },
   "rejectAll": {
     "message": "Відхилити все"
@@ -1265,7 +1318,7 @@
     "message": "ЗАСТЕРЕЖЕННЯ: Ніколи не розголошуйте вашу резервну фразу. Будь-хто з цією фразою зможе забрати ваш Ether назавжди."
   },
   "secretPhrase": {
-    "message": "Уведіть вашу секретну фразу із 24 слів, щоб відновити своє сховище."
+    "message": "Введіть власну таємну фразу із 12 чи 24 слів, щоб відновити своє сховище."
   },
   "securityAndPrivacy": {
     "message": "Безпека й конфіденційність"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Надіслати"
+  },
+  "swap": {
+    "message": "Своп"
   },
   "sendAmount": {
     "message": "Надіслати суму"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Відвідайте наш центр підтримки"
   },
+  "swapPrivacyPolicy": {
+    "message": "Політика конфіденційності свопу"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave використовує $1 у якості агрегатора DEX. 0x обробить адресу Ethereum та IP-адресу для проведення транзакції (включно з отриманням розцінок). 0x використовуватиме ці дані ВИКЛЮЧНО для обробки транзакцій."
+  },
   "symbol": {
     "message": "Символ"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "У результаті цієї дії буде створено новий гаманець і мнемонічна фраза"
+  },
+  "timeout": {
+    "message": "Час очікування"
   },
   "tips": {
     "message": "Чайові"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Налаштування Brave"
   },
+  "contractErrorMessage": {
+    "message": "Попередження: ви ось-ось надішлете цей актив його власному смарт-контракту. Навряд чи ви хотіли зробити саме це, адже актив, вірогідно, стане неможливо відновити."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Крипто-гаманці дозволяють вам працювати з криптовалютою та відповідними активами в Brave. Крипто-гаманці підтримують токени Ethereum, такі як ETH та BAT, а також колекційні, й дозволяють працювати з Ðapps та іншими смарт-контрактами. Все це призначено для людей, які знайомі з Ethereum та іншими системами блокчейнів - або раді дізнатися про них."
   },
@@ -1784,7 +1852,7 @@
     "message": "Під'єднайте ваш апаратний гаманець Ledger, щоб взаємодіяти з dApps та робити перекази на інші пов'язані гаманці."
   },
   "metamaskImportSubText": {
-    "message": "Примітка: якщо імпортуєте із гаманця Metamask, уведіть 12 слів замість 24. "
+    "message": "Зауважте: при імпортуванні з криптогаманців версії 1.0.26 або раніших ваша таємна фраза складатиметься із 24, а не 12 слів."
   },
   "newLocalWallet": {
     "message": "Новий локальний гаманець"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Ласкаво просимо до Криптогаманців Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "В очікуванні підтвердження"
   }
 }

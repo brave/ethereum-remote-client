@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Mga Advanced na Opsyon"
   },
+  "customizeGas": {
+    "message": "I-customize"
+  },
   "addToAddressBook": {
     "message": "Idagdag sa address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Tolerance sa Pagdulas"
   },
   "assets": {
     "message": "Mga Asset"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Makipag-ugnayan sa amin!"
   },
+  "continueToSwap": {
+    "message": "Magpatuloy para Pagpalitin"
+  },
   "continueToWyre": {
     "message": "Magpatuloy sa Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Kung kailangan mong i-back up ulit ang iyong seed phrase, makikita mo ito sa Mga Setting -> Seguridad."
   },
   "endOfFlowMessage7": {
-    "message": "Kung sakaling may mga tanong ka o may makita kang bagay na kahina-hinala, mag-email sa support@brave.com."
+    "message": "Kung may mga tanong ka man o may nakita kang kahina-hinala, bisitahin ang aming forum ng suporta"
   },
   "endOfFlowMessage8": {
     "message": "Hindi mare-recover ng Brave ang iyong seedphrase."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Tapos na Lahat"
+  },
+  "endOfFlowMessage11": {
+    "message": "sa wallet."
   },
   "externalExtension": {
     "message": "External na Extension"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Home"
+  },
   "import": {
     "message": "I-import",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Mag-import ng wallet"
   },
   "importYourExisting": {
-    "message": "I-import ang iyong kasalukuyang wallet gamit ang 24 na salitang seed phrase"
+    "message": "I-import ang iyong kasalukuyang wallet gamit ang isang 12 o 24 na salitang seed na parirala"
   },
   "imported": {
     "message": "Na-import",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Hindi sapat ang mga token."
   },
+  "insufficientFundsGas": {
+    "message": "Walang sapat na pondo para sa gasolina."
+  },
+  "balanceFetchError": {
+    "message": "Error sa pag-fetch ng balanse."
+  },
   "invalidAddress": {
     "message": "Hindi valid ang address"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Hindi ito isang ETH network, i-set sa lowercase"
   },
-  "invalidInput": {
-    "message": "Hindi valid ang input."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Walang chain ID ang custom na network na '$1'.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Para protektahan ka mula sa mga nakakapinsala o hindi maayos na network provider, kinakailangan na ngayon ng mga chain ID para sa lahat ng custom na network."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Pumunta sa Mga Setting > Network at ilagay ang chain ID. Mahahanap mo ang karamihan ng mga chain ID ng mga pinakasikat na network sa $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Invalid na Custom na Network"
+  },
+  "invalidHexNumber": {
+    "message": "Invalid na hexadecimal na numero."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Invalid na hexadecimal na numero. Alisin ang anumang zero sa unahan."
   },
   "invalidRPC": {
     "message": "Hindi valid ang RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Invalid na IPFS Gateway: Dapat ay valid na URL ang value"
+  },
+  "invalidNumber": {
+    "message": "Invalid na numero. Maglagay ng decimal o hexadecimal na numero."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Invalid na numero. Alisin ang anumang zero sa unahan."
   },
   "forbiddenIpfsGateway": {
     "message": "Ipinagbabawal na IPFS Gateway: Mangyaring  tumukoy ng CID gateway"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Main Ethereum Network"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Available lang sa mainnet at ropsten"
+  },
   "memorizePhrase": {
     "message": "Tandaan ang pariralang ito."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Mga Network"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Ginagamit ang chain ID para sa paglagda ng mga transaksyon. Maglagay ng decimal o hexadecimal na numerong nagsisimula sa '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Magdagdag at mag-edit ng mga custom na RPC network"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Maaaring magsinungaling ang isang nakakapinsalang provider ng Ethereum network tungkol sa status ng blockchain at itala ang aktibidad ng iyong network. Idagdag lang ang mga custom na network na pinagkakatiwalaan mo."
-  },
-  "optionalChainId": {
-    "message": "ChainID (opsyonal)"
   },
   "optionalSymbol": {
     "message": "Simbolo (opsyonal)"
@@ -1144,7 +1197,7 @@
     "message": "Address ng Recipient"
   },
   "recipientAddressPlaceholder": {
-    "message": "Maghanap, pampublikong address (0x), o ENS"
+    "message": "Maghanap, pampublikong address (0x), o domain"
   },
   "rejectAll": {
     "message": "Tanggihan Lahat"
@@ -1265,7 +1318,7 @@
     "message": "BABALA: Huwag ibunyag ang iyong backup phrase. Mananakaw ng kahit sinong may ganitong parirala ang iyong Ether at hindi na ito maibabalik."
   },
   "secretPhrase": {
-    "message": "Ilagay ang iyong lihim na 24 na salitang phrase dito para ma-restore ang vault mo."
+    "message": "Ilagay ang iyong lihim na 12 o 24 na salitang parirala para ma-restore ang vault mo."
   },
   "securityAndPrivacy": {
     "message": "Seguridad at Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Ipadala"
+  },
+  "swap": {
+    "message": "Pagpalitin"
   },
   "sendAmount": {
     "message": "Magpadala ng Halaga"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Bisitahin ang aming Support Center"
   },
+  "swapPrivacyPolicy": {
+    "message": "Pagpalitin ang Patakaran sa Privacy"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Ginagamit ng Brave ang $1 bilang DEX aggregator. Ipoproseso ng 0x ang Ethereum address at IP address para magawa ang isang transaksyon (kasama na ang pagkuha ng mga quote). Gagamitin LANG ng 0x ang data na ito para sa mga layunin ng pagpoproseso ng mga transaksyon."
+  },
   "symbol": {
     "message": "Simbolo"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Gagawa ito ng bagong wallet at seed phrase"
+  },
+  "timeout": {
+    "message": "Pag-timeout"
   },
   "tips": {
     "message": "Mga Tip"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Mga Setting ng Brave"
   },
+  "contractErrorMessage": {
+    "message": "Babala: Ipapadala mo na ang asset na ito sa sarili nitong smart na kontrata. Posibleng hindi mo ito sinasadyang gawin, dahil may posibilidad na ma-render nito ang asset bilang hindi mare-recover."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Nagbibigay-daan sa iyo ang mga Crypto Wallet na mapangasiwaan ang cryptocurrency at mga kaugnay na asset sa Brave. Sinusuportahan ng mga Crypto Wallet ang mga Ethereum token na tulad ng ETH at BAT, gayundin ang mga koleksyon, at nagbibigay-daan ito sa iyong mapangasiwaan ang mga Dapp at iba pang smart na kontrata. Nilalayon ang lahat ng ito para sa mga taong pamilyar sa Ethereum at iba pang system ng blockchain — o gustong matuto."
   },
@@ -1784,7 +1852,7 @@
     "message": "Ikonekta ang iyong Ledger hardware wallet para makagamit ng dApps at magsagawa ng mga transfer sa iba pang mga nakakonektang wallet."
   },
   "metamaskImportSubText": {
-    "message": "Tandaan: Kung mag-i-import mula sa isang Metamask wallet, maglagay ng 12 salita sa halip na 24."
+    "message": "Tandaan: Kung mag-i-import mula sa Crypto Wallets na Bersyon 1.0.26 o mas luma, 24 na salita ang iyong lihim na parirala sa halip na 12."
   },
   "newLocalWallet": {
     "message": "Bagong Lokal na Wallet"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Maligayang pagdating sa Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Hinihintay ang kumpirmasyon."
   }
 }

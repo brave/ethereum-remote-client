@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "উন্নত বিকল্পসমূহ"
   },
+  "customizeGas": {
+    "message": "কাস্টমাইজ করুন"
+  },
   "addToAddressBook": {
     "message": "অ্যাড্রেস বুকে যোগ করুন"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "সম্পদ"
+  },
+  "maker": {
+    "message": "বাজার সৃষ্টিকারী"
+  },
+  "taker": {
+    "message": "গ্রহণকারী"
+  },
+  "slippage": {
+    "message": "স্লিপেজ টলারেন্স"
   },
   "assets": {
     "message": "সম্পদ"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "যোগাযোগ করুন!"
   },
+  "continueToSwap": {
+    "message": "সোয়াপ করা অবিরত রাখুন"
+  },
   "continueToWyre": {
     "message": "Wyre এ অবিরত রাখুন"
   },
@@ -557,7 +572,7 @@
     "message": "আপনাকে আপনার সীড আবার ব্যাকআপ করতে হলে, আপনি সেটি সেটিংস -> নিরাপত্তায় পাবেন।"
   },
   "endOfFlowMessage7": {
-    "message": "আপনার যদি কখনও প্রশ্ন থাকে বা ফিস কিছু দেখেন, email support@brave.com."
+    "message": "আপনার কখনও কোনও প্রশ্ন থাকলে বা সন্দেহজনক কিছু দেখলে, আমাদের ওয়ালেট দেখুন"
   },
   "endOfFlowMessage8": {
     "message": "Brave  আপনার সিডফ্রেজটি পুনরুদ্ধার করতে পারে না।"
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "সব সম্পন্ন হয়েছে"
+  },
+  "endOfFlowMessage11": {
+    "message": "সহায়তার ফোরাম।"
   },
   "externalExtension": {
     "message": "বাহ্যিক এক্সটেনশন"
@@ -768,6 +786,9 @@
   "history": {
     "message": "ইতিহাস"
   },
+  "home": {
+    "message": "হোম"
+  },
   "import": {
     "message": "আমদানি",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "ওয়ালেট আমদানি করুন"
   },
   "importYourExisting": {
-    "message": "24 শব্দের বীজ বাক্যাংশ ব্যবহার করে আপনার বিদ্যমান ওয়ালেটটি আমদানি করুন"
+    "message": "একটি 12 বা 24 শব্দের সীড ফ্রেজ ব্যবহার করে আপনার বিদ্যমান ওয়ালেট আমদানি করুন"
   },
   "imported": {
     "message": "আমদানিকৃত",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "অপর্যাপ্ত টোকেন।"
   },
+  "insufficientFundsGas": {
+    "message": "গ্যাসের জন্য অপর্যাপ্ত তহবিল।"
+  },
+  "balanceFetchError": {
+    "message": "ব্যালেন্স টেনে আনার ত্রুটি।"
+  },
   "invalidAddress": {
     "message": "অবৈধ ঠিকানা"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH নেটওয়ার্ক নয়, ছোটো হরফে সেট করা হয়েছে"
   },
-  "invalidInput": {
-    "message": "অবৈধ ইনপুট"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "কাস্টম নেটওয়ার্ক '$1'-এ তার চেন ID নেই।",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "আপনাকে ক্ষতিকারক বা ত্রুটিযুক্ত নেটওয়ার্ক সরবরাহকারীদের থেকে রক্ষা করতে, এখন সমস্ত গ্রাহক নেটওয়ার্কের জন্য চেন ID গুলি আবশ্যক।"
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "সেটিংস > নেটওয়ার্ক-এ যান এবং চেন ID লিখুন। $1-এ আপনি সর্বাধিক জনপ্রিয় নেটওয়ার্কগুলির চেন ID গুলি দেখতে পাবেন।",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "অবৈধ কাস্টম নেটওয়ার্ক"
+  },
+  "invalidHexNumber": {
+    "message": "অবৈধ হেক্সাডেসিমাল নম্বর।"
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "অবৈধ হেক্সাডেসিমাল নম্বর। পরের যে কোনও শূণ্য মুছুন।"
   },
   "invalidRPC": {
     "message": "অবৈধ RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "অবৈধ IPFS গেটওয়ে: মানটি অবশ্যই একটি বৈধ URL হবে"
+  },
+  "invalidNumber": {
+    "message": "অবৈধ নম্বর। একটি ডেসিমাল বা হেক্সাডেসিমাল নম্বর লিখুন।"
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "অবৈধ নম্বর। পরের যে কোনও শূণ্য মুছুন।"
   },
   "forbiddenIpfsGateway": {
     "message": "নিষিদ্ধ IPFS গেটওয়ে: দয়া করে একটি CID গেটওয়ে নির্দিষ্ট করুন"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "মূল Ethereum নেটওয়ার্ক"
   },
+  "availableOnMainnetRopsten": {
+    "message": "শুধুমাত্র মেননেট এবং রপস্টেন-এ উপলভ্য"
+  },
   "memorizePhrase": {
     "message": "এই ফ্রেজটি মুখস্থ করুন।"
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "নেটওয়ার্কসমূহ"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "চেন IDটি লেনদেনগুলি স্বাক্ষর করার জন্য ব্যবহৃত হয়। '0x' দিয়ে শুরু হওয়া একটি ডেসিমাল বা হেক্সাডেসিমাল নম্বর লিখুন।"
+  },
   "networkSettingsDescription": {
     "message": "কাস্টম RPC নেটওয়ার্কগুলি যোগ ও সম্পাদনা করুন"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "একটি দূষিত ইথেরিয়াম নেটওয়ার্ক সরবরাহকারী ব্লকচেইনের অবস্থা সম্পর্কে মিথ্যা বলতে এবং আপনার নেটওয়ার্ক ক্রিয়াকলাপ রেকর্ড করতে পারেন। আপনার বিশ্বাসযোগ্য কাস্টম নেটওয়ার্কগুলি কেবল যুক্ত করুন।"
-  },
-  "optionalChainId": {
-    "message": "ChainID (ঐচ্ছিক)"
   },
   "optionalSymbol": {
     "message": "প্রতীক (ঐচ্ছিক)"
@@ -1144,7 +1197,7 @@
     "message": "প্রাপকের ঠিকানা"
   },
   "recipientAddressPlaceholder": {
-    "message": "অনুসন্ধান, সার্বজনীন ঠিকানা (0x), বা ENS"
+    "message": "অনুসন্ধান, সার্বজনীন ঠিকানা (0x), বা ডোমেন"
   },
   "rejectAll": {
     "message": "সব খারিজ করুন"
@@ -1265,7 +1318,7 @@
     "message": "সতর্কতা: কখনও আপনার ব্যাকআপ ফ্রেজ প্রকাশ করবেন না। এই ফ্রেজ পেয়ে গেলে যে কেউ আপনার ইথার চিরকালের জন্য নিয়ে নিতে পারবেন।"
   },
   "secretPhrase": {
-    "message": "আপনার ভল্ট পুনরুদ্ধার করতে এখানে আপনার গোপন 24 শব্দ বাক্য লিখুন।"
+    "message": "আপনার ভল্ট পুনরুদ্ধার করতে আপনার গোপন 12 বা 24 শব্দের বাক্যাংশ লিখুন।"
   },
   "securityAndPrivacy": {
     "message": "নিরাপত্তা এবং গোপনীয়তা"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "পাঠান"
+  },
+  "swap": {
+    "message": "সোয়াপ করুন"
   },
   "sendAmount": {
     "message": "পাঠানো অর্থরাশি"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "আমাদের সহায়তা কেন্দ্রে যান"
   },
+  "swapPrivacyPolicy": {
+    "message": "সোয়াপ গোপনীয়তা নীতি"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "একজন DEX এগ্রিগেটর হিসেবে Brave $1 ব্যবহার করে। একটি লেনদেন (কোটগুলি পাওয়া সহ) পরিপূরণ করতে 0x ইথেরিয়াম ঠিকানা এবং IP ঠিকানা প্রক্রিয়াকরণ করবে। শুধুমাত্র লেনদেনগুলি প্রক্রিয়াকরণ করার জন্যই 0x এই ডেটা ব্যবহার করবে।"
+  },
   "symbol": {
     "message": "প্রতীক"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "এটি একটি নতুন ওয়ালেট এবং সীড ফ্রেজ তৈরি করবে"
+  },
+  "timeout": {
+    "message": "সময় পেরিয়ে গেছে"
   },
   "tips": {
     "message": "অর্থসাহায্য এবং পরামর্শ"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave Settings"
   },
+  "contractErrorMessage": {
+    "message": "সতর্কতা: আপনি এই সম্পদটি তার নিজের স্মার্ট কন্ট্রাক্টে পাঠাতে চলেছেন। সম্ভবত আপনি এরকমটি করতে চান না, যেহেতু এটি হয়ত সম্পদটিকে পুনরুদ্ধার-অযোগ্য করে তুলবে।"
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "ক্রিপ্টো ওয়ালেটস আপনাকে ক্রিপ্টোকারেন্সি এবং সাহসীতে সম্পর্কিত সম্পদের সাথে কাজ করতে দেয়। ক্রিপ্টো ওয়ালেটস ইথেরিয়াম টোকেনগুলির মতো ETH এবং BAT, পাশাপাশি সংগ্রহযোগ্যগুলি সমর্থন করে এবং আপনাকে অ্যাপস এবং অন্যান্য স্মার্ট চুক্তি সহ কাজ করতে দেয়। এই সমস্তগুলি এমন লোকদের জন্য যারা ইথেরিয়াম এবং অন্যান্য ব্লকচেইন সিস্টেমগুলির সাথে পরিচিত - বা শিখতে আগ্রহী"
   },
@@ -1784,7 +1852,7 @@
     "message": "dApps এর সাথে যোগাযোগ করতে এবং অন্যান্য সংযুক্ত ওয়ালেটগুলিতে ট্রান্সফার করতে আপনার লেজর হার্ডওয়্যার ওয়ালেট সংযুক্ত করুন।"
   },
   "metamaskImportSubText": {
-    "message": "দ্রষ্টব্য: যদি কোনও মেটামাস্ক ওয়ালেট থেকে আমদানি করা হয় তবে 24 এর পরিবর্তে 12 টি শব্দ লিখুন।"
+    "message": "নোট: ক্রিপ্টো ওয়ালেট সংস্করণ 1.0.26 বা তার আগেকার সংস্করণ থেকে আমদানি করলে, আপনার গোপন বাক্যাংশ 12-র পরিবর্তে 24 হবে।"
   },
   "newLocalWallet": {
     "message": "নতুন স্থানীয় ওয়ালেট"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "ব্রেভ ক্রিপ্টো ওয়ালেটে স্বাগতম"
+  },
+  "waitingForConfirmation": {
+    "message": "নিশ্চিতকরণের জন্য অপেক্ষারত।"
   }
 }

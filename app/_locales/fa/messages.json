@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "گزینه های پیشرفته"
   },
+  "customizeGas": {
+    "message": "سفارشی کردن"
+  },
   "addToAddressBook": {
     "message": "به کتاب آدرسها اضافه کنید"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "سرمایه"
+  },
+  "maker": {
+    "message": "سازنده"
+  },
+  "taker": {
+    "message": "گیرنده"
+  },
+  "slippage": {
+    "message": "تسامح لغزش"
   },
   "assets": {
     "message": "دارایی‌ها"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "با ما تماس بگیرید!"
   },
+  "continueToSwap": {
+    "message": "ادامه و رفتن به Swap"
+  },
   "continueToWyre": {
     "message": "ادامه به Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "در صورتیکه شما نیاز به گرفتن دوباره پشتیبان عبارت بازیاب داشته باشید، میتوانید آنرا در Settings -> Security دریافت نمایید."
   },
   "endOfFlowMessage7": {
-    "message": "اگر سؤالی داشتید یا مورد مشکوکی مشاهده کردید، به support@brave.com ایمیل ارسال کنید."
+    "message": "اگر سؤالی دارید یا مورد مشکوکی مشاهده می‌کنید، به کیف پول ما بروید"
   },
   "endOfFlowMessage8": {
     "message": "Brave نمی‌تواند عبارت بازیابی شما را بازیابی کند."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "همه انجام شد"
+  },
+  "endOfFlowMessage11": {
+    "message": "تالار گفتمان پشتیبانی."
   },
   "externalExtension": {
     "message": "افزونه خارجی"
@@ -768,6 +786,9 @@
   "history": {
     "message": "سابقه"
   },
+  "home": {
+    "message": "منزل"
+  },
   "import": {
     "message": "وارد کردن",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "وارد کردن کیف پول"
   },
   "importYourExisting": {
-    "message": "کیف پول موجود خود را با استفاده از یک عبارت بازیابی 24 کلمه‌ای وارد کنید"
+    "message": "کیف موجودتان را با استفاده از عبارت رمزیاب 12 یا 24 کلمه‌ایی وارد کنید"
   },
   "imported": {
     "message": "وارد شده",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "رمزیاب های ناکافی."
   },
+  "insufficientFundsGas": {
+    "message": "بودجه کافی برای گاز وجود ندارد."
+  },
+  "balanceFetchError": {
+    "message": "خطای گرفتن موجودی."
+  },
   "invalidAddress": {
     "message": "آدرس نامعتبر"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "شبکه ETH نه، به حروف کوچک تنظیم کنید"
   },
-  "invalidInput": {
-    "message": "ورودی نامعتبر."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "شبکه سفارشی «$1» فاقد شناسه زنجیره است.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "برای مخافظت از شما دربرابر ارائه‌دهندگان شبکه معیوب یا مخرب، از این پس شناسه‌های زنجیره برای همه شبکه‌های سفارشی الزامی هستند."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "به «تنظیمات > شبکه» بروید و شناسه زنجیره را وارد کنید. می‌توانید شناسه‌های زنجیره پرطرفدارترین شبکه‌ها را در $1 پیدا کنید.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "شبکه سفارشی نامعتبر است"
+  },
+  "invalidHexNumber": {
+    "message": "عدد مبنای شانزده نامعتبر است."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "عدد مبنای شانزده نامعتبر است. همه صفرهای موجود در ابتدا را حذف کنید."
   },
   "invalidRPC": {
     "message": "RPC URL نا معتبر"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "دروازه IPFS نامعتبر است: مقدار باید آدرس وب معتبری باشد"
+  },
+  "invalidNumber": {
+    "message": "عدد نامعتبر است. عددی بر مبنای شانزده یا اعشاری وارد کنید."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "عدد نامعتبر است. همه صفرهای موجود در ابتدا را حذف کنید."
   },
   "forbiddenIpfsGateway": {
     "message": "دروازه IPFS ممنوع: لطفاً یک درگاه CID مشخص کنید"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "شبکه اصلی ایتریم"
   },
+  "availableOnMainnetRopsten": {
+    "message": "فقط در شبکه اصلی و راپستن در دسترس است"
+  },
   "memorizePhrase": {
     "message": "این عبارت را حفظ کنید."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "شبکه ها"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "از شناسه زنجیره برای امضا کردن تراکنش‌ها استفاده می‌شود. عددی بر مبنای شانزده یا اعشاری وارد کنید که با «0x» شروع می‌شود."
+  },
   "networkSettingsDescription": {
     "message": "اضافه سازی و ویرایش شبکه های دلخواه PRC"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "یک ارائه‌دهنده مخرب شبکه Ethereum می‌تواند در مورد وضعیت زنجیره بلوکی دروغ بگوید و فعالیت شبکه شما را ثبت کند. فقط شبکه‌های سفارشی مورد اعتمادتان را اضافه کنید."
-  },
-  "optionalChainId": {
-    "message": "آی دی زنجیره (انتخابی)"
   },
   "optionalSymbol": {
     "message": "سمبول (انتخابی)"
@@ -1144,7 +1197,7 @@
     "message": "آدرس دریافت کننده"
   },
   "recipientAddressPlaceholder": {
-    "message": "جستجو، آدرس عمومی (0x)، یا ENS"
+    "message": "جستجو، نشانی عمومی (0x)، یا دامنه"
   },
   "rejectAll": {
     "message": "رد همه"
@@ -1265,7 +1318,7 @@
     "message": "هشدار: هرگز عبارت پشتیبان تان را به کسی فاش نسازید. هرکسیکه این عبارت را داشته باشد ایتر شما را برای همیشه خواهد گرفت."
   },
   "secretPhrase": {
-    "message": "برای بازیابی گاوصندوق، عبارت محرمانه 24 کلمه‌ای خود را اینجا وارد کنید."
+    "message": "برای بازیابی گاوصندوق، عبارت محرمانه 12 یا 24 کلمه‌ای خود را وارد کنید."
   },
   "securityAndPrivacy": {
     "message": "امنیت و حریم خصوصی"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "ارسال"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "ارسال مبلغ"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "از مرکز حمایت ما دیدن نمایید"
   },
+  "swapPrivacyPolicy": {
+    "message": "خط‌مشی حریم خصوصی Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave از $1 به‌عنوان گردآورنده DEX استفاده می‌کند. 0x نشانی اتریوم و نشانی IP را پردازش می‌کند تا تراکنشی را تکمیل کند (دریافت نرخ لحظه‌ای را شامل می‌شود). 0x از این داده‌ها فقط برای اهداف پردازش تراکنش‌ها استفاده می‌کند."
+  },
   "symbol": {
     "message": "سمبول"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "این یک کیف جدید و عبارت بازیاب را ایجاد خواهد کرد"
+  },
+  "timeout": {
+    "message": "مهلت زمانی"
   },
   "tips": {
     "message": "انعام"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "تنظیمات Brave"
   },
+  "contractErrorMessage": {
+    "message": "هشدار: شما در شُرف ارسال این دارایی به قرارداد هوشمندش هستید. احتمالاً قصد انجام این کار را ندارید، زیرا ممکن است باعث شود دارایی غیرقابل بازیابی شود."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "کیف پول رمزنگاری به شما امکان می‌دهد با رمزارز و دارایی‌های مرتبط در Brave کار کنید. کیف پول‌های رمزنگاری از توکن‌های Ethereum (مانند ETH و BAT) و همچنین از موارد قابل جمع‌آوری پشتیبانی می‌کند و به شما امکان می‌دهد با Ðapps و سایر قراردادهای هوشمند کار کنید. همه اینها برای افرادی است که با Ethereum و سایر سیستم‌های زنجیره بلوکی آشنا هستند - یا اشتیاق یادگیری دارند."
   },
@@ -1784,7 +1852,7 @@
     "message": "کیف سخت افزار دفتر حساب تان را وصل نمایید تا با dApps تعامل نموده و انتقالات را به کیف های دیگر وصل شده، انجام دهد."
   },
   "metamaskImportSubText": {
-    "message": "توجه: اگر از کیف پول Metamask وارد می‌کنید، به‌جای 24 کلمه، 12 کلمه وارد کنید."
+    "message": "توجه: اگر از کیف پول‌های ارز دیجیتال نسخه 1.0.26 یا پایین‌تر وارد می‌کنید، عبارت محرمانه به‌جای 12 کلمه، 24 کلمه خواهد داشت."
   },
   "newLocalWallet": {
     "message": "کیف جدید محلی"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "به «کیف پول‌های رمزگذاری‌شده Brave» خوش آمدید"
+  },
+  "waitingForConfirmation": {
+    "message": "درانتظار تأیید."
   }
 }

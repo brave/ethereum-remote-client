@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Machaguo ya Juu"
   },
+  "customizeGas": {
+    "message": "Badilisha Ikufae"
+  },
   "addToAddressBook": {
     "message": "Ongeza kwenye kitabu cha anwani"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Rasilimali"
+  },
+  "maker": {
+    "message": "Kitengenezaji"
+  },
+  "taker": {
+    "message": "Kitwaaji"
+  },
+  "slippage": {
+    "message": "Tofauti ya Bei"
   },
   "assets": {
     "message": "Rasilimali"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Wasiliana nasi!"
   },
+  "continueToSwap": {
+    "message": "Nenda kwenye Swap"
+  },
   "continueToWyre": {
     "message": "Endelea kwenye Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Ikiwa unataka kuhifadhi tena kwa njia mbadla kirai chako kianzio, unaweza kukipata kwenye Mipangilio -> Usalama."
   },
   "endOfFlowMessage7": {
-    "message": "Ikiwa una maswali au unaona kitu cha kutilia shaka, tuma barua pepe kwa support@brave.com."
+    "message": "Ikiwa una maswali au unaona kitu cha kutilia shaka, tembelea pochi yetu"
   },
   "endOfFlowMessage8": {
     "message": "Brave haiwezi kurejesha kauli yako ya kumbukumbu."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Yote Imekamilika"
+  },
+  "endOfFlowMessage11": {
+    "message": "jukwaa la usaidizi."
   },
   "externalExtension": {
     "message": "Kiendelezi cha Nje"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historia"
   },
+  "home": {
+    "message": "Mwanzo"
+  },
   "import": {
     "message": "Ingiza",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Leta pochi"
   },
   "importYourExisting": {
-    "message": "Leta pochi iliyopo ukitumia kauli ya kumbukumbu ya maneno 24"
+    "message": "Hamisha pochi yako iliyopo kwa kutumia kirai kianzio cha maneno 12 au 24"
   },
   "imported": {
     "message": "Zilizoingizwa",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Vianzio havitoshi."
   },
+  "insufficientFundsGas": {
+    "message": "Fedha za gesi hazitoshi."
+  },
+  "balanceFetchError": {
+    "message": "Hitilafu ya kuleta salio"
+  },
   "invalidAddress": {
     "message": "Awani si halali"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Kwa mtandao wa ETH, weka herufi ndogo"
   },
-  "invalidInput": {
-    "message": "Maandii si sahihi."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Mtandao maalum '$1' unakosa kitambulisho chake cha msururu.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Ili kukulinda kutokana na watoa huduma za mtandao hasidi au wenye kasoro, vitambulisho vya msururu sasa vinahitajika kwa mitandao yote maalum."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Nenda kwenye Mipangilio > Mtandao na uweke kitambulisho cha msururu. Unaweza kupata vitambulisho vya msururu vya mitandao maarufu zaidi kwenye $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Mtandao Maalum si Sahihi"
+  },
+  "invalidHexNumber": {
+    "message": "Nambari ya dusumali sita si sahihi."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Nambari ya dusumali sita si sahihi. Ondoa sufuri zozote zilizo mbele."
   },
   "invalidRPC": {
     "message": "RPC URL batili"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Lango batili la IPFS: Thamani lazima iwe URL halali"
+  },
+  "invalidNumber": {
+    "message": "Nambari si sahihi. Weka nambari ya dusumali au dusumali sita."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Nambari ya si sahihi. Ondoa sufuri zozote zilizo mbele."
   },
   "forbiddenIpfsGateway": {
     "message": "Lango Haramu la IPFS: Tafadhali bainisha lango la CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Mtandao Mkuu wa Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Inapatikana tu kwenye mainnet na ropsten"
+  },
   "memorizePhrase": {
     "message": "Kariri kirai hiki"
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Mitandao"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Kitambulisho cha msururu kinatumiwa kutia sahihi miamala. Weka nambari ya dusumali au ya dusumali sita ukianza kwa '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Ongeza na hariri mitandao maalumu ya RPC"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Mtoa huduma mbaya wa mtandao wa Ethereum anaweza kusema uongo kuhusu hali ya blockchain na kurekodi shughuli zako za mtandao. Ongeza tu mitandao maalum unayoamini."
-  },
-  "optionalChainId": {
-    "message": "Utambulisho wa Mnyororo (hiari)"
   },
   "optionalSymbol": {
     "message": "Ishara (hiari)"
@@ -1144,7 +1197,7 @@
     "message": "Anwani ya Mpokeaji"
   },
   "recipientAddressPlaceholder": {
-    "message": "Tafuta, anwani za umma (0x), au ENS"
+    "message": "Tafuta, anwani za umma (0x), au kikoa"
   },
   "rejectAll": {
     "message": "Kataa Zote"
@@ -1265,7 +1318,7 @@
     "message": "ONYO: Kamwe usiweke wazi kirai chako cha hifadhi mbadala. Mtu yeyote mwenye kirai hiki anaweza kuchukua Ether yako daima."
   },
   "secretPhrase": {
-    "message": "Weka kauli yako ya siri ya maneno 24 hapa ili kurudisha vault yako."
+    "message": "Weka kauli yako ya siri ya maneno 12 au 24 hapa ili kurudisha vault yako."
   },
   "securityAndPrivacy": {
     "message": "Ulinzi na Faragha"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Tuma"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Tuma Kiasi"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Tembelea Kituo chetu cha Usaidizi"
   },
+  "swapPrivacyPolicy": {
+    "message": "Sera ya Faragha ya Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave hutumia $1 kama kijumlishi cha DEX. 0x itachakata anwani ya Ethereum na anwani ya IP ili kutimiza muamala (ikiwemo kupata manukuu). 0x itatumia TU data hii kwa madhumuni ya kuchakata miamala."
+  },
   "symbol": {
     "message": "Ishara"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Hatua hiiitaunda waleti mpya na kirai kianzio"
+  },
+  "timeout": {
+    "message": "Muda kukatika"
   },
   "tips": {
     "message": "Michango"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Mipangilio ya Brave"
   },
+  "contractErrorMessage": {
+    "message": "Onyo: Unakaribia kutuma rasilimali hii kwenye mkataba wake mahiri. Huenda hujakusudia kufanya hivi, kwa kuwa inaweza kufanya rasilimali isirejeshwe."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Pochi za Crypto hukuruhusu kufanya kazi na pesa za sarafu na rasilimali zinazohusiana katika Brave. Pochi za Crypto zinasaidia ishara za Ethereum kama ETH na BAT, na vile vile navyokusanyika na hukuruhusu kufanya kazi na Ðapps na mikataba mingine mahiri. Yote haya yamekusudiwa watu ambao wanajua Ethereum na mifumo mingine ya blockchain — au wanafurahi kujifunza."
   },
@@ -1784,7 +1852,7 @@
     "message": "Unganisha programu maunzi yako ya waleti ya Leja ili kuingiliana na dApps na hamishia kwenye waleti nyinginezo zilizounganishwa."
   },
   "metamaskImportSubText": {
-    "message": "Kumbuka: Ikiwa unaleta kutoka pochi ya Metamask, weka maneno 12 badala ya 24."
+    "message": "Kumbuka: Ikiwa unaleta kutoka Crypto Wallets Toleo la 1.0.26 au la juu, kaulisiri yako ni maneno 24 badala ya 12."
   },
   "newLocalWallet": {
     "message": "Waleti Mpya ya Mahali Husika"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Karibu Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Inasubiri uthibitishaji."
   }
 }

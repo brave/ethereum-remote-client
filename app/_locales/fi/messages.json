@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Tarkemmat vaihtoehdot"
   },
+  "customizeGas": {
+    "message": "Mukauta"
+  },
   "addToAddressBook": {
     "message": "Lisää osoitekirjaan"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Omaisuuserä"
+  },
+  "maker": {
+    "message": "Tekijä"
+  },
+  "taker": {
+    "message": "Ottaja"
+  },
+  "slippage": {
+    "message": "Erehdysten sieto"
   },
   "assets": {
     "message": "Omaisuudet"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Ota meihin yhteyttä!"
   },
+  "continueToSwap": {
+    "message": "Jatka Swapiin"
+  },
   "continueToWyre": {
     "message": "Jatka Wyreen"
   },
@@ -557,7 +572,7 @@
     "message": "Jos tarvitse uuden varmuuskopion juurilauseestasi, niin se löytyy osiosta Asetukset -> Turvallisuus."
   },
   "endOfFlowMessage7": {
-    "message": "Jos sinulla on kysyttävää tai havaitset jotain epäilyttävää, lähetä sähköpostia osoitteeseen support@brave.com."
+    "message": "Jos sinulla on kysyttävää tai havaitsit jotain epäilyttävää, voit vierailla lompakossamme"
   },
   "endOfFlowMessage8": {
     "message": "Brave ei voi palauttaa juuritunnustasi."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Valmista"
+  },
+  "endOfFlowMessage11": {
+    "message": "tukipalsta."
   },
   "externalExtension": {
     "message": "Ulkoinen laajennus"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historia"
   },
+  "home": {
+    "message": "Etusivu"
+  },
   "import": {
     "message": "Tuo",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Tuo lompakko"
   },
   "importYourExisting": {
-    "message": "Tuo vanha lompakkosi käyttämällä 24-sanaista juuritunnusta"
+    "message": "Tuo vanha lompakkosi 12- tai 24-sanaisella siemenlausekkeella"
   },
   "imported": {
     "message": "Tuotu",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Liian vähän tietueita."
   },
+  "insufficientFundsGas": {
+    "message": "Varat eivät riitä polttoaineeseen."
+  },
+  "balanceFetchError": {
+    "message": "Saldon hakuvirhe."
+  },
   "invalidAddress": {
     "message": "Virheellinen osoite"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ei ole ETH-verkosto; vaihda pieniin kirjaimiin"
   },
-  "invalidInput": {
-    "message": "Virheellinen syötetty arvo."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Verkostosta '$1' puuttuu sen ketjun tunniste.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Vaadimme ketjujen tunnisteet jokaiselle käyttäjäkohtaiselle verkostolle suojataksemme sinua vilpillisiltä tai viallisilta verkostojen tarjoajilta."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Siirry kohtaan Asetukset > Verkosto ja anna ketjun tunniste. $1 sisältää suosituimpien verkostojen ketjutunnukset.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Virheellinen asiakasverkosto"
+  },
+  "invalidHexNumber": {
+    "message": "Virheellinen heksadesimaalinumero."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Virheellinen heksadesimaalinumero. Poista alussa olevat nollat."
   },
   "invalidRPC": {
     "message": "Virheellinen RPC:n URL-osoite"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Virheellinen IPFS-portti: arvon on oltava käypä URL"
+  },
+  "invalidNumber": {
+    "message": "Virheellinen numero. Anna desimaali- tai heksadesimaalinumero."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Virheellinen numero. Poista alussa olevat nollat."
   },
   "forbiddenIpfsGateway": {
     "message": "Kielletty IPFS-portti: anna CID-portti"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Ethereumin pääverkko"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Saatavilla vain mainnetissa ja ropstenissa"
+  },
   "memorizePhrase": {
     "message": "Opettele tämä teksti ulkoa."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Verkot"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Ketjun tunnistetta käytetään maksusiirtojen allekirjoittamiseen. Anna desimaali- tai heksadesimaalinumero, jonka alussa on '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Lisää ja muokkaa omia RPC-verkostojasi"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Valheellinen Ethereum-verkoston tarjoaja voi valehdella lohkoketjun tilasta ja tallentaa verkkotoimintaasi. Lisää siis ainoastaan luotettavia verkostoja."
-  },
-  "optionalChainId": {
-    "message": "Ketjun tunnus (valinnainen)"
   },
   "optionalSymbol": {
     "message": "Symboli (valinnainen)"
@@ -1144,7 +1197,7 @@
     "message": "Vastaanottajan osoite"
   },
   "recipientAddressPlaceholder": {
-    "message": "Haku, julkinen osoite (0x) tai ENS"
+    "message": "Haku, julkinen osoite (0x) tai verkkotunnus"
   },
   "rejectAll": {
     "message": "Hylkää kaikki"
@@ -1265,7 +1318,7 @@
     "message": "VAROITUS: älä koskaan kerro varmuuskopiolausettasi kenellekään. Kuka tahansa tämän lauseen omaava voi napata Etherisi pysyvästi."
   },
   "secretPhrase": {
-    "message": "Anna salainen 24-sanainen tunnuksesi tänne palauttaaksesi holvisi."
+    "message": "Anna salainen 12 tai 24 sanan lauseesi, jolla voit palauttaa holvisi."
   },
   "securityAndPrivacy": {
     "message": "Turva & yksityisyys"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Lähetä"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Lähetä summa"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Käy tukikeskuksessamme"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swapin tietosuojakäytäntö"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "$1 on Braven DEX-koontityökalu. 0x käsittelee Ethereum-osoitteen ja IP-osoitteen maksusuoritusta varten (hinta-arvioiden haku mukaan lukien). 0x käyttää näitä tietoja VAIN maksusiirtojen käsittelyä varten."
+  },
   "symbol": {
     "message": "Symboli"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Tämä luo uuden kukkaron ja salaustekstin"
+  },
+  "timeout": {
+    "message": "Aikakatkaisu"
   },
   "tips": {
     "message": "Tipit"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave-asetukset"
   },
+  "contractErrorMessage": {
+    "message": "Varoitus: Olet lähettämässä tämän varannon sen omaan älysopimukseen. Teet tämän todennäköisesti epähuomiossa, sillä tämän jälkeen varantoa ei voida palauttaa."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Kryptovaluuttalompakot mahdollistavat kryptovaluuttojen ynnä niihin liittyvän omaisuuden käyttämisen Bravessa. Kryptovaluuttalompakot tukevat ETHin ja BATin kaltaisia Ethereum-käyttötunnuksia sekä kerättäviä tunnuksia, minkä ansiosta voit käyttää Ðappseja ynnä muita vastaavia älysopimuksia. Nämä palvelut on tarkoitettu Ethereumiin sekä muihin lohkoketjuihin perehtyneille — ja niistä kiinnostuneille."
   },
@@ -1784,7 +1852,7 @@
     "message": "Yhdistä Ledger hardware -lompakkosi vuorovaikutukseen dAppsin kanssa ja tee  siirtoja muihin yhdistettyihin lompakoihin."
   },
   "metamaskImportSubText": {
-    "message": "Huomio: jos siirto tehdään Metamask-lompakosta, lisää 12 sanaa 24 sijaan."
+    "message": "Huomio: jos tuot Crypto Walletsin 1.0.26-versiota tai sitä vanhempaa versiota, niin salaisessa lausekkeessasi on 24 sanaa 12 sijaan."
   },
   "newLocalWallet": {
     "message": "Uusi paikallinen kukkaro"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Tervetuloa Braven Crypto Walletsiin"
+  },
+  "waitingForConfirmation": {
+    "message": "Odotetaan vahvistusta."
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "خيارات متقدمة"
   },
+  "customizeGas": {
+    "message": "تخصيص"
+  },
   "addToAddressBook": {
     "message": "إضافة إلى دفتر العناوين"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "الأصل"
+  },
+  "maker": {
+    "message": "المُنتِج"
+  },
+  "taker": {
+    "message": "المشتري"
+  },
+  "slippage": {
+    "message": "احتمال الهبوط"
   },
   "assets": {
     "message": "الأصول"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "اتصل بنا!"
   },
+  "continueToSwap": {
+    "message": "تابع إلى التبديل"
+  },
   "continueToWyre": {
     "message": "الاستمرار إلى Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "إذا كنت بحاجة إلى عمل نسخة احتياطية من عبارة الأمان الخاصة بك مرة أخرى، يمكنك العثور عليها في الإعدادات -> الأمان."
   },
   "endOfFlowMessage7": {
-    "message": "إذا كانت لديك أسئلة أو رأيت شيئاً مريباً، فقم بإرسال بريد إلكتروني إلى support@brave.com."
+    "message": "إذا كانت لديك أسئلة أو رأيت شيئاً مريباً، فتفضل بزيارة محفظتنا"
   },
   "endOfFlowMessage8": {
     "message": "لا يستطيع Brave استعادة عبارة السر الخاصة بك."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "كل شيء تم بنجاح"
+  },
+  "endOfFlowMessage11": {
+    "message": "منتدى الدعم."
   },
   "externalExtension": {
     "message": "ملحق خارجي"
@@ -768,6 +786,9 @@
   "history": {
     "message": "السجل"
   },
+  "home": {
+    "message": "الصفحة الرئيسية"
+  },
   "import": {
     "message": "الاستيراد",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "استيراد المحفظة"
   },
   "importYourExisting": {
-    "message": "قم باستيراد محفظتك الحالية باستخدام عبارة استرجاع مكونة من 24 كلمة"
+    "message": "قم باستيراد محفظتك الحالية باستخدام عبارة أولية مكونة من 12 أو 24 كلمة"
   },
   "imported": {
     "message": "المستوردة",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "العملات الرمزية غير كافية."
   },
+  "insufficientFundsGas": {
+    "message": "أموال غير كافية للغاز."
+  },
+  "balanceFetchError": {
+    "message": "خطأ في جلب الرصيد."
+  },
   "invalidAddress": {
     "message": "عنوان غير صالح"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "لا تجعلها شبكة ETH، قم بتعيين الأحرف صغيرة"
   },
-  "invalidInput": {
-    "message": "مدخل غير صحيح."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "تفتقد الشبكة المخصصة '$1' إلى معرف السلسلة الخاص بها.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "لحمايتك من مزودي الشبكة الخبثاء أو الزائفين، فإن معرفات السلسلة أصبحت مطلوبة الآن لجميع الشبكات المخصصة."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "انتقل إلى الإعدادات> الشبكة وادخل معرف السلسلة. يمكنك العثور على معرّفات السلسلة لأكثر الشبكات شيوعاً على $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "شبكة مخصصة غير صالحة"
+  },
+  "invalidHexNumber": {
+    "message": "رقم ستعشري غير صالح."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "رقم ستعشري غير صالح. قم بإزالة أي أصفار بادئة."
   },
   "invalidRPC": {
     "message": "رابط آر بي سي غير صحيح"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "بوابة IPFS غير صالحة: يجب أن تكون القيمة عنوان URL صالحاً"
+  },
+  "invalidNumber": {
+    "message": "رقم غير صالح. أدخل رقماً عشرياً أو رقماً ستعشرياً."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "رقم غير صالح. قم بإزالة أي أصفار بادئة."
   },
   "forbiddenIpfsGateway": {
     "message": "بوابة IPFS المحظورة: يُرجى تحديد بوابة CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "شبكة الإيثيريوم الرئيسية"
   },
+  "availableOnMainnetRopsten": {
+    "message": "متوفر فقط على mainnet و ropsten"
+  },
   "memorizePhrase": {
     "message": "احفظ هذه العبارة."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "الشبكات"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "يتم استخدام معرف السلسلة لتوقيع المعاملات. ادخل رقماً عشرياً أو ستعشرياً يبدأ بـ \"0x\"."
+  },
   "networkSettingsDescription": {
     "message": "إضافة وتعديل شبكات RPC المخصصة"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "يمكن لمزود شبكة إيثريوم خبيث أن يكذب بشأن حالة سلسلة الكتل ويسجل نشاط الشبكة الخاص بك. أضف فقط الشبكات المخصصة التي تثق بها."
-  },
-  "optionalChainId": {
-    "message": "هوية ChainID (اختياري)"
   },
   "optionalSymbol": {
     "message": "الرمز (اختياري)"
@@ -1144,7 +1197,7 @@
     "message": "عنوان المستلم"
   },
   "recipientAddressPlaceholder": {
-    "message": "البحث، العنوان العام (0x)، أو ENS"
+    "message": "البحث عن العنوان العام (0x)، أو المجال"
   },
   "rejectAll": {
     "message": "رفض الكل"
@@ -1265,7 +1318,7 @@
     "message": "تحذير: لا تكشف مطلقاً عن عبارة الدعم الخاصة بك. يمكن لأي شخص بهذه العبارة أن يستحوذ على الأثير الخاص بك إلى الأبد."
   },
   "secretPhrase": {
-    "message": "أدخل العبارة السرية المكونة من 24 كلمة هنا لاستعادة مخزنك."
+    "message": "ادخل عبارة سرية مكونة من 12 أو 24 كلمة لاستعادة خزينة الحماية الخاصة بك."
   },
   "securityAndPrivacy": {
     "message": "الأمن والخصوصية"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "إرسال"
+  },
+  "swap": {
+    "message": "تبديل"
   },
   "sendAmount": {
     "message": "إرسال المبلغ"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "تفضل بزيارة مركز الدعم الخاص بنا"
   },
+  "swapPrivacyPolicy": {
+    "message": "سياسة خصوصية التبديل"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "يقوم Brave باستخدام $1 كمجمع DEX. سوف يقوم 0x بمعالجة عنوان الإيثيريوم وعنوان الـ IP لتنفيذ المعاملة (بما في ذلك الحصول على عروض الأسعار). سوف يقوم 0x باستخدام هذه البيانات فقط لأغراض معالجة المعاملات."
+  },
   "symbol": {
     "message": "رمز"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "هذا سينشئ محفظة جديدة وعبارة أمان"
+  },
+  "timeout": {
+    "message": "انقضت المهلة"
   },
   "tips": {
     "message": "المكافآت"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "إعدادات Brave"
   },
+  "contractErrorMessage": {
+    "message": "تحذير: أنت على وشك إرسال هذا الأصل إلى العقد الذكي الخاص به. ربما أنك لا تقصد القيام بذلك، لأنه من المحتمل أن يتسبب ذلك في جعل الأصل غير قابل للاسترداد."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "تتيح لك Crypto Wallets التعامل مع العملات المشفرة والأصول ذات الصلة في Brave. تدعم Crypto Wallets الرموز المميزة لإيثيريوم مثل ETH وBAT، بالإضافة إلى المقتنيات، وتتيح لك التعامل مع Ðapps/التطبيقات اللامركزية والعقود الذكية الأخرى. كل هذا مخصص للأشخاص الذين هم على دراية بالإيثيريوم وأنظمة سلسلة الكتل الأخرى - أو أولئك المتحمسون للتعلم."
   },
@@ -1784,7 +1852,7 @@
     "message": "قم بربط محفظة Ledger الصلبة الخاصة بك للتفاعل مع dApps وإجراء عمليات التحويل إلى محافظ مرتبطة أخرى."
   },
   "metamaskImportSubText": {
-    "message": "ملاحظة: في حالة الاستيراد من محفظة Metamask، أدخل 12 كلمة بدلاً من 24."
+    "message": "ملاحظة: في حالة الاستيراد من Crypto Wallets الإصدار 1.0.26 أو إصدار أقدم، فإن العبارة السرية الخاصة بك هي 24 كلمة بدلاً من 12."
   },
   "newLocalWallet": {
     "message": "محفظة محلية جديدة"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "أهلاً بك في Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "في انتظار التأكيد."
   }
 }

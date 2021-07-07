@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Opsi Lanjutan"
   },
+  "customizeGas": {
+    "message": "Kustomisasikan"
+  },
   "addToAddressBook": {
     "message": "Tambahkan ke buku alamat "
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Aset"
+  },
+  "maker": {
+    "message": "Produsen"
+  },
+  "taker": {
+    "message": "Pengambil"
+  },
+  "slippage": {
+    "message": "Toleransi Selip"
   },
   "assets": {
     "message": "Aset"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Hubungi kami!"
   },
+  "continueToSwap": {
+    "message": "Lanjut ke Swap"
+  },
   "continueToWyre": {
     "message": "Lanjutkan ke Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Jika Anda perlu mencadangkan frase seed lagi, Anda dapat menemukannya dalam Pengaturan -> Keamanan."
   },
   "endOfFlowMessage7": {
-    "message": "Jika Anda memiliki pertanyaan atau melihat sesuatu yang mencurigakan, kirim email ke support@brave.com."
+    "message": "Jika Anda punya pertanyaan atau melihat suatu kejanggalan, kunjungi dompet kami"
   },
   "endOfFlowMessage8": {
     "message": "Brave tidak bisa memulihkan frase benih Anda."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Selesai"
+  },
+  "endOfFlowMessage11": {
+    "message": "forum bantuan."
   },
   "externalExtension": {
     "message": "Ekstensi Eksternal"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Histori"
   },
+  "home": {
+    "message": "Beranda"
+  },
   "import": {
     "message": "Impor",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Impor dompet"
   },
   "importYourExisting": {
-    "message": "Impor dompet Anda yang telah ada menggunakan frase benih 24 kata"
+    "message": "Impor dompet saat ini menggunakan frasa benih 12 atau 24 kata"
   },
   "imported": {
     "message": "Diimpor",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Token tak mencukupi."
   },
+  "insufficientFundsGas": {
+    "message": "Dana gas tidak cukup."
+  },
+  "balanceFetchError": {
+    "message": "Eror memperoleh saldo."
+  },
   "invalidAddress": {
     "message": "Alamat tidak sah"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Bukan jaringan ETH, tetapkan ke huruf kecil"
   },
-  "invalidInput": {
-    "message": "Input tidak sah."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Jaringan kustom '$1' tidak memiliki chain ID-nya.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Demi melindungi Anda dari penyedia jaringan yang jahat atau rusak, chain ID kini diwajibkan untuk semua jaringan kustom."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Pilih Pengaturan > Jaringan lalu masukkan chain ID. Anda dapat menemukan chain ID jaringan-jaringan terpopuler di $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Jaringan Kustom Tidak Sah"
+  },
+  "invalidHexNumber": {
+    "message": "Angka heksadesimal tidak sah."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Angka heksadesimal tidak sah. Hapus semua awalan nol."
   },
   "invalidRPC": {
     "message": "URL RPC Tidak Sah"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Gateway IPFS tidak valid: isinya harus berupa URL yang valid"
+  },
+  "invalidNumber": {
+    "message": "Angka tidak sah. Masukkan angka desimal atau heksadesimal."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Angka tidak sah. Hapus semua awalan nol."
   },
   "forbiddenIpfsGateway": {
     "message": "Gateway IPFS terlarang: Harap menetapkan gateway CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Jaringan Ethereum Utama"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Hanya tersedia di mainnet dan ropsten"
+  },
   "memorizePhrase": {
     "message": "Ingatlah frasa ini."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Jaringan"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "ID chain digunakan untuk meneken transaksi. Masukkan angka desimal atau heksadesimal diawali dengan '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Tambah dan edit jaringan RPC kustom"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Penyedia jaringan Ethereum yang jahat dapat berbohong tentang keadaan untai-blok dan merekam aktivitas jaringan Anda. Tambahkan hanya jaringan kustom yang Anda percaya."
-  },
-  "optionalChainId": {
-    "message": "ID Rantai (opsional)"
   },
   "optionalSymbol": {
     "message": "Simbol (opsional)"
@@ -1144,7 +1197,7 @@
     "message": "Alamat Penerima"
   },
   "recipientAddressPlaceholder": {
-    "message": "Pencarian, alamat publik  (0x), atau ENS"
+    "message": "Cari, alamat publik (0x), atau domain"
   },
   "rejectAll": {
     "message": "Tolak Semua"
@@ -1265,7 +1318,7 @@
     "message": "PERINGATAN: Jangan pernah mengungkap frasa cadangan Anda. Siapa saja dapat mengambil Ether Anda selamanya dengan frasa ini."
   },
   "secretPhrase": {
-    "message": "Masukkan frase 24 kata rahasia Anda di sini untuk memulihkan brankas Anda."
+    "message": "Masukkan frasa 12 atau 24 kata rahasia untuk melanjutkan ke brankas Anda."
   },
   "securityAndPrivacy": {
     "message": "Keamanan & Privasi"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Kirim"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Nominal Kirim"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Kunjungi Pusat Bantuan kami"
   },
+  "swapPrivacyPolicy": {
+    "message": "Kebijakan Privasi Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave menggunakan $1 sebagai agregator DEX. 0x akan memproses alamat Ethereum dan alamat IP untuk menunaikan transaksi (termasuk memperoleh catatan harga). 0x HANYA akan menggunakan data ini untuk tujuan memproses transaksi."
+  },
   "symbol": {
     "message": "Simbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Ini akan membuat dompet dan frasa seed baru"
+  },
+  "timeout": {
+    "message": "Timeout"
   },
   "tips": {
     "message": "Tip"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Pengaturan Brave"
   },
+  "contractErrorMessage": {
+    "message": "Peringatan: Anda akan mengirim aset ini ke kontrak cerdasnya sendiri. Anda mungkin tidak bermaksud melakukan ini, karena berpeluang menjadikan aset tidak dapat dipulihkan."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Dompet Kripto memungkinkan Anda bekerja dengan uang kripto dan aset terkait di Brave. Dompet Kripto mendukung token Ethereum seperti ETH dan BAT, serta barang koleksi, dan memungkinkan Anda bekerja dengan Ðapps dan kontrak pintar lainnya. Semua ini ditujukan bagi orang-orang yang sudah terbiasa dengan Ethereum dan sistem untai-blok lainnya — atau bersemangat untuk belajar."
   },
@@ -1784,7 +1852,7 @@
     "message": "Hubungkan dompet perangkat keras Ledger Anda untuk berinteraksi dengan dApps dan melakukan transfer ke dompet lain yang terhubung."
   },
   "metamaskImportSubText": {
-    "message": "Catatan: Jika mengimpor dari dompet Metamask, masukkan 12 kata, bukan 24."
+    "message": "Catatan: Jika mengimpor dari Crypto Wallets Versi 1.0.26 ke bawah, frasa rahasia Anda adalah 24 kata dan bukan 12."
   },
   "newLocalWallet": {
     "message": "Dompet Lokal Baru"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Selamat Datang di Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Menunggu konfirmasi."
   }
 }

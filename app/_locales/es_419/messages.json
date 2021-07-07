@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Opciones avanzadas"
   },
+  "customizeGas": {
+    "message": "Personalizar"
+  },
   "addToAddressBook": {
     "message": "Agregar a la libreta de direcciones"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Activo"
+  },
+  "maker": {
+    "message": "Creador"
+  },
+  "taker": {
+    "message": "Tomador"
+  },
+  "slippage": {
+    "message": "Tolerancia de deslizamiento"
   },
   "assets": {
     "message": "Activos"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "¡Comunícate con nosotros!"
   },
+  "continueToSwap": {
+    "message": "Continuar al intercambio"
+  },
   "continueToWyre": {
     "message": "Continuar a Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Si necesitas otra copia de seguridad de tu frase de inicialización, puedes encontrarla en Configuración -> Seguridad."
   },
   "endOfFlowMessage7": {
-    "message": "Si tienes preguntas o ves algo sospechoso, envía un correo electrónico a support@brave.com."
+    "message": "Si tienes preguntas o ves algo sospechoso, visita el foro de asistencia"
   },
   "endOfFlowMessage8": {
     "message": "Brave no puede recuperar tu frase de inicialización."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Todo listo"
+  },
+  "endOfFlowMessage11": {
+    "message": "de nuestra billetera."
   },
   "externalExtension": {
     "message": "Extensión externa"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historial"
   },
+  "home": {
+    "message": "Página principal"
+  },
   "import": {
     "message": "Importar",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importar billetera"
   },
   "importYourExisting": {
-    "message": "Importa tu billetera existente con una frase de inicialización de 24 palabras"
+    "message": "Importa tu billetera existente con una frase de inicialización de 12 o 24 palabras"
   },
   "imported": {
     "message": "Importado",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Tokens insuficientes."
   },
+  "insufficientFundsGas": {
+    "message": "Los fondos son insuficientes para gas."
+  },
+  "balanceFetchError": {
+    "message": "Hubo un error al recuperar el saldo."
+  },
   "invalidAddress": {
     "message": "Dirección no válida"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No existe la red ETH, utilice minúsculas"
   },
-  "invalidInput": {
-    "message": "Ingreso no válido."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "A la red personalizada \"$1\" le falta su ID de cadena.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Para protegerte de proveedores de red maliciosos o defectuosos, ahora se requieren los ID de cadena para todas las redes personalizadas."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Ve a Configuración > Red e introduce el ID de cadena. Puedes encontrar los ID de cadena de las redes más populares en $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Red personalizada no válida"
+  },
+  "invalidHexNumber": {
+    "message": "El número hexadecimal no es válido."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "El número hexadecimal no es válido. Quita los ceros iniciales."
   },
   "invalidRPC": {
     "message": "RPC de URL no válido"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Puerta de enlace a IPFS no válida: el valor debe ser una URL válida."
+  },
+  "invalidNumber": {
+    "message": "El número no es válido. Introduce un número decimal o hexadecimal."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "El número no es válido. Quita los ceros iniciales."
   },
   "forbiddenIpfsGateway": {
     "message": "Puerta de enlace a IPFS prohibida: especifica una puerta de enlace de CID."
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Red principal de Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Solo disponible en mainnet y ropsten"
+  },
   "memorizePhrase": {
     "message": "Memoriza esta frase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Redes"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "El ID de cadena se utiliza para firmar transacciones. Introduce un número decimal o hexadecimal que comience con \"0x\"."
+  },
   "networkSettingsDescription": {
     "message": "Agregar y editar redes RPC personalizadas"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un proveedor de red Ethereum malicioso puede mentir sobre el estado de la cadena de bloques y registrar tu actividad en la red. Agrega únicamente redes personalizadas en las que confíes."
-  },
-  "optionalChainId": {
-    "message": "ID de cadena (opcional)"
   },
   "optionalSymbol": {
     "message": "Símbolo (opcional)"
@@ -1144,7 +1197,7 @@
     "message": "Dirección del destinatario"
   },
   "recipientAddressPlaceholder": {
-    "message": "Buscar, dirección pública (0x) o ENS"
+    "message": "Búsqueda, dirección pública (0x) o dominio"
   },
   "rejectAll": {
     "message": "Rechazar todo"
@@ -1265,7 +1318,7 @@
     "message": "ADVERTENCIA: Nunca reveles tu frase de copia de seguridad. Cualquier persona que tenga acceso a esta frase puede llevarse tus Ethers permanentemente."
   },
   "secretPhrase": {
-    "message": "Introduce aquí tu frase secreta de 24 palabras para restaurar tu bóveda."
+    "message": "Introduce tu frase secreta de 12 o 24 palabras para restaurar tu bóveda."
   },
   "securityAndPrivacy": {
     "message": "Seguridad y privacidad"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Enviar"
+  },
+  "swap": {
+    "message": "Intercambio"
   },
   "sendAmount": {
     "message": "Enviar monto"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visita nuestro Centro de soporte técnico"
   },
+  "swapPrivacyPolicy": {
+    "message": "Política de privacidad de intercambio"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave utiliza $1 como agregador DEX. 0x procesará la dirección IP y la dirección de Ethereum para completar una transacción (incluida la obtención de cotizaciones). 0x SOLO utilizará estos datos con el fin de procesar transacciones."
+  },
   "symbol": {
     "message": "Símbolo"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Esto creará una billetera y una frase de inicialización nuevas"
+  },
+  "timeout": {
+    "message": "Tiempo de espera"
   },
   "tips": {
     "message": "Propinas"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Configuración de Brave"
   },
+  "contractErrorMessage": {
+    "message": "Advertencia: estás a punto de enviar este activo a su propio contrato inteligente. Seguramente no sea tu intención hacerlo, ya que es probable que esto convierta al activo en irrecuperable."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets te permite trabajar con criptomonedas y activos relacionados en Brave. Crypto Wallets admite tokens de Ethereum como ETH y BAT, además de coleccionables, y te permite trabajar con aplicaciones descentralizadas y otros contratos inteligentes. Todo esto está destinado a personas que están familiarizadas con Ethereum y otros sistemas de cadena de bloques, o que sientan curiosidad por aprender."
   },
@@ -1784,7 +1852,7 @@
     "message": "Conecta tu billetera de hardware Ledger para interactuar con dApps y hacer transferencias a otras billeteras conectadas."
   },
   "metamaskImportSubText": {
-    "message": "Nota: si importas de una billetera de Metamask, introduce 12 palabras en lugar de 24."
+    "message": "Nota: si importas de la versión 1.0.26 de Crypto Wallets o una anterior, tu frase secreta es de 24 palabras en lugar de 12."
   },
   "newLocalWallet": {
     "message": "Nueva billetera local"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Te damos la bienvenida a Crypto Wallets de Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "Se está esperando la confirmación."
   }
 }

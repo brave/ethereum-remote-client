@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "אפשרויות מתקדמות"
   },
+  "customizeGas": {
+    "message": "התאמה אישית"
+  },
   "addToAddressBook": {
     "message": "הוסף לפנקס הכתובות"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "נכס"
+  },
+  "maker": {
+    "message": "יצרן (Maker)"
+  },
+  "taker": {
+    "message": "לקחן (Taker)"
+  },
+  "slippage": {
+    "message": "טולרנטיות החלקה"
   },
   "assets": {
     "message": "נכסים"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "צרו עמנו קשר!"
   },
+  "continueToSwap": {
+    "message": "המשך ל-Swap"
+  },
   "continueToWyre": {
     "message": "המשך ל-Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "אם עליך לגבות את צירוף הגרעין שלך שוב, תוכל/י למצוא זאת בהגדרות -> אבטחה."
   },
   "endOfFlowMessage7": {
-    "message": "אם יש לך שאלות או שהנך רואה משהו חשוד, יש לשלוח מייל אל support@brave.com."
+    "message": "אם יש לך שאלות או שראית משהו חשוד, בקר/י בארנק שלנו"
   },
   "endOfFlowMessage8": {
     "message": "Brave אינו יכול לשחזר את צירוף הגרעין שלך."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "הכל בוצע"
+  },
+  "endOfFlowMessage11": {
+    "message": "פורום תמיכה."
   },
   "externalExtension": {
     "message": "הרחבה חיצונית"
@@ -768,6 +786,9 @@
   "history": {
     "message": "היסטוריה"
   },
+  "home": {
+    "message": "בית"
+  },
   "import": {
     "message": "ייבוא",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "ייבא ארנק"
   },
   "importYourExisting": {
-    "message": "ייבא את הארנק הקיים שלך באמצעות צירוף גרעין של 24 מילים"
+    "message": "ייבא/י את הארנק הקיים שלך באמצעות ביטוי גרעין בן 12 או 24 מילים"
   },
   "imported": {
     "message": "מיובאות",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "אין מספיק טוקנים."
   },
+  "insufficientFundsGas": {
+    "message": "אין מספיק כספים לדלק. "
+  },
+  "balanceFetchError": {
+    "message": "שגיאת אחזור יתרה. "
+  },
   "invalidAddress": {
     "message": "כתובת לא חוקית"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "לא רשת ETH, מוגדר במצב אותיות קטנות"
   },
-  "invalidInput": {
-    "message": "קלט לא תקין."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "מזהה השרשרת של הרשת המותאמת אישית '$1' חסר.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "כדי להגן עליך מפני ספקי רשת זדוניים או פגומים, מזהי שרשרת נדרשים כעת עבור כל הרשתות המותאמות אישית."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "יש לעבור אל הגדרות > רשת ולהזין את מזהה השרשרת. ניתן למצוא את מזהי השרשרת של הרשתות הפופולריות ביותר ב-$1. ",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "רשת מותאמת אישית לא חוקית"
+  },
+  "invalidHexNumber": {
+    "message": "מספר הקסדצימלי לא חוקי."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "מספר הקסדצימלי לא חוקי. יש להסיר את כל האפסים המובילים."
   },
   "invalidRPC": {
     "message": "כתובת URL לא חוקית של RPC"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "שער IPFS לא חוקי: על הערך להיות כתובת URL חוקית"
+  },
+  "invalidNumber": {
+    "message": "מספר לא חוקי. יש להזין מספר עשרוני או הקסדצימלי. "
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "מספר לא חוקי. יש להסיר את כל האפסים המובילים. "
   },
   "forbiddenIpfsGateway": {
     "message": "שער IPFS אסור: נא לציין שער CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "רשת אתריום ראשית"
   },
+  "availableOnMainnetRopsten": {
+    "message": "זמין רק ב-mainnet ו-ropsten"
+  },
   "memorizePhrase": {
     "message": "יש לשנן צירוף זה."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "רשתות"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "מזהה השרשרת משמש לחתימת עסקאות. יש להזין מספר עשרוני או הקסדצימלי המתחיל ב-'0x'. "
+  },
   "networkSettingsDescription": {
     "message": "הוסף וערוך רשתות RPC מותאמות אישית"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "ספק רשת אתריום זדוני יכול לשקר לגבי מצב הבלוקצ'יין ולתעד את פעילות הרשת שלך. יש להוסיף רק רשתות מותאמות אישית שהנך בוטח/ת בהן."
-  },
-  "optionalChainId": {
-    "message": "ChainID (אופציונלי)"
   },
   "optionalSymbol": {
     "message": "סמל (אופציונלי)"
@@ -1144,7 +1197,7 @@
     "message": "כתובת הנמען"
   },
   "recipientAddressPlaceholder": {
-    "message": "חיפוש, כתובת ציבורית (0x), או ENS"
+    "message": "חיפוש, כתובת ציבורית (0x), או דומיין"
   },
   "rejectAll": {
     "message": "דחה הכל"
@@ -1265,7 +1318,7 @@
     "message": "אזהרה: לעולם אין לחשוף את צירוף הגיבוי שלך. כל מי שברשותו צירוף זה יכול לקחת את האת'ר שלך לצמיתות."
   },
   "secretPhrase": {
-    "message": "יש להזין כאן את הצירוף בן 24 המילים הסודי שלך כדי לשחזר את הכספת שלך."
+    "message": "יש להזין את הביטוי הסודי שלך בן 12 או 24 המילים כדי לשחזר את הכספת שלך."
   },
   "securityAndPrivacy": {
     "message": "אבטחה ופרטיות"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "שלח"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "שלח סכום"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "בקר/י במרכז התמיכה שלנו"
   },
+  "swapPrivacyPolicy": {
+    "message": "מדיניות הפרטיות של Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave משתמש ב-$1 כאגרגטור DEX. 0x יעבד את כתובת האת'ריום וכתובת ה-IP כדי לממש עסקה (כולל קבלת הצעות מחיר). 0x ישתמש אך ורק בנתונים אלה לצורך עיבוד עסקאות. "
+  },
   "symbol": {
     "message": "סמל"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "זה ייצור ארנק חדש וצירוף גרעין (seed phrase)"
+  },
+  "timeout": {
+    "message": "פסק זמן"
   },
   "tips": {
     "message": "טיפים"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "הגדרות Brave"
   },
+  "contractErrorMessage": {
+    "message": "אזהרה: הנך עומד/ת לשלוח נכס זה לחוזה חכם משלו. סביר להניח שאין בכוונתך לעשות זאת, מכיוון שזה עשוי להפוך את הנכס לבלתי ניתן לשחזור."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "ארנקי Crypto מאפשרים לך לעבוד עם מטבעות קריפטוגרפיים ונכסים קשורים ב- Brave. ארנקי Crypto תומכים בטוקני אתריום כמו ETH ו- BAT, כמו גם בפריטי אוספים, ומאפשרים לך לעבוד עם Ðapps וחוזים חכמים אחרים. כל זה מיועד לאנשים שמכירים את אתריום ומערכות בלוקצ'יין אחרות - או שנלהבים ללמוד."
   },
@@ -1784,7 +1852,7 @@
     "message": "חבר/י את ארנק החומרה Ledger שלך כדי לתקשר עם dApps ולבצע העברות לארנקים מחוברים אחרים."
   },
   "metamaskImportSubText": {
-    "message": "הערה: בייבוא מארנק Metamask, יש להזין 12 מילים במקום 24."
+    "message": "הערה: בעת ייבוא מארנקי קריפטו גרסה 1.0.26 או גרסה קודמת יותר, הביטוי הסודי שלך הוא בן 24 מילים במקום 12. "
   },
   "newLocalWallet": {
     "message": "ארנק מקומי חדש"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "ברוכים הבאים לארנקי קריפטו Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "מחכה לאישור."
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "કસ્ટમાઇઝ કરો"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Slippage Tolerance"
   },
   "assets": {
     "message": "Assets"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Contact us!"
   },
+  "continueToSwap": {
+    "message": "Continue to Swap"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "support forum."
   },
   "externalExtension": {
     "message": "External Extension"
@@ -768,6 +786,9 @@
   "history": {
     "message": "ઇતિહાસ"
   },
+  "home": {
+    "message": "હોમ"
+  },
   "import": {
     "message": "આયાત કરો",
     "description": "Button to import an account from a selected file"
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Insufficient tokens."
   },
+  "insufficientFundsGas": {
+    "message": "Insufficient funds for gas."
+  },
+  "balanceFetchError": {
+    "message": "Balance fetch error."
+  },
   "invalidAddress": {
     "message": "Invalid address"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Invalid input."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "The custom network '$1' is missing its chain ID.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "To protect you from malicious or faulty network providers, chain IDs are now required for all custom networks."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Go to Settings > Network and enter the chain ID. You can find the chain IDs of most popular networks on $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Invalid Custom Network"
+  },
+  "invalidHexNumber": {
+    "message": "Invalid hexadecimal number."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Invalid hexadecimal number. Remove any leading zeros."
   },
   "invalidRPC": {
     "message": "Invalid RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Invalid IPFS Gateway: The value must be a valid URL"
+  },
+  "invalidNumber": {
+    "message": "Invalid number. Enter a decimal or hexadecimal number."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Invalid number. Remove any leading zeros."
   },
   "forbiddenIpfsGateway": {
     "message": "Forbidden IPFS Gateway: Please specify a CID gateway"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Main Ethereum Network"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Only available on mainnet and ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Networks"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "The chain ID is used for signing transactions. Enter a decimal or hexadecimal number starting with '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "A malicious Ethereum network provider can lie about the state of the blockchain and record your network activity. Only add custom networks you trust."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1312,6 +1365,9 @@
   "send": {
     "message": "મોકલો"
   },
+  "swap": {
+    "message": "Swap"
+  },
   "sendAmount": {
     "message": "Send Amount"
   },
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visit our Support Center"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swap Privacy Policy"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave uses $1 as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Timeout"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave Settings"
   },
+  "contractErrorMessage": {
+    "message": "Warning: You are about to send this asset to its own smart contract. You probably don't mean to do this, as it will likely render the asset unrecoverable."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets lets you work with cryptocurrency and related assets in Brave. Crypto Wallets supports Ethereum tokens like ETH and BAT, as well as collectibles, and lets you work with Ðapps and other smart contracts. All this is meant for people who are familiar with Ethereum and other blockchain systems — or are excited to learn."
   },
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Welcome to Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Waiting for confirmation."
   }
 }

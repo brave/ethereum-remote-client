@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Разширени опции"
   },
+  "customizeGas": {
+    "message": "Персонализиране"
+  },
   "addToAddressBook": {
     "message": "Добавяне към адресната книга"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Актив"
+  },
+  "maker": {
+    "message": "Създател"
+  },
+  "taker": {
+    "message": "Маркет-тейкър"
+  },
+  "slippage": {
+    "message": "Толерантност към слипидж"
   },
   "assets": {
     "message": "Активи"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Свържете се с нас!"
   },
+  "continueToSwap": {
+    "message": "Продължете към Swap"
+  },
   "continueToWyre": {
     "message": "Продължете към Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Ако отново трябва да архивирате основната си фраза, можете да я намерите в Настройки -> Защита."
   },
   "endOfFlowMessage7": {
-    "message": "Ако някога имате въпроси или видите нещо необичайно, изпратете имейл на support@brave.com."
+    "message": "Ако някога имате въпроси или видите нещо съмнително, посетете нашия портфейл"
   },
   "endOfFlowMessage8": {
     "message": "Brave не може да възстанови вашата сийд фраза."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Всичко е готово"
+  },
+  "endOfFlowMessage11": {
+    "message": "форум за поддръжка."
   },
   "externalExtension": {
     "message": "Външно разширение"
@@ -768,6 +786,9 @@
   "history": {
     "message": "История"
   },
+  "home": {
+    "message": "Начална страница"
+  },
   "import": {
     "message": "Импортиране",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Импортиране на портфейл"
   },
   "importYourExisting": {
-    "message": "Импортирайте съществуващия си портфейл, като използвате сийд фраза от 24 думи"
+    "message": "Импортирайте съществуващия портфейл с помощта на кодова фраза от 12 или 24 думи"
   },
   "imported": {
     "message": "Импортирани",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Недостатъчен брой жетони."
   },
+  "insufficientFundsGas": {
+    "message": "Недостатъчни средства за газ."
+  },
+  "balanceFetchError": {
+    "message": "Грешка при извличане на салдотол."
+  },
   "invalidAddress": {
     "message": "Невалиден адрес"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Не е ETH мрежа, задаване на малки букви"
   },
-  "invalidInput": {
-    "message": "Невалидно въвеждане."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "На персонализираната мрежа '$1' липсва идентификатора на веригата ѝ.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "За да Ви предпазим от злонамерени или дефектни мрежови доставчици, сега се изискват идентификатори на вериги за всички потребителски мрежи."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Отидете в Настройки > Мрежа и въведете идентификатора на веригата. Можете да намерите идентификаторите на веригата на най-популярните мрежи на $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Невалидна персонализирана мрежа"
+  },
+  "invalidHexNumber": {
+    "message": "Невалидно шестнадесетично число."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Невалидно шестнадесетично число. Премахнете всички водещи нули."
   },
   "invalidRPC": {
     "message": "Невалиден RPC URL адрес"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Невалиден IPFS шлюз: Стойността трябва да е валиден URL адрес"
+  },
+  "invalidNumber": {
+    "message": "Невалидно число. Въведете десетично или шестнадесетично число."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Невалидно число. Премахнете всички водещи нули."
   },
   "forbiddenIpfsGateway": {
     "message": "Забранен IPFS шлюз: Моля, посочете CID шлюз"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Основна мрежа на Етереум"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Достъпни само на основната мрежа и ropsten"
+  },
   "memorizePhrase": {
     "message": "Запомнете тази фраза."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Mрежи"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "ID на веригата се използва за подписване на транзакции. Въведете десетично или шестнадесетично число, започващо с „0x“."
+  },
   "networkSettingsDescription": {
     "message": "Добавете и редактирайте персонализирани RPC мрежи"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Злонамерен доставчик на мрежа Ethereum може да лъже за състоянието на блокчейна и да записва вашата мрежова активност. Добавяйте само персонализирани мрежи, на които имате доверие."
-  },
-  "optionalChainId": {
-    "message": "ChainID (по избор)"
   },
   "optionalSymbol": {
     "message": "Символ (по избор)"
@@ -1144,7 +1197,7 @@
     "message": "Адрес на получателя"
   },
   "recipientAddressPlaceholder": {
-    "message": "Търсене, публичен адрес (0x) или ENS"
+    "message": "Търсене, публичен адрес (0x) или домейн"
   },
   "rejectAll": {
     "message": "Отхвърлете всички"
@@ -1265,7 +1318,7 @@
     "message": "ВНИМАНИЕ: Никога не разкривайте резервната си фраза. Всеки с тази фраза може да вземе вашия етер завинаги."
   },
   "secretPhrase": {
-    "message": "Въведете тайната си фраза от 24 думи тук, за да възстановите сейфа си."
+    "message": "Въведете тайната си фраза от 12 или 24 думи, за да възстановите трезора си."
   },
   "securityAndPrivacy": {
     "message": "Сигурност и поверителност"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Изпращане"
+  },
+  "swap": {
+    "message": "Замяна"
   },
   "sendAmount": {
     "message": "Изпратете сумата"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Посетете нашия център за поддръжка"
   },
+  "swapPrivacyPolicy": {
+    "message": "Декларация за поверителност на Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave използва $1 като агрегатор на DEX. 0x ще обработи Етириум адреса и IP адреса, за да изпълни транзакция (включително получаване на котировки). 0x ще използва само тези данни за целите на обработката на транзакции."
+  },
   "symbol": {
     "message": "Символ"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Това ще създаде нова фраза за портфейл и зародиш"
+  },
+  "timeout": {
+    "message": "Време за изчакване"
   },
   "tips": {
     "message": "Дарения"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Настройки на Brave"
   },
+  "contractErrorMessage": {
+    "message": "Предупреждение: предстои да изпратите този актив към неговия собствен интелигентен договор. Вероятно нямате намерение да направите това, защото това вероятно ще направи актива невъзстановим."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets ви позволява да работите с криптовалута и свързани активи в Brave. Crypto Wallets поддържа токени на Ethereum като ETH и BAT, както и колекционерски елементи, и ви позволява да работите с Ðapps и други интелигентни договори. Всичко това е предназначено за хора, които са запознати с Ethereum и други блокчейн системи — или са развълнувани да научат."
   },
@@ -1784,7 +1852,7 @@
     "message": "Свържете хардуерния си портфейл Ledger, за да взаимодействате с dApps и да прехвърляте към други свързани портфейли. "
   },
   "metamaskImportSubText": {
-    "message": "Забележка: Ако импортирате от портфейла на Metamask, въведете 12 думи вместо 24."
+    "message": "Забележка: ако импортирате от крипто портфейли, версия 1.0.26 или по-ранно, Вашата тайна фраза е 24 думи вместо 12."
   },
   "newLocalWallet": {
     "message": "Нов местен портфейл"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Добре дошли в Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Изчаква потвърждение."
   }
 }

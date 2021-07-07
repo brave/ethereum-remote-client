@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Přizpůsobit"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Výrobce"
+  },
+  "taker": {
+    "message": "Příjemce"
+  },
+  "slippage": {
+    "message": "Tolerance skluzu"
   },
   "assets": {
     "message": "Aktiva"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Kontaktujte nás!"
   },
+  "continueToSwap": {
+    "message": "Pokračovat ve výměně"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "Pokud budete mít v budoucnu dotazy nebo zaznamenáte něco podezřelého, ozvěte se e-mailem na adresu support@brave.com."
+    "message": "Pokud byste kdykoli měli otázky nebo zpozorovali něco, co nehraje, navštivte naši peněženku"
   },
   "endOfFlowMessage8": {
     "message": "Brave nemůže obnovit vaši frázi seedu."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "fórum podpory."
   },
   "externalExtension": {
     "message": "Externí rozšíření"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Domovská stránka"
+  },
   "import": {
     "message": "Import",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Import peněženky"
   },
   "importYourExisting": {
-    "message": "Importujte svou stávající peněženku pomocí fráze seedu obsahující 24 slov"
+    "message": "Importujte svou existující peněženku pomocí 12- nebo 24slovné počáteční fráze"
   },
   "imported": {
     "message": "Importováno",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Nedostatek tokenů."
   },
+  "insufficientFundsGas": {
+    "message": "Nedostatečné finanční prostředky na plyn."
+  },
+  "balanceFetchError": {
+    "message": "Chyba načítání zůstatku."
+  },
   "invalidAddress": {
     "message": "Neplatná adresa"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Neplatný vstup."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Vlastní síti „$1“ chybí její ID řetězce.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Abychom vás ochránili před škodlivými nebo nefunkčními poskytovateli sítí, jsou nyní pro všechny vlastní sítě vyžadována ID řetězců."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Jděte do Nastavení > Síť a vložte ID řetězce. ID řetězců nejoblíbenějších sítí najdete na $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Neplatná vlastní síť"
+  },
+  "invalidHexNumber": {
+    "message": "Neplatné šestnáctkové číslo."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Neplatné šestnáctkové číslo. Odeberte veškeré počáteční nuly."
   },
   "invalidRPC": {
     "message": "Neplatné RPC URI"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Neplatná brána IPFS: Hodnota musí být platná adresa URL"
+  },
+  "invalidNumber": {
+    "message": "Neplatné číslo. Vložte desítkové nebo šestnáctkové číslo."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Neplatné číslo. Odeberte veškeré počáteční nuly."
   },
   "forbiddenIpfsGateway": {
     "message": "Zakázaná brána IPFS: Určete prosím bránu CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Main Ethereum Network"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Dostupné pouze na mainnetu a ropstenu"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Sítě"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Toto ID řetězce je využíváno pro podepisování transakcí. Vložte desítkové nebo šestnáctkové číslo začínající na „0x“."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Škodlivý poskytovatel sítě Ethereum může lhát o stavu blockchainu a zaznamenávat vaši aktivitu v síti. Přidávejte pouze vlastní sítě, kterým důvěřujete."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "Adresa příjemce"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Vyhledávat veřejnou adresu (0x) nebo doménu"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "Sem zadejte svou tajnou frázi obsahující 24 slov pro obnovení elektronické schránky."
+    "message": "Pro obnovení svého trezoru vložte svou tajnou 12- nebo 24slovnou větu."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Odeslat"
+  },
+  "swap": {
+    "message": "Vyměnit"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Navštivte naše centrum podpory"
   },
+  "swapPrivacyPolicy": {
+    "message": "Zásady soukromí při výměně"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave používá $1 jako agregátor DEX. 0x zpracuje adresu kryptoměny Ethereum a IP adresu za účelem provedení transakce (včetně získání nabídek). Společnost 0x tyto údaje použije POUZE pro účely zpracování transakcí."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Časový limit"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Nastavení prohlížeče Brave"
   },
+  "contractErrorMessage": {
+    "message": "Varování: Chystáte se odeslat tyto prostředky do vlastní inteligentní smlouvy. Pravděpodobně to udělat nechcete, neboť to nejspíš způsobí, že prostředky nepůjdou obnovit."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Komponenta Kryptopeněženky vám umožní pracovat s kryptoměnou a souvisejícími aktivy v aplikaci Brave. Komponenta Kryptopeněženky podporuje tokeny Ethereum, jako jsou například ETH a BAT, a také sběratelské předměty a umožňuje vám pracovat s aplikacemi Ðapps a dalšími chytrými smlouvami. Vše uvedené výše je určeno pro lidi, kteří jsou obeznámeni s měnou Ethereum a dalšími blockchainovými systémy – nebo se s nimi chtějí seznámit."
   },
@@ -1784,7 +1852,7 @@
     "message": "Připojte svou hardwarovou peněženku Ledger pro interakci s dApps a provádění převodů na ostatní připojené peněženky."
   },
   "metamaskImportSubText": {
-    "message": "Poznámka: Pokud importujete z peněženky Metamask, zadejte 12 slov místo 24."
+    "message": "Poznámka: Pokud importujete z Crypto Wallets verze 1.0.26 nebo dřívější, vaše tajná věta má 24 slov místo 12."
   },
   "newLocalWallet": {
     "message": "Nová lokální peněženka"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Vítejte v Kryptopeněženkách Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "Čekání na potvrzení."
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Настроить"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Мейкер"
+  },
+  "taker": {
+    "message": "Тейкер"
+  },
+  "slippage": {
+    "message": "Допуск по проскальзыванию"
   },
   "assets": {
     "message": "Активы"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Свяжитесь с нами!"
   },
+  "continueToSwap": {
+    "message": "Перейти к свопу"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "Если у возникнут вопросы или вы увидите что-то подозрительное, напишите на support@brave.com."
+    "message": "Если у вас возникнут вопросы или вы заметите что-то подозрительное, зайдите в наш кошелек"
   },
   "endOfFlowMessage8": {
     "message": "Brave не может восстановить вашу начальную фразу."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "форум поддержки."
   },
   "externalExtension": {
     "message": "Внешнее расширение"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Главная страница"
+  },
   "import": {
     "message": "Импортировать",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Импорт кошелька"
   },
   "importYourExisting": {
-    "message": "Импортируйте свой существующий кошелек, используя начальную фразу из 24 слов"
+    "message": "Импортируйте существующий кошелек, используя сид-фразу из 12 или 24 слов."
   },
   "imported": {
     "message": "Импортирован",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Недостаточно токенов."
   },
+  "insufficientFundsGas": {
+    "message": "Недостаточно средств на газ."
+  },
+  "balanceFetchError": {
+    "message": "Ошибка получения баланса."
+  },
   "invalidAddress": {
     "message": "Неверный адрес"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Неверный ввод."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "У пользовательской сети «$1» отсутствует идентификатор цепочки.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Идентификаторы цепочек теперь требуются для всех пользовательских сетей, чтобы защитить вас от злонамеренных или ненадежных провайдеров сетей."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Перейдите в «Настройки»> «Сеть» и укажите идентификатор цепочки. Вы можете найти идентификаторы наиболее популярных сетей в $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Неверная пользовательская сеть"
+  },
+  "invalidHexNumber": {
+    "message": "Неверное шестнадцатеричное число."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Неверное шестнадцатеричное число. Удалите все ведущие нули."
   },
   "invalidRPC": {
     "message": "Неверный RPC URI"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Недействительный шлюз IPFS: значение должно быть действительным URL-адресом"
+  },
+  "invalidNumber": {
+    "message": "Неверный номер. Укажите десятичное или шестнадцатеричное число."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Неправильный номер. Удалите все ведущие нули."
   },
   "forbiddenIpfsGateway": {
     "message": "Запрещенный шлюз IPFS: пожалуйста, укажите шлюз CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Основная сеть Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Доступно только в основной сети и ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Сети"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Идентификатор цепочки используется для подписания транзакций. Укажите десятичное или шестнадцатеричное число, начинающееся с «0x»."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Вредоносный поставщик сети Ethereum может лгать о состоянии блокчейна и записывать вашу сетевую активность. Добавляйте только те пользовательские сети, которым доверяете."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "Адрес получателя"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Поиск, публичный адрес (0x) или домен"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "Введите секретную фразу из 24 слов для восстановления вашего хранилища."
+    "message": "Укажите секретную фразу из 12 или 24 слов, чтобы восстановить хранилище."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Отправить"
+  },
+  "swap": {
+    "message": "Своп"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Перейти в наш Центр поддержки"
   },
+  "swapPrivacyPolicy": {
+    "message": "Политика конфиденциальности свопа"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave использует $1 в качестве агрегатора DEX. 0x обработает Ethereum-адрес и IP-адрес для выполнения транзакции (включая получение цены). 0x будет использовать эти данные ТОЛЬКО для обработки транзакций."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Тайм-аут"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Настройки Brave"
   },
+  "contractErrorMessage": {
+    "message": "Внимание: вы собираетесь отправить этот актив на его смарт-контракт. Вы, вероятно, не хотели этого делать, так как после этого актив скорее всего нельзя будет вернуть."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Крипто-кошельки позволяют работать с криптовалютой и соответствующими активами в Brave. Крипто-кошельки поддерживают токены Ethereum, такие как ETH и BAT, а также предметы коллекционирования, и позволяют работать с Ðapps и другими смарт-контрактами. Все это предназначено для людей, которые знакомы с Ethereum и другими системами блокчейнов –или хотят обучиться работе с ними."
   },
@@ -1784,7 +1852,7 @@
     "message": "Подключите свой кошелек Ledger, чтобы взаимодействовать с dApps и совершать переводы на другие подключенные кошельки."
   },
   "metamaskImportSubText": {
-    "message": "Примечание: если импортирование выполняется из кошелька Metamask, введите 12 слов вместо 24."
+    "message": "Примечание: при импорте из криптокошельков версии 1.0.26 или меньше ваша секретная фраза будет состоять из 24 слов вместо 12."
   },
   "newLocalWallet": {
     "message": "Новый локальный кошелек"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Добро пожаловать в криптовалютные кошельки Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "Ожидание подтверждения."
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Options avancées"
   },
+  "customizeGas": {
+    "message": "Personnaliser"
+  },
   "addToAddressBook": {
     "message": "Ajouter au carnet d'adresses\n"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Actif"
+  },
+  "maker": {
+    "message": "Créateur"
+  },
+  "taker": {
+    "message": "Preneur"
+  },
+  "slippage": {
+    "message": "Tolérance de retard"
   },
   "assets": {
     "message": "Actifs"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Contactez-nous !"
   },
+  "continueToSwap": {
+    "message": "Continuer l'échange"
+  },
   "continueToWyre": {
     "message": "Continuer vers Wyre\n"
   },
@@ -557,7 +572,7 @@
     "message": "Si vous avez besoin de sauvegarder à nouveau votre phrase de départ, vous pouvez la trouver dans Paramètres -> Sécurité.\n"
   },
   "endOfFlowMessage7": {
-    "message": "Si vous avez des questions ou si vous trouvez quelque chose louche, envoyez un e-mail à support@brave.com"
+    "message": "Si vous avez des questions ou si vous voyez quelque chose de suspect, veuillez visiter notre portefeuille"
   },
   "endOfFlowMessage8": {
     "message": "Brave ne peut pas récupérer votre phrase mnémonique."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Tout est terminé\n"
+  },
+  "endOfFlowMessage11": {
+    "message": "forum d'assistance."
   },
   "externalExtension": {
     "message": "Extension externe"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historique"
   },
+  "home": {
+    "message": "Accueil"
+  },
   "import": {
     "message": "Importer",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importer le portefeuille"
   },
   "importYourExisting": {
-    "message": "Importez votre portefeuille existant en utilisant une phrase mnémonique de 24 mots"
+    "message": "Importez votre portefeuille existant en utilisant une phrase mnémotechnique de 12 ou 24 mots"
   },
   "imported": {
     "message": "Importé",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Insufficient tokens."
   },
+  "insufficientFundsGas": {
+    "message": "Fonds insuffisants pour la transaction."
+  },
+  "balanceFetchError": {
+    "message": "Erreur de récupération du solde."
+  },
   "invalidAddress": {
     "message": "Adresse invalide"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Pas de réseau ETH, régler en minuscules"
   },
-  "invalidInput": {
-    "message": "Saisie non valide."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Le réseau personnalisé « $1 » n'a pas son identifiant de chaîne.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Pour vous protéger des fournisseurs de réseaux malveillants ou défectueux, les identifiants de chaîne sont désormais obligatoires pour tous les réseaux personnalisés."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Rendez-vous dans Paramètres > Réseau et saisissez l'identifiant de la chaîne. Vous trouverez les identifiants de chaîne des réseaux les plus populaires sur $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Réseau personnalisé non valide"
+  },
+  "invalidHexNumber": {
+    "message": "Nombre hexadécimal non valide."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Nombre hexadécimal non valide. Veuillez supprimer les zéros de tête."
   },
   "invalidRPC": {
     "message": "URL RPC invalide"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Passerelle IPFS invalide : la valeur doit être une URL valide"
+  },
+  "invalidNumber": {
+    "message": "Numéro non valide. Veuillez saisir un nombre décimal ou hexadécimal."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Numéro non valide. Veuillez supprimer les zéros de tête."
   },
   "forbiddenIpfsGateway": {
     "message": "Passerelle IPFS interdite : veuillez spécifier une passerelle CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Réseau principal Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Disponible uniquement sur mainnet et ropsten"
+  },
   "memorizePhrase": {
     "message": "Mémorisez cette phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Réseaux"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "L'identifiant de la chaîne est utilisé pour signer les transactions. Veuillez saisir un nombre décimal ou hexadécimal commençant par « 0x »."
+  },
   "networkSettingsDescription": {
     "message": "Ajoutez et modifiez des réseaux RPC personnalisés\n"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un fournisseur de réseau Ethereum malveillant peut mentir sur l'état de la chaîne de bloc et enregistrer votre activité sur le réseau. N'ajoutez que des réseaux personnalisés auxquels vous faites confiance."
-  },
-  "optionalChainId": {
-    "message": "ChainID (facultatif)"
   },
   "optionalSymbol": {
     "message": "Symbole (facultatif)\n"
@@ -1144,7 +1197,7 @@
     "message": "Adresse du destinataire"
   },
   "recipientAddressPlaceholder": {
-    "message": "Recherche, adresse publique (0x) ou ENS"
+    "message": "Recherche, adresse publique (0x), ou domaine"
   },
   "rejectAll": {
     "message": "Tout rejeter"
@@ -1265,7 +1318,7 @@
     "message": "AVERTISSEMENT : ne révélez jamais votre phrase de sauvegarde. N'importe qui avec cette phrase peut voler votre Ether pour toujours.\n"
   },
   "secretPhrase": {
-    "message": "Saisissez ici votre phrase secrète de 24 mots pour restaurer votre coffre-fort."
+    "message": "Saisissez votre phrase secrète de 12 ou 24 mots pour restaurer votre coffre-fort."
   },
   "securityAndPrivacy": {
     "message": "Sécurité et confidentialité"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Envoyer"
+  },
+  "swap": {
+    "message": "Échanger"
   },
   "sendAmount": {
     "message": "Envoyer le montant"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visitez notre centre d'aide"
   },
+  "swapPrivacyPolicy": {
+    "message": "Politique de confidentialité de l'échange"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave utilise $1 comme agrégateur DEX. 0x traitera l'adresse Ethereum et l'adresse IP pour effectuer une transaction (y compris pour obtenir des devis). 0x utilisera ces données UNIQUEMENT dans le but de traiter les transactions."
+  },
   "symbol": {
     "message": "Symbole\n"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Cela créera un nouveau portefeuille et une nouvelle phrase mnémotechnique"
+  },
+  "timeout": {
+    "message": "Pause"
   },
   "tips": {
     "message": "Dons"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Paramètres de Brave"
   },
+  "contractErrorMessage": {
+    "message": "Attention : vous êtes sur le point d'envoyer cet actif à son propre contrat intelligent. Vous n'avez probablement pas l'intention de le faire, car cela peut rendre l'actif irrécupérable."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets vous permet de travailler avec la cryptoconnaie et les actifs connexes dans Brave. Crypto Wallets prend en charge les jetons Ethereum comme ETH et BAT, ainsi que les objets de collection, et vous permet de travailler avec des Ðapps et autres contrats intelligents. Tous ces outils sont destinés aux personnes qui connaissent bien Ethereum et d'autres systèmes de chaînes de blocs, ou qui sont désireuses d'apprendre."
   },
@@ -1784,7 +1852,7 @@
     "message": "Connectez votre portefeuille matériel Ledger pour interagir avec dApps et effectuer des transferts vers d'autres portefeuilles connectés.\n"
   },
   "metamaskImportSubText": {
-    "message": "Remarque : si vous importez à partir d'un portefeuille Metamask, saisissez 12 mots au lieu de 24."
+    "message": "Remarque : si vous importez à partir de portefeuilles de cryptomonnaie version 1.0.26 ou antérieure, votre phrase secrète est de 24 mots au lieu de 12."
   },
   "newLocalWallet": {
     "message": "Nouveau portefeuille local\n"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Bienvenue sur le site des portefeuilles de crypto-monnaies Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "En attente de confirmation."
   }
 }

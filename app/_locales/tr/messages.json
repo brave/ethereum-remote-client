@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Advanced Options"
   },
+  "customizeGas": {
+    "message": "Özelleştir"
+  },
   "addToAddressBook": {
     "message": "Add to address book"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Varlık"
+  },
+  "maker": {
+    "message": "Yapıcı"
+  },
+  "taker": {
+    "message": "Müşteri"
+  },
+  "slippage": {
+    "message": "Slipaj"
   },
   "assets": {
     "message": "Varlıklar"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Bizimle İletişime Geçin!"
   },
+  "continueToSwap": {
+    "message": "Takasa devam et"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Eğer anahtar cümlenizi tekrar yedeklemek isterseniz, Ayarlar -> Güvenlik bölümünde bulabilirsiniz."
   },
   "endOfFlowMessage7": {
-    "message": "Sorunuz veya şüphelendiğiniz bir şey olursa, support@brave.com'a e-posta gönderin."
+    "message": "Sorularınız olursa veya şüpheli bir şey görürseniz cüzdanımızı ziyaret edin."
   },
   "endOfFlowMessage8": {
     "message": "Brave kaynak ifadenizi kurtaramaz."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "All Done"
+  },
+  "endOfFlowMessage11": {
+    "message": "destek forumu."
   },
   "externalExtension": {
     "message": "Harici Eklenti"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "Ana Sayfa"
+  },
   "import": {
     "message": "Al",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Cüzdanı İçe Aktarın"
   },
   "importYourExisting": {
-    "message": "24 kelimelik bir seed phrase kullanarak mevcut bir cüzdanınızı içe aktarın"
+    "message": "12 veya 24 kelimelik bir tohum cümlesi kullanarak mevcut cüzdanınızı içe aktarın"
   },
   "imported": {
     "message": "Alındı",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Yetersiz Jeton."
   },
+  "insufficientFundsGas": {
+    "message": "Gaz için yetersiz fon."
+  },
+  "balanceFetchError": {
+    "message": "Bakiye alma hatası."
+  },
   "invalidAddress": {
     "message": "Geçersiz adres"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "Geçersiz giriş."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "'$1' özel ağının zincir kimliği eksik.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Sizi kötü niyetli veya hatalı ağ sağlayıcılarından korumak için artık tüm özel ağlarda zincir kimlikleri zorunlu."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Ayarlar > Ağ'a gidin ve zincir kimliğini girin. En popüler ağların zincir kimliklerini $1'de bulabilirsiniz.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Geçersiz Özel Ağ"
+  },
+  "invalidHexNumber": {
+    "message": "Geçersiz onaltılık sayı."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Geçersiz onaltılık sayı. Baştaki sıfırları kaldırın."
   },
   "invalidRPC": {
     "message": "Geçersiz RPC URI"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Geçersiz IPFS Geçidi: Değer geçerli bir uzantı olmalı"
+  },
+  "invalidNumber": {
+    "message": "Geçersiz numara. Ondalık veya onaltılık bir sayı girin."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Geçersiz numara. Baştaki sıfırları kaldırın."
   },
   "forbiddenIpfsGateway": {
     "message": "Yasaklı IPFS Geçidi: Lütfen bir CID geçidi belirtin"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Main Ethereum Ağı"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Yalnızca mainnet ve ropsten'da mevcut"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Ağlar"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Zincir kimliği, işlemleri imzalamak için kullanılır. '0x' ile başlayan bir ondalık veya onaltılık sayı girin."
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Kötü amaçlı bşr Ethereum ağ sunucusu, blok zincirinin durumu hakkında yalan söyleyebilir ve ağ faaliyetinizi kaydedebilir. Sadece güvendiğiniz özel ağları ekleyin."
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "Alıcı adresi"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "Arama, genel adres (0x) veya alan adı"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "Kasanızı eski konuma getirmek için 24 kelimeli gizli ifadenizi buraya girin."
+    "message": "Kasanızı geri yüklemek için 12 veya 24 kelimelik gizli ifadenizi girin."
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Gönder"
+  },
+  "swap": {
+    "message": "Takas"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Destek merkezimizi ziyaret edin"
   },
+  "swapPrivacyPolicy": {
+    "message": "Takas Gizlilik Politikası"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave, DEX toplayıcı olarak $1 kullanır. 0x, bir işlemi gerçekleştirmek için (teklif almak dahil) Ethereum adresini ve IP adresini işleyecektir. 0x, bu verileri YALNIZCA işlemlerin işlenmesi amacıyla kullanacaktır."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
+  },
+  "timeout": {
+    "message": "Zaman Aşımı"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave Ayarları"
   },
+  "contractErrorMessage": {
+    "message": "Uyarı: Bu varlığı kendi akıllı sözleşmesine göndermek üzeresiniz. Muhtemelen bunu yapmak istemezsiniz, çünkü bu, varlığı kurtarılamaz hale getirecektir."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Kripto Cüzdanlar, Brave'deki kripto para biriminiz ve ilgili varlıklarınızı yönetmenize izin verir. Kripto Cüzdanlar, koleksiyonların yanı sıra ETH ve BAT gibi Ethereum paralarını destekler ve Dapps ile diğer akıllı kontratları yönetmenize imkan sağlar. Bunların hepsi, Ethereum'a ve diğer blok zinciri sistemlerine aşina olanlar — veya öğrenmeye istekli olanlar içindir."
   },
@@ -1784,7 +1852,7 @@
     "message": "dApps ile etkileşime geçmek ve diğer bağlı cüzdanlara havale yapmak için Ledger donanım cüzdanınızı bağlayın."
   },
   "metamaskImportSubText": {
-    "message": "Not: Metamask cüzdandan içeri aktarım yapıyorsanız, 24 yerine 12 kelime girin."
+    "message": "Not: Crypto Wallets Versiyon 1.0.26 veya önceki sürümlerden içe aktarıyorsanız, gizli ifadeniz 12 yerine 24 kelimedir."
   },
   "newLocalWallet": {
     "message": "Yeni Yerel Cüzdan"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Brave Kripto Cüzdan'a Hoşgeldiniz"
+  },
+  "waitingForConfirmation": {
+    "message": "Onay bekleniyor."
   }
 }

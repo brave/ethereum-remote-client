@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Avancerade alternativ"
   },
+  "customizeGas": {
+    "message": "Anpassa"
+  },
   "addToAddressBook": {
     "message": "Lägg till i adressbok"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Tillgång"
+  },
+  "maker": {
+    "message": "Skapare"
+  },
+  "taker": {
+    "message": "Tagare"
+  },
+  "slippage": {
+    "message": "Tolererade transaktionskostnader"
   },
   "assets": {
     "message": "Tillgångar"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Kontakta oss!"
   },
+  "continueToSwap": {
+    "message": "Fortsätt till swap"
+  },
   "continueToWyre": {
     "message": "Fortsätt till Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Om du behöver säkerhetskopiera din nyckelfras igen, kan du hitta den i Inställningar -> Säkerhet"
   },
   "endOfFlowMessage7": {
-    "message": "Om du någonsin har frågor eller ser något misstänkt, ​​mejla support@brave.com."
+    "message": "Om du har någon fråga eller ser något lurt kan du gå till vår plånbok"
   },
   "endOfFlowMessage8": {
     "message": "Brave kan inte återställa din seed phrase."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Allt klart"
+  },
+  "endOfFlowMessage11": {
+    "message": "supportforum."
   },
   "externalExtension": {
     "message": "Externt tillägg"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historik"
   },
+  "home": {
+    "message": "Startsida"
+  },
   "import": {
     "message": "Importera",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importera plånbok"
   },
   "importYourExisting": {
-    "message": "Importera din befintliga plånbok med en seed phrase på 24 ord"
+    "message": "Importera din befintliga plånbok med en fras bestående av 12 eller 24 ord"
   },
   "imported": {
     "message": "Importerade",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Otillräckligt med token."
   },
+  "insufficientFundsGas": {
+    "message": "Pengarna räcker inte till bensin."
+  },
+  "balanceFetchError": {
+    "message": "Saldo kunde inte hämtas."
+  },
   "invalidAddress": {
     "message": "Ogiltig adress"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ej ETH-nätverk, ange med små bokstäver"
   },
-  "invalidInput": {
-    "message": "Ogiltigt input."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Det anpassade nätverket ”$1” saknar kedjenummer.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "För att skydda dig mot skadliga eller bristfälliga nätverk krävs nu kedjenummer för samtliga anpassade nätverk."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Gå till Inställningar > Nätverk och mata in kedjenumret. Du hittar de flesta populära nätverkens kedjenummer på $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Ogiltigt anpassat nätverk"
+  },
+  "invalidHexNumber": {
+    "message": "Ogiltigt hexadecimalt tal."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Ogiltigt hexadecimalt tal. Avlägsna alla ledande nollor."
   },
   "invalidRPC": {
     "message": "Ogiltig RPC-URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Ogiltig IPFS-gateway: Värdet måste vara en giltig URL"
+  },
+  "invalidNumber": {
+    "message": "Ogiltigt tal. Mata in ett tal i det decimala eller hexadecimala systemet."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Ogiltigt tal. Avlägsna alla ledande nollor."
   },
   "forbiddenIpfsGateway": {
     "message": "Förbjuden IPFS-gateway: Ange en CID-gateway"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Ethereums huvudnätverk"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Endast tillgängligt på mainnet och ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorera denna fras."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Nätverk"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Kedjenumret används för att signera transaktioner. Mata in ett tal i det decimala eller hexadecimala systemet som börjar med ”0x”."
+  },
   "networkSettingsDescription": {
     "message": "Lägg till och redigera RPC-nätverk"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "En illvillig leverantör av Ethereum-nätverk kan ljuga om blockkedjans tillstånd och övervaka din aktivitet. Lägg bara till nätverk som du litar på."
-  },
-  "optionalChainId": {
-    "message": "ChainID (frivilligt)"
   },
   "optionalSymbol": {
     "message": "Symbol (valfritt)"
@@ -1144,7 +1197,7 @@
     "message": "Mottagaradress"
   },
   "recipientAddressPlaceholder": {
-    "message": "Sök, allmän adress (0x) eller ENS"
+    "message": "Sök, offentlig adress (0x) eller domän"
   },
   "rejectAll": {
     "message": "Neka alla"
@@ -1265,7 +1318,7 @@
     "message": "VARNING: avslöja aldrig din backup-fras. Någon som känner till denna fras kan ta dina Ether för alltid."
   },
   "secretPhrase": {
-    "message": "Ange din hemliga 24-ordsfras här för att återställa ditt valv."
+    "message": "Ange din hemliga fras bestående av 12 eller 24 ord för att återställa ditt valv."
   },
   "securityAndPrivacy": {
     "message": "Säkerhet och integritet"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Skicka"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Skicka belopp"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Besök vårt supportcenter"
   },
+  "swapPrivacyPolicy": {
+    "message": "Sekretesspolicy för swappar"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave använder $1 som DEX-aggregator. 0x kommer att behandla Ethereum-adressen och IP-numret för att genomföra en transaktion (samt att få offerter). 0x kommer att använda dessa data ENDAST till att hantera transaktioner."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Detta kommer att skapa en ny plånbok och seed phrase"
+  },
+  "timeout": {
+    "message": "Tiden ute"
   },
   "tips": {
     "message": "Donationer"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave inställningar"
   },
+  "contractErrorMessage": {
+    "message": "Varning: Du är på väg att skicka denna tillgång till sitt eget smarta kontrakt. Du har förmodligen inte för avsikt att göra detta, då tillgången i så fall sannolikt inte kommer att kunna återfås."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Plånböcker för kryptovaluta låter dig arbeta med kryptovalutor och relaterade tillgångar i Brave. Plånböcker för kryptovaluta stöder Ethereum-tokens som ETH och BAT, samt collectibles, och låter dig arbeta med Ðapps och andra smarta kontrakt. Allt detta är avsett för dem som är bekanta med Ethereum och andra blockchain-system – eller ser fram emot att lära sig."
   },
@@ -1784,7 +1852,7 @@
     "message": "Anslut din Ledger hårdvaruplånbok för att interagera med DAppar och göra överföringar till andra anslutna plånböcker."
   },
   "metamaskImportSubText": {
-    "message": "Obs: Ange 12 ord istället för 24 om du importerar från en Metamask-plånbok."
+    "message": "Observera: Vid import från version 1.0.26 och tidigare av Crypto Wallets består din hemliga fras av 24 ord istället för 12."
   },
   "newLocalWallet": {
     "message": "Ny lokal plånbok"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Välkommen till Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Väntar på bekräftelse."
   }
 }

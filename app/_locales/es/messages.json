@@ -1,6 +1,6 @@
 {
   "acceptTermsOfUse": {
-    "message": "He leído y estoy de acuerdo con el $1\n",
+    "message": "He leído y estoy de acuerdo con el $1",
     "description": "$1 is the `terms` message"
   },
   "eth_accounts": {
@@ -44,7 +44,7 @@
     "message": "Mostrar permisos"
   },
   "authorizedPermissions": {
-    "message": "Ha autorizado los siguientes permisos\n"
+    "message": "Has autorizado los siguientes permisos"
   },
   "connectManually": {
     "message": "Conectarse manualmente al sitio actual\n"
@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Opciones Avanzadas"
   },
+  "customizeGas": {
+    "message": "Personalizar"
+  },
   "addToAddressBook": {
     "message": "Añadir al libro de direcciones"
   },
@@ -185,7 +188,7 @@
     "message": "Alertas"
   },
   "alertsSettingsDescription": {
-    "message": "Activar o desactivar cada alerta\n"
+    "message": "Activar o desactivar cada alerta"
   },
   "alertSettingsUnconnectedAccount": {
     "message": "Navegue por un sitio web con una cuenta seleccionada sin conexión"
@@ -198,7 +201,7 @@
     "description": "$1 is the url of the site and $2 is the symbol of the token they are requesting to spend"
   },
   "allowThisSiteTo": {
-    "message": "Permita que este sitio:\n"
+    "message": "Permite que este sitio:"
   },
   "allowExternalExtensionTo": {
     "message": "Permita a esta extensión externa:\n"
@@ -234,6 +237,15 @@
   "asset": {
     "message": "Activo"
   },
+  "maker": {
+    "message": "Autor"
+  },
+  "taker": {
+    "message": "Beneficiario"
+  },
+  "slippage": {
+    "message": "Tolerancia de deslizamiento"
+  },
   "assets": {
     "message": "Activos"
   },
@@ -268,7 +280,7 @@
     "message": "Haz un respaldo de tu frase de recuperación para mantener tu monedero y tus fondos seguros (Revisar Traducción)."
   },
   "backupApprovalInfo": {
-    "message": "Este código secreto es necesario para recuperar su cartera en caso de que pierda su dispositivo, olvide su contraseña, tenga que reinstalar Brave o quiera acceder a su cartera en otro dispositivo.\n"
+    "message": "Este código secreto es requerido para recuperar tu monedero en caso de perder tu dispositivo, olvidar tu contraseña, reinstalar MetaMask, o querer acceder a tu monedero en otro dispositivo."
   },
   "backupNow": {
     "message": "Respaldar ahora"
@@ -374,7 +386,7 @@
     "message": "Enhorabuena"
   },
   "connectAccountOrCreate": {
-    "message": "Conectar la cuenta o crear una nueva\n"
+    "message": "Conectar cuenta o crear una nueva"
   },
   "connectHardwareWallet": {
     "message": "Conectar Monedero Físico"
@@ -410,7 +422,10 @@
     "message": "Añadir, editar, eliminar y gestionar tus contactos"
   },
   "contactUs": {
-    "message": "¡Póngase en contacto con nosotros!\n"
+    "message": "¡Ponte en contacto con nosotros!"
+  },
+  "continueToSwap": {
+    "message": "Continuar con Swap"
   },
   "continueToWyre": {
     "message": "Continuar a Wyre"
@@ -557,7 +572,7 @@
     "message": "Si necesita volver a respaldar tu frase de recuperación, puedes encontrarla en Ajustes -> Seguridad."
   },
   "endOfFlowMessage7": {
-    "message": "Si alguna vez tiene alguna pregunta o ve algo sospechoso, envíe un correo electrónico a support@brave.com.\n"
+    "message": "Si tienes alguna pregunta o has visto algo sospechoso, accede a nuestra cartera."
   },
   "endOfFlowMessage8": {
     "message": "Brave no puede recuperar tu frase de recuperación."
@@ -568,8 +583,11 @@
   "endOfFlowMessage10": {
     "message": "Todo Listo"
   },
+  "endOfFlowMessage11": {
+    "message": "Foro de asistencia."
+  },
   "externalExtension": {
-    "message": "Extensión externa\n"
+    "message": "Extensión externa"
   },
   "onboardingReturnNotice": {
     "message": "\"$1\" cerrará esta pestaña y le dirigirá de vuelta a $2\n",
@@ -622,7 +640,7 @@
     "description": "Message displayed on generic error page in the popup UI"
   },
   "errorStack": {
-    "message": "Pila:\n",
+    "message": "Pila:",
     "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
@@ -768,6 +786,9 @@
   "history": {
     "message": "Historial"
   },
+  "home": {
+    "message": "Página principal"
+  },
   "import": {
     "message": "Importar",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importar cartera"
   },
   "importYourExisting": {
-    "message": "Importa tu cartera existente utilizando la frase de recuperación de 24 palabras"
+    "message": "Importa tu cartera utilizando una frase semilla de 12 o 24 palabras"
   },
   "imported": {
     "message": "Importado",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Tokens insuficientes"
   },
+  "insufficientFundsGas": {
+    "message": "Fondos insuficientes para el gas."
+  },
+  "balanceFetchError": {
+    "message": "Error en la obtención del saldo."
+  },
   "invalidAddress": {
     "message": "Dirección inválida"
   },
@@ -827,26 +854,49 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "No es una red ETH, convertirlo a minúscula"
   },
-  "invalidInput": {
-    "message": "Entrada inválida"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "A la red personalizada '$1' le falta su identificador de cadena.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Para protegerte de los proveedores de red maliciosos o inadecuados, los identificadores de cadena ahora son obligatorios para todas las redes personalizadas."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Vete a Ajustes > Red e introduce el identificador de cadena. Puedes encontrar los identificadores de cadena de las redes más populares en $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Red personalizada incorrecta"
+  },
+  "invalidHexNumber": {
+    "message": "Número hexadecimal incorrecto."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Número hexadecimal incorrecto. Elimina los ceros iniciales."
   },
   "invalidRPC": {
     "message": "Invalida URL del RPC"
   },
   "invalidBlockExplorerURL": {
-    "message": "URL del explorador de bloques no válida\n"
+    "message": "URL del explorador de bloques no válida"
   },
   "invalidSeedPhrase": {
     "message": "Frase de recuperación no válida."
   },
   "ipfsGateway": {
-    "message": "Puerta de enlace IPFS\n"
+    "message": "Puerta de enlace IPFS"
   },
   "ipfsGatewayDescription": {
-    "message": "Introduzca la URL de la puerta de enlace IPFS CID para usar para la resolución de contenido ENS."
+    "message": "Introduce la URL de la puerta de enlace IPFS CID para utilizar para la resolución de contenido ENS."
   },
   "invalidIpfsGateway": {
     "message": "Pasarela IPFS no válida: el valor debe ser una URL válida\n"
+  },
+  "invalidNumber": {
+    "message": "Número incorrecto. Introduce un número decimal o hexadecimal."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Número incorrecto. Elimina los ceros iniciales."
   },
   "forbiddenIpfsGateway": {
     "message": "Puerta de enlace IPFS prohibida: especifique una puerta de enlace de CID\n"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Red principal de Ethereum (Main Net)"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Disponible solo en \"mainnet\" y \"ropsten\""
+  },
   "memorizePhrase": {
     "message": "Memoriza esta frase."
   },
@@ -919,7 +972,7 @@
     "message": "El botón de estado de la conexión indica si el sitio web que está visitando está conectado a la cuenta actualmente seleccionada."
   },
   "metaMaskConnectStatusParagraphThree": {
-    "message": "Haga clic en él para administrar sus cuentas conectadas.\n"
+    "message": "Haz clic en él para administrar tus cuentas conectadas."
   },
   "metamaskDescription": {
     "message": "Brave es una identidad segura en Ethereum"
@@ -957,6 +1010,9 @@
   },
   "networks": {
     "message": "Redes"
+  },
+  "networkSettingsChainIdDescription": {
+    "message": "El identificador de cadena se utiliza para firmar transacciones. Introduce un número decimal o hexadecimal que empiece por '0x'."
   },
   "networkSettingsDescription": {
     "message": "Agregar y editar redes RPC personalizadas"
@@ -1010,9 +1066,6 @@
   "onlyAddTrustedNetworks": {
     "message": "Un proveedor de red Ethereum malicioso puede mentir sobre el estado de la cadena de bloques y registrar su actividad en la red. Añada únicamente redes personalizadas en las que confíe.\n"
   },
-  "optionalChainId": {
-    "message": "ChainID (opcional)"
-  },
   "optionalSymbol": {
     "message": "Símbolo (opcional)"
   },
@@ -1039,7 +1092,7 @@
     "message": "Sin transacciones"
   },
   "noThanks": {
-    "message": "No, Gracias"
+    "message": "No, gracias"
   },
   "notCurrentAccount": {
     "message": "¿Esta es la cuenta correcta? Es diferente de la cuenta seleccionada actualmente en su cartera.\n"
@@ -1088,7 +1141,7 @@
     "message": "Pendiente"
   },
   "permissionCheckedIconDescription": {
-    "message": "Usted concedió este permiso"
+    "message": "Has aprobado este permiso"
   },
   "permissionUncheckedIconDescription": {
     "message": "No has aprobado este permiso"
@@ -1144,7 +1197,7 @@
     "message": "Dirección del receptor"
   },
   "recipientAddressPlaceholder": {
-    "message": "Búsqueda, dirección pública (0x) o ENS"
+    "message": "Búsqueda, dirección pública (0x) o dominio"
   },
   "rejectAll": {
     "message": "Rechazar todas"
@@ -1265,7 +1318,7 @@
     "message": "ADVERTENCIA: Nunca reveles tu frase de respaldo. Cualquiera con esta frase puede tomar tu Éter para siempre."
   },
   "secretPhrase": {
-    "message": "Introduce tu frase secreta de 24 palabras aquí para restaurar tu depósito."
+    "message": "Introduce tu frase secreta de 12 o 24 palabras para restaurar tu caja."
   },
   "securityAndPrivacy": {
     "message": "Seguridad & Privacidad"
@@ -1280,7 +1333,7 @@
     "message": "Pegar la frase de recuperación desde el portapapeles"
   },
   "showSeedPhrase": {
-    "message": "Mostrar la frase de recuperación\n"
+    "message": "Mostrar la frase de recuperación"
   },
   "seedPhraseReq": {
     "message": "Las frases de recuperación contienen 12, 15, 18, 21, o 24 palabras"
@@ -1312,6 +1365,9 @@
   "send": {
     "message": "Enviar"
   },
+  "swap": {
+    "message": "Swap"
+  },
   "sendAmount": {
     "message": "Mandar cantidad"
   },
@@ -1338,7 +1394,7 @@
     "message": "Buscar Tokens"
   },
   "searchAccounts": {
-    "message": "Buscar cuentas\n"
+    "message": "Buscar cuentas"
   },
   "noAccountsFound": {
     "message": "No se han encontrado cuentas para la consulta de búsqueda dada\n"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visita nuestro centro de atención"
   },
+  "swapPrivacyPolicy": {
+    "message": "Política de privacidad de Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave utiliza $1 como agregador DEX. 0x procesará la dirección Ethereum y la dirección IP para completar una transacción (incluida la obtención de cotizaciones). 0x SOLO utilizará estos datos con el propósito de procesar las transacciones."
+  },
   "symbol": {
     "message": "Símbolo"
   },
@@ -1489,7 +1551,7 @@
     "message": "Sincronizar con el móvil"
   },
   "syncWithMobileDesc": {
-    "message": "Puede sincronizar sus cuentas e información con su dispositivo móvil. Abra la aplicación Brave para móviles, vaya a \"Configuración\" y toque en \"Sincronizar desde la extensión del navegador\"\n"
+    "message": "Puedes sincronizar tus cuentas e información con tu dispositivo móvil. Abre la aplicación móvil MetaMask, ves a \"Ajustes\" y pulsa \"Sincronizar desde la Extensión del Navegador\"."
   },
   "syncWithMobileDescNewUsers": {
     "message": "Si es la primera vez que usa la aplicación Brave Mobile, solo ha de seguir los pasos en su teléfono."
@@ -1512,6 +1574,9 @@
   "thisWillCreate": {
     "message": "Esto creará un nueva monedero y una frase de recuperación"
   },
+  "timeout": {
+    "message": "Límite de tiempo "
+  },
   "tips": {
     "message": "Propinas"
   },
@@ -1519,7 +1584,7 @@
     "message": "Para"
   },
   "toAddress": {
-    "message": "Hasta: $1\n",
+    "message": "Para: $1",
     "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
   },
   "toWithColon": {
@@ -1535,7 +1600,7 @@
     "message": "Dirección del Contrato de Token"
   },
   "tokenOptions": {
-    "message": "Opciones de fichas\n"
+    "message": "Opciones de tokens"
   },
   "tokenSymbol": {
     "message": "Símbolo del token"
@@ -1648,10 +1713,10 @@
     "message": "Actualizado $1"
   },
   "urlErrorMsg": {
-    "message": "Las URL exigen el prefijo HTTP/HTTPS apropiado.\n"
+    "message": "Las URLs exigen el prefijo HTTP/HTTPS apropiado."
   },
   "urlExistsErrorMsg": {
-    "message": "La URL ya está presente en la lista de redes existentes\n"
+    "message": "La URL ya está presente en la lista de redes existentes"
   },
   "usedByClients": {
     "message": "Utilizado por una variedad de clientes diferentes"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Ajustes de Brave"
   },
+  "contractErrorMessage": {
+    "message": "Atención: estás a punto de enviar este activo a su propio contrato inteligente. Es probable que no quieras hacerlo, porque seguramente esto hará que no se puede recuperar el activo."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets le permite trabajar con las criptodivisas y los activos relacionados en Brave. Crypto Wallets admite fichas de Ethereum como ETH y BAT, así como piezas de colección, y le permite trabajar con Ðapps y otros contratos inteligentes. Todo esto es para personas que están familiarizadas con el Ethereum y otros sistemas de cadenas de bloques, o que tienen ganas de aprender.\n"
   },
@@ -1784,7 +1852,7 @@
     "message": "Conecta tu monedero físico Ledger para interactuar con las aplicaciones descentralizadas (dApps) y hacer transferencias a otros monederos conectados."
   },
   "metamaskImportSubText": {
-    "message": "Nota: Si se importa de una cartera de Metamask, introduzca 12 palabras en lugar de 24.\n"
+    "message": "Aviso: si vas a importar desde criptocarteras con versión 1.0.26 o anteriores, tu frase secreta tiene 24 palabras en vez de 12."
   },
   "newLocalWallet": {
     "message": "Nuevo Monedero Local"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Te damos la bienvenida a Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Esperando la confirmación."
   }
 }

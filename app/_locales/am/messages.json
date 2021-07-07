@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "የላቁ አማራጮች"
   },
+  "customizeGas": {
+    "message": "አብጅ"
+  },
   "addToAddressBook": {
     "message": "በአድራሻ መዝገብ ላይ አክል"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "ሐብት"
+  },
+  "maker": {
+    "message": "ሰሪ"
+  },
+  "taker": {
+    "message": "ወሳጅ"
+  },
+  "slippage": {
+    "message": "የዋጋ መቀነስ የተፈቀደ ግድፈት"
   },
   "assets": {
     "message": "ንብረቶች"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "ያግኙን!"
   },
+  "continueToSwap": {
+    "message": "መለወጥዎን ይቀጥሉ"
+  },
   "continueToWyre": {
     "message": "ወደ Wyre ይቀጥሉ"
   },
@@ -557,7 +572,7 @@
     "message": "የዘር ሐረግዎን በድጋሚ መጠባበቂያ ለመያዝ ከፈለጉ፣ በቅንብሮች -> ግላዊነት ውስጥ ሊያገኙት ይችላሉ።"
   },
   "endOfFlowMessage7": {
-    "message": "ጥያቄዎች ካሉዎት ወይም የሆነ አጠራጣሪ ነገር ካዩ፣ እባክዎ ለ support@brave.com ኢሜይል ይላኩ።"
+    "message": "ጥያቄ ካለዎት ወይም የሚያጠራጥር ነገር ካጋጠመዎት፣ ዋሌታችንን ይጎብኙ"
   },
   "endOfFlowMessage8": {
     "message": "Brave የዘር ሐረግዎን መልሶ ማግኘት አልቻለም። ተጨማሪ መረጃ ያግኙ።"
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "ሁሉም ተጠናቅቋል"
+  },
+  "endOfFlowMessage11": {
+    "message": "የድጋፍ ፎረም።"
   },
   "externalExtension": {
     "message": "ውጫዊ ማራዘሚያ"
@@ -768,6 +786,9 @@
   "history": {
     "message": "ታሪክ"
   },
+  "home": {
+    "message": "መነሻ"
+  },
   "import": {
     "message": "ያስመጡ",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "ቋት አስመጣ"
   },
   "importYourExisting": {
-    "message": "ባለ 24 ቃል የዘር ሐረግን በመጠቀም ነባር ቋትዎን ያስመጡ"
+    "message": "ያለህን ዋሌት በ 12 እና 24 ቃል ሃረግ በመጠቀም ኣስመጣ"
   },
   "imported": {
     "message": "ከውጭ የመጣ",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "በቂ ያልሆኑ ተለዋጭ ስሞች።"
   },
+  "insufficientFundsGas": {
+    "message": "ለጋዝ በቂ ገንዘብ የለም።"
+  },
+  "balanceFetchError": {
+    "message": "ቀሪ ሂሳብ ማምጣት ላይ ችግር ተፈጥሯል።"
+  },
   "invalidAddress": {
     "message": "ልክ ያልሆነ አድራሻ"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "ETH አውታረ መረብ አይደለም፣ ወደ ትናንሽ ፊደላት ቀይር"
   },
-  "invalidInput": {
-    "message": "ልክ ያልሆነ ግቤት።"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "የተስተካከለ ኣውታረ መረብ '$1' የሰንሰለት መለያ ኣልተገኘም። ",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "ኣደገኛ ከሆኑ ወይም ችግር ካለባቸው የ ኣውታረ መረብ ኣቅራቢዎች ኣንተን ለመጠበቅ፣ የሰንሰለት መለያዎች ለሁሉም የተስተካከሉ ኣውታረ መረቦች ያስፈልጋሉ።"
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "ወደ Settings > Network በመሄድ የ ሰንሰለት መለያውን ኣስገባ። የኣብዛኛዎቹ ታዋቂ ኣውታረ መረቦች የሰንሰለት መለያዎች $1 ላይ ማግኘት ትችላለህ። ",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "የተሳሳተ የተስተካከለ ኣውራ መረብ"
+  },
+  "invalidHexNumber": {
+    "message": "የተሳሳተ የሄክሳ ዴሲማል ቁጥር።"
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "የተሳሳተ ሄክሳ ዴሲማል ቁጥር። ማናቸውም ከፊት የሚገኙ ዜሮዎችን ኣስወግድ።"
   },
   "invalidRPC": {
     "message": "ልክ ያልሆነ RPC ዩአርኤል"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "ልክ ያልሆነ የ IPFS ጌትዌይ-እሴቱ ትክክለኛ URL መሆን አለበት"
+  },
+  "invalidNumber": {
+    "message": "የተሳሳተ ቁጥር። የኣስርዮሽ ወይም የሄክሳ ዴሲማል ቁጥር ኣስገባ።"
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "የተሳሳተ ቁጥር። ማናቸውንም ከፊት ያሉ ዜሮዎችን ኣስወግድ።"
   },
   "forbiddenIpfsGateway": {
     "message": "የተከለከለ የ IPFS ጌትዌይ፥ እባክዎን የ CID ፍኖት ይጥቀሱ"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "ዋነኛ የ Ethereum አውታረ መረብ "
   },
+  "availableOnMainnetRopsten": {
+    "message": "mainnet እና ropsten ላይ ብቻ የሚገኝ።"
+  },
   "memorizePhrase": {
     "message": "ይህን ሐረግ ያስታውሱ።"
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "አውታረ መረቦች"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "የሰንሰለት መለያ ዝውውሮችን ለመፈረም ያገለግላል። በ '0x'. የሚጀምር ኣስርዮሽ ወይም ሄክሳ ዴሲማል ቁጥር ኣስገባ።"
+  },
   "networkSettingsDescription": {
     "message": "ብጁ የ RPC አውታረ መረቦችን አክልና አርትዕ"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "አንድ ተንኮል-አዘል የ Ethereum ኔትዎርክ አቅራቢ ስለ ማገጃው ሁኔታ ሊዋሽ እና የኔትዎርክ እንቅስቃሴዎን ሊቀዳ ይችላል። የሚያምኗቸውን ብጁ ኔትዎርኮችን ብቻ ያክሉ።"
-  },
-  "optionalChainId": {
-    "message": "የሰንሰለት መለያ ቁጥር (አማራጭ)"
   },
   "optionalSymbol": {
     "message": "ምልክት (አማራጭ)"
@@ -1144,7 +1197,7 @@
     "message": "የተቀባይ አድራሻ"
   },
   "recipientAddressPlaceholder": {
-    "message": "ፍለጋ፣ ለሕዝብ ክፍት የሆነ አድራሻ (0x), ወይም ENS"
+    "message": "ፈልግ፣ ህዝባዊ ኣድራሻ (0x)፣ ወይም ዶሜይን"
   },
   "rejectAll": {
     "message": "ሁሉንም አትቀበል"
@@ -1265,7 +1318,7 @@
     "message": "ማስጠንቀቂያ፡ የመጠባበቂያ ምዕራፍዎን በጭራሽ አይግለጹ። ይህን ሐረገ የያዘ ማንኛውም ሰው የእርስዎን Ether እስከወዲያኛው ሊወስደው ይችላል።"
   },
   "secretPhrase": {
-    "message": "ካዝናዎን ወደነበረበት ለመመለስ ሚስጥራዊ ባለ 24 ቃል ሐረግዎን ያስገቡ።"
+    "message": "ማስቀመጫህን መልሰህ ለማግኘት 12 ወይም 24 የሆነውን ሚስጥራዊ የ ቃል ሃረግ ኣስገባ።"
   },
   "securityAndPrivacy": {
     "message": "ደህንነት እና ግላዊነት"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "ላክ"
+  },
+  "swap": {
+    "message": "ይለውጡ"
   },
   "sendAmount": {
     "message": "መጠኑን ላክ"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "የድጋፍ መስጫ ማዕከላችንን ይጎብኙ"
   },
+  "swapPrivacyPolicy": {
+    "message": "የመለወጥ የግላዊነት ፖሊሲ"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave እንደ DEX ኣሰባሳቢ $1 ይጠቀማል። ዝውውርን ለማሟላት (ጥቅሶችን ማገኘትን ጨምሮ) 0x የ ኤተርየም ኣድራሻ እና የ IP ኣድራሻን ጥቅም ላይ ያውላል። 0x የገንዘብ ዝውውሮችን ለማካሄድ ብቻ ነው ይህንን ዳታ የሚጠቀመው። "
+  },
   "symbol": {
     "message": "ምልክት"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "ይህ አዲስ ቋትና የዘረ ሐረግ ይፈጥራል"
+  },
+  "timeout": {
+    "message": "ግዜው ኣልቋል"
   },
   "tips": {
     "message": "መረጃዎች"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave ቅንብሮች"
   },
+  "contractErrorMessage": {
+    "message": "ማሳሰቢያ፡ ይህንን ሃብት ወደ ራሱ ስማርት ኮንትራት ልትልከው ነው። ምናልባት ይህንን ለማድረግ ኣላሰብክም ይሆናል፣ ምክኒያቱም ይህ ሃብቱን ኣንዳይመለስ ሊያደርገው ይችላል።"
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets በ Brave ውስጥ ካሉ ምስጠራ እና ተያያዥ ሀብቶች ጋር እንዲሰሩ ያስችልዎታል። Crypto Wallets እንደ ETH እና BAT ያሉ እንዲሁም እንደ ሰብሳቢዎች ያሉ የ Ethereum ማስመሰያዎች ይደግፋል እንዲሁም ከ Ðapps እና ከሌሎች ዘመናዊ ኮንትራቶች ጋር አብረው እንዲሰሩ ያስችልዎታል። ይህ ሁሉ ማለት Ethereum ን እና ሌሎች የማገጃ ስርዓቶችን ለሚያውቁ ሰዎች ነው — ወይም ለመማር ፍላጎት ላላቸው ሰዎች።"
   },
@@ -1784,7 +1852,7 @@
     "message": "የ Ledger ሃርድዌር ቋትዎን ከ dApps ጋር በማገናኘት ወደሌሎች የተገናኙ ቋቶች ዝውውር ያድርጉ።"
   },
   "metamaskImportSubText": {
-    "message": "ማስታወሻ፥ ከሜታስክ ዋሌት የሚያስመጡ ከሆነ፣ ከ 24 ይልቅ 12 ቃላትን ያስገቡ።"
+    "message": "ማስታወሻ፦ ከ Crypto Wallets ስሪት 1.0.26 ወይም በታች ከሆነ ስሪት የሚያስመጡ ከሆነ፣ የሚስጥር ሐርግዎ 12 ሳይሆን 24 ቃላት ናቸው።"
   },
   "newLocalWallet": {
     "message": "አዲስ ከባቢያዊ ቋት"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "ወደ Brave Crypto ዋሌቶች እንኳን በደህና መጡ"
+  },
+  "waitingForConfirmation": {
+    "message": "ማረጋገጫ በመጠበቅ ላይ።"
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Täpsemad suvandid"
   },
+  "customizeGas": {
+    "message": "Kohanda"
+  },
   "addToAddressBook": {
     "message": "Lisage aadressiraamatusse"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Vara"
+  },
+  "maker": {
+    "message": "Tegija"
+  },
+  "taker": {
+    "message": "Võtja"
+  },
+  "slippage": {
+    "message": "Varieeruvuse tolerants"
   },
   "assets": {
     "message": "Varad"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Võta meiega ühendust!"
   },
+  "continueToSwap": {
+    "message": "Edasi Swapi"
+  },
   "continueToWyre": {
     "message": "Ava Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Kui peate oma seemnefraasi uuesti varundama, leiate selle valikust Settings (Seaded) -> Security (Turvalisus)."
   },
   "endOfFlowMessage7": {
-    "message": "Kui teil on kunagi küsimusi või näete midagi kahtlast, saatke e-kiri aadressile support@brave.com."
+    "message": "Kui teil on küsimusi või märkate midagi kahtlast, siis külastage meie rahakoti"
   },
   "endOfFlowMessage8": {
     "message": "Vapper ei saa teie sisefraasi taastada."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Valmis"
+  },
+  "endOfFlowMessage11": {
+    "message": "tugifoorumit."
   },
   "externalExtension": {
     "message": "Väline pikendus"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Ajalugu"
   },
+  "home": {
+    "message": "Kodu"
+  },
   "import": {
     "message": "Impordi",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importige rahakott"
   },
   "importYourExisting": {
-    "message": "Importige oma olemasolev rahakott, kasutades 24-sõnalist fraasi"
+    "message": "Importige olemasolev rahakott 12- või 24-sõnalise seemnefraasi abil"
   },
   "imported": {
     "message": "Imporditud",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Ebapiisavad load."
   },
+  "insufficientFundsGas": {
+    "message": "Gaasi jaoks ei ole piisavalt rahalisi vahendeid."
+  },
+  "balanceFetchError": {
+    "message": "Saldo toomise tõrge."
+  },
   "invalidAddress": {
     "message": "Kehtetu aadress"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Kehtetu ETH-võrk, kasutage väiketähti"
   },
-  "invalidInput": {
-    "message": "Vigane sisend."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Kohandatud võrgul $1 puudub ahela ID.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Et kaitsta teid pahatahtlike või puudulike võrguteenuse osutajate eest, on kõigi kohandatud võrkude korral nüüd nõutav ahela ID."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Avage Seaded > Võrk ja sisestage ahela ID. Kõige populaarsemate võrkude ahela ID-d leiate lehelt $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Sobimatu kohandatud võrk"
+  },
+  "invalidHexNumber": {
+    "message": "Sobimatu kuueteistkümnendarv."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Sobimatu kuueteistkümnendarv. Eemaldage kõik algusnullid."
   },
   "invalidRPC": {
     "message": "Vale RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Kehtetu IPFS-i lüüs: väärtus peab olema kehtiv URL"
+  },
+  "invalidNumber": {
+    "message": "Sobimatu arv. Sisestage kümnend- või kuueteistkümnendarv."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Sobimatu arv. Eemaldage kõik algusnullid."
   },
   "forbiddenIpfsGateway": {
     "message": "Keelatud IPFS-i lüüs: palun määrake CID-lüüs"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Ethereumi põhivõrk"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Saadaval ainult mainnetis ja ropstenis"
+  },
   "memorizePhrase": {
     "message": "Jätke fraas meelde."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Võrgud"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Ahela ID-d kasutatakse tehingute allkirjastamiseks. Sisestage kümnend- või kuueteistkümnendarv algusega „0x“."
+  },
   "networkSettingsDescription": {
     "message": "Kohandatud RPC-võrkude lisamine ja muutmine"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Pahatahtlik Ethereumi võrguteenuse pakkuja võib plokiahela oleku kohta valetada ja teie võrgutegevust salvestada. Lisage ainult usaldusväärseid kohandatud võrke."
-  },
-  "optionalChainId": {
-    "message": "ChainID (valikuline)"
   },
   "optionalSymbol": {
     "message": "Sümbol (valikuline)"
@@ -1144,7 +1197,7 @@
     "message": "Saaja aadress"
   },
   "recipientAddressPlaceholder": {
-    "message": "Otsing, avalik aadress (0x) või ENS"
+    "message": "Otsing, avalik aadress (0x) või domeen"
   },
   "rejectAll": {
     "message": "Lükka kõik tagasi"
@@ -1265,7 +1318,7 @@
     "message": "HOIATUS! Ärge avaldage kunagi oma varundusfraasi. Selle fraasiga on võimalik teie eeter igaveseks ära võtta."
   },
   "secretPhrase": {
-    "message": "Hoidla taastamiseks sisestage siia oma salajane 24-sõnaline fraas."
+    "message": "Hoidla taastamiseks sisestage siia oma salajane 12- või 24-sõnaline fraas."
   },
   "securityAndPrivacy": {
     "message": "Turvalisus ja privaatsus"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Saada"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Saatke kogus"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Külastage meie tugikeskust"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swapi privaatsuspõhimõtted"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave'is on $1 kasutusel DEX-i agregaatorina. 0x töötleb Ethereumi aadressi ja IP-aadressi, et sooritada tehing (sealhulgas saada hinnapakkumisi). 0x kasutab neid andmeid AINULT tehingute töötlemise eesmärgil."
+  },
   "symbol": {
     "message": "Sümbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "See loob uue rahakoti ja seemnefraasi"
+  },
+  "timeout": {
+    "message": "Ajalõpp"
   },
   "tips": {
     "message": "Preemiad"
@@ -1709,7 +1774,7 @@
     "message": "Jah, proovime"
   },
   "youNeedToAllowCameraAccess": {
-    "message": "Selle funktsiooni kasutamiseks peate lubaga kaamera ligipääsu."
+    "message": "Selle funktsiooni kasutamiseks peate lubama kaamera ligipääsu."
   },
   "yourSigRequested": {
     "message": "Taotletakse teie allkirja"
@@ -1762,11 +1827,14 @@
   "braveSettings": {
     "message": "Julged seaded"
   },
+  "contractErrorMessage": {
+    "message": "Hoiatus! Hakkate saatma seda vara tema enda nutilepingusse. Arvatavasti ei kavatse te seda teha, sest sel juhul muutub vara tõenäoliselt taastamatuks."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Krüpto-rahakotid võimaldavad teil Brave&#39;is töötada krüptoraha ja sellega seotud varadega. Krüpto-rahakotid toetavad Ethereumi märke nagu ETH ja BAT, samuti kollektsiooni ja võimaldavad teil töötada rakenduste ja muude nutikate lepingutega. Kõik see on mõeldud inimestele, kes tunnevad Ethereumi ja muid plokiahelasüsteeme - või on õppimisest põnevil."
   },
   "cryptoWalletsDisclosureTwo": {
-    "message": "Kasutage krüptorahakotti ainult siis, kui tunnistate, et ainult  teie vastutate selle kasutamisega seotud ohtude eest ja Brave Software ei vastuta kahjude, sealhulgas juhuslike või kaudsete kahjude eest, mis võivad selle kasutamise tagajärjel tekkida."
+    "message": "Kasutage krüptorahakotti ainult siis, kui tunnistate, et ainult teie vastutate selle kasutamisega seotud ohtude eest ja Brave Software ei vastuta kahjude, sealhulgas juhuslike või kaudsete kahjude eest, mis võivad selle kasutamise tagajärjel tekkida."
   },
   "cryptoWalletsDisclosureThree": {
     "message": "Kõik see on täiesti eraldiseisev"
@@ -1784,7 +1852,7 @@
     "message": "Ühendage oma Ledgeri riistvara rahakott, et suhelda dAppsiga ja teha tehinguid teistele ühendatud rahakottidele."
   },
   "metamaskImportSubText": {
-    "message": "Märkus. Kui impordite Metamaski rahakotist, sisestage 24 sõna asemel 12 sõna."
+    "message": "Märkus. Importimisel krüptorahakoti versioonist 1.0.26 või varasemast versioonist koosneb teie salajane fraasi 12 sõna asemel 24 sõnast."
   },
   "newLocalWallet": {
     "message": "Uus kohalik rahakott"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Tere tulemast Brave Crypto Walletsisse"
+  },
+  "waitingForConfirmation": {
+    "message": "Ootab kinnitust."
   }
 }

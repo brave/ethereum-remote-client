@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Napredne mogućnosti"
   },
+  "customizeGas": {
+    "message": "Prilagodi"
+  },
   "addToAddressBook": {
     "message": "Dodaj u imenik"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Imovina"
+  },
+  "maker": {
+    "message": "Stvoritelj"
+  },
+  "taker": {
+    "message": "Uzimatelj"
+  },
+  "slippage": {
+    "message": "Tolerancija prekoračenja"
   },
   "assets": {
     "message": "Imovine"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Obratite nam se!"
   },
+  "continueToSwap": {
+    "message": "Nastavi na uslugu Swap"
+  },
   "continueToWyre": {
     "message": "Nastavi na uslugu Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Ako trebate ponovno sigurnosno kopirati svoju početnu rečenicu, možete je pronaći unutar stavke Postavke --> Sigurnost."
   },
   "endOfFlowMessage7": {
-    "message": "Ako ikada imate pitanja ili vidite nešto sumnjivo, pošaljite elektroničku poruku na e-adresu support@brave.com."
+    "message": "Ako ikada imate pitanja ili vidite nešto sumnjivo, posjetite naš novčanik"
   },
   "endOfFlowMessage8": {
     "message": "Preglednik Brave ne može oporaviti vašu početnu rečenicu."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Sve završeno"
+  },
+  "endOfFlowMessage11": {
+    "message": "forum podrške."
   },
   "externalExtension": {
     "message": "Vanjsko proširenje"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Povijest"
   },
+  "home": {
+    "message": "Početna stranica"
+  },
   "import": {
     "message": "Uvezi",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Uvezi novčanik"
   },
   "importYourExisting": {
-    "message": "Uvezi svoj postojeći novčanik pomoću početne rečenice od 24 riječi"
+    "message": "Uvezi svoj postojeći novčanik upotrebom početne rečenice od 12 ili 24 riječi"
   },
   "imported": {
     "message": "Uvezeno",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Nedovoljno tokena."
   },
+  "insufficientFundsGas": {
+    "message": "Nedovoljno sredstava za gorivo."
+  },
+  "balanceFetchError": {
+    "message": "Greška pri dohvaćanju raspoloživog iznosa."
+  },
   "invalidAddress": {
     "message": "Nevaljana adresa"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ne mreža ETH, postavite na mala slova"
   },
-  "invalidInput": {
-    "message": "Nevaljani upis."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "Nedostaje identifikacijska oznaka lanca prilagođene mreže „$1”.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Radi zaštite od zlonamjernih ili neispravnih pružatelja mrežnih usluga sada treba imati identifikacijsku oznaku lanca za sve prilagođene mreže."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Idite na Postavke > Mreža i upišite identifikacijsku oznaku lanca. Možete pronaći identifikacijske oznake lanaca najpopularnijih mreža na  $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Nevaljana prilagođena mreža"
+  },
+  "invalidHexNumber": {
+    "message": "Nevaljani heksadecimalni broj."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Nevaljani heksadecimalni broj. Uklonite vodeće nule."
   },
   "invalidRPC": {
     "message": "Nevaljani URL RPC-a"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Nevažeći pristupnik IPFS: vrijednost mora biti važeći URL"
+  },
+  "invalidNumber": {
+    "message": "Nevaljani broj. Upišite decimalni ili heksadecimalni broj."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Nevaljani broj. Uklonite vodeće nule."
   },
   "forbiddenIpfsGateway": {
     "message": "Zabranjeni pristupnik IPFS: navedite pristupnik CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Glavna mreža Ethereum"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Dostupno samo na mrežama mainnet i ropsten"
+  },
   "memorizePhrase": {
     "message": "Zapamtite ovu rečenicu."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Mreže"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "Identifikacijska oznaka lanca upotrebljava se za potpisivanje transakcija. Upišite decimalni ili heksadecimalni broj koji počinje s „0x”."
+  },
   "networkSettingsDescription": {
     "message": "Dodaj i uredi prilagođene mreže RPC"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Zlonamjerni pružatelj mreže Ethereum može lagati o stanju podatkovnog lanca i bilježiti vaše mrežne aktivnosti. Dodajte samo prilagođene mreže u koje imate povjerenja."
-  },
-  "optionalChainId": {
-    "message": "Identifikacijska oznaka bloka (neobavezno)"
   },
   "optionalSymbol": {
     "message": "Simbol (neobavezno)"
@@ -1144,7 +1197,7 @@
     "message": "Adresa primatelja"
   },
   "recipientAddressPlaceholder": {
-    "message": "Pretraži, javne adrese (0x) ili ENS"
+    "message": "Pretraži, javna adresa (0x) ili domena"
   },
   "rejectAll": {
     "message": "Odbaci sve"
@@ -1265,7 +1318,7 @@
     "message": "UPOZORENJE: nikada ne otkrivajte svoju alternativnu rečenicu. Bilo tko ovom rečenicom može zauvijek preuzeti vaš Ether."
   },
   "secretPhrase": {
-    "message": "Ovdje upišite svoju tajnu frazu od 24 riječi da biste obnovili trezor."
+    "message": "Upišite svoju tajnu rečenicu od 12 ili 24 riječi za vraćanje svog sefa."
   },
   "securityAndPrivacy": {
     "message": "Sigurnost i privatnost"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Pošalji"
+  },
+  "swap": {
+    "message": "Usluga Swap"
   },
   "sendAmount": {
     "message": "Odaberi iznos"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Posjetite naš centar za podršku."
   },
+  "swapPrivacyPolicy": {
+    "message": "Pravilnik o zaštiti privatnosti za uslugu Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Preglednikom Brave upotrebljava se $1 kao agregator DEX. Protokolom 0x obrađuju se adresa Ethereum i IP adresa radi obavljanja transakcije (uključujući dobivanje ponuda). Protokolom 0x upotrebljavaju se ovi podatci ISKLJUČIVO za svrhe obrađivanja transakcija."
+  },
   "symbol": {
     "message": "Simbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Ovom se radnjom stvara novi novčanik i početna rečenica"
+  },
+  "timeout": {
+    "message": "Privremeni prekid"
   },
   "tips": {
     "message": "Napojnice"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Postavke preglednika Brave"
   },
+  "contractErrorMessage": {
+    "message": "Upozorenje: Šaljete ovu imovinu njezinom pametnom ugovoru. Vjerojatno to niste namjeravali napraviti jer time se imovina gotovo sigurno više ne može oporaviti."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Kriptovalutnim novčanicima omogućava vam se rukovanje kriptovalutama i pridruženim imovinama u pregledniku Brave. Kriptovalutnim novčanicima podržavaju se tokeni Ethereum poput ETH i BAT, kao i prikupljanja, te vam se omogućava rad s aplikacijama Dapps i drugim pametnim ugovorima. Sve navedeno namijenjeno je osobama koje poznaju platformu Ethereum i druge sustave za podatkovne blokove – ili su željne učenja."
   },
@@ -1784,7 +1852,7 @@
     "message": "Povežite sa sa svojim hardverskim novčanikom Ledger kako biste ostvarili interakciju s dApps i obavljali prijenose u druge povezane novčanike."
   },
   "metamaskImportSubText": {
-    "message": "Napomena: Ako uvozite iz novčanika Metamask, upišite 12 riječi umjesto 24."
+    "message": "Napomena: Ako uvozite iz kriptonovčanika inačice 1.0.26 ili starije, vaša tajna rečenica sastoji se od 24 riječi umjesto od 12 riječi."
   },
   "newLocalWallet": {
     "message": "Novi lokalni novčanik"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Dobro došli u Braveove kriptovalutne novčanike"
+  },
+  "waitingForConfirmation": {
+    "message": "Čekanje na potvrdu."
   }
 }

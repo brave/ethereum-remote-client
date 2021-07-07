@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Haladó beállítások"
   },
+  "customizeGas": {
+    "message": "Testreszabás"
+  },
   "addToAddressBook": {
     "message": "Hozzáadás a címjegyzékhez"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Eszköz"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Csúszási tolerancia"
   },
   "assets": {
     "message": "Eszközök"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Lépjen kapcsolatba velünk!"
   },
+  "continueToSwap": {
+    "message": "Tovább a Swapra"
+  },
   "continueToWyre": {
     "message": "Tovább a Wyre-re"
   },
@@ -557,7 +572,7 @@
     "message": "Ha ismét biztonsági másolatot kell készítenie a seed mondatról, megtalálja azt a Beállítások -> Biztonság menüben."
   },
   "endOfFlowMessage7": {
-    "message": "Ha bármilyen kérdése van, vagy bármi gyanúsat észlel, küldjön e-mailt a support@brave.com címre."
+    "message": "Ha bármikor kérdésed van, vagy valami gyanúsat látsz, keresd fel tárcánkat."
   },
   "endOfFlowMessage8": {
     "message": "A Brave nem tudja visszaállítani a seed kifejezést."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Minden kész"
+  },
+  "endOfFlowMessage11": {
+    "message": "támogatási fórum."
   },
   "externalExtension": {
     "message": "Külső bővítmény"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Előzmények"
   },
+  "home": {
+    "message": "Főoldal"
+  },
   "import": {
     "message": "Importálás",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Pénztárca importálása"
   },
   "importYourExisting": {
-    "message": "Importálja a meglévő pénztárcáját egy 24 szóból álló seed kifejezést használva"
+    "message": "Importáld meglévő tárcádat egy 12 vagy 24 szavas kulccsal"
   },
   "imported": {
     "message": "Importált",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Nincs elegendő tokene."
   },
+  "insufficientFundsGas": {
+    "message": "Nincs elegendő fedezet a gázra."
+  },
+  "balanceFetchError": {
+    "message": "Hiba az egyenleg beolvasásával."
+  },
   "invalidAddress": {
     "message": "Helytelen cím"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Nem ETH hálózat, állítsa kisbetűre"
   },
-  "invalidInput": {
-    "message": "Érvénytelen bevitel."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "'$1' egyéni hálózatból hiányzik a láncazonosító.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "A kártékony vagy hibás hálózati szolgáltatóktól való védelem érdekében most minden egyéni hálózathoz láncazonosító szükséges."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Lépj be a Beállítások > Hálózat menübe, és írd be a láncazonosítót. A legnépszerűbb hálózatok láncazonosítója itt található: $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Érvénytelen egyéni hálózat"
+  },
+  "invalidHexNumber": {
+    "message": "Érvénytelen hexadecimális szám."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Érvénytelen hexadecimális szám. Távolíts el minden nullát a szám elejéről."
   },
   "invalidRPC": {
     "message": "Helytelen RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Érvénytelen IPFS-átjáró: Az értéknek érvényes URL-nek kell lennie"
+  },
+  "invalidNumber": {
+    "message": "Érvénytelen szám. Írj be egy decimális vagy hexadecimális számot."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Érvénytelen szám. Távolíts el minden nullát a szám elejéről."
   },
   "forbiddenIpfsGateway": {
     "message": "Tiltott IPFS-átjáró: Adjon meg egy CID-átjárót"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Fő Ethereum hálózat"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Csak mainneten és ropstenen érhető el"
+  },
   "memorizePhrase": {
     "message": "Jegyezze meg ezt a szakaszt."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Hálózatok"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "A láncazonosítót a tranzakciók aláírására használjuk. Írj be egy '0x' kezdetű decimális vagy hexadecimális számot."
+  },
   "networkSettingsDescription": {
     "message": "Egyedi RPC-hálózatok hozzáadása és szerkesztése"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Egy rosszindulatú Ethereum hálózati szolgáltató hazudhat a blokklánc állapotáról, és rögzítheti a hálózati tevékenységét. Csak olyan egyéni hálózatokat adjon hozzá, amelyekben megbízik."
-  },
-  "optionalChainId": {
-    "message": "ChainID (nem kötelező)"
   },
   "optionalSymbol": {
     "message": "Szimbólum (opcionális)"
@@ -1144,7 +1197,7 @@
     "message": "Címzett címe"
   },
   "recipientAddressPlaceholder": {
-    "message": "Keresés, nyilvános cím (0x) vagy ENS"
+    "message": "Keresés, nyilvános cím (0x), vagy tartomány"
   },
   "rejectAll": {
     "message": "Mindet elutasít"
@@ -1265,7 +1318,7 @@
     "message": "FIGYELEM: Senkise se adja meg a biztonsági szakaszát. Ennek tulajdonosa örökre elviheti Ether-jeit."
   },
   "secretPhrase": {
-    "message": "Ide írja be a titkos 24 szavas kifejezést, hogy helyreállítsa a tárolót."
+    "message": "A perselyed helyreállításához írd be a titkos 12 vagy 24 szavas kifejezést."
   },
   "securityAndPrivacy": {
     "message": "Biztonság és adatvédelem"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Küldés"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Összeg küldése"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Vegye fel a kapcsolatot Támogató Központunkkal"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swap adatvédelmi szabályzat"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "A Brave $1 DEX aggregátort használ. A tranzakció teljesítéséhez (beleértve az ajánlatok kérését) a 0x feldolgozza az Ethereum címet és IP-címet. A 0x CSAKIS a tranzakciók lebonyolításához használja ezeket az adatokat."
+  },
   "symbol": {
     "message": "Szimbólum"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Eh új pénztárcát és termelési időszakot hoz létre"
+  },
+  "timeout": {
+    "message": "Időtúllépés"
   },
   "tips": {
     "message": "Adományok"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave beállítások"
   },
+  "contractErrorMessage": {
+    "message": "Figyelem: a saját okosszerződésére készülsz elküldeni ezt az eszközt. Valószínűleg nem ezt akarod tenni, mert az eszköz helyreállíthatatlanná válik."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "A Crypto Wallets lehetővé teszi, hogy a Brave-ben kriptovalutával és kapcsolódó eszközökkel dolgozzon. A Crypto Wallets támogatja az Ethereum tokeneket, mint az ETH és a BAT, valamint a gyűjthető tárgyakat, és lehetővé teszi a Ðapps és más intelligens szerződésekkel való munkát. Mindez olyan embereknek szól, akik ismerik az Ethereumot és más blokklánc-rendszereket - vagy lelkesedéssel tanulnak."
   },
@@ -1784,7 +1852,7 @@
     "message": "Csatlakoztasd Ledger hardverpéntárcádat hogy kommunikálhass dAppekkel és átutalásokat végezhess más csatlakoztatott pénztárcákra."
   },
   "metamaskImportSubText": {
-    "message": "Megjegyzés: Ha Metamask pénztárcából importál, akkor 24 helyett 12 szót írjon be."
+    "message": "Megjegyzés: Crypto Wallets 1.0.26 vagy korábbi verzió importálásakor, a titkos kifejezésed 24 szavas lesz a 12 helyett."
   },
   "newLocalWallet": {
     "message": "Új helyi pénztárca"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Üdvözöl a Brave Crypto Wallets"
+  },
+  "waitingForConfirmation": {
+    "message": "Várakozás a megerősítésre."
   }
 }

@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "詳細設定"
   },
+  "customizeGas": {
+    "message": "カスタマイズ"
+  },
   "addToAddressBook": {
     "message": "アドレス帳に追加"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "アセット"
+  },
+  "maker": {
+    "message": "メイカー"
+  },
+  "taker": {
+    "message": "テイカー"
+  },
+  "slippage": {
+    "message": "価格変動の許容値"
   },
   "assets": {
     "message": "アセット"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "ご連絡ください！"
   },
+  "continueToSwap": {
+    "message": "スワップへ進む"
+  },
   "continueToWyre": {
     "message": "Continue to Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "ご質問がある場合、または不審な点がある場合は、support@brave.comまでメールでご連絡ください。"
+    "message": "何かご質問がある場合、または不審な動きに気付かれた場合、私たちのウォレットを訪問してください。"
   },
   "endOfFlowMessage8": {
     "message": "Braveはあなたのシードフレーズを回復できません。"
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "すべて完了"
+  },
+  "endOfFlowMessage11": {
+    "message": "サポートフォーラム"
   },
   "externalExtension": {
     "message": "外部拡張機能"
@@ -768,6 +786,9 @@
   "history": {
     "message": "History"
   },
+  "home": {
+    "message": "ホーム"
+  },
   "import": {
     "message": "追加",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "ウォレットをインポート"
   },
   "importYourExisting": {
-    "message": "24単語のシードフレーズを使用して、既存のウォレットをインポートします"
+    "message": "12語または24語のシードフレーズを使って既存のウォレットをインポート"
   },
   "imported": {
     "message": "インポート完了",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Insufficient tokens."
   },
+  "insufficientFundsGas": {
+    "message": "ガス代のための資金が不足しています"
+  },
+  "balanceFetchError": {
+    "message": "残高の取得でエラーが発生しました。"
+  },
   "invalidAddress": {
     "message": "アドレスが無効です。"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
-  "invalidInput": {
-    "message": "インプットが無効です。"
+  "invalidCustomNetworkAlertContent1": {
+    "message": "カスタムネットワーク'$1'に、チェーンIDがありません。",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "悪意または欠陥のあるネットワークプロバイダーからお客様を保護するため、全てのカスタムネットワークにチェーンIDが必要になりました。"
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "設定＞ネットワークの順に開き、チェーンIDを入力してください。ほとんどの人気ネットワークのチェーンIDは、$1で検索できます。",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "カスタムネットワークが正しくありません"
+  },
+  "invalidHexNumber": {
+    "message": "16進数が正しくありません。"
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "16進数が正しくありません。数値の前についているゼロを全て削除してください。"
   },
   "invalidRPC": {
     "message": "Invalid RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "無効なIPFSゲートウェイ：値は有効なURLである必要があります"
+  },
+  "invalidNumber": {
+    "message": "番号が正しくありません。10進数または16進数を入力してください。"
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "番号が正しくありません。数値の前についているゼロを全て削除してください。"
   },
   "forbiddenIpfsGateway": {
     "message": "禁じられたIPFSゲートウェイ：CIDゲートウェイを指定してください"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Ethereumメインネットワーク"
   },
+  "availableOnMainnetRopsten": {
+    "message": "mainnetまたはropstenでのみ利用可能"
+  },
   "memorizePhrase": {
     "message": "Memorize this phrase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "ネットワーク"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "チェーンIDは署名取引に使用されます。0xではじまる10進数または16進数を入力してください。"
+  },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "悪意のあるイーサリアムネットワークプロバイダーは、ブロックチェーンの状態について嘘を言い、ああたのネットワークでのアクティビティを記録する可能性があります。信頼できるカスタムネットワークのみを追加するようにしてください。"
-  },
-  "optionalChainId": {
-    "message": "ChainID (optional)"
   },
   "optionalSymbol": {
     "message": "Symbol (optional)"
@@ -1144,7 +1197,7 @@
     "message": "受取人アドレス"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "検索、パブリックアドレス（0x）、またはドメイン"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1265,7 +1318,7 @@
     "message": "WARNING: Never disclose your backup phrase. Anyone with this phrase can take your Ether forever."
   },
   "secretPhrase": {
-    "message": "ボルトを復元するには、ここに秘密の24単語のフレーズを入力してください。"
+    "message": "Vaultを回復するには、12語または24語で構成される秘密のフレーズを入力してください。"
   },
   "securityAndPrivacy": {
     "message": "Security & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "送信"
+  },
+  "swap": {
+    "message": "スワップ"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visit our Support Center"
   },
+  "swapPrivacyPolicy": {
+    "message": "スワップ プライバシー ポリシー"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Braveは、DEXアグレゲーターとして$1を使用しています。0xは、取引を完了するためにイーサリアムのアドレスとIPアドレスを処理します（見積価格の取得を含む）。このデータは、取引処理のためだけに使用されます。"
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1512,6 +1574,9 @@
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
   },
+  "timeout": {
+    "message": "タイムアウト"
+  },
   "tips": {
     "message": "Tips"
   },
@@ -1523,7 +1588,7 @@
     "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
   },
   "toWithColon": {
-    "message": "へ："
+    "message": "宛先："
   },
   "token": {
     "message": "トークン"
@@ -1606,7 +1671,7 @@
     "description": "$1 is the url requesting permission and $2 is the symbol of the currency that the request is for"
   },
   "tryAgain": {
-    "message": "Try again"
+    "message": "再試行"
   },
   "typePassword": {
     "message": "Braveのパスワードを入力してください"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Braveの設定"
   },
+  "contractErrorMessage": {
+    "message": "警告：この資産を専用のスマートコントラクトへ送ろうとしています。資産が回復できなくなる可能性が高いですが、本当にこれを実行する意思がありますか。"
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto（クリプト）ウォレットを使用すると、Braveで暗号通貨と関連するアセットを扱うことができます。Cryptoウォレットは、コレクティブルズはもちろんのこと、ETHやBATのようなEthereumトークンに対応し、Ðappsやその他のスマートコントラクトを扱うことができます。これはすべて、Ethereumやその他のブロックチェーンシステムに精通している方々、または学ぶことを楽しみにしている方々を対象としています。"
   },
@@ -1784,7 +1852,7 @@
     "message": "Ledgerハードウェアウォレットを接続してdAppsと連携させ、別の接続済みウォレットに送金しましょう。"
   },
   "metamaskImportSubText": {
-    "message": "注：Metamaskウォレットからインポートする場合は、24単語ではなく12単語を入力してください。"
+    "message": "ご注意：暗号ウォレットのバージョン1.0.26以前のバージョンからインポートする場合、秘密のフレーズは12語ではなく24語になります。"
   },
   "newLocalWallet": {
     "message": "新しいローカルウォレット"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": " Brave クリプトウォレットへようこそ"
+  },
+  "waitingForConfirmation": {
+    "message": "承認を待っています。"
   }
 }

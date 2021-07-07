@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Avanserte valg"
   },
+  "customizeGas": {
+    "message": "Tilpass"
+  },
   "addToAddressBook": {
     "message": "Legg til adressebok "
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Ressurs"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Slippage Tolerance"
   },
   "assets": {
     "message": "Eiendeler"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Kontakt oss!"
   },
+  "continueToSwap": {
+    "message": "Continue to Swap"
+  },
   "continueToWyre": {
     "message": "Fortsett til Wyre "
   },
@@ -557,7 +572,7 @@
     "message": "Hvis du trenger å sikkerhetskopiere seed-frasen din igjen kan du finne den i Innstillinger -> Sikkerhet."
   },
   "endOfFlowMessage7": {
-    "message": "Hvis du når som helst har spørsmål eller opplever noe suspekt, kontakt oss på support@brave.com."
+    "message": "If you ever have questions or see something fishy, visit our wallet"
   },
   "endOfFlowMessage8": {
     "message": "Brave kunne ikke gjenopprette seed-setningen din."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Ferdig"
+  },
+  "endOfFlowMessage11": {
+    "message": "support forum."
   },
   "externalExtension": {
     "message": "Ekstern utvidelse"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Logg"
   },
+  "home": {
+    "message": "Gå til startsiden"
+  },
   "import": {
     "message": "Importer",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importer wallet"
   },
   "importYourExisting": {
-    "message": "Importer den eksisterende walleten din med en 24-ords seed-setning"
+    "message": "Import your existing wallet using a 12 or 24 word seed phrase"
   },
   "imported": {
     "message": "Importert",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Utilstrekkelige tokener "
   },
+  "insufficientFundsGas": {
+    "message": "Insufficient funds for gas."
+  },
+  "balanceFetchError": {
+    "message": "Balance fetch error."
+  },
   "invalidAddress": {
     "message": "Ugyldig adresse"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Ikke ETH-nettverk, bruk små bokstaver"
   },
-  "invalidInput": {
-    "message": "Ugyldig inndata "
+  "invalidCustomNetworkAlertContent1": {
+    "message": "The custom network '$1' is missing its chain ID.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "To protect you from malicious or faulty network providers, chain IDs are now required for all custom networks."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Go to Settings > Network and enter the chain ID. You can find the chain IDs of most popular networks on $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Invalid Custom Network"
+  },
+  "invalidHexNumber": {
+    "message": "Invalid hexadecimal number."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Invalid hexadecimal number. Remove any leading zeros."
   },
   "invalidRPC": {
     "message": "Ugyldig RPC URL"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Ugyldig IPFS-gateway: Verdien må være en gyldig nettstedsadresse"
+  },
+  "invalidNumber": {
+    "message": "Invalid number. Enter a decimal or hexadecimal number."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Invalid number. Remove any leading zeros."
   },
   "forbiddenIpfsGateway": {
     "message": "Forbudt IPFS-gateway: Vennligst spesifiser en CID-gateway"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Ethereum hovednettverk"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Only available on mainnet and ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorer denne frasen. "
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Nettverk"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "The chain ID is used for signing transactions. Enter a decimal or hexadecimal number starting with '0x'."
+  },
   "networkSettingsDescription": {
     "message": "Legg til og rediger tilpassede RPC-nettverk"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "En skadelig Ethereum-nettverkstilbyder kan lyve om tilstanden på blokk-kjeden og registrere nettverksaktiviteten din. Legg bare til tilpassede nettverk som du stoler på."
-  },
-  "optionalChainId": {
-    "message": "Blokkjede (vagfritt)"
   },
   "optionalSymbol": {
     "message": "Symbol (valgfritt)"
@@ -1144,7 +1197,7 @@
     "message": "Mottakeradresse"
   },
   "recipientAddressPlaceholder": {
-    "message": "Søk, offentlig adresse (0x) eller ENS"
+    "message": "Search, public address (0x), or domain"
   },
   "rejectAll": {
     "message": "Avvis alle"
@@ -1265,7 +1318,7 @@
     "message": "ADVARSEL: Du må aldri avsløre gjenopprettingsfrasen din. Alle som har denne frasen kan ta fra deg Etheren din for alltid."
   },
   "secretPhrase": {
-    "message": "Legg inn den hemmelige 24-ordssetningen din her for å gjenopprette hvelvet ditt. "
+    "message": "Enter your secret 12 or 24 word phrase to restore your vault."
   },
   "securityAndPrivacy": {
     "message": "Sikkerhet og personvern"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Send"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Send beløp"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Besøk brukerstøtte"
   },
+  "swapPrivacyPolicy": {
+    "message": "Swap Privacy Policy"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave uses $1 as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+  },
   "symbol": {
     "message": "Symbol"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Dette vil opprette en ny lommebok og mnemonisk gjenopprettingsfrase"
+  },
+  "timeout": {
+    "message": "Timeout"
   },
   "tips": {
     "message": "Tips"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Brave-innstillinger"
   },
+  "contractErrorMessage": {
+    "message": "Warning: You are about to send this asset to its own smart contract. You probably don't mean to do this, as it will likely render the asset unrecoverable."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets lar deg jobbe med kryptovaluta og relaterte midler i Brave. Crypto Wallets støtter Ethereum tokener som ETH og BAT, i tillegg til collectibles, og lar deg jobbe med Ðapps og andre smarte kontrakter. Alt dette er beregnet på personer som er kjente med Ethereum og andre blokk-kjede-systemer – eller er spente på å lære."
   },
@@ -1784,7 +1852,7 @@
     "message": "Koble til ledger-maskinvarelommeboken for å samhandle med dApps og foreta overføringer til andre tilkoblede lommebøker."
   },
   "metamaskImportSubText": {
-    "message": "Merk: Hvis du importerer fra en Metamask-wallet, legg inn 12 ord istedenfor 24."
+    "message": "Note: If importing from Crypto Wallets Version 1.0.26 or earlier, your secret phrase is 24 words instead of 12."
   },
   "newLocalWallet": {
     "message": "Ny lokal lommebok "
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Velkommen til Braves kryptolommebok"
+  },
+  "waitingForConfirmation": {
+    "message": "Waiting for confirmation."
   }
 }

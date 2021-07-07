@@ -160,6 +160,9 @@
   "advancedOptions": {
     "message": "Opzioni Avanzate"
   },
+  "customizeGas": {
+    "message": "Personalizza"
+  },
   "addToAddressBook": {
     "message": "Aggiungi alla rubrica"
   },
@@ -233,6 +236,15 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "maker": {
+    "message": "Maker"
+  },
+  "taker": {
+    "message": "Taker"
+  },
+  "slippage": {
+    "message": "Tolleranza di slippage"
   },
   "assets": {
     "message": "Beni"
@@ -412,6 +424,9 @@
   "contactUs": {
     "message": "Contattaci!"
   },
+  "continueToSwap": {
+    "message": "Continua su Swap"
+  },
   "continueToWyre": {
     "message": "Continua su Wyre"
   },
@@ -557,7 +572,7 @@
     "message": "Se vorrai fare nuovamente un backup della frase, la puoi trovare in Impostazioni -> Sicurezza & Privacy."
   },
   "endOfFlowMessage7": {
-    "message": "Se hai domande o vedi qualcosa di strano, invia un'email a support@brave.com."
+    "message": "Se hai domande o vedi qualcosa di sospetto, visita il nostro portafoglio"
   },
   "endOfFlowMessage8": {
     "message": "Brave non riesce a recuperare la tua frase seme."
@@ -567,6 +582,9 @@
   },
   "endOfFlowMessage10": {
     "message": "Tutto Fatto"
+  },
+  "endOfFlowMessage11": {
+    "message": "forum di assistenza."
   },
   "externalExtension": {
     "message": "Estensione esterna"
@@ -768,6 +786,9 @@
   "history": {
     "message": "Storico"
   },
+  "home": {
+    "message": "Home page"
+  },
   "import": {
     "message": "Importa",
     "description": "Button to import an account from a selected file"
@@ -785,7 +806,7 @@
     "message": "Importa il portafoglio"
   },
   "importYourExisting": {
-    "message": "Importa il tuo portafoglio esistente usando una frase seme da 24 parole"
+    "message": "Importa il tuo portafoglio esistente usando una frase seed di 12 o 24 parole"
   },
   "imported": {
     "message": "Importato",
@@ -809,6 +830,12 @@
   "insufficientTokens": {
     "message": "Token insufficienti."
   },
+  "insufficientFundsGas": {
+    "message": "Fondi insufficienti per il gas."
+  },
+  "balanceFetchError": {
+    "message": "Errore nel recupero del saldo."
+  },
   "invalidAddress": {
     "message": "Indirizzo non valido"
   },
@@ -827,8 +854,25 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Non rete ETH, inserisci caratteri minuscoli"
   },
-  "invalidInput": {
-    "message": "Input non valido."
+  "invalidCustomNetworkAlertContent1": {
+    "message": "La rete personalizzata \"$1\" è priva del suo ID catena.",
+    "description": "$1 is the name/identifier of the network."
+  },
+  "invalidCustomNetworkAlertContent2": {
+    "message": "Per proteggerti da provider di rete malintenzionati o errati, gli ID catena sono ora richiesti per tutte le reti personalizzate."
+  },
+  "invalidCustomNetworkAlertContent3": {
+    "message": "Vai su Impostazioni > Rete e inserisci l'ID catena. Puoi trovare gli ID catena delle reti più popolari su $1.",
+    "description": "$1 is a link to https://chainid.network"
+  },
+  "invalidCustomNetworkAlertTitle": {
+    "message": "Rete personalizzata non valida"
+  },
+  "invalidHexNumber": {
+    "message": "Numero esadecimale non valido."
+  },
+  "invalidHexNumberLeadingZeros": {
+    "message": "Numero esadecimale non valido. Rimuovere tutti gli zeri iniziali."
   },
   "invalidRPC": {
     "message": "URI RPC invalido"
@@ -847,6 +891,12 @@
   },
   "invalidIpfsGateway": {
     "message": "Gateway IPFS non valido: il valore deve essere un URL valido"
+  },
+  "invalidNumber": {
+    "message": "Numero non valido. Inserisci un numero decimale o esadecimale."
+  },
+  "invalidNumberLeadingZeros": {
+    "message": "Numero non valido. Rimuovere tutti gli zeri iniziali."
   },
   "forbiddenIpfsGateway": {
     "message": "Gateway IPFS vietato: si prega di specificare un gateway CID"
@@ -903,6 +953,9 @@
   "mainnet": {
     "message": "Rete Ethereum Principale"
   },
+  "availableOnMainnetRopsten": {
+    "message": "Disponibile solo su mainnet e ropsten"
+  },
   "memorizePhrase": {
     "message": "Memorizza questa frase."
   },
@@ -958,6 +1011,9 @@
   "networks": {
     "message": "Reti"
   },
+  "networkSettingsChainIdDescription": {
+    "message": "L'ID catena è usato per firmare le transazioni. Inserisci un numero decimale o esadecimale che inizia con \"0x\"."
+  },
   "networkSettingsDescription": {
     "message": "Aggiungi e modifica reti RPC personalizzate"
   },
@@ -1009,9 +1065,6 @@
   },
   "onlyAddTrustedNetworks": {
     "message": "Un fornitore di rete Ethereum malintenzionato può mentire sullo stato del blockchain e registrare la tua attività di rete. Aggiungi solamente reti personalizzate di cui ti fidi."
-  },
-  "optionalChainId": {
-    "message": "ChainID (opzionale)"
   },
   "optionalSymbol": {
     "message": "Simbolo (opzionale)"
@@ -1144,7 +1197,7 @@
     "message": "Indirizzo Destinatario"
   },
   "recipientAddressPlaceholder": {
-    "message": "Ricerca, indirizzo pubblico (0x) o ENS"
+    "message": "Ricerca, indirizzo pubblico (0x) o dominio"
   },
   "rejectAll": {
     "message": "Respingi Tutto"
@@ -1265,7 +1318,7 @@
     "message": "ATTENZIONE: Non dire mai a nessuno questa frase di backup. Chiunque con questa frase può rubare i tuoi Ether per sempre."
   },
   "secretPhrase": {
-    "message": "Inserisci qui la tua frase segreta di 24 parole per ripristinare il tuo caveau."
+    "message": "Inserisci la tua frase segreta di 12 o 24 parole per ripristinare il tuo vault."
   },
   "securityAndPrivacy": {
     "message": "Sicurezza & Privacy"
@@ -1311,6 +1364,9 @@
   },
   "send": {
     "message": "Invia"
+  },
+  "swap": {
+    "message": "Swap"
   },
   "sendAmount": {
     "message": "Invia Importo"
@@ -1476,6 +1532,12 @@
   "supportCenter": {
     "message": "Visita il nostro Centro di Supporto"
   },
+  "swapPrivacyPolicy": {
+    "message": "Informativa sulla privacy di Swap"
+  },
+  "swapPrivacyPolicyDescription": {
+    "message": "Brave usa $1 come aggregatore DEX. 0x elaborerà l'indirizzo Ethereum e l'indirizzo IP per eseguire una transazione (compreso il calcolo dei prezzi). 0x utilizzerà questi dati ESCLUSIVAMENTE ai fini dell'elaborazione delle transazioni."
+  },
   "symbol": {
     "message": "Simbolo"
   },
@@ -1511,6 +1573,9 @@
   },
   "thisWillCreate": {
     "message": "Questo creerà un nuovo portafoglio e frase seed"
+  },
+  "timeout": {
+    "message": "Timeout"
   },
   "tips": {
     "message": "Suggerimenti"
@@ -1762,6 +1827,9 @@
   "braveSettings": {
     "message": "Impostazioni di Brave"
   },
+  "contractErrorMessage": {
+    "message": "Attenzione: stai per inviare questo asset al suo proprio contratto intelligente. È probabile che tu non intenda farlo, poiché ciò renderà l'asset irrecuperabile."
+  },
   "cryptoWalletsDisclosureOne": {
     "message": "I Portafogli Crypto ti permettono di lavorare con le valute criptate e i relativi beni in Brave. I Portafolgi Crypto supportano token Ethereum come ETH e BAT, così come i collectible, e ti permettono di lavorare con Ðapps e altri contratti intelligenti. Tutto questo è pensato per persone che hanno familiarità con Ethereum e altri sistemi blockchain — o che non vedono l'ora di imparare."
   },
@@ -1784,7 +1852,7 @@
     "message": "Collega il tuo portafoglio hardware di Ledger per interagire con dApp ed effettuare trasferimenti ad altri portafogli collegati.\n"
   },
   "metamaskImportSubText": {
-    "message": "Nota: se si importa da un portafoglio Metamask, inserire 12 parole invece di 24."
+    "message": "Nota: se stai importando da Crypto Wallets versione 1.0.26 o precedente, la tua frase segreta è di 24 parole invece di 12."
   },
   "newLocalWallet": {
     "message": "Nuovo portafoglio locale\n"
@@ -1803,5 +1871,8 @@
   },
   "welcomeCryptoWallets": {
     "message": "Benvenuto nei portafogli di criptovalute di Brave"
+  },
+  "waitingForConfirmation": {
+    "message": "In attesa di conferma."
   }
 }

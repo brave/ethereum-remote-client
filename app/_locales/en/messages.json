@@ -1275,6 +1275,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Review Swap"
+  },
   "rinkeby": {
     "message": "Rinkeby Test Network"
   },
@@ -1368,6 +1371,21 @@
   "swap": {
     "message": "Swap"
   },
+  "swapApprovalSecurityMsg": {
+    "message": "For security reasons, it is advisable to reset the allowance to 0 first before setting it the desired value, to prevent transaction reordering attacks."
+  },
+  "swapBraveFees": {
+    "message": "Quote includes a $1 Brave fee."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave uses $1 as a DEX aggregator. Please see $2 for more information."
+  },
+  "swapSlippageDescription": {
+    "message": "The maximum acceptable price change in % of the buy asset. If the delta exceeds the slippage, the swap will not be executed."
+  },
+  "swapQuoteRefresh": {
+    "message": "Quotes are refreshed often to reflect current market conditions."
+  },
   "sendAmount": {
     "message": "Send Amount"
   },
@@ -1401,6 +1419,9 @@
   },
   "noAccountsFound": {
     "message": "No accounts found for the given search query"
+  },
+  "selectAsset": {
+    "message": "Select asset"
   },
   "selectAnAccount": {
     "message": "Select an Account"

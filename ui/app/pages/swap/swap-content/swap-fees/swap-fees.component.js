@@ -124,7 +124,7 @@ export default class SwapFees extends Component {
                 </td>
               </tr>
               <tr>
-                <td>Estimated network fee</td>
+                <td>{t('estimatedNetworkFee')}</td>
                 <td>
                   <UserPreferencedCurrencyDisplay value={estimatedGasCost} type={PRIMARY} />
                 </td>
@@ -138,7 +138,7 @@ export default class SwapFees extends Component {
                     className="swap-v2__gas-control-btn"
                     onClick={() => refreshQuote(fromAsset, toAsset, amount, null)}
                   >
-                    Reset
+                    {t('reset')}
                   </span>
                 </td>
               </tr>

@@ -180,7 +180,7 @@ export default class SwapAssetRow extends Component {
         className="swap-v2__form-row-secondary-right"
         onClick={() => setAllowance(customAllowance, setCustomAllowance)}
       >
-        Set allowance
+        {t('setAllowance')}
         {fromTokenAssetAllowance !== '0' && (
           <ReactTippy
             style={{

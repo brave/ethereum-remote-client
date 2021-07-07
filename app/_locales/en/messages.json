@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Estimated network fee"
+  },
   "expandView": {
     "message": "Expand view"
   },
@@ -1362,6 +1365,9 @@
   "selectType": {
     "message": "Select Type"
   },
+  "setAllowance": {
+    "message": "Set allowance"
+  },
   "buy": {
     "message": "Buy"
   },
@@ -1379,6 +1385,9 @@
   },
   "swapFooterPrivacyNotice": {
     "message": "Brave uses $1 as a DEX aggregator. Please see $2 for more information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "New quote in"
   },
   "swapSlippageDescription": {
     "message": "The maximum acceptable price change in % of the buy asset. If the delta exceeds the slippage, the swap will not be executed."

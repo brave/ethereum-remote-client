@@ -47,7 +47,18 @@ export default class SwapQuote extends Component {
 
   render () {
     const { fromAsset, toAsset, quote, seconds } = this.props
+    const { t } = this.context
+
     const displayQuote = fromAsset && toAsset && quote
+
+    const countdown = (
+      <span
+        className="countdown"
+        style={{ color: seconds < 20 ? '#d73a49' : undefined }}
+      >
+        0:{seconds.toString().padStart(2, '0')}
+      </span>
+    )
 
     return displayQuote ? (
       <>
@@ -60,13 +71,7 @@ export default class SwapQuote extends Component {
         </div>
         <div className="swap-v2__form-row-centered">
           <div className="quote">
-              New quote in{' '}
-            <span
-              className="countdown"
-              style={{ color: seconds < 20 ? '#d73a49' : undefined }}
-            >
-                0:{seconds.toString().padStart(2, '0')}
-            </span>
+            { t('swapNewQuoteCountdown') } {countdown}
             {this.getTooltip()}
           </div>
         </div>

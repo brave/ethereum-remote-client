@@ -1,6 +1,6 @@
 # Changelog
 
-## Remote Component([0.1.93](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.93)), Browser Component: `1.0.30`(02-Jul-2021)
+## Remote Component([0.1.94](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.94)), Browser Component: `1.0.30`(07-Jul-2021)
 
  - [brave-browser#15859](https://github.com/brave/brave-browser/issues/15859) - Added Brave Swap to Crypto Wallets
 

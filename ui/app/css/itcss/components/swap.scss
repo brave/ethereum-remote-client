@@ -571,7 +571,7 @@
 
   &__gas-control-btn {
     font-size: 0.8rem;
-    color: #037dd6;
+    color: #2f9ae0 !important;
     cursor: pointer;
     padding-right: 7px;
   }
@@ -606,7 +606,7 @@
     font-size: 0.75rem;
 
     span {
-      color: #2f9ae0;
+      color: #2f9ae0 !important;
     }
 
     a {
@@ -630,9 +630,9 @@
     .quote {
       font-size: 0.8rem;
       border-radius: 42px;
-      background: #f2f3f4;
       padding: 7px 14px;
       font-weight: 700;
+      border: 1px solid;
 
       .countdown {
         font-weight: 400;
@@ -658,6 +658,10 @@
 
           td {
             padding-top: 7px;
+
+            .btn--rounded.btn-primary {
+              background-color: #037dd6 !important;
+            }
           }
         }
 

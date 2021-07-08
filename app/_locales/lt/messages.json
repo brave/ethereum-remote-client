@@ -238,13 +238,13 @@
     "message": "Turtas"
   },
   "maker": {
-    "message": "Maker"
+    "message": "Gaminantis"
   },
   "taker": {
-    "message": "Taker"
+    "message": "Imantis"
   },
   "slippage": {
-    "message": "Slippage Tolerance"
+    "message": "Nesutapimo paklaida"
   },
   "assets": {
     "message": "Turtas"
@@ -425,7 +425,7 @@
     "message": "Susisiekite su mumis!"
   },
   "continueToSwap": {
-    "message": "Continue to Swap"
+    "message": "Pereiti prie „Swap“"
   },
   "continueToWyre": {
     "message": "Tęsti su „Wyre“"
@@ -572,7 +572,7 @@
     "message": "Jeigu reikia dar kartą padaryti jūsų atkūrimo frazės kopiją, ją galite rasti pasirinkę Nuostatos -> Sauga."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, visit our wallet"
+    "message": "Jeigu turite klausimų arba pastebite ką nors įtartino, apsilankykite mūsų piniginės"
   },
   "endOfFlowMessage8": {
     "message": "„Brave“ negali atkurti jūsų atkūrimo frazės."
@@ -584,7 +584,7 @@
     "message": "Viskas atlikta"
   },
   "endOfFlowMessage11": {
-    "message": "support forum."
+    "message": "palaikymo forume."
   },
   "externalExtension": {
     "message": "Išorinis plėtinys"
@@ -651,6 +651,9 @@
   },
   "estimatedProcessingTimes": {
     "message": "Numatomos apdorojimo trukmės"
+  },
+  "estimatedNetworkFee": {
+    "message": "Estimated network fee"
   },
   "expandView": {
     "message": "Išskleisti rodinį"
@@ -806,7 +809,7 @@
     "message": "Importuoti piniginę"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 or 24 word seed phrase"
+    "message": "Importuokite esamą piniginę, naudodami 12 arba 24 žodžių atkūrimo frazę"
   },
   "imported": {
     "message": "Importuota",
@@ -831,10 +834,10 @@
     "message": "Nepakanka žetonų."
   },
   "insufficientFundsGas": {
-    "message": "Insufficient funds for gas."
+    "message": "Dujoms nepakanka lėšų."
   },
   "balanceFetchError": {
-    "message": "Balance fetch error."
+    "message": "Likučio gavimo klaida."
   },
   "invalidAddress": {
     "message": "Netinkamas adresas"
@@ -855,24 +858,24 @@
     "message": "Ne ETH tinklas, nustatykite į mažąsias raides"
   },
   "invalidCustomNetworkAlertContent1": {
-    "message": "The custom network '$1' is missing its chain ID.",
+    "message": "Tinkintam tinklui „$1“ trūksta grandinės ID.",
     "description": "$1 is the name/identifier of the network."
   },
   "invalidCustomNetworkAlertContent2": {
-    "message": "To protect you from malicious or faulty network providers, chain IDs are now required for all custom networks."
+    "message": "Norint jus apsaugoti nuo kenkėjiškų ar netinkamai veikiančių tinklo paslaugų teikėjų, dabar visiems tinkintiems tinklams reikia grandinės ID."
   },
   "invalidCustomNetworkAlertContent3": {
-    "message": "Go to Settings > Network and enter the chain ID. You can find the chain IDs of most popular networks on $1.",
+    "message": "Eikite į Nustatymai > Tinklas ir įveskite grandinės ID. Populiariausių tinklų grandinės ID galite rasti $1.",
     "description": "$1 is a link to https://chainid.network"
   },
   "invalidCustomNetworkAlertTitle": {
-    "message": "Invalid Custom Network"
+    "message": "Negaliojantis tinkintas tinklas"
   },
   "invalidHexNumber": {
-    "message": "Invalid hexadecimal number."
+    "message": "Netinkamas šešioliktainis skaičius."
   },
   "invalidHexNumberLeadingZeros": {
-    "message": "Invalid hexadecimal number. Remove any leading zeros."
+    "message": "Netinkamas šešioliktainis skaičius. Pašalinkite pradžioje esančius nulius."
   },
   "invalidRPC": {
     "message": "Netinkamas RPC URL"
@@ -893,10 +896,10 @@
     "message": "Netinkamas IPFS tinklų sietuvas: reikšmė turi būti galiojantis URL adresas"
   },
   "invalidNumber": {
-    "message": "Invalid number. Enter a decimal or hexadecimal number."
+    "message": "Netinkamas skaičius. Įveskite dešimtainį ar šešioliktainį skaičių."
   },
   "invalidNumberLeadingZeros": {
-    "message": "Invalid number. Remove any leading zeros."
+    "message": "Netinkamas skaičius. Pašalinkite pradžioje esančius nulius."
   },
   "forbiddenIpfsGateway": {
     "message": "Uždraustas IPFS tinklų sietuvas: nurodykite CID tinklų sietuvą"
@@ -954,7 +957,7 @@
     "message": "Pagrindinis „Ethereum“ tinklas"
   },
   "availableOnMainnetRopsten": {
-    "message": "Only available on mainnet and ropsten"
+    "message": "Prieinama tik „Mainnet“ ir „Ropsten“"
   },
   "memorizePhrase": {
     "message": "Įsiminti šią frazę."
@@ -1012,7 +1015,7 @@
     "message": "Tinklai"
   },
   "networkSettingsChainIdDescription": {
-    "message": "The chain ID is used for signing transactions. Enter a decimal or hexadecimal number starting with '0x'."
+    "message": "Grandinės ID naudojamas operacijoms pasirašyti. Įveskite dešimtainį ar šešioliktainį skaičių, prasidedantį „0x“."
   },
   "networkSettingsDescription": {
     "message": "Įtraukti ir redaguoti tinkintus RPC tinklus"
@@ -1197,7 +1200,7 @@
     "message": "Gavėjo adresas"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or domain"
+    "message": "Ieškoti, viešojo adreso (0x) arba domeno"
   },
   "rejectAll": {
     "message": "Atmesti viską"
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pasirengę prisijungti?"
   },
+  "reviewSwap": {
+    "message": "Review Swap"
+  },
   "rinkeby": {
     "message": "„Rinkeby“ bandomasis tinklas"
   },
@@ -1318,7 +1324,7 @@
     "message": "ĮSPĖJIMAS. Niekada neatskleiskite savo atsarginės frazės. Bet kas, žinantis šią frazę, gali visiems laikams pasiimti jūsų eterius."
   },
   "secretPhrase": {
-    "message": "Enter your secret 12 or 24 word phrase to restore your vault."
+    "message": "Įveskite savo slaptąją 12 ar 24 žodžių frazę, kad atkurtumėte savo saugyklą."
   },
   "securityAndPrivacy": {
     "message": "Sauga ir privatumas"
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Pasirinkti tipą"
   },
+  "setAllowance": {
+    "message": "Set allowance"
+  },
   "buy": {
     "message": "Pirkti"
   },
@@ -1366,7 +1375,25 @@
     "message": "Siųsti"
   },
   "swap": {
-    "message": "Swap"
+    "message": "„Swap“"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "For security reasons, it is advisable to reset the allowance to 0 first before setting it the desired value, to prevent transaction reordering attacks."
+  },
+  "swapBraveFees": {
+    "message": "Quote includes a $1 Brave fee."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave uses $1 as a DEX aggregator. Please see $2 for more information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "New quote in"
+  },
+  "swapSlippageDescription": {
+    "message": "The maximum acceptable price change in % of the buy asset. If the delta exceeds the slippage, the swap will not be executed."
+  },
+  "swapQuoteRefresh": {
+    "message": "Quotes are refreshed often to reflect current market conditions."
   },
   "sendAmount": {
     "message": "Siųsti sumą"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Kiekvieną žodį atskirkite viengubu tarpu"
   },
+  "searchAssets": {
+    "message": "Search Assets"
+  },
   "searchTokens": {
     "message": "Ieškoti žetonų"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Pagal pateiktą paieškos užklausą paskyrų nerasta "
+  },
+  "selectAsset": {
+    "message": "Select asset"
   },
   "selectAnAccount": {
     "message": "Pasirinkite paskyrą"
@@ -1533,10 +1566,10 @@
     "message": "Apsilankykite mūsų pagalbos centre"
   },
   "swapPrivacyPolicy": {
-    "message": "Swap Privacy Policy"
+    "message": "„Swap“ privatumo politika"
   },
   "swapPrivacyPolicyDescription": {
-    "message": "Brave uses $1 as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+    "message": "„Brave“ naudoja $1 kaip DEX rinktuvą. 0x apdoros eterio adresą ir IP adresą, kad įvykdytų operaciją (įskaitant pasiūlymų gavimą). 0x šiuos duomenis naudos TIK operacijoms apdoroti."
   },
   "symbol": {
     "message": "Simbolis"
@@ -1575,7 +1608,7 @@
     "message": "Bus sukurta nauja slaptažodinė ir atkūrimo frazė"
   },
   "timeout": {
-    "message": "Timeout"
+    "message": "Skirtasis laikas baigėsi"
   },
   "tips": {
     "message": "Arbatpinigiai"
@@ -1828,7 +1861,7 @@
     "message": "„Brave“ nustatymai"
   },
   "contractErrorMessage": {
-    "message": "Warning: You are about to send this asset to its own smart contract. You probably don't mean to do this, as it will likely render the asset unrecoverable."
+    "message": "Įspėjimas. Ruošiatės nusiųsti šį išteklių į jo paties išmaniąją sutartį. Greičiausiai nenorite to padaryti, nes gali būti taip, kad ištekliaus nebebus galima atkurti."
   },
   "cryptoWalletsDisclosureOne": {
     "message": "Kriptovaliutų piniginės leidžia tvarkyti kriptovaliutas ir susijusį turtą „Brave“ naršyklėje. Kriptovaliutų piniginės palaiko eterio (angl. „Ethereum“) žetonus, kaip antai ETH ir BAT, bei kolekcines priemones, taip pat leidžia dirbti su „Ðapps“ ir kitomis išmaniosiomis sutartimis. Visa tai skirta žmonėms, susipažinusiems arba norintiems susipažinti su eteriu ir kitomis blokų grandinės sistemomis."
@@ -1852,7 +1885,7 @@
     "message": "Prijunkite savo sąskaitų knygos techninės įrangos piniginę, kad ji palaikytų ryšį su „dApps“, ir atlikite pervedimus į kitas prijungtas pinigines."
   },
   "metamaskImportSubText": {
-    "message": "Note: If importing from Crypto Wallets Version 1.0.26 or earlier, your secret phrase is 24 words instead of 12."
+    "message": "Pastaba. Importuojant iš kriptovaliutų piniginės 1.0.26 ar senesnės versijos, jūsų slaptoji frazė sudaryta iš 24, o ne 12 žodžių."
   },
   "newLocalWallet": {
     "message": "Nauja vietinė slaptažodinė"
@@ -1873,6 +1906,6 @@
     "message": "Sveikiname atradus „Brave“ kriptovaliutų pinigines"
   },
   "waitingForConfirmation": {
-    "message": "Waiting for confirmation."
+    "message": "Laukiama patvirtinimo."
   }
 }

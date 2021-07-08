@@ -238,13 +238,13 @@
     "message": "Aktīvs"
   },
   "maker": {
-    "message": "Maker"
+    "message": "Veidotājs"
   },
   "taker": {
-    "message": "Taker"
+    "message": "Ņēmējs"
   },
   "slippage": {
-    "message": "Slippage Tolerance"
+    "message": "Novirzes pielaide"
   },
   "assets": {
     "message": "Aktīvi"
@@ -425,7 +425,7 @@
     "message": "Sazinies ar mums!"
   },
   "continueToSwap": {
-    "message": "Continue to Swap"
+    "message": "Pāriet uz mijmaiņu"
   },
   "continueToWyre": {
     "message": "Pāriet uz Wyre"
@@ -572,7 +572,7 @@
     "message": "Ja nepieciešams atkārtoti dublēt atkopšanas frāzi, varat to atrast, dodoties uz Iestatījumi -> Drošība."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, visit our wallet"
+    "message": "Ja jums rodas jautājumi vai pamanāt kaut ko aizdomīgu, apmeklējiet mūsu maku"
   },
   "endOfFlowMessage8": {
     "message": "Brave nevar atgūt jūsu atkopšanas frāzi."
@@ -584,7 +584,7 @@
     "message": "Pabeigts"
   },
   "endOfFlowMessage11": {
-    "message": "support forum."
+    "message": "atbalsta forums."
   },
   "externalExtension": {
     "message": "Ārējais paplašinājums"
@@ -651,6 +651,9 @@
   },
   "estimatedProcessingTimes": {
     "message": "Aprēķinātais apstrādes laiks"
+  },
+  "estimatedNetworkFee": {
+    "message": "Aprēķinātā tīkla maksa"
   },
   "expandView": {
     "message": "Izvērst skatu"
@@ -806,7 +809,7 @@
     "message": "Importēt maku"
   },
   "importYourExisting": {
-    "message": "Import your existing wallet using a 12 or 24 word seed phrase"
+    "message": "Importējiet esošo maku, izmantojot 12 vai 24 vārdu atkopšanas frāzi"
   },
   "imported": {
     "message": "Importēts",
@@ -831,10 +834,10 @@
     "message": "Nepietiek marķieru."
   },
   "insufficientFundsGas": {
-    "message": "Insufficient funds for gas."
+    "message": "Nepietiek līdzekļu Gas."
   },
   "balanceFetchError": {
-    "message": "Balance fetch error."
+    "message": "Bilances izgūšanas kļūda."
   },
   "invalidAddress": {
     "message": "Nederīga adrese"
@@ -855,24 +858,24 @@
     "message": "Nav ETH tīkls, iestatīti mazie burti"
   },
   "invalidCustomNetworkAlertContent1": {
-    "message": "The custom network '$1' is missing its chain ID.",
+    "message": "Pielāgotajam tīklam '$1' trūkst ķēdes ID.",
     "description": "$1 is the name/identifier of the network."
   },
   "invalidCustomNetworkAlertContent2": {
-    "message": "To protect you from malicious or faulty network providers, chain IDs are now required for all custom networks."
+    "message": "Lai pasargātu jūs no ļaunprātīgiem vai kļūdainiem tīkla nodrošinātājiem, ķēdes ID tagad ir nepieciešami visiem pielāgotajiem tīkliem."
   },
   "invalidCustomNetworkAlertContent3": {
-    "message": "Go to Settings > Network and enter the chain ID. You can find the chain IDs of most popular networks on $1.",
+    "message": "Pārejiet uz sadaļu Iestatījumi > Tīkls un ievadiet ķēdes ID. Populārāko tīklu ķēdes ID var atrast $1.",
     "description": "$1 is a link to https://chainid.network"
   },
   "invalidCustomNetworkAlertTitle": {
-    "message": "Invalid Custom Network"
+    "message": "Nederīgs pielāgotais tīkls"
   },
   "invalidHexNumber": {
-    "message": "Invalid hexadecimal number."
+    "message": "Nederīgs heksadecimālais skaitlis."
   },
   "invalidHexNumberLeadingZeros": {
-    "message": "Invalid hexadecimal number. Remove any leading zeros."
+    "message": "Nederīgs heksadecimālais skaitlis. Noņemiet visas nulles pirms skaitļa."
   },
   "invalidRPC": {
     "message": "Nederīgs RPC URL"
@@ -893,10 +896,10 @@
     "message": "Nederīga IPFS vārteja: Vērtībai ir jābūt derīgam URL"
   },
   "invalidNumber": {
-    "message": "Invalid number. Enter a decimal or hexadecimal number."
+    "message": "Nederīgs skaitlis. Ievadiet decimālskaitli vai heksadecimālu skaitli."
   },
   "invalidNumberLeadingZeros": {
-    "message": "Invalid number. Remove any leading zeros."
+    "message": "Nederīgs skaitlis. Noņemiet visas nulles pirms skaitļa."
   },
   "forbiddenIpfsGateway": {
     "message": "Aizliegta IPFS vārteja: Lūdzu, norādiet CID vārteju"
@@ -954,7 +957,7 @@
     "message": "Galvenais Ethereum tīkls"
   },
   "availableOnMainnetRopsten": {
-    "message": "Only available on mainnet and ropsten"
+    "message": "Pieejams tikai Mainnet un Ropsten"
   },
   "memorizePhrase": {
     "message": "Iegaumējiet šo frāzi."
@@ -1012,7 +1015,7 @@
     "message": "Tīkli"
   },
   "networkSettingsChainIdDescription": {
-    "message": "The chain ID is used for signing transactions. Enter a decimal or hexadecimal number starting with '0x'."
+    "message": "Ķēdes ID izmanto darījumu parakstīšanai. Ievadiet decimālskaitli vai heksadecimālo skaitli, kas sākas ar “0x”."
   },
   "networkSettingsDescription": {
     "message": "Pievienot un rediģēt pielāgotos RPC tīklus"
@@ -1197,7 +1200,7 @@
     "message": "Saņēmēja adrese"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or domain"
+    "message": "Meklēšana, publiskā adrese (0x) vai domēns"
   },
   "rejectAll": {
     "message": "Noraidīt visus"
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Vai esat gatavi izveidot savienojumu?"
   },
+  "reviewSwap": {
+    "message": "Pārskatīt mijmaiņu"
+  },
   "rinkeby": {
     "message": "Rinkeby testa tīkls"
   },
@@ -1318,7 +1324,7 @@
     "message": "BRĪDINĀJUMS! Nekādā gadījumā neizpaudiet savu rezerves frāzi. Ikviens, kam pieejama šī frāze, var uz visiem laikiem pārņemt jūsu Ether."
   },
   "secretPhrase": {
-    "message": "Enter your secret 12 or 24 word phrase to restore your vault."
+    "message": "Ievadiet savu slepeno 12 vai 24 vārdu frāzi, lai atjaunotu savu seifu."
   },
   "securityAndPrivacy": {
     "message": "Drošība un konfidencialitāte"
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Atlasiet veidu"
   },
+  "setAllowance": {
+    "message": "Noteikt naudas summu"
+  },
   "buy": {
     "message": "Pirkt"
   },
@@ -1366,7 +1375,25 @@
     "message": "Sūtīt"
   },
   "swap": {
-    "message": "Swap"
+    "message": "Mijmaiņa"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Drošības apsvērumu dēļ pirms vēlamās vērtības iestatīšanas naudas summu ir ieteicams atiestatīt uz 0, lai novērstu darījumu pārkārtošanas uzbrukumus."
+  },
+  "swapBraveFees": {
+    "message": "Noteiktajā cenā ir iekļauta Brave maksa $1 apmērā."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave izmanto $1 kā DEX apkopotāju. Lai iegūtu plašāku informāciju, lūdzu, skatiet $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Jauna cena"
+  },
+  "swapSlippageDescription": {
+    "message": "Maksimāli pieļaujamā cenas izmaiņa % no pērkamā aktīva. Ja delta pārsniedz novirzi, mijmaiņas darījums netiks veikts."
+  },
+  "swapQuoteRefresh": {
+    "message": "Cenas tiek bieži atsvaidzinātas, atspoguļojot pašreizējos tirgus apstākļus."
   },
   "sendAmount": {
     "message": "Nosūtītā summa"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Atdaliet katru vārdu ar vienu atstarpi"
   },
+  "searchAssets": {
+    "message": "Meklēt aktīvos"
+  },
   "searchTokens": {
     "message": "Meklēt marķierus"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nav atrasts meklēšanas vaicājumam atbilstošs konts"
+  },
+  "selectAsset": {
+    "message": "Atlasīt aktīvu"
   },
   "selectAnAccount": {
     "message": "Atlasiet kontu"
@@ -1533,10 +1566,10 @@
     "message": "Apmeklējiet mūsu Atbalsta centru"
   },
   "swapPrivacyPolicy": {
-    "message": "Swap Privacy Policy"
+    "message": "Mijmaiņas privātuma politika"
   },
   "swapPrivacyPolicyDescription": {
-    "message": "Brave uses $1 as a DEX aggregator. 0x will process the Ethereum address and IP address to fulfil a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions."
+    "message": "Brave izmanto $1 kā DEX apkopotāju. 0x apstrādā Ethereum adresi un IP adresi, lai veiktu darījumu (tai skaitā cenu saņemšanu). 0x šos datus izmanto VIENĪGI darījumu apstrādei."
   },
   "symbol": {
     "message": "Simbols"
@@ -1575,7 +1608,7 @@
     "message": "Šādi tiks izveidots jauna maks un atkopšanas frāze"
   },
   "timeout": {
-    "message": "Timeout"
+    "message": "Noildze"
   },
   "tips": {
     "message": "Dzeramnauda"
@@ -1828,7 +1861,7 @@
     "message": "Brave iestatījumi"
   },
   "contractErrorMessage": {
-    "message": "Warning: You are about to send this asset to its own smart contract. You probably don't mean to do this, as it will likely render the asset unrecoverable."
+    "message": "Brīdinājums: jūs gatavojaties nosūtīt šo aktīvu uz tā viedo līgumu. Jūs, visticamāk, nedomājat to darīt, jo iespējams, ka tādējādi aktīvs kļūs neatgūstams."
   },
   "cryptoWalletsDisclosureOne": {
     "message": "Crypto Wallets ļauj jums darboties ar kriptovalūtu un saistītiem aktīviem, izmantojot Brave. Crypto Wallets atbalsta tādus Ethereum žetonus kā ETH un BAT, kā arī kolekcijas žetonus, un ļauj darboties ar Ðapps un citiem viedajiem līgumiem. Tas ir paredzēts cilvēkiem, kuri pārzina Ethereum un citas blokķēdes sistēmas – vai vēlas to apgūt."
@@ -1852,7 +1885,7 @@
     "message": "Pievienojiet savu Ledger aparatūras maku, lai veiktu darbības ar dApps un pārskaitījumus uz citiem pievienotajiem makiem."
   },
   "metamaskImportSubText": {
-    "message": "Note: If importing from Crypto Wallets Version 1.0.26 or earlier, your secret phrase is 24 words instead of 12."
+    "message": "Piezīme: importējot no Crypto Wallets 1.0.26 vai vecākas versijas, jūsu slepenā frāze ir 24 vārdi, nevis 12."
   },
   "newLocalWallet": {
     "message": "Jauns vietējais maks"
@@ -1873,6 +1906,6 @@
     "message": "Laipni lūdzam Brave kripto makos!"
   },
   "waitingForConfirmation": {
-    "message": "Waiting for confirmation."
+    "message": "Gaida apstiprinājumu."
   }
 }

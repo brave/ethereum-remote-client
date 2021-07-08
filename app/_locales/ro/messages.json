@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Timpi estimativi de procesare"
   },
+  "estimatedNetworkFee": {
+    "message": "Taxă de rețea estimată"
+  },
   "expandView": {
     "message": "Extindeți vizualizarea"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Gata de conectare?"
   },
+  "reviewSwap": {
+    "message": "Revedeți schimbul"
+  },
   "rinkeby": {
     "message": "Rețea test Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selectați tipul"
   },
+  "setAllowance": {
+    "message": "Stabiliți toleranța"
+  },
   "buy": {
     "message": "Cumpărați"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Schimbați"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Din motive de securitate, vă recomandăm să resetați toleranța la 0 înainte de a-i stabili valoarea dorită, pentru a împiedica atacurile de reordonare a tranzacțiilor."
+  },
+  "swapBraveFees": {
+    "message": "Oferta include o taxă Brave de $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave utilizează $1 ca agregator de schimb descentralizat. Consultați $2 pentru mai multe informații."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Ofertă nouă în"
+  },
+  "swapSlippageDescription": {
+    "message": "Modificarea maximă de preț acceptată, în procent, din activul de cumpărat. Dacă delta depășește abaterea, schimbul nu va fi executat."
+  },
+  "swapQuoteRefresh": {
+    "message": "Ofertele sunt actualizate des, pentru a reflecta condițiile curente de piață."
   },
   "sendAmount": {
     "message": "Suma trimisă"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Despărțiți fiecare cuvânt cu un spațiu"
   },
+  "searchAssets": {
+    "message": "Căutați active"
+  },
   "searchTokens": {
     "message": "Căutați token-uri"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nu s-au găsit conturi pentru interogarea de căutare dată"
+  },
+  "selectAsset": {
+    "message": "Selectați activul"
   },
   "selectAnAccount": {
     "message": "Selectați un cont"

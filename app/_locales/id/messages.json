@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimasi Waktu Pemrosesan"
   },
+  "estimatedNetworkFee": {
+    "message": "Estimasi biaya jaringan"
+  },
   "expandView": {
     "message": "Perluas tampilan"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Siap untuk Menyambung?"
   },
+  "reviewSwap": {
+    "message": "Tinjau Swap"
+  },
   "rinkeby": {
     "message": "Jaringan Uji Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Pilih Jenis"
   },
+  "setAllowance": {
+    "message": "Atur Toleransi"
+  },
   "buy": {
     "message": "Beli"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Demi alasan keamanan, disarankan mengatur ulang toleransi ke 0 sebelum mengaturnya ke nilai yang diinginkan, guna mencegah serangan pemesanan ulang transaksi."
+  },
+  "swapBraveFees": {
+    "message": "Catatan harga termasuk $1 biaya Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave menggunakan $1 sebagai agregator DEX. Harap simak $2 untuk informasi lebih jauh."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Catatan harga baru dalam"
+  },
+  "swapSlippageDescription": {
+    "message": "Perubahan harga maksimal yang bisa diterima dalam % aset beli. Jika delta melebihi selip, swap tidak akan dieksekusi."
+  },
+  "swapQuoteRefresh": {
+    "message": "Catatan harga kerap disegarkan untuk mencerminkan situasi pasar saat ini."
   },
   "sendAmount": {
     "message": "Nominal Kirim"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Pisahkan setiap kata dengan spasi tunggal"
   },
+  "searchAssets": {
+    "message": "Cari Aset"
+  },
   "searchTokens": {
     "message": "Cari Token"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Tak ditemukan akun untuk permintaan pencarian yang diberikan"
+  },
+  "selectAsset": {
+    "message": "Pilih aset"
   },
   "selectAnAccount": {
     "message": "Pilih Akun"

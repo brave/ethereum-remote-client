@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Odhadovaný čas spracovania"
   },
+  "estimatedNetworkFee": {
+    "message": "Odhadovaný poplatok za sieť"
+  },
   "expandView": {
     "message": "Rozbaliť zobrazenie"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pripravení na pripojenie?"
   },
+  "reviewSwap": {
+    "message": "Prezrieť Swap"
+  },
   "rinkeby": {
     "message": "Rinkeby Test Network"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Vybrat typ"
   },
+  "setAllowance": {
+    "message": "Nastaviť príplatok"
+  },
   "buy": {
     "message": "Koupit"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Z bezpečnostných dôvodov sa odporúča pred nastavením požadovanej hodnoty najprv vynulovať príplatok na 0, aby sa zabránilo útokom na zmenu poradia transakcií.\n"
+  },
+  "swapBraveFees": {
+    "message": "Cenová ponuka zahŕňa poplatok Brave vo výške $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave používa $1 ako agregátor DEX. Viac informácií nájdete v časti $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nová cenová ponuka"
+  },
+  "swapSlippageDescription": {
+    "message": "Maximálna akceptovateľná zmena ceny nákupného aktíva v %. Ak delta prekročí sklz, swap sa nevykoná."
+  },
+  "swapQuoteRefresh": {
+    "message": "Cenové ponuky sa aktualizujú často, aby odrážali aktuálne trhové podmienky."
   },
   "sendAmount": {
     "message": "Poslať sumu"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Každé slovo oddeľte jednou medzerou"
   },
+  "searchAssets": {
+    "message": "Vyhľadávať aktíva"
+  },
   "searchTokens": {
     "message": "Hledat tokeny"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Pre daný vyhľadávanie sa nenašli žiadne účty"
+  },
+  "selectAsset": {
+    "message": "Vyberte aktívum"
   },
   "selectAnAccount": {
     "message": "Vybrať účet"

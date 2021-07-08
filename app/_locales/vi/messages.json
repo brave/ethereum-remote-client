@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Phí mạng ước tính"
+  },
   "expandView": {
     "message": "Expand View"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Đánh giá Swap"
+  },
   "rinkeby": {
     "message": "Mạng thử nghiệm Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Select Type"
   },
+  "setAllowance": {
+    "message": "Đặt hạn mức"
+  },
   "buy": {
     "message": "Mua"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Vì lý do bảo mật, bạn nên đặt lại hạn mức về 0 trước khi thiết lập giá trị mong muốn, để ngăn chặn các cuộc tấn công thay đổi lại thứ tự giao dịch."
+  },
+  "swapBraveFees": {
+    "message": "Báo giá bao gồm $1 phí Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave sử dụng $1 làm công cụ tổng hợp DEX.  Vui lòng xem $2 để biết thêm thông tin."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Báo giá mới trong"
+  },
+  "swapSlippageDescription": {
+    "message": "Tỷ lệ phần trăm biến động giá tối đa có thể chấp nhận của tài sản mua. Nếu delta vượt quá mức trượt giá thì giao dịch hoán đổi sẽ không được thực hiện."
+  },
+  "swapQuoteRefresh": {
+    "message": "Báo giá được làm mới thường xuyên để phản ánh điều kiện thị trường hiện tại."
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Tìm kiếm Tài sản"
+  },
   "searchTokens": {
     "message": "Search Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Không tìm thấy tài khoản nào với chuỗi tìm kiếm đã nhập"
+  },
+  "selectAsset": {
+    "message": "Chọn tài sản"
   },
   "selectAnAccount": {
     "message": "Select an Account"

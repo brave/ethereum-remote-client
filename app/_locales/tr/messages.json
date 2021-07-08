@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Tahmini ağ ücreti"
+  },
   "expandView": {
     "message": "Görünümü Genişlet"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Takası Gözden Geçir"
+  },
   "rinkeby": {
     "message": "Rinkeby Test Ağı"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Tip Seç"
   },
+  "setAllowance": {
+    "message": "Karşılık belirleyin"
+  },
   "buy": {
     "message": "Satın al"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Takas"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "İşlem yeniden sıralama saldırılarını önlemek için güvenlik nedeniyle karşılığın istenen değere ayarlamadan önce 0 olarak ayarlanması önerilir."
+  },
+  "swapBraveFees": {
+    "message": "Teklif $1 Brave ücretini içerir."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave, DEX toplayıcısı olarak $1 kullanır. Lütfen daha fazla bilgi için şuraya bakın: $2"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Yeni teklife kalan:"
+  },
+  "swapSlippageDescription": {
+    "message": "Satın alınan varlığın %'si cinsinden kabul edilebilir azami fiyat değişikliği. Delta, kaymayı aşarsa takas gerçekleştirilmez."
+  },
+  "swapQuoteRefresh": {
+    "message": "Teklifler geçerli piyasa koşullarını yansıtmak için sık sık yenilenir."
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Varlıkları Ara"
+  },
   "searchTokens": {
     "message": "Jeton ara"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Bu arama isteği için hesap bulunamadı"
+  },
+  "selectAsset": {
+    "message": "Varlığı seçin"
   },
   "selectAnAccount": {
     "message": "Select an Account"

@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Odhadovaný síťový poplatek"
+  },
   "expandView": {
     "message": "Rozbalit zobrazení"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Zkontrolujte swap"
+  },
   "rinkeby": {
     "message": "Rinkeby Test Network"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Vybrat typ"
   },
+  "setAllowance": {
+    "message": "Nastavit příspěvek"
+  },
   "buy": {
     "message": "Koupit"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Vyměnit"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Z bezpečnostních důvodů je vhodné před nastavením požadované hodnoty příspěvek nejprve nastavit na hodnotu 0, aby se zabránilo útokům využívajícím změnu pořadí transakcí."
+  },
+  "swapBraveFees": {
+    "message": "Cenová nabídka zahrnuje poplatek pro Brave ve výši $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave používá $1 jako agregátor DEX. Pokud potřebujete další informace, podívejte se na: $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nová cenová nabídka v"
+  },
+  "swapSlippageDescription": {
+    "message": "Maximální přijatelná změna ceny nakupovaného aktiva v procentech. Pokud delta překročí hodnotu skluzu (slippage), nebude proveden swap."
+  },
+  "swapQuoteRefresh": {
+    "message": "Cenové nabídky se často obnovují, aby odpovídaly aktuálním tržním podmínkám."
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Hledat aktiva"
+  },
   "searchTokens": {
     "message": "Hledat tokeny"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Pro daný vyhledávací dotaz nebyly nalezeny žádné účty"
+  },
+  "selectAsset": {
+    "message": "Vybrat aktivum"
   },
   "selectAnAccount": {
     "message": "Select an Account"

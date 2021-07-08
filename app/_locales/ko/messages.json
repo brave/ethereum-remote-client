@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "예상 처리 시간"
   },
+  "estimatedNetworkFee": {
+    "message": "예상 망 수수료"
+  },
   "expandView": {
     "message": "뷰 확장"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "접속 준비되었나요?"
   },
+  "reviewSwap": {
+    "message": "스왑 검토"
+  },
   "rinkeby": {
     "message": "Rinkeby 테스트넷"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "형식 선택"
   },
+  "setAllowance": {
+    "message": "허용 설정"
+  },
   "buy": {
     "message": "구매"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "스왑(Swap)"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "보안상 트랜잭션 재정렬 공격을 방지하기 위해 원하는 값을 설정하기 전에 허용을 0으로 재설정하는 것이 좋습니다."
+  },
+  "swapBraveFees": {
+    "message": "견적에는 Brave 수수료 $1이/가 포함됩니다."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave는 DEX 애그리게이터로 $1을/를 사용합니다. 자세한 내용은 $2을/를 참조하십시오."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "신규 견적"
+  },
+  "swapSlippageDescription": {
+    "message": "구매 자산의 최대 허용 가격 변동률(%). 델타가 슬리피지를 초과하면 스왑이 실행되지 않습니다."
+  },
+  "swapQuoteRefresh": {
+    "message": "기존 시황을 반영하고자 견적은 자주 갱신됩니다."
   },
   "sendAmount": {
     "message": "전송 수량"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "각 단어는 공백 한칸으로 분리합니다"
   },
+  "searchAssets": {
+    "message": "자산 검색"
+  },
   "searchTokens": {
     "message": "토큰 검색"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "주어진 검색어에 대한 계정이 없습니다"
+  },
+  "selectAsset": {
+    "message": "자산 선택"
   },
   "selectAnAccount": {
     "message": "계정 선택"

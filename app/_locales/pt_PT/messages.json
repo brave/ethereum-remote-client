@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tempo de processamento estimado "
   },
+  "estimatedNetworkFee": {
+    "message": "Taxa de rede estimada"
+  },
   "expandView": {
     "message": "Expandir vista"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pronto para ligar-se?"
   },
+  "reviewSwap": {
+    "message": "Rever troca"
+  },
   "rinkeby": {
     "message": "Rede de Teste Rinkeby "
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selecionar tipo"
   },
+  "setAllowance": {
+    "message": "Definir permissão"
+  },
   "buy": {
     "message": "Comprar"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Trocar"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Por motivos de segurança, é aconselhável redefinir a permissão para 0 antes de a definir com o valor desejado, para impedir ataques de re-encomenda da transação."
+  },
+  "swapBraveFees": {
+    "message": "O orçamento inclui uma taxa Brave de $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "O Brave usa $1 como agregador DEX. Para mais informações, consulte $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Novo orçamento em"
+  },
+  "swapSlippageDescription": {
+    "message": "A alteração aceitável máxima do preço em % do ativo comprado. Se delta ultrapassar o desvio, a troca não será executada."
+  },
+  "swapQuoteRefresh": {
+    "message": "Os orçamentos são atualizados de forma a refletirem as condições atuais do mercado."
   },
   "sendAmount": {
     "message": "Enviar valor "
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separe cada palavra com um único espaço"
   },
+  "searchAssets": {
+    "message": "Pesquisar Ativos"
+  },
   "searchTokens": {
     "message": "Pesquisar Tokens "
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nenhuma conta encontrada para a pesquisa indicada"
+  },
+  "selectAsset": {
+    "message": "Selecionar ativo"
   },
   "selectAnAccount": {
     "message": "Selecione uma conta"

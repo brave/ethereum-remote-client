@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tiempo Previsto de procesamiento"
   },
+  "estimatedNetworkFee": {
+    "message": "Tasa estimada de la red"
+  },
   "expandView": {
     "message": "Expandir vista"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "¿Listo/a para conectar?"
   },
+  "reviewSwap": {
+    "message": "Revisar el intercambio"
+  },
   "rinkeby": {
     "message": "Red privada Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Seleccionar tipo"
   },
+  "setAllowance": {
+    "message": "Establecer asignación"
+  },
   "buy": {
     "message": "Comprar"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Por razones de seguridad, se aconseja restablecer la asignación a 0 primero antes de establecer el valor deseado para evitar ataques de reordenamiento de transacciones."
+  },
+  "swapBraveFees": {
+    "message": "La cotización incluye una tasa de $1 de Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave utiliza $1 como agregador DEX. Consulte $2 para más información."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nueva cotización en"
+  },
+  "swapSlippageDescription": {
+    "message": "El máximo cambio de precio aceptable en porcentaje del activo de compra. Si la delta supera el deslizamiento, el intercambio no se ejecutará."
+  },
+  "swapQuoteRefresh": {
+    "message": "Las cotizaciones se actualizan con frecuencia para reflejar las condiciones actuales del mercado."
   },
   "sendAmount": {
     "message": "Mandar cantidad"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separar a cada palabra con un sólo espacio"
   },
+  "searchAssets": {
+    "message": "Buscar activos"
+  },
   "searchTokens": {
     "message": "Buscar Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "No se han encontrado cuentas para la consulta de búsqueda dada\n"
+  },
+  "selectAsset": {
+    "message": "Seleccione el activo"
   },
   "selectAnAccount": {
     "message": "Seleccionar una Cuenta"

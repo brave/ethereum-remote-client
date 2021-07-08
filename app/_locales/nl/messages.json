@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Geschat netwerktarief"
+  },
   "expandView": {
     "message": "Uitgebreide weergave"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Wissel Controleren"
+  },
   "rinkeby": {
     "message": "Rinkeby testnetwerk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selecteer type"
   },
+  "setAllowance": {
+    "message": "Toewijzing instellen"
+  },
   "buy": {
     "message": "Kopen"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Wisselen"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Om veiligheidsredenen is het verstandig om de toewijzing eerst terug te zetten op 0 voordat u hem instelt op de gewenste waarde, om transactieherorganisatie-aanvallen te voorkomen."
+  },
+  "swapBraveFees": {
+    "message": "Offerte is inclusief een tarief van $1 Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave gebruikt $1 als een DEX-aggregator. Zie $2 voor meer informatie."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nieuwe offerte over"
+  },
+  "swapSlippageDescription": {
+    "message": "De maximale acceptabele prijsverandering van het te kopen asset in %. Als de delta de afwijking overschrijdt zal de wissel niet worden uitgevoerd."
+  },
+  "swapQuoteRefresh": {
+    "message": "Offertes worden regelmatig vernieuwd om huidige marktomstandigheden te weerspiegelen."
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Assets Zoeken"
+  },
   "searchTokens": {
     "message": "Zoek Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Geen accounts gevonden voor de betreffende zoekopdracht"
+  },
+  "selectAsset": {
+    "message": "Asset selecteren"
   },
   "selectAnAccount": {
     "message": "Selecteer een Account"

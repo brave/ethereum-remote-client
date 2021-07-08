@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Procijenjeno vrijeme obrade"
   },
+  "estimatedNetworkFee": {
+    "message": "Procijenjena mrežna naknada"
+  },
   "expandView": {
     "message": "Proširi prikaz"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Sve je spremno za povezivanje?"
   },
+  "reviewSwap": {
+    "message": "Pregledaj uslugu Swap"
+  },
   "rinkeby": {
     "message": "Testna mreža Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Odaberi vrstu"
   },
+  "setAllowance": {
+    "message": "Postavi doplatak"
+  },
   "buy": {
     "message": "Kupi"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Usluga Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Iz sigurnosnih razloga savjetuje se ponovno postaviti doplatak prvo na 0 prije postavljanja na željenu vrijednost radi sprječavanja napada ponovnog naručivanja transakcija."
+  },
+  "swapBraveFees": {
+    "message": "Ponudom se uključuje naknada od $1 za preglednik Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Preglednikom Brave upotrebljava se $1 kao agregator DEX. Pogledajte $2 za više informacija."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Stigla je nova ponuda"
+  },
+  "swapSlippageDescription": {
+    "message": "Najveća prihvatljiva promjena cijene u % imovine za kupnju. Ako se deltom premaši prekoračenje, ne obavlja se razmjena."
+  },
+  "swapQuoteRefresh": {
+    "message": "Ponude se često osvježavaju radi odražavanja trenutačnog stanja na tržištu."
   },
   "sendAmount": {
     "message": "Odaberi iznos"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Odvojite pojedinačne riječi jednim razmakom"
   },
+  "searchAssets": {
+    "message": "Pretraži imovinu"
+  },
   "searchTokens": {
     "message": "Pretraži tokene"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nije pronađen nijedan račun za zadani upit pretraživanja"
+  },
+  "selectAsset": {
+    "message": "Odaberi imovinu"
   },
   "selectAnAccount": {
     "message": "Odaberi račun"

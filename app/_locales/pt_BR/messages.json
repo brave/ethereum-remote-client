@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tempos de Processamento Estimados"
   },
+  "estimatedNetworkFee": {
+    "message": "Taxa de rede estimada"
+  },
   "expandView": {
     "message": "Expandir visualização"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pronto para Conectar?"
   },
+  "reviewSwap": {
+    "message": "Analisar Troca"
+  },
   "rinkeby": {
     "message": "Rede de Testes Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selecione o Tipo"
   },
+  "setAllowance": {
+    "message": "Definir provisão"
+  },
   "buy": {
     "message": "Comprar"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Operação de Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Por questões de segurança, é aconselhável redefinir a permissão para 0 antes de definir o valor desejado, para evitar ataques de reordenamento de transações."
+  },
+  "swapBraveFees": {
+    "message": "A cotação inclui uma taxa de $1 Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "A Brave usa $1 como agregador DEX. Veja $2 para mais informações."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nova cotação em"
+  },
+  "swapSlippageDescription": {
+    "message": "A mudança de preço máxima aceitável em % do ativo de compra. Se o delta exceder o slippage, a troca não será executada."
+  },
+  "swapQuoteRefresh": {
+    "message": "As cotações são atualizadas com frequência para refletir as condições atuais do mercado."
   },
   "sendAmount": {
     "message": "Enviar Quantia"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separe cada palavra com um único espaço"
   },
+  "searchAssets": {
+    "message": "Pesquisar Ativos"
+  },
   "searchTokens": {
     "message": "Pesquisar Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nenhuma conta encontrada para a consulta de pesquisa fornecida"
+  },
+  "selectAsset": {
+    "message": "Selecione o ativo"
   },
   "selectAnAccount": {
     "message": "Selecione uma Conta"

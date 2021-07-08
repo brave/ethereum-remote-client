@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Predviden čas obdelave"
   },
+  "estimatedNetworkFee": {
+    "message": "Predvidena omrežnina"
+  },
   "expandView": {
     "message": "Razširi pogled"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pripravljeni na povezovanje?"
   },
+  "reviewSwap": {
+    "message": "Zamenjava pregleda"
+  },
   "rinkeby": {
     "message": "Testno omrežje Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Izberi vrsto"
   },
+  "setAllowance": {
+    "message": "Določi dodatek"
+  },
   "buy": {
     "message": "Kupi"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Menjava"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Iz varnostnih razlogov je priporočljivo najprej ponastaviti dovoljenje na 0, preden mu nastavite želeno vrednost, da preprečite napade pri preurejanju transakcij."
+  },
+  "swapBraveFees": {
+    "message": "Ponudba vključuje $1 Brave provizijo."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave uporablja $1 kot DEX agregator. Obiščite $2 za več informacij."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nova ponudba v"
+  },
+  "swapSlippageDescription": {
+    "message": "Najvišja sprejemljiva sprememba cene v % kupljenega sredstva. Če delta preseže padec, zamenjava ne bo izvedena."
+  },
+  "swapQuoteRefresh": {
+    "message": "Ponudbe se pogosto osvežujejo in odražajo trenutne tržne razmere."
   },
   "sendAmount": {
     "message": "Pošlji znesek"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Vsako besedo ločite z enim presledkom"
   },
+  "searchAssets": {
+    "message": "Išči sredstva"
+  },
   "searchTokens": {
     "message": "Iskanje žetonov"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Za dano iskalno poizvedbo ni bilo mogoče najti nobenega računa"
+  },
+  "selectAsset": {
+    "message": "Izberi sredstva"
   },
   "selectAnAccount": {
     "message": "Izberi račun"

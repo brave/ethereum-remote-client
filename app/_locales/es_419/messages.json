@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tiempo estimado de procesamiento"
   },
+  "estimatedNetworkFee": {
+    "message": "Tarifa de red estimada"
+  },
   "expandView": {
     "message": "Ampliar la vista"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "¿Listo para conectarte?"
   },
+  "reviewSwap": {
+    "message": "Revisar intercambio"
+  },
   "rinkeby": {
     "message": "Red de prueba Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Seleccionar tipo"
   },
+  "setAllowance": {
+    "message": "Establecer permiso"
+  },
   "buy": {
     "message": "Comprar"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Intercambio"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Por razones de seguridad, y a fin de evitar ataques de reordenamiento de transacciones, es recomendable restablecer primero el permiso como 0 antes de establecer el valor deseado."
+  },
+  "swapBraveFees": {
+    "message": "La cotización incluye una tarifa de Brave de $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave utiliza $1 como agregador DEX. Consulta $2 para obtener más información."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nueva cotización en"
+  },
+  "swapSlippageDescription": {
+    "message": "El cambio de precio máximo aceptable en % del activo de compra. Si el delta excede el deslizamiento, el intercambio no se ejecutará."
+  },
+  "swapQuoteRefresh": {
+    "message": "Las cotizaciones se actualizan a menudo para reflejar las condiciones actuales del mercado."
   },
   "sendAmount": {
     "message": "Enviar monto"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separa cada palabra con un solo espacio"
   },
+  "searchAssets": {
+    "message": "Buscar activos"
+  },
   "searchTokens": {
     "message": "Buscar tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "No se han encontrado cuentas para la consulta de búsqueda proporcionada."
+  },
+  "selectAsset": {
+    "message": "Seleccionar activo"
   },
   "selectAnAccount": {
     "message": "Selecciona una cuenta"

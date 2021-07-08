@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Szacunkowy czas przetwarzania"
   },
+  "estimatedNetworkFee": {
+    "message": "Szacowana opłata sieciowa"
+  },
   "expandView": {
     "message": "Rozszerz widok"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Gotowy na połączenie?"
   },
+  "reviewSwap": {
+    "message": "Przejrzyj swap"
+  },
   "rinkeby": {
     "message": "Sieć testowa Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Wybierz rodzaj"
   },
+  "setAllowance": {
+    "message": "Ustaw odliczenie"
+  },
   "buy": {
     "message": "Kup"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Wymiana"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Ze względów bezpieczeństwa przed ustawieniem pożądanej wartości zaleca się najpierw zresetować odliczenie do 0 w celu zapobieżenia atakom polegającym na zmianie kolejności transakcji."
+  },
+  "swapBraveFees": {
+    "message": "Wycena obejmuje $1 opłaty Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave wykorzystuje $1 jako agregator DEX. Zobacz $2, aby dowiedzieć się więcej."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nowa wycena za"
+  },
+  "swapSlippageDescription": {
+    "message": "Maksymalna akceptowalna zmiana ceny w % kupowanych aktywów. Jeśli delta przekracza rozbieżność, swap nie dojdzie do skutku."
+  },
+  "swapQuoteRefresh": {
+    "message": "Wyceny są często odświeżane, aby odzwierciedlały aktualne warunki rynkowe."
   },
   "sendAmount": {
     "message": "Wyślij kwotę"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Oddziel słowa pojedynczą spacją"
   },
+  "searchAssets": {
+    "message": "Szukaj aktywów"
+  },
   "searchTokens": {
     "message": "Szukaj tokenów"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Podane zapytanie wyszukiwania nie zwróciło żadnych kont"
+  },
+  "selectAsset": {
+    "message": "Wybierz aktywa"
   },
   "selectAnAccount": {
     "message": "Wybierz konto"

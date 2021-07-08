@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "预估处理时间"
   },
+  "estimatedNetworkFee": {
+    "message": "预估网络费"
+  },
   "expandView": {
     "message": "展开查看"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "是否准备连接？"
   },
+  "reviewSwap": {
+    "message": "评论交换"
+  },
   "rinkeby": {
     "message": "Rinkeby 测试网络"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "选择类型"
   },
+  "setAllowance": {
+    "message": "设置津贴"
+  },
   "buy": {
     "message": "购买"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "交换"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "出于安全原因，建议先将允许值重置为 0，然后再将其设置为所需值，以防止事务重排序攻击。"
+  },
+  "swapBraveFees": {
+    "message": "报价包括 $1 的 Brave 费用。"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave 将 $1 用作 DEX 聚合器。请参阅 $2 了解更多信息。"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "新报价"
+  },
+  "swapSlippageDescription": {
+    "message": "以购买资产百分比表示的最大可接受价格变化。如果 delta 超过滑点，则不会执行掉期。"
+  },
+  "swapQuoteRefresh": {
+    "message": "系统会经常更新报价以反映当前的市场状况。"
   },
   "sendAmount": {
     "message": "发送金额"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "用空格分隔每个单词"
   },
+  "searchAssets": {
+    "message": "搜索资产"
+  },
   "searchTokens": {
     "message": "搜索代币"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "没有找到给定搜索查询的账户"
+  },
+  "selectAsset": {
+    "message": "选择资产"
   },
   "selectAnAccount": {
     "message": "选择账户"

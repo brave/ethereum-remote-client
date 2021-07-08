@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Anslått behandlingstid"
   },
+  "estimatedNetworkFee": {
+    "message": "Estimated network fee"
+  },
   "expandView": {
     "message": "Utvid visning"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Klar til å koble til?"
   },
+  "reviewSwap": {
+    "message": "Review Swap"
+  },
   "rinkeby": {
     "message": "Rinkeby testnettverk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Velg type "
   },
+  "setAllowance": {
+    "message": "Set allowance"
+  },
   "buy": {
     "message": "Kjøp "
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "For security reasons, it is advisable to reset the allowance to 0 first before setting it the desired value, to prevent transaction reordering attacks."
+  },
+  "swapBraveFees": {
+    "message": "Quote includes a $1 Brave fee."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave uses $1 as a DEX aggregator. Please see $2 for more information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "New quote in"
+  },
+  "swapSlippageDescription": {
+    "message": "The maximum acceptable price change in % of the buy asset. If the delta exceeds the slippage, the swap will not be executed."
+  },
+  "swapQuoteRefresh": {
+    "message": "Quotes are refreshed often to reflect current market conditions."
   },
   "sendAmount": {
     "message": "Send beløp"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Del hvert ord med et enkelt mellomrom "
   },
+  "searchAssets": {
+    "message": "Search Assets"
+  },
   "searchTokens": {
     "message": "Søk i sjetonger"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Ingen kontoer funnet for det angitte søket"
+  },
+  "selectAsset": {
+    "message": "Select asset"
   },
   "selectAnAccount": {
     "message": "Velg en konto"

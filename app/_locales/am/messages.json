@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "የሚገመት የክወና ጊዜያት"
   },
+  "estimatedNetworkFee": {
+    "message": "ግምታዊ የኔትዎርክ ክፍያ"
+  },
   "expandView": {
     "message": "እይታን ዘርጋ"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "ለመገናኘት ዝግጁ ነዎት?"
   },
+  "reviewSwap": {
+    "message": "የግምገማ ልውውጥ"
+  },
   "rinkeby": {
     "message": "Rinkeby የሙከራ አውታረ መረብ"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "ዓይነት ይምረጡ"
   },
+  "setAllowance": {
+    "message": "አበል አዘጋጅ"
+  },
   "buy": {
     "message": "ይግዙ"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "ይለውጡ"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "ለደህንነት ሲባ፣ የግብይት መልሶ ማዘዋወር ጥቃቶችን ለመከላከል የተፈለገውን እሴት ከማዘጋጀትዎ በፊት በመጀመሪያ አበልን ወደ 0 እንደገና ማድረግ ይመከራል።"
+  },
+  "swapBraveFees": {
+    "message": "ጥቅስ ይህንን $1 የ Brave ክፍያ ያካትታል"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "የ Brave ተጠቃሚዎች $1 እንደ የ DEX አሰባሳቢ። እባክዎ ለተጨማሪ መረጃ ይህንን $2 ይመልከቱ።"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "አዲስ ጥቅስ በ"
+  },
+  "swapSlippageDescription": {
+    "message": "ከገዙት ንብረት ውስጥ በ % ውስጥ ከፍተኛው ተቀባይነት ያለው የዋጋ ለውጥ። ዴልታ ከስሊፕፔጁ በላይ ከሆነ ልውውጡ አይከናወንም።"
+  },
+  "swapQuoteRefresh": {
+    "message": "የወቅቱን የገበያ ሁኔታ ለማንፀባረቅ ጥቅሶች ብዙ ጊዜ ይታደሳሉ።"
   },
   "sendAmount": {
     "message": "መጠኑን ላክ"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "እያንዳንዱን ቃል በነጠላ ክፍት ቦታ ይለያዩ"
   },
+  "searchAssets": {
+    "message": "ሐብት ያስሱ"
+  },
   "searchTokens": {
     "message": "ተለዋጭ ስሞችን ፈልግ"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "ለተሰጠው የፍለጋ መጠይቅ ምንም መለያዎች አልተገኙም"
+  },
+  "selectAsset": {
+    "message": "ሐብት ይምረጡ"
   },
   "selectAnAccount": {
     "message": "መለያ ይምረጡ"

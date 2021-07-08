@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Procenjeno vreme za obradu"
   },
+  "estimatedNetworkFee": {
+    "message": "Procenjena mrežna naknada"
+  },
   "expandView": {
     "message": "Proširi prikaz"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Spremni za povezivanje?"
   },
+  "reviewSwap": {
+    "message": "Razmena recenzija"
+  },
   "rinkeby": {
     "message": "Rinkeby test mreža"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Izaberite tip"
   },
+  "setAllowance": {
+    "message": "Podesite dozvoljeni iznos"
+  },
   "buy": {
     "message": "Kupi"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Menjačnica"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Iz bezbednosnih razloga, preporučuje se da se najpre podesi dozvoljeni iznos na 0, pre podešavanja željene vrednosti, kako bi se sprečili napadi preuređivanja transakcija."
+  },
+  "swapBraveFees": {
+    "message": "Ponuda uključuje Brave naknadu od $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave koristi $1 kao DEX agregator. Pogledajte $2  za više informacija."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nova ponuda na"
+  },
+  "swapSlippageDescription": {
+    "message": "Maksimalno prihvatljiva promena cene u % sredstva za kupovinu. Ako delta premašuje dozvoljeno odstupanje, razmena se neće izvršiti."
+  },
+  "swapQuoteRefresh": {
+    "message": "Ponude se često osvežavaju da bi prikazivale realno stanje na tržištu."
   },
   "sendAmount": {
     "message": "Pošaljite iznos"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Razdvojite svaku reč jednim mestom razmaka"
   },
+  "searchAssets": {
+    "message": "Pretražite sredstva"
+  },
   "searchTokens": {
     "message": "Pretražite tokene"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nije pronađen nijedan nalog za dati upit za pretragu"
+  },
+  "selectAsset": {
+    "message": "Izaberite sredstvo"
   },
   "selectAnAccount": {
     "message": "Izaberite nalog"

@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Uppskattade behandlingstider"
   },
+  "estimatedNetworkFee": {
+    "message": "Uppskattad nätverksavgift"
+  },
   "expandView": {
     "message": "Expandera vy"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Redo att ansluta?"
   },
+  "reviewSwap": {
+    "message": "Granska swap"
+  },
   "rinkeby": {
     "message": "Rinkeby testnätverk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Välj typ"
   },
+  "setAllowance": {
+    "message": "Ställ in ersättning"
+  },
   "buy": {
     "message": "Köp"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Av säkerhetsskäl är det tillrådligt att nollställa ersättningen innan du ställer in önskat värde, för att förhindra attacker som ändrar transaktionen."
+  },
+  "swapBraveFees": {
+    "message": "I offerten ingår $1 i avgift till Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave använder $1 som DEX-aggregator. Se $2 för mer information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Ny offert om"
+  },
+  "swapSlippageDescription": {
+    "message": "Största godtagbara prisändring i % på tillgången som köps. Överskrids detta kommer swappen inte att verkställas."
+  },
+  "swapQuoteRefresh": {
+    "message": "Offerterna uppdateras ofta för att spegla läget på marknaden."
   },
   "sendAmount": {
     "message": "Skicka belopp"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Lägg in ett mellanslag mellan varje ord"
   },
+  "searchAssets": {
+    "message": "Sök tillgångar"
+  },
   "searchTokens": {
     "message": "Sök token"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Inga konton hittades för den angivna sökfrågan"
+  },
+  "selectAsset": {
+    "message": "Välj tillgång"
   },
   "selectAnAccount": {
     "message": "Välj ett konto"

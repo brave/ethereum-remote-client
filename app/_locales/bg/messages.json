@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Приблизителни времена за обработка"
   },
+  "estimatedNetworkFee": {
+    "message": "Приблизителна мрежова такса"
+  },
   "expandView": {
     "message": "Разгънете изгледа"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Готови ли сте да се свържете? "
   },
+  "reviewSwap": {
+    "message": "Преглед на размяната"
+  },
   "rinkeby": {
     "message": "Тестова мрежа на Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Изберете тип"
   },
+  "setAllowance": {
+    "message": "Задайте надбавка"
+  },
   "buy": {
     "message": "Купи"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Замяна"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "От съображения за сигурност е препоръчително първо да нулирате надбавката на 0 преди да й зададете желаната стойност, с цел да предотвратите атаки за пренареждане на транзакции."
+  },
+  "swapBraveFees": {
+    "message": "Офертата включва Brave такса от $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave използва $1 като DEX агрегатор. Моля, вижте $2 за повече информация."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Нова оферта в"
+  },
+  "swapSlippageDescription": {
+    "message": "Максималната приемлива промяна на цената в % от актива за покупка. Ако делтата надвишава приплъзването, размяната няма да бъде изпълнена."
+  },
+  "swapQuoteRefresh": {
+    "message": "Офертите често се опресняват, за да отразят текущите пазарни условия."
   },
   "sendAmount": {
     "message": "Изпратете сумата"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Отделете всяка дума с интервал"
   },
+  "searchAssets": {
+    "message": "Търсене в активи"
+  },
   "searchTokens": {
     "message": "Търсене на маркери"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Не са намерени акаунти за дадената заявка за търсене"
+  },
+  "selectAsset": {
+    "message": "Изберете актив"
   },
   "selectAnAccount": {
     "message": "Изберете акаунт"

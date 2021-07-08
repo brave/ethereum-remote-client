@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "概算ネットワーク料"
+  },
   "expandView": {
     "message": "ビューを拡大"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "スワップのレビュー"
+  },
   "rinkeby": {
     "message": "Rinkebyテストネットワーク"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "キーの種類"
   },
+  "setAllowance": {
+    "message": "アローワンスを設定する"
+  },
   "buy": {
     "message": "購入"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "スワップ"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "セキュリティ上の理由から、まずアローワンスを0にリセットしてから希望する値に設定して、取引リオーダリング攻撃を防ぐことをお勧めします。"
+  },
+  "swapBraveFees": {
+    "message": "見積りには$1のBrave手数料が含まれます。"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "BraveはDEXアグリゲータとして$1を使います。詳しくは$2をご覧ください。"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "以下の新しい見積り："
+  },
+  "swapSlippageDescription": {
+    "message": "%で表した購入アセットの最大許容価格変動。デルタがスリッページを超える場合、スワップは実行されません。"
+  },
+  "swapQuoteRefresh": {
+    "message": "見積りは、現在の市況を反映するために、頻繁に更新されます。"
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "アセットの検索"
+  },
   "searchTokens": {
     "message": "トークンの検索"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "指定された検索クエリのアカウントが見つかりません"
+  },
+  "selectAsset": {
+    "message": "アセットを選ぶ"
   },
   "selectAnAccount": {
     "message": "Select an Account"

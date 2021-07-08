@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Приблизні часи обробки"
   },
+  "estimatedNetworkFee": {
+    "message": "Орієнтовний мережевий збір"
+  },
   "expandView": {
     "message": "Розширити перегляд"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Готові підключитися?"
   },
+  "reviewSwap": {
+    "message": "Переглянути своп"
+  },
   "rinkeby": {
     "message": "Тестова мережа Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Обрати тип"
   },
+  "setAllowance": {
+    "message": "Задати допустиму межу"
+  },
   "buy": {
     "message": "Купити"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Своп"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "З міркувань безпеки та задля захисту від атак із зміни порядку транзакцій радимо скинути допустиму межу до 0, перш ніж задавати потрібне значення."
+  },
+  "swapBraveFees": {
+    "message": "Розцінка включає збір Brave у $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave використовує $1 у якості агрегатора DEX. Детальніше читайте у $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Нова розцінка у"
+  },
+  "swapSlippageDescription": {
+    "message": "Максимальна прийнятна зміна ціни активу, який купується, у відсотках. Якщо дельта перевищує прослизання, своп проведений не буде."
+  },
+  "swapQuoteRefresh": {
+    "message": "Розцінки часто оновлюються для відображення поточного стану ринку."
   },
   "sendAmount": {
     "message": "Надіслати суму"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Відділіть кожне слово одним пробілом"
   },
+  "searchAssets": {
+    "message": "Шукати активи"
+  },
   "searchTokens": {
     "message": "Шукати токени"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "За даним пошуковим запитом не знайдено акаунтів"
+  },
+  "selectAsset": {
+    "message": "Вибрати актив"
   },
   "selectAnAccount": {
     "message": "Виберіть обліковий запис"

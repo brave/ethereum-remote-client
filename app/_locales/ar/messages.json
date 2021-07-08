@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "أوقات المعالجة المقدرة"
   },
+  "estimatedNetworkFee": {
+    "message": "الرسوم المقدرة للشبكة"
+  },
   "expandView": {
     "message": "توسيع العرض"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "هل أنت جاهز للاتصال؟"
   },
+  "reviewSwap": {
+    "message": "مراجعة المبادلة"
+  },
   "rinkeby": {
     "message": "شبكة اختبارات Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "تحديد النوع"
   },
+  "setAllowance": {
+    "message": "تعيين البدل"
+  },
   "buy": {
     "message": "شراء"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "تبديل"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "لأسباب أمنية، يُنصح بإعادة تعيين البدل إلى 0 أولاً قبل تعيينه على القيمة المطلوبة، لمنع الهجمات الاحتيالية التي تسبب إعادة ترتيب المعاملات."
+  },
+  "swapBraveFees": {
+    "message": "يشمل عرض الأسعار $1 من رسوم Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "يقوم Brave باستخدام $1 كمجمع DEX. يُرجى مراجعة $2 لمزيد من المعلومات."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "عرض أسعار جديد في"
+  },
+  "swapSlippageDescription": {
+    "message": "الحد الأقصى لتغير السعر المقبول في % من أصل الشراء. إذا تجاوزت دلتا الانزلاق السعري، فلن يتم تنفيذ المبادلة."
+  },
+  "swapQuoteRefresh": {
+    "message": "يتم تحديث الأسعار في كثير من الأحيان لتعكس ظروف السوق الحالية."
   },
   "sendAmount": {
     "message": "إرسال المبلغ"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "افصل كل كلمة بمسافة واحدة"
   },
+  "searchAssets": {
+    "message": "البحث في الأصول"
+  },
   "searchTokens": {
     "message": "البحث عن العملات الرمزية"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "لم يتم العثور على حسابات لاستعلام البحث المحدد"
+  },
+  "selectAsset": {
+    "message": "تحديد الأصل"
   },
   "selectAnAccount": {
     "message": "قم بتحديد حساب"

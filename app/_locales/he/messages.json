@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "זמני עיבוד משוערים"
   },
+  "estimatedNetworkFee": {
+    "message": "עמלת רשת משוערת"
+  },
   "expandView": {
     "message": "הרחב תצוגה"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "מוכנ/ה להתחבר?"
   },
+  "reviewSwap": {
+    "message": "סקור החלפה"
+  },
   "rinkeby": {
     "message": "רשת בדיקה Rinkeby "
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "בחר/י סוג"
   },
+  "setAllowance": {
+    "message": "הגדר קצבה"
+  },
   "buy": {
     "message": "רכישה"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "משיקולי אבטחה, מומלץ לאפס תחילה את הקצבה ל-0 לפני שקובעים את הערך הרצוי שלה, כדי למנוע התקפות של סידור עסקאות מחדש."
+  },
+  "swapBraveFees": {
+    "message": "הצעת המחיר כוללת עמלת Brave של $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave משתמש ב-$1 כאגרגטור DEX. אנא ראו $2 למידע נוסף."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "הצעת מחיר חדשה ב-"
+  },
+  "swapSlippageDescription": {
+    "message": "השינוי הקביל המרבי במחיר ב-% מהנכס לרכישה. אם ההפרש חורג מההחלקה, ההחלפה לא תבוצע."
+  },
+  "swapQuoteRefresh": {
+    "message": "רענון של הצעות המחיר מתבצע לעתים קרובות כדי לשקף את תנאי השוק הנוכחיים."
   },
   "sendAmount": {
     "message": "שלח סכום"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "יש להפריד כל מילה עם רווח יחיד"
   },
+  "searchAssets": {
+    "message": "חפש נכסים"
+  },
   "searchTokens": {
     "message": "חיפוש טוקנים"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "לא נמצאו חשבונות עבור שאילתת החיפוש הנתונה"
+  },
+  "selectAsset": {
+    "message": "בחר נכס"
   },
   "selectAnAccount": {
     "message": "בחר חשבון"

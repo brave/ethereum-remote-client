@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "ค่าธรรมเนียมเครือข่ายโดยประมาณ"
+  },
   "expandView": {
     "message": "ขยายมุมมอง"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "ตรวจทานการสวอป"
+  },
   "rinkeby": {
     "message": "เครือข่ายทดสอบ Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "เลือกประเภท"
   },
+  "setAllowance": {
+    "message": "กำหนดค่าเผื่อ"
+  },
   "buy": {
     "message": "ซื้อ"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "สวอป"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "เพื่อความปลอดภัย ขอแนะนำให้รีเซ็ตค่าเผื่อเป็น 0 ก่อนที่จะตั้งค่าเป็นค่าที่ต้องการ เพื่อป้องกันการโจมตีด้วยการสลับลำดับรายการธุรกรรม"
+  },
+  "swapBraveFees": {
+    "message": "ข้อมูลราคามีค่าธรรมเนียม $1 Brave"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave ใช้ $1 เป็นเครื่องมือค้นหาตลาด​แลกเปลี่ยน (DEX Aggregator) โปรดดู $2 สำหรับข้อมูลเพิ่มเติม"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "ข้อมูลราคาใหม่ใน"
+  },
+  "swapSlippageDescription": {
+    "message": "การเปลี่ยนแปลงราคาสูงสุดที่ยอมรับได้โดยคิดเป็น % ของสินทรัพย์ที่ซื้อ หากเดลต้าเกินค่าสลิปเพจ การสวอปจะไม่ถูกดำเนินการ"
+  },
+  "swapQuoteRefresh": {
+    "message": "ข้อมูลราคาจะถูกรีเฟรชบ่อยครั้งเพื่อให้สะท้อนสภาวะปัจจุบันของตลาด"
   },
   "sendAmount": {
     "message": "ส่งจำนวนเงินนี้"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "ค้นหาสินทรัพย์"
+  },
   "searchTokens": {
     "message": "Search Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "ไม่พบบัญชีตามคิวรีการค้นหาที่ระบุ"
+  },
+  "selectAsset": {
+    "message": "เลือกสินทรัพย์"
   },
   "selectAnAccount": {
     "message": "เลือกบัญชี"

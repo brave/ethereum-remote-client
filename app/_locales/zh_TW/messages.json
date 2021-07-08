@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "預估處理時間"
   },
+  "estimatedNetworkFee": {
+    "message": "預計網路費"
+  },
   "expandView": {
     "message": "展開檢視"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "準備連線？"
   },
+  "reviewSwap": {
+    "message": "審查掉期"
+  },
   "rinkeby": {
     "message": "Rinkeby 測試網路"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "選擇類型"
   },
+  "setAllowance": {
+    "message": "設定津貼"
+  },
   "buy": {
     "message": "購買"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "交換貨幣"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "出於安全性理由，我們建議您先將津貼重設為 0，再設為您想要的值，以免遭到交易再訂購攻擊。"
+  },
+  "swapBraveFees": {
+    "message": "報價包含 $1 的 Brave 費。"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave 使用 $1 作為 DEX 彙總工具。如需更多資訊，請參見 $2。"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "以下新報價："
+  },
+  "swapSlippageDescription": {
+    "message": "購買資產的 % 中可接受的最大價格變化。若 Delta 值超過延期，系統將不執行掉期。"
+  },
+  "swapQuoteRefresh": {
+    "message": "報價已重新整理，通常是為了反映當前市場情況。"
   },
   "sendAmount": {
     "message": "發送數量"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "單詞之間請以空白間隔"
   },
+  "searchAssets": {
+    "message": "搜尋資產"
+  },
   "searchTokens": {
     "message": "搜尋代幣"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "給定的搜尋找不到任何帳戶"
+  },
+  "selectAsset": {
+    "message": "選取資產"
   },
   "selectAnAccount": {
     "message": "選擇帳戶"

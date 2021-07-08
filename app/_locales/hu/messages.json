@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Becsült feldolgozási idők"
   },
+  "estimatedNetworkFee": {
+    "message": "Becsült hálózati díj"
+  },
   "expandView": {
     "message": "Nézet kibontása"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Készen áll a csatlakozásra?"
   },
+  "reviewSwap": {
+    "message": "Csere áttekintése"
+  },
   "rinkeby": {
     "message": "Rinkeby teszthálózat"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Válasszon típust"
   },
+  "setAllowance": {
+    "message": "Keret beállítása"
+  },
   "buy": {
     "message": "Vétel"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Biztonsági okokból a kívánt érték beállítása előtt ajánlott a keretet 0-ra állítani, hogy megelőzd a tranzakció-átrendezési támadásokat."
+  },
+  "swapBraveFees": {
+    "message": "Az ajánlat tartalmazza a Brave $1 díját."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "A Brave DEX aggregátora a $1. Erről bővebben itt olvashatsz: $2"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Új ajánlat"
+  },
+  "swapSlippageDescription": {
+    "message": "Az elfogadható maximális árváltozás a vásárlási aktíva %-ában. Ha a delta meghaladja a csúszást, a csere nem lesz végrehajtva."
+  },
+  "swapQuoteRefresh": {
+    "message": "Az ajánlatok gyakran frissülnek, hogy az aktuális piaci viszonyokat tükrözzék."
   },
   "sendAmount": {
     "message": "Összeg küldése"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Minden egyes szavat szóközzel válasszon el"
   },
+  "searchAssets": {
+    "message": "Aktívák keresése"
+  },
   "searchTokens": {
     "message": "Keresés a tokenek között"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nem található fiók a megadott keresési lekérdezéshez"
+  },
+  "selectAsset": {
+    "message": "Válassz aktívát"
   },
   "selectAnAccount": {
     "message": "Válasszon fiókot"

@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tinatantiyang Tagal ng Pagproseso"
   },
+  "estimatedNetworkFee": {
+    "message": "Estimated network fee"
+  },
   "expandView": {
     "message": "Palawakin ang view"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Handa ka nang Kumonekta?"
   },
+  "reviewSwap": {
+    "message": "I-review ang Swap"
+  },
   "rinkeby": {
     "message": "Rinkeby Test Network"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Piliin ang Uri"
   },
+  "setAllowance": {
+    "message": "I-set ang allowance"
+  },
   "buy": {
     "message": "Bilhin"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Pagpalitin"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Para sa seguridad, pinapahuyan kang i-reset muna sa 0 ang allowance bago ito i-set sa ninanais na value, para mahadlangan ang mga transaction reordering attack."
+  },
+  "swapBraveFees": {
+    "message": "Ang quote ay may kasamang Brave fee na $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Ginagamit ng Brave ang $1 bilang isang DEX aggregator. Pakitingnan ang $2 para sa higit pang impormasyon."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Bagong quote sa"
+  },
+  "swapSlippageDescription": {
+    "message": "Ang maximum na katanggap-tanggap na % ng pagbabago ng presyo sa buy asset. Kung lalampas sa slippage ang delta, hindi ie-execute ang swap."
+  },
+  "swapQuoteRefresh": {
+    "message": "Madalas na nire-refresh ang mga quote para ipakita ang kasalukuyang mga kundisyon ng market."
   },
   "sendAmount": {
     "message": "Magpadala ng Halaga"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Paghiwa-hiwalayin ang bawat salita gamit ang isang space"
   },
+  "searchAssets": {
+    "message": "Maghanap ng mga Asset"
+  },
   "searchTokens": {
     "message": "Maghanap ng Mga Token"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Walang nakitang account para sa partikular na query sa paghahanap"
+  },
+  "selectAsset": {
+    "message": "Pumili ng asset"
   },
   "selectAnAccount": {
     "message": "Pumili ng Account"

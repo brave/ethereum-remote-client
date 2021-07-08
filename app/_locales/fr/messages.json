@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Délais de traitement estimés\n"
   },
+  "estimatedNetworkFee": {
+    "message": "Frais de réseau estimés"
+  },
   "expandView": {
     "message": "Développer la vue"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Prêt à se connecter ?"
   },
+  "reviewSwap": {
+    "message": "Examiner l'échange"
+  },
   "rinkeby": {
     "message": "Réseau de test Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selectionner le type"
   },
+  "setAllowance": {
+    "message": "Définir la marge de tolérance"
+  },
   "buy": {
     "message": "Acheter"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Échanger"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Pour des raisons de sécurité, il est recommandé de commencer par refixer la marge de tolérance à zéro avant de lui assigner la valeur désirée, pour éviter les attaques par nouvelle commande de transaction."
+  },
+  "swapBraveFees": {
+    "message": "L'estimation inclut des frais de $1 facturés par Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave utilise $1 comme agrégateur de DEX. Veuillez afficher $2 pour obtenir plus d'informations."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nouvelle estimation dans"
+  },
+  "swapSlippageDescription": {
+    "message": "Le prix maximum acceptable change en pour cent de l'actif de la position. Si le delta excède la baisse, l'échange ne sera pas effectué."
+  },
+  "swapQuoteRefresh": {
+    "message": "Les estimations sont actualisées souvent pour refléter les conditions actuelles du marché."
   },
   "sendAmount": {
     "message": "Envoyer le montant"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separez chaque mot avec un espace simple"
   },
+  "searchAssets": {
+    "message": "Rechercher des actifs"
+  },
   "searchTokens": {
     "message": "Rechercher des jetons"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Aucun compte trouvé pour la requête de recherche donnée"
+  },
+  "selectAsset": {
+    "message": "Sélectionner l'actif"
   },
   "selectAnAccount": {
     "message": "Selectionner un compte"

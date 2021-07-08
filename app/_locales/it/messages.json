@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Tempi di Elaborazione Stimati"
   },
+  "estimatedNetworkFee": {
+    "message": "Costo di rete stimato"
+  },
   "expandView": {
     "message": "Espandi la visualizzazione"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Pronto a Connetterti?"
   },
+  "reviewSwap": {
+    "message": "Rivedi cambio"
+  },
   "rinkeby": {
     "message": "Rete di test Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Seleziona Tipo"
   },
+  "setAllowance": {
+    "message": "Imposta indennità"
+  },
   "buy": {
     "message": "Compra"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Per motivi di sicurezza, è consigliabile resettare l'indennità a 0 prima di impostarla sul valore desiderato, per evitare violazioni nel riordino delle transazioni."
+  },
+  "swapBraveFees": {
+    "message": "La quotazione include una commissione di $1 per Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave usa $1 come un aggregatore DEX. Vedi $2 per maggiori informazioni, per favore.\n"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nuova quotazione in"
+  },
+  "swapSlippageDescription": {
+    "message": "La variazione di prezzo massima accettabile in % della risorsa di acquisto. Se il delta supera il rallentamento, il cambio non verrà eseguito."
+  },
+  "swapQuoteRefresh": {
+    "message": "Le quotazioni sono aggiornate spesso per riflettere le condizioni attuali del mercato.\n"
   },
   "sendAmount": {
     "message": "Invia Importo"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separa ogni parola con un solo spazio"
   },
+  "searchAssets": {
+    "message": "Ricerca risorse"
+  },
   "searchTokens": {
     "message": "Cerca Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Nessun conto trovato per la ricerca specificata"
+  },
+  "selectAsset": {
+    "message": "Seleziona risorsa"
   },
   "selectAnAccount": {
     "message": "Seleziona un Account"

@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "زمان های تخمینی پروسس"
   },
+  "estimatedNetworkFee": {
+    "message": "هزینه تخمینی شبکه"
+  },
   "expandView": {
     "message": "بزرگ کردن نما"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "آماده برای اتصال هستید؟"
   },
+  "reviewSwap": {
+    "message": "مرور کردن Swap"
+  },
   "rinkeby": {
     "message": "شبکه آزمایشی Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "نوعیت را انتخاب کنید"
   },
+  "setAllowance": {
+    "message": "تنظیم سهمیه"
+  },
   "buy": {
     "message": "خرید"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "به‌دلایل امنیتی، توصیه می‌شود قبل از تنظیم سهمیه روی مقدار مطلوب، آن را روی 0 بازنشانی کنید تا از حملات تنظیم مجدد تراکنش جلوگیری کنید."
+  },
+  "swapBraveFees": {
+    "message": "سهام شامل $1 هزینه Brave است."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave از $1 به‌عنوان گردآورنده DEX استفاده می‌کند. لطفاً برای اطلاعات بیشتر به $2 بروید."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "سهام جدید در"
+  },
+  "swapSlippageDescription": {
+    "message": "بیشترین قیمت قابل قبول در ٪ سرمایه خرید تغییر می‌کند. اگر میزان لغزش دلتا بیشتر از حد انتظار شود، جابه‌جایی انجام نخواهد شد."
+  },
+  "swapQuoteRefresh": {
+    "message": "سهام‌ها اغلب بازخوانی می‌شود تا شرایط فعلی بازار بازتاب داده شود."
   },
   "sendAmount": {
     "message": "ارسال مبلغ"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "هر کلمه را با یک فاصله واحد جدا سازید"
   },
+  "searchAssets": {
+    "message": "جستجوی سرمایه"
+  },
   "searchTokens": {
     "message": "رمزیاب های جستجو"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "هیچ حسابی برای جستار جستجوی ارائه‌شده پیدا نشد"
+  },
+  "selectAsset": {
+    "message": "انتخاب دارایی"
   },
   "selectAnAccount": {
     "message": "یک حساب را انتخاب کنید"

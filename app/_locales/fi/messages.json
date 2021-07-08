@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Arvioidut käsittelyajat"
   },
+  "estimatedNetworkFee": {
+    "message": "Arvioitu verkkomaksu"
+  },
   "expandView": {
     "message": "Laajenna näkymä"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Valmiina yhdistämään?"
   },
+  "reviewSwap": {
+    "message": "Tarkastele vaihtoa"
+  },
   "rinkeby": {
     "message": "Rinkebyn koeverkko"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Valitse tyyppi"
   },
+  "setAllowance": {
+    "message": "Aseta toleranssi"
+  },
   "buy": {
     "message": "Osta"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Turvallisuussyistä on suositeltavaa tyhjentää toleranssiksi ensin 0 ennen kuin sille asetetaan haluttu arvo. Näin vältetään transaktioiden järjestyksen muutoshyökkäykset."
+  },
+  "swapBraveFees": {
+    "message": "Noteeraukseen sisältyy Braven palkkio $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Braven käyttämä hajautettujen vaihtojen koostaja (DEX aggregator) on $1. $2 kertoo lisätietoja aiheesta."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Aikaa uuteen noteeraukseen"
+  },
+  "swapSlippageDescription": {
+    "message": "Ostettavan omaisuuserän suurin hyväksyttävä hinnanmuutos prosentteina. Mikäli delta-arvo ylittää poikkeaman, vaihtoa ei toteuteta."
+  },
+  "swapQuoteRefresh": {
+    "message": "Noteerauksia päivitetään usein vastaamaan kulloinkin vallitsevia markkinatilanteita."
   },
   "sendAmount": {
     "message": "Lähetä summa"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Erottele sanat toisistaan yhdellä välilyönnillä"
   },
+  "searchAssets": {
+    "message": "Hae omaisuuseriä"
+  },
   "searchTokens": {
     "message": "Hae tietueita"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Tehdyllä haulla ei löytynyt tilejä"
+  },
+  "selectAsset": {
+    "message": "Valitse omaisuuserä"
   },
   "selectAnAccount": {
     "message": "Valitse tili"

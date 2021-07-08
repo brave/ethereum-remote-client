@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Temps de processament estimats"
   },
+  "estimatedNetworkFee": {
+    "message": "Taxa de xarxa estimada"
+  },
   "expandView": {
     "message": "Eixamplar Vista"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Estàs llest per a connectar?"
   },
+  "reviewSwap": {
+    "message": "Revisar l'intercanvi"
+  },
   "rinkeby": {
     "message": "Xarxa del test Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Selecciona el tipus"
   },
+  "setAllowance": {
+    "message": "Assignació de fons"
+  },
   "buy": {
     "message": "Compra"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Intercanvi"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Per motius de seguretat, és recomanable restablir primer l'assignació a 0 abans d'establir el valor desitjat, això permet evitar atacs de reordenació de transaccions."
+  },
+  "swapBraveFees": {
+    "message": "El pressupost inclou una taxa de Brave de $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave utilitza $1 com agregador DEX. Consulteu $2 per obtenir més informació."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nova cotització a"
+  },
+  "swapSlippageDescription": {
+    "message": "El canvi de preu màxim acceptable com a percentatge de l'actiu de compra. Si Delta supera la desviació de preu acceptada, l'intercanvi no s'executarà."
+  },
+  "swapQuoteRefresh": {
+    "message": "Les cotitzacions s'actualitzen tot sovint per reflectir les condicions actuals del mercat."
   },
   "sendAmount": {
     "message": "Enviar Quantitat"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separa cada paraula amb un sol espai"
   },
+  "searchAssets": {
+    "message": "Recerca d'actius"
+  },
   "searchTokens": {
     "message": "Tokens per cercar"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "No s'han trobat comptes per a la consulta de búsqueda marcada"
+  },
+  "selectAsset": {
+    "message": "Seleccionar un actiu"
   },
   "selectAnAccount": {
     "message": "Selecciona un Compte"

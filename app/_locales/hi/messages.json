@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "प्रोसेस करने के अनुमानित समय"
   },
+  "estimatedNetworkFee": {
+    "message": "अनुमानित नेटवर्क फीस"
+  },
   "expandView": {
     "message": "दृश्य का विस्तार करें"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "कनेक्ट होने के लिए तैयार हैं?"
   },
+  "reviewSwap": {
+    "message": "स्वैप रिव्यू करें"
+  },
   "rinkeby": {
     "message": "\nरिंकीबी टेस्ट नेटवर्क"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "प्रकार का चयन करें"
   },
+  "setAllowance": {
+    "message": "अलावेन्स सेट करें"
+  },
   "buy": {
     "message": "खरीदें"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "स्वैप "
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "सुरक्षा कारणों से, ट्रांजैक्शन रीऑर्डरिंग अटैक को रोकने के लिए, वांछित मूल्य निर्धारित करने से पहले अलावेन्स को 0 पर रीसेट करना चाहिए।"
+  },
+  "swapBraveFees": {
+    "message": "कीमत में $1 Brave फीस शामिल है"
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave $1 का उपयोग DEX एग्रीगेटर के रूप में करता है। अधिक जानकारी के लिए कृपया $2 देखें।"
+  },
+  "swapNewQuoteCountdown": {
+    "message": "नई कीमत आने में"
+  },
+  "swapSlippageDescription": {
+    "message": "खरीदने वाले ऐसेट की कीमत का % में अधिकतम बदलाव जिसे माना जा सकता है। यदि डेल्टा स्लीपेज से अधिक होगा तो स्वैप एग्जीक्यूट नहीं किया जाएगा।"
+  },
+  "swapQuoteRefresh": {
+    "message": "बाजार की वर्तमान स्थितियों को दर्शाने के लिए कीमतों को अक्सर रिफ्रेश किया जाता है।"
   },
   "sendAmount": {
     "message": "धनराशि भेजें"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "प्रत्येक शब्द को एक स्पेस से अलग करें"
   },
+  "searchAssets": {
+    "message": "ऐसेट खोजें"
+  },
   "searchTokens": {
     "message": "टोकन ढूँढें"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "दिए गए खोज क्वेरी के लिए कोई अकाउंट नहीं मिला"
+  },
+  "selectAsset": {
+    "message": "ऐसेट चुनें"
   },
   "selectAnAccount": {
     "message": "एक खाते का चयन करें"

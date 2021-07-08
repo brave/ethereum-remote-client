@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Masa Pemprosesan yang Dijangka"
   },
+  "estimatedNetworkFee": {
+    "message": "Estimated network fee"
+  },
   "expandView": {
     "message": "Kembangkan paparan"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Bersedia Menyambung?"
   },
+  "reviewSwap": {
+    "message": "Review Swap"
+  },
   "rinkeby": {
     "message": "Rangkaian Ujian Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Pilih Jenis"
   },
+  "setAllowance": {
+    "message": "Set allowance"
+  },
   "buy": {
     "message": "Beli"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Pertukaran"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "For security reasons, it is advisable to reset the allowance to 0 first before setting it the desired value, to prevent transaction reordering attacks."
+  },
+  "swapBraveFees": {
+    "message": "Quote includes a $1 Brave fee."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave uses $1 as a DEX aggregator. Please see $2 for more information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "New quote in"
+  },
+  "swapSlippageDescription": {
+    "message": "The maximum acceptable price change in % of the buy asset. If the delta exceeds the slippage, the swap will not be executed."
+  },
+  "swapQuoteRefresh": {
+    "message": "Quotes are refreshed often to reflect current market conditions."
   },
   "sendAmount": {
     "message": "Hantar Amaun"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Pisahkan setiap perkataan dengan ruang tunggal"
   },
+  "searchAssets": {
+    "message": "Search Assets"
+  },
   "searchTokens": {
     "message": "Cari Token"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Tiada akaun yang dijumpai untuk pertanyaan carian ini."
+  },
+  "selectAsset": {
+    "message": "Select asset"
   },
   "selectAnAccount": {
     "message": "Pilih Akaun"

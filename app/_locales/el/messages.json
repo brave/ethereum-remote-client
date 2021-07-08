@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Εκτιμώμενοι Χρόνοι Επεξεργασίας"
   },
+  "estimatedNetworkFee": {
+    "message": "Εκτιμώμενο τέλος δικτύου"
+  },
   "expandView": {
     "message": "Ανάπτυξη Προβολής"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Έτοιμοι να Συνδεθείτε;"
   },
+  "reviewSwap": {
+    "message": "Αναθεώρηση ανταλλαγής"
+  },
   "rinkeby": {
     "message": "Δοκιμαστικό Δίκτυο Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Επιλέξτε Τύπο"
   },
+  "setAllowance": {
+    "message": "Καθορισμός επιδόματος"
+  },
   "buy": {
     "message": "Αγορά"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Ανταλλαγή"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Για λόγους ασφαλείας, συνιστάται να επαναφέρετε το όριο στο 0 πρώτα προτού ορίσετε την επιθυμητή τιμή, για να αποφύγετε επιθέσεις αναδιάταξης συναλλαγών."
+  },
+  "swapBraveFees": {
+    "message": "Η προσφορά περιλαμβάνει τέλος $1 Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Το Brave χρησιμοποιεί $1 ως αθροιστή DEX. Ανατρέξτε στο $2 για περισσότερες πληροφορίες."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Νέα προσφορά σε"
+  },
+  "swapSlippageDescription": {
+    "message": "Η μέγιστη αποδεκτή αλλαγή τιμής στο % του στοιχείου αγοράς. Εάν ο συντελεστής δέλτα υπερβεί την απόκλιση, η ανταλλαγή δεν θα εκτελεστεί."
+  },
+  "swapQuoteRefresh": {
+    "message": "Οι προσφορές ανανεώνονται συχνά για να αντικατοπτρίζουν τις τρέχουσες συνθήκες της αγοράς."
   },
   "sendAmount": {
     "message": "Αποστολή Ποσού"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Διαχωρίστε κάθε λέξη με ένα μόνο κενό"
   },
+  "searchAssets": {
+    "message": "Αναζήτηση στοιχείων"
+  },
   "searchTokens": {
     "message": "Αναζήτηση Tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Δεν βρέθηκαν λογαριασμοί για τη συγκεκριμένη αναζήτηση"
+  },
+  "selectAsset": {
+    "message": "Επιλογή στοιχείου"
   },
   "selectAnAccount": {
     "message": "Επιλέξτε Λογαριασμό"

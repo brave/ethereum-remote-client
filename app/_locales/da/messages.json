@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimerede behandlingstider"
   },
+  "estimatedNetworkFee": {
+    "message": "Anslået netværksgebyr"
+  },
   "expandView": {
     "message": "Udvid visning"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Klar til at oprette forbindelse?"
   },
+  "reviewSwap": {
+    "message": "Gennemse swap"
+  },
   "rinkeby": {
     "message": "Rinkeby-testnetværk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Vælg type"
   },
+  "setAllowance": {
+    "message": "Indstil godtgørelse"
+  },
   "buy": {
     "message": "Køb"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Af sikkerhedsmæssige grunde tilrådes det at nulstille godtgørelsen først til 0, inden den indstilles til den ønskede værdi for at forhindre transaktionsomlægningsangreb."
+  },
+  "swapBraveFees": {
+    "message": "Priser inkluderer et $1 Brave-gebyr."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave bruger $1 som en DEX-aggregator. Se venligst $2 for mere information."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Ny pris om"
+  },
+  "swapSlippageDescription": {
+    "message": "Den maksimalt acceptable prisændring i % af købsaktivet. Hvis deltaet overstiger afvigelsen, udføres swappen ikke."
+  },
+  "swapQuoteRefresh": {
+    "message": "Priser opdateres ofte for at afspejle de nuværende markedsforhold."
   },
   "sendAmount": {
     "message": "Send Beløb"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separer hvert ord med et enkelt mellemrum"
   },
+  "searchAssets": {
+    "message": "Søg efter aktiver"
+  },
   "searchTokens": {
     "message": "Søg efter tokens"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Ingen konti fundet for den givne søgeforespørgsel"
+  },
+  "selectAsset": {
+    "message": "Vælg aktiv"
   },
   "selectAnAccount": {
     "message": "Vælg en Konto"

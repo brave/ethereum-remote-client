@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Geschätzte Bearbeitungszeiten"
   },
+  "estimatedNetworkFee": {
+    "message": "Geschätzte Netzwerk-Gebühr"
+  },
   "expandView": {
     "message": "Ansicht erweitern"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Bereit für die Verbindung?"
   },
+  "reviewSwap": {
+    "message": "Tausch überprüfen"
+  },
   "rinkeby": {
     "message": "Rinkeby Testnetzwerk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Typ auswählen"
   },
+  "setAllowance": {
+    "message": "Vergütung festlegen"
+  },
   "buy": {
     "message": "Kaufen"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Aus Sicherheitsgründen ist es ratsam, die Vergütung zunächst auf 0 zurückzusetzen, ehe sie auf den gewünschten Wert festgelegt wird, um Transaktionsnachbestellungs-Attacken vorzubeugen."
+  },
+  "swapBraveFees": {
+    "message": "Angebot beinhaltet eine Brave-Gebühr von $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave verwendet $1 als DEX-Aggregator. Weitere Informationen finden Sie unter $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Neues Angebot in"
+  },
+  "swapSlippageDescription": {
+    "message": "Die höchste akzeptable Preisänderung in Prozent des Kauf-Assets. Wenn das Delta die Abweichung überschreitet, wird der Tausch nicht durchgeführt."
+  },
+  "swapQuoteRefresh": {
+    "message": "Die Angebote werden oft aktualisiert, um die gegenwärtigen Marktbedingungen widerzuspiegeln."
   },
   "sendAmount": {
     "message": "Betrag senden"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Trennen Sie die Wörter mit einem einzelnen Leerzeichen voneinander"
   },
+  "searchAssets": {
+    "message": "Assets suchen"
+  },
   "searchTokens": {
     "message": "Token suchen"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Es wurde keine Konten gefunden, die dieser Suchanfrage entsprechen"
+  },
+  "selectAsset": {
+    "message": "Asset auswählen"
   },
   "selectAnAccount": {
     "message": "Ein Konto auswählen"

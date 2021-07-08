@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Muda wa Kuchakata Uliokadiriwa"
   },
+  "estimatedNetworkFee": {
+    "message": "Ada ya mtandao iliyokadiriwa"
+  },
   "expandView": {
     "message": "Panua mwonekano"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Uko tayari Kuunganisha?"
   },
+  "reviewSwap": {
+    "message": "Kagua Swap"
+  },
   "rinkeby": {
     "message": "Mtandao wa Majaribio wa Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Chagua Aina"
   },
+  "setAllowance": {
+    "message": "Weka marupurupu"
+  },
   "buy": {
     "message": "Nunua"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Kwa sababu za usalama, unashauriwa kuweka upya marupurupu hadi 0 kwanza kabla ya kuyaweka kiwango unachotaka ili kuzuia mashambulizi ya kuagiza muamala."
+  },
+  "swapBraveFees": {
+    "message": "Nukuu inajumuisha ada ya $1 Brave."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave hutumia$1 kama kijumuishaji cha DEX. Tafadhali tazama $2 kwa maelezo zaidi."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Nukuu mpya katika"
+  },
+  "swapSlippageDescription": {
+    "message": "Badiliko la juu zaidi la bei linalokubalika katika % ya rasilimali ya ununuzi. Ikiwa delta inazidi slippage, swap haitatekelezwa."
+  },
+  "swapQuoteRefresh": {
+    "message": "Nukuu zinaonyeshwa upya mara kwa mara ili kuakisi hali za sasa za soko."
   },
   "sendAmount": {
     "message": "Tuma Kiasi"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Tenganisha kila neno kwa nafasi moja"
   },
+  "searchAssets": {
+    "message": "Tafuta Rasilimali"
+  },
   "searchTokens": {
     "message": "Tafuta Vianzio"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Hakuna akaunti zilizopatikana kwa hoja ya utafutaji iliyotolewa"
+  },
+  "selectAsset": {
+    "message": "Chagua rasilimali"
   },
   "selectAnAccount": {
     "message": "Chagua Akaunti"

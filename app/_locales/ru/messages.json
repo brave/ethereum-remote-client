@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
+  "estimatedNetworkFee": {
+    "message": "Ориентировочная сетевая комиссия"
+  },
   "expandView": {
     "message": "Развернуть представление"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
+  "reviewSwap": {
+    "message": "Оценить своп"
+  },
   "rinkeby": {
     "message": "Тестовая сеть Rinkeby"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Выберите тип"
   },
+  "setAllowance": {
+    "message": "Установить надбавку"
+  },
   "buy": {
     "message": "Купить"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Своп"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Из соображений безопасности рекомендуется сбросить надбавку сначала на 0, прежде чем установить желаемое значение, чтобы предотвратить атаки с изменением порядка транзакций."
+  },
+  "swapBraveFees": {
+    "message": "Цена включает комиссию Brave $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave использует $1 в качестве агрегатора DEX. Смотрите $2 для получения дополнительной информации."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Новая цена в"
+  },
+  "swapSlippageDescription": {
+    "message": "Максимально допустимое изменение цены в % от стоимости покупаемого актива. Если изменение превышает проскальзывание, своп не будет выполнен."
+  },
+  "swapQuoteRefresh": {
+    "message": "Котировки часто обновляются для отражения текущих рыночных условий."
   },
   "sendAmount": {
     "message": "Send Amount"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Separate each word with a single space"
   },
+  "searchAssets": {
+    "message": "Искать активы"
+  },
   "searchTokens": {
     "message": "Поиск токенов"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "По данному поисковому запросу аккаунты не найдены"
+  },
+  "selectAsset": {
+    "message": "Выберите актив"
   },
   "selectAnAccount": {
     "message": "Select an Account"

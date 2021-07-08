@@ -652,6 +652,9 @@
   "estimatedProcessingTimes": {
     "message": "Eeldatavad töötlemisajad"
   },
+  "estimatedNetworkFee": {
+    "message": "Hinnanguline võrgutasu"
+  },
   "expandView": {
     "message": "Laienda vaadet"
   },
@@ -1275,6 +1278,9 @@
   "readyToConnect": {
     "message": "Kas olete ühenduseks valmis?"
   },
+  "reviewSwap": {
+    "message": "Vahetustehingu ülevaatus"
+  },
   "rinkeby": {
     "message": "Rinkeby katsevõrk"
   },
@@ -1359,6 +1365,9 @@
   "selectType": {
     "message": "Valige tüüp"
   },
+  "setAllowance": {
+    "message": "Määrake varu"
+  },
   "buy": {
     "message": "Osta"
   },
@@ -1367,6 +1376,24 @@
   },
   "swap": {
     "message": "Swap"
+  },
+  "swapApprovalSecurityMsg": {
+    "message": "Turvalisusega seotud põhjustel on soovitatav nullida varu enne soovitud väärtuse määramist, et vältida tehingukorralduse kordamise ründeid."
+  },
+  "swapBraveFees": {
+    "message": "Hinnapakkumine sisaldab Brave'i tasu summas $1."
+  },
+  "swapFooterPrivacyNotice": {
+    "message": "Brave'is on $1 kasutusel DEX-i agregaatorina. Lisateabe saamiseks vaadake $2."
+  },
+  "swapNewQuoteCountdown": {
+    "message": "Uus hinnapakkumine:"
+  },
+  "swapSlippageDescription": {
+    "message": "Maksimaalselt aktsepteeritav hinnamuutus protsentides ostetavast varast. Kui vahe ületab varieeruvust, siis vahetustehingut ei sooritata."
+  },
+  "swapQuoteRefresh": {
+    "message": "Hinnapakkumisi värskendatakse sageli, et kajastada kehtivaid turutingimusi."
   },
   "sendAmount": {
     "message": "Saatke kogus"
@@ -1390,6 +1417,9 @@
   "separateEachWord": {
     "message": "Eraldage iga sõna ühe tühikuga"
   },
+  "searchAssets": {
+    "message": "Otsi varasid"
+  },
   "searchTokens": {
     "message": "Lubade otsimine"
   },
@@ -1398,6 +1428,9 @@
   },
   "noAccountsFound": {
     "message": "Antud otsingupäringu jaoks ei leitud ühtegi kontot"
+  },
+  "selectAsset": {
+    "message": "Valige vara"
   },
   "selectAnAccount": {
     "message": "Valige konto"

@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.95](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.95)), Browser Component: `1.0.31`(08-Jul-2021)
+
+ - [brave-browser#16748](https://github.com/brave/brave-browser/issues/16748) - Fix dark theme issue on Swap screen
+
 ## Remote Component([0.1.94](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.94)), Browser Component: `1.0.30`(07-Jul-2021)
 
  - [brave-browser#15859](https://github.com/brave/brave-browser/issues/15859) - Added Brave Swap to Crypto Wallets

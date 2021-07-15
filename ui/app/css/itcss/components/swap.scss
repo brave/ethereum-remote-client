@@ -978,6 +978,11 @@
     height: 0;
   }
 
+  .btn-secondary[disabled] {
+    opacity: 0.75;
+    color: #b0d7f2 !important;
+  }
+
   &__gas-fee-display {
     width: 100%;
     position: relative;

@@ -171,14 +171,16 @@ export default class SwapFooter extends Component {
     const { t } = this.context
 
     return (
-      <PageContainerFooter
-        onSubmit={(e) => this.onSubmit(e)}
-        submitText={t('reviewSwap')}
-        disabled={this.reviewSwapButtonShouldBeDisabled()}
-        hideCancel
-      >
-        {this.renderFooterExtra()}
-      </PageContainerFooter>
+      <div className="swap-v2">
+        <PageContainerFooter
+          onSubmit={(e) => this.onSubmit(e)}
+          submitText={t('reviewSwap')}
+          disabled={this.reviewSwapButtonShouldBeDisabled()}
+          hideCancel
+        >
+          {this.renderFooterExtra()}
+        </PageContainerFooter>
+      </div>
     )
   }
 }

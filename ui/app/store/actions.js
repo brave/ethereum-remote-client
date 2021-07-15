@@ -220,13 +220,20 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, slippage, 
     const network = getNetworkIdentifier(state)
     const selectedAddress = getSelectedAddress(state)
 
-    const gasPriceDecimal = gasPrice && parseInt(gasPrice, 16).toString()
+    const gasPriceDecimal = gasPrice && ethers.BigNumber.from(
+      ethUtil.addHexPrefix(gasPrice),
+    ).toString()
+
+    const amountDecimal = ethers.BigNumber.from(
+      ethUtil.addHexPrefix(amount),
+    ).toString()
 
     const conn = exports.getBackgroundConnection()
+
     const quote = await conn.quote(
       fromAsset,
       toAsset,
-      parseInt(amount, 16),
+      amountDecimal,
       gasPriceDecimal,
       slippage,
       selectedAddress,

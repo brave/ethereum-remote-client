@@ -7,6 +7,7 @@ import {
   getAccountByAddress,
 } from '../helpers/utils/util'
 import { getPermissionsRequestCount } from './permissions'
+import { TEMPLATED_CONFIRMATION_MESSAGE_TYPES } from '../pages/confirmation/templates';
 
 export function getNetworkIdentifier (state) {
   const { metamask: { provider: { type, nickname, rpcUrl } } } = state
@@ -237,16 +238,30 @@ export function getTotalUnapprovedCount (state) {
     unapprovedDecryptMsgCount = 0,
     unapprovedEncryptionPublicKeyMsgCount = 0,
     unapprovedTypedMessagesCount = 0,
+    pendingApprovalCount = 0,
   } = state.metamask
 
-  return unapprovedMsgCount + unapprovedPersonalMsgCount + unapprovedDecryptMsgCount +
+  return pendingApprovalCount + unapprovedMsgCount + unapprovedPersonalMsgCount + unapprovedDecryptMsgCount +
     unapprovedEncryptionPublicKeyMsgCount + unapprovedTypedMessagesCount +
     getUnapprovedTxCount(state) + getPermissionsRequestCount(state) + getSuggestedTokenCount(state)
+    
 }
 
 function getUnapprovedTxCount (state) {
   const { unapprovedTxs = {} } = state.metamask
   return Object.keys(unapprovedTxs).length
+}
+
+export function getUnapprovedConfirmations(state) {
+  const { pendingApprovals } = state.metamask;
+  return Object.values(pendingApprovals);
+}
+
+export function getUnapprovedTemplatedConfirmations(state) {
+  const unapprovedConfirmations = getUnapprovedConfirmations(state);
+  return unapprovedConfirmations.filter((approval) =>
+    TEMPLATED_CONFIRMATION_MESSAGE_TYPES.includes(approval.type),
+  );
 }
 
 function getSuggestedTokenCount (state) {

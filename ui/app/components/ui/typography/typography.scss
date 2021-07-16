@@ -1,0 +1,15 @@
+@use "design-system";
+@use "sass:map";
+
+.typography {
+
+  & b {
+    font-weight: 700;
+  }
+
+  @for $i from 1 through 8 {
+    &--spacing-#{$i} {
+      margin: #{$i * 4}px auto;
+    }
+  }
+}

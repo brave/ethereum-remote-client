@@ -15,6 +15,8 @@ const MESSAGE_TYPE = {
   ETH_SIGN: 'eth_sign',
   ETH_SIGN_TYPED_DATA: 'eth_signTypedData',
   PERSONAL_SIGN: 'personal_sign',
+  ADD_ETHEREUM_CHAIN: 'wallet_addEthereumChain',
+  SWITCH_ETHEREUM_CHAIN: 'wallet_switchEthereumChain',
 }
 
 export {

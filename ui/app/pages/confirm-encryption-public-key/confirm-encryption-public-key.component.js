@@ -159,6 +159,7 @@ export default class ConfirmEncryptionPublicKey extends Component {
     const { t } = this.context
 
     const origin = domainMetadata[txData.origin]
+    const name = originMetadata?.hostname || txData.origin;
     const notice = t('encryptionPublicKeyNotice', [origin.name])
 
     return (
@@ -175,7 +176,7 @@ export default class ConfirmEncryptionPublicKey extends Component {
               />
             ) : (
               <i className="request-encryption-public-key__visual-identicon--default">
-                {origin.name.charAt(0).toUpperCase()}
+                {name.charAt(0).toUpperCase()}
               </i>
             )}
             <div

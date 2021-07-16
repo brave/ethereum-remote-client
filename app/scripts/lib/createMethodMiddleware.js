@@ -1,3 +1,11 @@
+import handlers from './handlers';
+
+const handlerMap = handlers.reduce((map, handler) => {
+  for (const methodName of handler.methodNames) {
+    map.set(methodName, handler.implementation);
+  }
+  return map;
+}, new Map());
 
 const recordedWeb3Usage = {}
 
@@ -10,7 +18,15 @@ const recordedWeb3Usage = {}
  * @param {Function} opts.sendMetrics - A function for sending a metrics event
  * @returns {(req: any, res: any, next: Function, end: Function) => void}
  */
-export default function createMethodMiddleware ({ origin, sendMetrics }) {
+export default function createMethodMiddleware ({ origin,
+                                                  addCustomRpc,
+                                                  sendMetrics,
+                                                  getCurrentChainId,
+                                                  findCustomRpcBy,
+                                                  updateRpcTarget,
+                                                  requestUserApproval,
+                                                  setProviderType
+                                                }) {
   return function methodMiddleware (req, res, next, end) {
     switch (req.method) {
 
@@ -34,6 +50,17 @@ export default function createMethodMiddleware ({ origin, sendMetrics }) {
         break
 
       default:
+        if (handlerMap.has(req.method)) {
+          return handlerMap.get(req.method)(req, res, next, end, { origin,
+                                                  addCustomRpc,
+                                                  sendMetrics,
+                                                  getCurrentChainId,
+                                                  findCustomRpcBy,
+                                                  updateRpcTarget,
+                                                  requestUserApproval,
+                                                  setProviderType
+                                                });
+        }
         return next()
     }
     return end()

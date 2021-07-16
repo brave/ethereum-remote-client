@@ -230,6 +230,7 @@ function setupController (initState, initLangCode) {
     showUnapprovedTx: triggerUi,
     showPermissionRequest: triggerUi,
     showUnlockRequest: triggerUi,
+    showUserConfirmation: triggerUi,
     openPopup,
     // initial state
     initState,
@@ -450,6 +451,8 @@ function setupController (initState, initLangCode) {
    */
   function updateBadge () {
     let label = ''
+    const pendingApprovalCount = controller.approvalController.getTotalApprovalCount();
+
     const unapprovedTxCount = controller.txController.getUnapprovedTxCount()
     const unapprovedMsgCount = controller.messageManager.unapprovedMsgCount
     const unapprovedPersonalMsgCount = controller.personalMessageManager.unapprovedPersonalMsgCount

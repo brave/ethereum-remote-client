@@ -1,4 +1,21 @@
 {
+ "addEthereumChainConfirmationDescription": {
+    "message": "This will allow this network to be used within MetaMask."
+  },
+  "addEthereumChainConfirmationRisks": {
+    "message": "MetaMask does not verify custom networks."
+  },
+  "addEthereumChainConfirmationRisksLearnMore": {
+    "message": "Learn about $1.",
+    "description": "$1 is a link with text that is provided by the 'addEthereumChainConfirmationRisksLearnMoreLink' key"
+  },
+  "addEthereumChainConfirmationRisksLearnMoreLink": {
+    "message": "scams and network security risks",
+    "description": "Link text for the 'addEthereumChainConfirmationRisksLearnMore' translation key"
+  },
+  "addEthereumChainConfirmationTitle": {
+    "message": "Allow this site to add a network?"
+  },
   "acceptTermsOfUse": {
     "message": "I have read and agree to the $1",
     "description": "$1 is the `terms` message"
@@ -30,6 +47,9 @@
   },
   "currentAccountNotConnected": {
     "message": "Your current account is not connected"
+  },
+  "switchingNetworksCancelsPendingConfirmations": {
+    "message": "Switching networks will cancel all pending confirmations"
   },
   "switchToThisAccount": {
     "message": "Switch to this account"
@@ -227,6 +247,9 @@
   "approve": {
     "message": "Approve spend limit"
   },
+  "approveButtonText": {
+    "message": "Approve"
+  },
   "approveSpendLimit": {
     "message": "Approve $1 spend limit",
     "description": "The token symbol that is being approved"
@@ -295,7 +318,10 @@
     "message": "Basic"
   },
   "blockExplorerUrl": {
-    "message": "Block Explorer"
+    "message": "Block Explorer URL"
+  },
+  "blockExplorerUrlDefinition": {
+    "message": "The URL used as the block explorer for this network."
   },
   "blockExplorerView": {
     "message": "View account at $1",
@@ -360,6 +386,9 @@
   },
   "chainId": {
     "message": "Chain ID"
+  },
+  "chainIdDefinition": {
+    "message": "The chain ID used to sign transactions for this network."
   },
   "clickToRevealSeed": {
     "message": "Click here to reveal secret words"
@@ -468,6 +497,12 @@
   },
   "currencyConversion": {
     "message": "Currency Conversion"
+  },
+  "currencySymbol": {
+    "message": "Currency Symbol"
+  },
+  "currencySymbolDefinition": {
+    "message": "The ticker symbol displayed for this network’s currency."
   },
   "currentExtension": {
     "message": "Current extension page"
@@ -1008,11 +1043,23 @@
   "negativeETH": {
     "message": "Can not send negative amounts of ETH."
   },
+  "networkDetails": {
+    "message": "Network Details"
+  },
   "networkName": {
     "message": "Network Name"
   },
   "networks": {
     "message": "Networks"
+  },
+  "networkNameDefinition": {
+    "message": "The name associated with this network."
+  },
+  "networkURL": {
+    "message": "Network URL"
+  },
+  "networkURLDefinition": {
+    "message": "The URL used to access this network."
   },
   "networkSettingsChainIdDescription": {
     "message": "The chain ID is used for signing transactions. Enter a decimal or hexadecimal number starting with '0x'."
@@ -1126,6 +1173,14 @@
   },
   "participateInMetaMetricsDescription": {
     "message": "Participate in MetaMetrics to help us make Brave better"
+  },
+  "mismatchedChain": {
+    "message": "This network details for this Chain ID do not match our records. We recommend that you $1 before proceeding.",
+    "description": "$1 is a clickable link with text defined by the 'mismatchedChainLinkText' key"
+  },
+  "mismatchedChainLinkText": {
+    "message": "verify the network details",
+    "description": "Serves as link text for the 'mismatchedChain' key. This text will be embedded inside the translation for that key."
   },
   "password": {
     "message": "Password"
@@ -1514,6 +1569,15 @@
   "spendLimitInvalid": {
     "message": "Spend limit invalid; must be a positive number"
   },
+  "switchEthereumChainConfirmationDescription": {
+    "message": "This will will switch the selected network within MetaMask to a previously added network:"
+  },
+  "switchEthereumChainConfirmationTitle": {
+    "message": "Allow this site to switch the network?"
+  },
+  "switchNetwork": {
+    "message": "Switch network"
+  },
   "switchNetworks": {
     "message": "Switch Networks"
   },
@@ -1739,6 +1803,14 @@
   "unlock": {
     "message": "Unlock"
   },
+  "unrecognizedChain": {
+    "message": "This custom network is not recognized. We recommend that you $1 before proceeding",
+    "description": "$1 is a clickable link with text defined by the 'unrecognizedChanLinkText' key. The link will open to instructions for users to validate custom network details."
+  },
+  "unrecognizedChainLinkText": {
+    "message": "verify the network details",
+    "description": "Serves as link text for the 'unrecognizedChain' key. This text will be embedded inside the translation for that key."
+  },
   "unlockMessage": {
     "message": "The decentralized web awaits"
   },
@@ -1768,6 +1840,9 @@
   },
   "viewinExplorer": {
     "message": "View in Explorer"
+  },
+  "viewAllDetails": {
+    "message": "View all details"
   },
   "viewContact": {
     "message": "View Contact"
@@ -1802,6 +1877,10 @@
   "xOfY": {
     "message": "$1 of $2",
     "description": "$1 and $2 are intended to be two numbers, where $2 is a total, and $1 is a count towards that total"
+  },
+  "xOfYPending": {
+    "message": "$1 of $2 pending",
+    "description": "$1 and $2 are intended to be two numbers, where $2 is a total number of pending confirmations, and $1 is a count towards that total"
   },
   "yesLetsTry": {
     "message": "Yes, let's try"

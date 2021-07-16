@@ -28,6 +28,7 @@ const mapStateToProps = (state) => {
     connectedStatusPopoverHasBeenShown,
     defaultHomeActiveTabName,
     hardwareConnect,
+    pendingApprovals = {},
   } = metamask
   const { forgottenPassword } = appState
   const totalUnapprovedCount = getTotalUnapprovedCount(state)
@@ -56,6 +57,7 @@ const mapStateToProps = (state) => {
     defaultHomeActiveTabName,
     hardwareConnect,
     swapTokenApprovalTxId: getSwapTokenApprovalTxId(state),
+    pendingApprovals: Object.values(pendingApprovals),
   }
 }
 

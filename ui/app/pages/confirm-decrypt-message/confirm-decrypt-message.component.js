@@ -179,6 +179,7 @@ export default class ConfirmDecryptMessage extends Component {
     const { t } = this.context
 
     const origin = domainMetadata[txData.msgParams.origin]
+    const name = originMetadata?.hostname || txData.msgParams.origin;
     const notice = t('decryptMessageNotice', [origin.name])
 
     const {
@@ -204,7 +205,7 @@ export default class ConfirmDecryptMessage extends Component {
               />
             ) : (
               <i className="request-decrypt-message__visual-identicon--default">
-                {origin.name.charAt(0).toUpperCase()}
+                {name.charAt(0).toUpperCase()}
               </i>
             )}
             <div

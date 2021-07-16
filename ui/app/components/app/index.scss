@@ -27,6 +27,8 @@
 @import 'selected-provider-indicator/index';
 @import '../ui/sender-to-recipient/index';
 @import '../ui/tabs/index';
+@import '../ui/chip/chip';
+@import '../ui/typography/typography';
 @import '../ui/token-balance/index';
 @import 'token-cell/token-cell';
 @import 'transaction-activity-log/index';
@@ -65,3 +67,7 @@
 @import 'password-warning/index';
 @import 'custom';
 @import 'dark';
+@import '../ui/chip/chip';
+@import '../ui/typography/typography';
+@import '../ui/callout/callout';
+@import '../ui/box/box';

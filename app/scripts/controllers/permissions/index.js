@@ -746,7 +746,6 @@ export class PermissionsController {
             'Permissions request already pending; please wait.',
           )
         }
-
         this._showPermissionRequest()
 
         return new Promise((resolve, reject) => {

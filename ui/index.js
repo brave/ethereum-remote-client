@@ -105,6 +105,7 @@ async function startApp (metamaskState, backgroundConnection, opts) {
     metamaskState.unapprovedEncryptionPublicKeyMsgs,
     metamaskState.unapprovedTypedMessages,
     metamaskState.network,
+    metamaskState.provider.chainId,
   )
   const numberOfUnapprivedTx = unapprovedTxsAll.length
   if (numberOfUnapprivedTx > 0) {

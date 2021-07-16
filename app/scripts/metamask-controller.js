@@ -62,6 +62,7 @@ import contractMap from '@metamask/contract-metadata'
 
 import {
   AddressBookController,
+  ApprovalController,
   CurrencyRateController,
 } from '@metamask/controllers'
 import PhishingController from './controllers/phishing-controller'
@@ -108,6 +109,10 @@ export default class MetamaskController extends EventEmitter {
 
     // next, we will initialize the controllers
     // controller initialization order matters
+    this.approvalController = new ApprovalController({
+      showApprovalRequest: opts.showUserConfirmation,
+      defaultApprovalType: 'NO_TYPE',
+    });
 
     this.networkController = new NetworkController(initState.NetworkController)
 
@@ -123,7 +128,7 @@ export default class MetamaskController extends EventEmitter {
       isUnlocked: this.isUnlocked.bind(this),
       initState: initState.AppStateController,
       onInactiveTimeout: () => this.setLocked(),
-      showUnlockRequest: opts.showUnlockRequest,
+      showUnlockRequest: opts.showUserConfirmation,
       preferencesStore: this.preferencesController.store,
     })
 
@@ -324,6 +329,8 @@ export default class MetamaskController extends EventEmitter {
     * @returns {Object} - Object containing API functions.
     */
   getApi () {
+    const approvalController = this.approvalController
+
     const keyringController = this.keyringController
     const networkController = this.networkController
     const onboardingController = this.onboardingController
@@ -370,7 +377,6 @@ export default class MetamaskController extends EventEmitter {
       // vault management
       submitPassword: nodeify(this.submitPassword, this),
       verifyPassword: nodeify(this.verifyPassword, this),
-
       // network management
       setProviderType: nodeify(networkController.setProviderType, networkController),
       setCustomRpc: nodeify(this.setCustomRpc, this),
@@ -399,7 +405,15 @@ export default class MetamaskController extends EventEmitter {
 
       // EnsController
       tryReverseResolveAddress: nodeify(this.ensController.reverseResolveAddress, this.ensController),
-
+      // approval controller
+      resolvePendingApproval: nodeify(
+        approvalController.resolve,
+        approvalController,
+      ),
+      rejectPendingApproval: nodeify(
+        approvalController.reject,
+        approvalController,
+      ),
       // KeyringController
       setLocked: nodeify(this.setLocked, this),
       createNewVaultAndKeychain: nodeify(this.createNewVaultAndKeychain, this),
@@ -1023,7 +1037,7 @@ export default class MetamaskController extends EventEmitter {
     * @param {Function} cb - The callback function called with the signature.
     * Passed back to the requesting Dapp.
     */
-  async newUnsignedPersonalMessage (msgParams, req) {
+  async newUnsignedPersonalMessage(msgParams, req) {
     const promise = this.personalMessageManager.addUnapprovedMessageAsync(msgParams, req)
     this.sendUpdate()
     this.opts.showUnconfirmedMessage()
@@ -1078,11 +1092,11 @@ export default class MetamaskController extends EventEmitter {
    * @param {Object} req - (optional) the original request, containing the origin
    * Passed back to the requesting Dapp.
    */
-  async newRequestDecryptMessage (msgParams, req) {
+  async newRequestDecryptMessage(msgParams, req) {
     const promise = this.decryptMessageManager.addUnapprovedMessageAsync(msgParams, req)
     this.sendUpdate()
     this.opts.showUnconfirmedMessage()
-    return promise
+    return promise;
   }
 
   /**
@@ -1223,7 +1237,7 @@ export default class MetamaskController extends EventEmitter {
   newUnsignedTypedMessage (msgParams, req, version) {
     const promise = this.typedMessageManager.addUnapprovedMessageAsync(msgParams, req, version)
     this.sendUpdate()
-    this.opts.showUnconfirmedMessage()
+    this.opts.showUnconfirmedMessage();
     return promise
   }
 
@@ -1520,7 +1534,50 @@ export default class MetamaskController extends EventEmitter {
     }))
     engine.push(createMethodMiddleware({
       origin,
+      addCustomRpc: async ({
+        chainId,
+        blockExplorerUrl,
+        ticker,
+        chainName,
+        rpcUrl,
+      } = {}) => {
+        console.log("addToFrequentRpcList:", 
+          rpcUrl,
+          chainId,
+          ticker,
+          chainName,
+          {
+            blockExplorerUrl,
+          })
+        await this.preferencesController.addToFrequentRpcList(
+          rpcUrl,
+          chainId,
+          ticker,
+          chainName,
+          {
+            blockExplorerUrl,
+          },
+        );
+      },
       sendMetrics: this.sendBackgroundMetaMetrics.bind(this),
+      getCurrentChainId: this.networkController.getCurrentChainId.bind(
+        this.networkController,
+      ),
+      findCustomRpcBy: this.findCustomRpcBy.bind(this),
+      updateRpcTarget: ({ rpcUrl, chainId, ticker, nickname }) => {
+        this.networkController.setRpcTarget(
+          rpcUrl,
+          chainId,
+          ticker,
+          nickname,
+        );
+      },
+      requestUserApproval: this.approvalController.addAndShowApprovalRequest.bind(
+        this.approvalController,
+      ),
+      setProviderType: this.networkController.setProviderType.bind(
+        this.networkController,
+      ),
     }))
     // filter and subscription polyfills
     engine.push(filterMiddleware)
@@ -1854,6 +1911,7 @@ export default class MetamaskController extends EventEmitter {
       PermissionsMetadata: this.permissionsController.store,
       // ENS Controller
       EnsController: this.ensController.store,
+      ApprovalController: this.approvalController,
     })
 
     this.memStore.subscribe(this.sendUpdate.bind(this))
@@ -1886,6 +1944,18 @@ export default class MetamaskController extends EventEmitter {
       nonceLock.releaseLock()
     }
     return nonceLock.nextNonce
+  }
+  
+  findCustomRpcBy(rpcInfo) {
+    const frequentRpcListDetail = this.preferencesController.getFrequentRpcListDetail();
+    for (const existingRpcInfo of frequentRpcListDetail) {
+      for (const key of Object.keys(rpcInfo)) {
+        if (existingRpcInfo[key] === rpcInfo[key]) {
+          return existingRpcInfo;
+        }
+      }
+    }
+    return null;
   }
 
   async sendBackgroundMetaMetrics ({ action, name, customVariables } = {}) {

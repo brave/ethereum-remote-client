@@ -86,7 +86,6 @@ export default function createPermissionsMethodMiddleware ({
 
       // register return handler to send accountsChanged notification
       case 'wallet_requestPermissions':
-
         if ('eth_accounts' in req.params?.[0]) {
 
           responseHandler = async () => {

@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.96](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.96)), Browser Component: `1.0.32`(16-Jul-2021)
+
+ - [brave-browser#16760](https://github.com/brave/brave-browser/issues/16760) - Fix error while fetching quote for input value more than 1000
+
 ## Remote Component([0.1.95](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.95)), Browser Component: `1.0.31`(08-Jul-2021)
 
  - [brave-browser#16748](https://github.com/brave/brave-browser/issues/16748) - Fix dark theme issue on Swap screen

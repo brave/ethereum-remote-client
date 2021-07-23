@@ -23,6 +23,7 @@ import {
   CONNECTED_ROUTE,
   CONNECTED_ACCOUNTS_ROUTE,
   CONNECT_HARDWARE_ROUTE,
+  CONFIRMATION_V_NEXT_ROUTE,
 } from '../../helpers/constants/routes'
 import WaitForTransaction from '../swap/wait-for-transaction'
 
@@ -50,6 +51,7 @@ export default class Home extends PureComponent {
     hardwareConnect: PropTypes.bool,
     setHardwareConnect: PropTypes.func,
     swapTokenApprovalTxId: PropTypes.number,
+    pendingApprovals: PropTypes.arrayOf(PropTypes.object).isRequired,
   }
 
   state = {
@@ -65,6 +67,7 @@ export default class Home extends PureComponent {
       totalUnapprovedCount,
       unconfirmedTransactionsCount,
       hardwareConnect,
+      pendingApprovals,
     } = this.props
 
     this.setState({ mounted: true })
@@ -76,6 +79,8 @@ export default class Home extends PureComponent {
       history.push(CONFIRM_TRANSACTION_ROUTE)
     } else if (Object.keys(suggestedTokens).length > 0) {
       history.push(CONFIRM_ADD_SUGGESTED_TOKEN_ROUTE)
+    } else if (pendingApprovals.length > 0) {
+      history.push(CONFIRMATION_V_NEXT_ROUTE)
     }
 
     if (hardwareConnect) {

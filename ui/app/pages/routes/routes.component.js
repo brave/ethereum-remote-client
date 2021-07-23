@@ -53,10 +53,12 @@ import {
   SETTINGS_ROUTE,
   SWAP_ROUTE,
   UNLOCK_ROUTE,
+  CONFIRMATION_V_NEXT_ROUTE,
 } from '../../helpers/constants/routes'
 
 import { ENVIRONMENT_TYPE_NOTIFICATION, ENVIRONMENT_TYPE_POPUP } from '../../../../app/scripts/lib/enums'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
+import ConfirmationPage from '../confirmation'
 
 export default class Routes extends Component {
   static propTypes = {
@@ -81,7 +83,6 @@ export default class Routes extends Component {
     isMouseUser: PropTypes.bool,
     setMouseUserState: PropTypes.func,
     providerId: PropTypes.string,
-    hasPermissionsRequests: PropTypes.bool,
     autoLockTimeLimit: PropTypes.number,
     pageChanged: PropTypes.func.isRequired,
   }
@@ -151,6 +152,10 @@ export default class Routes extends Component {
         <Authenticated path={NEW_ACCOUNT_ROUTE} component={CreateAccountPage} />
         <Authenticated path={`${CONNECT_ROUTE}/:id`} component={PermissionsConnect} />
         <Authenticated path={`${ASSET_ROUTE}/:asset`} component={Asset} />
+        <Authenticated
+          path={CONFIRMATION_V_NEXT_ROUTE}
+          component={ConfirmationPage}
+        />
         <Authenticated path={DEFAULT_ROUTE} component={Home} />
       </Switch>
     )
@@ -177,7 +182,7 @@ export default class Routes extends Component {
   }
 
   hideAppHeader () {
-    const { location, hasPermissionsRequests } = this.props
+    const { location } = this.props
 
     const isInitializing = Boolean(matchPath(location.pathname, {
       path: INITIALIZE_ROUTE, exact: false,
@@ -197,11 +202,21 @@ export default class Routes extends Component {
       return true
     }
 
-    const isHandlingPermissionsRequest = Boolean(matchPath(location.pathname, {
-      path: CONNECT_ROUTE, exact: false,
-    })) || hasPermissionsRequests
+    const isHandlingPermissionsRequest = Boolean(
+      matchPath(location.pathname, {
+        path: CONNECT_ROUTE,
+        exact: false,
+      }),
+    )
 
-    return isHandlingPermissionsRequest
+    const isHandlingAddEthereumChainRequest = Boolean(
+      matchPath(location.pathname, {
+        path: CONFIRMATION_V_NEXT_ROUTE,
+        exact: false,
+      }),
+    )
+
+    return isHandlingPermissionsRequest || isHandlingAddEthereumChainRequest
   }
 
   render () {

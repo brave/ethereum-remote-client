@@ -1,3 +1,4 @@
+export const APPROVAL_TYPE = 'wallet_requestPermissions'
 
 export const WALLET_PREFIX = 'wallet_'
 
@@ -86,6 +87,8 @@ export const SAFE_METHODS = [
   'eth_syncing',
   'eth_uninstallFilter',
   'metamask_watchAsset',
+  'wallet_addEthereumChain',
+  'wallet_switchEthereumChain',
   'wallet_watchAsset',
   'eth_getEncryptionPublicKey',
   'eth_decrypt',

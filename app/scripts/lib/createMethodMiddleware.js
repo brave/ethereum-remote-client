@@ -1,3 +1,8 @@
+import {
+  addEthereumChain,
+  switchEthereumChain,
+} from './ethereum-chain-handlers'
+
 
 const recordedWeb3Usage = {}
 
@@ -10,7 +15,15 @@ const recordedWeb3Usage = {}
  * @param {Function} opts.sendMetrics - A function for sending a metrics event
  * @returns {(req: any, res: any, next: Function, end: Function) => void}
  */
-export default function createMethodMiddleware ({ origin, sendMetrics }) {
+export default function createMethodMiddleware ({ origin,
+  addCustomRpc,
+  sendMetrics,
+  getCurrentChainId,
+  findCustomRpcBy,
+  updateRpcTarget,
+  requestUserApproval,
+  setProviderType,
+}) {
   return function methodMiddleware (req, res, next, end) {
     switch (req.method) {
 
@@ -32,7 +45,17 @@ export default function createMethodMiddleware ({ origin, sendMetrics }) {
 
         res.result = true
         break
-
+      case 'wallet_addEthereumChain':
+        addEthereumChain(req, res, end, addCustomRpc,
+          sendMetrics, getCurrentChainId, findCustomRpcBy,
+          updateRpcTarget, requestUserApproval)
+        break
+      case 'wallet_switchEthereumChain':
+        switchEthereumChain(req, res, end,
+          getCurrentChainId, findCustomRpcBy,
+          updateRpcTarget, requestUserApproval,
+          setProviderType)
+        break
       default:
         return next()
     }

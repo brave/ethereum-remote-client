@@ -36,6 +36,7 @@ describe('Actions', function () {
       keyringController: new KeyringController({}),
       showUnapprovedTx: noop,
       showUnconfirmedMessage: noop,
+      showUserConfirmation: noop,
       encryptor: {
         encrypt: function (_, object) {
           this.object = object

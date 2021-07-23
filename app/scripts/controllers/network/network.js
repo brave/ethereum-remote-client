@@ -135,6 +135,11 @@ export default class NetworkController extends EventEmitter {
     })
   }
 
+  getCurrentChainId () {
+    const { type, chainId: configChainId } = this.getProviderConfig()
+    return NETWORK_TYPE_TO_ID_MAP[type]?.chainId || configChainId
+  }
+
   setRpcTarget (rpcUrl, chainId, ticker = 'ETH', nickname = '', rpcPrefs) {
     this.setProviderConfig({
       type: 'rpc',

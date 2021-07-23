@@ -230,6 +230,7 @@ function setupController (initState, initLangCode) {
     showUnapprovedTx: triggerUi,
     showPermissionRequest: triggerUi,
     showUnlockRequest: triggerUi,
+    showUserConfirmation: triggerUi,
     openPopup,
     // initial state
     initState,

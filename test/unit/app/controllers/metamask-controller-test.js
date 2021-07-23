@@ -87,6 +87,7 @@ describe('MetaMaskController', function () {
     metamaskController = new MetaMaskController({
       showUnapprovedTx: noop,
       showUnconfirmedMessage: noop,
+      showUserConfirmation: noop,
       encryptor: {
         encrypt: function (_, object) {
           this.object = object
@@ -1191,6 +1192,7 @@ describe('MetaMaskController', function () {
       metamaskController = new MetaMaskController({
         showUnapprovedTx: noop,
         showUnconfirmedMessage: noop,
+        showUserConfirmation: noop,
         encryptor: {
           encrypt: function (_, object) {
             this.object = object
@@ -1213,6 +1215,7 @@ describe('MetaMaskController', function () {
       metamaskController = new MetaMaskController({
         showUnapprovedTx: noop,
         showUnconfirmedMessage: noop,
+        showUserConfirmation: noop,
         encryptor: {
           encrypt: function (_, object) {
             this.object = object

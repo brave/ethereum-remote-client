@@ -70,6 +70,12 @@ describe('Transactions utils', function () {
           rpcPrefs: {},
         },
         {
+          expected: 'https://kovan.etherscan.io/tx/0x1234',
+          networkId: '0x2a',
+          hash: '0x1234',
+          rpcPrefs: {},
+        },
+        {
           // test handling of `blockExplorerUrl` for a custom RPC
           expected: 'https://block.explorer/tx/0xabcd',
           networkId: '31',

@@ -10,7 +10,6 @@ import {
   SUBMITTED_STATUS,
 } from '../../../helpers/constants/transactions'
 import { getBlockExplorerUrlForTx } from '../../../helpers/utils/transactions.util'
-import { getEtherScanNetworkIdentifier } from '../../../../lib/etherscan-prefix-for-network'
 
 const FAILURE_STATUSES = [FAILED_STATUS, CANCELLED_STATUS, REJECTED_STATUS]
 
@@ -45,7 +44,6 @@ export default class WaitForTransaction extends Component {
 
     const { txReceipt, hash } = transaction
     const transactionHash = txReceipt?.transactionHash || hash
-    const networkId = getEtherScanNetworkIdentifier(network)
 
     return (
       transactionHash && (
@@ -53,7 +51,7 @@ export default class WaitForTransaction extends Component {
           onClick={() =>
             global.platform.openTab({
               url: getBlockExplorerUrlForTx(
-                networkId,
+                network,
                 transactionHash,
                 rpcPrefs,
               ),

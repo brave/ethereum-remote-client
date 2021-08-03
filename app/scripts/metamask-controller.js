@@ -10,6 +10,7 @@ import pump from 'pump'
 import Dnode from 'dnode'
 import extension from 'extensionizer'
 import ObservableStore from 'obs-store'
+import { toChecksumAddress, stripHexPrefix } from 'ethereumjs-util'
 import ComposableObservableStore from './lib/ComposableObservableStore'
 import asStream from 'obs-store/lib/asStream'
 import AccountTracker from './lib/account-tracker'
@@ -50,7 +51,6 @@ import accountImporter from './account-import-strategies'
 import getBuyEthUrl from './lib/buy-eth-url'
 import { Mutex } from 'await-semaphore'
 import { version } from '../manifest/_base.json'
-import ethUtil from 'ethereumjs-util'
 
 import seedPhraseVerifier from './lib/seed-phrase-verifier'
 import log from 'loglevel'
@@ -608,13 +608,13 @@ export default class MetamaskController extends EventEmitter {
     // Filter ERC20 tokens
     const filteredAccountTokens = {}
     Object.keys(accountTokens).forEach((address) => {
-      const checksummedAddress = ethUtil.toChecksumAddress(address)
+      const checksummedAddress = toChecksumAddress(address)
       filteredAccountTokens[checksummedAddress] = {}
       Object.keys(accountTokens[address]).forEach(
         (networkType) => (filteredAccountTokens[checksummedAddress][networkType] = networkType !== 'mainnet' ?
           accountTokens[address][networkType] :
           accountTokens[address][networkType].filter(({ address }) => {
-            const tokenAddress = ethUtil.toChecksumAddress(address)
+            const tokenAddress = toChecksumAddress(address)
             return contractMap[tokenAddress] ? contractMap[tokenAddress].erc20 : true
           })
         ),
@@ -639,8 +639,8 @@ export default class MetamaskController extends EventEmitter {
     )
     const simpleKeyPairAccounts = simpleKeyPairKeyringAccounts.reduce((acc, accounts) => [...acc, ...accounts], [])
     const accounts = {
-      hd: hdAccounts.filter((item, pos) => (hdAccounts.indexOf(item) === pos)).map((address) => ethUtil.toChecksumAddress(address)),
-      simpleKeyPair: simpleKeyPairAccounts.filter((item, pos) => (simpleKeyPairAccounts.indexOf(item) === pos)).map((address) => ethUtil.toChecksumAddress(address)),
+      hd: hdAccounts.filter((item, pos) => (hdAccounts.indexOf(item) === pos)).map((address) => toChecksumAddress(address)),
+      simpleKeyPair: simpleKeyPairAccounts.filter((item, pos) => (simpleKeyPairAccounts.indexOf(item) === pos)).map((address) => toChecksumAddress(address)),
       ledger: [],
       trezor: [],
     }
@@ -650,7 +650,7 @@ export default class MetamaskController extends EventEmitter {
     let transactions = this.txController.store.getState().transactions
     // delete tx for other accounts that we're not importing
     transactions = transactions.filter((tx) => {
-      const checksummedTxFrom = ethUtil.toChecksumAddress(tx.txParams.from)
+      const checksummedTxFrom = toChecksumAddress(tx.txParams.from)
       return (
         accounts.hd.includes(checksummedTxFrom)
       )
@@ -1097,7 +1097,7 @@ export default class MetamaskController extends EventEmitter {
     const msgId = msgParams.metamaskId
     const msg = this.decryptMessageManager.getMsg(msgId)
     try {
-      const stripped = ethUtil.stripHexPrefix(msgParams.data)
+      const stripped = stripHexPrefix(msgParams.data)
       const buff = Buffer.from(stripped, 'hex')
       msgParams.data = JSON.parse(buff.toString('utf8'))
 
@@ -1125,7 +1125,7 @@ export default class MetamaskController extends EventEmitter {
     try {
       const cleanMsgParams = await this.decryptMessageManager.approveMessage(msgParams)
 
-      const stripped = ethUtil.stripHexPrefix(cleanMsgParams.data)
+      const stripped = stripHexPrefix(cleanMsgParams.data)
       const buff = Buffer.from(stripped, 'hex')
       cleanMsgParams.data = JSON.parse(buff.toString('utf8'))
 

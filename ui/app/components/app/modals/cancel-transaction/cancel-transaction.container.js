@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import { multiplyCurrencies } from '../../../../helpers/utils/conversion-util'
 import withModalProps from '../../../../helpers/higher-order-components/with-modal-props'
 import CancelTransaction from './cancel-transaction.component'
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
   const transaction = currentNetworkTxList.find(({ id }) => id === transactionId)
   const transactionStatus = transaction ? transaction.status : ''
 
-  const defaultNewGasPrice = ethUtil.addHexPrefix(
+  const defaultNewGasPrice = addHexPrefix(
     multiplyCurrencies(originalGasPrice, 1.1, {
       toNumericBase: 'hex',
       multiplicandBase: 16,

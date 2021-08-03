@@ -1,9 +1,9 @@
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import { ETH, GWEI, WEI } from '../constants/common'
 import { conversionUtil, addCurrencies, subtractCurrencies } from './conversion-util'
 
 export function bnToHex (inputBn) {
-  return ethUtil.addHexPrefix(inputBn.toString(16))
+  return addHexPrefix(inputBn.toString(16))
 }
 
 export function hexToDecimal (hexValue) {

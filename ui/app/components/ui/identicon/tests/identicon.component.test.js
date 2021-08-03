@@ -42,7 +42,7 @@ describe('Identicon', function () {
       <Identicon
         store={store}
         className="test-address"
-        address="0xTest"
+        address="0xdeadbeef"
       />,
     )
 

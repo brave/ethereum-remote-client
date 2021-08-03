@@ -1,4 +1,4 @@
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import { conversionUtil, multiplyCurrencies } from '../../../helpers/utils/conversion-util'
 
 const MIN_GAS_PRICE_DEC = '0'
@@ -6,7 +6,7 @@ const MIN_GAS_PRICE_HEX = (parseInt(MIN_GAS_PRICE_DEC)).toString(16)
 const MIN_GAS_LIMIT_DEC = '21000'
 const MIN_GAS_LIMIT_HEX = (parseInt(MIN_GAS_LIMIT_DEC)).toString(16)
 
-const MIN_GAS_PRICE_GWEI = ethUtil.addHexPrefix(conversionUtil(MIN_GAS_PRICE_HEX, {
+const MIN_GAS_PRICE_GWEI = addHexPrefix(conversionUtil(MIN_GAS_PRICE_HEX, {
   fromDenomination: 'WEI',
   toDenomination: 'GWEI',
   fromNumericBase: 'hex',

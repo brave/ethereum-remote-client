@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix, isValidAddress as isValidAddressFunc } from 'ethereumjs-util'
 import { checkExistingAddresses } from '../../helpers/utils/util'
 import { tokenInfoGetter } from '../../helpers/utils/token-util'
 import { CONFIRM_ADD_TOKEN_ROUTE } from '../../helpers/constants/routes'
@@ -150,8 +150,8 @@ class AddToken extends Component {
       autoFilled: false,
     })
 
-    const isValidAddress = ethUtil.isValidAddress(customAddress)
-    const standardAddress = ethUtil.addHexPrefix(customAddress).toLowerCase()
+    const isValidAddress = isValidAddressFunc(customAddress)
+    const standardAddress = addHexPrefix(customAddress).toLowerCase()
 
     switch (true) {
       case !isValidAddress:

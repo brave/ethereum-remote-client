@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import {
   addToAddressBook,
   clearSend,
@@ -112,7 +112,7 @@ function mapDispatchToProps (dispatch) {
     },
 
     addToAddressBookIfNew: (newAddress, toAccounts, nickname = '') => {
-      const hexPrefixedAddress = ethUtil.addHexPrefix(newAddress)
+      const hexPrefixedAddress = addHexPrefix(newAddress)
       if (addressIsNew(toAccounts, hexPrefixedAddress)) {
         // TODO: nickname, i.e. addToAddressBook(recipient, nickname)
         dispatch(addToAddressBook(hexPrefixedAddress, nickname))

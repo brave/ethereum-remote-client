@@ -1,6 +1,6 @@
 import EventEmitter from 'events'
 import ObservableStore from 'obs-store'
-import ethUtil from 'ethereumjs-util'
+import { bufferToHex } from 'ethereumjs-util'
 import { ethErrors } from 'eth-json-rpc-errors'
 import createId from './random-id'
 import { MESSAGE_TYPE } from './enums'
@@ -280,6 +280,6 @@ function normalizeMsgData (data) {
     return data
   } else {
     // data is unicode, convert to hex
-    return ethUtil.bufferToHex(Buffer.from(data, 'utf8'))
+    return bufferToHex(Buffer.from(data, 'utf8'))
   }
 }

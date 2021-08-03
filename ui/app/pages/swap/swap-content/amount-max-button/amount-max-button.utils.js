@@ -1,12 +1,12 @@
+import { addHexPrefix } from 'ethereumjs-util'
 import { subtractCurrencies } from '../../../../helpers/utils/conversion-util'
-import ethUtil from 'ethereumjs-util'
 
 export function calcMaxAmount ({ balance, estimatedGasCost, fromAsset }) {
   return fromAsset.address
     ? balance
     : subtractCurrencies(
-      ethUtil.addHexPrefix(balance),
-      ethUtil.addHexPrefix(estimatedGasCost || '0'),
+      addHexPrefix(balance),
+      addHexPrefix(estimatedGasCost || '0'),
       { toNumericBase: 'hex' },
     )
 }

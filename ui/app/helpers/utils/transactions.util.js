@@ -1,4 +1,4 @@
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import MethodRegistry from 'eth-method-registry'
 import abi from 'human-standard-token-abi'
 import abiDecoder from 'abi-decoder'
@@ -102,7 +102,7 @@ export function isConfirmDeployContract (txData = {}) {
  * @returns {string} - The four-byte method signature
  */
 export function getFourBytePrefix (data = '') {
-  const prefixedData = ethUtil.addHexPrefix(data)
+  const prefixedData = addHexPrefix(data)
   const fourBytePrefix = prefixedData.slice(0, 10)
   return fourBytePrefix
 }
@@ -204,7 +204,7 @@ export function sumHexes (...args) {
     })
   })
 
-  return ethUtil.addHexPrefix(total)
+  return addHexPrefix(total)
 }
 
 /**

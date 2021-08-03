@@ -1,10 +1,10 @@
 import ethAbi from 'ethereumjs-abi'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import { TOKEN_TRANSFER_FUNCTION_SIGNATURE } from '../send.constants'
 
 export function addHexPrefixToObjectValues (obj) {
   return Object.keys(obj).reduce((newObj, key) => {
-    return { ...newObj, [key]: ethUtil.addHexPrefix(obj[key]) }
+    return { ...newObj, [key]: addHexPrefix(obj[key]) }
   }, {})
 }
 
@@ -56,7 +56,7 @@ export function constructUpdatedTx ({
 
   if (sendToken) {
     const data = TOKEN_TRANSFER_FUNCTION_SIGNATURE + Array.prototype.map.call(
-      ethAbi.rawEncode(['address', 'uint256'], [to, ethUtil.addHexPrefix(amount)]),
+      ethAbi.rawEncode(['address', 'uint256'], [to, addHexPrefix(amount)]),
       (x) => ('00' + x.toString(16)).slice(-2),
     ).join('')
 

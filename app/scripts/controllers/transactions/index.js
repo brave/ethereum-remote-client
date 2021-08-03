@@ -1,6 +1,6 @@
 import EventEmitter from 'safe-event-emitter'
 import ObservableStore from 'obs-store'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix, bufferToHex, toBuffer, keccak } from 'ethereumjs-util'
 import Transaction from 'ethereumjs-tx'
 import EthQuery from 'ethjs-query'
 import { ethErrors } from 'eth-json-rpc-errors'
@@ -239,7 +239,7 @@ export default class TransactionController extends EventEmitter {
 
     // ensure value
     txMeta.txParams.value = txMeta.txParams.value
-      ? ethUtil.addHexPrefix(txMeta.txParams.value)
+      ? addHexPrefix(txMeta.txParams.value)
       : '0x0'
 
     this.addTx(txMeta)
@@ -295,7 +295,7 @@ export default class TransactionController extends EventEmitter {
     }
     const gasPrice = await this.query.gasPrice()
 
-    return ethUtil.addHexPrefix(gasPrice.toString(16))
+    return addHexPrefix(gasPrice.toString(16))
   }
 
   /**
@@ -329,7 +329,7 @@ export default class TransactionController extends EventEmitter {
     const { blockGasLimit, estimatedGasHex, simulationFails } = await this.txGasUtil.analyzeGasUsage(txMeta)
 
     // add additional gas buffer to our estimation for safety
-    const gasLimit = this.txGasUtil.addGasBuffer(ethUtil.addHexPrefix(estimatedGasHex), blockGasLimit)
+    const gasLimit = this.txGasUtil.addGasBuffer(addHexPrefix(estimatedGasHex), blockGasLimit)
     return { gasLimit, simulationFails }
   }
 
@@ -456,7 +456,7 @@ export default class TransactionController extends EventEmitter {
       const nonce = txMeta.lastGasPrice ? txMeta.txParams.nonce : nonceLock.nextNonce
       const customOrNonce = (customNonceValue === 0) ? customNonceValue : customNonceValue || nonce
 
-      txMeta.txParams.nonce = ethUtil.addHexPrefix(customOrNonce.toString(16))
+      txMeta.txParams.nonce = addHexPrefix(customOrNonce.toString(16))
       // add nonce debugging information to txMeta
       txMeta.nonceDetails = nonceLock.nonceDetails
       if (customNonceValue) {
@@ -503,15 +503,15 @@ export default class TransactionController extends EventEmitter {
 
     // add r,s,v values for provider request purposes see createMetamaskMiddleware
     // and JSON rpc standard for further explanation
-    txMeta.r = ethUtil.bufferToHex(ethTx.r)
-    txMeta.s = ethUtil.bufferToHex(ethTx.s)
-    txMeta.v = ethUtil.bufferToHex(ethTx.v)
+    txMeta.r = bufferToHex(ethTx.r)
+    txMeta.s = bufferToHex(ethTx.s)
+    txMeta.v = bufferToHex(ethTx.v)
 
     this.txStateManager.updateTx(txMeta, 'transactions#signTransaction: add r, s, v values')
 
     // set state to signed
     this.txStateManager.setTxStatusSigned(txMeta.id)
-    const rawTx = ethUtil.bufferToHex(ethTx.serialize())
+    const rawTx = bufferToHex(ethTx.serialize())
     return rawTx
   }
 
@@ -530,8 +530,9 @@ export default class TransactionController extends EventEmitter {
       txHash = await this.query.sendRawTransaction(rawTx)
     } catch (error) {
       if (error.message.toLowerCase().includes('known transaction')) {
-        txHash = ethUtil.sha3(ethUtil.addHexPrefix(rawTx)).toString('hex')
-        txHash = ethUtil.addHexPrefix(txHash)
+        const rawTxBuffer = toBuffer(addHexPrefix(rawTx))
+        const txHashBuffer = keccak(rawTxBuffer)
+        txHash = addHexPrefix(txHashBuffer.toString('hex'))
       } else {
         throw error
       }

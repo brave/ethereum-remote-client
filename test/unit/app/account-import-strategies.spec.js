@@ -1,5 +1,5 @@
 import assert from 'assert'
-import ethUtil from 'ethereumjs-util'
+import { stripHexPrefix } from 'ethereumjs-util'
 import accountImporter from '../../../app/scripts/account-import-strategies/index'
 
 describe('Account Import Strategies', function () {
@@ -9,7 +9,7 @@ describe('Account Import Strategies', function () {
   describe('private key import', function () {
     it('imports a private key and strips 0x prefix', async function () {
       const importPrivKey = await accountImporter.importAccount('Private Key', [ privkey ])
-      assert.equal(importPrivKey, ethUtil.stripHexPrefix(privkey))
+      assert.equal(importPrivKey, stripHexPrefix(privkey))
     })
 
     it('throws an error for empty string private key', async function () {

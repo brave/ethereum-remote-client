@@ -1,7 +1,7 @@
 import ObservableStore from 'obs-store'
 import log from 'loglevel'
 import { normalize as normalizeAddress } from 'eth-sig-util'
-import ethUtil from 'ethereumjs-util'
+import { toChecksumAddress } from 'ethereumjs-util'
 
 /* eslint-disable accessor-pairs */
 
@@ -37,7 +37,7 @@ export default class TokenRatesController {
         const response = await window.fetch(`https://api.coingecko.com/api/v3/simple/token_price/ethereum?${query}`)
         const prices = await response.json()
         this._tokens.forEach((token) => {
-          const price = prices[token.address.toLowerCase()] || prices[ethUtil.toChecksumAddress(token.address)]
+          const price = prices[token.address.toLowerCase()] || prices[toChecksumAddress(token.address)]
           contractExchangeRates[normalizeAddress(token.address)] = price ? price[nativeCurrency] : 0
         })
       } catch (error) {

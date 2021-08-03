@@ -1,6 +1,6 @@
 /* eslint camelcase: 0 */
 
-import ethUtil from 'ethereumjs-util'
+import { bufferToHex, keccak } from 'ethereumjs-util'
 
 const inDevelopment = process.env.METAMASK_DEBUG || process.env.IN_TEST
 
@@ -169,7 +169,7 @@ function composeUrl (config) {
   const url = currentPath ? `&url=${encodeURIComponent(`${METAMETRICS_TRACKING_URL}${currentPath}`)}` : ''
   const _id = metaMetricsId && !excludeMetaMetricsId ? `&_id=${metaMetricsId.slice(2, 18)}` : ''
   const rand = `&rand=${String(Math.random()).slice(2)}`
-  const pv_id = currentPath ? `&pv_id=${ethUtil.bufferToHex(ethUtil.sha3(currentPath)).slice(2, 8)}` : ''
+  const pv_id = currentPath ? `&pv_id=${bufferToHex(keccak(currentPath)).slice(2, 8)}` : ''
   const uid = metaMetricsId && !excludeMetaMetricsId
     ? `&uid=${metaMetricsId.slice(2, 18)}`
     : excludeMetaMetricsId

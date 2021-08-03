@@ -1,4 +1,4 @@
-import ethUtil from 'ethereumjs-util'
+import { toChecksumAddress } from 'ethereumjs-util'
 import ObservableStore from 'obs-store'
 import punycode from 'punycode'
 import log from 'loglevel'
@@ -39,7 +39,7 @@ export default class EnsController {
   }
 
   reverseResolveAddress (address) {
-    return this._reverseResolveAddress(ethUtil.toChecksumAddress(address))
+    return this._reverseResolveAddress(toChecksumAddress(address))
   }
 
   async _reverseResolveAddress (address) {
@@ -72,7 +72,7 @@ export default class EnsController {
       return undefined
     }
 
-    if (ethUtil.toChecksumAddress(registeredAddress) !== address) {
+    if (toChecksumAddress(registeredAddress) !== address) {
       return undefined
     }
 

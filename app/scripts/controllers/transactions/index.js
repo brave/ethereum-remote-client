@@ -1,7 +1,8 @@
 import EventEmitter from 'safe-event-emitter'
 import ObservableStore from 'obs-store'
 import { addHexPrefix, bufferToHex, toBuffer, keccak } from 'ethereumjs-util'
-import Transaction from 'ethereumjs-tx'
+import Common, { Chain, Hardfork } from '@ethereumjs/common'
+import { TransactionFactory } from '@ethereumjs/tx'
 import EthQuery from 'ethjs-query'
 import { ethErrors } from 'eth-json-rpc-errors'
 import abi from 'human-standard-token-abi'
@@ -35,6 +36,7 @@ import {
 
 import { hexToBn, bnToHex, BnMultiplyByFraction } from '../../lib/util'
 import { TRANSACTION_NO_CONTRACT_ERROR_KEY } from '../../../../ui/app/helpers/constants/error-keys'
+import { NETWORK_TYPE_TO_ID_MAP } from '../network/enums'
 
 const SIMPLE_GAS_COST = '0x5208' // Hex for 21000, cost of a simple send.
 const MAX_MEMSTORE_TX_LIST_SIZE = 100 // Number of transactions (by unique nonces) to keep in memory
@@ -60,7 +62,7 @@ const MAX_MEMSTORE_TX_LIST_SIZE = 100 // Number of transactions (by unique nonce
   @param {Object}  opts.networkStore - an observable store for network number
   @param {Object}  opts.blockTracker - An instance of eth-blocktracker
   @param {Object}  opts.provider - A network provider.
-  @param {Function}  opts.signTransaction - function the signs an ethereumjs-tx
+  @param {Function}  opts.signTransaction - function the signs an @ethereumjs/tx
   @param {Object}  opts.getPermittedAccounts - get accounts that an origin has permissions for
   @param {Function}  opts.signTransaction - ethTx signer that returns a rawTx
   @param {number}  [opts.txHistoryLimit] - number *optional* for limiting how many transactions are in state
@@ -73,6 +75,7 @@ export default class TransactionController extends EventEmitter {
     this.networkStore = opts.networkStore || new ObservableStore({})
     this.preferencesStore = opts.preferencesStore || new ObservableStore({})
     this.provider = opts.provider
+    this.getProviderConfig = opts.getProviderConfig
     this.getPermittedAccounts = opts.getPermittedAccounts
     this.blockTracker = opts.blockTracker
     this.signEthTx = opts.signTransaction
@@ -139,6 +142,38 @@ export default class TransactionController extends EventEmitter {
     } else {
       return integerChainId
     }
+  }
+
+  /**
+   * Gets a configuration object compatible with @ethereumjs/tx to be used
+   * while creating unsigned transactions. It works for both default networks
+   * as well as EVM-compatible chains.
+   *
+   * @returns {Common} The configuration object to be passed to TransactionFactory.
+   */
+  makeConfig () {
+    const { type: networkType, chainId: configChainId, nickname: name } = this.getProviderConfig()
+
+    // TODO (@onyb): Do not hardcode the hardfork.
+    const hardfork = Hardfork.Berlin
+
+    // Not a custom RPC network. Obtain the canonical chain ID corresponding to
+    // the network type, and return the Common configuration object.
+    if (networkType !== 'rpc') {
+      const { canonicalChainId: chain } = NETWORK_TYPE_TO_ID_MAP[networkType]
+      return new Common({ chain, hardfork })
+    }
+
+    // Handle custom EVM-compatible chains.
+    return Common.forCustomChain(
+      Chain.Mainnet,
+      {
+        name,
+        chainId: parseInt(configChainId, 16),
+        networkId: parseInt(this.networkStore.getState()),
+      },
+      hardfork,
+    )
   }
 
   /**
@@ -495,24 +530,31 @@ export default class TransactionController extends EventEmitter {
     const txMeta = this.txStateManager.getTx(txId)
     // add network/chain id
     const chainId = this.getChainId()
-    const txParams = Object.assign({}, txMeta.txParams, { chainId })
-    // sign tx
+    const txParams = {
+      ...txMeta.txParams,
+      chainId,
+      gasLimit: txMeta.txParams.gas,
+    }
+
+    // prepare unsigned tx
+    const common = this.makeConfig()
     const fromAddress = txParams.from
-    const ethTx = new Transaction(txParams)
-    await this.signEthTx(ethTx, fromAddress)
+    const unsignedEthTx = TransactionFactory.fromTxData(txParams, { common })
+
+    // sign tx
+    const signedEthTx = await this.signEthTx(unsignedEthTx, fromAddress)
 
     // add r,s,v values for provider request purposes see createMetamaskMiddleware
     // and JSON rpc standard for further explanation
-    txMeta.r = bufferToHex(ethTx.r)
-    txMeta.s = bufferToHex(ethTx.s)
-    txMeta.v = bufferToHex(ethTx.v)
+    txMeta.r = bufferToHex(signedEthTx.r)
+    txMeta.s = bufferToHex(signedEthTx.s)
+    txMeta.v = bufferToHex(signedEthTx.v)
 
     this.txStateManager.updateTx(txMeta, 'transactions#signTransaction: add r, s, v values')
 
     // set state to signed
     this.txStateManager.setTxStatusSigned(txMeta.id)
-    const rawTx = bufferToHex(ethTx.serialize())
-    return rawTx
+    return bufferToHex(signedEthTx.serialize())
   }
 
   /**

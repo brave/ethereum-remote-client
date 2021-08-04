@@ -1,3 +1,5 @@
+import { Chain } from '@ethereumjs/common'
+
 export const ROPSTEN = 'ropsten'
 export const RINKEBY = 'rinkeby'
 export const KOVAN = 'kovan'
@@ -32,11 +34,31 @@ export const INFURA_PROVIDER_TYPES = [
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {
-  [ROPSTEN]: { networkId: ROPSTEN_NETWORK_ID, chainId: ROPSTEN_CHAIN_ID },
-  [RINKEBY]: { networkId: RINKEBY_NETWORK_ID, chainId: RINKEBY_CHAIN_ID },
-  [KOVAN]: { networkId: KOVAN_NETWORK_ID, chainId: KOVAN_CHAIN_ID },
-  [GOERLI]: { networkId: GOERLI_NETWORK_ID, chainId: GOERLI_CHAIN_ID },
-  [MAINNET]: { networkId: MAINNET_NETWORK_ID, chainId: MAINNET_CHAIN_ID },
+  [ROPSTEN]: {
+    networkId: ROPSTEN_NETWORK_ID,
+    chainId: ROPSTEN_CHAIN_ID,
+    canonicalChainId: Chain.Ropsten,
+  },
+  [RINKEBY]: {
+    networkId: RINKEBY_NETWORK_ID,
+    chainId: RINKEBY_CHAIN_ID,
+    canonicalChainId: Chain.Rinkeby,
+  },
+  [KOVAN]: {
+    networkId: KOVAN_NETWORK_ID,
+    chainId: KOVAN_CHAIN_ID,
+    canonicalChainId: Chain.Kovan,
+  },
+  [GOERLI]: {
+    networkId: GOERLI_NETWORK_ID,
+    chainId: GOERLI_CHAIN_ID,
+    canonicalChainId: Chain.Goerli,
+  },
+  [MAINNET]: {
+    networkId: MAINNET_NETWORK_ID,
+    chainId: MAINNET_CHAIN_ID,
+    canonicalChainId: Chain.Mainnet,
+  },
 }
 
 export const NETWORK_TO_NAME_MAP = {

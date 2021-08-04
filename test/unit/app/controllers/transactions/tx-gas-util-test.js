@@ -1,5 +1,7 @@
 import { strict as assert } from 'assert'
-import Transaction from 'ethereumjs-tx'
+import { TransactionFactory } from '@ethereumjs/tx'
+import Common, { Chain } from '@ethereumjs/common'
+
 import { hexToBn, bnToHex } from '../../../../../app/scripts/lib/util'
 import TxUtils from '../../../../../app/scripts/controllers/transactions/tx-gas-utils'
 
@@ -24,10 +26,12 @@ describe('txUtils', function () {
         gasPrice: '0x199c82cc00',
         data: '0x',
         nonce: '0x3',
-        chainId: 42,
+        chainId: Chain.Kovan,
       }
-      const ethTx = new Transaction(txParams)
-      assert.equal(ethTx.getChainId(), 42, 'chainId is set from tx params')
+
+      const common = new Common({ chain: Chain.Kovan })
+      const ethTx = TransactionFactory.fromTxData(txParams, { common })
+      assert.equal(ethTx.common.chainIdBN().toNumber(), Chain.Kovan, 'chainId is set from tx params')
     })
   })
 

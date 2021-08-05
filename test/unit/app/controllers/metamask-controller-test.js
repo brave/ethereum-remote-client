@@ -153,8 +153,8 @@ describe('MetaMaskController', function () {
 
       it('adds private key to keyrings in KeyringController' + suffix, async function () {
         const simpleKeyrings = metamaskController.keyringController.getKeyringsByType('Simple Key Pair')
-        const privKeyBuffer = simpleKeyrings[0].wallets[0]._privKey
-        const pubKeyBuffer = simpleKeyrings[0].wallets[0]._pubKey
+        const privKeyBuffer = simpleKeyrings[0].wallets[0].privateKey
+        const pubKeyBuffer = simpleKeyrings[0].wallets[0].publicKey
         const addressBuffer = pubToAddress(pubKeyBuffer)
         const privKey = bufferToHex(privKeyBuffer)
         const pubKey = bufferToHex(addressBuffer)

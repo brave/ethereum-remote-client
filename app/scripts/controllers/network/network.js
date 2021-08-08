@@ -18,6 +18,7 @@ import {
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
   NETWORK_TYPE_TO_ID_MAP,
+  NetworkCapabilities,
 } from './enums'
 
 const env = process.env.METAMASK_ENV
@@ -43,6 +44,10 @@ if (defaultProviderChainId) {
   defaultProviderConfig.chainId = defaultProviderChainId
 }
 
+const defaultNetworkCapabilities = {
+  [NetworkCapabilities.EIP1559]: false,
+}
+
 export default class NetworkController extends EventEmitter {
 
   constructor (opts = {}) {
@@ -53,9 +58,16 @@ export default class NetworkController extends EventEmitter {
       opts.provider || { ...defaultProviderConfig },
     )
     this.networkStore = new ObservableStore('loading')
+
+    // Keep track of the EVM capabilities active for the current network.
+    this.networkCapabilities = new ObservableStore({
+      ...defaultNetworkCapabilities,
+    })
+
     this.store = new ComposedStore({
       provider: this.providerStore,
       network: this.networkStore,
+      networkCapabilities: this.networkCapabilities,
     })
 
     // provider and block tracker
@@ -95,6 +107,12 @@ export default class NetworkController extends EventEmitter {
   }
 
   setNetworkState (network) {
+    // Set network capabilities whenever the network is switched. We always
+    // revert to default if the network is loading.
+    network === 'loading'
+      ? this.networkCapabilities.putState({ ...defaultNetworkCapabilities })
+      : this.setNetworkCapabilities()
+
     this.networkStore.putState(network)
   }
 
@@ -167,6 +185,70 @@ export default class NetworkController extends EventEmitter {
 
   getProviderConfig () {
     return this.providerStore.getState()
+  }
+
+  //
+  // Methods to detect network capabilities
+  //
+
+  /**
+   * Get the headers of the latest block for the current network.
+   *
+   * @returns {Promise<Object>} Returns a promise of the latest block header.
+   */
+  getLatestBlock () {
+    const { provider } = this.getProviderAndBlockTracker()
+    const ethQuery = new EthQuery(provider)
+
+    return new Promise((resolve, reject) => {
+      ethQuery.sendAsync(
+        {
+          method: 'eth_getBlockByNumber',
+          params: [
+            'latest', // tag representing latest block number
+            false, // boolean flag to prevent returning full transaction objects
+          ],
+        },
+        (err, block) => {
+          if (err) {
+            return reject(err)
+          }
+          return resolve(block)
+        },
+      )
+    })
+  }
+
+  /**
+   * Method to detect network capabilities and update the networkCapabilities
+   * store.
+   */
+  async setNetworkCapabilities () {
+    // Avoid querying for network capabilities if already set.
+    const { [NetworkCapabilities.EIP1559]: hasEIP1559 } = this.networkCapabilities.getState()
+    if (hasEIP1559) {
+      return
+    }
+
+    const latestBlock = await this.getLatestBlock()
+
+    // Detect if network supports EIP-1559.
+    //
+    // We consider EIP-1559 activated if baseFeePerGas is available in the
+    // block headers.
+    const { baseFeePerGas } = latestBlock
+    this.networkCapabilities.updateState({
+      [NetworkCapabilities.EIP1559]: baseFeePerGas !== undefined,
+    })
+  }
+
+  getNetworkCapabilities () {
+    return this.networkCapabilities.getState()
+  }
+
+  hasNetworkCapability (networkCapability) {
+    const { [networkCapability]: value } = this.networkCapabilities.getState()
+    return value === true
   }
 
   //

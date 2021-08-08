@@ -36,6 +36,9 @@ describe('DetectTokensController', function () {
     ])
     network.initializeProvider(networkControllerProviderConfig)
 
+    sandbox
+      .stub(network, 'getLatestBlock')
+      .callsFake(() => Promise.resolve({}))
   })
 
   after(function () {

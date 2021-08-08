@@ -3,10 +3,13 @@ import sinon from 'sinon'
 import nock from 'nock'
 import NetworkController from '../../../../../app/scripts/controllers/network'
 import { getNetworkDisplayName } from '../../../../../app/scripts/controllers/network/util'
+import { NetworkCapabilities } from '../../../../../app/scripts/controllers/network/enums'
 
 describe('NetworkController', function () {
   describe('controller', function () {
     let networkController
+    let getLatestBlock
+
     const noop = () => {}
     const networkControllerProviderConfig = {
       getAccounts: noop,
@@ -19,10 +22,15 @@ describe('NetworkController', function () {
         .reply(200)
 
       networkController = new NetworkController()
+
+      getLatestBlock = sinon
+        .stub(networkController, 'getLatestBlock')
+        .callsFake(() => Promise.resolve({}))
     })
 
     afterEach(function () {
       nock.cleanAll()
+      getLatestBlock.reset()
     })
 
     describe('#provider', function () {
@@ -47,6 +55,8 @@ describe('NetworkController', function () {
         networkController.setNetworkState('1')
         const networkState = networkController.getNetworkState()
         assert.equal(networkState, '1', 'network is 1')
+
+        assert.equal(getLatestBlock.calledOnce, true)
       })
     })
 
@@ -72,6 +82,60 @@ describe('NetworkController', function () {
           spy.calledOnceWithExactly('loading'),
           'should have called with "loading" first',
         )
+
+        assert.equal(getLatestBlock.calledOnce, false)
+      })
+    })
+
+    describe('network capabilities', function () {
+      it('should not have EIP1559 capability on initialization', function () {
+        networkController.initializeProvider(networkControllerProviderConfig)
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), false)
+      })
+
+      it('should not have EIP1559 capability if baseFeePerGas is not in block header', function () {
+        networkController.initializeProvider(networkControllerProviderConfig)
+        getLatestBlock.callsFake(() =>
+          Promise.resolve({ someHeader: 'foo' }),
+        )
+        networkController.setNetworkCapabilities()
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), false)
+      })
+
+      it('should have EIP1559 capability if baseFeePerGas is in block header', async function () {
+        networkController.initializeProvider(networkControllerProviderConfig)
+        getLatestBlock.callsFake(() =>
+          Promise.resolve({ baseFeePerGas: 'foo' }),
+        )
+        await networkController.setNetworkCapabilities()
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), true)
+      })
+
+      it('should cache EIP1559 capability', async function () {
+        networkController.initializeProvider(networkControllerProviderConfig)
+        getLatestBlock.callsFake(() =>
+          Promise.resolve({ baseFeePerGas: 'foo' }),
+        )
+
+        // Set network capabilities twice
+        await networkController.setNetworkCapabilities()
+        await networkController.setNetworkCapabilities()
+
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), true)
+        assert.equal(getLatestBlock.calledOnce, true)
+      })
+
+      it('should clear network capabilities when switching networks', async function () {
+        networkController.initializeProvider(networkControllerProviderConfig)
+        getLatestBlock.callsFake(() =>
+          Promise.resolve({ baseFeePerGas: 'foo' }),
+        )
+
+        await networkController.setNetworkState('mainnet')
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), true)
+
+        await networkController.setNetworkState('loading')
+        assert.equal(networkController.hasNetworkCapability(NetworkCapabilities.EIP1559), false)
       })
     })
   })

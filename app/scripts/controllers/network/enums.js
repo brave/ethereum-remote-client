@@ -80,3 +80,8 @@ export const NETWORK_TO_NAME_MAP = {
   [GOERLI_CHAIN_ID]: GOERLI_DISPLAY_NAME,
   [MAINNET_CHAIN_ID]: MAINNET_DISPLAY_NAME,
 }
+
+
+export const NetworkCapabilities = {
+  EIP1559: 'EIP1559',
+}

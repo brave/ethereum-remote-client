@@ -310,24 +310,43 @@ export default class TransactionController extends EventEmitter {
     if (simulationFails) {
       txMeta.simulationFails = simulationFails
     }
-    if (defaultGasPrice && !txMeta.txParams.gasPrice) {
+
+    // Consider transaction parameters to be EIP-1559 compliant only if both
+    // the maxPriorityFeePerGas and maxFeePerGas fields are set.
+    const hasEIP1559GasFields = txMeta.txParams.maxPriorityFeePerGas &&
+      txMeta.txParams.maxFeePerGas
+
+    // Revert to legacy gasPrice field, if neither legacy nor EIP-1559 gas
+    // parameters are explicitly set.
+    if (defaultGasPrice && !txMeta.txParams.gasPrice && !hasEIP1559GasFields) {
       txMeta.txParams.gasPrice = defaultGasPrice
     }
+
     if (defaultGasLimit && !txMeta.txParams.gas) {
       txMeta.txParams.gas = defaultGasLimit
     }
+
     return txMeta
   }
 
   /**
-   * Gets default gas price, or returns `undefined` if gas price is already set
+   * Gets default gas price, or returns `undefined` if gas price / priority fee
+   * is already set.
+   *
    * @param {Object} txMeta - The txMeta object
-   * @returns {Promise<string>} The default gas price
+   * @returns {Promise<string | undefined>} The default gas price
    */
   async _getDefaultGasPrice (txMeta) {
+    // Legacy fee-per-gas parameters.
     if (txMeta.txParams.gasPrice) {
       return
     }
+
+    // EIP-1559 fee-per-gas parameters.
+    if (txMeta.txParams.maxFeePerGas && txMeta.txParams.maxPriorityFeePerGas) {
+      return
+    }
+
     const gasPrice = await this.query.gasPrice()
 
     return addHexPrefix(gasPrice.toString(16))

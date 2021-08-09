@@ -237,7 +237,8 @@ export default class IncomingTransactionsController {
   _normalizeTxFromEtherscan (txMeta, currentNetworkID) {
     const time = parseInt(txMeta.timeStamp, 10) * 1000
     const status = txMeta.isError === '0' ? 'confirmed' : 'failed'
-    return {
+
+    const tx = {
       blockNumber: txMeta.blockNumber,
       id: createId(),
       metamaskNetworkId: currentNetworkID,
@@ -246,7 +247,6 @@ export default class IncomingTransactionsController {
       txParams: {
         from: txMeta.from,
         gas: bnToHex(new BN(txMeta.gas)),
-        gasPrice: bnToHex(new BN(txMeta.gasPrice)),
         nonce: bnToHex(new BN(txMeta.nonce)),
         to: txMeta.to,
         value: bnToHex(new BN(txMeta.value)),
@@ -254,6 +254,20 @@ export default class IncomingTransactionsController {
       hash: txMeta.hash,
       transactionCategory: 'incoming',
     }
+
+    if (txMeta.gasPrice) {
+      tx.txParams.gasPrice = bnToHex(new BN(txMeta.gasPrice))
+    }
+
+    if (txMeta.maxPriorityFeePerGas) {
+      tx.txParams.maxPriorityFeePerGas = bnToHex(new BN(txMeta.maxPriorityFeePerGas))
+    }
+
+    if (txMeta.maxFeePerGas) {
+      tx.txParams.maxFeePerGas = bnToHex(new BN(txMeta.maxFeePerGas))
+    }
+
+    return tx
   }
 }
 

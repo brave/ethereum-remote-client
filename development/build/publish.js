@@ -10,6 +10,7 @@ function createBravePublishTasks () {
         delete json.browserify
         json.devDependencies = {}
         json.dependencies = {}
+        json.engines = {}
         json.scripts = {}
         return json
       }))

@@ -37,6 +37,7 @@ import {
 import { hexToBn, bnToHex, BnMultiplyByFraction } from '../../lib/util'
 import { TRANSACTION_NO_CONTRACT_ERROR_KEY } from '../../../../ui/app/helpers/constants/error-keys'
 import { NETWORK_TYPE_TO_ID_MAP } from '../network/enums'
+import { isEIP1559Transaction } from '../../../../ui/app/helpers/utils/transactions.util'
 
 const SIMPLE_GAS_COST = '0x5208' // Hex for 21000, cost of a simple send.
 const MAX_MEMSTORE_TX_LIST_SIZE = 100 // Number of transactions (by unique nonces) to keep in memory
@@ -387,30 +388,70 @@ export default class TransactionController extends EventEmitter {
     return { gasLimit, simulationFails }
   }
 
+  generateGasTxParams (txMeta, customGasParams = {}) {
+    const incrementValue = (value) =>
+      bnToHex(BnMultiplyByFraction(hexToBn(value), 11, 10))
+
+    const { txParams } = txMeta
+    let previousGasTxParams = {
+      gas: txParams.gas,
+    }
+
+    let newGasTxParams = {
+      gas: customGasParams?.gasLimit ?? txParams.gas ?? SIMPLE_GAS_COST,
+    }
+
+    if (isEIP1559Transaction(txMeta)) {
+      previousGasTxParams = {
+        ...previousGasTxParams,
+        maxFeePerGas: txParams.maxFeePerGas,
+        maxPriorityFeePerGas: txParams.maxPriorityFeePerGas,
+      }
+
+      newGasTxParams = {
+        ...newGasTxParams,
+        maxFeePerGas: customGasParams.maxFeePerGas || incrementValue(txParams.maxFeePerGas),
+        maxPriorityFeePerGas: customGasParams.maxPriorityFeePerGas || incrementValue(txParams.maxPriorityFeePerGas),
+      }
+    } else {
+      previousGasTxParams = {
+        ...previousGasTxParams,
+        gasPrice: txParams.gasPrice,
+      }
+
+      newGasTxParams = {
+        ...newGasTxParams,
+        gasPrice: customGasParams?.gasPrice || incrementValue(txParams.gasPrice),
+      }
+    }
+
+    return { previousGasTxParams, newGasTxParams }
+  }
+
   /**
    * Creates a new approved transaction to attempt to cancel a previously submitted transaction. The
    * new transaction contains the same nonce as the previous, is a basic ETH transfer of 0x value to
    * the sender's address, and has a higher gasPrice than that of the previous transaction.
    * @param {number} originalTxId - the id of the txMeta that you want to attempt to cancel
-   * @param {string} [customGasPrice] - the hex value to use for the cancel transaction
-   * @returns {txMeta}
+   * @param {Object} [customGasParams] - object with gas pricing fields to use for the cancel transaction
+   * @returns {Object} [txMeta] The updated txMeta object
    */
-  async createCancelTransaction (originalTxId, customGasPrice) {
+  async createCancelTransaction (originalTxId, customGasParams) {
     const originalTxMeta = this.txStateManager.getTx(originalTxId)
-    const { txParams } = originalTxMeta
-    const { gasPrice: lastGasPrice, from, nonce } = txParams
+    const { txParams: { from, nonce } } = originalTxMeta
 
-    const newGasPrice = customGasPrice || bnToHex(BnMultiplyByFraction(hexToBn(lastGasPrice), 11, 10))
+    const { previousGasTxParams, newGasTxParams } = this.generateGasTxParams(originalTxMeta, customGasParams)
+
     const newTxMeta = this.txStateManager.generateTxMeta({
       txParams: {
+        ...newGasTxParams,
         from,
         to: from,
         nonce,
-        gas: '0x5208',
         value: '0x0',
-        gasPrice: newGasPrice,
+        gas: SIMPLE_GAS_COST,
       },
-      lastGasPrice,
+      previousGasTxParams,
       loadingDefaults: false,
       status: TRANSACTION_STATUS_APPROVED,
       type: TRANSACTION_TYPE_CANCEL,
@@ -427,31 +468,25 @@ export default class TransactionController extends EventEmitter {
    * the same gas limit and a 10% higher gas price, though it is possible to set a custom value for
    * each instead.
    * @param {number} originalTxId - the id of the txMeta that you want to speed up
-   * @param {string} [customGasPrice] - The new custom gas price, in hex
-   * @param {string} [customGasLimit] - The new custom gas limt, in hex
-   * @returns {txMeta}
+   * @param {Object} [customGasParams] - Object containing the new gas pricing fields
+   * @returns {Object} [txMeta] Object containing the updated txMeta.
    */
-  async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
+  async createSpeedUpTransaction (originalTxId, customGasParams) {
     const originalTxMeta = this.txStateManager.getTx(originalTxId)
     const { txParams } = originalTxMeta
-    const { gasPrice: lastGasPrice } = txParams
 
-    const newGasPrice = customGasPrice || bnToHex(BnMultiplyByFraction(hexToBn(lastGasPrice), 11, 10))
+    const { previousGasTxParams, newGasTxParams } = this.generateGasTxParams(originalTxMeta, customGasParams)
 
     const newTxMeta = this.txStateManager.generateTxMeta({
       txParams: {
         ...txParams,
-        gasPrice: newGasPrice,
+        ...newGasTxParams,
       },
-      lastGasPrice,
+      previousGasTxParams,
       loadingDefaults: false,
       status: TRANSACTION_STATUS_APPROVED,
       type: TRANSACTION_TYPE_RETRY,
     })
-
-    if (customGasLimit) {
-      newTxMeta.txParams.gas = customGasLimit
-    }
 
     this.addTx(newTxMeta)
     await this.approveTransaction(newTxMeta.id)
@@ -505,9 +540,9 @@ export default class TransactionController extends EventEmitter {
       customNonceValue = Number(customNonceValue)
       nonceLock = await this.nonceTracker.getNonceLock(fromAddress)
       // add nonce to txParams
-      // if txMeta has lastGasPrice then it is a retry at same nonce with higher
+      // if txMeta has previousGasTxParams then it is a retry at same nonce with higher
       // gas price transaction and their for the nonce should not be calculated
-      const nonce = txMeta.lastGasPrice ? txMeta.txParams.nonce : nonceLock.nextNonce
+      const nonce = txMeta.previousGasTxParams ? txMeta.txParams.nonce : nonceLock.nextNonce
       const customOrNonce = (customNonceValue === 0) ? customNonceValue : customNonceValue || nonce
 
       txMeta.txParams.nonce = addHexPrefix(customOrNonce.toString(16))

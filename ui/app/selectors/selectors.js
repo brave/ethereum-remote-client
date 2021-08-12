@@ -7,6 +7,7 @@ import {
   getAccountByAddress,
 } from '../helpers/utils/util'
 import { getPermissionsRequestCount } from './permissions'
+import { NetworkCapabilities } from '../../../app/scripts/controllers/network/enums'
 
 export function getNetworkIdentifier (state) {
   const { metamask: { provider: { type, nickname, rpcUrl } } } = state
@@ -341,4 +342,16 @@ export function getIpfsGateway (state) {
 
 export function getLoadingIndication (state) {
   return state.appState.isLoading
+}
+
+export function isEIP1559Active (state) {
+  const isEIP1559Network =
+    state.metamask.networkCapabilities[NetworkCapabilities.EIP1559] === true
+
+
+  // Hardware wallets do not support EIP-1559 yet.
+  const isCurrentKeyringHardwareWallet = getAccountType(state) === 'hardware'
+  const isEIP1559Account = !isCurrentKeyringHardwareWallet
+
+  return isEIP1559Network && isEIP1559Account
 }

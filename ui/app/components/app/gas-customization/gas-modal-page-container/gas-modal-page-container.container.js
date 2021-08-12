@@ -190,20 +190,24 @@ const mapDispatchToProps = (dispatch) => {
     hideModal: () => dispatch(hideModal()),
     updateCustomGasPrice,
     updateCustomGasLimit: (newLimit) => dispatch(setCustomGasLimit(addHexPrefix(newLimit))),
-    setGasData: (newLimit, newPrice) => {
-      dispatch(setGasLimit(newLimit))
-      dispatch(setGasPrice(newPrice))
+    setGasData: (gasParams) => {
+      const { gasLimit, gasPrice } = gasParams
+
+      dispatch(setGasLimit(gasLimit))
+      dispatch(setGasPrice(gasPrice))
     },
-    updateConfirmTxGasAndCalculate: (gasLimit, gasPrice, updatedTx) => {
+    updateConfirmTxGasAndCalculate: (gasParams, updatedTx) => {
+      const { gasLimit, gasPrice } = gasParams
+
       updateCustomGasPrice(gasPrice)
       dispatch(setCustomGasLimit(addHexPrefix(gasLimit.toString(16))))
       return dispatch(updateTransaction(updatedTx))
     },
-    createRetryTransaction: (txId, gasPrice, gasLimit) => {
-      return dispatch(createRetryTransaction(txId, gasPrice, gasLimit))
+    createRetryTransaction: (txId, customGasParams) => {
+      return dispatch(createRetryTransaction(txId, customGasParams))
     },
-    createSpeedUpTransaction: (txId, gasPrice, gasLimit) => {
-      return dispatch(createSpeedUpTransaction(txId, gasPrice, gasLimit))
+    createSpeedUpTransaction: (txId, customGasParams) => {
+      return dispatch(createSpeedUpTransaction(txId, customGasParams))
     },
     hideGasButtonGroup: () => dispatch(hideGasButtonGroup()),
     hideSidebar: () => dispatch(hideSidebar()),
@@ -251,7 +255,9 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...stateProps,
     ...otherDispatchProps,
     ...ownProps,
-    onSubmit: (gasLimit, gasPrice) => {
+    onSubmit: (gasParams = {}) => {
+      const { gasLimit, gasPrice } = gasParams
+
       if (isConfirm) {
         const updatedTx = {
           ...transaction,
@@ -261,18 +267,18 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
             gasPrice,
           },
         }
-        dispatchUpdateConfirmTxGasAndCalculate(gasLimit, gasPrice, updatedTx)
+        dispatchUpdateConfirmTxGasAndCalculate(gasParams, updatedTx)
         dispatchHideModal()
       } else if (isSpeedUp) {
-        dispatchCreateSpeedUpTransaction(txId, gasPrice, gasLimit)
+        dispatchCreateSpeedUpTransaction(txId, gasParams)
         dispatchHideSidebar()
         dispatchCancelAndClose()
       } else if (isRetry) {
-        dispatchCreateRetryTransaction(txId, gasPrice, gasLimit)
+        dispatchCreateRetryTransaction(txId, gasParams)
         dispatchHideSidebar()
         dispatchCancelAndClose()
       } else {
-        dispatchSetGasData(gasLimit, gasPrice)
+        dispatchSetGasData(gasParams)
         dispatchHideGasButtonGroup()
         dispatchCancelAndClose()
       }

@@ -1,4 +1,4 @@
-import { addHexPrefix } from 'ethereumjs-util'
+import { addHexPrefix, isHexString } from 'ethereumjs-util'
 import MethodRegistry from 'eth-method-registry'
 import abi from 'human-standard-token-abi'
 import abiDecoder from 'abi-decoder'
@@ -241,4 +241,18 @@ export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
   }
   const prefix = getEtherscanNetworkPrefix(networkId)
   return `https://${prefix}etherscan.io/tx/${hash}`
+}
+
+
+/**
+ * Returns a boolean result indicating whether a transaction is of type EIP-1559.
+ *
+ * @param {Object} transaction TransactionMeta object.
+ * @returns {boolean} true if transaction is of EIP-1559 format, false otherwise.
+ */
+export function isEIP1559Transaction (transaction) {
+  return (
+    isHexString(transaction?.txParams?.maxFeePerGas) &&
+    isHexString(transaction?.txParams?.maxPriorityFeePerGas)
+  )
 }

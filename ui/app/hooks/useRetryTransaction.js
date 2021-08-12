@@ -4,11 +4,12 @@ import { showSidebar } from '../store/actions'
 import {
   fetchBasicGasAndTimeEstimates,
   fetchGasEstimates,
-  setCustomGasPriceForRetry,
   setCustomGasLimit,
+  setCustomGasPriceForRetry,
 } from '../ducks/gas/gas.duck'
-import { increaseLastGasPrice } from '../helpers/utils/confirm-tx.util'
 import { useMetricEvent } from './useMetricEvent'
+import { isEIP1559Transaction } from '../helpers/utils/transactions.util'
+import { useIncrementedGasFees } from './useIncrementedFees'
 
 
 /**
@@ -18,9 +19,9 @@ import { useMetricEvent } from './useMetricEvent'
  * @return {Function}
  */
 export function useRetryTransaction (transactionGroup) {
-  const { primaryTransaction, initialTransaction } = transactionGroup
-  // Signature requests do not have a txParams, but this hook is called indiscriminately
-  const gasPrice = primaryTransaction.txParams?.gasPrice
+  const { primaryTransaction: transaction } = transactionGroup
+  const customGasParams = useIncrementedGasFees(transactionGroup)
+
   const trackMetricsEvent = useMetricEvent(({
     eventOpts: {
       category: 'Navigation',
@@ -30,22 +31,36 @@ export function useRetryTransaction (transactionGroup) {
   }))
   const dispatch = useDispatch()
 
-  const retryTransaction = useCallback(async (event) => {
+  return useCallback(async (event) => {
     event.stopPropagation()
-
     trackMetricsEvent()
-    const basicEstimates = await dispatch(fetchBasicGasAndTimeEstimates)
-    await dispatch(fetchGasEstimates(basicEstimates.blockTime))
-    const transaction = initialTransaction
-    const increasedGasPrice = increaseLastGasPrice(gasPrice)
-    dispatch(setCustomGasPriceForRetry(increasedGasPrice || transaction.txParams.gasPrice))
-    dispatch(setCustomGasLimit(transaction.txParams.gas))
+
+    if (isEIP1559Transaction(transaction)) {
+      // TODO (@onyb): handle EIP-1559 fee bump logic.
+
+      // Step 1: query eth_feeHistory RPC to fetch the latest estimates
+      // Step 2: obtain the priority fee estimate for the desired block time
+      // Step 3: bump priority fee by 10%
+      // Step 4: update state
+    } else {
+      // Step 1: query ETH Gas Station for latest estimates
+      const basicEstimates = await dispatch(fetchBasicGasAndTimeEstimates)
+
+      // Step 2: obtain the gasPrice estimate for the desired block time
+      await dispatch(fetchGasEstimates(basicEstimates.blockTime))
+
+      // Step 3: bump the previous gasPrice by 10%.
+      const increasedGasPrice = customGasParams.gasPrice
+
+      // Step 4: set the new values of the gasPrice
+      dispatch(setCustomGasPriceForRetry(increasedGasPrice))
+      dispatch(setCustomGasLimit(customGasParams.gasLimit))
+    }
+
     dispatch(showSidebar({
       transitionName: 'sidebar-left',
       type: 'customize-gas',
       props: { transaction },
     }))
-  }, [dispatch, trackMetricsEvent, initialTransaction, gasPrice])
-
-  return retryTransaction
+  }, [dispatch, trackMetricsEvent, transaction, customGasParams])
 }

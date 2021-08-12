@@ -403,11 +403,15 @@ describe('Transaction Controller', function () {
       assert.equal(addTxSpy.callCount, 1)
 
       const addTxArgs = addTxSpy.getCall(0).args[0]
+
       assert.deepEqual(addTxArgs.txParams, expectedTxParams)
 
-      const { lastGasPrice, type } = addTxArgs
-      assert.deepEqual({ lastGasPrice, type }, {
-        lastGasPrice: '0xa',
+      const { previousGasTxParams, type } = addTxArgs
+      assert.deepEqual({ previousGasTxParams, type }, {
+        previousGasTxParams: {
+          gasPrice: '0xa',
+          gas: '0x5209',
+        },
         type: TRANSACTION_TYPE_RETRY,
       })
     })
@@ -425,9 +429,12 @@ describe('Transaction Controller', function () {
 
       assert.deepEqual(result.txParams, expectedTxParams)
 
-      const { lastGasPrice, type } = result
-      assert.deepEqual({ lastGasPrice, type }, {
-        lastGasPrice: '0xa',
+      const { previousGasTxParams, type } = result
+      assert.deepEqual({ previousGasTxParams, type }, {
+        previousGasTxParams: {
+          gasPrice: '0xa',
+          gas: '0x5209',
+        },
         type: TRANSACTION_TYPE_RETRY,
       })
     })

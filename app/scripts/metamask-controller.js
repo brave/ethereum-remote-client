@@ -1297,8 +1297,8 @@ export default class MetamaskController extends EventEmitter {
     return await this.swapsController.quote(...args)
   }
 
-  async createSpeedUpTransaction (originalTxId, customGasPrice, customGasLimit) {
-    await this.txController.createSpeedUpTransaction(originalTxId, customGasPrice, customGasLimit)
+  async createSpeedUpTransaction (originalTxId, customGasParams) {
+    await this.txController.createSpeedUpTransaction(originalTxId, customGasParams)
     const state = await this.getState()
     return state
   }

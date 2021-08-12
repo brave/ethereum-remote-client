@@ -27,12 +27,18 @@ export function hexGreaterThan (a, b) {
   )
 }
 
-export function getHexGasTotal ({ gasLimit, gasPrice }) {
-  return addHexPrefix(multiplyCurrencies(gasLimit || '0x0', gasPrice || '0x0', {
+export function getHexGasTotal ({ gasLimit, gasPrice, maxFeePerGas }) {
+  const func = (value) => addHexPrefix(multiplyCurrencies(gasLimit || '0x0', value || '0x0', {
     toNumericBase: 'hex',
     multiplicandBase: 16,
     multiplierBase: 16,
   }))
+
+  if (maxFeePerGas) {
+    return func(maxFeePerGas)
+  }
+
+  return func(gasPrice)
 }
 
 export function addEth (...args) {

@@ -1696,13 +1696,13 @@ export function clearPendingTokens () {
   }
 }
 
-export function createCancelTransaction (txId, customGasPrice) {
+export function createCancelTransaction (txId, customGasParams) {
   log.debug('background.cancelTransaction')
   let newTxId
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createCancelTransaction(txId, customGasPrice, (err, newState) => {
+      background.createCancelTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -1719,13 +1719,13 @@ export function createCancelTransaction (txId, customGasPrice) {
   }
 }
 
-export function createSpeedUpTransaction (txId, customGasPrice, customGasLimit) {
+export function createSpeedUpTransaction (txId, customGasParams) {
   log.debug('background.createSpeedUpTransaction')
   let newTx
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createSpeedUpTransaction(txId, customGasPrice, customGasLimit, (err, newState) => {
+      background.createSpeedUpTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -1741,13 +1741,13 @@ export function createSpeedUpTransaction (txId, customGasPrice, customGasLimit) 
   }
 }
 
-export function createRetryTransaction (txId, customGasPrice, customGasLimit) {
+export function createRetryTransaction (txId, customGasParams) {
   log.debug('background.createRetryTransaction')
   let newTx
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createSpeedUpTransaction(txId, customGasPrice, customGasLimit, (err, newState) => {
+      background.createSpeedUpTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)

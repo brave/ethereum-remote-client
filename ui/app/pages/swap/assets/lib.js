@@ -5,6 +5,11 @@ const ethUtil = require('ethereumjs-util')
 const uniqBy = require('lodash/uniqBy')
 const sortBy = require('lodash/sortBy')
 
+const tokenLists = {
+  allTokens: 'https://tokens.coingecko.com/uniswap/all.json',
+  unsupportedTokens: 'https://raw.githubusercontent.com/Uniswap/uniswap-interface/main/src/constants/tokenLists/unsupported.tokenlist.json',
+}
+
 const ETH = {
   symbol: 'ETH',
   address: '',
@@ -26,8 +31,24 @@ const assetsPriorityList = [
   'AAVE',
 ]
 
+function writeTokens (tokens) {
+  let assets = uniqBy([ETH, ...tokens], (e) => e.address)
+
+  assets = prioritySort(assets, assetsPriorityList)
+
+  try {
+    fs.writeFileSync(
+      `${__dirname}/assets.mainnet.json`,
+      JSON.stringify(assets, null, 4),
+    )
+    console.log('✅️ Asset list successfully updated.')
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 function main () {
-  fetch('https://tokens.coingecko.com/uniswap/all.json').then((r) =>
+  fetch(tokenLists.allTokens).then((r) =>
     r.json().then((data) => {
       const tokens = data.tokens
         .map((token) => ({
@@ -38,19 +59,17 @@ function main () {
         }))
         .filter(({ address }) => address in contractMap)
 
-      let assets = uniqBy([ETH, ...tokens], (e) => e.address)
+      fetch(tokenLists.unsupportedTokens).then((u) =>
+        u.json().then((data) => {
+          const unsupportedTokens = data.tokens
+            .map(({ address }) => (ethUtil.toChecksumAddress(address)))
 
-      assets = prioritySort(assets, assetsPriorityList)
+          const supportedTokens = tokens
+            .filter(({ address }) => !(address in unsupportedTokens))
 
-      try {
-        fs.writeFileSync(
-          `${__dirname}/assets.mainnet.json`,
-          JSON.stringify(assets, null, 4),
-        )
-        console.log('✅️ Asset list successfully updated.')
-      } catch (error) {
-        console.error(error)
-      }
+          writeTokens(supportedTokens)
+        }),
+      )
     }),
   )
 }

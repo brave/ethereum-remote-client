@@ -84,6 +84,12 @@
         "decimals": 18
     },
     {
+        "address": "0xFFC97d72E13E01096502Cb8Eb52dEe56f74DAD7B",
+        "symbol": "AAAVE",
+        "name": "Aave AAVE",
+        "decimals": 18
+    },
+    {
         "address": "0x05Ec93c0365baAeAbF7AefFb0972ea7ECdD39CF1",
         "symbol": "ABAT",
         "name": "Aave BAT",
@@ -186,6 +192,12 @@
         "decimals": 18
     },
     {
+        "address": "0x358AA737e033F34df7c54306960a38d09AaBd523",
+        "symbol": "ARES",
+        "name": "Ares Protocol",
+        "decimals": 18
+    },
+    {
         "address": "0xfec0cF7fE078a500abf15F1284958F22049c2C7e",
         "symbol": "ART",
         "name": "Maecenas",
@@ -228,6 +240,18 @@
         "decimals": 18
     },
     {
+        "address": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+        "symbol": "AUDIO",
+        "name": "Audius",
+        "decimals": 18
+    },
+    {
+        "address": "0xB9D7CB55f463405CDfBe4E90a6D2Df01C2B92BF1",
+        "symbol": "AUNI",
+        "name": "Aave UNI",
+        "decimals": 18
+    },
+    {
         "address": "0xBcca60bB61934080951369a648Fb03DF4F96263C",
         "symbol": "AUSDC",
         "name": "Aave USDC",
@@ -252,9 +276,21 @@
         "decimals": 18
     },
     {
+        "address": "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
+        "symbol": "AWETH",
+        "name": "Aave WETH",
+        "decimals": 18
+    },
+    {
         "address": "0x71F85B2E46976bD21302B64329868fd15eb0D127",
         "symbol": "AXN",
         "name": "Axion",
+        "decimals": 18
+    },
+    {
+        "address": "0x5165d24277cD063F5ac44Efd447B27025e888f37",
+        "symbol": "AYFI",
+        "name": "Aave YFI",
         "decimals": 18
     },
     {
@@ -412,6 +448,12 @@
         "symbol": "CHSB",
         "name": "SwissBorg",
         "decimals": 8
+    },
+    {
+        "address": "0x75739d5944534115d7C54ee8C73F186D793BAE02",
+        "symbol": "CO2",
+        "name": "Collective",
+        "decimals": 18
     },
     {
         "address": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
@@ -636,6 +678,12 @@
         "decimals": 18
     },
     {
+        "address": "0x1Da87b114f35E1DC91F72bF57fc07A768Ad40Bb0",
+        "symbol": "EQZ",
+        "name": "Equalizer",
+        "decimals": 18
+    },
+    {
         "address": "0xb1CD6e4153B2a390Cf00A6556b0fC1458C4A5533",
         "symbol": "ETHBNT",
         "name": "ETHBNT Relay",
@@ -694,6 +742,12 @@
         "symbol": "FUN",
         "name": "FUNToken",
         "decimals": 8
+    },
+    {
+        "address": "0x970B9bB2C0444F5E81e9d0eFb84C8ccdcdcAf84d",
+        "symbol": "FUSE",
+        "name": "Fuse",
+        "decimals": 18
     },
     {
         "address": "0x35bD01FC9d6D5D81CA9E055Db88Dc49aa2c699A8",
@@ -816,9 +870,21 @@
         "decimals": 18
     },
     {
+        "address": "0x544c42fBB96B39B21DF61cf322b5EDC285EE7429",
+        "symbol": "INSUR",
+        "name": "InsurAce",
+        "decimals": 18
+    },
+    {
         "address": "0x0DB8D8b76BC361bAcbB72E2C491E06085A97Ab31",
         "symbol": "IQN",
         "name": "IQeon",
+        "decimals": 18
+    },
+    {
+        "address": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
+        "symbol": "JASMY",
+        "name": "JasmyCoin",
         "decimals": 18
     },
     {
@@ -832,6 +898,12 @@
         "symbol": "JOY",
         "name": "JOYSO",
         "decimals": 6
+    },
+    {
+        "address": "0x6E765D26388A17A6e86c49A8E41DF3F58aBcd337",
+        "symbol": "KANGAL",
+        "name": "Kangal",
+        "decimals": 18
     },
     {
         "address": "0x85Eee30c52B0b379b046Fb0F85F4f3Dc3009aFEC",
@@ -936,6 +1008,12 @@
         "decimals": 18
     },
     {
+        "address": "0x75387e1287Dd85482aB66102DA9f6577E027f609",
+        "symbol": "MAI",
+        "name": "Mindsync",
+        "decimals": 18
+    },
+    {
         "address": "0x0cae9e4d663793c2a2A0b211c1Cf4bBca2B9cAa7",
         "symbol": "MAMZN",
         "name": "Mirrored Amazon",
@@ -951,12 +1029,6 @@
         "address": "0x23Ccc43365D9dD3882eab88F43d515208f832430",
         "symbol": "MAS",
         "name": "Midas Protocol",
-        "decimals": 18
-    },
-    {
-        "address": "0x1C9491865a1DE77C5b6e19d2E6a5F1D7a6F2b25F",
-        "symbol": "MATTER",
-        "name": "AntiMatter",
         "decimals": 18
     },
     {
@@ -1122,6 +1194,12 @@
         "decimals": 8
     },
     {
+        "address": "0x4a615bB7166210CCe20E6642a6f8Fb5d4D044496",
+        "symbol": "NAOS",
+        "name": "NAOS Finance",
+        "decimals": 18
+    },
+    {
         "address": "0xEB58343b36C7528F23CAAe63a150240241310049",
         "symbol": "NBU",
         "name": "Nimbus",
@@ -1188,6 +1266,12 @@
         "decimals": 18
     },
     {
+        "address": "0xDb05EA0877A2622883941b939f0bb11d1ac7c400",
+        "symbol": "OPCT",
+        "name": "Opacity",
+        "decimals": 18
+    },
+    {
         "address": "0xff56Cc6b1E6dEd347aA0B7676C85AB0B3D08B0FA",
         "symbol": "ORBS",
         "name": "Orbs",
@@ -1238,7 +1322,7 @@
     {
         "address": "0xeca82185adCE47f39c684352B0439f030f860318",
         "symbol": "PERL",
-        "name": "Perlin",
+        "name": "PERL eco",
         "decimals": 18
     },
     {
@@ -1482,6 +1566,18 @@
         "decimals": 18
     },
     {
+        "address": "0x8762db106B2c2A0bccB3A80d1Ed41273552616E8",
+        "symbol": "RSR",
+        "name": "Reserve Rights Toke",
+        "decimals": 18
+    },
+    {
+        "address": "0x196f4727526eA7FB1e17b2071B3d8eAA38486988",
+        "symbol": "RSV",
+        "name": "Reserve",
+        "decimals": 18
+    },
+    {
         "address": "0x3d1BA9be9f66B8ee101911bC36D3fB562eaC2244",
         "symbol": "RVT",
         "name": "Rivetz",
@@ -1515,6 +1611,12 @@
         "address": "0x5e74C9036fb86BD7eCdcb084a0673EFc32eA31cb",
         "symbol": "SETH",
         "name": "sETH",
+        "decimals": 18
+    },
+    {
+        "address": "0x84810bcF08744d5862B8181f12d17bfd57d3b078",
+        "symbol": "SGT",
+        "name": "SharedStake Governa",
         "decimals": 18
     },
     {
@@ -1632,12 +1734,6 @@
         "decimals": 18
     },
     {
-        "address": "0xeF31Cb88048416E301Fee1eA13e7664b887BA7e8",
-        "symbol": "SYAX",
-        "name": "Staked yAxis",
-        "decimals": 18
-    },
-    {
         "address": "0x8282df223AC402d04B2097d16f758Af4F70e7Db0",
         "symbol": "SYFL",
         "name": "YFLink Synthetic",
@@ -1647,6 +1743,12 @@
         "address": "0xf293d23BF2CDc05411Ca0edDD588eb1977e8dcd4",
         "symbol": "SYLO",
         "name": "Sylo",
+        "decimals": 18
+    },
+    {
+        "address": "0x182F4c4C97cd1c24E1Df8FC4c053E5C47bf53Bef",
+        "symbol": "TANGO",
+        "name": "keyTango",
         "decimals": 18
     },
     {
@@ -1734,6 +1836,12 @@
         "decimals": 18
     },
     {
+        "address": "0x898BAD2774EB97cF6b94605677F43b41871410B1",
+        "symbol": "VETH2",
+        "name": "vEth2",
+        "decimals": 18
+    },
+    {
         "address": "0xfeF4185594457050cC9c23980d301908FE057Bb1",
         "symbol": "VIDT",
         "name": "VIDT Datalink",
@@ -1743,6 +1851,12 @@
         "address": "0x1b40183EFB4Dd766f11bDa7A7c3AD8982e998421",
         "symbol": "VSP",
         "name": "Vesper Finance",
+        "decimals": 18
+    },
+    {
+        "address": "0x1cF4592ebfFd730c7dc92c1bdFFDfc3B9EfCf29a",
+        "symbol": "WAVES",
+        "name": "Waves",
         "decimals": 18
     },
     {
@@ -1842,9 +1956,9 @@
         "decimals": 18
     },
     {
-        "address": "0xC7e43A1c8E118aA2965F5EAbe0e718D83DB7A63C",
-        "symbol": "ZCRT",
-        "name": "ZCore Token",
+        "address": "0x5150956E082C748Ca837a5dFa0a7C10CA4697f9c",
+        "symbol": "ZDEX",
+        "name": "Zeedex",
         "decimals": 18
     },
     {

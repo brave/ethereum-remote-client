@@ -81,9 +81,15 @@
     "netmask": "^2.0.1",
     "ganache-core/lodash": "^4.17.21",
     "underscore": "^1.12.1",
-    "url-parse": "^1.5.0",
+    "url-parse": "^1.5.2",
     "ssri": "^6.0.2",
-    "hosted-git-info": "^3.0.8"
+    "hosted-git-info": "^3.0.8",
+    "**/swarm-js/tar": "^4.4.15",
+    "**/node-pre-gyp/tar": "^4.4.15",
+    "geckodriver/tar": "^6.1.2",
+    "**/node-sass/node-gyp/tar": "^4.4.3",
+    "**/path-parse": "^1.0.7",
+    "**/jszip": "^3.7.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -93,7 +99,7 @@
     "@formatjs/intl-relativetimeformat": "^5.2.6",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@material-ui/core": "^4.11.0",
-    "@metamask/contract-metadata": "^1.25.0",
+    "@metamask/contract-metadata": "1.26.0",
     "@metamask/controllers": "^2.0.5",
     "@metamask/eth-ledger-bridge-keyring": "github:brave/eth-ledger-bridge-keyring#6db82c15435f9ae47dadbc1fc19586552a7044eb",
     "@metamask/etherscan-link": "^1.1.0",

@@ -37,7 +37,7 @@ import {
   getMetaMaskAccounts,
   getUseNonceField,
   getPreferences,
-  transactionFeeSelector,
+  transactionFeeSelector, isEIP1559Active,
 } from '../../selectors'
 import { getMostRecentOverviewPage } from '../../ducks/history/history'
 import { resetSwapState } from '../../ducks/swap/swap.duck'
@@ -64,6 +64,7 @@ const mapStateToProps = (state, ownProps) => {
   const {
     ensResolutionsByAddress,
     conversionRate,
+    currentCurrency,
     identities,
     addressBook,
     assetImages,
@@ -163,6 +164,7 @@ const mapStateToProps = (state, ownProps) => {
     tokenProps,
     isTxReprice,
     conversionRate,
+    currentCurrency,
     transactionStatus,
     nonce,
     assetImage,
@@ -184,6 +186,7 @@ const mapStateToProps = (state, ownProps) => {
     nextNonce,
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
     isMainnet,
+    isEIP1559Active: isEIP1559Active(state),
   }
 }
 

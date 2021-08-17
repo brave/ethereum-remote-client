@@ -3,6 +3,9 @@
     "message": "I have read and agree to the $1",
     "description": "$1 is the `terms` message"
   },
+  "amountPlusGasFee" : {
+    "message": "Amount + Gas Fee"
+  },
   "eth_accounts": {
     "message": "View the addresses of your permitted accounts (required)",
     "description": "The description for the `eth_accounts` permission"
@@ -649,6 +652,9 @@
   "etherscanView": {
     "message": "View account on Etherscan"
   },
+  "estimatedGasFee": {
+    "message": "Estimated gas fee"
+  },
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
@@ -955,6 +961,12 @@
   },
   "mainnet": {
     "message": "Main Ethereum Network"
+  },
+  "maxAmount": {
+    "message": "Max amount:"
+  },
+  "maxFee": {
+    "message": "Max fee:"
   },
   "availableOnMainnetRopsten": {
     "message": "Only available on mainnet and ropsten"

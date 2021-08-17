@@ -5,6 +5,7 @@ import {
   accountsWithSendEtherInfoSelector,
   getAddressBookEntry,
   getIsContractAddress,
+  isEIP1559Active,
 } from '../../../selectors'
 
 import * as actions from '../../../store/actions'
@@ -17,6 +18,7 @@ function mapStateToProps (state) {
     contact: getAddressBookEntry(state, to),
     to,
     isContractAddress: getIsContractAddress(state),
+    isEIP1559Active: isEIP1559Active(state),
   }
 }
 

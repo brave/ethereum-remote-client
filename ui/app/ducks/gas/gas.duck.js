@@ -22,6 +22,7 @@ const SET_BASIC_GAS_ESTIMATE_DATA = 'metamask/gas/SET_BASIC_GAS_ESTIMATE_DATA'
 const SET_CUSTOM_GAS_ERRORS = 'metamask/gas/SET_CUSTOM_GAS_ERRORS'
 const SET_CUSTOM_GAS_LIMIT = 'metamask/gas/SET_CUSTOM_GAS_LIMIT'
 const SET_CUSTOM_GAS_PRICE = 'metamask/gas/SET_CUSTOM_GAS_PRICE'
+const SET_CUSTOM_PRIORITY_FEE = 'metamask/gas/SET_CUSTOM_PRIORITY_FEE'
 const SET_CUSTOM_GAS_TOTAL = 'metamask/gas/SET_CUSTOM_GAS_TOTAL'
 const SET_PRICE_AND_TIME_ESTIMATES = 'metamask/gas/SET_PRICE_AND_TIME_ESTIMATES'
 const SET_API_ESTIMATES_LAST_RETRIEVED = 'metamask/gas/SET_API_ESTIMATES_LAST_RETRIEVED'
@@ -83,6 +84,16 @@ export default function reducer (state = initState, action) {
         ...state,
         basicEstimates: action.value,
       }
+
+    case SET_CUSTOM_PRIORITY_FEE:
+      return {
+        ...state,
+        customData: {
+          ...state.customData,
+          priorityFeePerGas: action.value,
+        },
+      }
+
     case SET_CUSTOM_GAS_PRICE:
       return {
         ...state,
@@ -480,6 +491,13 @@ export function setCustomGasPrice (newPrice) {
   return {
     type: SET_CUSTOM_GAS_PRICE,
     value: newPrice,
+  }
+}
+
+export function setCustomPriorityFeePerGas (value) {
+  return {
+    type: SET_CUSTOM_PRIORITY_FEE,
+    value,
   }
 }
 

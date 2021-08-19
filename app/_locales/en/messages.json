@@ -6,6 +6,15 @@
   "amountPlusGasFee" : {
     "message": "Amount + Gas Fee"
   },
+  "baseFee": {
+    "message": "Base fee"
+  },
+  "maxPriorityFee": {
+    "message": "Max priority fee"
+  },
+  "maxFee2": {
+    "message": "Max fee"
+  },
   "eth_accounts": {
     "message": "View the addresses of your permitted accounts (required)",
     "description": "The description for the `eth_accounts` permission"

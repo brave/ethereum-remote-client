@@ -299,5 +299,5 @@ export function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
 
 // EIP-1559 selectors
 export function getCustomPriorityFee (state) {
-  return state.gas.customData.priorityFee
+  return state.gas.customData.priorityFeePerGas
 }

@@ -25,6 +25,7 @@ import { addHexPrefix } from 'ethereumjs-util'
 export {
   addGasBuffer,
   calcGasTotal,
+  calcEIP1559GasTotal,
   calcTokenBalance,
   doesAmountErrorRequireUpdate,
   estimateGas,
@@ -40,6 +41,20 @@ export {
 
 function calcGasTotal (gasLimit = '0', gasPrice = '0') {
   return multiplyCurrencies(gasLimit, gasPrice, {
+    toNumericBase: 'hex',
+    multiplicandBase: 16,
+    multiplierBase: 16,
+  })
+}
+
+function calcEIP1559GasTotal (gasLimit, baseFee, maxPriorityFee) {
+  const gasPricingTotal = addCurrencies(baseFee, maxPriorityFee, {
+    aBase: 16,
+    bBase: 16,
+    toNumericBase: 'hex',
+  })
+
+  return multiplyCurrencies(gasLimit, gasPricingTotal, {
     toNumericBase: 'hex',
     multiplicandBase: 16,
     multiplierBase: 16,

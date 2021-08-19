@@ -49,6 +49,7 @@ export default class ConfirmTransactionBase extends Component {
     assetImage: PropTypes.string,
     sendTransaction: PropTypes.func,
     showCustomizeGasModal: PropTypes.func,
+    showCustomizeEIP1559GasModal: PropTypes.func,
     showTransactionConfirmedModal: PropTypes.func,
     showRejectTransactionsConfirmationModal: PropTypes.func,
     toAddress: PropTypes.string,
@@ -201,7 +202,15 @@ export default class ConfirmTransactionBase extends Component {
   }
 
   handleEditGas () {
-    const { onEditGas, showCustomizeGasModal, actionKey, txData: { origin }, methodData = {} } = this.props
+    const {
+      onEditGas,
+      showCustomizeGasModal,
+      showCustomizeEIP1559GasModal,
+      actionKey,
+      txData: { origin },
+      methodData = {},
+      isEIP1559Active,
+    } = this.props
 
     this.context.metricsEvent({
       eventOpts: {
@@ -219,7 +228,11 @@ export default class ConfirmTransactionBase extends Component {
     if (onEditGas) {
       onEditGas()
     } else {
-      showCustomizeGasModal()
+      if (isEIP1559Active) {
+        showCustomizeEIP1559GasModal()
+      } else {
+        showCustomizeGasModal()
+      }
     }
   }
 

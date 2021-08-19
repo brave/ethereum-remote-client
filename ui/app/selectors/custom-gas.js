@@ -70,6 +70,8 @@ export function getFastPriceEstimateInHexWEI (state) {
   return getGasPriceInHexWei(fastPriceEstimate || '0x0')
 }
 
+// This function may be used for EIP-1559 gas pricing fields as well. In such
+// a case, the gasPrice field represents the priority fee.
 export function getDefaultActiveButtonIndex (gasButtonInfo, customGasPriceInHex, gasPrice) {
   return gasButtonInfo.findIndex(({ priceInHexWei }) => {
     return priceInHexWei === addHexPrefix(customGasPriceInHex || gasPrice)
@@ -293,4 +295,9 @@ export function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
       priceInHexWei: getGasPriceInHexWei(fast, true),
     },
   ]
+}
+
+// EIP-1559 selectors
+export function getCustomPriorityFee (state) {
+  return state.gas.customData.priorityFee
 }

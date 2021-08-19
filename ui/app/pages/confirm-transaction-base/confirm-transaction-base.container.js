@@ -206,6 +206,9 @@ export const mapDispatchToProps = (dispatch) => {
     showCustomizeGasModal: ({ txData, onSubmit, validate }) => {
       return dispatch(showModal({ name: 'CUSTOMIZE_GAS', txData, onSubmit, validate }))
     },
+    showCustomizeEIP1559GasModal: () => {
+      return dispatch(showModal({ name: 'CUSTOMIZE_EIP1559_GAS' }))
+    },
     updateGasAndCalculate: (updatedTx) => {
       return dispatch(updateTransaction(updatedTx))
     },

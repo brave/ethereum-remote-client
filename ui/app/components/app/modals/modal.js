@@ -29,6 +29,7 @@ import ConfirmDeleteNetwork from './confirm-delete-network'
 import AddToAddressBookModal from './add-to-addressbook-modal'
 import EditApprovalPermission from './edit-approval-permission'
 import NewAccountModal from './new-account-modal'
+import EIP1559GasControlsModal from '../gas-customization/eip1559-gas-controls'
 
 const modalContainerBaseStyle = {
   transform: 'translate3d(-50%, 0, 0px)',
@@ -296,6 +297,36 @@ const MODALS = {
       args: [],
     },
   },
+
+  CUSTOMIZE_EIP1559_GAS: {
+    contents: <EIP1559GasControlsModal />,
+    mobileModalStyle: {
+      width: '100vw',
+      height: '100vh',
+      top: '0',
+      transform: 'none',
+      left: '0',
+      right: '0',
+      margin: '0 auto',
+    },
+    laptopModalStyle: {
+      width: 'auto',
+      height: '0px',
+      top: '80px',
+      left: '0px',
+      transform: 'none',
+      margin: '0 auto',
+      position: 'relative',
+    },
+    contentStyle: {
+      borderRadius: '8px',
+    },
+    customOnHideOpts: {
+      action: resetCustomGasData,
+      args: [],
+    },
+  },
+
 
   EDIT_APPROVAL_PERMISSION: {
     contents: <EditApprovalPermission />,

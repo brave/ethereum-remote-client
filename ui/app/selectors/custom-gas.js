@@ -298,6 +298,45 @@ export function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
 }
 
 // EIP-1559 selectors
-export function getCustomPriorityFee (state) {
-  return state.gas.customData.priorityFeePerGas
+export function getCustomMaxPriorityFeePerGas (state) {
+  return state.gas.customData.maxPriorityFeePerGas
+}
+
+export function getCustomMaxFeePerGas (state) {
+  return state.gas.customData.maxFeePerGas
+}
+
+export function isCustomMaxPriorityFeePerGasSafe (state) {
+  const safeLow = getSafeLowEstimate(state)
+  const customMaxPriorityFeePerGas = getCustomMaxPriorityFeePerGas(state)
+
+  if (!customMaxPriorityFeePerGas) {
+    return true
+  }
+
+  if (safeLow === null) {
+    return null
+  }
+
+  return conversionGreaterThan(
+    {
+      value: customMaxPriorityFeePerGas,
+      fromNumericBase: 'hex',
+      fromDenomination: 'WEI',
+      toDenomination: 'GWEI',
+    },
+    { value: safeLow, fromNumericBase: 'dec' },
+  )
+}
+
+export function getMaxPriorityFeePerGasAndTimeEstimates (state) {
+  return state.gas.maxPriorityFeePerGasAndTimeEstimates
+}
+
+export function getEstimatedMaxPriorityFeePerGas (state) {
+  return getPriceAndTimeEstimates(state).map(({ maxPriorityFeePerGas }) => maxPriorityFeePerGas)
+}
+
+export function getEstimatedMaxPriorityFeePerGasTimes (state) {
+  return getPriceAndTimeEstimates(state).map(({ expectedTime }) => expectedTime)
 }

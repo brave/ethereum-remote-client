@@ -218,6 +218,30 @@ const MODALS = {
     },
   },
 
+  MAX_PRIORITY_FEE_INFO_MODAL: {
+    contents: <NotifcationModal header="maxPriorityFeeNoDenom" message="maxPriorityFeeInfoModalContent" />,
+    mobileModalStyle: {
+      width: '95%',
+      top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',
+    },
+    laptopModalStyle: {
+      width: '449px',
+      top: 'calc(33% + 45px)',
+    },
+  },
+
+  MAX_FEE_INFO_MODAL: {
+    contents: <NotifcationModal header="maxFeeNoDenom" message="maxFeeInfoModalContent" />,
+    mobileModalStyle: {
+      width: '95%',
+      top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',
+    },
+    laptopModalStyle: {
+      width: '449px',
+      top: 'calc(33% + 45px)',
+    },
+  },
+
   GAS_LIMIT_INFO_MODAL: {
     contents: <NotifcationModal header="gasLimit" message="gasLimitInfoModalContent" />,
     mobileModalStyle: {

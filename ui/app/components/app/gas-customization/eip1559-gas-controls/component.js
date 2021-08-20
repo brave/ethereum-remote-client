@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import PageContainer from '../../../ui/page-container'
 import { Tabs, Tab } from '../../../ui/tabs'
 import BasicTabContent from './basic-tab-content'
+import AdvancedTabContent from './advanced-tab-content'
 
 export default class EIP1559GasControlsModal extends Component {
   static contextTypes = {
@@ -12,8 +13,6 @@ export default class EIP1559GasControlsModal extends Component {
   }
 
   static propTypes = {
-    cancelAndClose: PropTypes.func.isRequired,
-    hideBasic: PropTypes.bool.isRequired,
     gasPriceButtonGroupProps: PropTypes.object.isRequired,
     infoRowProps: PropTypes.shape({
       originalTotalFiat: PropTypes.string,
@@ -24,13 +23,25 @@ export default class EIP1559GasControlsModal extends Component {
       maxPriorityFee: PropTypes.string,
       maxFee: PropTypes.string,
     }),
+    customModalMaxPriorityFeePerGasInHex: PropTypes.string.isRequired,
+    customModalMaxFeePerGasInHex: PropTypes.string.isRequired,
+    customModalGasLimitInHex: PropTypes.string.isRequired,
+    isSpeedUp: PropTypes.bool.isRequired,
+    isRetry: PropTypes.bool.isRequired,
+    insufficientBalance: PropTypes.bool.isRequired,
+    isCustomMaxPriorityFeePerGasSafe: PropTypes.bool.isRequired,
+
+    // action dispatchers
+    cancelAndClose: PropTypes.func.isRequired,
+    updateCustomMaxPriorityFeePerGas: PropTypes.func.isRequired,
+    updateCustomMaxFeePerGas: PropTypes.func.isRequired,
+    updateCustomGasLimit: PropTypes.func.isRequired,
   }
 
   renderTabs () {
     const { t } = this.context
 
     const {
-      hideBasic,
       gasPriceButtonGroupProps,
       infoRowProps: {
         newTotalFiat,
@@ -41,7 +52,7 @@ export default class EIP1559GasControlsModal extends Component {
       },
     } = this.props
 
-    let tabsToRender = [
+    const tabsToRender = [
       {
         name: t('basic'),
         content: (
@@ -52,13 +63,9 @@ export default class EIP1559GasControlsModal extends Component {
       },
       {
         name: t('advanced'),
-        content: <p>World</p>,
+        content: this.renderAdvancedTabContent(),
       },
     ]
-
-    if (hideBasic) {
-      tabsToRender = tabsToRender.slice(1)
-    }
 
     return (
       <Tabs>
@@ -71,6 +78,36 @@ export default class EIP1559GasControlsModal extends Component {
           </Tab>
         ))}
       </Tabs>
+    )
+  }
+
+  renderAdvancedTabContent () {
+    const {
+      updateCustomMaxPriorityFeePerGas,
+      updateCustomMaxFeePerGas,
+      updateCustomGasLimit,
+      customModalMaxPriorityFeePerGasInHex,
+      customModalMaxFeePerGasInHex,
+      customModalGasLimitInHex,
+      insufficientBalance,
+      isCustomMaxPriorityFeePerGasSafe,
+      isSpeedUp,
+      isRetry,
+    } = this.props
+
+    return (
+      <AdvancedTabContent
+        updateCustomMaxPriorityFeePerGas={updateCustomMaxPriorityFeePerGas}
+        updateCustomMaxFeePerGas={updateCustomMaxFeePerGas}
+        updateCustomGasLimit={updateCustomGasLimit}
+        customModalMaxPriorityFeePerGasInHex={customModalMaxPriorityFeePerGasInHex}
+        customModalGasLimitInHex={customModalGasLimitInHex}
+        customModalMaxFeePerGasInHex={customModalMaxFeePerGasInHex}
+        insufficientBalance={insufficientBalance}
+        isCustomMaxPriorityFeePerGasSafe={isCustomMaxPriorityFeePerGasSafe}
+        isSpeedUp={isSpeedUp}
+        isRetry={isRetry}
+      />
     )
   }
 
@@ -91,7 +128,7 @@ export default class EIP1559GasControlsModal extends Component {
           </div>
 
           <div className="gas-modal-content__info-row__transaction-info">
-            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxFee2')}</span>
+            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxFee')}</span>
             <span className="gas-modal-content__info-row__transaction-info__value">{maxFee}</span>
           </div>
 

@@ -10,10 +10,22 @@
     "message": "Base fee"
   },
   "maxPriorityFee": {
+    "message": "Max priority fee (GWEI)"
+  },
+  "maxFee": {
+    "message": "Max fee (GWEI)"
+  },
+  "maxPriorityFeeNoDenom": {
     "message": "Max priority fee"
   },
-  "maxFee2": {
+  "maxFeeNoDenom": {
     "message": "Max fee"
+  },
+  "maxPriorityFeeInfoModalContent": {
+    "message": "Max priority fee (aka \"miner tip\") goes directly to miners and incentivizes them to prioritize your transaction. You’ll most often pay your max setting."
+  },
+  "maxFeeInfoModalContent": {
+    "message": "The max fee is the most you'll pay (base fee + priority fee)."
   },
   "eth_accounts": {
     "message": "View the addresses of your permitted accounts (required)",
@@ -982,9 +994,6 @@
   },
   "maxAmount": {
     "message": "Max amount:"
-  },
-  "maxFee": {
-    "message": "Max fee:"
   },
   "availableOnMainnetRopsten": {
     "message": "Only available on mainnet and ropsten"

@@ -94,13 +94,8 @@
     padding-right: 27px;
   }
 
-  &__gas-inputs {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+  &__gas-inputs-v2 {
+    display: block !important;
+    margin: 15px !important;
   }
 }

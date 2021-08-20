@@ -22,7 +22,8 @@ const SET_BASIC_GAS_ESTIMATE_DATA = 'metamask/gas/SET_BASIC_GAS_ESTIMATE_DATA'
 const SET_CUSTOM_GAS_ERRORS = 'metamask/gas/SET_CUSTOM_GAS_ERRORS'
 const SET_CUSTOM_GAS_LIMIT = 'metamask/gas/SET_CUSTOM_GAS_LIMIT'
 const SET_CUSTOM_GAS_PRICE = 'metamask/gas/SET_CUSTOM_GAS_PRICE'
-const SET_CUSTOM_PRIORITY_FEE = 'metamask/gas/SET_CUSTOM_PRIORITY_FEE'
+const SET_CUSTOM_PRIORITY_FEE_PER_GAS = 'metamask/gas/SET_CUSTOM_PRIORITY_FEE_PER_GAS'
+const SET_CUSTOM_MAX_FEE_PER_GAS = 'metamask/gas/SET_CUSTOM_MAX_FEE_PER_GAS'
 const SET_CUSTOM_GAS_TOTAL = 'metamask/gas/SET_CUSTOM_GAS_TOTAL'
 const SET_PRICE_AND_TIME_ESTIMATES = 'metamask/gas/SET_PRICE_AND_TIME_ESTIMATES'
 const SET_API_ESTIMATES_LAST_RETRIEVED = 'metamask/gas/SET_API_ESTIMATES_LAST_RETRIEVED'
@@ -50,6 +51,7 @@ const initState = {
   basicEstimateIsLoading: true,
   gasEstimatesLoading: true,
   priceAndTimeEstimates: [],
+  maxPriorityFeePerGasAndTimeEstimates: [],
   priceAndTimeEstimatesLastRetrieved: 0,
   basicPriceAndTimeEstimatesLastRetrieved: 0,
   basicPriceEstimatesLastRetrieved: 0,
@@ -85,12 +87,21 @@ export default function reducer (state = initState, action) {
         basicEstimates: action.value,
       }
 
-    case SET_CUSTOM_PRIORITY_FEE:
+    case SET_CUSTOM_PRIORITY_FEE_PER_GAS:
       return {
         ...state,
         customData: {
           ...state.customData,
-          priorityFeePerGas: action.value,
+          maxPriorityFeePerGas: action.value,
+        },
+      }
+
+    case SET_CUSTOM_MAX_FEE_PER_GAS:
+      return {
+        ...state,
+        customData: {
+          ...state.customData,
+          maxFeePerGas: action.value,
         },
       }
 
@@ -496,7 +507,14 @@ export function setCustomGasPrice (newPrice) {
 
 export function setCustomPriorityFeePerGas (value) {
   return {
-    type: SET_CUSTOM_PRIORITY_FEE,
+    type: SET_CUSTOM_PRIORITY_FEE_PER_GAS,
+    value,
+  }
+}
+
+export function setCustomMaxFeePerGas (value) {
+  return {
+    type: SET_CUSTOM_MAX_FEE_PER_GAS,
     value,
   }
 }

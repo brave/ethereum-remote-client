@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {
-  decGWEIToHexWEI,
-} from '../../../../../helpers/utils/conversions.util'
-import Loading from '../../../../ui/loading-screen'
-import GasPriceChart from '../../gas-price-chart'
-import AdvancedGasInputs from '../../advanced-gas-inputs'
+
+import AdvancedGasInputs from '../advanced-gas-inputs'
 
 export default class AdvancedTabContent extends Component {
   static contextTypes = {
@@ -13,31 +9,31 @@ export default class AdvancedTabContent extends Component {
   }
 
   static propTypes = {
-    updateCustomGasPrice: PropTypes.func,
+    updateCustomMaxPriorityFeePerGas: PropTypes.func,
+    updateCustomMaxFeePerGas: PropTypes.func,
     updateCustomGasLimit: PropTypes.func,
-    customModalGasPriceInHex: PropTypes.string,
+    customModalMaxPriorityFeePerGasInHex: PropTypes.string,
+    customModalMaxFeePerGasInHex: PropTypes.string,
     customModalGasLimitInHex: PropTypes.string,
-    gasEstimatesLoading: PropTypes.bool,
-    millisecondsRemaining: PropTypes.number,
-    transactionFee: PropTypes.string,
+    maxPriorityFeePerGas: PropTypes.string,
     timeRemaining: PropTypes.string,
-    gasChartProps: PropTypes.object,
     insufficientBalance: PropTypes.bool,
-    customPriceIsSafe: PropTypes.bool,
+    isCustomMaxPriorityFeePerGasSafe: PropTypes.bool,
     isSpeedUp: PropTypes.bool,
-    isEthereumNetwork: PropTypes.bool,
   }
 
-  renderDataSummary (transactionFee, timeRemaining) {
+  renderDataSummary (priorityFee, timeRemaining) {
+    const { t } = this.context
+
     return (
       <div className="advanced-tab__transaction-data-summary">
         <div className="advanced-tab__transaction-data-summary__titles">
-          <span>{ this.context.t('newTransactionFee') }</span>
-          <span>~{ this.context.t('transactionTime') }</span>
+          <span>{ t('newTransactionFee') }</span>
+          <span>~{ t('transactionTime') }</span>
         </div>
         <div className="advanced-tab__transaction-data-summary__container">
           <div className="advanced-tab__transaction-data-summary__fee">
-            {transactionFee}
+            {priorityFee}
           </div>
           <div className="advanced-tab__transaction-data-summary__time-remaining">{timeRemaining}</div>
         </div>
@@ -45,59 +41,38 @@ export default class AdvancedTabContent extends Component {
     )
   }
 
-  onGasChartUpdate = (price) => {
-    const { updateCustomGasPrice } = this.props
-    updateCustomGasPrice(decGWEIToHexWEI(price))
-  }
-
   render () {
-    const { t } = this.context
     const {
-      updateCustomGasPrice,
+      updateCustomMaxPriorityFeePerGas,
+      updateCustomMaxFeePerGas,
       updateCustomGasLimit,
       timeRemaining,
-      customModalGasPriceInHex,
+      customModalMaxPriorityFeePerGasInHex,
+      customModalMaxFeePerGasInHex,
       customModalGasLimitInHex,
       insufficientBalance,
-      gasChartProps,
-      gasEstimatesLoading,
-      customPriceIsSafe,
+      isCustomMaxPriorityFeePerGasSafe,
       isSpeedUp,
-      transactionFee,
-      isEthereumNetwork,
+      maxPriorityFeePerGas,
     } = this.props
 
     return (
       <div className="advanced-tab">
-        { this.renderDataSummary(transactionFee, timeRemaining) }
+        { this.renderDataSummary(maxPriorityFeePerGas, timeRemaining) }
         <div className="advanced-tab__fee-chart">
-          <div className="advanced-tab__gas-inputs">
+          <div className="advanced-tab__gas-inputs-v2">
             <AdvancedGasInputs
-              updateCustomGasPrice={updateCustomGasPrice}
+              updateCustomMaxPriorityFeePerGas={updateCustomMaxPriorityFeePerGas}
+              updateCustomMaxFeePerGas={updateCustomMaxFeePerGas}
               updateCustomGasLimit={updateCustomGasLimit}
-              customGasPrice={customModalGasPriceInHex}
+              customMaxPriorityFeePerGas={customModalMaxPriorityFeePerGasInHex}
+              customMaxFeePerGas={customModalMaxFeePerGasInHex}
               customGasLimit={customModalGasLimitInHex}
               insufficientBalance={insufficientBalance}
-              customPriceIsSafe={customPriceIsSafe}
+              isCustomMaxPriorityFeePerGasSafe={isCustomMaxPriorityFeePerGasSafe}
               isSpeedUp={isSpeedUp}
             />
           </div>
-          { isEthereumNetwork
-            ? (
-              <div>
-                <div className="advanced-tab__fee-chart__title">{ t('liveGasPricePredictions') }</div>
-                {!gasEstimatesLoading
-                  ? <GasPriceChart {...gasChartProps} updateCustomGasPrice={this.onGasChartUpdate} />
-                  : <Loading />
-                }
-                <div className="advanced-tab__fee-chart__speed-buttons">
-                  <span>{ t('slower') }</span>
-                  <span>{ t('faster') }</span>
-                </div>
-              </div>
-            )
-            : <div className="advanced-tab__fee-chart__title">{ t('chartOnlyAvailableEth') }</div>
-          }
         </div>
       </div>
     )

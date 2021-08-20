@@ -1,6 +1,6 @@
 import {
   addHexWEIsToDec,
-  decEthToConvertedCurrency as ethTotalToConvertedCurrency, subtractHexWEIsToDec,
+  decEthToConvertedCurrency as ethTotalToConvertedCurrency, hexWEIToDecGWEI, subtractHexWEIsToDec,
 } from '../../../../helpers/utils/conversions.util'
 import { formatCurrency } from '../../../../helpers/utils/confirm-tx.util'
 import { formatETHFee } from '../../../../helpers/utils/formatters'
@@ -21,4 +21,12 @@ export function addHexWEIsToRenderableEth (aHexWEI, bHexWEI) {
 
 export function subtractHexWEIsFromRenderableEth (aHexWEI, bHexWEI) {
   return formatETHFee(subtractHexWEIsToDec(aHexWEI, bHexWEI))
+}
+
+export function calcCustomMaxPriorityFeePerGasInDec (customMaxPriorityFeePerGasInHex) {
+  return Number(hexWEIToDecGWEI(customMaxPriorityFeePerGasInHex))
+}
+
+export function calcCustomMaxFeePerGasInDec (customMaxFeePerGasInHex) {
+  return Number(hexWEIToDecGWEI(customMaxFeePerGasInHex))
 }

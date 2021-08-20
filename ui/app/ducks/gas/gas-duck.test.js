@@ -117,6 +117,7 @@ describe('Gas Duck', function () {
     errors: {},
     gasEstimatesLoading: true,
     priceAndTimeEstimates: [],
+    maxPriorityFeePerGasAndTimeEstimates: [],
     priceAndTimeEstimatesLastRetrieved: 0,
     basicPriceAndTimeEstimatesLastRetrieved: 0,
     basicPriceEstimatesLastRetrieved: 0,

@@ -345,8 +345,9 @@ export function getLoadingIndication (state) {
 }
 
 export function isEIP1559Active (state) {
+  const { capabilities } = state.metamask.networkMetadata
   const isEIP1559Network =
-    state.metamask.networkCapabilities[NetworkCapabilities.EIP1559] === true
+    capabilities[NetworkCapabilities.EIP1559] === true
 
 
   // Hardware wallets do not support EIP-1559 yet.
@@ -354,4 +355,9 @@ export function isEIP1559Active (state) {
   const isEIP1559Account = !isCurrentKeyringHardwareWallet
 
   return isEIP1559Network && isEIP1559Account
+}
+
+export function getBaseFeePerGas (state) {
+  const { baseFeePerGas } = state.metamask.networkMetadata
+  return baseFeePerGas
 }

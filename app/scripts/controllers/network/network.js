@@ -60,14 +60,16 @@ export default class NetworkController extends EventEmitter {
     this.networkStore = new ObservableStore('loading')
 
     // Keep track of the EVM capabilities active for the current network.
-    this.networkCapabilities = new ObservableStore({
-      ...defaultNetworkCapabilities,
+    this.networkMetadata = new ObservableStore({
+      capabilities: {
+        ...defaultNetworkCapabilities,
+      },
     })
 
     this.store = new ComposedStore({
       provider: this.providerStore,
       network: this.networkStore,
-      networkCapabilities: this.networkCapabilities,
+      networkMetadata: this.networkMetadata,
     })
 
     // provider and block tracker
@@ -110,7 +112,11 @@ export default class NetworkController extends EventEmitter {
     // Set network capabilities whenever the network is switched. We always
     // revert to default if the network is loading.
     network === 'loading'
-      ? this.networkCapabilities.putState({ ...defaultNetworkCapabilities })
+      ? this.networkMetadata.putState({
+        capabilities: {
+          ...defaultNetworkCapabilities,
+        },
+      })
       : this.setNetworkCapabilities()
 
     this.networkStore.putState(network)
@@ -225,7 +231,8 @@ export default class NetworkController extends EventEmitter {
    */
   async setNetworkCapabilities () {
     // Avoid querying for network capabilities if already set.
-    const { [NetworkCapabilities.EIP1559]: hasEIP1559 } = this.networkCapabilities.getState()
+    const { capabilities } = this.networkMetadata.getState()
+    const { [NetworkCapabilities.EIP1559]: hasEIP1559 } = capabilities
     if (hasEIP1559) {
       return
     }
@@ -237,17 +244,21 @@ export default class NetworkController extends EventEmitter {
     // We consider EIP-1559 activated if baseFeePerGas is available in the
     // block headers.
     const { baseFeePerGas } = latestBlock
-    this.networkCapabilities.updateState({
-      [NetworkCapabilities.EIP1559]: baseFeePerGas !== undefined,
+    this.networkMetadata.updateState({
+      capabilities: {
+        [NetworkCapabilities.EIP1559]: baseFeePerGas !== undefined,
+      },
+      baseFeePerGas,
     })
   }
 
-  getNetworkCapabilities () {
-    return this.networkCapabilities.getState()
+  getNetworkMetadata () {
+    return this.networkMetadata.getState()
   }
 
   hasNetworkCapability (networkCapability) {
-    const { [networkCapability]: value } = this.networkCapabilities.getState()
+    const { capabilities } = this.networkMetadata.getState()
+    const { [networkCapability]: value } = capabilities
     return value === true
   }
 

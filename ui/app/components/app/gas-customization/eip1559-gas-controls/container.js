@@ -23,7 +23,7 @@ import {
   isEthereumNetwork,
   getGasEstimatesLoadingStatus,
   isCustomMaxPriorityFeePerGasSafe,
-  getCustomMaxFeePerGas,
+  getCustomMaxFeePerGas, getBaseFeePerGas,
 } from '../../../../selectors'
 import {
   addHexWEIsToRenderableFiat,
@@ -50,7 +50,7 @@ const mapStateToProps = (state, ownProps) => {
   const sendToken = getSendToken(state)
 
   const maxPriorityFeePerGas = send.maxPriorityFeePerGas || getFastPriceEstimateInHexWEI(state, true)
-  const baseFeePerGas = maxPriorityFeePerGas // FIXME - use real baseFee
+  const baseFeePerGas = getBaseFeePerGas(state)
   const maxFeePerGas = send.maxFeePerGas || addCurrencies(baseFeePerGas, maxPriorityFeePerGas, {
     aBase: 16,
     bBase: 16,

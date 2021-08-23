@@ -77,8 +77,10 @@ describe('send-footer container', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
         })
         assert(dispatchSpy.calledOnce)
         assert.deepEqual(
@@ -91,8 +93,10 @@ describe('send-footer container', function () {
             to: 'mockTo',
             amount: 'mockAmount',
             from: 'mockFrom',
-            gas: 'mockGas',
-            gasPrice: 'mockGasPrice',
+            gasParams: {
+              gas: 'mockGas',
+              gasPrice: 'mockGasPrice',
+            },
           },
         )
         assert.deepEqual(
@@ -107,8 +111,10 @@ describe('send-footer container', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
         })
         assert(dispatchSpy.calledOnce)
         assert.deepEqual(
@@ -119,8 +125,10 @@ describe('send-footer container', function () {
             to: 'mockTo',
             amount: 'mockAmount',
             from: 'mockFrom',
-            gas: 'mockGas',
-            gasPrice: 'mockGasPrice',
+            gasParams: {
+              gas: 'mockGas',
+              gasPrice: 'mockGasPrice',
+            },
           },
         )
         assert.deepEqual(
@@ -136,8 +144,10 @@ describe('send-footer container', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
           editingTransactionId: 'mockEditingTransactionId',
           sendToken: { address: 'mockAddress' },
           unapprovedTxs: 'mockUnapprovedTxs',
@@ -150,8 +160,10 @@ describe('send-footer container', function () {
             to: 'mockTo',
             amount: 'mockAmount',
             from: 'mockFrom',
-            gas: 'mockGas',
-            gasPrice: 'mockGasPrice',
+            gasParams: {
+              gas: 'mockGas',
+              gasPrice: 'mockGasPrice',
+            },
             editingTransactionId: 'mockEditingTransactionId',
             sendToken: { address: 'mockAddress' },
             unapprovedTxs: 'mockUnapprovedTxs',

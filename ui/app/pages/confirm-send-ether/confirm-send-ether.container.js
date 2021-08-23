@@ -21,6 +21,8 @@ const mapDispatchToProps = (dispatch) => {
         from,
         gas: gasLimit,
         gasPrice,
+        maxPriorityFeePerGas,
+        maxFeePerGas,
         to,
         value: amount,
       } = txParams
@@ -29,6 +31,8 @@ const mapDispatchToProps = (dispatch) => {
         from,
         gasLimit,
         gasPrice,
+        maxPriorityFeePerGas,
+        maxFeePerGas,
         gasTotal: null,
         to,
         amount,

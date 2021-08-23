@@ -40,6 +40,7 @@ export default class ConfirmTransactionBase extends Component {
     hexTransactionAmount: PropTypes.string,
     hexTransactionFee: PropTypes.string,
     hexTransactionTotal: PropTypes.string,
+    maxPriorityFee: PropTypes.string,
     isTxReprice: PropTypes.bool,
     methodData: PropTypes.object,
     nonce: PropTypes.string,
@@ -338,6 +339,7 @@ export default class ConfirmTransactionBase extends Component {
   renderEIP1559Details () {
     const {
       hexTransactionFee,
+      maxPriorityFee,
       hexTransactionTotal,
       useNonceField,
     } = this.props
@@ -357,7 +359,7 @@ export default class ConfirmTransactionBase extends Component {
           this.renderEIP1559DetailRow(
             t('estimatedGasFee'),
             'Likely in < 30 seconds',
-            hexTransactionFee,
+            maxPriorityFee,
             `${t('maxFeeNoDenom')}:`,
             hexTransactionFee,
             true,

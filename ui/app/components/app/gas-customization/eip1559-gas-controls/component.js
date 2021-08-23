@@ -30,12 +30,14 @@ export default class EIP1559GasControlsModal extends Component {
     isRetry: PropTypes.bool.isRequired,
     insufficientBalance: PropTypes.bool.isRequired,
     isCustomMaxPriorityFeePerGasSafe: PropTypes.bool.isRequired,
+    disableSave: PropTypes.bool.isRequired,
 
     // action dispatchers
     cancelAndClose: PropTypes.func.isRequired,
     updateCustomMaxPriorityFeePerGas: PropTypes.func.isRequired,
     updateCustomMaxFeePerGas: PropTypes.func.isRequired,
     updateCustomGasLimit: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
   }
 
   renderTabs () {
@@ -145,9 +147,15 @@ export default class EIP1559GasControlsModal extends Component {
   }
 
   render () {
-    const { t } = this.context
+    const { t, metricsEvent } = this.context
     const {
       cancelAndClose,
+      disableSave,
+      onSubmit,
+      isSpeedUp,
+      customModalGasLimitInHex,
+      customModalMaxPriorityFeePerGasInHex,
+      customModalMaxFeePerGasInHex,
     } = this.props
 
     return (
@@ -156,11 +164,24 @@ export default class EIP1559GasControlsModal extends Component {
           title={t('editPriority')}
           subtitle={t('editPrioritySubTitle')}
           tabsComponent={this.renderTabs()}
-          disabled={false}
-          onCancel={() => cancelAndClose()}
-          onClose={() => cancelAndClose()}
+          disabled={disableSave}
+          onCancel={cancelAndClose}
+          onClose={cancelAndClose}
           onSubmit={() => {
-            alert('Clicked on submit')
+            if (isSpeedUp) {
+              metricsEvent({
+                eventOpts: {
+                  category: 'Navigation',
+                  action: 'Activity Log',
+                  name: 'Saved "Speed Up"',
+                },
+              })
+            }
+            onSubmit({
+              gasLimit: customModalGasLimitInHex,
+              maxFeePerGas: customModalMaxFeePerGasInHex,
+              maxPriorityFeePerGas: customModalMaxPriorityFeePerGasInHex,
+            })
           }}
           submitText={t('save')}
           headerCloseText={t('close')}

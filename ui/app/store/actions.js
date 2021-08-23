@@ -791,6 +791,20 @@ export function setGasPrice (gasPrice) {
   }
 }
 
+export function setMaxFeePerGas (value) {
+  return {
+    type: actionConstants.UPDATE_MAX_FEE_PER_GAS,
+    value,
+  }
+}
+
+export function setMaxPriorityFeePerGas (value) {
+  return {
+    type: actionConstants.UPDATE_MAX_PRIORITY_FEE_PER_GAS,
+    value,
+  }
+}
+
 export function setGasTotal (gasTotal) {
   return {
     type: actionConstants.UPDATE_GAS_TOTAL,

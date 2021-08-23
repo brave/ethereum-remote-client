@@ -6,6 +6,7 @@ import {
   hasPermissionRequests,
   getPreferences,
   submittedPendingTransactionsSelector,
+  isEIP1559Active,
 } from '../../selectors'
 import Routes from './routes.component'
 import {
@@ -45,6 +46,7 @@ function mapStateToProps (state) {
     providerId: getNetworkIdentifier(state),
     autoLockTimeLimit,
     hasPermissionsRequests: hasPermissionRequests(state),
+    isEIP1559Active: isEIP1559Active(state),
   }
 }
 

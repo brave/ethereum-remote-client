@@ -7,7 +7,17 @@ import {
   setCustomPriorityFeePerGas,
   setCustomMaxFeePerGas,
 } from '../../../../ducks/gas/gas.duck'
-import { hideModal } from '../../../../store/actions'
+import {
+  createRetryTransaction,
+  createSpeedUpTransaction,
+  hideModal,
+  hideSidebar,
+  setGasLimit,
+  setMaxFeePerGas,
+  setMaxPriorityFeePerGas,
+  updateSendAmount,
+  updateTransaction,
+} from '../../../../store/actions'
 import {
   getDefaultActiveButtonIndex,
   getBasicGasEstimateLoadingStatus,
@@ -23,7 +33,7 @@ import {
   isEthereumNetwork,
   getGasEstimatesLoadingStatus,
   isCustomMaxPriorityFeePerGasSafe,
-  getCustomMaxFeePerGas, getBaseFeePerGas,
+  getCustomMaxFeePerGas, getBaseFeePerGas, getTokenBalance,
 } from '../../../../selectors'
 import {
   addHexWEIsToRenderableFiat,
@@ -35,6 +45,8 @@ import {
 import { calcEIP1559GasTotal, isBalanceSufficient } from '../../../../pages/send/send.utils'
 import { addCurrencies, multiplyCurrencies } from '../../../../helpers/utils/conversion-util'
 
+import { hideGasButtonGroup, updateSendErrors } from '../../../../ducks/send/send.duck'
+import { calcMaxAmount } from '../../../../pages/send/send-content/send-amount-row/amount-max-button/amount-max-button.utils'
 import EIP1559GasControlsModal from './component'
 
 const mapStateToProps = (state, ownProps) => {
@@ -124,32 +136,98 @@ const mapStateToProps = (state, ownProps) => {
     customModalMaxFeePerGasInHex,
     customModalMaxFeePerGasInDec,
     customModalGasLimitInHex,
+    customGasLimit: parseInt(customModalGasLimitInHex, 16),
     isSpeedUp: transaction.status === 'submitted',
     isRetry: transaction.status === 'failed',
+    isConfirm: Boolean(Object.keys(state.confirmTransaction.txData).length),
     isEthereumNetwork: isEthereumNetwork(state),
     insufficientBalance,
     gasEstimatesLoading: getGasEstimatesLoadingStatus(state),
     isCustomMaxPriorityFeePerGasSafe: isCustomMaxPriorityFeePerGasSafe(state),
+    transaction: txData || transaction,
+    txId: transaction.id,
+    maxModeOn: getSendMaxModeState(state),
+    sendToken,
+    balance,
+    tokenBalance: getTokenBalance(state),
+    customGasTotal,
   }
 }
 
 
 const mapDispatchToProps = (dispatch) => {
+  const updateCustomMaxPriorityFeePerGas = (value) => dispatch(setCustomPriorityFeePerGas(addHexPrefix(value)))
+  const updateCustomMaxFeePerGas = (value) => dispatch(setCustomMaxFeePerGas(addHexPrefix(value)))
+
   return {
     cancelAndClose: () => {
       dispatch(resetCustomData())
       dispatch(hideModal())
     },
     hideModal: () => dispatch(hideModal()),
-    updateCustomMaxPriorityFeePerGas: (value) => dispatch(setCustomPriorityFeePerGas(addHexPrefix(value))),
-    updateCustomMaxFeePerGas: (value) => dispatch(setCustomMaxFeePerGas(addHexPrefix(value))),
+    hideSidebar: () => dispatch(hideSidebar()),
+    updateCustomMaxPriorityFeePerGas,
+    updateCustomMaxFeePerGas,
     updateCustomGasLimit: (value) => dispatch(setCustomGasLimit(addHexPrefix(value))),
+    updateConfirmTxGasAndCalculate: (gasParams, updatedTx) => {
+      const { gasLimit, maxPriorityFeePerGas, maxFeePerGas } = gasParams
+
+      updateCustomMaxPriorityFeePerGas(maxPriorityFeePerGas)
+      updateCustomMaxFeePerGas(maxFeePerGas)
+      dispatch(setCustomGasLimit(addHexPrefix(gasLimit.toString(16))))
+      return dispatch(updateTransaction(updatedTx))
+    },
+    createRetryTransaction: (txId, customGasParams) => {
+      return dispatch(createRetryTransaction(txId, customGasParams))
+    },
+    createSpeedUpTransaction: (txId, customGasParams) => {
+      return dispatch(createSpeedUpTransaction(txId, customGasParams))
+    },
+    hideGasButtonGroup: () => dispatch(hideGasButtonGroup()),
+    setGasData: (gasParams) => {
+      const { gasLimit, maxFeePerGas, maxPriorityFeePerGas } = gasParams
+
+      dispatch(setGasLimit(gasLimit))
+      dispatch(setMaxFeePerGas(maxFeePerGas))
+      dispatch(setMaxPriorityFeePerGas(maxPriorityFeePerGas))
+    },
+    setAmountToMax: (maxAmountDataObject) => {
+      dispatch(updateSendErrors({ amount: null }))
+      dispatch(updateSendAmount(calcMaxAmount(maxAmountDataObject)))
+    },
   }
 }
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const { gasPriceButtonGroupProps } = stateProps
-  const { updateCustomMaxPriorityFeePerGas } = dispatchProps
+  const {
+    gasPriceButtonGroupProps,
+    isSpeedUp,
+    isRetry,
+    isConfirm,
+    customModalMaxPriorityFeePerGasInDec,
+    customModalMaxFeePerGasInDec,
+    customGasLimit,
+    insufficientBalance,
+    transaction,
+    txId,
+    maxModeOn,
+    sendToken,
+    balance,
+    tokenBalance,
+    customGasTotal,
+  } = stateProps
+  const {
+    updateConfirmTxGasAndCalculate,
+    updateCustomMaxPriorityFeePerGas,
+    cancelAndClose,
+    hideSidebar,
+    hideModal,
+    createRetryTransaction,
+    createSpeedupTransaction,
+    hideGasButtonGroup,
+    setGasData,
+    setAmountToMax,
+  } = dispatchProps
   return {
     ...stateProps,
     ...ownProps,
@@ -158,6 +236,59 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
       ...gasPriceButtonGroupProps,
       handleGasPriceSelection: updateCustomMaxPriorityFeePerGas,
     },
+    cancelAndClose: () => {
+      cancelAndClose()
+      if (isSpeedUp || isRetry) {
+        hideSidebar()
+      }
+    },
+    onSubmit: (gasParams = {}) => {
+      const {
+        gasLimit,
+        maxPriorityFeePerGas,
+        maxFeePerGas,
+      } = gasParams
+
+      if (isConfirm) {
+        const updatedTx = {
+          ...transaction,
+          txParams: {
+            ...transaction.txParams,
+            gas: gasLimit,
+            maxPriorityFeePerGas,
+            maxFeePerGas,
+          },
+        }
+
+        updateConfirmTxGasAndCalculate(gasParams, updatedTx)
+        hideModal()
+      } else if (isSpeedUp) {
+        createSpeedupTransaction(txId, gasParams)
+        hideSidebar()
+        cancelAndClose()
+      } else if (isRetry) {
+        createRetryTransaction(txId, gasParams)
+        hideSidebar()
+        cancelAndClose()
+      } else {
+        setGasData(gasParams)
+        hideGasButtonGroup()
+        cancelAndClose()
+      }
+      if (maxModeOn) {
+        setAmountToMax({
+          balance,
+          gasTotal: customGasTotal,
+          sendToken,
+          tokenBalance,
+        })
+      }
+    },
+    disableSave:
+      insufficientBalance ||
+      (isSpeedUp && customModalMaxPriorityFeePerGasInDec === 0) ||
+      (isSpeedUp && customModalMaxFeePerGasInDec === 0) ||
+      customGasLimit < 21000,
   }
 }
 

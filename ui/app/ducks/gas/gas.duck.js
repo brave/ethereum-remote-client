@@ -34,6 +34,8 @@ const initState = {
   customData: {
     price: null,
     limit: null,
+    maxPriorityFeePerGas: null,
+    maxFeePerGas: null,
   },
   basicEstimates: {
     average: null,

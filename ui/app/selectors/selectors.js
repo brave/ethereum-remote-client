@@ -358,6 +358,6 @@ export function isEIP1559Active (state) {
 }
 
 export function getBaseFeePerGas (state) {
-  const { baseFeePerGas } = state.metamask.networkMetadata
+  const { baseFeePerGas } = state.metamask?.networkMetadata
   return baseFeePerGas
 }

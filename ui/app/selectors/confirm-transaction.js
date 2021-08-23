@@ -12,7 +12,7 @@ import {
 import {
   sumHexes,
 } from '../helpers/utils/transactions.util'
-import { getNativeCurrency } from '.'
+import { getNativeCurrency, isEIP1559Active } from '.'
 
 const unapprovedTxsSelector = (state) => state.metamask.unapprovedTxs
 const unapprovedMsgsSelector = (state) => state.metamask.unapprovedMsgs
@@ -242,8 +242,20 @@ export const transactionFeeSelector = function (state, txData) {
   const currentCurrency = currentCurrencySelector(state)
   const conversionRate = conversionRateSelector(state)
   const nativeCurrency = getNativeCurrency(state)
+  const isEIP1559 = isEIP1559Active(state)
 
-  const { txParams: { value = '0x0', gas: gasLimit = '0x0', gasPrice = '0x0' } = {} } = txData
+  const { txParams: { value = '0x0', gas: gasLimit = '0x0' } = {} } = txData
+  let hexTransactionFee, maxPriorityFee
+  if (isEIP1559) {
+    const { txParams: { maxFeePerGas, maxPriorityFeePerGas } } = txData
+    hexTransactionFee = getHexGasTotal({ gasLimit, maxFeePerGas })
+
+    // Hack to compute maxPriortyFee (in Wei) by reusing getHexGasTotal
+    maxPriorityFee = getHexGasTotal({ gasLimit, maxFeePerGas: maxPriorityFeePerGas })
+  } else {
+    const { txParams: { gasPrice } } = txData
+    hexTransactionFee = getHexGasTotal({ gasLimit, gasPrice })
+  }
 
   const fiatTransactionAmount = getValueFromWeiHex({
     value, fromCurrency: nativeCurrency, toCurrency: currentCurrency, conversionRate, numberOfDecimals: 2,
@@ -251,8 +263,6 @@ export const transactionFeeSelector = function (state, txData) {
   const ethTransactionAmount = getValueFromWeiHex({
     value, fromCurrency: nativeCurrency, toCurrency: nativeCurrency, conversionRate, numberOfDecimals: 6,
   })
-
-  const hexTransactionFee = getHexGasTotal({ gasLimit, gasPrice })
 
   const fiatTransactionFee = getTransactionFee({
     value: hexTransactionFee,
@@ -283,5 +293,6 @@ export const transactionFeeSelector = function (state, txData) {
     fiatTransactionTotal,
     ethTransactionTotal,
     hexTransactionTotal,
+    maxPriorityFee,
   }
 }

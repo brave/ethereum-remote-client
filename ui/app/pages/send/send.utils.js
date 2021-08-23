@@ -47,8 +47,8 @@ function calcGasTotal (gasLimit = '0', gasPrice = '0') {
   })
 }
 
-function calcEIP1559GasTotal (gasLimit, baseFee, maxPriorityFee) {
-  const gasPricingTotal = addCurrencies(baseFee, maxPriorityFee, {
+function calcEIP1559GasTotal (gasLimit, baseFeePerGas, maxPriorityFeePerGas) {
+  const gasPricingTotal = addCurrencies(baseFeePerGas, maxPriorityFeePerGas, {
     aBase: 16,
     bBase: 16,
     toNumericBase: 'hex',

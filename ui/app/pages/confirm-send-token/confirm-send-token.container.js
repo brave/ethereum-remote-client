@@ -26,6 +26,8 @@ const mapDispatchToProps = (dispatch) => {
           to: tokenAddress,
           gas: gasLimit,
           gasPrice,
+          maxPriorityFeePerGas,
+          maxFeePerGas,
         } = {},
       } = txData
 
@@ -42,6 +44,8 @@ const mapDispatchToProps = (dispatch) => {
         from,
         gasLimit,
         gasPrice,
+        maxPriorityFeePerGas,
+        maxFeePerGas,
         gasTotal: null,
         to,
         amount: tokenAmountInHex,

@@ -14,6 +14,8 @@ export default class SendFooter extends Component {
     from: PropTypes.object,
     gasLimit: PropTypes.string,
     gasPrice: PropTypes.string,
+    maxPriorityFeePerGas: PropTypes.string,
+    maxFeePerGas: PropTypes.string,
     gasTotal: PropTypes.string,
     history: PropTypes.object,
     inError: PropTypes.bool,
@@ -28,6 +30,7 @@ export default class SendFooter extends Component {
     gasEstimateType: PropTypes.string,
     gasIsLoading: PropTypes.bool,
     mostRecentOverviewPage: PropTypes.string.isRequired,
+    isEIP1559Active: PropTypes.bool.isRequired,
   }
 
   static contextTypes = {
@@ -51,6 +54,9 @@ export default class SendFooter extends Component {
       from: { address: from },
       gasLimit: gas,
       gasPrice,
+      maxPriorityFeePerGas,
+      maxFeePerGas,
+      isEIP1559Active,
       sendToken,
       sign,
       to,
@@ -72,19 +78,23 @@ export default class SendFooter extends Component {
 
     // TODO: add nickname functionality
     await addToAddressBookIfNew(to, toAccounts)
+
+    const gasParams = isEIP1559Active ?
+      { gas, maxPriorityFeePerGas, maxFeePerGas }
+      : { gas, gasPrice }
+
     const promise = editingTransactionId
       ? update({
         amount,
         data,
         editingTransactionId,
         from,
-        gas,
-        gasPrice,
+        gasParams,
         sendToken,
         to,
         unapprovedTxs,
       })
-      : sign({ data, sendToken, to, amount, from, gas, gasPrice })
+      : sign({ data, sendToken, to, amount, from, gasParams })
 
     Promise.resolve(promise)
       .then(() => {

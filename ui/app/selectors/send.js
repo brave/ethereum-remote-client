@@ -4,9 +4,10 @@ import {
   getAddressBook,
   getSelectedAccount,
   getTargetAccount,
-  getAveragePriceEstimateInHexWEI,
+  getAveragePriceEstimateInHexWEI, getBaseFeePerGas,
 } from '.'
-import { calcGasTotal } from '../pages/send/send.utils'
+import { calcEIP1559GasTotal, calcGasTotal } from '../pages/send/send.utils'
+import { addCurrencies } from '../helpers/utils/conversion-util'
 
 export function getBlockGasLimit (state) {
   return state.metamask.currentBlockGasLimit
@@ -32,8 +33,33 @@ export function getGasPrice (state) {
   return state.metamask.send.gasPrice || getAveragePriceEstimateInHexWEI(state)
 }
 
+export function getMaxPriorityFeePerGas (state) {
+  // Basic estimates for gasPrice can be used for maxPriorityFeePerGas
+  return state.metamask.send.maxPriorityFeePerGas || getAveragePriceEstimateInHexWEI(state)
+}
+
+export function getMaxFeePerGas (state) {
+  const baseFeePerGas = getBaseFeePerGas(state)
+  const maxPriorityFeePerGas = getMaxPriorityFeePerGas(state)
+
+  return state.metamask.send.maxFeePerGas || addCurrencies(baseFeePerGas, maxPriorityFeePerGas, {
+    aBase: 16,
+    bBase: 16,
+    toNumericBase: 'hex',
+  })
+}
+
+
 export function getGasTotal (state) {
   return calcGasTotal(getGasLimit(state), getGasPrice(state))
+}
+
+export function getEIP1559GasTotal (state) {
+  const gasLimit = getGasLimit(state)
+  const maxPriorityFeePerGas = getMaxPriorityFeePerGas(state)
+  const baseFeePerGas = getBaseFeePerGas(state)
+
+  return calcEIP1559GasTotal(gasLimit, baseFeePerGas, maxPriorityFeePerGas)
 }
 
 export function getPrimaryCurrency (state) {

@@ -8,13 +8,12 @@ export function addHexPrefixToObjectValues (obj) {
   }, {})
 }
 
-export function constructTxParams ({ sendToken, data, to, amount, from, gas, gasPrice }) {
+export function constructTxParams ({ sendToken, data, to, amount, from, gasParams }) {
   const txParams = {
     data,
     from,
     value: '0',
-    gas,
-    gasPrice,
+    ...gasParams,
   }
 
   if (!sendToken) {
@@ -30,11 +29,10 @@ export function constructUpdatedTx ({
   data,
   editingTransactionId,
   from,
-  gas,
-  gasPrice,
   sendToken,
   to,
   unapprovedTxs,
+  gasParams,
 }) {
   const unapprovedTx = unapprovedTxs[editingTransactionId]
   const txParamsData = unapprovedTx.txParams.data ? unapprovedTx.txParams.data : data
@@ -47,9 +45,8 @@ export function constructUpdatedTx ({
         data: txParamsData,
         to,
         from,
-        gas,
-        gasPrice,
         value: amount,
+        ...gasParams,
       }),
     ),
   }

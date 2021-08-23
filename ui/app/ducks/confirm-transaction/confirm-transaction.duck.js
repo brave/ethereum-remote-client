@@ -17,6 +17,7 @@ import {
 
 import {
   getTokenData,
+  isEIP1559Transaction,
   sumHexes,
 } from '../../helpers/utils/transactions.util'
 
@@ -272,18 +273,22 @@ export function updateGasAndCalculate ({ gasLimit, gasPrice }) {
 }
 
 function increaseFromLastGasPrice (txData) {
-  const { lastGasPrice, txParams: { gasPrice: previousGasPrice } = {} } = txData
+  const isEIP1559 = isEIP1559Transaction(txData)
+
+  const { previousGasTxParams, txParams: { gasPrice: previousGasPrice, maxFeePerGas: previousMaxFeePerGas } = {} } = txData
+  const { gasPrice: lastGasPrice, maxFeePerGas: lastMaxFeePerGas } = previousGasTxParams
 
   // Set the minimum to a 10% increase from the lastGasPrice.
-  const minimumGasPrice = increaseLastGasPrice(lastGasPrice)
-  const gasPriceBelowMinimum = hexGreaterThan(minimumGasPrice, previousGasPrice)
+  const minimumGasPrice = increaseLastGasPrice(isEIP1559 ? lastMaxFeePerGas : lastGasPrice)
+  const gasPriceBelowMinimum = hexGreaterThan(minimumGasPrice, isEIP1559 ? previousMaxFeePerGas : previousGasPrice)
   const gasPrice = (!previousGasPrice || gasPriceBelowMinimum) ? minimumGasPrice : previousGasPrice
+  const gasParams = isEIP1559 ? { maxFeePerGas: gasPrice } : { gasPrice }
 
   return {
     ...txData,
     txParams: {
       ...txData.txParams,
-      gasPrice,
+      ...gasParams,
     },
   }
 }
@@ -297,7 +302,7 @@ export function updateTxDataAndCalculate (txData) {
 
     dispatch(updateTxData(txData))
 
-    const { txParams: { value = '0x0', gas: gasLimit = '0x0', gasPrice = '0x0' } = {} } = txData
+    const { txParams: { value = '0x0', gas: gasLimit = '0x0', gasPrice, maxFeePerGas } = {} } = txData
 
     const fiatTransactionAmount = getValueFromWeiHex({
       value, fromCurrency: nativeCurrency, toCurrency: currentCurrency, conversionRate, numberOfDecimals: 2,
@@ -312,7 +317,7 @@ export function updateTxDataAndCalculate (txData) {
       hexTransactionAmount: value,
     }))
 
-    const hexTransactionFee = getHexGasTotal({ gasLimit, gasPrice })
+    const hexTransactionFee = getHexGasTotal({ gasLimit, gasPrice, maxFeePerGas })
 
     const fiatTransactionFee = getTransactionFee({
       value: hexTransactionFee,

@@ -1770,6 +1770,7 @@ export default class MetamaskController extends EventEmitter {
       provider: this.provider,
       blockTracker: this.blockTracker,
       getProviderConfig: this.networkController.getProviderConfig.bind(this.networkController),
+      getKeyringForAccount: this.keyringController.getKeyringForAccount.bind(this.keyringController),
     })
     this.txController.on('newUnapprovedTx', () => opts.showUnapprovedTx())
 

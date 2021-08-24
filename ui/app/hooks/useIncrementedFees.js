@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { isEIP1559Transaction } from '../helpers/utils/transactions.util'
+import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
 import { increaseLastGasPrice } from '../helpers/utils/confirm-tx.util'
 
 
@@ -12,7 +12,7 @@ export function useIncrementedGasFees (transactionGroup) {
   const { primaryTransaction } = transactionGroup
 
   return useMemo(() => {
-    if (isEIP1559Transaction(primaryTransaction)) {
+    if (hasEIP1559GasFields(primaryTransaction)) {
       const maxFeePerGas = primaryTransaction.txParams?.maxFeePerGas
       const maxPriorityFeePerGas = primaryTransaction.txParams?.maxPriorityFeePerGas
       return {

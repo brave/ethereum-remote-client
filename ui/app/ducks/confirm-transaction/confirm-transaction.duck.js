@@ -17,7 +17,7 @@ import {
 
 import {
   getTokenData,
-  isEIP1559Transaction,
+  hasEIP1559GasFields,
   sumHexes,
 } from '../../helpers/utils/transactions.util'
 
@@ -273,7 +273,7 @@ export function updateGasAndCalculate ({ gasLimit, gasPrice }) {
 }
 
 function increaseFromLastGasPrice (txData) {
-  const isEIP1559 = isEIP1559Transaction(txData)
+  const isEIP1559 = hasEIP1559GasFields(txData)
 
   const { previousGasTxParams, txParams: { gasPrice: previousGasPrice, maxFeePerGas: previousMaxFeePerGas } = {} } = txData
   const { gasPrice: lastGasPrice, maxFeePerGas: lastMaxFeePerGas } = previousGasTxParams

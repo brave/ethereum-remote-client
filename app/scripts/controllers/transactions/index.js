@@ -32,12 +32,15 @@ import {
   TRANSACTION_TYPE_RETRY,
   TRANSACTION_TYPE_STANDARD,
   TRANSACTION_STATUS_APPROVED,
+  TRANSACTION_ENVELOPE_TYPES,
 } from './enums'
 
 import { hexToBn, bnToHex, BnMultiplyByFraction } from '../../lib/util'
 import { TRANSACTION_NO_CONTRACT_ERROR_KEY } from '../../../../ui/app/helpers/constants/error-keys'
 import { NETWORK_TYPE_TO_ID_MAP } from '../network/enums'
-import { isEIP1559Transaction } from '../../../../ui/app/helpers/utils/transactions.util'
+import { hasEIP1559GasFields } from '../../../../ui/app/helpers/utils/transactions.util'
+import TrezorKeyring from 'eth-trezor-keyring'
+import LedgerBridgeKeyring from '@metamask/eth-ledger-bridge-keyring'
 
 const SIMPLE_GAS_COST = '0x5208' // Hex for 21000, cost of a simple send.
 const MAX_MEMSTORE_TX_LIST_SIZE = 100 // Number of transactions (by unique nonces) to keep in memory
@@ -80,6 +83,7 @@ export default class TransactionController extends EventEmitter {
     this.getPermittedAccounts = opts.getPermittedAccounts
     this.blockTracker = opts.blockTracker
     this.signEthTx = opts.signTransaction
+    this.getKeyringForAccount = opts.getKeyringForAccount
     this.inProcessOfSigning = new Set()
 
     this.memStore = new ObservableStore({})
@@ -145,6 +149,13 @@ export default class TransactionController extends EventEmitter {
     }
   }
 
+  async getEIP1559Compatibility (fromAddress) {
+    const keyring = await this.getKeyringForAccount(fromAddress)
+
+    // TODO (@onyb): remove this when hardware wallet support for EIP-1559 is available.
+    return ![TrezorKeyring.type, LedgerBridgeKeyring.type].includes(keyring.type)
+  }
+
   /**
    * Gets a configuration object compatible with @ethereumjs/tx to be used
    * while creating unsigned transactions. It works for both default networks
@@ -152,11 +163,11 @@ export default class TransactionController extends EventEmitter {
    *
    * @returns {Common} The configuration object to be passed to TransactionFactory.
    */
-  makeConfig () {
+  async makeConfig (fromAddress) {
     const { type: networkType, chainId: configChainId, nickname: name } = this.getProviderConfig()
 
-    // TODO (@onyb): Do not hardcode the hardfork.
-    const hardfork = Hardfork.Berlin
+    const accountSupportsEIP1559 = await this.getEIP1559Compatibility(fromAddress)
+    const hardfork = accountSupportsEIP1559 ? Hardfork.London : Hardfork.Berlin
 
     // Not a custom RPC network. Obtain the canonical chain ID corresponding to
     // the network type, and return the Common configuration object.
@@ -304,6 +315,9 @@ export default class TransactionController extends EventEmitter {
    * @returns {Promise<object>} - resolves with txMeta
    */
   async addTxGasDefaults (txMeta, getCodeResponse) {
+    const { txParams: { from } } = txMeta
+    const accountSupportsEIP1559 = this.getEIP1559Compatibility(from)
+
     const defaultGasPrice = await this._getDefaultGasPrice(txMeta)
     const { gasLimit: defaultGasLimit, simulationFails } = await this._getDefaultGasLimit(txMeta, getCodeResponse)
 
@@ -314,14 +328,15 @@ export default class TransactionController extends EventEmitter {
 
     // Consider transaction parameters to be EIP-1559 compliant only if both
     // the maxPriorityFeePerGas and maxFeePerGas fields are set.
-    const hasEIP1559GasFields = txMeta.txParams.maxPriorityFeePerGas &&
-      txMeta.txParams.maxFeePerGas
+    const isEIP1559Transaction = hasEIP1559GasFields(txMeta) && accountSupportsEIP1559
 
     // Revert to legacy gasPrice field, if neither legacy nor EIP-1559 gas
     // parameters are explicitly set.
-    if (defaultGasPrice && !txMeta.txParams.gasPrice && !hasEIP1559GasFields) {
+    if (defaultGasPrice && !txMeta.txParams.gasPrice && !isEIP1559Transaction) {
       txMeta.txParams.gasPrice = defaultGasPrice
     }
+
+    // TODO (@onyb): add defaults for EIP-1559 gas fields.
 
     if (defaultGasLimit && !txMeta.txParams.gas) {
       txMeta.txParams.gas = defaultGasLimit
@@ -401,7 +416,7 @@ export default class TransactionController extends EventEmitter {
       gas: customGasParams?.gasLimit ?? txParams.gas ?? SIMPLE_GAS_COST,
     }
 
-    if (isEIP1559Transaction(txMeta)) {
+    if (hasEIP1559GasFields(txMeta)) {
       previousGasTxParams = {
         ...previousGasTxParams,
         maxFeePerGas: txParams.maxFeePerGas,
@@ -582,17 +597,23 @@ export default class TransactionController extends EventEmitter {
   */
   async signTransaction (txId) {
     const txMeta = this.txStateManager.getTx(txId)
+    const isEIP1559Transaction = hasEIP1559GasFields(txMeta)
+
     // add network/chain id
     const chainId = this.getChainId()
+    const type = isEIP1559Transaction
+      ? TRANSACTION_ENVELOPE_TYPES.FEE_MARKET
+      : TRANSACTION_ENVELOPE_TYPES.LEGACY
     const txParams = {
       ...txMeta.txParams,
       chainId,
       gasLimit: txMeta.txParams.gas,
+      type,
     }
 
     // prepare unsigned tx
-    const common = this.makeConfig()
     const fromAddress = txParams.from
+    const common = await this.makeConfig(fromAddress)
     const unsignedEthTx = TransactionFactory.fromTxData(txParams, { common })
 
     // sign tx

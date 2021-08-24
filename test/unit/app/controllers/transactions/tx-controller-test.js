@@ -51,6 +51,9 @@ describe('Transaction Controller', function () {
       getProviderConfig: () => ({
         type: KOVAN,
       }),
+      getKeyringForAccount: (_) => ({
+        type: 'Simple Key Pair',
+      }),
     })
     txController.nonceTracker.getNonceLock = () => Promise.resolve({ nextNonce: 0, releaseLock: noop })
   })

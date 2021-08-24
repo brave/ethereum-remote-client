@@ -250,7 +250,7 @@ export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
  * @param {Object} transaction TransactionMeta object.
  * @returns {boolean} true if transaction is of EIP-1559 format, false otherwise.
  */
-export function isEIP1559Transaction (transaction) {
+export function hasEIP1559GasFields (transaction) {
   return (
     isHexString(transaction?.txParams?.maxFeePerGas) &&
     isHexString(transaction?.txParams?.maxPriorityFeePerGas)

@@ -8,7 +8,7 @@ import {
   setCustomGasPriceForRetry,
 } from '../ducks/gas/gas.duck'
 import { useMetricEvent } from './useMetricEvent'
-import { isEIP1559Transaction } from '../helpers/utils/transactions.util'
+import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
 import { useIncrementedGasFees } from './useIncrementedFees'
 
 
@@ -35,7 +35,7 @@ export function useRetryTransaction (transactionGroup) {
     event.stopPropagation()
     trackMetricsEvent()
 
-    if (isEIP1559Transaction(transaction)) {
+    if (hasEIP1559GasFields(transaction)) {
       // TODO (@onyb): handle EIP-1559 fee bump logic.
 
       // Step 1: query eth_feeHistory RPC to fetch the latest estimates

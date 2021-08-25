@@ -6,6 +6,9 @@ const fakeLocalStorage = {}
 
 const GasDuck = proxyquire('./gas.duck.js', {
   '../../../lib/local-storage-helpers': fakeLocalStorage,
+  '../../selectors': {
+    isEIP1559Active: (_) => false,
+  },
 })
 
 const {

@@ -8,8 +8,10 @@ import {
   decGWEIToHexWEI,
 } from '../../helpers/utils/conversions.util'
 import {
+  isEIP1559Active,
   isEthereumNetwork,
 } from '../../selectors'
+import * as actions from '../../store/actions'
 
 // Actions
 const BASIC_GAS_ESTIMATE_LOADING_FINISHED = 'metamask/gas/BASIC_GAS_ESTIMATE_LOADING_FINISHED'
@@ -224,17 +226,18 @@ async function queryEthGasStationPredictionTable () {
 
 export function fetchBasicGasEstimates () {
   return async (dispatch, getState) => {
-    const { basicPriceEstimatesLastRetrieved } = getState().gas
+    const state = getState()
+    const { basicPriceEstimatesLastRetrieved } = state.gas
     const timeLastRetrieved = basicPriceEstimatesLastRetrieved || loadLocalStorageData('BASIC_PRICE_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
 
     let basicEstimates
     if (Date.now() - timeLastRetrieved > 75000) {
-      basicEstimates = await fetchExternalBasicGasEstimates(dispatch)
+      basicEstimates = await fetchExternalBasicGasEstimates(dispatch, state)
     } else {
       const cachedBasicEstimates = loadLocalStorageData('BASIC_PRICE_ESTIMATES')
-      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasEstimates(dispatch)
+      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasEstimates(dispatch, state)
     }
 
     dispatch(setBasicGasEstimateData(basicEstimates))
@@ -244,32 +247,62 @@ export function fetchBasicGasEstimates () {
   }
 }
 
-async function fetchExternalBasicGasEstimates (dispatch) {
+async function fetchExternalBasicGasEstimates (dispatch, state) {
   const response = await queryEthGasStationBasic()
+  const estimates = await response.json()
 
-  const {
-    safeLow: safeLowTimes10,
-    average: averageTimes10,
-    fast: fastTimes10,
-    fastest: fastestTimes10,
-    block_time: blockTime,
-    blockNum,
-  } = await response.json()
+  const { blockNum, block_time: blockTime } = estimates
 
-  const [average, fast, fastest, safeLow] = [
-    averageTimes10,
-    fastTimes10,
-    fastestTimes10,
-    safeLowTimes10,
-  ].map((price) => (new BigNumber(price)).div(10).toNumber())
+  let basicEstimates
+  if (isEIP1559Active(state)) {
+    const conn = actions.getBackgroundConnection()
+    const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
 
-  const basicEstimates = {
-    safeLow,
-    average,
-    fast,
-    fastest,
-    blockTime,
-    blockNum,
+    const estimateGroups = []
+    for (let i = 0, j = feeOracleResponse.length; i < j; i += 2) {
+      estimateGroups.push(feeOracleResponse.slice(i, i + 2))
+    }
+
+    const [fastest, fast, average, safeLow] =
+      estimateGroups
+        .map((
+          [
+            { maxPriorityFeePerGas: low },
+            { maxPriorityFeePerGas: high },
+          ],
+        ) => new BigNumber(parseInt(low + high)).div(2).div(1000000000).toNumber())
+
+    basicEstimates = {
+      safeLow,
+      average,
+      fast,
+      fastest,
+      blockTime,
+      blockNum,
+    }
+  } else {
+    const {
+      safeLow: safeLowTimes10,
+      average: averageTimes10,
+      fast: fastTimes10,
+      fastest: fastestTimes10,
+    } = estimates
+
+    const [average, fast, fastest, safeLow] = [
+      averageTimes10,
+      fastTimes10,
+      fastestTimes10,
+      safeLowTimes10,
+    ].map((price) => (new BigNumber(price)).div(10).toNumber())
+
+    basicEstimates = {
+      safeLow,
+      average,
+      fast,
+      fastest,
+      blockTime,
+      blockNum,
+    }
   }
 
   const timeRetrieved = Date.now()
@@ -282,17 +315,18 @@ async function fetchExternalBasicGasEstimates (dispatch) {
 
 export function fetchBasicGasAndTimeEstimates () {
   return async (dispatch, getState) => {
-    const { basicPriceAndTimeEstimatesLastRetrieved } = getState().gas
+    const state = getState()
+    const { basicPriceAndTimeEstimatesLastRetrieved } = state.gas
     const timeLastRetrieved = basicPriceAndTimeEstimatesLastRetrieved || loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
 
     let basicEstimates
     if (Date.now() - timeLastRetrieved > 75000) {
-      basicEstimates = await fetchExternalBasicGasAndTimeEstimates(dispatch)
+      basicEstimates = await fetchExternalBasicGasAndTimeEstimates(dispatch, state)
     } else {
       const cachedBasicEstimates = loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES')
-      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasAndTimeEstimates(dispatch)
+      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasAndTimeEstimates(dispatch, state)
     }
 
     dispatch(setBasicGasEstimateData(basicEstimates))
@@ -301,41 +335,84 @@ export function fetchBasicGasAndTimeEstimates () {
   }
 }
 
-async function fetchExternalBasicGasAndTimeEstimates (dispatch) {
+async function fetchExternalBasicGasAndTimeEstimates (dispatch, state) {
   const response = await queryEthGasStationBasic()
+  const estimates = await response.json()
 
-  const {
-    average: averageTimes10,
-    avgWait,
-    block_time: blockTime,
-    blockNum,
-    fast: fastTimes10,
-    fastest: fastestTimes10,
-    fastestWait,
-    fastWait,
-    safeLow: safeLowTimes10,
-    safeLowWait,
-    speed,
-  } = await response.json()
-  const [average, fast, fastest, safeLow] = [
-    averageTimes10,
-    fastTimes10,
-    fastestTimes10,
-    safeLowTimes10,
-  ].map((price) => (new BigNumber(price)).div(10).toNumber())
+  const { blockNum, block_time: blockTime, speed } = estimates
 
-  const basicEstimates = {
-    average,
-    avgWait,
-    blockTime,
-    blockNum,
-    fast,
-    fastest,
-    fastestWait,
-    fastWait,
-    safeLow,
-    safeLowWait,
-    speed,
+  let basicEstimates
+  if (isEIP1559Active(state)) {
+    const conn = actions.getBackgroundConnection()
+    const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
+
+    const estimateGroups = []
+    for (let i = 0, j = feeOracleResponse.length; i < j; i += 2) {
+      estimateGroups.push(feeOracleResponse.slice(i, i + 2))
+    }
+
+    const [fastest, fast, average, safeLow] =
+      estimateGroups
+        .map((
+          [
+            { maxPriorityFeePerGas: low },
+            { maxPriorityFeePerGas: high },
+          ],
+        ) => new BigNumber(parseInt(low + high)).div(2).div(1000000000).toNumber())
+
+    const [fastestWait, fastWait, avgWait, safeLowWait] =
+      estimateGroups
+        .map((
+          [
+            { timeFactor: low },
+            { timeFactor: high },
+          ],
+        ) => new BigNumber(low + high).div(2).mul(blockTime.toFixed(3)).div(60).toNumber())
+
+    basicEstimates = {
+      average,
+      avgWait,
+      blockTime,
+      blockNum,
+      fast,
+      fastest,
+      fastestWait,
+      fastWait,
+      safeLow,
+      safeLowWait,
+      speed,
+    }
+  } else {
+    const {
+      average: averageTimes10,
+      avgWait,
+      fast: fastTimes10,
+      fastest: fastestTimes10,
+      fastestWait,
+      fastWait,
+      safeLow: safeLowTimes10,
+      safeLowWait,
+    } = await estimates
+    const [average, fast, fastest, safeLow] = [
+      averageTimes10,
+      fastTimes10,
+      fastestTimes10,
+      safeLowTimes10,
+    ].map((price) => (new BigNumber(price)).div(10).toNumber())
+
+    basicEstimates = {
+      average,
+      avgWait,
+      blockTime,
+      blockNum,
+      fast,
+      fastest,
+      fastestWait,
+      fastWait,
+      safeLow,
+      safeLowWait,
+      speed,
+    }
   }
 
   const timeRetrieved = Date.now()
@@ -400,7 +477,7 @@ export function fetchGasEstimates (blockTime) {
   return (dispatch, getState) => {
     const state = getState()
 
-    if (!isEthereumNetwork(state)) {
+    if (!isEthereumNetwork(state) || isEIP1559Active(state)) {
       return Promise.resolve(null)
     }
 

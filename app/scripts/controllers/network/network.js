@@ -4,7 +4,8 @@ import ObservableStore from 'obs-store'
 import ComposedStore from 'obs-store/lib/composed'
 import EthQuery from 'eth-query'
 import JsonRpcEngine from 'json-rpc-engine'
-import providerFromEngine from 'eth-json-rpc-middleware/providerFromEngine'
+import { providerFromEngine } from 'eth-json-rpc-middleware'
+import { suggestFees } from './eip1559FeeOracle'
 import log from 'loglevel'
 import createMetamaskMiddleware from './createMetamaskMiddleware'
 import createInfuraClient from './createInfuraClient'
@@ -223,6 +224,29 @@ export default class NetworkController extends EventEmitter {
         },
       )
     })
+  }
+
+  async getMaxPriorityFeePerGasEstimates () {
+    const { provider: originalProvider } = this.getProviderAndBlockTracker()
+    const ethQuery = new EthQuery(originalProvider)
+
+    const provider = {
+      ...originalProvider,
+      send: async (method, params) => new Promise((resolve, reject) => {
+        const opts = params === undefined ? { method } : { method, params }
+        ethQuery.sendAsync(
+          opts,
+          (err, block) => {
+            if (err) {
+              return reject(err)
+            }
+            return resolve(block)
+          },
+        )
+      }),
+    }
+
+    return await suggestFees(provider)
   }
 
   /**

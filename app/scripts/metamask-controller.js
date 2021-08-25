@@ -24,7 +24,7 @@ import createMethodMiddleware from './lib/createMethodMiddleware'
 import createOriginMiddleware from './lib/createOriginMiddleware'
 import createTabIdMiddleware from './lib/createTabIdMiddleware'
 import createOnboardingMiddleware from './lib/createOnboardingMiddleware'
-import providerAsMiddleware from 'eth-json-rpc-middleware/providerAsMiddleware'
+import { providerAsMiddleware } from 'eth-json-rpc-middleware'
 import { setupMultiplex } from './lib/stream-utils.js'
 import KeyringController from 'eth-keyring-controller'
 import EnsController from './controllers/ens'
@@ -417,6 +417,7 @@ export default class MetamaskController extends EventEmitter {
       estimateGas: nodeify(this.estimateGas, this),
       getPendingNonce: nodeify(this.getPendingNonce, this),
       getNextNonce: nodeify(this.getNextNonce, this),
+      getMaxPriorityFeePerGasEstimates: nodeify(this.getMaxPriorityFeePerGasEstimates, this),
 
       // swapsController
       quote: nodeify(this.quote, this),
@@ -1909,6 +1910,10 @@ export default class MetamaskController extends EventEmitter {
         },
       },
     )
+  }
+
+  async getMaxPriorityFeePerGasEstimates (...args) {
+    return await this.networkController.getMaxPriorityFeePerGasEstimates(...args)
   }
 
   //=============================================================================

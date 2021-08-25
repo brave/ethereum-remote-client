@@ -1,6 +1,6 @@
 import JsonRpcEngine from 'json-rpc-engine'
-import scaffoldMiddleware from 'eth-json-rpc-middleware/scaffold'
-import providerAsMiddleware from 'eth-json-rpc-middleware/providerAsMiddleware'
+import createScaffoldMiddleware from 'json-rpc-engine/src/createScaffoldMiddleware'
+import { providerAsMiddleware } from 'eth-json-rpc-middleware'
 import GanacheCore from 'ganache-core'
 
 export function getTestSeed () {
@@ -27,7 +27,7 @@ export function providerFromEngine (engine) {
 export function createTestProviderTools (opts = {}) {
   const engine = createEngineForTestData()
   // handle provided hooks
-  engine.push(scaffoldMiddleware(opts.scaffold || {}))
+  engine.push(createScaffoldMiddleware(opts.scaffold || {}))
   // handle block tracker methods
   engine.push(providerAsMiddleware(GanacheCore.provider({
     mnemonic: getTestSeed(),

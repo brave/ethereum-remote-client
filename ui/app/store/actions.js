@@ -50,7 +50,7 @@ export function _setBackgroundConnection (backgroundConnection) {
   promisifiedBackground = pify(background)
 }
 
-function getBackgroundConnection () {
+export function getBackgroundConnection () {
   return promisifiedBackground
 }
 

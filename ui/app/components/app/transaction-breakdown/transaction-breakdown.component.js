@@ -19,18 +19,87 @@ export default class TransactionBreakdown extends PureComponent {
     nonce: PropTypes.string,
     gas: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     gasPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    maxPriorityFeePerGas: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    maxFeePerGas: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     gasUsed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     totalInHex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    hasEIP1559GasFields: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
     showFiat: true,
   }
 
+  renderFees () {
+    const { t } = this.context
+    const { gasPrice, maxPriorityFeePerGas, maxFeePerGas, nativeCurrency, hasEIP1559GasFields } = this.props
+
+
+    const gasPriceComponent = !hasEIP1559GasFields && (
+      <TransactionBreakdownRow title={t('gasPrice')}>
+        {typeof gasPrice !== 'undefined'
+          ? (
+            <CurrencyDisplay
+              className="transaction-breakdown__value"
+              data-testid="transaction-breakdown__gas-price"
+              currency={nativeCurrency}
+              denomination={GWEI}
+              value={gasPrice}
+              hideLabel
+            />
+          )
+          : '?'
+        }
+      </TransactionBreakdownRow>
+    )
+
+    const maxPriorityFeePerGasComponent = hasEIP1559GasFields && (
+      <TransactionBreakdownRow title={t('maxPriorityFeePerGas')}>
+        {typeof maxPriorityFeePerGas !== 'undefined'
+          ? (
+            <CurrencyDisplay
+              className="transaction-breakdown__value"
+              data-testid="transaction-breakdown__gas-price"
+              currency={nativeCurrency}
+              denomination={GWEI}
+              value={maxPriorityFeePerGas}
+              hideLabel
+            />
+          )
+          : '?'
+        }
+      </TransactionBreakdownRow>
+    )
+
+    const maxFeePerGasComponent = hasEIP1559GasFields && (
+      <TransactionBreakdownRow title={t('maxFeePerGas')}>
+        {typeof maxFeePerGas !== 'undefined'
+          ? (
+            <CurrencyDisplay
+              className="transaction-breakdown__value"
+              data-testid="transaction-breakdown__gas-price"
+              currency={nativeCurrency}
+              denomination={GWEI}
+              value={maxFeePerGas}
+              hideLabel
+            />
+          )
+          : '?'
+        }
+      </TransactionBreakdownRow>
+    )
+
+    return [
+      gasPriceComponent,
+      maxPriorityFeePerGasComponent,
+      maxFeePerGasComponent,
+    ]
+  }
+
   render () {
     const { t } = this.context
-    const { gas, gasPrice, value, className, nonce, nativeCurrency, showFiat, totalInHex, gasUsed } = this.props
+    const { gas, value, className, nonce, showFiat, totalInHex, gasUsed } = this.props
     return (
       <div className={classnames('transaction-breakdown', className)}>
         <div className="transaction-breakdown__title">
@@ -80,21 +149,7 @@ export default class TransactionBreakdown extends PureComponent {
             </TransactionBreakdownRow>
           )
         }
-        <TransactionBreakdownRow title={t('gasPrice')}>
-          {typeof gasPrice !== 'undefined'
-            ? (
-              <CurrencyDisplay
-                className="transaction-breakdown__value"
-                data-testid="transaction-breakdown__gas-price"
-                currency={nativeCurrency}
-                denomination={GWEI}
-                value={gasPrice}
-                hideLabel
-              />
-            )
-            : '?'
-          }
-        </TransactionBreakdownRow>
+        { this.renderFees() }
         <TransactionBreakdownRow title={t('total')}>
           <div>
             <UserPreferencedCurrencyDisplay

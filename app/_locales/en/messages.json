@@ -9,22 +9,22 @@
   "baseFee": {
     "message": "Base fee"
   },
-  "maxPriorityFee": {
+  "maxPriorityFeePerGas": {
     "message": "Max priority fee (GWEI)"
   },
-  "maxFee": {
+  "maxFeePerGas": {
     "message": "Max fee (GWEI)"
   },
-  "maxPriorityFeeNoDenom": {
+  "maxPriorityFeePerGasNoDenom": {
     "message": "Max priority fee"
   },
-  "maxFeeNoDenom": {
+  "maxFeePerGasNoDenom": {
     "message": "Max fee"
   },
-  "maxPriorityFeeInfoModalContent": {
+  "maxPriorityFeePerGasInfoModalContent": {
     "message": "Max priority fee (aka \"miner tip\") goes directly to miners and incentivizes them to prioritize your transaction. You’ll most often pay your max setting."
   },
-  "maxFeeInfoModalContent": {
+  "maxFeePerGasInfoModalContent": {
     "message": "The max fee is the most you'll pay (base fee + priority fee)."
   },
   "eth_accounts": {

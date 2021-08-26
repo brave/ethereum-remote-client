@@ -218,8 +218,8 @@ const MODALS = {
     },
   },
 
-  MAX_PRIORITY_FEE_INFO_MODAL: {
-    contents: <NotifcationModal header="maxPriorityFeeNoDenom" message="maxPriorityFeeInfoModalContent" />,
+  MAX_PRIORITY_FEE_PER_GAS_INFO_MODAL: {
+    contents: <NotifcationModal header="maxPriorityFeePerGasNoDenom" message="maxPriorityFeePerGasInfoModalContent" />,
     mobileModalStyle: {
       width: '95%',
       top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',
@@ -230,8 +230,8 @@ const MODALS = {
     },
   },
 
-  MAX_FEE_INFO_MODAL: {
-    contents: <NotifcationModal header="maxFeeNoDenom" message="maxFeeInfoModalContent" />,
+  MAX_FEE_PER_GAS_INFO_MODAL: {
+    contents: <NotifcationModal header="maxFeePerGasNoDenom" message="maxFeePerGasInfoModalContent" />,
     mobileModalStyle: {
       width: '95%',
       top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',

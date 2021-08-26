@@ -256,7 +256,7 @@ export default class AdvancedGasInputs extends Component {
             infoOnClick: showGasLimitInfoModal,
           })}
           {this.renderGasInput({
-            label: t('maxPriorityFee'),
+            label: t('maxPriorityFeePerGas'),
             value: maxPriorityFeePerGas,
             onChange: this.onChangeMaxPriorityFeePerGas,
             errorComponent: maxPriorityFeePerGasErrorComponent,
@@ -267,7 +267,7 @@ export default class AdvancedGasInputs extends Component {
         <br />
         <div className="advanced-gas-inputs__gas-edit-rows">
           {this.renderGasInput({
-            label: t('maxFee'),
+            label: t('maxFeePerGas'),
             value: maxFeePerGas,
             onChange: this.onChangeMaxFeePerGas,
             errorComponent: maxFeePerGasErrorComponent,

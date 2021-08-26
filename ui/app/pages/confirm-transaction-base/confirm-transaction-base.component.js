@@ -360,7 +360,7 @@ export default class ConfirmTransactionBase extends Component {
             t('estimatedGasFee'),
             'Likely in < 30 seconds',
             maxPriorityFee,
-            `${t('maxFeeNoDenom')}:`,
+            `${t('maxFeePerGasNoDenom')}:`,
             hexTransactionFee,
             true,
           )

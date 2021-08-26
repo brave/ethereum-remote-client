@@ -125,12 +125,12 @@ export default class EIP1559GasControlsModal extends Component {
           </div>
 
           <div className="gas-modal-content__info-row__transaction-info">
-            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxPriorityFee')}</span>
+            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxPriorityFeePerGas')}</span>
             <span className="gas-modal-content__info-row__transaction-info__value">{maxPriorityFee}</span>
           </div>
 
           <div className="gas-modal-content__info-row__transaction-info">
-            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxFee')}</span>
+            <span className="gas-modal-content__info-row__transaction-info__label">{t('maxFeePerGas')}</span>
             <span className="gas-modal-content__info-row__transaction-info__value">{maxFee}</span>
           </div>
 

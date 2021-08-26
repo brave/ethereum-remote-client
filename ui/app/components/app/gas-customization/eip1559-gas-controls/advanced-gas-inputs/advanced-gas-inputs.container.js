@@ -18,8 +18,8 @@ function convertGasLimitForInputs (gasLimitInHexWEI) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    showMaxPriorityFeeInfoModal: () => dispatch(showModal({ name: 'MAX_PRIORITY_FEE_INFO_MODAL' })),
-    showMaxFeeInfoModal: () => dispatch(showModal({ name: 'MAX_FEE_INFO_MODAL' })),
+    showMaxPriorityFeeInfoModal: () => dispatch(showModal({ name: 'MAX_PRIORITY_FEE_PER_GAS_INFO_MODAL' })),
+    showMaxFeeInfoModal: () => dispatch(showModal({ name: 'MAX_FEE_PER_GAS_INFO_MODAL' })),
     showGasLimitInfoModal: () => dispatch(showModal({ name: 'GAS_LIMIT_INFO_MODAL' })),
   }
 }

@@ -20,7 +20,7 @@ import {
   transactionFeeSelector,
   txDataSelector,
 } from '../../selectors/confirm-transaction'
-import { getCurrentCurrency, getDomainMetadata } from '../../selectors/selectors'
+import { getCurrentCurrency, getDomainMetadata, isEIP1559Network } from '../../selectors/selectors'
 import { currentNetworkTxListSelector } from '../../selectors/transactions'
 
 export default function ConfirmApprove () {
@@ -38,6 +38,7 @@ export default function ConfirmApprove () {
   const currentNetworkTxList = useSelector(currentNetworkTxListSelector)
   const domainMetadata = useSelector(getDomainMetadata)
   const tokens = useSelector(getTokens)
+  const networkHasEIP1559Capability = useSelector(isEIP1559Network)
 
   const transaction = (
     currentNetworkTxList.find(({ id }) => id === (Number(paramsTransactionId) || transactionId)) || {}
@@ -110,7 +111,9 @@ export default function ConfirmApprove () {
           tokenSymbol={tokenSymbol}
           tokenBalance={tokenBalance}
           showCustomizeGasModal={() => dispatch(showModal({
-            name: hasEIP1559GasFields(txData) ? 'CUSTOMIZE_EIP1559_GAS' : 'CUSTOMIZE_GAS', txData,
+            name: hasEIP1559GasFields(txData) && networkHasEIP1559Capability
+              ? 'CUSTOMIZE_EIP1559_GAS' : 'CUSTOMIZE_GAS',
+            txData,
           }))}
           showEditApprovalPermissionModal={
             ({

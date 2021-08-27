@@ -5,7 +5,7 @@ import {
   fetchBasicGasAndTimeEstimates,
   fetchGasEstimates,
   setCustomGasLimit,
-  setCustomGasPriceForRetry,
+  setCustomGasPriceForRetry, setCustomMaxFeePerGasForRetry, setCustomMaxPriorityFeePerGasForRetry,
 } from '../ducks/gas/gas.duck'
 import { useMetricEvent } from './useMetricEvent'
 import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
@@ -36,12 +36,16 @@ export function useRetryTransaction (transactionGroup) {
     trackMetricsEvent()
 
     if (hasEIP1559GasFields(transaction)) {
-      // TODO (@onyb): handle EIP-1559 fee bump logic.
+      // Step 1: query ETH Gas Station for latest estimates
+      await dispatch(fetchBasicGasAndTimeEstimates)
 
-      // Step 1: query eth_feeHistory RPC to fetch the latest estimates
-      // Step 2: obtain the priority fee estimate for the desired block time
-      // Step 3: bump priority fee by 10%
-      // Step 4: update state
+      // Step 2: bump the previous maxPriorityFeePerGas and maxFeePerGas by 10%.
+      const increasedMaxPriorityFeePerGas = customGasParams.maxPriorityFeePerGas
+      const increasedMaxFeePerGas = customGasParams.maxFeePerGas
+
+      // Step 3: set the new values of maxPriorityFeePerGas and maxFeePerGas
+      dispatch(setCustomMaxPriorityFeePerGasForRetry(increasedMaxPriorityFeePerGas))
+      dispatch(setCustomMaxFeePerGasForRetry(increasedMaxFeePerGas))
     } else {
       // Step 1: query ETH Gas Station for latest estimates
       const basicEstimates = await dispatch(fetchBasicGasAndTimeEstimates)
@@ -54,8 +58,9 @@ export function useRetryTransaction (transactionGroup) {
 
       // Step 4: set the new values of the gasPrice
       dispatch(setCustomGasPriceForRetry(increasedGasPrice))
-      dispatch(setCustomGasLimit(customGasParams.gasLimit))
     }
+
+    dispatch(setCustomGasLimit(customGasParams.gasLimit))
 
     dispatch(showSidebar({
       transitionName: 'sidebar-left',

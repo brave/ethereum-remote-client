@@ -563,6 +563,28 @@ export function setCustomGasPriceForRetry (newPrice) {
   }
 }
 
+export function setCustomMaxPriorityFeePerGasForRetry (value) {
+  return (dispatch) => {
+    if (value !== '0x0') {
+      dispatch(setCustomMaxPriorityFeePerGas(value))
+    } else {
+      const { fast } = loadLocalStorageData('BASIC_PRICE_ESTIMATES')
+      dispatch(setCustomMaxPriorityFeePerGas(decGWEIToHexWEI(fast)))
+    }
+  }
+}
+
+export function setCustomMaxFeePerGasForRetry (value) {
+  return (dispatch) => {
+    if (value !== '0x0') {
+      dispatch(setCustomMaxFeePerGas(value))
+    } else {
+      const { fast } = loadLocalStorageData('BASIC_PRICE_ESTIMATES')
+      dispatch(setCustomMaxFeePerGas(decGWEIToHexWEI(fast)))
+    }
+  }
+}
+
 export function setBasicGasEstimateData (basicGasEstimateData) {
   return {
     type: SET_BASIC_GAS_ESTIMATE_DATA,
@@ -584,7 +606,7 @@ export function setCustomGasPrice (newPrice) {
   }
 }
 
-export function setCustomPriorityFeePerGas (value) {
+export function setCustomMaxPriorityFeePerGas (value) {
   return {
     type: SET_CUSTOM_PRIORITY_FEE_PER_GAS,
     value,

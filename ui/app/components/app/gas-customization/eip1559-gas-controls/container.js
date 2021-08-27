@@ -4,7 +4,7 @@ import { addHexPrefix } from 'ethereumjs-util'
 import {
   resetCustomData,
   setCustomGasLimit,
-  setCustomPriorityFeePerGas,
+  setCustomMaxPriorityFeePerGas,
   setCustomMaxFeePerGas,
 } from '../../../../ducks/gas/gas.duck'
 import {
@@ -156,7 +156,7 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const mapDispatchToProps = (dispatch) => {
-  const updateCustomMaxPriorityFeePerGas = (value) => dispatch(setCustomPriorityFeePerGas(addHexPrefix(value)))
+  const updateCustomMaxPriorityFeePerGas = (value) => dispatch(setCustomMaxPriorityFeePerGas(addHexPrefix(value)))
   const updateCustomMaxFeePerGas = (value) => dispatch(setCustomMaxFeePerGas(addHexPrefix(value)))
 
   return {

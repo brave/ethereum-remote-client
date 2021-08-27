@@ -273,16 +273,16 @@ export function updateGasAndCalculate ({ gasLimit, gasPrice }) {
 }
 
 function increaseFromLastGasPrice (txData) {
-  const isEIP1559 = hasEIP1559GasFields(txData)
+  const isEIP1559Transaction = hasEIP1559GasFields(txData)
 
   const { previousGasTxParams, txParams: { gasPrice: previousGasPrice, maxFeePerGas: previousMaxFeePerGas } = {} } = txData
   const { gasPrice: lastGasPrice, maxFeePerGas: lastMaxFeePerGas } = previousGasTxParams
 
   // Set the minimum to a 10% increase from the lastGasPrice.
-  const minimumGasPrice = increaseLastGasPrice(isEIP1559 ? lastMaxFeePerGas : lastGasPrice)
-  const gasPriceBelowMinimum = hexGreaterThan(minimumGasPrice, isEIP1559 ? previousMaxFeePerGas : previousGasPrice)
+  const minimumGasPrice = increaseLastGasPrice(isEIP1559Transaction ? lastMaxFeePerGas : lastGasPrice)
+  const gasPriceBelowMinimum = hexGreaterThan(minimumGasPrice, isEIP1559Transaction ? previousMaxFeePerGas : previousGasPrice)
   const gasPrice = (!previousGasPrice || gasPriceBelowMinimum) ? minimumGasPrice : previousGasPrice
-  const gasParams = isEIP1559 ? { maxFeePerGas: gasPrice } : { gasPrice }
+  const gasParams = isEIP1559Transaction ? { maxFeePerGas: gasPrice } : { gasPrice }
 
   return {
     ...txData,

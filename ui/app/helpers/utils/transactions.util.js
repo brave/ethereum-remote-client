@@ -256,3 +256,14 @@ export function hasEIP1559GasFields (transaction) {
     isHexString(transaction?.txParams?.maxPriorityFeePerGas)
   )
 }
+
+/**
+ * Returns a boolean result indicating whether a transaction has legacy gas
+ * fields, i.e., gasPrice.
+ *
+ * @param {Object} transaction TransactionMeta object.
+ * @returns {boolean} true if transaction is of legacy format, false otherwise.
+ */
+export function hasLegacyGasFields (transaction) {
+  return isHexString(transaction?.txParams?.gasPrice)
+}

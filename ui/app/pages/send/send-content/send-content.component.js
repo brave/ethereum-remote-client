@@ -20,13 +20,13 @@ export default class SendContent extends Component {
     contact: PropTypes.object,
     isOwnedAccount: PropTypes.bool,
     isContractAddress: PropTypes.bool,
-    isEIP1559Active: PropTypes.bool.isRequired,
+    isEIP1559Network: PropTypes.bool.isRequired,
   }
 
   updateGas = (updateData) => this.props.updateGas(updateData)
 
   render () {
-    const { isEIP1559Active } = this.props
+    const { isEIP1559Network } = this.props
     return (
       <PageContainerContent>
         <div className="send-v2__form">
@@ -34,7 +34,7 @@ export default class SendContent extends Component {
           { this.maybeRenderAddContact() }
           <SendAssetRow />
           <SendAmountRow updateGas={this.updateGas} />
-          { !isEIP1559Active && <SendGasRow /> }
+          { !isEIP1559Network && <SendGasRow /> }
           {
             this.props.showHexData && (
               <SendHexDataRow

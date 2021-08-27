@@ -84,7 +84,7 @@ export default class Routes extends Component {
     hasPermissionsRequests: PropTypes.bool,
     autoLockTimeLimit: PropTypes.number,
     pageChanged: PropTypes.func.isRequired,
-    isEIP1559Active: PropTypes.bool.isRequired,
+    isEIP1559Network: PropTypes.bool.isRequired,
   }
 
   static contextTypes = {
@@ -219,7 +219,7 @@ export default class Routes extends Component {
       sidebar,
       submittedPendingTransactions,
       isMouseUser,
-      isEIP1559Active,
+      isEIP1559Network,
     } = this.props
     const isLoadingNetwork = network === 'loading'
     const loadMessage = (loadingMessage || isLoadingNetwork)
@@ -269,7 +269,7 @@ export default class Routes extends Component {
             transitionName={sidebarTransitionName}
             type={sidebarType}
             sidebarProps={sidebar.props}
-            isEIP1559Active={isEIP1559Active}
+            isEIP1559Network={isEIP1559Network}
           />
           <NetworkDropdown
             provider={provider}

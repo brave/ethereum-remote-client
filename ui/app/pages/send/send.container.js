@@ -22,7 +22,12 @@ import {
   getTokenBalance,
   getQrCodeData,
   getSelectedAddress,
-  getAddressBook, getMaxPriorityFeePerGas, getMaxFeePerGas, isEIP1559Active, getEIP1559GasTotal, getBaseFeePerGas,
+  getAddressBook,
+  getMaxPriorityFeePerGas,
+  getMaxFeePerGas,
+  isEIP1559Network,
+  getEIP1559GasTotal,
+  getBaseFeePerGas,
 } from '../../selectors'
 
 import {
@@ -66,7 +71,7 @@ function mapStateToProps (state) {
     baseFeePerGas: getBaseFeePerGas(state),
     maxPriorityFeePerGas: getMaxPriorityFeePerGas(state),
     maxFeePerGas: getMaxFeePerGas(state),
-    gasTotal: isEIP1559Active(state) ? getEIP1559GasTotal(state) : getGasTotal(state),
+    gasTotal: isEIP1559Network(state) ? getEIP1559GasTotal(state) : getGasTotal(state),
     network: getCurrentNetwork(state),
     primaryCurrency: getPrimaryCurrency(state),
     qrCodeData: getQrCodeData(state),
@@ -78,7 +83,7 @@ function mapStateToProps (state) {
     tokens: getTokens(state),
     tokenBalance: getTokenBalance(state),
     tokenContract: getSendTokenContract(state),
-    isEIP1559: isEIP1559Active(state),
+    isEIP1559: isEIP1559Network(state),
   }
 }
 

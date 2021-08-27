@@ -10,9 +10,10 @@ import {
   addEth,
 } from '../helpers/utils/confirm-tx.util'
 import {
+  hasEIP1559GasFields,
   sumHexes,
 } from '../helpers/utils/transactions.util'
-import { getNativeCurrency, isEIP1559Active } from '.'
+import { getNativeCurrency, isEIP1559Network } from '.'
 
 const unapprovedTxsSelector = (state) => state.metamask.unapprovedTxs
 const unapprovedMsgsSelector = (state) => state.metamask.unapprovedMsgs
@@ -242,11 +243,11 @@ export const transactionFeeSelector = function (state, txData) {
   const currentCurrency = currentCurrencySelector(state)
   const conversionRate = conversionRateSelector(state)
   const nativeCurrency = getNativeCurrency(state)
-  const isEIP1559 = isEIP1559Active(state)
+  const isEIP1559Transaction = hasEIP1559GasFields(txData) && isEIP1559Network(state)
 
   const { txParams: { value = '0x0', gas: gasLimit = '0x0' } = {} } = txData
   let hexTransactionFee, maxPriorityFee
-  if (isEIP1559) {
+  if (isEIP1559Transaction) {
     const { txParams: { maxFeePerGas, maxPriorityFeePerGas } } = txData
     hexTransactionFee = getHexGasTotal({ gasLimit, maxFeePerGas })
 

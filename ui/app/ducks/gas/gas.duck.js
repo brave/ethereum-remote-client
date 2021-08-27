@@ -8,7 +8,7 @@ import {
   decGWEIToHexWEI,
 } from '../../helpers/utils/conversions.util'
 import {
-  isEIP1559Active,
+  isEIP1559Network,
   isEthereumNetwork,
 } from '../../selectors'
 import * as actions from '../../store/actions'
@@ -254,7 +254,7 @@ async function fetchExternalBasicGasEstimates (dispatch, state) {
   const { blockNum, block_time: blockTime } = estimates
 
   let basicEstimates
-  if (isEIP1559Active(state)) {
+  if (isEIP1559Network(state)) {
     const conn = actions.getBackgroundConnection()
     const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
 
@@ -342,7 +342,7 @@ async function fetchExternalBasicGasAndTimeEstimates (dispatch, state) {
   const { blockNum, block_time: blockTime, speed } = estimates
 
   let basicEstimates
-  if (isEIP1559Active(state)) {
+  if (isEIP1559Network(state)) {
     const conn = actions.getBackgroundConnection()
     const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
 
@@ -477,7 +477,7 @@ export function fetchGasEstimates (blockTime) {
   return (dispatch, getState) => {
     const state = getState()
 
-    if (!isEthereumNetwork(state) || isEIP1559Active(state)) {
+    if (!isEthereumNetwork(state)) {
       return Promise.resolve(null)
     }
 

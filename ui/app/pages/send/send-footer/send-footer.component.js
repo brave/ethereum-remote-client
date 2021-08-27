@@ -30,7 +30,7 @@ export default class SendFooter extends Component {
     gasEstimateType: PropTypes.string,
     gasIsLoading: PropTypes.bool,
     mostRecentOverviewPage: PropTypes.string.isRequired,
-    isEIP1559Active: PropTypes.bool.isRequired,
+    isEIP1559Network: PropTypes.bool.isRequired,
   }
 
   static contextTypes = {
@@ -56,7 +56,7 @@ export default class SendFooter extends Component {
       gasPrice,
       maxPriorityFeePerGas,
       maxFeePerGas,
-      isEIP1559Active,
+      isEIP1559Network,
       sendToken,
       sign,
       to,
@@ -79,7 +79,7 @@ export default class SendFooter extends Component {
     // TODO: add nickname functionality
     await addToAddressBookIfNew(to, toAccounts)
 
-    const gasParams = isEIP1559Active ?
+    const gasParams = isEIP1559Network ?
       { gas, maxPriorityFeePerGas, maxFeePerGas }
       : { gas, gasPrice }
 

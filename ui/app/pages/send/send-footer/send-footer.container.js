@@ -27,7 +27,7 @@ import {
   getDefaultActiveButtonIndex,
   getMaxPriorityFeePerGas,
   getMaxFeePerGas,
-  isEIP1559Active,
+  isEIP1559Network,
   getEIP1559GasTotal,
 } from '../../../selectors'
 import SendFooter from './send-footer.component'
@@ -50,8 +50,6 @@ function mapStateToProps (state) {
     : 'custom'
   const editingTransactionId = getSendEditingTransactionId(state)
 
-  const isEIP1559 = isEIP1559Active(state)
-
   return {
     amount: getSendAmount(state),
     data: getSendHexData(state),
@@ -61,7 +59,7 @@ function mapStateToProps (state) {
     gasPrice: getGasPrice(state),
     maxPriorityFeePerGas: getMaxPriorityFeePerGas(state),
     maxFeePerGas: getMaxFeePerGas(state),
-    gasTotal: isEIP1559 ? getEIP1559GasTotal(state) : getGasTotal(state),
+    gasTotal: isEIP1559Network(state) ? getEIP1559GasTotal(state) : getGasTotal(state),
     inError: isSendFormInError(state),
     sendToken: getSendToken(state),
     to: getSendTo(state),
@@ -72,7 +70,7 @@ function mapStateToProps (state) {
     gasEstimateType,
     gasIsLoading: getGasIsLoading(state),
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
-    isEIP1559Active: isEIP1559,
+    isEIP1559Network: isEIP1559Network(state),
   }
 }
 

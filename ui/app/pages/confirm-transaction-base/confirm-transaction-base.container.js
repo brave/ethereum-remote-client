@@ -38,10 +38,11 @@ import {
   getUseNonceField,
   getPreferences,
   transactionFeeSelector,
-  isEIP1559Active,
+  isEIP1559Network,
 } from '../../selectors'
 import { getMostRecentOverviewPage } from '../../ducks/history/history'
 import { resetSwapState } from '../../ducks/swap/swap.duck'
+import { hasEIP1559GasFields } from '../../helpers/utils/transactions.util'
 
 const casedContractMap = Object.keys(contractMap).reduce((acc, base) => {
   return {
@@ -61,7 +62,6 @@ const mapStateToProps = (state, ownProps) => {
   const { id: paramsTransactionId } = params
   const { showFiatInTestnets } = getPreferences(state)
   const isMainnet = getIsMainnet(state)
-  const { isEIP1559 } = isEIP1559Active(state)
 
   const { confirmTransaction, metamask } = state
   const {
@@ -131,15 +131,6 @@ const mapStateToProps = (state, ownProps) => {
     .reduce((acc, key) => ({ ...acc, [key]: unapprovedTxs[key] }), {})
   const unapprovedTxCount = valuesFor(currentNetworkUnapprovedTxs).length
 
-  const insufficientBalance = !isBalanceSufficient({
-    amount,
-    gasTotal: isEIP1559
-      ? hexTransactionFee
-      : calcGasTotal(gasLimit, gasPrice),
-    balance,
-    conversionRate,
-  })
-
   const methodData = getKnownMethodData(state, data) || {}
 
   let fullTxData = { ...txData, ...transaction }
@@ -152,6 +143,17 @@ const mapStateToProps = (state, ownProps) => {
       },
     }
   }
+
+  const isEIP1559Transaction = hasEIP1559GasFields(fullTxData) && isEIP1559Network(state)
+
+  const insufficientBalance = !isBalanceSufficient({
+    amount,
+    gasTotal: isEIP1559Transaction
+      ? hexTransactionFee
+      : calcGasTotal(gasLimit, gasPrice),
+    balance,
+    conversionRate,
+  })
 
   return {
     balance,
@@ -193,7 +195,7 @@ const mapStateToProps = (state, ownProps) => {
     nextNonce,
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
     isMainnet,
-    isEIP1559Active: isEIP1559Active(state),
+    isEIP1559Transaction,
   }
 }
 

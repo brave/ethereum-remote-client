@@ -65,7 +65,7 @@ export default class ConfirmTransactionBase extends Component {
     currentNetworkUnapprovedTxs: PropTypes.object,
     updateGasAndCalculate: PropTypes.func,
     customGas: PropTypes.object,
-    isEIP1559Active: PropTypes.bool.isRequired,
+    isEIP1559Transaction: PropTypes.bool.isRequired,
     // Component props
     actionKey: PropTypes.string,
     contentComponent: PropTypes.node,
@@ -210,7 +210,7 @@ export default class ConfirmTransactionBase extends Component {
       actionKey,
       txData: { origin },
       methodData = {},
-      isEIP1559Active,
+      isEIP1559Transaction,
     } = this.props
 
     this.context.metricsEvent({
@@ -229,7 +229,7 @@ export default class ConfirmTransactionBase extends Component {
     if (onEditGas) {
       onEditGas()
     } else {
-      if (isEIP1559Active) {
+      if (isEIP1559Transaction) {
         showCustomizeEIP1559GasModal()
       } else {
         showCustomizeGasModal()
@@ -397,14 +397,14 @@ export default class ConfirmTransactionBase extends Component {
       updateGasAndCalculate,
       hideFiatConversion,
       isMainnet,
-      isEIP1559Active,
+      isEIP1559Transaction,
     } = this.props
 
     if (hideDetails) {
       return null
     }
 
-    if (isEIP1559Active) {
+    if (isEIP1559Transaction) {
       return this.renderEIP1559Details()
     }
 

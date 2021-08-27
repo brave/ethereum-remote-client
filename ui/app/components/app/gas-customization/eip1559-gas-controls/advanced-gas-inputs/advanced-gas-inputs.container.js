@@ -7,6 +7,7 @@ import {
 } from '../../../../../helpers/utils/conversions.util'
 
 import AdvancedGasInputs from './advanced-gas-inputs.component'
+import { getBaseFeePerGas } from '../../../../../selectors'
 
 function convertHexValueForInputs (gasPriceInHexWEI) {
   return Number(hexWEIToDecGWEI(gasPriceInHexWEI))
@@ -14,6 +15,12 @@ function convertHexValueForInputs (gasPriceInHexWEI) {
 
 function convertGasLimitForInputs (gasLimitInHexWEI) {
   return parseInt(gasLimitInHexWEI, 16) || 0
+}
+
+const mapStateToProps = (state) => {
+  return {
+    baseFeePerGas: getBaseFeePerGas(state),
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -46,4 +53,4 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   }
 }
 
-export default connect(null, mapDispatchToProps, mergeProps)(AdvancedGasInputs)
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(AdvancedGasInputs)

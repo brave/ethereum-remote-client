@@ -754,6 +754,9 @@
   "gasPriceExtremelyLow": {
     "message": "Gas Price Extremely Low"
   },
+  "maxPriorityFeePerGasExtremelyLow": {
+    "message": "Max Priority Fee Extremely Low"
+  },
   "gasPriceInfoModalContent": {
     "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
   },
@@ -1862,6 +1865,15 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Zero gas price on speed up"
+  },
+  "zeroMaxPriorityFeeOnSpeedUpError": {
+    "message": "Zero max priority fee on speed up"
+  },
+  "maxFeePerGasLessThanBaseFeePerGas": {
+    "message": "Max fee lower than base fee"
+  },
+  "maxFeePerGasLowerThanMaxPriorityFeePerGas": {
+    "message": "Max fee lower than max priority fee"
   },
   "decryptRequest": {
     "message": "Decrypt request"

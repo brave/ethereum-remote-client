@@ -33,7 +33,9 @@ import {
   isEthereumNetwork,
   getGasEstimatesLoadingStatus,
   isCustomMaxPriorityFeePerGasSafe,
-  getCustomMaxFeePerGas, getBaseFeePerGas, getTokenBalance,
+  getCustomMaxFeePerGas,
+  getBaseFeePerGas,
+  getTokenBalance,
 } from '../../../../selectors'
 import {
   addHexWEIsToRenderableFiat,
@@ -151,6 +153,7 @@ const mapStateToProps = (state, ownProps) => {
     balance,
     tokenBalance: getTokenBalance(state),
     customGasTotal,
+    baseFeePerGas,
   }
 }
 
@@ -215,10 +218,12 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     balance,
     tokenBalance,
     customGasTotal,
+    baseFeePerGas,
   } = stateProps
   const {
     updateConfirmTxGasAndCalculate,
     updateCustomMaxPriorityFeePerGas,
+    updateCustomMaxFeePerGas,
     cancelAndClose,
     hideSidebar,
     hideModal,
@@ -234,7 +239,15 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...dispatchProps,
     gasPriceButtonGroupProps: {
       ...gasPriceButtonGroupProps,
-      handleGasPriceSelection: updateCustomMaxPriorityFeePerGas,
+      handleGasPriceSelection: (value) => {
+        updateCustomMaxPriorityFeePerGas(value)
+        const maxFeePerGas = addCurrencies(baseFeePerGas, value, {
+          aBase: 16,
+          bBase: 16,
+          toNumericBase: 'hex',
+        })
+        updateCustomMaxFeePerGas(maxFeePerGas)
+      },
     },
     cancelAndClose: () => {
       cancelAndClose()

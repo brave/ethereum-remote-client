@@ -9787,9 +9787,9 @@ eth-json-rpc-infura@^5.1.0:
     json-rpc-engine "^5.3.0"
     node-fetch "^2.6.0"
 
-"eth-json-rpc-infura@github:brave/eth-json-rpc-infura#6116b0d":
-  version "4.0.2"
-  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/6116b0de5eb6debdccfa05117f5af0968e52d172"
+"eth-json-rpc-infura@github:brave/eth-json-rpc-infura#44ca860":
+  version "4.1.0"
+  resolved "https://codeload.github.com/brave/eth-json-rpc-infura/tar.gz/44ca860c26a4016b80893dba268eab923ab18e8b"
   dependencies:
     cross-fetch "^2.1.1"
     eth-json-rpc-errors "^1.0.1"

@@ -35,7 +35,6 @@ export default class TransactionBreakdown extends PureComponent {
     const { t } = this.context
     const { gasPrice, maxPriorityFeePerGas, maxFeePerGas, nativeCurrency, hasEIP1559GasFields } = this.props
 
-
     const gasPriceComponent = !hasEIP1559GasFields && (
       <TransactionBreakdownRow title={t('gasPrice')}>
         {typeof gasPrice !== 'undefined'
@@ -90,11 +89,13 @@ export default class TransactionBreakdown extends PureComponent {
       </TransactionBreakdownRow>
     )
 
-    return [
-      gasPriceComponent,
-      maxPriorityFeePerGasComponent,
-      maxFeePerGasComponent,
-    ]
+    return (
+      <>
+        { gasPriceComponent }
+        { maxPriorityFeePerGasComponent }
+        { maxFeePerGasComponent }
+      </>
+    )
   }
 
   render () {

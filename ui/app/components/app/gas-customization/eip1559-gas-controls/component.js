@@ -29,7 +29,7 @@ export default class EIP1559GasControlsModal extends Component {
     isSpeedUp: PropTypes.bool.isRequired,
     isRetry: PropTypes.bool.isRequired,
     insufficientBalance: PropTypes.bool.isRequired,
-    isCustomMaxPriorityFeePerGasSafe: PropTypes.bool.isRequired,
+    isCustomMaxPriorityFeePerGasSafe: PropTypes.bool,
     disableSave: PropTypes.bool.isRequired,
 
     // action dispatchers

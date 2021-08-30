@@ -357,7 +357,7 @@ export default class ConfirmTransactionBase extends Component {
 
         {
           this.renderEIP1559DetailRow(
-            t('estimatedGasFee'),
+            t('estimatedMaxPriorityFee'),
             null,
             maxPriorityFee,
             `${t('maxFeePerGasNoDenom')}:`,

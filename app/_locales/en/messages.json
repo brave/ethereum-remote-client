@@ -685,6 +685,9 @@
   "estimatedGasFee": {
     "message": "Estimated gas fee"
   },
+  "estimatedMaxPriorityFee": {
+    "message": "Estimated max priority fee"
+  },
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },

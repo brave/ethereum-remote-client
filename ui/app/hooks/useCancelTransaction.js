@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { showModal } from '../store/actions'
 import { isBalanceSufficient } from '../pages/send/send.utils'
 import { getHexGasTotal } from '../helpers/utils/confirm-tx.util'
-import { getConversionRate, getSelectedAccount } from '../selectors'
+import { getBaseFeePerGas, getConversionRate, getSelectedAccount } from '../selectors'
 import { useIncrementedGasFees } from './useIncrementedFees'
+import { addCurrencies } from '../helpers/utils/conversion-util'
+import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
 
 
 /**
@@ -19,11 +21,31 @@ import { useIncrementedGasFees } from './useIncrementedFees'
  */
 export function useCancelTransaction (transactionGroup) {
   const { primaryTransaction } = transactionGroup
-  const customGasParams = useIncrementedGasFees(transactionGroup)
   const transactionId = primaryTransaction.id
   const dispatch = useDispatch()
   const selectedAccount = useSelector(getSelectedAccount)
   const conversionRate = useSelector(getConversionRate)
+
+  const baseFeePerGas = useSelector(getBaseFeePerGas) || '0x0'
+  const baseGasParams = useIncrementedGasFees(transactionGroup)
+
+  const customGasParams = useMemo(() => {
+    if (hasEIP1559GasFields(primaryTransaction)) {
+      const { maxPriorityFeePerGas } = baseGasParams
+      const maxFeePerGas = addCurrencies(baseFeePerGas, maxPriorityFeePerGas || '0x0', {
+        aBase: 16,
+        bBase: 16,
+        toNumericBase: 'hex',
+      })
+
+      return {
+        ...baseGasParams,
+        maxFeePerGas,
+      }
+    }
+    return baseGasParams
+  }, [baseGasParams, baseFeePerGas, primaryTransaction])
+
   const cancelTransaction = useCallback((event) => {
     event.stopPropagation()
     return dispatch(showModal({ name: 'CANCEL_TRANSACTION', transactionId, customGasParams }))

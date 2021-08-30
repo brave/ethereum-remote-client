@@ -223,7 +223,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     hideSidebar,
     hideModal,
     createRetryTransaction,
-    createSpeedupTransaction,
+    createSpeedUpTransaction,
     hideGasButtonGroup,
     setGasData,
     setAmountToMax,
@@ -263,7 +263,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
         updateConfirmTxGasAndCalculate(gasParams, updatedTx)
         hideModal()
       } else if (isSpeedUp) {
-        createSpeedupTransaction(txId, gasParams)
+        createSpeedUpTransaction(txId, gasParams)
         hideSidebar()
         cancelAndClose()
       } else if (isRetry) {

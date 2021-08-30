@@ -19,9 +19,15 @@ const mapStateToProps = (state, ownProps) => {
   const { showFiatInTestnets } = getPreferences(state)
   const isMainnet = getIsMainnet(state)
 
+  const gasParams = {
+    gasLimit: typeof gasUsed === 'string' ? gasUsed : gas,
+    gasPrice,
+    maxFeePerGas,
+  }
+
   const gasLimit = typeof gasUsed === 'string' ? gasUsed : gas
 
-  const hexGasTotal = (gasLimit && gasPrice && getHexGasTotal({ gasLimit, gasPrice })) || '0x0'
+  const hexGasTotal = (gasLimit && getHexGasTotal(gasParams)) || '0x0'
   const totalInHex = sumHexes(hexGasTotal, value)
 
   return {

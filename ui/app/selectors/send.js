@@ -39,8 +39,8 @@ export function getMaxPriorityFeePerGas (state) {
 }
 
 export function getMaxFeePerGas (state) {
-  const baseFeePerGas = getBaseFeePerGas(state)
-  const maxPriorityFeePerGas = getMaxPriorityFeePerGas(state)
+  const baseFeePerGas = getBaseFeePerGas(state) || '0x0'
+  const maxPriorityFeePerGas = getMaxPriorityFeePerGas(state) || '0x0'
 
   return state.metamask.send.maxFeePerGas || addCurrencies(baseFeePerGas, maxPriorityFeePerGas, {
     aBase: 16,

@@ -20,6 +20,7 @@ export default class SwapTransactionScreen extends Component {
     quoteGasPrice: PropTypes.string,
     globalGasPrice: PropTypes.string,
     slippage: PropTypes.number.isRequired,
+    fetchBasicGasAndTimeEstimates: PropTypes.func.isRequired,
   }
 
   static contextTypes = {
@@ -35,11 +36,14 @@ export default class SwapTransactionScreen extends Component {
   componentDidMount () {
     this.timer = null
 
-    const { fromAsset, toAsset } = this.props
+    const { fromAsset, toAsset, fetchBasicGasAndTimeEstimates } = this.props
     this.refreshQuote(fromAsset, toAsset)
 
     // Start countdown on component initialization.
     this.startTimer()
+
+    // Force fetch basic gas and time estimates for legacy gas prices.
+    fetchBasicGasAndTimeEstimates(true, true)
   }
 
   componentWillUnmount () {

@@ -224,7 +224,14 @@ async function queryEthGasStationPredictionTable () {
   )
 }
 
-export function fetchBasicGasEstimates () {
+/**
+ * Thunk action creator to obtain basic gas estimates. These are used to
+ * recommend slow/average/fast gas fee values.
+ *
+ * @param legacy Fetch only legacy gas pricing information, irrespective of the network.
+ * @param force Force fetch estimates, instead of reading from local storage.
+ */
+export function fetchBasicGasEstimates (legacy = false, force = false) {
   return async (dispatch, getState) => {
     const state = getState()
     const { basicPriceEstimatesLastRetrieved } = state.gas
@@ -233,11 +240,11 @@ export function fetchBasicGasEstimates () {
     dispatch(basicGasEstimatesLoadingStarted())
 
     let basicEstimates
-    if (Date.now() - timeLastRetrieved > 75000) {
-      basicEstimates = await fetchExternalBasicGasEstimates(dispatch, state)
+    if ((Date.now() - timeLastRetrieved > 75000) || force) {
+      basicEstimates = await fetchExternalBasicGasEstimates(dispatch, state, legacy)
     } else {
       const cachedBasicEstimates = loadLocalStorageData('BASIC_PRICE_ESTIMATES')
-      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasEstimates(dispatch, state)
+      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasEstimates(dispatch, state, legacy)
     }
 
     dispatch(setBasicGasEstimateData(basicEstimates))
@@ -247,14 +254,14 @@ export function fetchBasicGasEstimates () {
   }
 }
 
-async function fetchExternalBasicGasEstimates (dispatch, state) {
+async function fetchExternalBasicGasEstimates (dispatch, state, legacy) {
   const response = await queryEthGasStationBasic()
   const estimates = await response.json()
 
   const { blockNum, block_time: blockTime } = estimates
 
   let basicEstimates
-  if (isEIP1559Network(state)) {
+  if (isEIP1559Network(state) && !legacy) {
     const conn = actions.getBackgroundConnection()
     const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
 
@@ -313,7 +320,14 @@ async function fetchExternalBasicGasEstimates (dispatch, state) {
   return basicEstimates
 }
 
-export function fetchBasicGasAndTimeEstimates () {
+/**
+ * Thunk action creator to obtain basic gas and time estimates. These are used
+ * display advanced gas timing information.
+ *
+ * @param legacy Fetch only legacy gas pricing information, irrespective of the network.
+ * @param force Force fetch estimates, instead of reading from local storage.
+ */
+export function fetchBasicGasAndTimeEstimates (legacy = false, force = false) {
   return async (dispatch, getState) => {
     const state = getState()
     const { basicPriceAndTimeEstimatesLastRetrieved } = state.gas
@@ -322,11 +336,11 @@ export function fetchBasicGasAndTimeEstimates () {
     dispatch(basicGasEstimatesLoadingStarted())
 
     let basicEstimates
-    if (Date.now() - timeLastRetrieved > 75000) {
-      basicEstimates = await fetchExternalBasicGasAndTimeEstimates(dispatch, state)
+    if ((Date.now() - timeLastRetrieved > 75000) || force) {
+      basicEstimates = await fetchExternalBasicGasAndTimeEstimates(dispatch, state, legacy)
     } else {
       const cachedBasicEstimates = loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES')
-      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasAndTimeEstimates(dispatch, state)
+      basicEstimates = cachedBasicEstimates || await fetchExternalBasicGasAndTimeEstimates(dispatch, state, legacy)
     }
 
     dispatch(setBasicGasEstimateData(basicEstimates))
@@ -335,14 +349,14 @@ export function fetchBasicGasAndTimeEstimates () {
   }
 }
 
-async function fetchExternalBasicGasAndTimeEstimates (dispatch, state) {
+async function fetchExternalBasicGasAndTimeEstimates (dispatch, state, legacy) {
   const response = await queryEthGasStationBasic()
   const estimates = await response.json()
 
   const { blockNum, block_time: blockTime, speed } = estimates
 
   let basicEstimates
-  if (isEIP1559Network(state)) {
+  if (isEIP1559Network(state) && !legacy) {
     const conn = actions.getBackgroundConnection()
     const feeOracleResponse = await conn.getMaxPriorityFeePerGasEstimates()
 

@@ -14,6 +14,7 @@ describe('Swap component', function () {
     hideLoadingIndication: sinon.spy(),
     resetSwapState: sinon.spy(),
     fetchSwapQuote: sinon.spy(),
+    fetchBasicGasAndTimeEstimates: sinon.spy(),
   }
 
   const mockHistory = { mockProp: 'history-abc', push: sinon.spy() }
@@ -25,6 +26,7 @@ describe('Swap component', function () {
         fetchSwapQuote={propsMethodSpies.fetchSwapQuote}
         resetSwapState={propsMethodSpies.resetSwapState}
         hideLoadingIndication={propsMethodSpies.hideLoadingIndication}
+        fetchBasicGasAndTimeEstimates={propsMethodSpies.fetchBasicGasAndTimeEstimates}
         unapprovedTxs={{}}
         {...props}
       />,

@@ -103,7 +103,7 @@
     "@material-ui/core": "^4.11.0",
     "@metamask/contract-metadata": "^1.25.0",
     "@metamask/controllers": "^8.0.0",
-    "@metamask/eth-ledger-bridge-keyring": "github:brave/eth-ledger-bridge-keyring#6db82c15435f9ae47dadbc1fc19586552a7044eb",
+    "@metamask/eth-ledger-bridge-keyring": "github:brave/eth-ledger-bridge-keyring#507c7731482f80175338a41c07e9db191d09086c",
     "@metamask/etherscan-link": "^1.1.0",
     "@metamask/inpage-provider": "^6.1.0",
     "@popperjs/core": "^2.4.0",

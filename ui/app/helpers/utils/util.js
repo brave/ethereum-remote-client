@@ -174,8 +174,7 @@ export function exportAsFile (filename, data, type = 'text/csv') {
  *
  */
 export function checksumAddress (address) {
-  const checksummed = address ? toChecksumAddress(address) : ''
-  return checksummed
+  return address ? toChecksumAddress(addHexPrefix(address)) : ''
 }
 
 /**

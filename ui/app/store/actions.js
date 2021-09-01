@@ -733,7 +733,7 @@ export function approveAllowance (allowance) {
       'approve', [allowanceTarget, computedAllowance],
     )
 
-    const basicGasEstimates = await dispatch(fetchBasicGasAndTimeEstimates())
+    const basicGasEstimates = await dispatch(fetchBasicGasAndTimeEstimates(true, true))
     const gasPrice = addHexPrefix(conversionUtil(basicGasEstimates.fast, {
       fromDenomination: 'GWEI',
       toDenomination: 'WEI',

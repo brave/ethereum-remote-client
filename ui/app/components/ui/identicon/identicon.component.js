@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import contractMap from '@metamask/contract-metadata'
+import { isHexString, addHexPrefix } from 'ethereumjs-util'
 
 import BlockieIdenticon from './blockieIdenticon'
 import { checksumAddress } from '../../../helpers/utils/util'
@@ -83,6 +84,10 @@ export default class Identicon extends PureComponent {
     }
 
     if (address) {
+      if (!isHexString(addHexPrefix(address))) {
+        return null
+      }
+
       const checksummedAddress = checksumAddress(address)
 
       if (contractMap[checksummedAddress] && contractMap[checksummedAddress].logo) {

@@ -349,12 +349,26 @@ export function isEIP1559Network (state) {
   const hasEIP1559Capability =
     capabilities[NetworkCapabilities.EIP1559] === true
 
+  const currentKeyring = getCurrentKeyring(state)?.type
+  let keyringSupportsEIP1559
+  switch (currentKeyring) {
+    case 'Trezor Hardware':
+      // TODO (@onyb): Enable once new firmware is released. (ETA Sep 8 '21).
+      //
+      // Ref: https://github.com/trezor/trezor-firmware/pull/1653
+      keyringSupportsEIP1559 = false
+      break
+    case 'Ledger Hardware':
+      // Ledger supports EIP-1559, but requires a major version upgrade of
+      // ledgerjs.
+      keyringSupportsEIP1559 = false
+      break
+    case 'Simple Key Pair':
+    default:
+      keyringSupportsEIP1559 = true
+  }
 
-  // Hardware wallets do not support EIP-1559 yet.
-  const isCurrentKeyringHardwareWallet = getAccountType(state) === 'hardware'
-  const isEIP1559SupportedAccount = !isCurrentKeyringHardwareWallet
-
-  return hasEIP1559Capability && isEIP1559SupportedAccount
+  return hasEIP1559Capability && keyringSupportsEIP1559
 }
 
 export function getBaseFeePerGas (state) {

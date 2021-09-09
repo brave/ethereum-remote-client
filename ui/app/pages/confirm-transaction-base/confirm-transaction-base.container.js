@@ -85,7 +85,10 @@ const mapStateToProps = (state, ownProps) => {
   const { txParams = {}, lastGasPrice, id: transactionId, transactionCategory } = txData
   const transaction = Object.values(unapprovedTxs).find(
     ({ id }) => id === (transactionId || Number(paramsTransactionId)),
+  ) || Object.values(unapprovedTxs).find(
+    ({ id }) => id === transactionId || id === Number(paramsTransactionId),
   ) || {}
+
   const {
     from: fromAddress,
     to: txParamsToAddress,

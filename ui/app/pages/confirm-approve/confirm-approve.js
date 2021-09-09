@@ -43,6 +43,7 @@ export default function ConfirmApprove () {
   const transaction = (
     currentNetworkTxList.find(({ id }) => id === (Number(paramsTransactionId) || transactionId)) || {}
   )
+
   const {
     ethTransactionTotal,
     fiatTransactionTotal,

@@ -16,6 +16,7 @@ describe('useRetryTransaction', function () {
 
     before(function () {
       sinon.stub(reactRedux, 'useDispatch').returns(dispatch)
+      sinon.stub(reactRedux, 'useSelector').returns({})
       sinon.stub(methodDataHook, 'useMethodData').returns({})
       sinon.stub(metricEventHook, 'useMetricEvent').returns(trackEvent)
     })

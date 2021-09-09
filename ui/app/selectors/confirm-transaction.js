@@ -247,11 +247,11 @@ export const transactionFeeSelector = function (state, txData) {
 
   const { txParams: { value = '0x0', gas: gasLimit = '0x0' } = {} } = txData
   let hexTransactionFee, maxPriorityFee
-  if (isEIP1559Transaction) {
+  if (isEIP1559Transaction || txData?.txParams?.gasPrice === undefined) {
     const { txParams: { maxFeePerGas, maxPriorityFeePerGas } } = txData
     hexTransactionFee = getHexGasTotal({ gasLimit, maxFeePerGas })
 
-    // Hack to compute maxPriortyFee (in Wei) by reusing getHexGasTotal
+    // Hack to compute maxPriorityFee (in Wei) by reusing getHexGasTotal
     maxPriorityFee = getHexGasTotal({ gasLimit, maxFeePerGas: maxPriorityFeePerGas })
   } else {
     const { txParams: { gasPrice } } = txData

@@ -3,7 +3,12 @@ import { useCallback, useMemo } from 'react'
 import { showModal } from '../store/actions'
 import { isBalanceSufficient } from '../pages/send/send.utils'
 import { getHexGasTotal } from '../helpers/utils/confirm-tx.util'
-import { getBaseFeePerGas, getConversionRate, getSelectedAccount } from '../selectors'
+import {
+  getAveragePriceEstimateInHexWEI,
+  getBaseFeePerGas,
+  getConversionRate,
+  getSelectedAccount,
+} from '../selectors'
 import { useIncrementedGasFees } from './useIncrementedFees'
 import { addCurrencies } from '../helpers/utils/conversion-util'
 import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
@@ -27,7 +32,8 @@ export function useCancelTransaction (transactionGroup) {
   const conversionRate = useSelector(getConversionRate)
 
   const baseFeePerGas = useSelector(getBaseFeePerGas) || '0x0'
-  const baseGasParams = useIncrementedGasFees(transactionGroup)
+  const suggestedMaxPriorityFeePerGas = useSelector(getAveragePriceEstimateInHexWEI)
+  const baseGasParams = useIncrementedGasFees(transactionGroup, suggestedMaxPriorityFeePerGas)
 
   const customGasParams = useMemo(() => {
     if (hasEIP1559GasFields(primaryTransaction)) {

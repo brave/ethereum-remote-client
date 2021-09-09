@@ -1,15 +1,19 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useCallback } from 'react'
 import { showSidebar } from '../store/actions'
 import {
   fetchBasicGasAndTimeEstimates,
   fetchGasEstimates,
   setCustomGasLimit,
-  setCustomGasPriceForRetry, setCustomMaxFeePerGasForRetry, setCustomMaxPriorityFeePerGasForRetry,
+  setCustomGasPriceForRetry,
+  setCustomMaxFeePerGasForRetry,
+  setCustomMaxPriorityFeePerGasForRetry,
 } from '../ducks/gas/gas.duck'
 import { useMetricEvent } from './useMetricEvent'
 import { hasEIP1559GasFields } from '../helpers/utils/transactions.util'
 import { useIncrementedGasFees } from './useIncrementedFees'
+import { getAveragePriceEstimateInHexWEI, getBaseFeePerGas } from '../selectors'
+import { addCurrencies } from '../helpers/utils/conversion-util'
 
 
 /**
@@ -20,7 +24,9 @@ import { useIncrementedGasFees } from './useIncrementedFees'
  */
 export function useRetryTransaction (transactionGroup) {
   const { primaryTransaction: transaction } = transactionGroup
-  const customGasParams = useIncrementedGasFees(transactionGroup)
+  const suggestedMaxPriorityFeePerGas = useSelector(getAveragePriceEstimateInHexWEI)
+  const customGasParams = useIncrementedGasFees(transactionGroup, suggestedMaxPriorityFeePerGas)
+  const baseFeePerGas = useSelector(getBaseFeePerGas) || '0x0'
 
   const trackMetricsEvent = useMetricEvent(({
     eventOpts: {
@@ -39,9 +45,13 @@ export function useRetryTransaction (transactionGroup) {
       // Step 1: query ETH Gas Station for latest estimates
       await dispatch(fetchBasicGasAndTimeEstimates)
 
-      // Step 2: bump the previous maxPriorityFeePerGas and maxFeePerGas by 10%.
+      // Step 2: bump the previous maxPriorityFeePerGas by 10%.
       const increasedMaxPriorityFeePerGas = customGasParams.maxPriorityFeePerGas
-      const increasedMaxFeePerGas = customGasParams.maxFeePerGas
+      const increasedMaxFeePerGas = addCurrencies(baseFeePerGas, increasedMaxPriorityFeePerGas || '0x0', {
+        aBase: 16,
+        bBase: 16,
+        toNumericBase: 'hex',
+      })
 
       // Step 3: set the new values of maxPriorityFeePerGas and maxFeePerGas
       dispatch(setCustomMaxPriorityFeePerGasForRetry(increasedMaxPriorityFeePerGas))
@@ -67,5 +77,5 @@ export function useRetryTransaction (transactionGroup) {
       type: 'customize-gas',
       props: { transaction },
     }))
-  }, [dispatch, trackMetricsEvent, transaction, customGasParams])
+  }, [dispatch, trackMetricsEvent, transaction, customGasParams, baseFeePerGas])
 }

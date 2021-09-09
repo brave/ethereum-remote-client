@@ -23,10 +23,6 @@ export function subtractHexWEIsFromRenderableEth (aHexWEI, bHexWEI) {
   return formatETHFee(subtractHexWEIsToDec(aHexWEI, bHexWEI))
 }
 
-export function calcCustomMaxPriorityFeePerGasInDec (customMaxPriorityFeePerGasInHex) {
-  return Number(hexWEIToDecGWEI(customMaxPriorityFeePerGasInHex))
-}
-
-export function calcCustomMaxFeePerGasInDec (customMaxFeePerGasInHex) {
+export function convertHexWeiToDecimalGWei (customMaxFeePerGasInHex) {
   return Number(hexWEIToDecGWEI(customMaxFeePerGasInHex))
 }

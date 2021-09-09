@@ -43,8 +43,7 @@ import {
   addHexWEIsToRenderableFiat,
   addHexWEIsToRenderableEth,
   subtractHexWEIsFromRenderableEth,
-  calcCustomMaxPriorityFeePerGasInDec,
-  calcCustomMaxFeePerGasInDec,
+  convertHexWeiToDecimalGWei,
 } from './utils'
 import { calcEIP1559GasTotal, isBalanceSufficient } from '../../../../pages/send/send.utils'
 import { addCurrencies, multiplyCurrencies } from '../../../../helpers/utils/conversion-util'
@@ -85,10 +84,10 @@ const mapStateToProps = (state, ownProps) => {
   const { gas: currentGasLimit, value } = txParams
 
   const customModalMaxPriorityFeePerGasInHex = getCustomMaxPriorityFeePerGas(state) || maxPriorityFeePerGas
-  const customModalMaxPriorityFeePerGasInDec = calcCustomMaxPriorityFeePerGasInDec(customModalMaxPriorityFeePerGasInHex)
+  const customModalMaxPriorityFeePerGasInDec = convertHexWeiToDecimalGWei(customModalMaxPriorityFeePerGasInHex)
 
   const customModalMaxFeePerGasInHex = getCustomMaxFeePerGas(state) || maxFeePerGas
-  const customModalMaxFeePerGasInDec = calcCustomMaxFeePerGasInDec(customModalMaxFeePerGasInHex)
+  const customModalMaxFeePerGasInDec = convertHexWeiToDecimalGWei(customModalMaxFeePerGasInHex)
 
   const customModalGasLimitInHex = getCustomGasLimit(state) || currentGasLimit || '0x5208'
 
@@ -266,7 +265,15 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
         maxFeePerGas,
       } = gasParams
 
-      if (isConfirm) {
+      if (isRetry) {
+        createRetryTransaction(txId, gasParams)
+        hideSidebar()
+        cancelAndClose()
+      } else if (isSpeedUp) {
+        createSpeedUpTransaction(txId, gasParams)
+        hideSidebar()
+        cancelAndClose()
+      } else if (isConfirm) {
         const updatedTx = {
           ...transaction,
           txParams: {
@@ -279,14 +286,6 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
 
         updateConfirmTxGasAndCalculate(gasParams, updatedTx)
         hideModal()
-      } else if (isSpeedUp) {
-        createSpeedUpTransaction(txId, gasParams)
-        hideSidebar()
-        cancelAndClose()
-      } else if (isRetry) {
-        createRetryTransaction(txId, gasParams)
-        hideSidebar()
-        cancelAndClose()
       } else {
         setGasData(gasParams)
         hideGasButtonGroup()

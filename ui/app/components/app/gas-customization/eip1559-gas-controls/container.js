@@ -6,6 +6,8 @@ import {
   setCustomGasLimit,
   setCustomMaxPriorityFeePerGas,
   setCustomMaxFeePerGas,
+  fetchGasEstimates,
+  fetchBasicGasAndTimeEstimates,
 } from '../../../../ducks/gas/gas.duck'
 import {
   createRetryTransaction,
@@ -198,6 +200,8 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(updateSendErrors({ amount: null }))
       dispatch(updateSendAmount(calcMaxAmount(maxAmountDataObject)))
     },
+    fetchGasEstimates: (blockTime) => dispatch(fetchGasEstimates(blockTime)),
+    fetchBasicGasAndTimeEstimates: () => dispatch(fetchBasicGasAndTimeEstimates(false, false)),
   }
 }
 

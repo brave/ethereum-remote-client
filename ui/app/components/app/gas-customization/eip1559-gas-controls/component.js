@@ -38,6 +38,18 @@ export default class EIP1559GasControlsModal extends Component {
     updateCustomMaxFeePerGas: PropTypes.func.isRequired,
     updateCustomGasLimit: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
+    fetchBasicGasAndTimeEstimates: PropTypes.func.isRequired,
+    fetchGasEstimates: PropTypes.func.isRequired,
+  }
+
+  componentDidMount () {
+    const promise = this.props.fetchBasicGasAndTimeEstimates()
+      .then((basicEstimates) => basicEstimates.blockTime)
+
+    promise
+      .then((blockTime) => {
+        this.props.fetchGasEstimates(blockTime)
+      })
   }
 
   renderTabs () {

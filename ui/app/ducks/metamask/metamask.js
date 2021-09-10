@@ -152,6 +152,24 @@ export default function reduceMetamask (state = {}, action) {
         },
       }
 
+    case actionConstants.UPDATE_MAX_PRIORITY_FEE_PER_GAS:
+      return {
+        ...metamaskState,
+        send: {
+          ...metamaskState.send,
+          maxPriorityFeePerGas: action.value,
+        },
+      }
+
+    case actionConstants.UPDATE_MAX_FEE_PER_GAS:
+      return {
+        ...metamaskState,
+        send: {
+          ...metamaskState.send,
+          maxFeePerGas: action.value,
+        },
+      }
+
     case actionConstants.TOGGLE_ACCOUNT_MENU:
       return {
         ...metamaskState,

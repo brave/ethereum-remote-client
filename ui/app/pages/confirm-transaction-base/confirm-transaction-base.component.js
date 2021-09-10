@@ -1,6 +1,6 @@
-import ethUtil from 'ethereumjs-util'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { toBuffer } from 'ethereumjs-util'
 import { ENVIRONMENT_TYPE_NOTIFICATION } from '../../../../app/scripts/lib/enums'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
 import ConfirmPageContainer, { ConfirmDetailRow } from '../../components/app/confirm-page-container'
@@ -15,6 +15,7 @@ import { CONFIRMED_STATUS, DROPPED_STATUS } from '../../helpers/constants/transa
 import UserPreferencedCurrencyDisplay from '../../components/app/user-preferenced-currency-display'
 import { PRIMARY, SECONDARY } from '../../helpers/constants/common'
 import { hexToDecimal } from '../../helpers/utils/conversions.util'
+import { conversionUtil } from '../../helpers/utils/conversion-util'
 import AdvancedGasInputs from '../../components/app/gas-customization/advanced-gas-inputs'
 import TextField from '../../components/ui/text-field'
 
@@ -33,11 +34,13 @@ export default class ConfirmTransactionBase extends Component {
     cancelAllTransactions: PropTypes.func,
     clearConfirmTransaction: PropTypes.func,
     conversionRate: PropTypes.number,
+    currentCurrency: PropTypes.string.isRequired,
     fromAddress: PropTypes.string,
     fromName: PropTypes.string,
     hexTransactionAmount: PropTypes.string,
     hexTransactionFee: PropTypes.string,
     hexTransactionTotal: PropTypes.string,
+    maxPriorityFee: PropTypes.string,
     isTxReprice: PropTypes.bool,
     methodData: PropTypes.object,
     nonce: PropTypes.string,
@@ -47,6 +50,7 @@ export default class ConfirmTransactionBase extends Component {
     assetImage: PropTypes.string,
     sendTransaction: PropTypes.func,
     showCustomizeGasModal: PropTypes.func,
+    showCustomizeEIP1559GasModal: PropTypes.func,
     showTransactionConfirmedModal: PropTypes.func,
     showRejectTransactionsConfirmationModal: PropTypes.func,
     toAddress: PropTypes.string,
@@ -61,6 +65,7 @@ export default class ConfirmTransactionBase extends Component {
     currentNetworkUnapprovedTxs: PropTypes.object,
     updateGasAndCalculate: PropTypes.func,
     customGas: PropTypes.object,
+    isEIP1559Transaction: PropTypes.bool.isRequired,
     // Component props
     actionKey: PropTypes.string,
     contentComponent: PropTypes.node,
@@ -198,7 +203,15 @@ export default class ConfirmTransactionBase extends Component {
   }
 
   handleEditGas () {
-    const { onEditGas, showCustomizeGasModal, actionKey, txData: { origin }, methodData = {} } = this.props
+    const {
+      onEditGas,
+      showCustomizeGasModal,
+      showCustomizeEIP1559GasModal,
+      actionKey,
+      txData: { origin },
+      methodData = {},
+      isEIP1559Transaction,
+    } = this.props
 
     this.context.metricsEvent({
       eventOpts: {
@@ -216,8 +229,157 @@ export default class ConfirmTransactionBase extends Component {
     if (onEditGas) {
       onEditGas()
     } else {
-      showCustomizeGasModal()
+      if (isEIP1559Transaction) {
+        showCustomizeEIP1559GasModal()
+      } else {
+        showCustomizeGasModal()
+      }
     }
+  }
+
+  renderNonceField () {
+    const {
+      useNonceField,
+      customNonceValue,
+      updateCustomNonce,
+      nextNonce,
+      getNextNonce,
+    } = this.props
+
+    return useNonceField && (
+      <div>
+        <div className="confirm-detail-row">
+          <div className="confirm-detail-row__label">
+            { this.context.t('nonceFieldHeading') }
+          </div>
+          <div className="custom-nonce-input">
+            <TextField
+              type="number"
+              min="0"
+              placeholder={ typeof nextNonce === 'number' ? nextNonce.toString() : null }
+              onChange={({ target: { value } }) => {
+                if (!value.length || Number(value) < 0) {
+                  updateCustomNonce('')
+                } else {
+                  updateCustomNonce(String(Math.floor(value)))
+                }
+                getNextNonce()
+              }}
+              fullWidth
+              margin="dense"
+              value={ customNonceValue || '' }
+            />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  weiHexToFiat (value) {
+    const { currentCurrency, conversionRate } = this.props
+
+    const fiatValue = conversionUtil(value, {
+      fromNumericBase: 'hex',
+      toNumericBase: 'dec',
+      fromDenomination: 'WEI',
+      toCurrency: currentCurrency,
+      conversionRate,
+      numberOfDecimals: 2,
+    })
+    return `${fiatValue} ${currentCurrency.toUpperCase()}`
+  }
+
+  renderEIP1559DetailRow (
+    primaryTitle,
+    secondaryTitle,
+    primaryValue,
+    secondaryValueText,
+    secondaryValue,
+    horizontalRule,
+  ) {
+    const secondaryComponent = (
+      <UserPreferencedCurrencyDisplay
+        className="confirm-detail-row__secondary"
+        type={PRIMARY}
+        value={secondaryValue}
+      />
+    )
+
+    return (
+      <div className={horizontalRule ? 'confirm-detail-row-v2__hr' : null}>
+        <div className="confirm-detail-row-v2__container">
+          <div className="confirm-detail-row-v2__primary-title">
+            { primaryTitle }
+          </div>
+          <div>
+            <UserPreferencedCurrencyDisplay
+              className="confirm-detail-row__secondary"
+              type={PRIMARY}
+              value={primaryValue}
+            />
+          </div>
+          <div className="confirm-detail-row-v2__primary-value">
+            {this.weiHexToFiat(primaryValue)}
+          </div>
+        </div>
+        <div className="confirm-detail-row-v2__secondary-container">
+          <div className="confirm-detail-row-v2__secondary-title">
+            { secondaryTitle }
+          </div>
+          <div className="confirm-detail-row-v2__secondary-value">
+            <span className="confirm-detail-row-v2__secondary-value-text">
+              {secondaryValueText}
+            </span> {secondaryComponent}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  renderEIP1559Details () {
+    const {
+      hexTransactionFee,
+      maxPriorityFee,
+      hexTransactionTotal,
+      useNonceField,
+    } = this.props
+
+    const { t } = this.context
+
+    return (
+      <div className="confirm-page-container-content__details">
+        <div
+          className="confirm-detail-row-v2__edit"
+          onClick={() => this.handleEditGas()}
+        >
+          { t('edit') }
+        </div>
+
+        {
+          this.renderEIP1559DetailRow(
+            t('estimatedMaxPriorityFee'),
+            null,
+            maxPriorityFee,
+            `${t('maxFeePerGasNoDenom')}:`,
+            hexTransactionFee,
+            true,
+          )
+        }
+
+        {
+          this.renderEIP1559DetailRow(
+            t('total'),
+            t('amountPlusGasFee'),
+            hexTransactionTotal,
+            t('maxAmount'),
+            hexTransactionTotal,
+            useNonceField,
+          )
+        }
+
+        { this.renderNonceField() }
+      </div>
+    )
   }
 
   renderDetails () {
@@ -229,20 +391,21 @@ export default class ConfirmTransactionBase extends Component {
       hexTransactionTotal,
       hideDetails,
       useNonceField,
-      customNonceValue,
-      updateCustomNonce,
       advancedInlineGasShown,
       customGas,
       insufficientBalance,
       updateGasAndCalculate,
       hideFiatConversion,
-      nextNonce,
-      getNextNonce,
       isMainnet,
+      isEIP1559Transaction,
     } = this.props
 
     if (hideDetails) {
       return null
+    }
+
+    if (isEIP1559Transaction) {
+      return this.renderEIP1559Details()
     }
 
     const notMainnetOrTest = !(isMainnet || process.env.IN_TEST)
@@ -285,33 +448,7 @@ export default class ConfirmTransactionBase extends Component {
               primaryValueTextColor="#2f9ae0"
             />
           </div>
-          {useNonceField ? (
-            <div>
-              <div className="confirm-detail-row">
-                <div className="confirm-detail-row__label">
-                  { this.context.t('nonceFieldHeading') }
-                </div>
-                <div className="custom-nonce-input">
-                  <TextField
-                    type="number"
-                    min="0"
-                    placeholder={ typeof nextNonce === 'number' ? nextNonce.toString() : null }
-                    onChange={({ target: { value } }) => {
-                      if (!value.length || Number(value) < 0) {
-                        updateCustomNonce('')
-                      } else {
-                        updateCustomNonce(String(Math.floor(value)))
-                      }
-                      getNextNonce()
-                    }}
-                    fullWidth
-                    margin="dense"
-                    value={ customNonceValue || '' }
-                  />
-                </div>
-              </div>
-            </div>
-          ) : null}
+          { this.renderNonceField() }
         </div>
       )
     )
@@ -357,7 +494,7 @@ export default class ConfirmTransactionBase extends Component {
           )
         }
         <div className="confirm-page-container-content__data-box-label">
-          {`${t('hexData')}: ${ethUtil.toBuffer(data).length} bytes`}
+          {`${t('hexData')}: ${toBuffer(data).length} bytes`}
         </div>
         <div className="confirm-page-container-content__data-box">
           { data }

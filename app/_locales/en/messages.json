@@ -3,6 +3,30 @@
     "message": "I have read and agree to the $1",
     "description": "$1 is the `terms` message"
   },
+  "amountPlusGasFee" : {
+    "message": "Amount + Gas Fee"
+  },
+  "baseFee": {
+    "message": "Base fee"
+  },
+  "maxPriorityFeePerGas": {
+    "message": "Max priority fee (GWEI)"
+  },
+  "maxFeePerGas": {
+    "message": "Max fee (GWEI)"
+  },
+  "maxPriorityFeePerGasNoDenom": {
+    "message": "Max priority fee"
+  },
+  "maxFeePerGasNoDenom": {
+    "message": "Max fee"
+  },
+  "maxPriorityFeePerGasInfoModalContent": {
+    "message": "Max priority fee (aka \"miner tip\") goes directly to miners and incentivizes them to prioritize your transaction. You’ll most often pay your max setting."
+  },
+  "maxFeePerGasInfoModalContent": {
+    "message": "The max fee is the most you'll pay (base fee + priority fee)."
+  },
   "eth_accounts": {
     "message": "View the addresses of your permitted accounts (required)",
     "description": "The description for the `eth_accounts` permission"
@@ -113,6 +137,9 @@
   },
   "acceleratingATransaction": {
     "message": "* Accelerating a transaction by using a higher gas price increases its chances of getting processed by the network faster, but it is not always guaranteed."
+  },
+  "acceleratingATransactionEIP1559": {
+    "message": "* Accelerating a transaction by using a higher priority fee increases its chances of getting processed by the network faster, but it is not always guaranteed."
   },
   "accessAndSpendNotice": {
     "message": "$1 may access and spend up to this max amount",
@@ -553,6 +580,12 @@
   "editPermission": {
     "message": "Edit Permission"
   },
+  "editPriority": {
+    "message": "Edit Priority"
+  },
+  "editPrioritySubTitle": {
+    "message": "Increasing priority fee may decrease processing times, but it is not guaranteed."
+  },
   "endOfFlowMessage1": {
     "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
   },
@@ -649,6 +682,12 @@
   "etherscanView": {
     "message": "View account on Etherscan"
   },
+  "estimatedGasFee": {
+    "message": "Estimated gas fee"
+  },
+  "estimatedMaxPriorityFee": {
+    "message": "Estimated max priority fee"
+  },
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
   },
@@ -717,6 +756,9 @@
   },
   "gasPriceExtremelyLow": {
     "message": "Gas Price Extremely Low"
+  },
+  "maxPriorityFeePerGasExtremelyLow": {
+    "message": "Max Priority Fee Extremely Low"
   },
   "gasPriceInfoModalContent": {
     "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
@@ -955,6 +997,9 @@
   },
   "mainnet": {
     "message": "Main Ethereum Network"
+  },
+  "maxAmount": {
+    "message": "Max amount:"
   },
   "availableOnMainnetRopsten": {
     "message": "Only available on mainnet and ropsten"
@@ -1441,6 +1486,9 @@
   "selectAHigherGasFee": {
     "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
   },
+  "selectAHigherPriorityFee": {
+    "message": "Select a higher priority fee to accelerate the processing of your transaction.*"
+  },
   "selectHdPath": {
     "message": "Select HD Path"
   },
@@ -1820,6 +1868,15 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Zero gas price on speed up"
+  },
+  "zeroMaxPriorityFeeOnSpeedUpError": {
+    "message": "Zero max priority fee on speed up"
+  },
+  "maxFeePerGasLessThanBaseFeePerGas": {
+    "message": "Max fee lower than base fee"
+  },
+  "maxFeePerGasLowerThanMaxPriorityFeePerGas": {
+    "message": "Max fee lower than max priority fee"
   },
   "decryptRequest": {
     "message": "Decrypt request"

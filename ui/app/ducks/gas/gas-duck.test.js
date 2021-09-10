@@ -6,6 +6,9 @@ const fakeLocalStorage = {}
 
 const GasDuck = proxyquire('./gas.duck.js', {
   '../../../lib/local-storage-helpers': fakeLocalStorage,
+  '../../selectors': {
+    isEIP1559Network: (_) => false,
+  },
 })
 
 const {
@@ -99,6 +102,8 @@ describe('Gas Duck', function () {
     customData: {
       price: null,
       limit: null,
+      maxPriorityFeePerGas: null,
+      maxFeePerGas: null,
     },
     basicEstimates: {
       average: null,
@@ -117,6 +122,7 @@ describe('Gas Duck', function () {
     errors: {},
     gasEstimatesLoading: true,
     priceAndTimeEstimates: [],
+    maxPriorityFeePerGasAndTimeEstimates: [],
     priceAndTimeEstimatesLastRetrieved: 0,
     basicPriceAndTimeEstimatesLastRetrieved: 0,
     basicPriceEstimatesLastRetrieved: 0,

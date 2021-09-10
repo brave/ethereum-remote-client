@@ -38,9 +38,11 @@ import {
   getUseNonceField,
   getPreferences,
   transactionFeeSelector,
+  isEIP1559Network,
 } from '../../selectors'
 import { getMostRecentOverviewPage } from '../../ducks/history/history'
 import { resetSwapState } from '../../ducks/swap/swap.duck'
+import { hasEIP1559GasFields } from '../../helpers/utils/transactions.util'
 
 const casedContractMap = Object.keys(contractMap).reduce((acc, base) => {
   return {
@@ -60,10 +62,12 @@ const mapStateToProps = (state, ownProps) => {
   const { id: paramsTransactionId } = params
   const { showFiatInTestnets } = getPreferences(state)
   const isMainnet = getIsMainnet(state)
+
   const { confirmTransaction, metamask } = state
   const {
     ensResolutionsByAddress,
     conversionRate,
+    currentCurrency,
     identities,
     addressBook,
     assetImages,
@@ -81,7 +85,10 @@ const mapStateToProps = (state, ownProps) => {
   const { txParams = {}, lastGasPrice, id: transactionId, transactionCategory } = txData
   const transaction = Object.values(unapprovedTxs).find(
     ({ id }) => id === (transactionId || Number(paramsTransactionId)),
+  ) || Object.values(unapprovedTxs).find(
+    ({ id }) => id === transactionId || id === Number(paramsTransactionId),
   ) || {}
+
   const {
     from: fromAddress,
     to: txParamsToAddress,
@@ -115,6 +122,7 @@ const mapStateToProps = (state, ownProps) => {
     hexTransactionAmount,
     hexTransactionFee,
     hexTransactionTotal,
+    maxPriorityFee,
   } = transactionFeeSelector(state, transaction)
 
   if (transaction && transaction.simulationFails) {
@@ -125,13 +133,6 @@ const mapStateToProps = (state, ownProps) => {
     .filter((key) => unapprovedTxs[key].metamaskNetworkId === network)
     .reduce((acc, key) => ({ ...acc, [key]: unapprovedTxs[key] }), {})
   const unapprovedTxCount = valuesFor(currentNetworkUnapprovedTxs).length
-
-  const insufficientBalance = !isBalanceSufficient({
-    amount,
-    gasTotal: calcGasTotal(gasLimit, gasPrice),
-    balance,
-    conversionRate,
-  })
 
   const methodData = getKnownMethodData(state, data) || {}
 
@@ -146,6 +147,17 @@ const mapStateToProps = (state, ownProps) => {
     }
   }
 
+  const isEIP1559Transaction = hasEIP1559GasFields(fullTxData) && isEIP1559Network(state)
+
+  const insufficientBalance = !isBalanceSufficient({
+    amount,
+    gasTotal: isEIP1559Transaction
+      ? hexTransactionFee
+      : calcGasTotal(gasLimit, gasPrice),
+    balance,
+    conversionRate,
+  })
+
   return {
     balance,
     fromAddress,
@@ -156,6 +168,7 @@ const mapStateToProps = (state, ownProps) => {
     toNickname,
     hexTransactionAmount,
     hexTransactionFee,
+    maxPriorityFee,
     hexTransactionTotal,
     txData: fullTxData,
     tokenData,
@@ -163,6 +176,7 @@ const mapStateToProps = (state, ownProps) => {
     tokenProps,
     isTxReprice,
     conversionRate,
+    currentCurrency,
     transactionStatus,
     nonce,
     assetImage,
@@ -184,6 +198,7 @@ const mapStateToProps = (state, ownProps) => {
     nextNonce,
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
     isMainnet,
+    isEIP1559Transaction,
   }
 }
 
@@ -202,6 +217,9 @@ export const mapDispatchToProps = (dispatch) => {
     },
     showCustomizeGasModal: ({ txData, onSubmit, validate }) => {
       return dispatch(showModal({ name: 'CUSTOMIZE_GAS', txData, onSubmit, validate }))
+    },
+    showCustomizeEIP1559GasModal: ({ txData, onSubmit, validate }) => {
+      return dispatch(showModal({ name: 'CUSTOMIZE_EIP1559_GAS', txData, onSubmit, validate }))
     },
     updateGasAndCalculate: (updatedTx) => {
       return dispatch(updateTransaction(updatedTx))
@@ -225,8 +243,8 @@ export const mapDispatchToProps = (dispatch) => {
 const getValidateEditGas = ({ balance, conversionRate, txData }) => {
   const { txParams: { value: amount } = {} } = txData
 
-  return ({ gasLimit, gasPrice }) => {
-    const gasTotal = getHexGasTotal({ gasLimit, gasPrice })
+  return ({ gasLimit, gasPrice, maxFeePerGas }) => {
+    const gasTotal = getHexGasTotal({ gasLimit, gasPrice, maxFeePerGas })
     const hasSufficientBalance = isBalanceSufficient({
       amount,
       gasTotal,
@@ -271,6 +289,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const {
     cancelAllTransactions: dispatchCancelAllTransactions,
     showCustomizeGasModal: dispatchShowCustomizeGasModal,
+    showCustomizeEIP1559GasModal: dispatchShowCustomizeEIP1559GasModal,
     updateGasAndCalculate: dispatchUpdateGasAndCalculate,
     ...otherDispatchProps
   } = dispatchProps
@@ -286,14 +305,21 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
       onSubmit: (customGas) => dispatchUpdateGasAndCalculate(customGas),
       validate: validateEditGas,
     }),
+    showCustomizeEIP1559GasModal: () => dispatchShowCustomizeEIP1559GasModal({
+      txData,
+      onSubmit: (customGas) => dispatchUpdateGasAndCalculate(customGas),
+      validate: validateEditGas,
+    }),
     cancelAllTransactions: () => dispatchCancelAllTransactions(valuesFor(unapprovedTxs)),
-    updateGasAndCalculate: ({ gasLimit, gasPrice }) => {
+    updateGasAndCalculate: ({ gasLimit, gasPrice, maxFeePerGas, maxPriorityFeePerGas }) => {
       const updatedTx = {
         ...txData,
         txParams: {
           ...txData.txParams,
           gas: gasLimit,
           gasPrice,
+          maxFeePerGas,
+          maxPriorityFeePerGas,
         },
       }
       dispatchUpdateGasAndCalculate(updatedTx)

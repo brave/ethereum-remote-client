@@ -53,6 +53,10 @@ describe('Send Component', function () {
         from={ { address: 'mockAddress', balance: 'mockBalance' } }
         gasLimit="mockGasLimit"
         gasPrice="mockGasPrice"
+        baseFeePerGas="mockBaseFeePerGas"
+        maxPriorityFeePerGas="mockMaxPriorityFeePerGas"
+        maxFeePerGas="mockMaxFeePerGas"
+        isEIP1559={false}
         gasTotal="mockGasTotal"
         history={{ mockProp: 'history-abc' }}
         network="3"
@@ -330,6 +334,10 @@ describe('Send Component', function () {
           editingTransactionId: 'mockEditingTransactionId',
           gasLimit: 'mockGasLimit',
           gasPrice: 'mockGasPrice',
+          baseFeePerGas: 'mockBaseFeePerGas',
+          maxPriorityFeePerGas: 'mockMaxPriorityFeePerGas',
+          maxFeePerGas: 'mockMaxFeePerGas',
+          isEIP1559: false,
           selectedAddress: 'mockSelectedAddress',
           sendToken: { address: 'mockTokenAddress', decimals: 18, symbol: 'TST' },
           to: '',

@@ -73,8 +73,10 @@ describe('send-footer utils', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
         }),
         {
           data: '0xsomeData',
@@ -94,8 +96,10 @@ describe('send-footer utils', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
         }),
         {
           data: undefined,
@@ -115,8 +119,10 @@ describe('send-footer utils', function () {
           to: 'mockTo',
           amount: 'mockAmount',
           from: 'mockFrom',
-          gas: 'mockGas',
-          gasPrice: 'mockGasPrice',
+          gasParams: {
+            gas: 'mockGas',
+            gasPrice: 'mockGasPrice',
+          },
         }),
         {
           data: undefined,
@@ -135,8 +141,10 @@ describe('send-footer utils', function () {
         amount: 'mockAmount',
         editingTransactionId: '0x456',
         from: 'mockFrom',
-        gas: 'mockGas',
-        gasPrice: 'mockGasPrice',
+        gasParams: {
+          gas: 'mockGas',
+          gasPrice: 'mockGasPrice',
+        },
         sendToken: false,
         to: 'mockTo',
         unapprovedTxs: {
@@ -167,8 +175,10 @@ describe('send-footer utils', function () {
         amount: 'mockAmount',
         editingTransactionId: '0x456',
         from: 'mockFrom',
-        gas: 'mockGas',
-        gasPrice: 'mockGasPrice',
+        gasParams: {
+          gas: 'mockGas',
+          gasPrice: 'mockGasPrice',
+        },
         sendToken: false,
         to: 'mockTo',
         unapprovedTxs: {
@@ -201,8 +211,10 @@ describe('send-footer utils', function () {
         amount: 'mockAmount',
         editingTransactionId: '0x456',
         from: 'mockFrom',
-        gas: 'mockGas',
-        gasPrice: 'mockGasPrice',
+        gasParams: {
+          gas: 'mockGas',
+          gasPrice: 'mockGasPrice',
+        },
         sendToken: {
           address: 'mockTokenAddress',
         },

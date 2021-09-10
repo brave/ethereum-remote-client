@@ -3,7 +3,7 @@ import pify from 'pify'
 import getBuyEthUrl from '../../../app/scripts/lib/buy-eth-url'
 import { checksumAddress } from '../helpers/utils/util'
 import { calcTokenBalance, estimateGas } from '../pages/send/send.utils'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import { ethers } from 'ethers'
 import { fetchLocale, loadRelativeTimeFormatLocaleData } from '../helpers/utils/i18n-helper'
 import { getMethodDataAsync } from '../helpers/utils/transactions.util'
@@ -50,7 +50,7 @@ export function _setBackgroundConnection (backgroundConnection) {
   promisifiedBackground = pify(background)
 }
 
-function getBackgroundConnection () {
+export function getBackgroundConnection () {
   return promisifiedBackground
 }
 
@@ -221,11 +221,11 @@ export function fetchSwapQuote (fromAsset, toAsset, amount, gasPrice, slippage, 
     const selectedAddress = getSelectedAddress(state)
 
     const gasPriceDecimal = gasPrice && ethers.BigNumber.from(
-      ethUtil.addHexPrefix(gasPrice),
+      addHexPrefix(gasPrice),
     ).toString()
 
     const amountDecimal = ethers.BigNumber.from(
-      ethUtil.addHexPrefix(amount),
+      addHexPrefix(amount),
     ).toString()
 
     const conn = exports.getBackgroundConnection()
@@ -276,8 +276,8 @@ export function computeSwapErrors (overrides) {
 
     data = {
       ...data,
-      amount: ethUtil.addHexPrefix(data.amount),
-      balance: ethUtil.addHexPrefix(data.balance),
+      amount: addHexPrefix(data.amount),
+      balance: addHexPrefix(data.balance),
     }
 
     const { fromAsset, amount } = data
@@ -733,8 +733,8 @@ export function approveAllowance (allowance) {
       'approve', [allowanceTarget, computedAllowance],
     )
 
-    const basicGasEstimates = await dispatch(fetchBasicGasAndTimeEstimates())
-    const gasPrice = ethUtil.addHexPrefix(conversionUtil(basicGasEstimates.fast, {
+    const basicGasEstimates = await dispatch(fetchBasicGasAndTimeEstimates(true, true))
+    const gasPrice = addHexPrefix(conversionUtil(basicGasEstimates.fast, {
       fromDenomination: 'GWEI',
       toDenomination: 'WEI',
       fromNumericBase: 'dec',
@@ -788,6 +788,20 @@ export function setGasPrice (gasPrice) {
   return {
     type: actionConstants.UPDATE_GAS_PRICE,
     value: gasPrice,
+  }
+}
+
+export function setMaxFeePerGas (value) {
+  return {
+    type: actionConstants.UPDATE_MAX_FEE_PER_GAS,
+    value,
+  }
+}
+
+export function setMaxPriorityFeePerGas (value) {
+  return {
+    type: actionConstants.UPDATE_MAX_PRIORITY_FEE_PER_GAS,
+    value,
   }
 }
 
@@ -1109,7 +1123,7 @@ export function signTokenTx (tokenAddress, toAddress, amount, txData) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
     const token = global.eth.contract(abi).at(tokenAddress)
-    token.transfer(toAddress, ethUtil.addHexPrefix(amount), txData)
+    token.transfer(toAddress, addHexPrefix(amount), txData)
       .catch((err) => {
         dispatch(hideLoadingIndication())
         dispatch(displayWarning(err.message))
@@ -1696,13 +1710,13 @@ export function clearPendingTokens () {
   }
 }
 
-export function createCancelTransaction (txId, customGasPrice) {
+export function createCancelTransaction (txId, customGasParams) {
   log.debug('background.cancelTransaction')
   let newTxId
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createCancelTransaction(txId, customGasPrice, (err, newState) => {
+      background.createCancelTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -1719,13 +1733,13 @@ export function createCancelTransaction (txId, customGasPrice) {
   }
 }
 
-export function createSpeedUpTransaction (txId, customGasPrice, customGasLimit) {
+export function createSpeedUpTransaction (txId, customGasParams) {
   log.debug('background.createSpeedUpTransaction')
   let newTx
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createSpeedUpTransaction(txId, customGasPrice, customGasLimit, (err, newState) => {
+      background.createSpeedUpTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -1741,13 +1755,13 @@ export function createSpeedUpTransaction (txId, customGasPrice, customGasLimit) 
   }
 }
 
-export function createRetryTransaction (txId, customGasPrice, customGasLimit) {
+export function createRetryTransaction (txId, customGasParams) {
   log.debug('background.createRetryTransaction')
   let newTx
 
   return (dispatch) => {
     return new Promise((resolve, reject) => {
-      background.createSpeedUpTransaction(txId, customGasPrice, customGasLimit, (err, newState) => {
+      background.createSpeedUpTransaction(txId, customGasParams, (err, newState) => {
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -2554,7 +2568,7 @@ export function loadingMethodDataFinished () {
 
 export function getContractMethodData (data = '') {
   return (dispatch, getState) => {
-    const prefixedData = ethUtil.addHexPrefix(data)
+    const prefixedData = addHexPrefix(data)
     const fourBytePrefix = prefixedData.slice(0, 10)
     const { knownMethodData } = getState().metamask
 

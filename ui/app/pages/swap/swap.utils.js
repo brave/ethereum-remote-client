@@ -1,3 +1,5 @@
+import { addHexPrefix } from 'ethereumjs-util'
+
 import {
   addCurrencies,
   conversionGreaterThan,
@@ -19,8 +21,6 @@ import {
   MIN_GAS_LIMIT_HEX,
   NEGATIVE_ETH_ERROR,
 } from './swap.constants'
-
-import ethUtil from 'ethereumjs-util'
 
 export {
   addGasBuffer,
@@ -165,7 +165,7 @@ async function estimateGasForTransaction ({
   estimateGasMethod,
   blockGasLimit = MIN_GAS_LIMIT_HEX,
 }) {
-  const gas = ethUtil.addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
+  const gas = addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
     multiplicandBase: 16,
     multiplierBase: 10,
     roundDown: '0',
@@ -175,7 +175,7 @@ async function estimateGasForTransaction ({
   try {
     const estimatedGas = await estimateGasMethod({ ...transaction, gas })
     const estimateWithBuffer = addGasBuffer(estimatedGas.toString(16), blockGasLimit, 1.5)
-    return ethUtil.addHexPrefix(estimateWithBuffer)
+    return addHexPrefix(estimateWithBuffer)
   } catch (error) {
     const simulationFailed = (
       error.message.includes('Transaction execution error.') ||
@@ -183,7 +183,7 @@ async function estimateGasForTransaction ({
     )
     if (simulationFailed) {
       const estimateWithBuffer = addGasBuffer(gas, blockGasLimit, 1.5)
-      return ethUtil.addHexPrefix(estimateWithBuffer)
+      return addHexPrefix(estimateWithBuffer)
     } else {
       throw error
     }
@@ -223,7 +223,7 @@ function addGasBuffer (initialGasLimitHex, blockGasLimitHex, bufferMultiplier = 
 }
 
 export function decimalToHex (value) {
-  return ethUtil.addHexPrefix(decimalToHexHelper(value))
+  return addHexPrefix(decimalToHexHelper(value))
 }
 
 export function hexAmountToDecimal (value, asset) {
@@ -234,7 +234,7 @@ export function hexAmountToDecimal (value, asset) {
   }
 
   const multiplier = Math.pow(10, Number(decimals || 0))
-  const decimalValueString = conversionUtil(ethUtil.addHexPrefix(value), {
+  const decimalValueString = conversionUtil(addHexPrefix(value), {
     fromNumericBase: 'hex',
     toNumericBase: 'dec',
     toCurrency: symbol,

@@ -29,6 +29,7 @@ import ConfirmDeleteNetwork from './confirm-delete-network'
 import AddToAddressBookModal from './add-to-addressbook-modal'
 import EditApprovalPermission from './edit-approval-permission'
 import NewAccountModal from './new-account-modal'
+import EIP1559GasControlsModal from '../gas-customization/eip1559-gas-controls'
 
 const modalContainerBaseStyle = {
   transform: 'translate3d(-50%, 0, 0px)',
@@ -217,6 +218,30 @@ const MODALS = {
     },
   },
 
+  MAX_PRIORITY_FEE_PER_GAS_INFO_MODAL: {
+    contents: <NotifcationModal header="maxPriorityFeePerGasNoDenom" message="maxPriorityFeePerGasInfoModalContent" />,
+    mobileModalStyle: {
+      width: '95%',
+      top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',
+    },
+    laptopModalStyle: {
+      width: '449px',
+      top: 'calc(33% + 45px)',
+    },
+  },
+
+  MAX_FEE_PER_GAS_INFO_MODAL: {
+    contents: <NotifcationModal header="maxFeePerGasNoDenom" message="maxFeePerGasInfoModalContent" />,
+    mobileModalStyle: {
+      width: '95%',
+      top: getEnvironmentType() === ENVIRONMENT_TYPE_POPUP ? '52vh' : '36.5vh',
+    },
+    laptopModalStyle: {
+      width: '449px',
+      top: 'calc(33% + 45px)',
+    },
+  },
+
   GAS_LIMIT_INFO_MODAL: {
     contents: <NotifcationModal header="gasLimit" message="gasLimitInfoModalContent" />,
     mobileModalStyle: {
@@ -296,6 +321,36 @@ const MODALS = {
       args: [],
     },
   },
+
+  CUSTOMIZE_EIP1559_GAS: {
+    contents: <EIP1559GasControlsModal />,
+    mobileModalStyle: {
+      width: '100vw',
+      height: '100vh',
+      top: '0',
+      transform: 'none',
+      left: '0',
+      right: '0',
+      margin: '0 auto',
+    },
+    laptopModalStyle: {
+      width: 'auto',
+      height: '0px',
+      top: '80px',
+      left: '0px',
+      transform: 'none',
+      margin: '0 auto',
+      position: 'relative',
+    },
+    contentStyle: {
+      borderRadius: '8px',
+    },
+    customOnHideOpts: {
+      action: resetCustomGasData,
+      args: [],
+    },
+  },
+
 
   EDIT_APPROVAL_PERMISSION: {
     contents: <EditApprovalPermission />,

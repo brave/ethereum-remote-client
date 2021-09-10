@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { addHexPrefix } from 'ethereumjs-util'
 import UnitInput from '../unit-input'
 import CurrencyDisplay from '../currency-display'
 import { getWeiHexFromDecimalValue } from '../../../helpers/utils/conversions.util'
-import ethUtil from 'ethereumjs-util'
 import { conversionUtil, multiplyCurrencies } from '../../../helpers/utils/conversion-util'
 import { ETH } from '../../../helpers/constants/common'
 
@@ -59,7 +59,7 @@ export default class TokenInput extends PureComponent {
     const { value: hexValue, token: { decimals, symbol } = {} } = props
 
     const multiplier = Math.pow(10, Number(decimals || 0))
-    const decimalValueString = conversionUtil(ethUtil.addHexPrefix(hexValue), {
+    const decimalValueString = conversionUtil(addHexPrefix(hexValue), {
       fromNumericBase: 'hex',
       toNumericBase: 'dec',
       toCurrency: symbol,

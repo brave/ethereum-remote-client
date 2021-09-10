@@ -1,11 +1,12 @@
 import { strict as assert } from 'assert'
 import EventEmitter from 'events'
-import ethUtil from 'ethereumjs-util'
-import EthTx from 'ethereumjs-tx'
+import { toBuffer } from 'ethereumjs-util'
+import { TransactionFactory } from '@ethereumjs/tx'
 import ObservableStore from 'obs-store'
 import sinon from 'sinon'
 import TransactionController from '../../../../../app/scripts/controllers/transactions'
 import { TRANSACTION_TYPE_RETRY } from '../../../../../app/scripts/controllers/transactions/enums'
+import { KOVAN, KOVAN_NETWORK_ID } from '../../../../../app/scripts/controllers/network/enums'
 
 import {
   TOKEN_METHOD_APPROVE,
@@ -18,7 +19,7 @@ import {
 import { createTestProviderTools, getTestAccounts } from '../../../../stub/provider'
 
 const noop = () => true
-const currentNetworkId = '42'
+const currentNetworkId = KOVAN_NETWORK_ID
 
 describe('Transaction Controller', function () {
   let txController, provider, providerResultStub, fromAccount
@@ -44,10 +45,15 @@ describe('Transaction Controller', function () {
       txHistoryLimit: 10,
       blockTracker: blockTrackerStub,
       signTransaction: (ethTx) => new Promise((resolve) => {
-        ethTx.sign(fromAccount.key)
-        resolve()
+        resolve(ethTx.sign(fromAccount.key))
       }),
       getPermittedAccounts: () => {},
+      getProviderConfig: () => ({
+        type: KOVAN,
+      }),
+      getKeyringForAccount: (_) => ({
+        type: 'Simple Key Pair',
+      }),
     })
     txController.nonceTracker.getNonceLock = () => Promise.resolve({ nextNonce: 0, releaseLock: noop })
   })
@@ -306,8 +312,8 @@ describe('Transaction Controller', function () {
     it('prepares a tx with the chainId set', async function () {
       txController.addTx({ id: '1', status: 'unapproved', metamaskNetworkId: currentNetworkId, txParams: {} }, noop)
       const rawTx = await txController.signTransaction('1')
-      const ethTx = new EthTx(ethUtil.toBuffer(rawTx))
-      assert.equal(ethTx.getChainId(), parseInt(currentNetworkId))
+      const ethTx = TransactionFactory.fromSerializedData(toBuffer(rawTx))
+      assert.equal(ethTx.common.chainIdBN().toNumber(), parseInt(currentNetworkId))
     })
   })
 
@@ -400,11 +406,15 @@ describe('Transaction Controller', function () {
       assert.equal(addTxSpy.callCount, 1)
 
       const addTxArgs = addTxSpy.getCall(0).args[0]
+
       assert.deepEqual(addTxArgs.txParams, expectedTxParams)
 
-      const { lastGasPrice, type } = addTxArgs
-      assert.deepEqual({ lastGasPrice, type }, {
-        lastGasPrice: '0xa',
+      const { previousGasTxParams, type } = addTxArgs
+      assert.deepEqual({ previousGasTxParams, type }, {
+        previousGasTxParams: {
+          gasPrice: '0xa',
+          gas: '0x5209',
+        },
         type: TRANSACTION_TYPE_RETRY,
       })
     })
@@ -422,9 +432,12 @@ describe('Transaction Controller', function () {
 
       assert.deepEqual(result.txParams, expectedTxParams)
 
-      const { lastGasPrice, type } = result
-      assert.deepEqual({ lastGasPrice, type }, {
-        lastGasPrice: '0xa',
+      const { previousGasTxParams, type } = result
+      assert.deepEqual({ previousGasTxParams, type }, {
+        previousGasTxParams: {
+          gasPrice: '0xa',
+          gas: '0x5209',
+        },
         type: TRANSACTION_TYPE_RETRY,
       })
     })

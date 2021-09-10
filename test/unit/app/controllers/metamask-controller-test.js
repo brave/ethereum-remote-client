@@ -2,7 +2,7 @@ import assert from 'assert'
 import sinon from 'sinon'
 import { cloneDeep } from 'lodash'
 import nock from 'nock'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix, bufferToHex, pubToAddress } from 'ethereumjs-util'
 import { obj as createThoughStream } from 'through2'
 import firstTimeState from '../../localhostState'
 import createTxMeta from '../../../lib/createTxMeta'
@@ -153,12 +153,12 @@ describe('MetaMaskController', function () {
 
       it('adds private key to keyrings in KeyringController' + suffix, async function () {
         const simpleKeyrings = metamaskController.keyringController.getKeyringsByType('Simple Key Pair')
-        const privKeyBuffer = simpleKeyrings[0].wallets[0]._privKey
-        const pubKeyBuffer = simpleKeyrings[0].wallets[0]._pubKey
-        const addressBuffer = ethUtil.pubToAddress(pubKeyBuffer)
-        const privKey = ethUtil.bufferToHex(privKeyBuffer)
-        const pubKey = ethUtil.bufferToHex(addressBuffer)
-        assert.equal(privKey, ethUtil.addHexPrefix(importPrivkey))
+        const privKeyBuffer = simpleKeyrings[0].wallets[0].privateKey
+        const pubKeyBuffer = simpleKeyrings[0].wallets[0].publicKey
+        const addressBuffer = pubToAddress(pubKeyBuffer)
+        const privKey = bufferToHex(privKeyBuffer)
+        const pubKey = bufferToHex(addressBuffer)
+        assert.equal(privKey, addHexPrefix(importPrivkey))
         assert.equal(pubKey, '0xe18035bf8712672935fdb4e5e431b1a0183d2dfc')
       })
 

@@ -1,4 +1,6 @@
 import EthQuery from 'ethjs-query'
+import { cloneDeep } from 'lodash'
+
 import { hexToBn, BnMultiplyByFraction, bnToHex } from '../../lib/util'
 import log from 'loglevel'
 
@@ -56,7 +58,24 @@ export default class TxGasUtil {
     @returns {string} - the estimated gas limit as a hex string
   */
   async estimateTxGas (txMeta) {
-    const txParams = txMeta.txParams
+    // Clone the txParams since gas pricing fields will be deleted.
+    const txParams = cloneDeep(txMeta.txParams)
+
+    // For estimating transaction gas, we don't really care about the gas
+    // pricing. We therefore delete gas pricing fields from the transaction
+    // parameters. This will also prevent the EVM to check if the source
+    // account has enough balance to perform the transaction.
+    //
+    // Without EIP-1559 capability, absence of gasLimit field will be
+    // interpreted as gasPrice = 0.
+    //
+    // With EIP-15509 capability, absence of maxPriorityFeePerGas AND
+    // maxFeePerGas will be interpreted as BASEFEE = 0.
+    //
+    // Ref: https://github.com/ethereum/go-ethereum/pull/23027
+    delete txParams.gasPrice
+    delete txParams.maxPriorityFeePerGas
+    delete txParams.maxFeePerGas
 
     // estimate tx gas requirements
     return await this.query.estimateGas(txParams)

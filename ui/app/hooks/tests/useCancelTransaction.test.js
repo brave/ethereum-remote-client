@@ -36,12 +36,17 @@ describe('useCancelTransaction', function () {
     })
     transactions.forEach((transactionGroup) => {
       const originalGasPrice = transactionGroup.primaryTransaction.txParams?.gasPrice
-      const gasPrice = originalGasPrice && increaseLastGasPrice(originalGasPrice)
-      const transactionId = transactionGroup.initialTransaction.id
-      it(`should indicate account has insufficient funds to cover ${gasPrice} gas price`, function () {
+      const customGasParams = {
+        gasPrice: originalGasPrice && increaseLastGasPrice(originalGasPrice),
+        gasLimit: transactionGroup.primaryTransaction.txParams?.gas,
+      }
+
+      const transactionId = transactionGroup.primaryTransaction.id
+      it(`should indicate account has insufficient funds to cover ${customGasParams.gasPrice} gas price`, function () {
         const { result } = renderHook(() => useCancelTransaction(transactionGroup))
         assert.equal(result.current[0], false)
       })
+
       it(`should return a function that kicks off cancellation for id ${transactionId}`, function () {
         const { result } = renderHook(() => useCancelTransaction(transactionGroup))
         assert.equal(typeof result.current[1], 'function')
@@ -51,7 +56,7 @@ describe('useCancelTransaction', function () {
             showModal({
               name: 'CANCEL_TRANSACTION',
               transactionId,
-              originalGasPrice,
+              customGasParams,
             }),
           ),
           true,
@@ -79,9 +84,12 @@ describe('useCancelTransaction', function () {
     })
     transactions.forEach((transactionGroup) => {
       const originalGasPrice = transactionGroup.primaryTransaction.txParams?.gasPrice
-      const gasPrice = originalGasPrice && increaseLastGasPrice(originalGasPrice)
-      const transactionId = transactionGroup.initialTransaction.id
-      it(`should indicate account has funds to cover ${gasPrice} gas price`, function () {
+      const customGasParams = {
+        gasPrice: originalGasPrice && increaseLastGasPrice(originalGasPrice),
+        gasLimit: transactionGroup.primaryTransaction.txParams?.gas,
+      }
+      const transactionId = transactionGroup.primaryTransaction.id
+      it(`should indicate account has funds to cover ${customGasParams.gasPrice} gas price`, function () {
         const { result } = renderHook(() => useCancelTransaction(transactionGroup))
         assert.equal(result.current[0], true)
       })
@@ -94,7 +102,7 @@ describe('useCancelTransaction', function () {
             showModal({
               name: 'CANCEL_TRANSACTION',
               transactionId,
-              originalGasPrice,
+              customGasParams,
             }),
           ),
           true,

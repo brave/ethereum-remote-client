@@ -312,7 +312,10 @@ describe('gas-modal-page-container container', function () {
 
     describe('setGasData()', function () {
       it('should dispatch a setGasPrice and setGasLimit action with the correct props', function () {
-        mapDispatchToPropsObject.setGasData('ffff', 'aaaa')
+        mapDispatchToPropsObject.setGasData({
+          gasLimit: 'ffff',
+          gasPrice: 'aaaa',
+        })
         assert(dispatchSpy.calledTwice)
         assert(actionSpies.setGasPrice.calledOnce)
         assert(actionSpies.setGasLimit.calledOnce)
@@ -323,7 +326,10 @@ describe('gas-modal-page-container container', function () {
 
     describe('updateConfirmTxGasAndCalculate()', function () {
       it('should dispatch a updateGasAndCalculate action with the correct props', function () {
-        mapDispatchToPropsObject.updateConfirmTxGasAndCalculate('ffff', 'aaaa')
+        mapDispatchToPropsObject.updateConfirmTxGasAndCalculate({
+          gasLimit: 'ffff',
+          gasPrice: 'aaaa',
+        })
         assert.equal(dispatchSpy.callCount, 3)
         assert(actionSpies.setGasPrice.calledOnce)
         assert(actionSpies.setGasLimit.calledOnce)
@@ -417,11 +423,17 @@ describe('gas-modal-page-container container', function () {
       assert.equal(dispatchProps.hideGasButtonGroup.callCount, 0)
       assert.equal(dispatchProps.cancelAndClose.callCount, 0)
 
-      result.onSubmit('mockNewLimit', 'mockNewPrice')
+      result.onSubmit({
+        gasLimit: 'mockNewLimit',
+        gasPrice: 'mockNewPrice',
+      })
 
       assert.equal(dispatchProps.updateConfirmTxGasAndCalculate.callCount, 0)
       assert.equal(dispatchProps.setGasData.callCount, 1)
-      assert.deepEqual(dispatchProps.setGasData.getCall(0).args, ['mockNewLimit', 'mockNewPrice'])
+      assert.deepEqual(
+        dispatchProps.setGasData.getCall(0).args,
+        [{ gasLimit: 'mockNewLimit', gasPrice: 'mockNewPrice' }],
+      )
       assert.equal(dispatchProps.hideGasButtonGroup.callCount, 1)
       assert.equal(dispatchProps.cancelAndClose.callCount, 1)
 

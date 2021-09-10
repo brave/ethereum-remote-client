@@ -23,6 +23,11 @@ import {
   getQrCodeData,
   getSelectedAddress,
   getAddressBook,
+  getMaxPriorityFeePerGas,
+  getMaxFeePerGas,
+  isEIP1559Network,
+  getEIP1559GasTotal,
+  getBaseFeePerGas,
 } from '../../selectors'
 
 import {
@@ -44,6 +49,7 @@ import {
 } from '../../ducks/gas/gas.duck'
 import { getTokens } from '../../ducks/metamask/metamask'
 import {
+  calcEIP1559GasTotal,
   calcGasTotal,
 } from './send.utils.js'
 import {
@@ -62,7 +68,10 @@ function mapStateToProps (state) {
     from: getSendFromObject(state),
     gasLimit: getGasLimit(state),
     gasPrice: getGasPrice(state),
-    gasTotal: getGasTotal(state),
+    baseFeePerGas: getBaseFeePerGas(state),
+    maxPriorityFeePerGas: getMaxPriorityFeePerGas(state),
+    maxFeePerGas: getMaxFeePerGas(state),
+    gasTotal: isEIP1559Network(state) ? getEIP1559GasTotal(state) : getGasTotal(state),
     network: getCurrentNetwork(state),
     primaryCurrency: getPrimaryCurrency(state),
     qrCodeData: getQrCodeData(state),
@@ -74,6 +83,7 @@ function mapStateToProps (state) {
     tokens: getTokens(state),
     tokenBalance: getTokenBalance(state),
     tokenContract: getSendTokenContract(state),
+    isEIP1559: isEIP1559Network(state),
   }
 }
 
@@ -84,6 +94,10 @@ function mapDispatchToProps (dispatch) {
       editingTransactionId,
       gasLimit,
       gasPrice,
+      baseFeePerGas,
+      maxFeePerGas,
+      maxPriorityFeePerGas,
+      isEIP1559,
       selectedAddress,
       sendToken,
       to,
@@ -91,8 +105,20 @@ function mapDispatchToProps (dispatch) {
       data,
     }) => {
       !editingTransactionId
-        ? dispatch(updateGasData({ gasPrice, selectedAddress, sendToken, blockGasLimit, to, value, data }))
-        : dispatch(setGasTotal(calcGasTotal(gasLimit, gasPrice)))
+        ? dispatch(updateGasData({
+          gasPrice: isEIP1559 ? maxFeePerGas : gasPrice,
+          selectedAddress,
+          sendToken,
+          blockGasLimit,
+          to,
+          value,
+          data,
+        }))
+        : dispatch(setGasTotal(
+          isEIP1559
+            ? calcEIP1559GasTotal(gasLimit, baseFeePerGas, maxPriorityFeePerGas)
+            : calcGasTotal(gasLimit, gasPrice),
+        ))
     },
     updateSendTokenBalance: ({ sendToken, tokenContract, address }) => {
       dispatch(updateSendTokenBalance({

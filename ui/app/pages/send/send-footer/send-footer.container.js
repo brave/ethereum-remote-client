@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 import {
   addToAddressBook,
   clearSend,
@@ -25,6 +25,10 @@ import {
   getGasIsLoading,
   getRenderableEstimateDataForSmallButtonsFromGWEI,
   getDefaultActiveButtonIndex,
+  getMaxPriorityFeePerGas,
+  getMaxFeePerGas,
+  isEIP1559Network,
+  getEIP1559GasTotal,
 } from '../../../selectors'
 import SendFooter from './send-footer.component'
 import {
@@ -53,7 +57,9 @@ function mapStateToProps (state) {
     from: getSendFromObject(state),
     gasLimit: getGasLimit(state),
     gasPrice: getGasPrice(state),
-    gasTotal: getGasTotal(state),
+    maxPriorityFeePerGas: getMaxPriorityFeePerGas(state),
+    maxFeePerGas: getMaxFeePerGas(state),
+    gasTotal: isEIP1559Network(state) ? getEIP1559GasTotal(state) : getGasTotal(state),
     inError: isSendFormInError(state),
     sendToken: getSendToken(state),
     to: getSendTo(state),
@@ -64,21 +70,25 @@ function mapStateToProps (state) {
     gasEstimateType,
     gasIsLoading: getGasIsLoading(state),
     mostRecentOverviewPage: getMostRecentOverviewPage(state),
+    isEIP1559Network: isEIP1559Network(state),
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
     clearSend: () => dispatch(clearSend()),
-    sign: ({ sendToken, to, amount, from, gas, gasPrice, data }) => {
+    sign: ({ sendToken, to, amount, from, gasParams, data }) => {
+      // gasParams must contain the following fields:
+      //   EIP-1559: gas, maxPriorityFeePerGas, maxFeePerGas
+      //   Legacy: gas, gasPrice
+
       const txParams = constructTxParams({
         amount,
         data,
         from,
-        gas,
-        gasPrice,
         sendToken,
         to,
+        gasParams,
       })
 
       sendToken
@@ -90,8 +100,7 @@ function mapDispatchToProps (dispatch) {
       data,
       editingTransactionId,
       from,
-      gas,
-      gasPrice,
+      gasParams,
       sendToken,
       to,
       unapprovedTxs,
@@ -101,18 +110,17 @@ function mapDispatchToProps (dispatch) {
         data,
         editingTransactionId,
         from,
-        gas,
-        gasPrice,
         sendToken,
         to,
         unapprovedTxs,
+        gasParams,
       })
 
       return dispatch(updateTransaction(editingTx))
     },
 
     addToAddressBookIfNew: (newAddress, toAccounts, nickname = '') => {
-      const hexPrefixedAddress = ethUtil.addHexPrefix(newAddress)
+      const hexPrefixedAddress = addHexPrefix(newAddress)
       if (addressIsNew(toAccounts, hexPrefixedAddress)) {
         // TODO: nickname, i.e. addToAddressBook(recipient, nickname)
         dispatch(addToAddressBook(hexPrefixedAddress, nickname))

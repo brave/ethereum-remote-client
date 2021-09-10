@@ -199,7 +199,10 @@ export default class GasModalPageContainer extends Component {
                 },
               })
             }
-            onSubmit(customModalGasLimitInHex, customModalGasPriceInHex)
+            onSubmit({
+              gasLimit: customModalGasLimitInHex,
+              gasPrice: customModalGasPriceInHex,
+            })
           }}
           submitText={this.context.t('save')}
           headerCloseText={this.context.t('close')}

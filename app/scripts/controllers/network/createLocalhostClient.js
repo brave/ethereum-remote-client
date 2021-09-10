@@ -1,9 +1,11 @@
 import mergeMiddleware from 'json-rpc-engine/src/mergeMiddleware'
-import createFetchMiddleware from 'eth-json-rpc-middleware/fetch'
-import createBlockRefRewriteMiddleware from 'eth-json-rpc-middleware/block-ref-rewrite'
-import createBlockTrackerInspectorMiddleware from 'eth-json-rpc-middleware/block-tracker-inspector'
+import {
+  createFetchMiddleware,
+  createBlockRefRewriteMiddleware,
+  createBlockTrackerInspectorMiddleware,
+  providerFromMiddleware,
+} from 'eth-json-rpc-middleware'
 import createAsyncMiddleware from 'json-rpc-engine/src/createAsyncMiddleware'
-import providerFromMiddleware from 'eth-json-rpc-middleware/providerFromMiddleware'
 import BlockTracker from 'eth-block-tracker'
 
 const inTest = process.env.IN_TEST === 'true'
@@ -19,7 +21,7 @@ export default function createLocalhostClient () {
     createBlockTrackerInspectorMiddleware({ blockTracker }),
     fetchMiddleware,
   ])
-  return { networkMiddleware, blockTracker }
+  return { networkMiddleware, blockTracker, provider: blockProvider }
 }
 
 function delay (time) {

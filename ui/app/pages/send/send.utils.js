@@ -20,11 +20,12 @@ import {
 } from './send.constants'
 
 import abi from 'ethereumjs-abi'
-import ethUtil from 'ethereumjs-util'
+import { addHexPrefix } from 'ethereumjs-util'
 
 export {
   addGasBuffer,
   calcGasTotal,
+  calcEIP1559GasTotal,
   calcTokenBalance,
   doesAmountErrorRequireUpdate,
   estimateGas,
@@ -40,6 +41,20 @@ export {
 
 function calcGasTotal (gasLimit = '0', gasPrice = '0') {
   return multiplyCurrencies(gasLimit, gasPrice, {
+    toNumericBase: 'hex',
+    multiplicandBase: 16,
+    multiplierBase: 16,
+  })
+}
+
+function calcEIP1559GasTotal (gasLimit, baseFeePerGas, maxPriorityFeePerGas) {
+  const gasPricingTotal = addCurrencies(baseFeePerGas, maxPriorityFeePerGas, {
+    aBase: 16,
+    bBase: 16,
+    toNumericBase: 'hex',
+  })
+
+  return multiplyCurrencies(gasLimit, gasPricingTotal, {
     toNumericBase: 'hex',
     multiplicandBase: 16,
     multiplierBase: 16,
@@ -241,7 +256,7 @@ async function estimateGas ({
     blockGasLimit = MIN_GAS_LIMIT_HEX
   }
 
-  paramsForGasEstimate.gas = ethUtil.addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
+  paramsForGasEstimate.gas = addHexPrefix(multiplyCurrencies(blockGasLimit, 0.95, {
     multiplicandBase: 16,
     multiplierBase: 10,
     roundDown: '0',
@@ -252,7 +267,7 @@ async function estimateGas ({
   try {
     const estimatedGas = await estimateGasMethod(paramsForGasEstimate)
     const estimateWithBuffer = addGasBuffer(estimatedGas.toString(16), blockGasLimit, 1.5)
-    return ethUtil.addHexPrefix(estimateWithBuffer)
+    return addHexPrefix(estimateWithBuffer)
   } catch (error) {
     const simulationFailed = (
       error.message.includes('Transaction execution error.') ||
@@ -260,7 +275,7 @@ async function estimateGas ({
     )
     if (simulationFailed) {
       const estimateWithBuffer = addGasBuffer(paramsForGasEstimate.gas, blockGasLimit, 1.5)
-      return ethUtil.addHexPrefix(estimateWithBuffer)
+      return addHexPrefix(estimateWithBuffer)
     } else {
       throw error
     }
@@ -304,7 +319,7 @@ function generateTokenTransferData ({ toAddress = '0x0', amount = '0x0', sendTok
     return
   }
   return TOKEN_TRANSFER_FUNCTION_SIGNATURE + Array.prototype.map.call(
-    abi.rawEncode(['address', 'uint256'], [toAddress, ethUtil.addHexPrefix(amount)]),
+    abi.rawEncode(['address', 'uint256'], [toAddress, addHexPrefix(amount)]),
     (x) => ('00' + x.toString(16)).slice(-2),
   ).join('')
 }

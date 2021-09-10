@@ -7,6 +7,7 @@ import { getCustomTxParamsData } from './confirm-approve.util'
 import { showModal } from '../../store/actions'
 import {
   getTokenData,
+  hasEIP1559GasFields,
 } from '../../helpers/utils/transactions.util'
 import {
   calcTokenAmount,
@@ -19,7 +20,7 @@ import {
   transactionFeeSelector,
   txDataSelector,
 } from '../../selectors/confirm-transaction'
-import { getCurrentCurrency, getDomainMetadata } from '../../selectors/selectors'
+import { getCurrentCurrency, getDomainMetadata, isEIP1559Network } from '../../selectors/selectors'
 import { currentNetworkTxListSelector } from '../../selectors/transactions'
 
 export default function ConfirmApprove () {
@@ -37,10 +38,12 @@ export default function ConfirmApprove () {
   const currentNetworkTxList = useSelector(currentNetworkTxListSelector)
   const domainMetadata = useSelector(getDomainMetadata)
   const tokens = useSelector(getTokens)
+  const networkHasEIP1559Capability = useSelector(isEIP1559Network)
 
   const transaction = (
     currentNetworkTxList.find(({ id }) => id === (Number(paramsTransactionId) || transactionId)) || {}
   )
+
   const {
     ethTransactionTotal,
     fiatTransactionTotal,
@@ -108,7 +111,11 @@ export default function ConfirmApprove () {
           origin={formattedOrigin}
           tokenSymbol={tokenSymbol}
           tokenBalance={tokenBalance}
-          showCustomizeGasModal={() => dispatch(showModal({ name: 'CUSTOMIZE_GAS', txData }))}
+          showCustomizeGasModal={() => dispatch(showModal({
+            name: hasEIP1559GasFields(txData) && networkHasEIP1559Capability
+              ? 'CUSTOMIZE_EIP1559_GAS' : 'CUSTOMIZE_GAS',
+            txData,
+          }))}
           showEditApprovalPermissionModal={
             ({
               customTokenAmount,

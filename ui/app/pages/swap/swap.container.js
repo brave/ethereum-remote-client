@@ -14,6 +14,7 @@ import {
   getSwapToAsset,
 } from '../../selectors'
 import { displayWarning, fetchSwapQuote, hideLoadingIndication, showLoadingIndication } from '../../store/actions'
+import { fetchBasicGasAndTimeEstimates } from '../../ducks/gas/gas.duck'
 
 function mapStateToProps (state) {
   return {
@@ -41,6 +42,7 @@ function mapDispatchToProps (dispatch) {
         await dispatch(hideLoadingIndication())
       }
     },
+    fetchBasicGasAndTimeEstimates: () => dispatch(fetchBasicGasAndTimeEstimates()),
   }
 }
 

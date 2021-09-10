@@ -7,6 +7,7 @@ import {
   getAccountByAddress,
 } from '../helpers/utils/util'
 import { getPermissionsRequestCount } from './permissions'
+import { NetworkCapabilities } from '../../../app/scripts/controllers/network/enums'
 
 export function getNetworkIdentifier (state) {
   const { metamask: { provider: { type, nickname, rpcUrl } } } = state
@@ -341,4 +342,36 @@ export function getIpfsGateway (state) {
 
 export function getLoadingIndication (state) {
   return state.appState.isLoading
+}
+
+export function isEIP1559Network (state) {
+  const { capabilities } = state.metamask.networkMetadata
+  const hasEIP1559Capability =
+    capabilities[NetworkCapabilities.EIP1559] === true
+
+  const currentKeyring = getCurrentKeyring(state)?.type
+  let keyringSupportsEIP1559
+  switch (currentKeyring) {
+    case 'Trezor Hardware':
+      // TODO (@onyb): Enable once new firmware is released. (ETA Sep 8 '21).
+      //
+      // Ref: https://github.com/trezor/trezor-firmware/pull/1653
+      keyringSupportsEIP1559 = false
+      break
+    case 'Ledger Hardware':
+      // Ledger supports EIP-1559, but requires a major version upgrade of
+      // ledgerjs.
+      keyringSupportsEIP1559 = false
+      break
+    case 'Simple Key Pair':
+    default:
+      keyringSupportsEIP1559 = true
+  }
+
+  return hasEIP1559Capability && keyringSupportsEIP1559
+}
+
+export function getBaseFeePerGas (state) {
+  const { baseFeePerGas } = state.metamask?.networkMetadata
+  return baseFeePerGas
 }

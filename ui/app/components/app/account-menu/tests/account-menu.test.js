@@ -28,12 +28,12 @@ describe('Account Menu', function () {
     addressConnectedDomainMap: {},
     accounts: [
       {
-        address: '0xAddress',
+        address: '0xcafebabe',
         name: 'Account 1',
         balance: '0x0',
       },
       {
-        address: '0xImportedAddress',
+        address: '0xdeadbeef',
         name: 'Imported Account 1',
         balance: '0x0',
       },
@@ -42,13 +42,13 @@ describe('Account Menu', function () {
       {
         type: 'HD Key Tree',
         accounts: [
-          '0xAdress',
+          '0xcafebabe',
         ],
       },
       {
         type: 'Simple Key Pair',
         accounts: [
-          '0xImportedAddress',
+          '0xdeadbeef',
         ],
       },
     ],
@@ -92,7 +92,7 @@ describe('Account Menu', function () {
       click.first().simulate('click')
 
       assert(props.showAccountDetail.calledOnce)
-      assert.equal(props.showAccountDetail.getCall(0).args[0], '0xAddress')
+      assert.equal(props.showAccountDetail.getCall(0).args[0], '0xcafebabe')
     })
 
     it('render imported account label', function () {

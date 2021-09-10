@@ -5,6 +5,58 @@
   justify-content: space-between;
   align-items: center;
 
+  &-v2 {
+    &__hr {
+      border-bottom: 1px solid $geyser;
+      margin-top: 8px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    &__container {
+      font-size: 0.875rem;
+      display: flex;
+      grid-gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__edit {
+      font-size: 0.75rem;
+      text-align: right;
+      text-transform: uppercase;
+      margin-top: 16px;
+      color: #037dd6;
+      cursor: pointer;
+    }
+
+    &__primary-title {
+      font-weight: bold;
+      flex-grow: 1;
+    }
+
+    &__primary-value {
+      font-weight: bold;
+    }
+
+    &__secondary-container {
+      font-size: 0.75rem;
+      display: flex;
+    }
+
+    &__secondary-title {
+      flex-grow: 1;
+    }
+
+    &__secondary-value {
+      text-align: right;
+    }
+
+    &__secondary-value-text {
+      font-weight: bold;
+      color: #6a737d;
+    }
+  }
+
   &__label {
     font-size: 0.75rem;
     font-weight: 500;

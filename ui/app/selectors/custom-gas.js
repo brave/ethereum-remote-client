@@ -70,6 +70,8 @@ export function getFastPriceEstimateInHexWEI (state) {
   return getGasPriceInHexWei(fastPriceEstimate || '0x0')
 }
 
+// This function may be used for EIP-1559 gas pricing fields as well. In such
+// a case, the gasPrice field represents the priority fee.
 export function getDefaultActiveButtonIndex (gasButtonInfo, customGasPriceInHex, gasPrice) {
   return gasButtonInfo.findIndex(({ priceInHexWei }) => {
     return priceInHexWei === addHexPrefix(customGasPriceInHex || gasPrice)
@@ -293,4 +295,48 @@ export function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
       priceInHexWei: getGasPriceInHexWei(fast, true),
     },
   ]
+}
+
+// EIP-1559 selectors
+export function getCustomMaxPriorityFeePerGas (state) {
+  return state.gas.customData.maxPriorityFeePerGas
+}
+
+export function getCustomMaxFeePerGas (state) {
+  return state.gas.customData.maxFeePerGas
+}
+
+export function isCustomMaxPriorityFeePerGasSafe (state) {
+  const safeLow = getSafeLowEstimate(state)
+  const customMaxPriorityFeePerGas = getCustomMaxPriorityFeePerGas(state)
+
+  if (!customMaxPriorityFeePerGas) {
+    return true
+  }
+
+  if (safeLow === null) {
+    return null
+  }
+
+  return conversionGreaterThan(
+    {
+      value: customMaxPriorityFeePerGas,
+      fromNumericBase: 'hex',
+      fromDenomination: 'WEI',
+      toDenomination: 'GWEI',
+    },
+    { value: safeLow, fromNumericBase: 'dec' },
+  )
+}
+
+export function getMaxPriorityFeePerGasAndTimeEstimates (state) {
+  return state.gas.maxPriorityFeePerGasAndTimeEstimates
+}
+
+export function getEstimatedMaxPriorityFeePerGas (state) {
+  return getPriceAndTimeEstimates(state).map(({ maxPriorityFeePerGas }) => maxPriorityFeePerGas)
+}
+
+export function getEstimatedMaxPriorityFeePerGasTimes (state) {
+  return getPriceAndTimeEstimates(state).map(({ expectedTime }) => expectedTime)
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## Remote Component([0.1.104](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.104)), Browser Component: `1.0.33`(10-Sept-2021)
+ 
+ - [brave-browser#17160](https://github.com/brave/brave-browser/issues/17160) - Added support for EIP-1559
+ - [brave-browser#10468](https://github.com/brave/brave-browser/issues/10468) - Updated Trezor connectivity to support V8
+ - [brave-browser#16990](https://github.com/brave/brave-browser/issues/16990) - Fixed `View on Etherscan`, under transaction details, to correctly launch the selected network explorer
+ - [brave-browser#17523](https://github.com/brave/brave-browser/issues/17523) - Fixed blacklisted tokens from listing under Swap
+
 ## Remote Component([0.1.96](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.96)), Browser Component: `1.0.32`(16-Jul-2021)
 
  - [brave-browser#16760](https://github.com/brave/brave-browser/issues/16760) - Fix error while fetching quote for input value more than 1000

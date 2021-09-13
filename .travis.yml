@@ -16,6 +16,5 @@ before_install:
 branches:
   only:
     - master
-    - eip1559
 script:
   - yarn test:brave

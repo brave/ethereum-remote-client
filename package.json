@@ -93,7 +93,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@brave/eth-keyring-controller": "github:brave/KeyringController#439c76e928cda5dc72e03bdf83b1d7deaf0b752e",
+    "@brave/eth-keyring-controller": "github:brave/KeyringController#0769514cea07e85ae190f30765d0a301c631c56b",
     "@brave/eth-token-tracker": "^3.0.0",
     "@download/blockies": "^1.0.3",
     "@ethereumjs/common": "^2.4.0",

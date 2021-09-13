@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.105](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.105)), Browser Component: `1.0.34`(13-Sept-2021)
+ 
+ - [brave-browser#18052](https://github.com/brave/brave-browser/issues/18052) - Fixed error during transaction/message signing when using legacy Brave seed(24 words) account
+ 
 ## Remote Component([0.1.104](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.104)), Browser Component: `1.0.33`(10-Sept-2021)
  
  - [brave-browser#17160](https://github.com/brave/brave-browser/issues/17160) - Added support for EIP-1559

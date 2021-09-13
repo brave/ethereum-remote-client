@@ -958,16 +958,16 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@brave/eth-keyring-controller@github:brave/KeyringController#439c76e928cda5dc72e03bdf83b1d7deaf0b752e":
-  version "5.4.3"
-  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/439c76e928cda5dc72e03bdf83b1d7deaf0b752e"
+"@brave/eth-keyring-controller@github:brave/KeyringController#0769514cea07e85ae190f30765d0a301c631c56b":
+  version "5.4.4"
+  resolved "https://codeload.github.com/brave/KeyringController/tar.gz/0769514cea07e85ae190f30765d0a301c631c56b"
   dependencies:
     argon2-wasm "^0.9.0"
     bip39 "^2.4.0"
     bluebird "^3.5.0"
     brave-crypto "^0.3.1"
     browser-passworder "^2.0.3"
-    eth-hd-keyring brave/eth-hd-keyring#4488dac
+    eth-hd-keyring brave/eth-hd-keyring#3f5be32b34dba0d47c607010db4c8487725c5598
     eth-sig-util "^3.0.1"
     eth-simple-keyring "^4.2.0"
     ethereumjs-util "^7.1.0"
@@ -9952,9 +9952,9 @@ eth-hd-keyring@^3.6.0:
     ethereumjs-util "^7.0.9"
     ethereumjs-wallet "^1.0.1"
 
-eth-hd-keyring@brave/eth-hd-keyring#4488dac:
-  version "2.1.0"
-  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/4488dac00a02d633bd7c4265fcbf2bc659830103"
+eth-hd-keyring@brave/eth-hd-keyring#3f5be32b34dba0d47c607010db4c8487725c5598:
+  version "2.1.1"
+  resolved "https://codeload.github.com/brave/eth-hd-keyring/tar.gz/3f5be32b34dba0d47c607010db4c8487725c5598"
   dependencies:
     bip39 "^2.2.0"
     brave-crypto "^0.3.2"

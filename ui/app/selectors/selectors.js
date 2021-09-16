@@ -361,7 +361,7 @@ export function isEIP1559Network (state) {
     case 'Ledger Hardware':
       // Ledger supports EIP-1559, but requires a major version upgrade of
       // ledgerjs.
-      keyringSupportsEIP1559 = false
+      keyringSupportsEIP1559 = true
       break
     case 'Simple Key Pair':
     default:

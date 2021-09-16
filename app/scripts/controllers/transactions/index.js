@@ -40,7 +40,6 @@ import { TRANSACTION_NO_CONTRACT_ERROR_KEY } from '../../../../ui/app/helpers/co
 import { NETWORK_TYPE_TO_ID_MAP } from '../network/enums'
 import { hasEIP1559GasFields } from '../../../../ui/app/helpers/utils/transactions.util'
 import TrezorKeyring from 'eth-trezor-keyring'
-import LedgerBridgeKeyring from '@metamask/eth-ledger-bridge-keyring'
 
 const SIMPLE_GAS_COST = '0x5208' // Hex for 21000, cost of a simple send.
 const MAX_MEMSTORE_TX_LIST_SIZE = 100 // Number of transactions (by unique nonces) to keep in memory
@@ -153,7 +152,7 @@ export default class TransactionController extends EventEmitter {
     const keyring = await this.getKeyringForAccount(fromAddress)
 
     // TODO (@onyb): remove this when hardware wallet support for EIP-1559 is available.
-    return ![TrezorKeyring.type, LedgerBridgeKeyring.type].includes(keyring.type)
+    return ![TrezorKeyring.type].includes(keyring.type)
   }
 
   /**
@@ -161,13 +160,16 @@ export default class TransactionController extends EventEmitter {
    * while creating unsigned transactions. It works for both default networks
    * as well as EVM-compatible chains.
    *
+   * The preferEIP1559 argument can be used to switch to the London fork, when
+   * when the account supports both legacy as well as EIP-1559 transactions.
+   *
    * @returns {Common} The configuration object to be passed to TransactionFactory.
    */
-  async makeConfig (fromAddress) {
+  async makeConfig (fromAddress, preferEIP1559) {
     const { type: networkType, chainId: configChainId, nickname: name } = this.getProviderConfig()
 
     const accountSupportsEIP1559 = await this.getEIP1559Compatibility(fromAddress)
-    const hardfork = accountSupportsEIP1559 ? Hardfork.London : Hardfork.Berlin
+    const hardfork = accountSupportsEIP1559 && preferEIP1559 ? Hardfork.London : Hardfork.Berlin
 
     // Not a custom RPC network. Obtain the canonical chain ID corresponding to
     // the network type, and return the Common configuration object.
@@ -613,7 +615,7 @@ export default class TransactionController extends EventEmitter {
 
     // prepare unsigned tx
     const fromAddress = txParams.from
-    const common = await this.makeConfig(fromAddress)
+    const common = await this.makeConfig(fromAddress, isEIP1559Transaction)
     const unsignedEthTx = TransactionFactory.fromTxData(txParams, { common })
 
     // sign tx

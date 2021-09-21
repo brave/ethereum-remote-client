@@ -1,5 +1,10 @@
 # Changelog
 
+
+## Remote Component([0.1.106](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.106)), Browser Component: `1.0.35`(21-Sept-2021)
+
+ - [brave-browser#18182](https://github.com/brave/brave-browser/issues/181820) - Added EIP-1559 transaction signing support for Ledger hardware wallets
+
 ## Remote Component([0.1.105](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.105)), Browser Component: `1.0.34`(13-Sept-2021)
  
  - [brave-browser#18052](https://github.com/brave/brave-browser/issues/18052) - Fixed error during transaction/message signing when using legacy Brave seed(24 words) account

@@ -89,7 +89,8 @@
     "geckodriver/tar": "^6.1.9",
     "**/node-sass/node-gyp/tar": "^4.4.18",
     "**/path-parse": "^1.0.7",
-    "**/jszip": "^3.7.0"
+    "**/jszip": "^3.7.0",
+    "**/pac-resolver": "^5.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",

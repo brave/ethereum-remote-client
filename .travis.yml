@@ -16,5 +16,6 @@ before_install:
 branches:
   only:
     - master
+    - test-ci
 script:
   - yarn test:brave

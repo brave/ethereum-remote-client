@@ -10524,7 +10524,7 @@ eth-method-registry@^1.2.0:
   dependencies:
     ethjs "^0.3.0"
 
-eth-phishing-detect@^1.1.13, eth-phishing-detect@^1.1.4:
+eth-phishing-detect@^1.1.13:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/eth-phishing-detect/-/eth-phishing-detect-1.1.14.tgz#64dcd35dd3a7a95266d875cbc5280842cda133d7"
   integrity sha512-nMQmzrgYabZ52YpuKZ38lStJy9Lozww2WBhyFbu/oepjsZzPvnl2KwJ6TJ78kk14USdl8Htt+eEMk2WAdAjlWg==

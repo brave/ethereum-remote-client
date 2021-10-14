@@ -1,5 +1,9 @@
 # Changelog
 
+## Remote Component([0.1.107](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.107)), Browser Component: `1.0.36`(14-Oct-2021)
+
+ - [brave-browser#18750](https://github.com/brave/brave-browser/issues/18750) - Removed Phishfort list from Wallet
+
 ## Remote Component([0.1.106](https://github.com/brave/ethereum-remote-client/releases/tag/0.1.106)), Browser Component: `1.0.35`(21-Sept-2021)
 
  - [brave-browser#18182](https://github.com/brave/brave-browser/issues/18182) - Added EIP-1559 transaction signing support for Ledger hardware wallets

@@ -6,7 +6,7 @@ Brave's Ethereum Remote Client is a Chromium extension for interacting with the 
 
 ## Building locally
 
-- Install [Node.js](https://nodejs.org) version 10
+- Install [Node.js](https://nodejs.org) version 12
     - If you are using [nvm](https://github.com/creationix/nvm#installation) (recommended) running `nvm use` will automatically choose the right node version for you.
 - Install [Yarn](https://yarnpkg.com/en/docs/install)
 - Install dependencies: `yarn`

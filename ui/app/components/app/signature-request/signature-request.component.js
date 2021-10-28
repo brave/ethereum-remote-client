@@ -27,21 +27,29 @@ export default class SignatureRequest extends PureComponent {
   }
 
   componentDidMount () {
+    if (getEnvironmentType() === ENVIRONMENT_TYPE_NOTIFICATION) {
+      window.addEventListener('beforeunload', this._beforeUnload)
+    }
+  }
+
+  componentWillUnmount () {
+    if (getEnvironmentType() === ENVIRONMENT_TYPE_NOTIFICATION) {
+      window.removeEventListener('beforeunload', this._beforeUnload)
+    }
+  }
+
+  _beforeUnload (event) {
     const { clearConfirmTransaction, cancel } = this.props
     const { metricsEvent } = this.context
-    if (getEnvironmentType() === ENVIRONMENT_TYPE_NOTIFICATION) {
-      window.addEventListener('beforeunload', (event) => {
-        metricsEvent({
-          eventOpts: {
-            category: 'Transactions',
-            action: 'Sign Request',
-            name: 'Cancel Sig Request Via Notification Close',
-          },
-        })
-        clearConfirmTransaction()
-        cancel(event)
-      })
-    }
+    metricsEvent({
+      eventOpts: {
+        category: 'Transactions',
+        action: 'Sign Request',
+        name: 'Cancel Sig Request Via Notification Close',
+      },
+    })
+    clearConfirmTransaction()
+    cancel(event)
   }
 
   formatWallet (wallet) {

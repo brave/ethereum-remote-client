@@ -1,5 +1,6 @@
 const EventEmitter = require('events')
 const { spawn } = require('child_process')
+const { platform } = require('os')
 
 const tasks = {}
 const taskEvents = new EventEmitter()
@@ -54,7 +55,8 @@ function runInChildProcess (task) {
     throw new Error(`MetaMask build: runInChildProcess unable to identify task name`)
   }
   return instrumentForTaskStats(taskName, async () => {
-    const childProcess = spawn('yarn', ['build', taskName, '--skip-stats'])
+    const command = platform() === 'win32' ? 'yarn.cmd' : 'yarn'
+    const childProcess = spawn(command, ['build', taskName, '--skip-stats'])
     // forward logs to main process
     // skip the first stdout event (announcing the process command)
     childProcess.stdout.once('data', () => {
